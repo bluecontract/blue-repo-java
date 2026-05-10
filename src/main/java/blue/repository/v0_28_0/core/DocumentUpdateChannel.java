@@ -5,7 +5,7 @@ import blue.language.model.TypeBlueId;
 import blue.repository.RepositoryType;
 
 @TypeBlueId("6H1iGrDAcqtFE1qv3iyMTj79jCZsMUMxsNUzqYSJNbyR")
-public class DocumentUpdateChannel extends Channel {
+public class DocumentUpdateChannel extends blue.language.processor.model.DocumentUpdateChannel {
     public static String blueId() {
         return "6H1iGrDAcqtFE1qv3iyMTj79jCZsMUMxsNUzqYSJNbyR";
     }
@@ -33,6 +33,17 @@ public class DocumentUpdateChannel extends Channel {
                 qualifiedName(),
                 blueId(),
                 resourcePath());
+    }
+
+    private Node event;
+
+    public Node getEvent() {
+        return event;
+    }
+
+    public DocumentUpdateChannel event(Node event) {
+        this.event = event;
+        return this;
     }
 
 }

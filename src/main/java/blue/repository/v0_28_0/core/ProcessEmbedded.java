@@ -3,10 +3,9 @@ package blue.repository.v0_28_0.core;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repository.RepositoryType;
-import java.util.List;
 
 @TypeBlueId("Hu4XkfvyXLSdfFNUwuXebEu3oJeWcMyhBTcRV9AQyKPC")
-public class ProcessEmbedded extends Marker {
+public class ProcessEmbedded extends blue.language.processor.model.ProcessEmbedded {
     public static String blueId() {
         return "Hu4XkfvyXLSdfFNUwuXebEu3oJeWcMyhBTcRV9AQyKPC";
     }
@@ -34,17 +33,6 @@ public class ProcessEmbedded extends Marker {
                 qualifiedName(),
                 blueId(),
                 resourcePath());
-    }
-
-    private List<String> paths;
-
-    public List<String> getPaths() {
-        return paths;
-    }
-
-    public ProcessEmbedded paths(List<String> paths) {
-        this.paths = paths;
-        return this;
     }
 
 }

@@ -3,10 +3,9 @@ package blue.repository.v0_28_0.core;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repository.RepositoryType;
-import java.util.Map;
 
 @TypeBlueId("B7YQeYdQzUNuzaDQ4tNTd2iJqgd4YnVQkgz4QgymDWWU")
-public class ChannelEventCheckpoint extends Marker {
+public class ChannelEventCheckpoint extends blue.language.processor.model.ChannelEventCheckpoint {
     public static String blueId() {
         return "B7YQeYdQzUNuzaDQ4tNTd2iJqgd4YnVQkgz4QgymDWWU";
     }
@@ -34,17 +33,6 @@ public class ChannelEventCheckpoint extends Marker {
                 qualifiedName(),
                 blueId(),
                 resourcePath());
-    }
-
-    private Map<String, Node> lastEvents;
-
-    public Map<String, Node> getLastEvents() {
-        return lastEvents;
-    }
-
-    public ChannelEventCheckpoint lastEvents(Map<String, Node> lastEvents) {
-        this.lastEvents = lastEvents;
-        return this;
     }
 
 }

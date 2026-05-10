@@ -5,7 +5,7 @@ import blue.language.model.TypeBlueId;
 import blue.repository.RepositoryType;
 
 @TypeBlueId("H2aCCTUcLMTJozWkn7HPUjyFBFxamraw1q8DyWk87zxr")
-public class LifecycleEventChannel extends Channel {
+public class LifecycleEventChannel extends blue.language.processor.model.LifecycleChannel {
     public static String blueId() {
         return "H2aCCTUcLMTJozWkn7HPUjyFBFxamraw1q8DyWk87zxr";
     }
@@ -33,6 +33,17 @@ public class LifecycleEventChannel extends Channel {
                 qualifiedName(),
                 blueId(),
                 resourcePath());
+    }
+
+    private Node event;
+
+    public Node getEvent() {
+        return event;
+    }
+
+    public LifecycleEventChannel event(Node event) {
+        this.event = event;
+        return this;
     }
 
 }

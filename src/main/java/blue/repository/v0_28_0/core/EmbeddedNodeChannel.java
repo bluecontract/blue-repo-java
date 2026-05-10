@@ -5,7 +5,7 @@ import blue.language.model.TypeBlueId;
 import blue.repository.RepositoryType;
 
 @TypeBlueId("Fjbu3QpnUaTruDTcTidETCX2N5STyv7KYxT42PCzGHxm")
-public class EmbeddedNodeChannel extends Channel {
+public class EmbeddedNodeChannel extends blue.language.processor.model.EmbeddedNodeChannel {
     public static String blueId() {
         return "Fjbu3QpnUaTruDTcTidETCX2N5STyv7KYxT42PCzGHxm";
     }
@@ -35,14 +35,14 @@ public class EmbeddedNodeChannel extends Channel {
                 resourcePath());
     }
 
-    private String childPath;
+    private Node event;
 
-    public String getChildPath() {
-        return childPath;
+    public Node getEvent() {
+        return event;
     }
 
-    public EmbeddedNodeChannel childPath(String childPath) {
-        this.childPath = childPath;
+    public EmbeddedNodeChannel event(Node event) {
+        this.event = event;
         return this;
     }
 

@@ -80,6 +80,34 @@ const externalBaseTypes = new Map([
     extendsType: 'blue.language.processor.model.MarkerContract',
     inheritedFields: new Set(),
   }],
+  ['Core/Document Update Channel', {
+    extendsType: 'blue.language.processor.model.DocumentUpdateChannel',
+    inheritedFields: new Set(['order', 'path', 'definition']),
+    preserveParentFields: true,
+  }],
+  ['Core/Triggered Event Channel', {
+    extendsType: 'blue.language.processor.model.TriggeredEventChannel',
+    inheritedFields: new Set(['order', 'path', 'definition']),
+    preserveParentFields: true,
+  }],
+  ['Core/Lifecycle Event Channel', {
+    extendsType: 'blue.language.processor.model.LifecycleChannel',
+    inheritedFields: new Set(['order', 'path', 'definition']),
+    preserveParentFields: true,
+  }],
+  ['Core/Embedded Node Channel', {
+    extendsType: 'blue.language.processor.model.EmbeddedNodeChannel',
+    inheritedFields: new Set(['order', 'path', 'definition', 'childPath']),
+    preserveParentFields: true,
+  }],
+  ['Core/Process Embedded', {
+    extendsType: 'blue.language.processor.model.ProcessEmbedded',
+    inheritedFields: new Set(['order', 'paths']),
+  }],
+  ['Core/Channel Event Checkpoint', {
+    extendsType: 'blue.language.processor.model.ChannelEventCheckpoint',
+    inheritedFields: new Set(['order', 'lastEvents', 'lastSignatures']),
+  }],
 ]);
 
 function mkdirp(dir) {
@@ -329,10 +357,35 @@ function inheritedFieldNames(definition, byBlueId, seen = new Set()) {
   for (const fieldName of inheritedFieldNames(parent, byBlueId, seen)) {
     result.add(fieldName);
   }
-  for (const field of ownFields(parent)) {
-    result.add(field.fieldName);
+  if (!externalBase || !externalBase.preserveParentFields) {
+    for (const field of ownFields(parent)) {
+      result.add(field.fieldName);
+    }
   }
   return result;
+}
+
+function parentFieldsToPreserve(definition, byBlueId) {
+  const externalBase = externalBaseTypes.get(definition.qualifiedName);
+  if (!externalBase || !externalBase.preserveParentFields) {
+    return [];
+  }
+
+  const preserved = [];
+  const seenFields = new Set();
+  let parent = referencedDefinition(definition.content.type, byBlueId);
+  const seenParents = new Set();
+  while (parent && !seenParents.has(parent.blueId)) {
+    seenParents.add(parent.blueId);
+    for (const field of ownFields(parent)) {
+      if (!externalBase.inheritedFields.has(field.fieldName) && !seenFields.has(field.fieldName)) {
+        preserved.push(field);
+        seenFields.add(field.fieldName);
+      }
+    }
+    parent = referencedDefinition(parent.content.type, byBlueId);
+  }
+  return preserved;
 }
 
 function writeConstantsClass(packageName, definitions) {
@@ -393,7 +446,15 @@ function writeModelClass(definition, byBlueId) {
   }
 
   const inherited = inheritedFieldNames(definition, byBlueId);
-  const fields = ownFields(definition).filter((field) => !inherited.has(field.fieldName));
+  const rawFields = ownFields(definition).concat(parentFieldsToPreserve(definition, byBlueId));
+  const usedFieldNames = new Set();
+  const fields = rawFields.filter((field) => {
+    if (inherited.has(field.fieldName) || usedFieldNames.has(field.fieldName)) {
+      return false;
+    }
+    usedFieldNames.add(field.fieldName);
+    return true;
+  });
   for (const field of fields) {
     field.javaType = fieldJavaType(field.node, byBlueId, imports, definition);
     if (field.originalName !== field.fieldName) {

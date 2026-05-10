@@ -25,7 +25,13 @@ import blue.repository.v0_28_0.conversation.SequentialWorkflow;
 import blue.repository.v0_28_0.conversation.SequentialWorkflowOperation;
 import blue.repository.v0_28_0.conversation.TimelineChannel;
 import blue.repository.v0_28_0.conversation.UpdateDocument;
+import blue.repository.v0_28_0.core.ChannelEventCheckpoint;
+import blue.repository.v0_28_0.core.DocumentUpdateChannel;
+import blue.repository.v0_28_0.core.EmbeddedNodeChannel;
 import blue.repository.v0_28_0.core.JsonPatchEntry;
+import blue.repository.v0_28_0.core.LifecycleEventChannel;
+import blue.repository.v0_28_0.core.ProcessEmbedded;
+import blue.repository.v0_28_0.core.TriggeredEventChannel;
 import blue.repository.v0_28_0.myos.InformUserToInstallMyOSPackage;
 import blue.repository.v0_28_0.myos.MyOSPackage;
 import blue.repository.v0_28_0.paynote.CaptureFundsRequested;
@@ -187,6 +193,53 @@ class BlueRepositoryTest {
     void generatedContractTypesBridgeToProcessorModelBaseClasses() {
         assertTrue(ChannelContract.class.isAssignableFrom(TimelineChannel.class));
         assertTrue(HandlerContract.class.isAssignableFrom(SequentialWorkflowOperation.class));
+    }
+
+    @Test
+    void generatedCoreProcessorManagedTypesBridgeToFoundationRuntimeClasses() {
+        assertTrue(new TriggeredEventChannel() instanceof blue.language.processor.model.TriggeredEventChannel);
+        assertTrue(new LifecycleEventChannel() instanceof blue.language.processor.model.LifecycleChannel);
+        assertTrue(new DocumentUpdateChannel() instanceof blue.language.processor.model.DocumentUpdateChannel);
+        assertTrue(new EmbeddedNodeChannel() instanceof blue.language.processor.model.EmbeddedNodeChannel);
+        assertTrue(new ProcessEmbedded() instanceof blue.language.processor.model.ProcessEmbedded);
+        assertTrue(new ChannelEventCheckpoint() instanceof blue.language.processor.model.ChannelEventCheckpoint);
+    }
+
+    @Test
+    void generatedCoreProcessorManagedTypesLoadFromRepositoryYaml() throws Exception {
+        BlueRepository repo = BlueRepository.v0_28_0();
+        Blue blue = repo.configure(new Blue(repo.nodeProvider()));
+        String yaml = ""
+                + "contracts:\n"
+                + "  triggered:\n"
+                + "    type: Core/Triggered Event Channel\n"
+                + "    event: Trigger Event\n"
+                + "  life:\n"
+                + "    type: Core/Lifecycle Event Channel\n"
+                + "  embedded:\n"
+                + "    type: Core/Process Embedded\n"
+                + "    paths:\n"
+                + "      - /child\n";
+
+        Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(yaml, Node.class)
+                .blue(repo.typeAliasBlue());
+        Node resolved = blue.resolve(blue.preprocess(document));
+        Map<String, Node> contracts = resolved.getProperties().get("contracts").getProperties();
+
+        Object triggered = blue.nodeToObject(contracts.get("triggered"), Object.class);
+        Object lifecycle = blue.nodeToObject(contracts.get("life"), Object.class);
+        Object embedded = blue.nodeToObject(contracts.get("embedded"), Object.class);
+
+        assertTrue(triggered instanceof TriggeredEventChannel);
+        assertTrue(triggered instanceof blue.language.processor.model.TriggeredEventChannel);
+        assertEquals("Trigger Event", ((TriggeredEventChannel) triggered).getEvent().getValue());
+
+        assertTrue(lifecycle instanceof LifecycleEventChannel);
+        assertTrue(lifecycle instanceof blue.language.processor.model.LifecycleChannel);
+
+        assertTrue(embedded instanceof ProcessEmbedded);
+        assertTrue(embedded instanceof blue.language.processor.model.ProcessEmbedded);
+        assertEquals(Collections.singletonList("/child"), ((ProcessEmbedded) embedded).getPaths());
     }
 
     @Test
