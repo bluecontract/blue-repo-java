@@ -1,0 +1,12 @@
+{
+  "name": "Propose Change Operation",
+  "description": "Operation to propose a document change for later acceptance or rejection.",
+  "type": {
+    "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+  },
+  "request": {
+    "type": {
+      "blueId": "FW7iYkzig4fepCdwfCdgNJw4DQ1fKwnAUf3YpjgfTPmG"
+    }
+  }
+}

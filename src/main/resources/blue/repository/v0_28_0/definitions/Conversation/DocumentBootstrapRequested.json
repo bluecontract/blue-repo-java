@@ -1,0 +1,55 @@
+{
+  "name": "Document Bootstrap Requested",
+  "description": "Request to bootstrap the provided document.",
+  "type": {
+    "blueId": "8f9UhHMbRe62sFgzQVheToaJPYi7t7HPNVvpQTbqfL5n"
+  },
+  "document": {
+    "description": "Target Blue document to bootstrap."
+  },
+  "channelBindings": {
+    "description": "Maps channel names to participant identifiers.",
+    "type": {
+      "blueId": "G7fBT9PSod1RfHLHkpafAGBDVAJMrMhAMY51ERcyXNrj"
+    },
+    "keyType": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "valueType": {
+      "blueId": "DcoJyCh7XXxy1nR5xjy7qfkUgQ1GiZnKKSxh8DJusBSr"
+    }
+  },
+  "initialMessages": {
+    "description": "Messages sent to participants when inviting them to the bootstrapped document.",
+    "defaultMessage": {
+      "description": "Default invitation message sent to all participants.",
+      "type": {
+        "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+      }
+    },
+    "perChannel": {
+      "description": "Per-channel custom invitation messages.",
+      "type": {
+        "blueId": "G7fBT9PSod1RfHLHkpafAGBDVAJMrMhAMY51ERcyXNrj"
+      },
+      "keyType": {
+        "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+      },
+      "valueType": {
+        "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+      }
+    }
+  },
+  "bootstrapAssignee": {
+    "description": "Channel name of a participant in the requesting document which is asked to bootstrap the requested document",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "onBehalfOf": {
+    "description": "account (channe name) on whose behalf the document is being created",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}

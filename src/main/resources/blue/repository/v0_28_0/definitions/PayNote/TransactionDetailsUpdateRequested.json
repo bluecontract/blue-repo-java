@@ -1,0 +1,10 @@
+{
+  "name": "Transaction Details Update Requested",
+  "description": "A participant requests that the Guarantor update transaction-specific details.\n",
+  "type": {
+    "blueId": "8f9UhHMbRe62sFgzQVheToaJPYi7t7HPNVvpQTbqfL5n"
+  },
+  "transactionDetails": {
+    "description": "Opaque transaction details payload proposed by the participant."
+  }
+}

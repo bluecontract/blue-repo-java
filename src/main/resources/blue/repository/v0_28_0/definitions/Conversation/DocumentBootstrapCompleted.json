@@ -1,0 +1,13 @@
+{
+  "name": "Document Bootstrap Completed",
+  "description": "Response event confirming completion of the document bootstrap.",
+  "type": {
+    "blueId": "36epvrpVHZLjapbeZsNodz2NDnm7XZeNZcnkWHgkP1pp"
+  },
+  "documentId": {
+    "description": "Document ID of the bootstrapped document.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}

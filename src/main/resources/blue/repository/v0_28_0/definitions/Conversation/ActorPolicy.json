@@ -1,0 +1,36 @@
+{
+  "name": "Actor Policy",
+  "description": "Policy marker describing allowed actor and source categories for operations.",
+  "type": {
+    "blueId": "7QACj919YMRvFCTELCf6jfQTp41RVhtHdE6bPazLUZQ6"
+  },
+  "operations": {
+    "description": "Per-operation actor/source constraints keyed by operation name.",
+    "type": {
+      "blueId": "G7fBT9PSod1RfHLHkpafAGBDVAJMrMhAMY51ERcyXNrj"
+    },
+    "keyType": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "valueType": {
+      "requiresActor": {
+        "description": "Required actor category (\"principal\" | \"agent\" | \"any\").",
+        "type": {
+          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+        }
+      },
+      "requiresSource": {
+        "description": "Required source category (\"browserSession\" | \"apiCall\" | \"documentRequest\").",
+        "type": {
+          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+        }
+      },
+      "excludeSource": {
+        "description": "Disallowed source category (\"browserSession\" | \"apiCall\" | \"documentRequest\").",
+        "type": {
+          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+        }
+      }
+    }
+  }
+}

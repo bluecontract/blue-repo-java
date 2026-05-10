@@ -1,0 +1,37 @@
+{
+  "name": "Card Transaction Monitoring Started",
+  "description": "Confirmation that card transaction monitoring has started.",
+  "type": {
+    "blueId": "36epvrpVHZLjapbeZsNodz2NDnm7XZeNZcnkWHgkP1pp"
+  },
+  "targetMerchantId": {
+    "description": "External merchant identifier being monitored.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "events": {
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "startedAt": {
+    "description": "Timestamp (microseconds since epoch) when monitoring started.",
+    "type": {
+      "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+    }
+  },
+  "consentDocumentId": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "consentSessionId": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}

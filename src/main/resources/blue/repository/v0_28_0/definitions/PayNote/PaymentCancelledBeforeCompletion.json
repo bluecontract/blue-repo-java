@@ -1,0 +1,7 @@
+{
+  "name": "Payment Cancelled Before Completion",
+  "description": "The Guarantor confirms that the transaction was cancelled before completion.",
+  "type": {
+    "blueId": "36epvrpVHZLjapbeZsNodz2NDnm7XZeNZcnkWHgkP1pp"
+  }
+}

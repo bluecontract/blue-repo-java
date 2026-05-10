@@ -1,0 +1,13 @@
+{
+  "name": "PayNote Delivery Failed",
+  "description": "Delivery failed for a non-identification reason.",
+  "type": {
+    "blueId": "5Wz4G9qcnBJnntYRkz4dgLK5bSuoMpYJZj4j5M59z4we"
+  },
+  "reason": {
+    "description": "Failure reason.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}

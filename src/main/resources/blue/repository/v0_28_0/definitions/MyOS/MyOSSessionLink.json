@@ -1,0 +1,13 @@
+{
+  "name": "MyOS Session Link",
+  "description": "Link targeting a specific document session by its sessionId. Use when referencing a live session rather than a logical document.",
+  "type": {
+    "blueId": "D2ERUvbpn6R6PR7hjFsGofwQsu9bkRfc6wbSYHcfJtMD"
+  },
+  "sessionId": {
+    "description": "Identifier of the document session being targeted.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}

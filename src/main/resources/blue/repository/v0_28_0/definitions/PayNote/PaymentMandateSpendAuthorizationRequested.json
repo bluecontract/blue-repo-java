@@ -1,0 +1,55 @@
+{
+  "name": "Payment Mandate Spend Authorization Requested",
+  "description": "Bank asks a Payment Mandate document to authorize a single spend before reserve/capture execution.\n",
+  "type": {
+    "blueId": "8f9UhHMbRe62sFgzQVheToaJPYi7t7HPNVvpQTbqfL5n"
+  },
+  "authorizationId": {
+    "description": "Correlation and idempotency key for a single authorization lifecycle.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "amountMinor": {
+    "description": "Requested amount in minor currency units.",
+    "type": {
+      "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+    }
+  },
+  "currency": {
+    "description": "Currency used to validate amountMinor against mandate limits.",
+    "type": {
+      "blueId": "CBnZ7aaNetj9KEqXpUWj5jvjKbmviLivP98T2EiyxiYc"
+    }
+  },
+  "counterpartyType": {
+    "description": "Counterparty identifier type (\"merchantId\" | \"customerId\" | \"accountNumber\").",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "counterpartyId": {
+    "description": "Counterparty identifier interpreted according to counterpartyType.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "requestingDocumentId": {
+    "description": "Document id that requested the charge.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "requestingSessionId": {
+    "description": "Session id that requested the charge.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "requestedAt": {
+    "description": "Timestamp when the authorization request was created.",
+    "type": {
+      "blueId": "GQaGqFxHDz64L1c9QkCbz52ths6bMVtpHnw4QDngzQYs"
+    }
+  }
+}

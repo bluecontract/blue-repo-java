@@ -1,0 +1,10 @@
+{
+  "name": "Link",
+  "description": "Abstract base class for all link types.",
+  "anchor": {
+    "description": "Target anchor key on the destination document.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}

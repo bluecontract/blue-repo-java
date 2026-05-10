@@ -1,0 +1,31 @@
+{
+  "name": "Card Charge Completed",
+  "description": "Final outcome for a card charge request.",
+  "type": {
+    "blueId": "36epvrpVHZLjapbeZsNodz2NDnm7XZeNZcnkWHgkP1pp"
+  },
+  "status": {
+    "description": "Completion status (\"succeeded\" | \"failed\").",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "holdId": {
+    "description": "Hold id created for authorize-only or authorize+capture flows.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "transactionId": {
+    "description": "Resulting transaction id when available.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "reason": {
+    "description": "Optional failure reason.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "name": "Chat GPT Connector Agent",
+  "description": "Lets the owner prompt installation of a provided MyOS Package.",
+  "type": {
+    "blueId": "8s2rAFDtiB6sCwqeURkT4Lq7fcc2FXBkmX9B9p7R4Boc"
+  },
+  "contracts": {
+    "ownerChannel": {
+      "type": {
+        "blueId": "HCF8mXnX3dFjQ8osjxb4Wzm2Nm1DoXnTYuA5sPnV7NTs"
+      }
+    },
+    "startWorker": {
+      "description": "Prompt the user to install a provided MyOS Package",
+      "type": {
+        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+      },
+      "channel": {
+        "type": {
+          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+        },
+        "value": "ownerChannel"
+      },
+      "request": {
+        "package": {
+          "description": "MyOS Package",
+          "type": {
+            "blueId": "5cg55kgH8ckRVji4oWSBBxthJQFYmB5Lb1Pea7achyNr"
+          }
+        }
+      }
+    },
+    "startWorkerImpl": {
+      "type": {
+        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+      },
+      "operation": {
+        "type": {
+          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+        },
+        "value": "startWorker"
+      },
+      "steps": {
+        "items": [
+          {
+            "name": "Emit Install Prompt",
+            "type": {
+              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+            },
+            "event": {
+              "type": {
+                "blueId": "CrGV4ZYjvPvMqrgNQAfgZCUnFjFW6HDjYNdon2chLKU3"
+              },
+              "title": {
+                "type": {
+                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                },
+                "value": "ChatGPT is requesting permission to launch a new agent"
+              },
+              "message": {
+                "type": {
+                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                },
+                "value": "A package has been prepared for you. Review and install."
+              },
+              "package": {
+                "type": {
+                  "blueId": "5cg55kgH8ckRVji4oWSBBxthJQFYmB5Lb1Pea7achyNr"
+                },
+                "value": "${event.message.request.package}"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

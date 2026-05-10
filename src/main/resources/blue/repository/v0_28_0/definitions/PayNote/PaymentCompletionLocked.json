@@ -1,0 +1,12 @@
+{
+  "name": "Payment Completion Locked",
+  "description": "Payment completion was locked. Subsequent completion attempts must be rejected until explicitly unlocked.\n",
+  "type": {
+    "blueId": "36epvrpVHZLjapbeZsNodz2NDnm7XZeNZcnkWHgkP1pp"
+  },
+  "lockedAt": {
+    "type": {
+      "blueId": "GQaGqFxHDz64L1c9QkCbz52ths6bMVtpHnw4QDngzQYs"
+    }
+  }
+}

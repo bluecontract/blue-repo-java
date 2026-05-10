@@ -1,0 +1,137 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'blue.repository'
+version = '0.28.0-SNAPSHOT'
+
+base {
+    archivesName = 'blue-repository-java'
+}
+
+repositories {
+    if (!System.getenv('CI')) {
+        mavenLocal()
+    }
+    mavenCentral()
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    if (JavaVersion.current().isJava9Compatible()) {
+        options.release = 8
+    }
+}
+
+dependencies {
+    api 'blue.language:blue-language-java:0.8.0-SNAPSHOT'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+def generatedRepositorySourcePaths = [
+        'src/main/java/blue/repository/v0_28_0',
+        'src/main/java/blue/repository/types',
+        'src/main/resources/blue/repository/v0_28_0'
+]
+
+def snapshotGeneratedRepositoryFiles = {
+    def snapshot = new TreeMap<String, String>()
+    generatedRepositorySourcePaths.each { relativePath ->
+        def root = file(relativePath)
+        if (root.exists()) {
+            fileTree(root).visit { details ->
+                if (!details.directory) {
+                    def digest = java.security.MessageDigest.getInstance('SHA-256')
+                    digest.update(details.file.bytes)
+                    snapshot["${relativePath}/${details.relativePath.pathString}"] = digest.digest().encodeHex().toString()
+                }
+            }
+        }
+    }
+    return snapshot
+}
+
+tasks.register('generateRepositorySources', Exec) {
+    group = 'blue repository'
+    description = 'Generates v0.28.0 Java sources, constants, resources, and manifest from ../blue-repository/BlueRepository.blue.'
+    commandLine 'node', 'tools/generate-repository-sources.js'
+}
+
+tasks.register('verifyGeneratedSources') {
+    group = 'verification'
+    description = 'Regenerates repository sources and fails if checked-in generated output is stale.'
+    outputs.upToDateWhen { false }
+
+    doLast {
+        def before = snapshotGeneratedRepositoryFiles()
+        exec {
+            commandLine 'node', 'tools/generate-repository-sources.js'
+        }
+        def after = snapshotGeneratedRepositoryFiles()
+        if (before != after) {
+            def changed = new TreeSet<String>()
+            changed.addAll(before.keySet())
+            changed.addAll(after.keySet())
+            changed = changed.findAll { before[it] != after[it] } as TreeSet<String>
+            def shown = changed.take(20).collect { " - ${it}" }.join('\n')
+            def suffix = changed.size() > 20 ? "\n - ... ${changed.size() - 20} more" : ''
+            throw new GradleException("Generated repository sources are stale. Run ./gradlew generateRepositorySources and commit the result.\n${shown}${suffix}")
+        }
+    }
+}
+
+check.dependsOn tasks.named('verifyGeneratedSources')
+
+tasks.withType(GenerateModuleMetadata).configureEach {
+    enabled = false
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'blue.repository'
+            artifactId = 'blue-repository-java'
+            from components.java
+
+            pom {
+                name = 'Blue Repository Java Companion'
+                description = 'Classpath packaged Blue repository definitions and Java accessors.'
+                url = 'https://repo.blue'
+                licenses {
+                    license {
+                        name = 'MIT license'
+                        url = 'https://github.com/bluecontract/blue-repository'
+                    }
+                }
+                developers {
+                    developer {
+                        name = 'Blue'
+                        email = 'devsupport@timeline.blue'
+                    }
+                }
+                scm {
+                    url = 'https://github.com/bluecontract/blue-repository-java.git'
+                    connection = 'scm:git:git@github.com:bluecontract/blue-repository-java.git'
+                    developerConnection = 'scm:git:git@github.com:bluecontract/blue-repository-java.git'
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Linked PayNote Started",
+  "description": "Confirmation that linked PayNote startup was requested successfully.",
+  "type": {
+    "blueId": "36epvrpVHZLjapbeZsNodz2NDnm7XZeNZcnkWHgkP1pp"
+  },
+  "payNoteSessionId": {
+    "description": "Session id of the bootstrapped linked PayNote document.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "payNoteDocumentId": {
+    "description": "Document id of the bootstrapped linked PayNote when available.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}
