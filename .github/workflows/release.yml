@@ -69,10 +69,17 @@ jobs:
           export JRELEASER_MAVENCENTRAL_PASSWORD="$token"
           export JRELEASER_MAVENCENTRAL_SONATYPE_USERNAME="$MAVENCENTRAL_TOKEN_USERNAME"
           export JRELEASER_MAVENCENTRAL_SONATYPE_PASSWORD="$token"
+          export JRELEASER_DEPLOY_MAVEN_MAVENCENTRAL_USERNAME="$MAVENCENTRAL_TOKEN_USERNAME"
+          export JRELEASER_DEPLOY_MAVEN_MAVENCENTRAL_PASSWORD="$token"
           export JRELEASER_DEPLOY_MAVEN_MAVENCENTRAL_SONATYPE_USERNAME="$MAVENCENTRAL_TOKEN_USERNAME"
           export JRELEASER_DEPLOY_MAVEN_MAVENCENTRAL_SONATYPE_PASSWORD="$token"
 
-          ./gradlew jreleaserFullRelease --stacktrace
+          ./gradlew --no-daemon \
+            -Djreleaser.deploy.maven.mavencentral.sonatype.username="$MAVENCENTRAL_TOKEN_USERNAME" \
+            -Djreleaser.deploy.maven.mavencentral.sonatype.password="$token" \
+            -Djreleaser.mavencentral.sonatype.username="$MAVENCENTRAL_TOKEN_USERNAME" \
+            -Djreleaser.mavencentral.sonatype.password="$token" \
+            jreleaserFullRelease --stacktrace
 
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
