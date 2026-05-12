@@ -224,6 +224,8 @@ if (System.getenv('CI')) {
                     sonatype {
                         active = 'ALWAYS'
                         url = 'https://central.sonatype.com/api/v1/publisher'
+                        authorization = 'BEARER'
+                        namespace = 'blue.repo'
                         applyMavenCentralRules = true
                         snapshotSupported = true
                         stagingRepository('build/staging-deploy')

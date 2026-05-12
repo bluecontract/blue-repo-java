@@ -405,11 +405,18 @@ Publishing uses the same JReleaser/Maven Central flow as `blue-language-java`:
 The release workflow expects these repository secrets:
 
 - `GH_TOKEN`
-- `MAVENCENTRAL_USERNAME`
-- `MAVENCENTRAL_PASSWORD`
+- `MAVENCENTRAL_USERNAME` - the Central Portal user-token username
+- `MAVENCENTRAL_PASSWORD` - the Central Portal user-token password/passcode
 - `GPG_PUBLIC_KEY`
 - `GPG_SECRET_KEY`
 - `GPG_PASSPHRASE`
+
+The GitHub workflow converts the Maven Central token username and password into
+the base64 bearer token required by the Central Publisher API before running
+JReleaser. When running `jreleaserFullRelease` locally, set
+`JRELEASER_MAVENCENTRAL_PASSWORD` to the base64 value of
+`<token-username>:<token-password>` because the JReleaser Maven Central deployer
+uses bearer authorization.
 
 ## Project Layout
 
