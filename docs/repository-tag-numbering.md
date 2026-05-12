@@ -53,4 +53,4 @@ The checked `BlueRepository.blue` bundle itself contains only three `repositoryV
 | 1 | `1.1.0` | `B4qWEbNWRcgabYrDTxtebfRSP5nBnEYvpX5YWqa2PcE4` |
 | 2 | `1.2.0` | `sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv` |
 
-That is why `blue-repository-java` now exposes `blue.repository.v1_2_0`: it follows the public package/catalog version for the latest bundle, not the ordinal position of the Git tag list.
+That is why `blue-repo-java` now exposes `blue.repo.v1_2_0`: it follows the public package/catalog version for the latest bundle, not the ordinal position of the Git tag list.

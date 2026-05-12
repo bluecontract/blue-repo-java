@@ -15,7 +15,7 @@ Conversation workflows or timeline channels belongs in `blue-contract-java`.
 | Repository | Responsibility |
 | --- | --- |
 | `blue-language-java` | Blue language core: parsing, BlueId, resolution, snapshots, processor foundation. |
-| `blue-repository-java` | Generated Java catalog for repo.blue packages and types. |
+| `blue-repo-java` | Generated Java catalog for repo.blue packages and types. |
 | `blue-contract-java` | Executable processors for selected repository contracts. |
 
 Use this project when you need Java access to real repo.blue types:
@@ -38,15 +38,17 @@ It provides:
 - lookup by qualified name and BlueId;
 - `NodeProvider` integration for Blue reference resolution;
 - `TypeDictionary` integration for compact/portable export;
-- generated Java classes under `blue.repository.v1_2_0`;
-- generated type constants under `blue.repository.types`;
+- generated Java classes under `blue.repo.v1_2_0`;
+- generated type constants under `blue.repo.types`;
 - a `TypeClassResolver` configured with all generated `@TypeBlueId` classes;
 - type alias preprocessing so YAML can use names like
   `Conversation/Operation` instead of raw BlueIds.
 
 ## Installation
 
-Gradle:
+### Gradle
+
+Add the Maven Central repository and use the released artifact:
 
 ```groovy
 repositories {
@@ -54,44 +56,54 @@ repositories {
 }
 
 dependencies {
-    implementation "blue.repository:blue-repository-java:1.2.0-SNAPSHOT"
+    implementation "blue.repo:blue-repo-java:1.2.0"
 }
 ```
 
-This project depends on:
+`blue-language-java` is pulled transitively. If you need to declare it
+directly, use the published language artifact:
 
 ```groovy
-api "blue.language:blue-language-java:0.8.0-SNAPSHOT"
+implementation "blue.language:blue-language-java:1.0.0"
 ```
 
-For local development, keep the repositories next to each other:
+### Maven
 
-```text
-workspace/
-  blue-language-java/
-  blue-repository-java/
-  blue-contract-java/
+```xml
+<dependency>
+    <groupId>blue.repo</groupId>
+    <artifactId>blue-repo-java</artifactId>
+    <version>1.2.0</version>
+</dependency>
 ```
 
-`settings.gradle` includes `../blue-language-java` as a composite build when it
-is present, so local language changes are used automatically.
+### Local Development
 
-Alternative local setup:
+Local builds use the version from `.cz.toml` with `-SNAPSHOT` appended, so this
+checkout builds as `1.2.0-SNAPSHOT` outside CI.
+
+To test this package from another local project before release:
 
 ```bash
-cd ../blue-language-java
 ./gradlew publishToMavenLocal
-
-cd ../blue-repository-java
-./gradlew build
 ```
+
+Then depend on:
+
+```groovy
+implementation "blue.repo:blue-repo-java:1.2.0-SNAPSHOT"
+```
+
+This repository now resolves `blue.language:blue-language-java:1.0.0` from
+Maven Central or `mavenLocal()`; it does not include the sibling
+`../blue-language-java` composite build by default.
 
 ## Quick Start
 
 ### Create A Repository Catalog
 
 ```java
-import blue.repository.BlueRepository;
+import blue.repo.BlueRepository;
 
 BlueRepository repo = BlueRepository.v1_2_0();
 
@@ -104,7 +116,7 @@ System.out.println(repo.packageNames());
 
 ```java
 import blue.language.model.Node;
-import blue.repository.BlueRepository;
+import blue.repo.BlueRepository;
 
 BlueRepository repo = BlueRepository.v1_2_0();
 
@@ -120,8 +132,8 @@ System.out.println(operationType.getBlueId());
 ```java
 import blue.language.Blue;
 import blue.language.model.Node;
-import blue.repository.BlueRepository;
-import blue.repository.types.ConversationTypes;
+import blue.repo.BlueRepository;
+import blue.repo.types.ConversationTypes;
 
 BlueRepository repo = BlueRepository.v1_2_0();
 Blue blue = repo.configure(new Blue(repo.nodeProvider()));
@@ -144,8 +156,8 @@ repo.blue types:
 import blue.language.Blue;
 import blue.language.dictionary.ExportContext;
 import blue.language.model.Node;
-import blue.repository.BlueRepository;
-import blue.repository.types.ConversationTypes;
+import blue.repo.BlueRepository;
+import blue.repo.types.ConversationTypes;
 
 BlueRepository repo = BlueRepository.v1_2_0();
 Blue blue = repo.configureForExport(new Blue());
@@ -213,7 +225,7 @@ replace qualified names with real BlueIds:
 ```java
 import blue.language.Blue;
 import blue.language.model.Node;
-import blue.repository.BlueRepository;
+import blue.repo.BlueRepository;
 
 import static blue.language.utils.UncheckedObjectMapper.YAML_MAPPER;
 
@@ -234,10 +246,10 @@ Generated model classes live under versioned packages:
 ```java
 import blue.language.Blue;
 import blue.language.model.Node;
-import blue.repository.BlueRepository;
-import blue.repository.v1_2_0.conversation.ChatMessage;
-import blue.repository.v1_2_0.conversation.Operation;
-import blue.repository.v1_2_0.conversation.SequentialWorkflowOperation;
+import blue.repo.BlueRepository;
+import blue.repo.v1_2_0.conversation.ChatMessage;
+import blue.repo.v1_2_0.conversation.Operation;
+import blue.repo.v1_2_0.conversation.SequentialWorkflowOperation;
 
 BlueRepository repo = BlueRepository.v1_2_0();
 Blue blue = repo.configure(new Blue(repo.nodeProvider()));
@@ -281,8 +293,8 @@ compose providers:
 ```java
 import blue.language.Blue;
 import blue.language.NodeProvider;
-import blue.repository.BlueRepository;
-import blue.repository.provider.CompositeNodeProvider;
+import blue.repo.BlueRepository;
+import blue.repo.provider.CompositeNodeProvider;
 
 BlueRepository repo = BlueRepository.v1_2_0();
 
@@ -314,19 +326,19 @@ catalog data; the contract package is executable behavior.
 
 Current generated package groups include:
 
-- `blue.repository.v1_2_0.core`
-- `blue.repository.v1_2_0.common`
-- `blue.repository.v1_2_0.conversation`
-- `blue.repository.v1_2_0.myos`
-- `blue.repository.v1_2_0.paynote`
+- `blue.repo.v1_2_0.core`
+- `blue.repo.v1_2_0.common`
+- `blue.repo.v1_2_0.conversation`
+- `blue.repo.v1_2_0.myos`
+- `blue.repo.v1_2_0.paynote`
 
 Convenience constants:
 
-- `blue.repository.types.CoreTypes`
-- `blue.repository.types.CommonTypes`
-- `blue.repository.types.ConversationTypes`
-- `blue.repository.types.MyOSTypes`
-- `blue.repository.types.PayNoteTypes`
+- `blue.repo.types.CoreTypes`
+- `blue.repo.types.CommonTypes`
+- `blue.repo.types.ConversationTypes`
+- `blue.repo.types.MyOSTypes`
+- `blue.repo.types.PayNoteTypes`
 
 ## Regenerating Sources
 
@@ -377,17 +389,39 @@ Publish to local Maven:
 
 The project targets Java 8 bytecode.
 
+## Release Setup
+
+The project version is stored in `.cz.toml`. Local builds append `-SNAPSHOT`;
+CI builds publish the plain version, for example `1.2.0`.
+
+Publishing uses the same JReleaser/Maven Central flow as `blue-language-java`:
+
+```bash
+./gradlew clean build
+./gradlew publish
+./gradlew jreleaserFullRelease
+```
+
+The release workflow expects these repository secrets:
+
+- `GH_TOKEN`
+- `MAVENCENTRAL_USERNAME`
+- `MAVENCENTRAL_PASSWORD`
+- `GPG_PUBLIC_KEY`
+- `GPG_SECRET_KEY`
+- `GPG_PASSPHRASE`
+
 ## Project Layout
 
 ```text
-src/main/java/blue/repository
+src/main/java/blue/repo
   BlueRepository.java                  main facade
   RepositoryManifest.java              manifest loader/model
   provider/                            repository NodeProvider helpers
   types/                               generated RepositoryType constants
   v1_2_0/                             generated versioned Java classes
 
-src/main/resources/blue/repository/v1_2_0
+src/main/resources/blue/repo/v1_2_0
   manifest.json
   definitions/
   BlueRepository.blue

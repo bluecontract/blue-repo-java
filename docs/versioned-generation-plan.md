@@ -1,8 +1,8 @@
-# Versioned Generation Plan For blue-repository-java
+# Versioned Generation Plan For blue-repo-java
 
 ## Goal
 
-Make `blue-repository-java` generate Java companion APIs from immutable `blue-repository` release tags, not from a moving sibling checkout. The artifact should continue to expose repository types only: resources, generated model classes, constants, manifests, `NodeProvider`, aliases, and type-class resolver wiring. It must not implement contract processor behavior.
+Make `blue-repo-java` generate Java companion APIs from immutable `blue-repository` release tags, not from a moving sibling checkout. The artifact should continue to expose repository types only: resources, generated model classes, constants, manifests, `NodeProvider`, aliases, and type-class resolver wiring. It must not implement contract processor behavior.
 
 ## Design Decisions
 
@@ -19,8 +19,8 @@ Use repo.blue SDK/package metadata only as a public version label. For example, 
 Use semantic Java package names when a public SDK version is known:
 
 ```text
-blue.repository.v1_2_0
-blue/repository/v1_2_0
+blue.repo.v1_2_0
+blue/repo/v1_2_0
 BlueRepositoryV1_2_0
 BlueRepository.v1_2_0()
 ```
@@ -28,8 +28,8 @@ BlueRepository.v1_2_0()
 For historical tags without public SDK metadata, use a deterministic tag-based slug and keep the exact tag BlueId in the manifest:
 
 ```text
-blue.repository.r_suk1ihfrf7uq
-blue/repository/r_suk1ihfrf7uq
+blue.repo.r_suk1ihfrf7uq
+blue/repo/r_suk1ihfrf7uq
 ```
 
 If a later decision requires only semver-named packages, the generator can skip unmapped tags until a checked-in version catalog maps them.
@@ -68,7 +68,7 @@ Add a checked-in catalog, for example `repository-versions.json`, that records t
       "sdkVersion": "1.2.0",
       "javaVersion": "1.2.0",
       "javaPackageSegment": "v1_2_0",
-      "resourceBase": "blue/repository/v1_2_0"
+      "resourceBase": "blue/repo/v1_2_0"
     }
   ]
 }
@@ -102,7 +102,7 @@ node tools/generate-repository-sources.js \
   --repository-blue-id <tag> \
   --java-version 1.2.0 \
   --java-package-segment v1_2_0 \
-  --resource-base blue/repository/v1_2_0
+  --resource-base blue/repo/v1_2_0
 ```
 
 The existing Java-specific mapping rules should stay:
@@ -115,7 +115,7 @@ The existing Java-specific mapping rules should stay:
 
 ## Generated Metadata Annotations
 
-Add repository-owned annotations in `blue-repository-java`; do not add them to `blue-language-java`.
+Add repository-owned annotations in `blue-repo-java`; do not add them to `blue-language-java`.
 
 Recommended minimal set:
 
@@ -204,14 +204,14 @@ The repository dictionary uses this metadata as follows:
 - `typeBlueIdFor(currentBlueId, dictionaryBlueId)` chooses the type version at or before the target repository version index;
 - if no type version exists at or before the target repository version, it returns empty so export can inline or strict-export can fail.
 
-`blue-language-java` currently calls `TypeDictionary.definition(currentBlueId)` without the target dictionary BlueId. That means `blue-repository-java` can parse and expose field provenance, but it cannot prune fields from inlined type definitions for an older receiver without a future language SPI such as `definition(currentBlueId, dictionaryBlueId)`.
+`blue-language-java` currently calls `TypeDictionary.definition(currentBlueId)` without the target dictionary BlueId. That means `blue-repo-java` can parse and expose field provenance, but it cannot prune fields from inlined type definitions for an older receiver without a future language SPI such as `definition(currentBlueId, dictionaryBlueId)`.
 
 ## Generated Layout
 
 For each generated version:
 
 ```text
-src/main/java/blue/repository/v1_2_0/
+src/main/java/blue/repo/v1_2_0/
   BlueRepositoryV1_2_0.java
   common/
   conversation/
@@ -219,29 +219,29 @@ src/main/java/blue/repository/v1_2_0/
   myos/
   paynote/
 
-src/main/java/blue/repository/v1_2_0/types/
+src/main/java/blue/repo/v1_2_0/types/
   CommonTypes.java
   ConversationTypes.java
   CoreTypes.java
   MyOSTypes.java
   PayNoteTypes.java
 
-src/main/resources/blue/repository/v1_2_0/
+src/main/resources/blue/repo/v1_2_0/
   BlueRepository.blue
   manifest.json
   definitions/
 ```
 
-The current top-level `blue.repository.types.*` classes should either become latest-version aliases or remain single-version only. For multi-version generation, versioned constants are safer:
+The current top-level `blue.repo.types.*` classes should either become latest-version aliases or remain single-version only. For multi-version generation, versioned constants are safer:
 
 ```java
-blue.repository.v1_2_0.types.ConversationTypes.OPERATION
+blue.repo.v1_2_0.types.ConversationTypes.OPERATION
 ```
 
 Then a top-level latest alias can be added deliberately:
 
 ```java
-blue.repository.types.ConversationTypes.OPERATION
+blue.repo.types.ConversationTypes.OPERATION
 ```
 
 ## Facade API
@@ -325,4 +325,4 @@ For multi-version scale, run full object-mapping tests on the latest version and
 - Java resources and model classes are generated from the exact tag snapshots.
 - Normal build and tests run offline.
 - No changes are needed in `blue-language-java`.
-- No contract processors are added to `blue-repository-java`.
+- No contract processors are added to `blue-repo-java`.

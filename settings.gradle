@@ -1,6 +1,1 @@
-rootProject.name = 'blue-repository-java'
-
-def blueLanguageJava = file('../blue-language-java')
-if (blueLanguageJava.exists()) {
-    includeBuild(blueLanguageJava)
-}
+rootProject.name = 'blue-repo-java'

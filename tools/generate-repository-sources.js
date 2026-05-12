@@ -39,15 +39,15 @@ function registryClassName(versionSegment) {
 
 const repositoryVersion = option('repository-version', '1.2.0');
 const javaVersionSegment = option('java-package-segment', versionPackageSegment(repositoryVersion));
-const resourceBase = option('resource-base', `blue/repository/${javaVersionSegment}`);
-const javaVersionPackage = option('java-package', `blue.repository.${javaVersionSegment}`);
+const resourceBase = option('resource-base', `blue/repo/${javaVersionSegment}`);
+const javaVersionPackage = option('java-package', `blue.repo.${javaVersionSegment}`);
 const versionRegistryClassName = registryClassName(javaVersionSegment);
 const sourceBundle = option('source', path.join(sourceRepositoryRoot, 'BlueRepository.blue'));
 const javaOutputRoot = path.resolve(option('java-output-root', path.join(repoRoot, 'src', 'main', 'java')));
 const resourcesOutputRoot = path.resolve(option('resources-output-root', path.join(repoRoot, 'src', 'main', 'resources')));
 const resourcesRoot = path.join(resourcesOutputRoot, resourceBase);
 const definitionsRoot = path.join(resourcesRoot, 'definitions');
-const constantsRoot = path.join(javaOutputRoot, 'blue', 'repository', 'types');
+const constantsRoot = path.join(javaOutputRoot, 'blue', 'repo', 'types');
 const modelsRoot = path.join(javaOutputRoot, ...javaVersionPackage.split('.'));
 
 const reservedNodeKeys = new Set([
@@ -497,9 +497,9 @@ function writeConstantsClass(packageName, definitions) {
   const cls = constantsClassName(packageName);
   const usedConstants = new Set();
   const lines = [
-    'package blue.repository.types;',
+    'package blue.repo.types;',
     '',
-    'import blue.repository.RepositoryType;',
+    'import blue.repo.RepositoryType;',
     '',
     `public final class ${cls} {`,
   ];
@@ -561,7 +561,7 @@ function writeModelClass(definition, byBlueId) {
   const imports = new Set([
     'blue.language.model.Node',
     'blue.language.model.TypeBlueId',
-    'blue.repository.RepositoryType',
+    'blue.repo.RepositoryType',
   ]);
   const parent = referencedDefinition(definition.content.type, byBlueId);
   let extendsClause = '';

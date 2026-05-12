@@ -11,13 +11,13 @@ Checked on 2026-05-12.
 - Local sibling repos:
   - `/Users/piotr/data/blue-js/libs/repository-generator`
   - `/Users/piotr/data/blue-repository`
-  - `/Users/piotr/data/blue-repository-java`
+  - `/Users/piotr/data/blue-repo-java`
 
 ## Main Finding
 
 `blue-js/libs/repository-generator` is not primarily a TypeScript model/accessor generator. It is the source repository bundle generator for `BlueRepository.blue`. It scans package folders containing `.blue` and `.dev.blue` files, replaces type aliases with BlueIds, computes type and repository BlueIds, enforces stable/dev versioning rules, and writes or checks the deterministic `BlueRepository.blue` bundle.
 
-That makes it directly relevant to `blue-repository-java`, but as the upstream source-of-truth generator, not as something to copy line-for-line for Java model output.
+That makes it directly relevant to `blue-repo-java`, but as the upstream source-of-truth generator, not as something to copy line-for-line for Java model output.
 
 ## How the JS Repository Generator Works
 
@@ -226,11 +226,11 @@ So the JS SDK does not put old type BlueIds into the Zod schema decorator. It de
 
 The root `type-aliases.js` also builds a reverse BlueId-to-alias map across primitive and repository types.
 
-## Implications For blue-repository-java
+## Implications For blue-repo-java
 
 The Java project already has the right generated companion shape: classpath resources, generated Java models, constants, manifests, and repository provider/facade APIs. The gap is version sourcing.
 
-Current generator behavior in `/Users/piotr/data/blue-repository-java/tools/generate-repository-sources.js` after the latest-version correction:
+Current generator behavior in `/Users/piotr/data/blue-repo-java/tools/generate-repository-sources.js` after the latest-version correction:
 
 - defaults to `repositoryVersion = '1.2.0'`;
 - defaults Java package/resource paths under `v1_2_0`;
