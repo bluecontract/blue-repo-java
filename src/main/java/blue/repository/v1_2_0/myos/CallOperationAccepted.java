@@ -1,0 +1,61 @@
+package blue.repository.v1_2_0.myos;
+
+import blue.language.model.Node;
+import blue.language.model.TypeBlueId;
+import blue.repository.RepositoryType;
+import blue.repository.v1_2_0.conversation.Response;
+
+@TypeBlueId("Dd53JjiBGUnASZXjhiHBqCSnruN2XmLtcW2vNQB7Sm34")
+public class CallOperationAccepted extends Response {
+    public static String blueId() {
+        return "Dd53JjiBGUnASZXjhiHBqCSnruN2XmLtcW2vNQB7Sm34";
+    }
+
+    public static String packageName() {
+        return "MyOS";
+    }
+
+    public static String typeName() {
+        return "Call Operation Accepted";
+    }
+
+    public static String qualifiedName() {
+        return "MyOS/Call Operation Accepted";
+    }
+
+    public static String resourcePath() {
+        return "blue/repository/v1_2_0/definitions/MyOS/CallOperationAccepted.json";
+    }
+
+    public static RepositoryType repositoryType() {
+        return RepositoryType.of(
+                packageName(),
+                typeName(),
+                qualifiedName(),
+                blueId(),
+                resourcePath());
+    }
+
+    private String targetSessionId;
+
+    private String operation;
+
+    public String getTargetSessionId() {
+        return targetSessionId;
+    }
+
+    public CallOperationAccepted targetSessionId(String targetSessionId) {
+        this.targetSessionId = targetSessionId;
+        return this;
+    }
+
+    public String getOperation() {
+        return operation;
+    }
+
+    public CallOperationAccepted operation(String operation) {
+        this.operation = operation;
+        return this;
+    }
+
+}

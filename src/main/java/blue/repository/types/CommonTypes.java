@@ -2,22 +2,22 @@ package blue.repository.types;
 
 import blue.repository.RepositoryType;
 
-import blue.repository.v0_28_0.common.Currency;
-import blue.repository.v0_28_0.common.Document;
-import blue.repository.v0_28_0.common.DocumentAnchor;
-import blue.repository.v0_28_0.common.DocumentAnchors;
-import blue.repository.v0_28_0.common.NamedEvent;
-import blue.repository.v0_28_0.common.Payment;
-import blue.repository.v0_28_0.common.PermissionGrant;
-import blue.repository.v0_28_0.common.Profile;
-import blue.repository.v0_28_0.common.Record;
-import blue.repository.v0_28_0.common.Relationship;
-import blue.repository.v0_28_0.common.Request;
-import blue.repository.v0_28_0.common.Response;
-import blue.repository.v0_28_0.common.Service;
-import blue.repository.v0_28_0.common.Space;
-import blue.repository.v0_28_0.common.Task;
-import blue.repository.v0_28_0.common.Timestamp;
+import blue.repository.v1_2_0.common.Currency;
+import blue.repository.v1_2_0.common.Document;
+import blue.repository.v1_2_0.common.DocumentAnchor;
+import blue.repository.v1_2_0.common.DocumentAnchors;
+import blue.repository.v1_2_0.common.NamedEvent;
+import blue.repository.v1_2_0.common.Payment;
+import blue.repository.v1_2_0.common.PermissionGrant;
+import blue.repository.v1_2_0.common.Profile;
+import blue.repository.v1_2_0.common.Record;
+import blue.repository.v1_2_0.common.Relationship;
+import blue.repository.v1_2_0.common.Request;
+import blue.repository.v1_2_0.common.Response;
+import blue.repository.v1_2_0.common.Service;
+import blue.repository.v1_2_0.common.Space;
+import blue.repository.v1_2_0.common.Task;
+import blue.repository.v1_2_0.common.Timestamp;
 
 public final class CommonTypes {
     public static final RepositoryType CURRENCY = Currency.repositoryType();

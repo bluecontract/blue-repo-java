@@ -1,9 +1,10 @@
 package blue.repository;
 
 import blue.language.Blue;
+import blue.language.dictionary.TypeDictionary;
 import blue.language.model.Node;
 import blue.language.utils.TypeClassResolver;
-import blue.repository.v0_28_0.BlueRepositoryV0_28_0;
+import blue.repository.v1_2_0.BlueRepositoryV1_2_0;
 import blue.repository.provider.RepositoryNodeProvider;
 
 import java.util.LinkedHashMap;
@@ -12,8 +13,10 @@ import java.util.Optional;
 import java.util.Set;
 
 public final class BlueRepository {
-    public static final String V0_28_0 = "0.28.0";
-    public static final String V0_28_0_MANIFEST = "blue/repository/v0_28_0/manifest.json";
+    public static final String DICTIONARY_NAME = "Blue Repository";
+    public static final String V1_2_0 = "1.2.0";
+    public static final String LATEST = V1_2_0;
+    public static final String V1_2_0_MANIFEST = "blue/repository/v1_2_0/manifest.json";
 
     private static final String REPLACE_INLINE_TYPES_BLUE_ID = "27B7fuxQCS1VAptiCPc2RMkKoutP5qxkh3uDxZ7dr6Eo";
     private static final String INFER_BASIC_TYPES_BLUE_ID = "FGYuTXwaoSKfZmpTysLTLsb8WzSqf43384rKZDkXhxD4";
@@ -32,13 +35,33 @@ public final class BlueRepository {
         this.nodeProvider = nodeProvider;
     }
 
-    public static BlueRepository v0_28_0() {
-        return v0_28_0(classLoader());
+    public static BlueRepository v1_2_0() {
+        return v1_2_0(classLoader());
     }
 
-    public static BlueRepository v0_28_0(ClassLoader classLoader) {
-        RepositoryManifest manifest = RepositoryManifest.load(classLoader, V0_28_0_MANIFEST);
+    public static BlueRepository v1_2_0(ClassLoader classLoader) {
+        RepositoryManifest manifest = RepositoryManifest.load(classLoader, V1_2_0_MANIFEST);
         return new BlueRepository(manifest, new RepositoryNodeProvider(manifest, classLoader));
+    }
+
+    public static BlueRepository latest() {
+        return v1_2_0();
+    }
+
+    public static BlueRepository latest(ClassLoader classLoader) {
+        return v1_2_0(classLoader);
+    }
+
+    public static Optional<BlueRepository> byRepositoryBlueId(String repositoryBlueId) {
+        return byRepositoryBlueId(repositoryBlueId, classLoader());
+    }
+
+    public static Optional<BlueRepository> byRepositoryBlueId(String repositoryBlueId, ClassLoader classLoader) {
+        BlueRepository repository = v1_2_0(classLoader);
+        if (repository.manifest().repositoryVersionByBlueId(repositoryBlueId).isPresent()) {
+            return Optional.of(repository);
+        }
+        return Optional.empty();
     }
 
     public String repositoryVersion() {
@@ -62,7 +85,7 @@ public final class BlueRepository {
     }
 
     public TypeClassResolver typeClassResolver() {
-        return BlueRepositoryV0_28_0.typeClassResolver();
+        return BlueRepositoryV1_2_0.typeClassResolver();
     }
 
     public Blue configure(Blue blue) {
@@ -70,6 +93,14 @@ public final class BlueRepository {
             throw new IllegalArgumentException("blue must not be null");
         }
         return blue.typeClassResolver(typeClassResolver());
+    }
+
+    public TypeDictionary typeDictionary() {
+        return new RepositoryTypeDictionary(manifest, nodeProvider);
+    }
+
+    public Blue configureForExport(Blue blue) {
+        return configure(blue).registerTypeDictionary(typeDictionary());
     }
 
     public String blueId(String qualifiedName) {

@@ -16,16 +16,39 @@ try {
   ));
 }
 
-const repositoryVersion = '0.28.0';
-const resourceBase = 'blue/repository/v0_28_0';
-const javaVersionPackage = 'blue.repository.v0_28_0';
 const repoRoot = path.resolve(__dirname, '..');
 const sourceRepositoryRoot = path.resolve(__dirname, '..', '..', 'blue-repository');
-const sourceBundle = path.join(sourceRepositoryRoot, 'BlueRepository.blue');
-const resourcesRoot = path.join(repoRoot, 'src', 'main', 'resources', resourceBase);
+
+function option(name, defaultValue) {
+  const prefix = `--${name}=`;
+  const index = process.argv.indexOf(`--${name}`);
+  if (index !== -1 && index + 1 < process.argv.length) {
+    return process.argv[index + 1];
+  }
+  const match = process.argv.find((arg) => arg.startsWith(prefix));
+  return match ? match.slice(prefix.length) : defaultValue;
+}
+
+function versionPackageSegment(version) {
+  return `v${`${version}`.replace(/[^A-Za-z0-9]+/g, '_').replace(/^_+|_+$/g, '')}`;
+}
+
+function registryClassName(versionSegment) {
+  return `BlueRepository${versionSegment.charAt(0).toUpperCase()}${versionSegment.slice(1)}`;
+}
+
+const repositoryVersion = option('repository-version', '1.2.0');
+const javaVersionSegment = option('java-package-segment', versionPackageSegment(repositoryVersion));
+const resourceBase = option('resource-base', `blue/repository/${javaVersionSegment}`);
+const javaVersionPackage = option('java-package', `blue.repository.${javaVersionSegment}`);
+const versionRegistryClassName = registryClassName(javaVersionSegment);
+const sourceBundle = option('source', path.join(sourceRepositoryRoot, 'BlueRepository.blue'));
+const javaOutputRoot = path.resolve(option('java-output-root', path.join(repoRoot, 'src', 'main', 'java')));
+const resourcesOutputRoot = path.resolve(option('resources-output-root', path.join(repoRoot, 'src', 'main', 'resources')));
+const resourcesRoot = path.join(resourcesOutputRoot, resourceBase);
 const definitionsRoot = path.join(resourcesRoot, 'definitions');
-const constantsRoot = path.join(repoRoot, 'src', 'main', 'java', 'blue', 'repository', 'types');
-const modelsRoot = path.join(repoRoot, 'src', 'main', 'java', 'blue', 'repository', 'v0_28_0');
+const constantsRoot = path.join(javaOutputRoot, 'blue', 'repository', 'types');
+const modelsRoot = path.join(javaOutputRoot, ...javaVersionPackage.split('.'));
 
 const reservedNodeKeys = new Set([
   'name',
@@ -195,6 +218,86 @@ function latestVersion(versions) {
   );
 }
 
+function normalizeTypeVersions(type) {
+  const versions = Array.isArray(type.versions) ? [...type.versions] : [];
+  versions.sort((a, b) => a.repositoryVersionIndex - b.repositoryVersionIndex);
+  const current = latestVersion(versions);
+  return versions.map((version) => ({
+    repositoryVersionIndex: version.repositoryVersionIndex,
+    typeBlueId: version.typeBlueId,
+    attributesAdded: Array.isArray(version.attributesAdded) ? version.attributesAdded : [],
+    compatibleWithCurrent: isShapeCompatibleWithCurrent(type, version, current),
+  }));
+}
+
+function attributeRoot(attributePath) {
+  const value = `${attributePath || ''}`.trim();
+  if (!value) {
+    return null;
+  }
+  const withoutSlash = value.startsWith('/') ? value.slice(1) : value;
+  const root = withoutSlash.split('/')[0];
+  return root || null;
+}
+
+function currentOwnFieldNames(type) {
+  const content = type.content || {};
+  return new Set(Object.keys(content).filter((key) => !reservedNodeKeys.has(key)));
+}
+
+function isShapeCompatibleWithCurrent(type, historicalVersion, currentVersion) {
+  if (!historicalVersion || !currentVersion) {
+    return false;
+  }
+  if (historicalVersion.typeBlueId === currentVersion.typeBlueId) {
+    return true;
+  }
+  if (historicalVersion.compatibleWithCurrent !== true) {
+    return false;
+  }
+  if (type.status !== 'stable') {
+    return false;
+  }
+
+  const currentFields = currentOwnFieldNames(type);
+  for (const version of type.versions || []) {
+    for (const attribute of version.attributesAdded || []) {
+      const root = attributeRoot(attribute);
+      if (root && !currentFields.has(root)) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+function repositoryVersionName(index, total, currentVersion) {
+  if (index === total - 1) {
+    return currentVersion;
+  }
+
+  const match = /^(\d+)\.(\d+)\.(\d+)(-.+)?$/.exec(currentVersion);
+  if (match) {
+    const major = Number(match[1]);
+    const minor = Number(match[2]);
+    const patch = Number(match[3]);
+    if (minor === total - 1 && patch === 0) {
+      return `${major}.${index}.0`;
+    }
+  }
+
+  return `repository-${index + 1}`;
+}
+
+function repositoryVersionEntries(repository) {
+  const versions = Array.isArray(repository.repositoryVersions) ? repository.repositoryVersions : [];
+  return versions.map((repositoryBlueId, index) => ({
+    index,
+    version: repositoryVersionName(index, versions.length, repositoryVersion),
+    repositoryBlueId,
+  }));
+}
+
 function discoverDefinitions(repository) {
   const definitions = [];
   const definitionsByPackage = new Map();
@@ -204,7 +307,8 @@ function discoverDefinitions(repository) {
     const packageDefinitions = [];
     const usedFileNames = new Set();
     for (const type of pkg.types || []) {
-      const version = latestVersion(type.versions);
+      const versions = normalizeTypeVersions(type);
+      const version = latestVersion(versions);
       const name = type.content && type.content.name;
       if (!name) {
         throw new Error(`Repository type in package ${pkg.name} is missing content.name`);
@@ -219,6 +323,7 @@ function discoverDefinitions(repository) {
         resourcePath: `${resourceBase}/definitions/${pkg.name}/${fileName(name, usedFileNames)}`,
         status: type.status || null,
         repositoryVersionIndex: version.repositoryVersionIndex,
+        versions,
         content: type.content,
       };
       definitions.push(definition);
@@ -423,6 +528,31 @@ function writeConstantsClass(packageName, definitions) {
   fs.writeFileSync(path.join(constantsRoot, `${cls}.java`), lines.join('\n'));
 }
 
+function typeBlueIds(definition) {
+  const result = [definition.blueId];
+  for (const version of [...definition.versions].reverse()) {
+    if (version.typeBlueId !== definition.blueId && version.compatibleWithCurrent) {
+      result.push(version.typeBlueId);
+    }
+  }
+  return result;
+}
+
+function writeTypeBlueIdAnnotation(lines, definition) {
+  const blueIds = typeBlueIds(definition);
+  if (blueIds.length === 1) {
+    lines.push(`@TypeBlueId("${javaString(blueIds[0])}")`);
+    return;
+  }
+
+  lines.push('@TypeBlueId({');
+  for (let i = 0; i < blueIds.length; i += 1) {
+    const comma = i + 1 < blueIds.length ? ',' : '';
+    lines.push(`    "${javaString(blueIds[i])}"${comma}`);
+  }
+  lines.push('})');
+}
+
 function writeModelClass(definition, byBlueId) {
   const pkg = modelPackage(definition);
   const dir = path.join(modelsRoot, definition.packageSegment);
@@ -470,7 +600,7 @@ function writeModelClass(definition, byBlueId) {
     lines.push(`import ${item};`);
   }
   lines.push('');
-  lines.push(`@TypeBlueId("${javaString(definition.blueId)}")`);
+  writeTypeBlueIdAnnotation(lines, definition);
   lines.push(`public class ${definition.className}${extendsClause} {`);
   lines.push('    public static String blueId() {');
   lines.push(`        return "${javaString(definition.blueId)}";`);
@@ -535,7 +665,7 @@ function writeVersionRegistry(definitions) {
     '',
     'import blue.language.utils.TypeClassResolver;',
     '',
-    'public final class BlueRepositoryV0_28_0 {',
+    `public final class ${versionRegistryClassName} {`,
     `    public static final String VERSION = "${repositoryVersion}";`,
     '',
     '    public static TypeClassResolver typeClassResolver() {',
@@ -555,12 +685,12 @@ function writeVersionRegistry(definitions) {
   lines.push('        return resolver;');
   lines.push('    }');
   lines.push('');
-  lines.push('    private BlueRepositoryV0_28_0() {');
+  lines.push(`    private ${versionRegistryClassName}() {`);
   lines.push('    }');
   lines.push('}');
   lines.push('');
 
-  fs.writeFileSync(path.join(modelsRoot, 'BlueRepositoryV0_28_0.java'), lines.join('\n'));
+  fs.writeFileSync(path.join(modelsRoot, `${versionRegistryClassName}.java`), lines.join('\n'));
 }
 
 function main() {
@@ -582,7 +712,7 @@ function main() {
     mkdirp(path.join(definitionsRoot, packageName));
     for (const definition of packageDefinitions) {
       fs.writeFileSync(
-        path.join(repoRoot, 'src', 'main', 'resources', definition.resourcePath),
+        path.join(resourcesOutputRoot, definition.resourcePath),
         `${JSON.stringify(definition.content, null, 2)}\n`
       );
     }
@@ -594,6 +724,7 @@ function main() {
     repositoryVersion,
     repositoryVersionBlueId,
     sourceResource: `${resourceBase}/BlueRepository.blue`,
+    repositoryVersions: repositoryVersionEntries(repository),
     packageNames: Array.from(definitionsByPackage.keys()),
     definitions: definitions.map((definition) => ({
       packageName: definition.packageName,
@@ -603,6 +734,12 @@ function main() {
       resourcePath: definition.resourcePath,
       status: definition.status,
       repositoryVersionIndex: definition.repositoryVersionIndex,
+      versions: definition.versions.map((version) => ({
+        repositoryVersionIndex: version.repositoryVersionIndex,
+        typeBlueId: version.typeBlueId,
+        attributesAdded: version.attributesAdded,
+        compatibleWithCurrent: version.compatibleWithCurrent,
+      })),
     })),
   };
   fs.writeFileSync(path.join(resourcesRoot, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);

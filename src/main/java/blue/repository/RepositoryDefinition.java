@@ -2,7 +2,12 @@ package blue.repository;
 
 import blue.language.model.Node;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 public final class RepositoryDefinition {
     private final String packageName;
@@ -12,6 +17,7 @@ public final class RepositoryDefinition {
     private final String resourcePath;
     private final String status;
     private final int repositoryVersionIndex;
+    private final List<RepositoryTypeVersion> versions;
 
     public RepositoryDefinition(String packageName,
                                 String name,
@@ -19,7 +25,8 @@ public final class RepositoryDefinition {
                                 String blueId,
                                 String resourcePath,
                                 String status,
-                                int repositoryVersionIndex) {
+                                int repositoryVersionIndex,
+                                List<RepositoryTypeVersion> versions) {
         this.packageName = require(packageName, "packageName");
         this.name = require(name, "name");
         this.qualifiedName = require(qualifiedName, "qualifiedName");
@@ -27,6 +34,15 @@ public final class RepositoryDefinition {
         this.resourcePath = require(resourcePath, "resourcePath");
         this.status = status;
         this.repositoryVersionIndex = repositoryVersionIndex;
+        List<RepositoryTypeVersion> normalized = new ArrayList<>();
+        if (versions != null) {
+            normalized.addAll(versions);
+        }
+        if (normalized.isEmpty()) {
+            normalized.add(new RepositoryTypeVersion(repositoryVersionIndex, blueId, Collections.<String>emptyList(), true));
+        }
+        normalized.sort(Comparator.comparingInt(RepositoryTypeVersion::repositoryVersionIndex));
+        this.versions = Collections.unmodifiableList(normalized);
     }
 
     public String packageName() {
@@ -57,6 +73,29 @@ public final class RepositoryDefinition {
         return repositoryVersionIndex;
     }
 
+    public List<RepositoryTypeVersion> versions() {
+        return versions;
+    }
+
+    public Optional<RepositoryTypeVersion> versionAtOrBefore(int repositoryVersionIndex) {
+        RepositoryTypeVersion match = null;
+        for (RepositoryTypeVersion version : versions) {
+            if (version.repositoryVersionIndex() <= repositoryVersionIndex) {
+                match = version;
+            }
+        }
+        return Optional.ofNullable(match);
+    }
+
+    public Optional<RepositoryTypeVersion> versionForRepositoryIndex(int repositoryVersionIndex) {
+        for (RepositoryTypeVersion version : versions) {
+            if (version.repositoryVersionIndex() == repositoryVersionIndex) {
+                return Optional.of(version);
+            }
+        }
+        return Optional.empty();
+    }
+
     public RepositoryType type() {
         return RepositoryType.of(packageName, name, qualifiedName, blueId, resourcePath);
     }
@@ -80,12 +119,13 @@ public final class RepositoryDefinition {
                 && Objects.equals(qualifiedName, that.qualifiedName)
                 && Objects.equals(blueId, that.blueId)
                 && Objects.equals(resourcePath, that.resourcePath)
-                && Objects.equals(status, that.status);
+                && Objects.equals(status, that.status)
+                && Objects.equals(versions, that.versions);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(packageName, name, qualifiedName, blueId, resourcePath, status, repositoryVersionIndex);
+        return Objects.hash(packageName, name, qualifiedName, blueId, resourcePath, status, repositoryVersionIndex, versions);
     }
 
     @Override

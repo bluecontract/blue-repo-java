@@ -16,25 +16,25 @@ import blue.repository.types.ConversationTypes;
 import blue.repository.types.CoreTypes;
 import blue.repository.types.MyOSTypes;
 import blue.repository.types.PayNoteTypes;
-import blue.repository.v0_28_0.BlueRepositoryV0_28_0;
-import blue.repository.v0_28_0.common.Document;
-import blue.repository.v0_28_0.conversation.AcceptChangeWorkflow;
-import blue.repository.v0_28_0.conversation.ChatMessage;
-import blue.repository.v0_28_0.conversation.Operation;
-import blue.repository.v0_28_0.conversation.SequentialWorkflow;
-import blue.repository.v0_28_0.conversation.SequentialWorkflowOperation;
-import blue.repository.v0_28_0.conversation.TimelineChannel;
-import blue.repository.v0_28_0.conversation.UpdateDocument;
-import blue.repository.v0_28_0.core.ChannelEventCheckpoint;
-import blue.repository.v0_28_0.core.DocumentUpdateChannel;
-import blue.repository.v0_28_0.core.EmbeddedNodeChannel;
-import blue.repository.v0_28_0.core.JsonPatchEntry;
-import blue.repository.v0_28_0.core.LifecycleEventChannel;
-import blue.repository.v0_28_0.core.ProcessEmbedded;
-import blue.repository.v0_28_0.core.TriggeredEventChannel;
-import blue.repository.v0_28_0.myos.InformUserToInstallMyOSPackage;
-import blue.repository.v0_28_0.myos.MyOSPackage;
-import blue.repository.v0_28_0.paynote.CaptureFundsRequested;
+import blue.repository.v1_2_0.BlueRepositoryV1_2_0;
+import blue.repository.v1_2_0.common.Document;
+import blue.repository.v1_2_0.conversation.AcceptChangeWorkflow;
+import blue.repository.v1_2_0.conversation.ChatMessage;
+import blue.repository.v1_2_0.conversation.Operation;
+import blue.repository.v1_2_0.conversation.SequentialWorkflow;
+import blue.repository.v1_2_0.conversation.SequentialWorkflowOperation;
+import blue.repository.v1_2_0.conversation.TimelineChannel;
+import blue.repository.v1_2_0.conversation.UpdateDocument;
+import blue.repository.v1_2_0.core.ChannelEventCheckpoint;
+import blue.repository.v1_2_0.core.DocumentUpdateChannel;
+import blue.repository.v1_2_0.core.EmbeddedNodeChannel;
+import blue.repository.v1_2_0.core.JsonPatchEntry;
+import blue.repository.v1_2_0.core.LifecycleEventChannel;
+import blue.repository.v1_2_0.core.ProcessEmbedded;
+import blue.repository.v1_2_0.core.TriggeredEventChannel;
+import blue.repository.v1_2_0.myos.InformUserToInstallMyOSPackage;
+import blue.repository.v1_2_0.myos.MyOSPackage;
+import blue.repository.v1_2_0.paynote.CaptureFundsRequested;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Test;
 
@@ -57,7 +57,7 @@ class BlueRepositoryTest {
 
     @Test
     void knownConversationTypesResolveByQualifiedNameAndBlueId() {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
 
         String operationBlueId = repo.blueId("Conversation/Operation");
         assertEquals(ConversationTypes.OPERATION.blueId(), operationBlueId);
@@ -80,11 +80,11 @@ class BlueRepositoryTest {
     @Test
     void providerLoadsManifestAndDefinitionsFromClasspathResources() {
         TrackingClassLoader classLoader = new TrackingClassLoader(BlueRepository.class.getClassLoader());
-        BlueRepository repo = BlueRepository.v0_28_0(classLoader);
+        BlueRepository repo = BlueRepository.v1_2_0(classLoader);
 
         assertEquals("Operation", repo.nodeByName("Conversation/Operation").orElseThrow(AssertionError::new).getName());
 
-        assertTrue(classLoader.resources.contains(BlueRepository.V0_28_0_MANIFEST));
+        assertTrue(classLoader.resources.contains(BlueRepository.V1_2_0_MANIFEST));
         assertTrue(classLoader.resources.contains(ConversationTypes.OPERATION.resourcePath()));
         for (String resource : classLoader.resources) {
             assertTrue(resource.startsWith("blue/repository/"), "unexpected non-repository classpath resource: " + resource);
@@ -93,7 +93,7 @@ class BlueRepositoryTest {
 
     @Test
     void blueCanResolveRepositoryTypeReferencesWithRepositoryProvider() {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
         Blue blue = new Blue(repo.nodeProvider());
 
         Node document = new Node()
@@ -111,7 +111,7 @@ class BlueRepositoryTest {
 
     @Test
     void generatedModelClassesExposeRepositoryTypesForJavaMapping() {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
         Blue blue = new Blue(repo.nodeProvider()).typeClassResolver(repo.typeClassResolver());
 
         ChatMessage message = new ChatMessage().message("hello");
@@ -142,17 +142,17 @@ class BlueRepositoryTest {
 
     @Test
     void generatedVersionRegistryRegistersAllManifestTypes() {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
 
         assertEquals(ChatMessage.class, repo.typeClassResolver().resolveClass(ConversationTypes.CHAT_MESSAGE.blueId()));
-        assertEquals(Operation.class, BlueRepositoryV0_28_0.typeClassResolver()
+        assertEquals(Operation.class, BlueRepositoryV1_2_0.typeClassResolver()
                 .resolveClass(ConversationTypes.OPERATION.blueId()));
         assertEquals(repo.manifest().definitions().size(), repo.typeClassResolver().getBlueIdMap().size());
     }
 
     @Test
     void everyManifestDefinitionJavaAccessorBlueIdMatchesManifest() throws Exception {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
         TypeClassResolver resolver = repo.typeClassResolver();
 
         for (RepositoryDefinition definition : repo.manifest().definitions()) {
@@ -166,7 +166,7 @@ class BlueRepositoryTest {
 
     @Test
     void everyManifestBlueIdResolvesThroughRepositoryNodeProvider() {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
 
         for (RepositoryDefinition definition : repo.manifest().definitions()) {
             Node node = repo.nodeProvider().fetchFirstByBlueId(definition.blueId());
@@ -177,7 +177,7 @@ class BlueRepositoryTest {
 
     @Test
     void everyGeneratedTypeBlueIdResolvesThroughTypeClassResolver() {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
         TypeClassResolver resolver = repo.typeClassResolver();
 
         for (RepositoryDefinition definition : repo.manifest().definitions()) {
@@ -207,7 +207,7 @@ class BlueRepositoryTest {
 
     @Test
     void generatedCoreProcessorManagedTypesLoadFromRepositoryYaml() throws Exception {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
         Blue blue = repo.configure(new Blue(repo.nodeProvider()));
         String yaml = ""
                 + "contracts:\n"
@@ -252,7 +252,7 @@ class BlueRepositoryTest {
 
     @Test
     void generatedIntegerFieldsRoundTripAsBigInteger() throws Exception {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
         Blue blue = new Blue(repo.nodeProvider()).typeClassResolver(repo.typeClassResolver());
         BigInteger largeAmount = new BigInteger("9223372036854775808123456789");
 
@@ -284,7 +284,7 @@ class BlueRepositoryTest {
 
     @Test
     void keywordPropertiesRoundTripWhenBlueLanguageMapperSupportsJsonProperty() {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
         Blue blue = new Blue(repo.nodeProvider()).typeClassResolver(repo.typeClassResolver());
 
         InformUserToInstallMyOSPackage command = new InformUserToInstallMyOSPackage()
@@ -301,7 +301,7 @@ class BlueRepositoryTest {
 
     @Test
     void repositoryProvidesQualifiedTypeAliasesForPreprocessing() throws Exception {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
         assertEquals(ConversationTypes.TIMELINE_CHANNEL.blueId(),
                 repo.typeAliases().get("Conversation/Timeline Channel"));
 
@@ -318,7 +318,7 @@ class BlueRepositoryTest {
 
     @Test
     void counterDocumentMapsNestedRepositoryContractsToGeneratedTypes() throws Exception {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
         Blue blue = repo.configure(new Blue(repo.nodeProvider()));
 
         Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterDocumentYaml(), Node.class)
@@ -349,7 +349,7 @@ class BlueRepositoryTest {
 
     @Test
     void compositeProviderCanLayerRepositoryWithUserProvider() {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
         String userBlueId = "UserDocumentType";
         NodeProvider userProvider = blueId -> userBlueId.equals(blueId)
                 ? Collections.singletonList(new Node().name("User Document Type"))
@@ -363,7 +363,7 @@ class BlueRepositoryTest {
 
     @Test
     void generatedConstantsMatchManifestMetadata() throws IllegalAccessException {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
         List<Class<?>> typeClasses = Arrays.asList(
                 CommonTypes.class,
                 ConversationTypes.class,
@@ -389,10 +389,10 @@ class BlueRepositoryTest {
 
     @Test
     void manifestIncludesPackageQualifiedBlueIdAndResourceMetadata() {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
         RepositoryDefinition operation = repo.definition("Conversation/Operation").orElseThrow(AssertionError::new);
 
-        assertEquals("0.28.0", repo.repositoryVersion());
+        assertEquals("1.2.0", repo.repositoryVersion());
         assertFalse(repo.repositoryVersionBlueId().isEmpty());
         assertTrue(repo.packageNames().containsAll(Arrays.asList("Common", "Core", "Conversation", "MyOS", "PayNote")));
         assertEquals("Conversation", operation.packageName());
@@ -404,8 +404,25 @@ class BlueRepositoryTest {
     }
 
     @Test
+    void latestAndRepositoryBlueIdLookupReturnCurrentVersion() {
+        BlueRepository latest = BlueRepository.latest();
+        String oldestRepositoryBlueId = latest.manifest().repositoryVersions().get(0).repositoryBlueId();
+
+        assertEquals(BlueRepository.V1_2_0, latest.repositoryVersion());
+        assertEquals(latest.repositoryVersionBlueId(),
+                BlueRepository.byRepositoryBlueId(latest.repositoryVersionBlueId())
+                        .orElseThrow(AssertionError::new)
+                        .repositoryVersionBlueId());
+        assertEquals(latest.repositoryVersionBlueId(),
+                BlueRepository.byRepositoryBlueId(oldestRepositoryBlueId)
+                        .orElseThrow(AssertionError::new)
+                        .repositoryVersionBlueId());
+        assertFalse(BlueRepository.byRepositoryBlueId("unknown-repository-version").isPresent());
+    }
+
+    @Test
     void commonPackageIncludesCurrentRepositoryTypes() {
-        BlueRepository repo = BlueRepository.v0_28_0();
+        BlueRepository repo = BlueRepository.v1_2_0();
 
         assertEquals(16, repo.manifest().definitions().stream()
                 .filter(definition -> "Common".equals(definition.packageName()))
@@ -450,7 +467,7 @@ class BlueRepositoryTest {
                 RepositoryType.class,
                 CompositeNodeProvider.class,
                 RepositoryNodeProvider.class,
-                BlueRepositoryV0_28_0.class,
+                BlueRepositoryV1_2_0.class,
                 Operation.class,
                 SequentialWorkflowOperation.class,
                 ChatMessage.class

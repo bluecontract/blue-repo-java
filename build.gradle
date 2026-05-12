@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'blue.repository'
-version = '0.28.0-SNAPSHOT'
+version = '1.2.0-SNAPSHOT'
 
 base {
     archivesName = 'blue-repository-java'
@@ -46,9 +46,9 @@ test {
 }
 
 def generatedRepositorySourcePaths = [
-        'src/main/java/blue/repository/v0_28_0',
+        'src/main/java/blue/repository/v1_2_0',
         'src/main/java/blue/repository/types',
-        'src/main/resources/blue/repository/v0_28_0'
+        'src/main/resources/blue/repository/v1_2_0'
 ]
 
 def snapshotGeneratedRepositoryFiles = {
@@ -70,7 +70,7 @@ def snapshotGeneratedRepositoryFiles = {
 
 tasks.register('generateRepositorySources', Exec) {
     group = 'blue repository'
-    description = 'Generates v0.28.0 Java sources, constants, resources, and manifest from ../blue-repository/BlueRepository.blue.'
+    description = 'Generates v1.2.0 Java sources, constants, resources, and manifest from ../blue-repository/BlueRepository.blue.'
     commandLine 'node', 'tools/generate-repository-sources.js'
 }
 

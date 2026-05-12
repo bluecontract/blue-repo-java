@@ -2,22 +2,22 @@ package blue.repository.types;
 
 import blue.repository.RepositoryType;
 
-import blue.repository.v0_28_0.core.Channel;
-import blue.repository.v0_28_0.core.ChannelEventCheckpoint;
-import blue.repository.v0_28_0.core.Contract;
-import blue.repository.v0_28_0.core.DocumentProcessingInitiated;
-import blue.repository.v0_28_0.core.DocumentProcessingTerminated;
-import blue.repository.v0_28_0.core.DocumentUpdate;
-import blue.repository.v0_28_0.core.DocumentUpdateChannel;
-import blue.repository.v0_28_0.core.EmbeddedNodeChannel;
-import blue.repository.v0_28_0.core.Handler;
-import blue.repository.v0_28_0.core.JsonPatchEntry;
-import blue.repository.v0_28_0.core.LifecycleEventChannel;
-import blue.repository.v0_28_0.core.Marker;
-import blue.repository.v0_28_0.core.ProcessEmbedded;
-import blue.repository.v0_28_0.core.ProcessingInitializedMarker;
-import blue.repository.v0_28_0.core.ProcessingTerminatedMarker;
-import blue.repository.v0_28_0.core.TriggeredEventChannel;
+import blue.repository.v1_2_0.core.Channel;
+import blue.repository.v1_2_0.core.ChannelEventCheckpoint;
+import blue.repository.v1_2_0.core.Contract;
+import blue.repository.v1_2_0.core.DocumentProcessingInitiated;
+import blue.repository.v1_2_0.core.DocumentProcessingTerminated;
+import blue.repository.v1_2_0.core.DocumentUpdate;
+import blue.repository.v1_2_0.core.DocumentUpdateChannel;
+import blue.repository.v1_2_0.core.EmbeddedNodeChannel;
+import blue.repository.v1_2_0.core.Handler;
+import blue.repository.v1_2_0.core.JsonPatchEntry;
+import blue.repository.v1_2_0.core.LifecycleEventChannel;
+import blue.repository.v1_2_0.core.Marker;
+import blue.repository.v1_2_0.core.ProcessEmbedded;
+import blue.repository.v1_2_0.core.ProcessingInitializedMarker;
+import blue.repository.v1_2_0.core.ProcessingTerminatedMarker;
+import blue.repository.v1_2_0.core.TriggeredEventChannel;
 
 public final class CoreTypes {
     public static final RepositoryType CHANNEL = Channel.repositoryType();
