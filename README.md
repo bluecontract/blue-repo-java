@@ -411,12 +411,11 @@ The release workflow expects these repository secrets:
 - `GPG_SECRET_KEY`
 - `GPG_PASSPHRASE`
 
-The GitHub workflow converts the Maven Central token username and password into
-the base64 bearer token required by the Central Publisher API before running
-JReleaser. When running `jreleaserFullRelease` locally, set
-`JRELEASER_MAVENCENTRAL_PASSWORD` to the base64 value of
-`<token-username>:<token-password>` because the JReleaser Maven Central deployer
-uses bearer authorization.
+Use the raw Central Portal user-token values, the same as
+`blue-language-java`: `MAVENCENTRAL_USERNAME` is the token username and
+`MAVENCENTRAL_PASSWORD` is the token password/passcode.
+
+The `blue.repo` namespace must be verified in Maven Central before release.
 
 ## Project Layout
 
