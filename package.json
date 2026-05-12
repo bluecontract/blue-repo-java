@@ -1,0 +1,7 @@
+{
+  "name": "blue-repo-java",
+  "private": true,
+  "devDependencies": {
+    "js-yaml": "4.1.0"
+  }
+}

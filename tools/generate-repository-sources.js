@@ -42,7 +42,11 @@ const javaVersionSegment = option('java-package-segment', versionPackageSegment(
 const resourceBase = option('resource-base', `blue/repo/${javaVersionSegment}`);
 const javaVersionPackage = option('java-package', `blue.repo.${javaVersionSegment}`);
 const versionRegistryClassName = registryClassName(javaVersionSegment);
-const sourceBundle = option('source', path.join(sourceRepositoryRoot, 'BlueRepository.blue'));
+const defaultSourceBundle = path.join(repoRoot, 'src', 'main', 'resources', resourceBase, 'BlueRepository.blue');
+const sourceBundle = option(
+  'source',
+  fs.existsSync(defaultSourceBundle) ? defaultSourceBundle : path.join(sourceRepositoryRoot, 'BlueRepository.blue')
+);
 const javaOutputRoot = path.resolve(option('java-output-root', path.join(repoRoot, 'src', 'main', 'java')));
 const resourcesOutputRoot = path.resolve(option('resources-output-root', path.join(repoRoot, 'src', 'main', 'resources')));
 const resourcesRoot = path.join(resourcesOutputRoot, resourceBase);
@@ -694,7 +698,8 @@ function writeVersionRegistry(definitions) {
 }
 
 function main() {
-  const repository = yaml.load(fs.readFileSync(sourceBundle, 'utf8'));
+  const sourceBundleContent = fs.readFileSync(sourceBundle, 'utf8');
+  const repository = yaml.load(sourceBundleContent);
   const repositoryVersions = repository.repositoryVersions || [];
   const repositoryVersionBlueId = repositoryVersions[repositoryVersions.length - 1];
   const { definitions, definitionsByPackage, byBlueId } = discoverDefinitions(repository);
@@ -706,7 +711,12 @@ function main() {
   mkdirp(definitionsRoot);
   mkdirp(constantsRoot);
   mkdirp(modelsRoot);
-  fs.copyFileSync(sourceBundle, path.join(resourcesRoot, 'BlueRepository.blue'));
+  const targetSourceBundle = path.join(resourcesRoot, 'BlueRepository.blue');
+  if (path.resolve(sourceBundle) !== path.resolve(targetSourceBundle)) {
+    fs.copyFileSync(sourceBundle, targetSourceBundle);
+  } else {
+    fs.writeFileSync(targetSourceBundle, sourceBundleContent);
+  }
 
   for (const [packageName, packageDefinitions] of definitionsByPackage.entries()) {
     mkdirp(path.join(definitionsRoot, packageName));
