@@ -46,22 +46,33 @@ jobs:
       - name: Execute Gradle publish
         run: ./gradlew publish
 
-      - name: Configure Maven Central credentials
-        env:
-          MAVENCENTRAL_TOKEN_USERNAME: ${{ secrets.MAVENCENTRAL_USERNAME }}
-          MAVENCENTRAL_TOKEN_PASSWORD: ${{ secrets.MAVENCENTRAL_PASSWORD }}
-        run: |
-          token="$(printf '%s:%s' "$MAVENCENTRAL_TOKEN_USERNAME" "$MAVENCENTRAL_TOKEN_PASSWORD" | base64 | tr -d '\n')"
-          echo "JRELEASER_MAVENCENTRAL_USERNAME=$MAVENCENTRAL_TOKEN_USERNAME" >> "$GITHUB_ENV"
-          echo "JRELEASER_MAVENCENTRAL_PASSWORD=$token" >> "$GITHUB_ENV"
-
       - name: Execute Gradle release
         env:
           JRELEASER_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          MAVENCENTRAL_TOKEN_USERNAME: ${{ secrets.MAVENCENTRAL_USERNAME }}
+          MAVENCENTRAL_TOKEN_PASSWORD: ${{ secrets.MAVENCENTRAL_PASSWORD }}
           JRELEASER_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
           JRELEASER_GPG_PUBLIC_KEY: ${{ secrets.GPG_PUBLIC_KEY }}
           JRELEASER_GPG_SECRET_KEY: ${{ secrets.GPG_SECRET_KEY }}
-        run: ./gradlew jreleaserFullRelease --stacktrace
+        run: |
+          if [[ -z "$MAVENCENTRAL_TOKEN_USERNAME" ]]; then
+            echo "MAVENCENTRAL_USERNAME secret is empty"
+            exit 1
+          fi
+          if [[ -z "$MAVENCENTRAL_TOKEN_PASSWORD" ]]; then
+            echo "MAVENCENTRAL_PASSWORD secret is empty"
+            exit 1
+          fi
+
+          token="$(printf '%s:%s' "$MAVENCENTRAL_TOKEN_USERNAME" "$MAVENCENTRAL_TOKEN_PASSWORD" | base64 -w 0)"
+          export JRELEASER_MAVENCENTRAL_USERNAME="$MAVENCENTRAL_TOKEN_USERNAME"
+          export JRELEASER_MAVENCENTRAL_PASSWORD="$token"
+          export JRELEASER_MAVENCENTRAL_SONATYPE_USERNAME="$MAVENCENTRAL_TOKEN_USERNAME"
+          export JRELEASER_MAVENCENTRAL_SONATYPE_PASSWORD="$token"
+          export JRELEASER_DEPLOY_MAVEN_MAVENCENTRAL_SONATYPE_USERNAME="$MAVENCENTRAL_TOKEN_USERNAME"
+          export JRELEASER_DEPLOY_MAVEN_MAVENCENTRAL_SONATYPE_PASSWORD="$token"
+
+          ./gradlew jreleaserFullRelease --stacktrace
 
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
