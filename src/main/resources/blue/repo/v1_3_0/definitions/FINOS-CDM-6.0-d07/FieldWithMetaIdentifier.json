@@ -1,0 +1,19 @@
+{
+  "name": "FieldWithMetaIdentifier",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/staticdata/identifier"
+  },
+  "meta": {
+    "type": {
+      "blueId": "JD8ko8cUQ19mR5qp9RzbrvvRZvuXuQ6zGjMNd5e4cbmF"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "EdjJv5JTyG4VPv5esPYfbiA1VSWQfZA9erSSr785y3C1"
+    }
+  }
+}

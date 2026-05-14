@@ -1,0 +1,22 @@
+{
+  "name": "AcctOwnr",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/regulation"
+  },
+  "id": {
+    "type": {
+      "blueId": "4rrAX1jmCCSty4Lam2jtxW9cXnWwNDueibcuin1vVmNK"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

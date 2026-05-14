@@ -1,0 +1,27 @@
+{
+  "name": "FloatingRateIndexIdentification",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/observable/asset/fro"
+  },
+  "currency": {
+    "description": "FRO currency - 3 character ISO currrency code",
+    "type": {
+      "blueId": "Hwp8TYT9wFtwwDz88WRCnqX18m4mzmHgqrU8pURnjMmZ"
+    }
+  },
+  "floatingRateIndex": {
+    "description": "The reference index that is used to specify the floating interest rate. The FpML standard maintains the list of such indices, which are positioned as enumeration values as part of the CDM.\n",
+    "type": {
+      "blueId": "6UqK1hMXBKkwQRczdakVZrrBPaYxWdkaUojM8M69CSx3"
+    }
+  },
+  "froType": {
+    "description": "FRO type (e.g. OIS)",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}

@@ -41,7 +41,7 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 dependencies {
-    api 'blue.language:blue-language-java:1.0.0'
+    api 'blue.language:blue-language-java:2.0.0'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
 
     testImplementation platform('org.junit:junit-bom:5.10.2')
@@ -80,9 +80,9 @@ task generateBuildProperties {
 sourceSets.main.output.dir genResourcesDir, builtBy: generateBuildProperties
 
 def generatedRepositorySourcePaths = [
-        'src/main/java/blue/repo/v1_2_0',
+        'src/main/java/blue/repo/v1_3_0',
         'src/main/java/blue/repo/types',
-        'src/main/resources/blue/repo/v1_2_0'
+        'src/main/resources/blue/repo/v1_3_0'
 ]
 
 def snapshotGeneratedRepositoryFiles = {
@@ -127,10 +127,20 @@ def nodeExecutable = {
     return found ?: 'node'
 }
 
+def repositoryGeneratorArgs = {
+    def args = ['tools/generate-repository-sources.js']
+    def explicitSource = project.findProperty('blueRepositorySource') ?: System.getenv('BLUE_REPOSITORY_SOURCE')
+    if (explicitSource) {
+        args.add('--source')
+        args.add(explicitSource.toString())
+    }
+    return args
+}
+
 tasks.register('generateRepositorySources', Exec) {
     group = 'blue repository'
-    description = 'Generates v1.2.0 Java sources, constants, resources, and manifest from ../blue-repository/BlueRepository.blue.'
-    commandLine nodeExecutable(), 'tools/generate-repository-sources.js'
+    description = 'Generates v1.3.0 Java sources, constants, resources, and manifest from BlueRepository.blue.'
+    commandLine([nodeExecutable()] + repositoryGeneratorArgs())
 }
 
 tasks.register('verifyGeneratedSources') {
@@ -141,7 +151,7 @@ tasks.register('verifyGeneratedSources') {
     doLast {
         def before = snapshotGeneratedRepositoryFiles()
         exec {
-            commandLine nodeExecutable(), 'tools/generate-repository-sources.js'
+            commandLine([nodeExecutable()] + repositoryGeneratorArgs())
         }
         def after = snapshotGeneratedRepositoryFiles()
         if (before != after) {

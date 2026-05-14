@@ -1,0 +1,72 @@
+{
+  "name": "BillingRecord",
+  "description": "Specifies individual records within a billing invoice.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/common"
+  },
+  "minimumFee": {
+    "description": "Indicates the minimum fee amount applied to the billing record, if any.",
+    "type": {
+      "blueId": "AbAR9hDgkuDPyGUVbpg2virbQmHfou9H5TMSUKaAAQo3"
+    }
+  },
+  "recordEndDate": {
+    "description": "The ending date of the period described by this record",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "recordStartDate": {
+    "description": "The starting date of the period described by this record",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "recordTransfer": {
+    "description": "The settlement terms for the billing record",
+    "type": {
+      "blueId": "BvMhdWJJQFA5bg6P6VDUvk1NKoGWhGdNj7ZVUPejsWJE"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "tradeState": {
+    "description": "The trade for the individual billing record.",
+    "type": {
+      "blueId": "HijkmoFFK7RWn5r1Hv7QiAx6jqwPnfnDZNR1RPEoFgW7"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

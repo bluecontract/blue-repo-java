@@ -14,28 +14,33 @@ import blue.repo.provider.RepositoryNodeProvider;
 import blue.repo.types.CommonTypes;
 import blue.repo.types.ConversationTypes;
 import blue.repo.types.CoreTypes;
+import blue.repo.types.FINOSCDM60d07Types;
 import blue.repo.types.MyOSTypes;
 import blue.repo.types.PayNoteTypes;
-import blue.repo.v1_2_0.BlueRepositoryV1_2_0;
-import blue.repo.v1_2_0.common.Document;
-import blue.repo.v1_2_0.conversation.AcceptChangeWorkflow;
-import blue.repo.v1_2_0.conversation.ChatMessage;
-import blue.repo.v1_2_0.conversation.Operation;
-import blue.repo.v1_2_0.conversation.SequentialWorkflow;
-import blue.repo.v1_2_0.conversation.SequentialWorkflowOperation;
-import blue.repo.v1_2_0.conversation.TimelineChannel;
-import blue.repo.v1_2_0.conversation.UpdateDocument;
-import blue.repo.v1_2_0.core.ChannelEventCheckpoint;
-import blue.repo.v1_2_0.core.DocumentUpdateChannel;
-import blue.repo.v1_2_0.core.EmbeddedNodeChannel;
-import blue.repo.v1_2_0.core.JsonPatchEntry;
-import blue.repo.v1_2_0.core.LifecycleEventChannel;
-import blue.repo.v1_2_0.core.ProcessEmbedded;
-import blue.repo.v1_2_0.core.TriggeredEventChannel;
-import blue.repo.v1_2_0.myos.InformUserToInstallMyOSPackage;
-import blue.repo.v1_2_0.myos.MyOSPackage;
-import blue.repo.v1_2_0.paynote.CaptureFundsRequested;
+import blue.repo.v1_3_0.BlueRepositoryV1_3_0;
+import blue.repo.v1_3_0.common.Document;
+import blue.repo.v1_3_0.conversation.AcceptChangeWorkflow;
+import blue.repo.v1_3_0.conversation.ChatMessage;
+import blue.repo.v1_3_0.conversation.Operation;
+import blue.repo.v1_3_0.conversation.SequentialWorkflow;
+import blue.repo.v1_3_0.conversation.SequentialWorkflowOperation;
+import blue.repo.v1_3_0.conversation.TimelineChannel;
+import blue.repo.v1_3_0.conversation.UpdateDocument;
+import blue.repo.v1_3_0.core.ChannelEventCheckpoint;
+import blue.repo.v1_3_0.core.DocumentUpdateChannel;
+import blue.repo.v1_3_0.core.EmbeddedNodeChannel;
+import blue.repo.v1_3_0.core.JsonPatchEntry;
+import blue.repo.v1_3_0.core.LifecycleEventChannel;
+import blue.repo.v1_3_0.core.ProcessEmbedded;
+import blue.repo.v1_3_0.core.TriggeredEventChannel;
+import blue.repo.v1_3_0.finoscdm60d07.AllCriteria;
+import blue.repo.v1_3_0.finoscdm60d07.Clause;
+import blue.repo.v1_3_0.finoscdm60d07.CollateralCriteria;
+import blue.repo.v1_3_0.myos.InformUserToInstallMyOSPackage;
+import blue.repo.v1_3_0.myos.MyOSPackage;
+import blue.repo.v1_3_0.paynote.CaptureFundsRequested;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.jupiter.api.Test;
 
 import java.io.DataInputStream;
@@ -47,9 +52,12 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -57,7 +65,7 @@ class BlueRepositoryTest {
 
     @Test
     void knownConversationTypesResolveByQualifiedNameAndBlueId() {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
 
         String operationBlueId = repo.blueId("Conversation/Operation");
         assertEquals(ConversationTypes.OPERATION.blueId(), operationBlueId);
@@ -80,11 +88,11 @@ class BlueRepositoryTest {
     @Test
     void providerLoadsManifestAndDefinitionsFromClasspathResources() {
         TrackingClassLoader classLoader = new TrackingClassLoader(BlueRepository.class.getClassLoader());
-        BlueRepository repo = BlueRepository.v1_2_0(classLoader);
+        BlueRepository repo = BlueRepository.v1_3_0(classLoader);
 
         assertEquals("Operation", repo.nodeByName("Conversation/Operation").orElseThrow(AssertionError::new).getName());
 
-        assertTrue(classLoader.resources.contains(BlueRepository.V1_2_0_MANIFEST));
+        assertTrue(classLoader.resources.contains(BlueRepository.V1_3_0_MANIFEST));
         assertTrue(classLoader.resources.contains(ConversationTypes.OPERATION.resourcePath()));
         for (String resource : classLoader.resources) {
             assertTrue(resource.startsWith("blue/repo/"), "unexpected non-repository classpath resource: " + resource);
@@ -93,7 +101,7 @@ class BlueRepositoryTest {
 
     @Test
     void blueCanResolveRepositoryTypeReferencesWithRepositoryProvider() {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
         Blue blue = new Blue(repo.nodeProvider());
 
         Node document = new Node()
@@ -111,7 +119,7 @@ class BlueRepositoryTest {
 
     @Test
     void generatedModelClassesExposeRepositoryTypesForJavaMapping() {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
         Blue blue = new Blue(repo.nodeProvider()).typeClassResolver(repo.typeClassResolver());
 
         ChatMessage message = new ChatMessage().message("hello");
@@ -142,17 +150,17 @@ class BlueRepositoryTest {
 
     @Test
     void generatedVersionRegistryRegistersAllManifestTypes() {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
 
         assertEquals(ChatMessage.class, repo.typeClassResolver().resolveClass(ConversationTypes.CHAT_MESSAGE.blueId()));
-        assertEquals(Operation.class, BlueRepositoryV1_2_0.typeClassResolver()
+        assertEquals(Operation.class, BlueRepositoryV1_3_0.typeClassResolver()
                 .resolveClass(ConversationTypes.OPERATION.blueId()));
         assertEquals(repo.manifest().definitions().size(), repo.typeClassResolver().getBlueIdMap().size());
     }
 
     @Test
     void everyManifestDefinitionJavaAccessorBlueIdMatchesManifest() throws Exception {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
         TypeClassResolver resolver = repo.typeClassResolver();
 
         for (RepositoryDefinition definition : repo.manifest().definitions()) {
@@ -166,7 +174,7 @@ class BlueRepositoryTest {
 
     @Test
     void everyManifestBlueIdResolvesThroughRepositoryNodeProvider() {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
 
         for (RepositoryDefinition definition : repo.manifest().definitions()) {
             Node node = repo.nodeProvider().fetchFirstByBlueId(definition.blueId());
@@ -176,8 +184,35 @@ class BlueRepositoryTest {
     }
 
     @Test
+    void everyFragmentedDefinitionResolvesWithoutUnresolvedThisReferences() throws Exception {
+        BlueRepository repo = BlueRepository.v1_3_0();
+        Map<String, Set<Integer>> indexesByBaseBlueId = fragmentIndexesByBaseBlueId(repo.manifest().definitions());
+
+        for (RepositoryDefinition definition : repo.manifest().definitions()) {
+            if (!definition.blueId().contains("#")) {
+                continue;
+            }
+
+            Node node = repo.nodeProvider().fetchFirstByBlueId(definition.blueId());
+            assertNotNull(node, definition.qualifiedName());
+            assertFalse(containsUnresolvedThisFragmentReference(
+                    UncheckedObjectMapper.JSON_MAPPER.valueToTree(node)), definition.qualifiedName());
+
+            String baseBlueId = baseBlueId(definition.blueId());
+            Set<Integer> fragmentIndexes = indexesByBaseBlueId.get(baseBlueId);
+            assertNotNull(fragmentIndexes, definition.qualifiedName());
+
+            JsonNode rawDefinition = readJsonResource(definition.resourcePath());
+            for (Integer referencedIndex : referencedThisFragmentIndexes(rawDefinition)) {
+                assertTrue(fragmentIndexes.contains(referencedIndex),
+                        definition.qualifiedName() + " references missing fragment this#" + referencedIndex);
+            }
+        }
+    }
+
+    @Test
     void everyGeneratedTypeBlueIdResolvesThroughTypeClassResolver() {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
         TypeClassResolver resolver = repo.typeClassResolver();
 
         for (RepositoryDefinition definition : repo.manifest().definitions()) {
@@ -207,7 +242,7 @@ class BlueRepositoryTest {
 
     @Test
     void generatedCoreProcessorManagedTypesLoadFromRepositoryYaml() throws Exception {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
         Blue blue = repo.configure(new Blue(repo.nodeProvider()));
         String yaml = ""
                 + "contracts:\n"
@@ -251,8 +286,19 @@ class BlueRepositoryTest {
     }
 
     @Test
+    void generatedLocalThisFragmentReferencesUseSpecificJavaTypes() throws Exception {
+        Field clauseSubcomponents = Clause.class.getDeclaredField("subcomponents");
+        assertEquals(List.class, clauseSubcomponents.getType());
+        assertEquals(Clause.class, ((ParameterizedType) clauseSubcomponents.getGenericType()).getActualTypeArguments()[0]);
+
+        Field allCriteria = AllCriteria.class.getDeclaredField("allCriteria");
+        assertEquals(List.class, allCriteria.getType());
+        assertEquals(CollateralCriteria.class, ((ParameterizedType) allCriteria.getGenericType()).getActualTypeArguments()[0]);
+    }
+
+    @Test
     void generatedIntegerFieldsRoundTripAsBigInteger() throws Exception {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
         Blue blue = new Blue(repo.nodeProvider()).typeClassResolver(repo.typeClassResolver());
         BigInteger largeAmount = new BigInteger("9223372036854775808123456789");
 
@@ -284,7 +330,7 @@ class BlueRepositoryTest {
 
     @Test
     void keywordPropertiesRoundTripWhenBlueLanguageMapperSupportsJsonProperty() {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
         Blue blue = new Blue(repo.nodeProvider()).typeClassResolver(repo.typeClassResolver());
 
         InformUserToInstallMyOSPackage command = new InformUserToInstallMyOSPackage()
@@ -301,7 +347,7 @@ class BlueRepositoryTest {
 
     @Test
     void repositoryProvidesQualifiedTypeAliasesForPreprocessing() throws Exception {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
         assertEquals(ConversationTypes.TIMELINE_CHANNEL.blueId(),
                 repo.typeAliases().get("Conversation/Timeline Channel"));
 
@@ -318,7 +364,7 @@ class BlueRepositoryTest {
 
     @Test
     void counterDocumentMapsNestedRepositoryContractsToGeneratedTypes() throws Exception {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
         Blue blue = repo.configure(new Blue(repo.nodeProvider()));
 
         Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterDocumentYaml(), Node.class)
@@ -349,7 +395,7 @@ class BlueRepositoryTest {
 
     @Test
     void compositeProviderCanLayerRepositoryWithUserProvider() {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
         String userBlueId = "UserDocumentType";
         NodeProvider userProvider = blueId -> userBlueId.equals(blueId)
                 ? Collections.singletonList(new Node().name("User Document Type"))
@@ -363,11 +409,12 @@ class BlueRepositoryTest {
 
     @Test
     void generatedConstantsMatchManifestMetadata() throws IllegalAccessException {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
         List<Class<?>> typeClasses = Arrays.asList(
                 CommonTypes.class,
                 ConversationTypes.class,
                 CoreTypes.class,
+                FINOSCDM60d07Types.class,
                 MyOSTypes.class,
                 PayNoteTypes.class
         );
@@ -389,12 +436,19 @@ class BlueRepositoryTest {
 
     @Test
     void manifestIncludesPackageQualifiedBlueIdAndResourceMetadata() {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
         RepositoryDefinition operation = repo.definition("Conversation/Operation").orElseThrow(AssertionError::new);
 
-        assertEquals("1.2.0", repo.repositoryVersion());
+        assertEquals("1.3.0", repo.repositoryVersion());
         assertFalse(repo.repositoryVersionBlueId().isEmpty());
-        assertTrue(repo.packageNames().containsAll(Arrays.asList("Common", "Core", "Conversation", "MyOS", "PayNote")));
+        assertTrue(repo.packageNames().containsAll(Arrays.asList(
+                "Common",
+                "Core",
+                "Conversation",
+                "FINOS-CDM-6.0-d07",
+                "MyOS",
+                "PayNote"
+        )));
         assertEquals("Conversation", operation.packageName());
         assertEquals("Operation", operation.name());
         assertEquals("Conversation/Operation", operation.qualifiedName());
@@ -404,11 +458,26 @@ class BlueRepositoryTest {
     }
 
     @Test
+    void providerResolvesFragmentedRepositoryBlueIds() {
+        BlueRepository repo = BlueRepository.v1_3_0();
+
+        Node allCriteria = repo.nodeByBlueId(FINOSCDM60d07Types.ALLCRITERIA.blueId())
+                .orElseThrow(AssertionError::new);
+        Node clause = repo.nodeByBlueId(FINOSCDM60d07Types.CLAUSE.blueId())
+                .orElseThrow(AssertionError::new);
+
+        assertEquals("AllCriteria", allCriteria.getName());
+        assertEquals(FINOSCDM60d07Types.ALLCRITERIA.blueId(), allCriteria.getBlueId());
+        assertEquals("Clause", clause.getName());
+        assertEquals(FINOSCDM60d07Types.CLAUSE.blueId(), clause.getBlueId());
+    }
+
+    @Test
     void latestAndRepositoryBlueIdLookupReturnCurrentVersion() {
         BlueRepository latest = BlueRepository.latest();
         String oldestRepositoryBlueId = latest.manifest().repositoryVersions().get(0).repositoryBlueId();
 
-        assertEquals(BlueRepository.V1_2_0, latest.repositoryVersion());
+        assertEquals(BlueRepository.V1_3_0, latest.repositoryVersion());
         assertEquals(latest.repositoryVersionBlueId(),
                 BlueRepository.byRepositoryBlueId(latest.repositoryVersionBlueId())
                         .orElseThrow(AssertionError::new)
@@ -422,7 +491,7 @@ class BlueRepositoryTest {
 
     @Test
     void commonPackageIncludesCurrentRepositoryTypes() {
-        BlueRepository repo = BlueRepository.v1_2_0();
+        BlueRepository repo = BlueRepository.v1_3_0();
 
         assertEquals(16, repo.manifest().definitions().stream()
                 .filter(definition -> "Common".equals(definition.packageName()))
@@ -467,7 +536,7 @@ class BlueRepositoryTest {
                 RepositoryType.class,
                 CompositeNodeProvider.class,
                 RepositoryNodeProvider.class,
-                BlueRepositoryV1_2_0.class,
+                BlueRepositoryV1_3_0.class,
                 Operation.class,
                 SequentialWorkflowOperation.class,
                 ChatMessage.class
@@ -494,6 +563,97 @@ class BlueRepositoryTest {
             int major = data.readUnsignedShort();
             assertTrue(major <= 52, clazz.getName() + " classfile major version is " + major);
         }
+    }
+
+    private static Map<String, Set<Integer>> fragmentIndexesByBaseBlueId(List<RepositoryDefinition> definitions) {
+        Map<String, Set<Integer>> indexes = new LinkedHashMap<>();
+        for (RepositoryDefinition definition : definitions) {
+            if (!definition.blueId().contains("#")) {
+                continue;
+            }
+            String baseBlueId = baseBlueId(definition.blueId());
+            Set<Integer> group = indexes.get(baseBlueId);
+            if (group == null) {
+                group = new LinkedHashSet<>();
+                indexes.put(baseBlueId, group);
+            }
+            group.add(fragmentIndex(definition.blueId()));
+        }
+        return indexes;
+    }
+
+    private static String baseBlueId(String blueId) {
+        int separator = blueId.indexOf('#');
+        return separator < 0 ? blueId : blueId.substring(0, separator);
+    }
+
+    private static int fragmentIndex(String blueId) {
+        int separator = blueId.indexOf('#');
+        assertTrue(separator >= 0, blueId);
+        return Integer.parseInt(blueId.substring(separator + 1));
+    }
+
+    private static JsonNode readJsonResource(String resourcePath) throws Exception {
+        try (InputStream inputStream = BlueRepository.class.getClassLoader().getResourceAsStream(resourcePath)) {
+            assertNotNull(inputStream, resourcePath);
+            return UncheckedObjectMapper.JSON_MAPPER.readTree(inputStream);
+        }
+    }
+
+    private static boolean containsUnresolvedThisFragmentReference(JsonNode node) {
+        if (node == null || node.isNull()) {
+            return false;
+        }
+        if (node.isTextual()) {
+            return node.asText().startsWith("this#");
+        }
+        if (node.isArray()) {
+            for (JsonNode item : node) {
+                if (containsUnresolvedThisFragmentReference(item)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        if (node.isObject()) {
+            for (JsonNode value : iterable(node.elements())) {
+                if (containsUnresolvedThisFragmentReference(value)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private static Set<Integer> referencedThisFragmentIndexes(JsonNode node) {
+        Set<Integer> indexes = new LinkedHashSet<>();
+        collectReferencedThisFragmentIndexes(node, indexes);
+        return indexes;
+    }
+
+    private static void collectReferencedThisFragmentIndexes(JsonNode node, Set<Integer> indexes) {
+        if (node == null || node.isNull()) {
+            return;
+        }
+        if (node.isObject()) {
+            node.fields().forEachRemaining(entry -> {
+                JsonNode value = entry.getValue();
+                if ("blueId".equals(entry.getKey()) && value.isTextual() && value.asText().startsWith("this#")) {
+                    indexes.add(Integer.parseInt(value.asText().substring("this#".length())));
+                }
+                collectReferencedThisFragmentIndexes(value, indexes);
+            });
+            return;
+        }
+        if (node.isArray()) {
+            for (JsonNode item : node) {
+                collectReferencedThisFragmentIndexes(item, indexes);
+            }
+        }
+    }
+
+    private static <T> Iterable<T> iterable(final java.util.Iterator<T> iterator) {
+        return () -> iterator;
     }
 
     private static String counterDocumentYaml() {

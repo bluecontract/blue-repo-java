@@ -1,0 +1,23 @@
+{
+  "name": "AssetCountryOfOrigin",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/collateral"
+  },
+  "assetCountryOfOrigin": {
+    "description": "Represents a filter on the asset country of origin based on the ISO Standard 3166.",
+    "type": {
+      "blueId": "H4mh3RSWAWGHZvMSf8mFsQwYe7v869PNkynUeyXUqwDw"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

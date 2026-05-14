@@ -1,0 +1,43 @@
+{
+  "name": "TelephoneTypeEnum",
+  "description": "The enumerated values to specify the type of telephone number, e.g. work vs. mobile.",
+  "type": {
+    "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+  },
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/staticdata/party"
+  },
+  "schema": {
+    "enum": {
+      "items": [
+        {
+          "type": {
+            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          },
+          "value": "Fax"
+        },
+        {
+          "type": {
+            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          },
+          "value": "Mobile"
+        },
+        {
+          "type": {
+            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          },
+          "value": "Personal"
+        },
+        {
+          "type": {
+            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          },
+          "value": "Work"
+        }
+      ]
+    }
+  }
+}

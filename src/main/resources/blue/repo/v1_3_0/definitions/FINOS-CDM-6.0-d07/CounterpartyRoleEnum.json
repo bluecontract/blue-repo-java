@@ -1,0 +1,31 @@
+{
+  "name": "CounterpartyRoleEnum",
+  "description": "Defines the enumerated values to specify the two counterparties to the transaction.",
+  "type": {
+    "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+  },
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/staticdata/party"
+  },
+  "schema": {
+    "enum": {
+      "items": [
+        {
+          "type": {
+            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          },
+          "value": "Party1"
+        },
+        {
+          "type": {
+            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          },
+          "value": "Party2"
+        }
+      ]
+    }
+  }
+}

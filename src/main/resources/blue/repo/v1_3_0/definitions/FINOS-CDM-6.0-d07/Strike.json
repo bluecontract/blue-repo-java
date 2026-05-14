@@ -1,0 +1,36 @@
+{
+  "name": "Strike",
+  "description": "A class describing a single cap or floor rate.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/template"
+  },
+  "buyer": {
+    "description": "The buyer of the option.",
+    "type": {
+      "blueId": "9bXcaYmwvkS3KCJb3p6Sds4vZCPM9BdeunpoKUjkrnNh"
+    }
+  },
+  "seller": {
+    "description": "The party that has sold.",
+    "type": {
+      "blueId": "9bXcaYmwvkS3KCJb3p6Sds4vZCPM9BdeunpoKUjkrnNh"
+    }
+  },
+  "strikeRate": {
+    "description": "The rate for a cap or floor.",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Nm",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/regulation"
+  },
+  "refRate": {
+    "type": {
+      "blueId": "5QtGQkvnSzkFFPTpXTBg9gDTLxBoHHrMtj7CiLLiGa94"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "term": {
+    "type": {
+      "blueId": "2uCH7UMBFzW5NHpD7awFiGu8nPyCtYgGcVxmntj5ecZg"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

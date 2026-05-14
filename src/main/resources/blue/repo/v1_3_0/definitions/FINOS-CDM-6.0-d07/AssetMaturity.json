@@ -1,0 +1,37 @@
+{
+  "name": "AssetMaturity",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/collateral"
+  },
+  "maturityRange": {
+    "description": "Represents a filter based on the underlying asset maturity.",
+    "type": {
+      "blueId": "DrCjN2CgtkpRudLU46AtpyFcqCMchDGG3mXMRnp5SjgC"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "maturityType": {
+    "description": "Specifies whether the maturity range is the remaining or original maturity.",
+    "type": {
+      "blueId": "DSzjfsPGzFzyEqP4bgZKbbjvBDK8PACW6ZJU4WaVTtN9"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

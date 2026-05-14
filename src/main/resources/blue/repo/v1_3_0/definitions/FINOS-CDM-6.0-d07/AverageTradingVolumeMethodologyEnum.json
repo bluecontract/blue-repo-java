@@ -1,0 +1,31 @@
+{
+  "name": "AverageTradingVolumeMethodologyEnum",
+  "description": "Indicates the type of equity average trading volume (single) the highest amount on one exchange, or (consolidated) volumes across more than one exchange.\n",
+  "type": {
+    "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+  },
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/collateral"
+  },
+  "schema": {
+    "enum": {
+      "items": [
+        {
+          "type": {
+            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          },
+          "value": "Consolidated"
+        },
+        {
+          "type": {
+            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          },
+          "value": "Single"
+        }
+      ]
+    }
+  }
+}

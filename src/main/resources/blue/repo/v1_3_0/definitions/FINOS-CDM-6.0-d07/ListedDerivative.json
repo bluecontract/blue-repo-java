@@ -1,0 +1,97 @@
+{
+  "name": "ListedDerivative",
+  "description": "A securitized derivative on another asset.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/staticdata/asset/common"
+  },
+  "deliveryTerm": {
+    "description": "Also called contract month or delivery month. However, it's not always a month. It is usually expressed using a code, e.g. Z23 would be the Dec 2023 contract, (Z = December). For crude oil, the corresponding contract might be called CLZ23. Optional as this can be uniquely identified in the identifier.\n",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "exchange": {
+    "description": "If the Asset is listed, defines the public exchange of the listing.",
+    "type": {
+      "blueId": "9q5Aqc2sXyQHBEB1fEH7YnXg3xyueB94fHUPswAoFjxZ"
+    }
+  },
+  "identifier": {
+    "description": "Asset Identifiers are used to uniquely identify an Asset, using a specified Asset Identifier Type.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "2aVbLJJSBqA4CEk4y99kfeaGjWR1LMijC7oGiybxWqC4"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 1
+      }
+    }
+  },
+  "instrumentType": {
+    "description": "Identifies the type of an instrument using an enumerated list.",
+    "type": {
+      "blueId": "2xF5BfFq1Qbo9FHHT2keaqhEbweWtittjL91WNdNLWJ4"
+    }
+  },
+  "isExchangeListed": {
+    "description": "Defines whether the Asset is listed on a public exchange.",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    }
+  },
+  "optionType": {
+    "description": "The type of option, ie Put or Call. Left empty if it is a Future.",
+    "type": {
+      "blueId": "FG3sZiTzKPNeijhhK8kDnSBmCLafmCxgnoDhc5XYAVjz"
+    }
+  },
+  "relatedExchange": {
+    "description": "Provides the related Exchanges, if applicable.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "9q5Aqc2sXyQHBEB1fEH7YnXg3xyueB94fHUPswAoFjxZ"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "strike": {
+    "description": "Specifies the strike of the option.",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    }
+  },
+  "taxonomy": {
+    "description": "Defines the taxonomy of an object by combining a taxonomy source (i.e. the rules to classify the object) and a value (i.e. the output of those rules on the object.\n",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "HFNW44RszHHmv3rZU8MyQULFubFmMwmZvmNHgpUek4vb"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  }
+}

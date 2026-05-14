@@ -1,0 +1,28 @@
+{
+  "name": "ConcentrationLimit",
+  "description": "Represents a class to describe concentration limits that may be applicable to eligible collateral criteria.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/collateral"
+  },
+  "concentrationLimitCriteria": {
+    "description": "Specifies a set of criteria to describe the assets that the concentration limits apply to.",
+    "type": {
+      "blueId": "4vvAod3Rh6F22hkEN7SKj4WFsW9FBoakk3fGMq9aQ8CD"
+    }
+  },
+  "percentageLimit": {
+    "description": "Specifies the perecentage of collateral limit represented as a decimal number - example 25% is 0.25.",
+    "type": {
+      "blueId": "7eQNHwy255BHnoBffoqVyHQuu4yDiZuRdQqRFnz6B2nc"
+    }
+  },
+  "valueLimit": {
+    "description": "Specifies the value of collateral limit represented as a range.",
+    "type": {
+      "blueId": "99LXK5EYFxrWSTN1p3AiisuybBAKJKFE3RMNJcgjvu4n"
+    }
+  }
+}

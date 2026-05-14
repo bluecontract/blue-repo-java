@@ -1,0 +1,41 @@
+{
+  "name": "ValuationInstruction",
+  "description": "Specifies inputs needed to process a valuation.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/common"
+  },
+  "replace": {
+    "description": "Specifies whether the previous valuation tracks in the valuation history are removed (True) or kept (False).",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "valuation": {
+    "description": "Contains all information related to a valuation.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "67Ud3jXeu1WjJh3uXk333v2o9jPN8SRqNpRGHYZi7NLW"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 1
+      }
+    }
+  }
+}

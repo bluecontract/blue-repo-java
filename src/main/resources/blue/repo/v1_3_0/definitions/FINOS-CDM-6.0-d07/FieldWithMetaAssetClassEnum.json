@@ -1,0 +1,19 @@
+{
+  "name": "FieldWithMetaAssetClassEnum",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/staticdata/asset/common"
+  },
+  "meta": {
+    "type": {
+      "blueId": "JD8ko8cUQ19mR5qp9RzbrvvRZvuXuQ6zGjMNd5e4cbmF"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "3dZtY2hfeoswgWaGxZBeGSs8NNkxSeQmXX4nAa1yGoqR"
+    }
+  }
+}

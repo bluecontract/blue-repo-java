@@ -1,0 +1,90 @@
+{
+  "name": "Party",
+  "description": "A class to specify a party, without a qualification as to whether this party is a legal entity or a natural person, although the model provides the ability to associate a person (or set of persons) to a party, which use case would imply that such party would be a legal entity (even if not formally specified as such).\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/staticdata/party"
+  },
+  "account": {
+    "description": "The account that might be associated with the party. At most one account can be specified, as it is expected that this information is used in the context of a contract or legal document where only one account per party can be associated with such object.\n",
+    "type": {
+      "blueId": "5UcZ1b4Dht52s43hVKsGkCirgy1ctgrt9pBmFmTCU7mg"
+    }
+  },
+  "businessUnit": {
+    "description": "Optional organization unit information used to describe the organization units (e.g. trading desks) involved in a transaction or business process, incl. the contact information (when relevant).\n",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "E7ZVhfMdG2UYGc788XrpWT6BV9GajFbxNEd5aTdqJd2a"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "contactInformation": {
+    "description": "The postal/street address, telephone number, email address and/or web page. If the contact information is specific to the associated business unit(s) or person (s), it should be associated with those.\n",
+    "type": {
+      "blueId": "AbQeBqs8eJgVdhRHC5m3GNejbZjiSBosKWGuTkNLhf45"
+    }
+  },
+  "partyId": {
+    "description": "The identifier associated with a party, e.g. the 20 digits LEI code.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "5mv3BZVsZV6Nvyr5up8xH3sf1TSwN3Pgi7dXLqwSw434"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 1
+      }
+    }
+  },
+  "person": {
+    "description": "The person(s) who might be associated with the party as part of the execution, contract or legal document.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "7MD7VSLwm3ABEra36tJiLcnWXZtqt198617UxVPV28Nq"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "personRole": {
+    "description": "The role of the person(s)",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "9bq1SLENRPeXxZdJXkmh3wKrFtSRGj1VGLZQGdxzHCrV"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  }
+}

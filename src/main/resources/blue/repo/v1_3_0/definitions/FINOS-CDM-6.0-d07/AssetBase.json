@@ -1,0 +1,73 @@
+{
+  "name": "AssetBase",
+  "description": "The base data type to specify common attributes for all Assets.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/staticdata/asset/common"
+  },
+  "exchange": {
+    "description": "If the Asset is listed, defines the public exchange of the listing.",
+    "type": {
+      "blueId": "9q5Aqc2sXyQHBEB1fEH7YnXg3xyueB94fHUPswAoFjxZ"
+    }
+  },
+  "identifier": {
+    "description": "Asset Identifiers are used to uniquely identify an Asset, using a specified Asset Identifier Type.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "2aVbLJJSBqA4CEk4y99kfeaGjWR1LMijC7oGiybxWqC4"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 1
+      }
+    }
+  },
+  "isExchangeListed": {
+    "description": "Defines whether the Asset is listed on a public exchange.",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    }
+  },
+  "relatedExchange": {
+    "description": "Provides the related Exchanges, if applicable.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "9q5Aqc2sXyQHBEB1fEH7YnXg3xyueB94fHUPswAoFjxZ"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "taxonomy": {
+    "description": "Defines the taxonomy of an object by combining a taxonomy source (i.e. the rules to classify the object) and a value (i.e. the output of those rules on the object.\n",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "HFNW44RszHHmv3rZU8MyQULFubFmMwmZvmNHgpUek4vb"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  }
+}

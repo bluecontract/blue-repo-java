@@ -1,0 +1,41 @@
+{
+  "name": "AddressForNotices",
+  "description": "Specification of the address and other details for notices.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/legaldocumentation/common"
+  },
+  "additionalNotices": {
+    "description": "The optional specification of additional information when a party requires notices to be delivered to more than one address.\n",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "FfC6fzygp6poaEf8EiRik1QTgMzBsmRb1UmDkyYTq42V"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "primaryNotices": {
+    "description": "Specification of primary notice details",
+    "type": {
+      "blueId": "GV8qTYBfX23MVvcWgY3AHc6mgsGL94nKTXDCQW2NNxSa"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

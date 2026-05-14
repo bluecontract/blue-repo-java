@@ -1,0 +1,37 @@
+{
+  "name": "CsaTypeEnum",
+  "description": "How is the Creadit Support Annex defined for this transaction as defined in the 2021 ISDA Definitions, section 18.2.1\n",
+  "type": {
+    "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+  },
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/observable/asset"
+  },
+  "schema": {
+    "enum": {
+      "items": [
+        {
+          "type": {
+            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          },
+          "value": "ExistingCSA"
+        },
+        {
+          "type": {
+            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          },
+          "value": "NoCSA"
+        },
+        {
+          "type": {
+            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          },
+          "value": "ReferenceVMCSA"
+        }
+      ]
+    }
+  }
+}

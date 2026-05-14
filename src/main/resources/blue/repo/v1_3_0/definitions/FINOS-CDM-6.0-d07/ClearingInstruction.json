@@ -1,0 +1,84 @@
+{
+  "name": "ClearingInstruction",
+  "description": "All information required to perform the clear life cycle event; the clearing party (CCP), the two parties facing each other on the alpha contract, and optionally the parties acting as clearing members.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/common"
+  },
+  "alphaContract": {
+    "description": "The contract that will be submitted to the clearing house for clearing. The contract should indicate that it should be cleared by assigning a clearing organisation as a party role.\n",
+    "type": {
+      "blueId": "7BTvuUWTK6nkSBA6NVanSCrKNjD3hXMvK12EdvuaoeXH"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "clearerParty1": {
+    "description": "Optional party facing the CCP, acting as clearing member for party1.",
+    "type": {
+      "blueId": "AVN4ESaeQMFu31gp5PDiR55P6nWzHRiWZR2pKxQS5d6W"
+    }
+  },
+  "clearerParty2": {
+    "description": "Optional party facing the CCP, acting as clearing member for party2.",
+    "type": {
+      "blueId": "AVN4ESaeQMFu31gp5PDiR55P6nWzHRiWZR2pKxQS5d6W"
+    }
+  },
+  "clearingParty": {
+    "description": "The Central Counter party (CCP) that the contract will be submitted to for clearing.",
+    "type": {
+      "blueId": "AVN4ESaeQMFu31gp5PDiR55P6nWzHRiWZR2pKxQS5d6W"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "isOpenOffer": {
+    "description": "Open Offer",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    }
+  },
+  "party1": {
+    "description": "First party facing the CCP if it is clearing for its own account.",
+    "type": {
+      "blueId": "AVN4ESaeQMFu31gp5PDiR55P6nWzHRiWZR2pKxQS5d6W"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "party2": {
+    "description": "Second party facing the CCP if it is clearing for its own account.",
+    "type": {
+      "blueId": "AVN4ESaeQMFu31gp5PDiR55P6nWzHRiWZR2pKxQS5d6W"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "AssetType",
+  "description": "Represents a class to allow specification of the asset product type.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/staticdata/asset/common"
+  },
+  "assetType": {
+    "description": "Represents a filter based on the type of collateral asset.",
+    "type": {
+      "blueId": "De5YXF512CWnhYDb8NFdkqKwTZLVw52SGQtM5q5jEvM1"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "debtType": {
+    "description": "Represents a filter based on the type of bond.",
+    "type": {
+      "blueId": "3i5e7FCHPWiRqmM7cMjNwNubBYQbN7XnLgj7a63kX7JD"
+    }
+  },
+  "equityType": {
+    "description": "Represents a filter based on the type of equity.",
+    "type": {
+      "blueId": "93bW1zkPZXZ27eTUESqx9y8TN8iz682WCvNSxfaFuK3Z"
+    }
+  },
+  "fundType": {
+    "description": "Represents a filter based on the type of fund.",
+    "type": {
+      "blueId": "BvZdpXymr9mrkpyuuQG81FFmAtL3vJoL5bggtCMtej23"
+    }
+  },
+  "otherAssetType": {
+    "description": "Specifies the eligible asset type when not enumerated.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "securityType": {
+    "description": "Represents a filter based on the type of security.",
+    "type": {
+      "blueId": "2xF5BfFq1Qbo9FHHT2keaqhEbweWtittjL91WNdNLWJ4"
+    }
+  }
+}

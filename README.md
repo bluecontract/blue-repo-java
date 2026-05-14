@@ -23,13 +23,14 @@ Use this project when you need Java access to real repo.blue types:
 - `Core/Document Update Channel`
 - `Conversation/Operation`
 - `Conversation/Sequential Workflow Operation`
+- `FINOS-CDM-6.0-d07/Trade`
 - `MyOS/MyOS Timeline Channel`
 - `PayNote/PayNote`
 - and the rest of the packaged type catalog.
 
 ## What You Get
 
-This package currently includes repository version `1.2.0`.
+This package currently includes repository version `1.3.0`.
 
 It provides:
 
@@ -38,7 +39,7 @@ It provides:
 - lookup by qualified name and BlueId;
 - `NodeProvider` integration for Blue reference resolution;
 - `TypeDictionary` integration for compact/portable export;
-- generated Java classes under `blue.repo.v1_2_0`;
+- generated Java classes under `blue.repo.v1_3_0`;
 - generated type constants under `blue.repo.types`;
 - a `TypeClassResolver` configured with all generated `@TypeBlueId` classes;
 - type alias preprocessing so YAML can use names like
@@ -56,7 +57,7 @@ repositories {
 }
 
 dependencies {
-    implementation "blue.repo:blue-repo-java:1.2.0"
+    implementation "blue.repo:blue-repo-java:1.3.0"
 }
 ```
 
@@ -64,7 +65,7 @@ dependencies {
 directly, use the published language artifact:
 
 ```groovy
-implementation "blue.language:blue-language-java:1.0.0"
+implementation "blue.language:blue-language-java:2.0.0"
 ```
 
 ### Maven
@@ -73,14 +74,14 @@ implementation "blue.language:blue-language-java:1.0.0"
 <dependency>
     <groupId>blue.repo</groupId>
     <artifactId>blue-repo-java</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 
 ### Local Development
 
 Local builds use the version from `.cz.toml` with `-SNAPSHOT` appended, so this
-checkout builds as `1.2.0-SNAPSHOT` outside CI.
+checkout builds as `1.3.0-SNAPSHOT` outside CI.
 
 To test this package from another local project before release:
 
@@ -91,10 +92,10 @@ To test this package from another local project before release:
 Then depend on:
 
 ```groovy
-implementation "blue.repo:blue-repo-java:1.2.0-SNAPSHOT"
+implementation "blue.repo:blue-repo-java:1.3.0-SNAPSHOT"
 ```
 
-This repository now resolves `blue.language:blue-language-java:1.0.0` from
+This repository now resolves `blue.language:blue-language-java:2.0.0` from
 Maven Central or `mavenLocal()`; it does not include the sibling
 `../blue-language-java` composite build by default.
 
@@ -105,7 +106,7 @@ Maven Central or `mavenLocal()`; it does not include the sibling
 ```java
 import blue.repo.BlueRepository;
 
-BlueRepository repo = BlueRepository.v1_2_0();
+BlueRepository repo = BlueRepository.v1_3_0();
 
 System.out.println(repo.repositoryVersion());
 System.out.println(repo.blueId("Conversation/Operation"));
@@ -118,7 +119,7 @@ System.out.println(repo.packageNames());
 import blue.language.model.Node;
 import blue.repo.BlueRepository;
 
-BlueRepository repo = BlueRepository.v1_2_0();
+BlueRepository repo = BlueRepository.v1_3_0();
 
 Node operationType = repo.nodeByName("Conversation/Operation")
         .orElseThrow(IllegalStateException::new);
@@ -135,7 +136,7 @@ import blue.language.model.Node;
 import blue.repo.BlueRepository;
 import blue.repo.types.ConversationTypes;
 
-BlueRepository repo = BlueRepository.v1_2_0();
+BlueRepository repo = BlueRepository.v1_3_0();
 Blue blue = repo.configure(new Blue(repo.nodeProvider()));
 
 Node message = new Node()
@@ -159,7 +160,7 @@ import blue.language.model.Node;
 import blue.repo.BlueRepository;
 import blue.repo.types.ConversationTypes;
 
-BlueRepository repo = BlueRepository.v1_2_0();
+BlueRepository repo = BlueRepository.v1_3_0();
 Blue blue = repo.configureForExport(new Blue());
 
 Node document = new Node()
@@ -229,7 +230,7 @@ import blue.repo.BlueRepository;
 
 import static blue.language.utils.UncheckedObjectMapper.YAML_MAPPER;
 
-BlueRepository repo = BlueRepository.v1_2_0();
+BlueRepository repo = BlueRepository.v1_3_0();
 Blue blue = repo.configure(new Blue(repo.nodeProvider()));
 
 Node document = YAML_MAPPER.readValue(yaml, Node.class)
@@ -247,11 +248,11 @@ Generated model classes live under versioned packages:
 import blue.language.Blue;
 import blue.language.model.Node;
 import blue.repo.BlueRepository;
-import blue.repo.v1_2_0.conversation.ChatMessage;
-import blue.repo.v1_2_0.conversation.Operation;
-import blue.repo.v1_2_0.conversation.SequentialWorkflowOperation;
+import blue.repo.v1_3_0.conversation.ChatMessage;
+import blue.repo.v1_3_0.conversation.Operation;
+import blue.repo.v1_3_0.conversation.SequentialWorkflowOperation;
 
-BlueRepository repo = BlueRepository.v1_2_0();
+BlueRepository repo = BlueRepository.v1_3_0();
 Blue blue = repo.configure(new Blue(repo.nodeProvider()));
 
 ChatMessage message = new ChatMessage()
@@ -296,7 +297,7 @@ import blue.language.NodeProvider;
 import blue.repo.BlueRepository;
 import blue.repo.provider.CompositeNodeProvider;
 
-BlueRepository repo = BlueRepository.v1_2_0();
+BlueRepository repo = BlueRepository.v1_3_0();
 
 NodeProvider appProvider = blueId -> null; // your storage/provider
 NodeProvider provider = CompositeNodeProvider.of(
@@ -326,17 +327,19 @@ catalog data; the contract package is executable behavior.
 
 Current generated package groups include:
 
-- `blue.repo.v1_2_0.core`
-- `blue.repo.v1_2_0.common`
-- `blue.repo.v1_2_0.conversation`
-- `blue.repo.v1_2_0.myos`
-- `blue.repo.v1_2_0.paynote`
+- `blue.repo.v1_3_0.core`
+- `blue.repo.v1_3_0.common`
+- `blue.repo.v1_3_0.conversation`
+- `blue.repo.v1_3_0.finoscdm60d07`
+- `blue.repo.v1_3_0.myos`
+- `blue.repo.v1_3_0.paynote`
 
 Convenience constants:
 
 - `blue.repo.types.CoreTypes`
 - `blue.repo.types.CommonTypes`
 - `blue.repo.types.ConversationTypes`
+- `blue.repo.types.FINOSCDM60d07Types`
 - `blue.repo.types.MyOSTypes`
 - `blue.repo.types.PayNoteTypes`
 
@@ -350,6 +353,13 @@ Regenerate from the sibling repository bundle:
 ./gradlew generateRepositorySources
 ```
 
+Regenerate from an explicit upstream checkout or downloaded bundle:
+
+```bash
+./gradlew generateRepositorySources \
+  -PblueRepositorySource=/path/to/blue-repository/BlueRepository.blue
+```
+
 Verify checked-in output is current:
 
 ```bash
@@ -358,13 +368,9 @@ Verify checked-in output is current:
 
 `verifyGeneratedSources` is wired into `check`.
 
-The generator expects the source bundle and JS generator dependencies to be
-available next to this repository:
-
-```text
-../blue-repository/BlueRepository.blue
-../blue-repository-js/
-```
+The generator uses the checked-in `BlueRepository.blue` for the current
+version when available. For a new repository release, point
+`blueRepositorySource` at the updated upstream `BlueRepository.blue`.
 
 If `js-yaml` is not installed locally, the generator expects it under
 `../blue-repository-js/node_modules/js-yaml`.
@@ -392,7 +398,7 @@ The project targets Java 8 bytecode.
 ## Release Setup
 
 The project version is stored in `.cz.toml`. Local builds append `-SNAPSHOT`;
-CI builds publish the plain version, for example `1.2.0`.
+CI builds publish the plain version, for example `1.3.0`.
 
 Publishing uses the same JReleaser/Maven Central flow as `blue-language-java`:
 
@@ -425,9 +431,9 @@ src/main/java/blue/repo
   RepositoryManifest.java              manifest loader/model
   provider/                            repository NodeProvider helpers
   types/                               generated RepositoryType constants
-  v1_2_0/                             generated versioned Java classes
+  v1_3_0/                             generated versioned Java classes
 
-src/main/resources/blue/repo/v1_2_0
+src/main/resources/blue/repo/v1_3_0
   manifest.json
   definitions/
   BlueRepository.blue

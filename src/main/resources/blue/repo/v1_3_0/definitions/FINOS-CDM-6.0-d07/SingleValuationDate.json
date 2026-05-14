@@ -1,0 +1,16 @@
+{
+  "name": "SingleValuationDate",
+  "description": "A class to specify the number of business days after satisfaction of all conditions to settlement.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/observable/asset"
+  },
+  "businessDays": {
+    "description": "A number of business days. Its precise meaning is dependant on the context in which this element is used. ISDA 2003 Term: Business Day.\n",
+    "type": {
+      "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+    }
+  }
+}

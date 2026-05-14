@@ -37,7 +37,7 @@ function registryClassName(versionSegment) {
   return `BlueRepository${versionSegment.charAt(0).toUpperCase()}${versionSegment.slice(1)}`;
 }
 
-const repositoryVersion = option('repository-version', '1.2.0');
+const repositoryVersion = option('repository-version', '1.3.0');
 const javaVersionSegment = option('java-package-segment', versionPackageSegment(repositoryVersion));
 const resourceBase = option('resource-base', `blue/repo/${javaVersionSegment}`);
 const javaVersionPackage = option('java-package', `blue.repo.${javaVersionSegment}`);
@@ -348,11 +348,27 @@ function modelFqcn(definition) {
   return `${modelPackage(definition)}.${definition.className}`;
 }
 
-function referencedDefinition(typeNode, byBlueId) {
+function resolvedBlueIdReference(blueId, currentDefinition) {
+  if (!blueId) {
+    return null;
+  }
+  if (!currentDefinition) {
+    return blueId;
+  }
+  if (blueId === 'this') {
+    return currentDefinition.blueId;
+  }
+  if (blueId.startsWith('this#')) {
+    return `${currentDefinition.blueId.split('#')[0]}${blueId.substring(4)}`;
+  }
+  return blueId;
+}
+
+function referencedDefinition(typeNode, byBlueId, currentDefinition = null) {
   if (!typeNode || !typeNode.blueId) {
     return null;
   }
-  return byBlueId.get(typeNode.blueId) || null;
+  return byBlueId.get(resolvedBlueIdReference(typeNode.blueId, currentDefinition)) || null;
 }
 
 function javaType(typeNode, byBlueId, imports, currentDefinition) {
@@ -384,7 +400,7 @@ function javaType(typeNode, byBlueId, imports, currentDefinition) {
     return `Map<${keyType}, ${javaType(typeNode.valueType, byBlueId, imports, currentDefinition)}>`;
   }
 
-  const referenced = referencedDefinition(typeNode, byBlueId);
+  const referenced = referencedDefinition(typeNode, byBlueId, currentDefinition);
   if (referenced) {
     const fqcn = modelFqcn(referenced);
     if (modelPackage(referenced) !== modelPackage(currentDefinition)) {
@@ -458,7 +474,7 @@ function inheritedFieldNames(definition, byBlueId, seen = new Set()) {
       result.add(fieldName);
     }
   }
-  const parent = referencedDefinition(definition.content.type, byBlueId);
+  const parent = referencedDefinition(definition.content.type, byBlueId, definition);
   if (!parent || seen.has(parent.blueId)) {
     return result;
   }
@@ -482,7 +498,7 @@ function parentFieldsToPreserve(definition, byBlueId) {
 
   const preserved = [];
   const seenFields = new Set();
-  let parent = referencedDefinition(definition.content.type, byBlueId);
+  let parent = referencedDefinition(definition.content.type, byBlueId, definition);
   const seenParents = new Set();
   while (parent && !seenParents.has(parent.blueId)) {
     seenParents.add(parent.blueId);
@@ -492,7 +508,7 @@ function parentFieldsToPreserve(definition, byBlueId) {
         seenFields.add(field.fieldName);
       }
     }
-    parent = referencedDefinition(parent.content.type, byBlueId);
+    parent = referencedDefinition(parent.content.type, byBlueId, parent);
   }
   return preserved;
 }
@@ -567,7 +583,7 @@ function writeModelClass(definition, byBlueId) {
     'blue.language.model.TypeBlueId',
     'blue.repo.RepositoryType',
   ]);
-  const parent = referencedDefinition(definition.content.type, byBlueId);
+  const parent = referencedDefinition(definition.content.type, byBlueId, definition);
   let extendsClause = '';
   const externalBase = externalBaseTypes.get(definition.qualifiedName);
   if (externalBase) {

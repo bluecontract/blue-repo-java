@@ -1,0 +1,22 @@
+{
+  "name": "TransferExpression",
+  "description": "Specifies a transfer expression (cash price, performance amount, scheduled payment amount, etc.) to define the nature of the transfer amount and its source.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/common"
+  },
+  "priceTransfer": {
+    "description": "Specifies a transfer amount exchanged as a price or fee for entering into a Business Event, e.g. Premium, Termination fee, Novation fee.\n",
+    "type": {
+      "blueId": "HKkUcTPJZTrQTJdH6Efksc7E2CAroaZdwcpBkaWYG1rr"
+    }
+  },
+  "scheduledTransfer": {
+    "description": "Specifies a transfer created from a scheduled or contingent event on a contract, e.g. Exercise, Performance, Credit Event\n",
+    "type": {
+      "blueId": "4462dWiHEp8HUAYxXSSTkPpJS9FS3Aqvuc35KNdSVqyD"
+    }
+  }
+}

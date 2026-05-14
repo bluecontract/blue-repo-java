@@ -1,0 +1,16 @@
+{
+  "name": "FixedPrice",
+  "description": "A predefined price accorded by the counterparties.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/common/settlement"
+  },
+  "price": {
+    "description": "Fixed price step schedule, including an initial price specified as an absolute number.",
+    "type": {
+      "blueId": "45HfgL64TRdHGgokLmTPwnhDVyVxw776BCEtmU9wpwVs"
+    }
+  }
+}

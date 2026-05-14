@@ -1,0 +1,22 @@
+{
+  "name": "CreditNotations",
+  "description": "Represents the credit rating notation higher level construct, which provides the ability to specify multiple rating notations.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/observable/asset"
+  },
+  "creditNotation": {
+    "description": "Specifies only one credit notation is determined.",
+    "type": {
+      "blueId": "64PTQ5tRmA9EUvt2nYuwL1XurWEWTaXLb9yxYUDqTdqd"
+    }
+  },
+  "creditNotations": {
+    "description": "Specifies if several credit notations exist, alongside an 'any' or 'all' or all condition.",
+    "type": {
+      "blueId": "5Ctp1gkb5fPgzV9qmU6h2a6iEMPTyrTMGbYpfCsgBjr2"
+    }
+  }
+}

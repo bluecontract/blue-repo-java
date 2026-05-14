@@ -1,0 +1,28 @@
+{
+  "name": "RateSpecification",
+  "description": "A data type to specify the fixed interest rate, floating interest rate or inflation rate.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/asset"
+  },
+  "FixedRateSpecification": {
+    "description": "The fixed rate or fixed rate specification expressed as explicit fixed rates and dates.",
+    "type": {
+      "blueId": "H8tMLZL5utB9T5XRaXiQnSR5Gj394a364cNM72rjWtuY"
+    }
+  },
+  "FloatingRateSpecification": {
+    "description": "The floating interest rate specification, which includes the definition of the floating rate index. the tenor, the initial value, and, when applicable, the spread, the rounding convention, the averaging method and the negative interest rate treatment.\n",
+    "type": {
+      "blueId": "2x719RynUeGN6Qyehn7EES27qiYeBsQN6P9gc8CMiCXC"
+    }
+  },
+  "InflationRateSpecification": {
+    "description": "An inflation rate calculation definition.",
+    "type": {
+      "blueId": "CxtEzzESyTL74AXXw2zojUfYFDUNXjLU8ZHXzE2fVTAn"
+    }
+  }
+}

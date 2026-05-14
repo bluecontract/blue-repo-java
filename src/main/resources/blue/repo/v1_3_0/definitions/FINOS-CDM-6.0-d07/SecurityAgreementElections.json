@@ -1,0 +1,10 @@
+{
+  "name": "SecurityAgreementElections",
+  "description": "The set of elections which specify a Security Agremeent",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/legaldocumentation/csa"
+  }
+}

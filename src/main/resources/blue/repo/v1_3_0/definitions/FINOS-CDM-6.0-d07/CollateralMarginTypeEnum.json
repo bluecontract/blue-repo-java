@@ -1,0 +1,31 @@
+{
+  "name": "CollateralMarginTypeEnum",
+  "description": "The enumerated values to specify the type of margin for which a legal agreement is named.",
+  "type": {
+    "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+  },
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/collateral"
+  },
+  "schema": {
+    "enum": {
+      "items": [
+        {
+          "type": {
+            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          },
+          "value": "InitialMargin"
+        },
+        {
+          "type": {
+            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          },
+          "value": "VariationMargin"
+        }
+      ]
+    }
+  }
+}

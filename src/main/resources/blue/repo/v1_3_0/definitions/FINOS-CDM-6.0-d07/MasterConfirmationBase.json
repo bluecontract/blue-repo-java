@@ -1,0 +1,10 @@
+{
+  "name": "MasterConfirmationBase",
+  "description": "Legal agreement specification for General Terms and Elections that are applicable across multiple confirmations and are referenced by these confirmations.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/legaldocumentation/master"
+  }
+}

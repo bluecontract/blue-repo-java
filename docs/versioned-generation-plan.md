@@ -12,6 +12,7 @@ Use repo.blue SDK/package metadata only as a public version label. For example, 
 
 | Java/source identity | Public SDK version |
 | --- | --- |
+| `EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz` | Java/catalog `1.3.0` |
 | `sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv` | `@blue-repository/types@1.2.0` |
 | `B4qWEbNWRcgabYrDTxtebfRSP5nBnEYvpX5YWqa2PcE4` | `@blue-repository/types@1.1.0` |
 | `5gmX9Fhnu4qM9ZJuqKAVZQXCQng3h4hZbWoaSEufSzij` | `@blue-repository/types@1.0.0` |
@@ -19,10 +20,10 @@ Use repo.blue SDK/package metadata only as a public version label. For example, 
 Use semantic Java package names when a public SDK version is known:
 
 ```text
-blue.repo.v1_2_0
-blue/repo/v1_2_0
-BlueRepositoryV1_2_0
-BlueRepository.v1_2_0()
+blue.repo.v1_3_0
+blue/repo/v1_3_0
+BlueRepositoryV1_3_0
+BlueRepository.v1_3_0()
 ```
 
 For historical tags without public SDK metadata, use a deterministic tag-based slug and keep the exact tag BlueId in the manifest:
@@ -62,13 +63,13 @@ Add a checked-in catalog, for example `repository-versions.json`, that records t
 {
   "versions": [
     {
-      "repositoryBlueId": "sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv",
-      "sourceTag": "sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv",
-      "sdkPackage": "@blue-repository/types",
-      "sdkVersion": "1.2.0",
-      "javaVersion": "1.2.0",
-      "javaPackageSegment": "v1_2_0",
-      "resourceBase": "blue/repo/v1_2_0"
+      "repositoryBlueId": "EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz",
+      "sourceTag": "EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz",
+      "sdkPackage": null,
+      "sdkVersion": null,
+      "javaVersion": "1.3.0",
+      "javaPackageSegment": "v1_3_0",
+      "resourceBase": "blue/repo/v1_3_0"
     }
   ]
 }
@@ -100,9 +101,9 @@ Refactor `tools/generate-repository-sources.js` so one invocation is parameteriz
 node tools/generate-repository-sources.js \
   --source build/blue-repository-tags/<tag>/BlueRepository.blue \
   --repository-blue-id <tag> \
-  --java-version 1.2.0 \
-  --java-package-segment v1_2_0 \
-  --resource-base blue/repo/v1_2_0
+  --java-version 1.3.0 \
+  --java-package-segment v1_3_0 \
+  --resource-base blue/repo/v1_3_0
 ```
 
 The existing Java-specific mapping rules should stay:
@@ -211,22 +212,22 @@ The repository dictionary uses this metadata as follows:
 For each generated version:
 
 ```text
-src/main/java/blue/repo/v1_2_0/
-  BlueRepositoryV1_2_0.java
+src/main/java/blue/repo/v1_3_0/
+  BlueRepositoryV1_3_0.java
   common/
   conversation/
   core/
   myos/
   paynote/
 
-src/main/java/blue/repo/v1_2_0/types/
+src/main/java/blue/repo/v1_3_0/types/
   CommonTypes.java
   ConversationTypes.java
   CoreTypes.java
   MyOSTypes.java
   PayNoteTypes.java
 
-src/main/resources/blue/repo/v1_2_0/
+src/main/resources/blue/repo/v1_3_0/
   BlueRepository.blue
   manifest.json
   definitions/
@@ -235,7 +236,7 @@ src/main/resources/blue/repo/v1_2_0/
 The current top-level `blue.repo.types.*` classes should either become latest-version aliases or remain single-version only. For multi-version generation, versioned constants are safer:
 
 ```java
-blue.repo.v1_2_0.types.ConversationTypes.OPERATION
+blue.repo.v1_3_0.types.ConversationTypes.OPERATION
 ```
 
 Then a top-level latest alias can be added deliberately:
@@ -250,9 +251,9 @@ Keep the existing facade style, but make it version-aware:
 
 ```java
 BlueRepository latest = BlueRepository.latest();
-BlueRepository v1_2_0 = BlueRepository.v1_2_0();
+BlueRepository v1_3_0 = BlueRepository.v1_3_0();
 BlueRepository byBlueId = BlueRepository.byRepositoryBlueId(
-    "sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv");
+    "EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz");
 ```
 
 Each facade instance should expose:
@@ -307,11 +308,11 @@ For multi-version scale, run full object-mapping tests on the latest version and
 
 ## Migration Steps
 
-1. Add the version catalog with the current live `sUk...` / `1.2.0` mapping.
+1. Add the version catalog with the current live `EoCY...` / `1.3.0` mapping.
 2. Refactor the generator to accept source/version/resource parameters.
-3. Generate `v1_2_0` as the current checked-in output.
+3. Generate `v1_3_0` as the current checked-in output.
 4. Move constants into versioned packages and keep top-level constants as latest aliases.
-5. Add `BlueRepository.latest()`, `v1_2_0()`, and `byRepositoryBlueId(...)`.
+5. Add `BlueRepository.latest()`, `v1_3_0()`, and `byRepositoryBlueId(...)`.
 6. Add offline verification for generated files.
 7. Add tag coverage verification as an explicit network task.
 8. Add older packages only from explicit historical tags if compatibility classes are actually needed.

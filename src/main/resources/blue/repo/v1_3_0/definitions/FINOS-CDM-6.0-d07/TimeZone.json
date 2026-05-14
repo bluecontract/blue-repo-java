@@ -1,0 +1,30 @@
+{
+  "name": "TimeZone",
+  "description": "The time alongside with the timezone location information. This class makes use of the FpML TimezoneLocation construct.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/datetime"
+  },
+  "location": {
+    "description": "FpML specifies the timezoneLocationScheme by reference to the Time Zone Database (a.k.a. tz database) maintained by IANA, the Internet Assigned Numbers Authority.\n",
+    "type": {
+      "blueId": "DkAAYuMhrcUQRrFdCEPKwcQDCnee3rxTu6vYVSURpWWY"
+    }
+  },
+  "time": {
+    "description": "The observation time.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "FixedRateSpecification",
+  "description": "Type defining the specification for a fixed rate.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/asset"
+  },
+  "rateSchedule": {
+    "description": "The fixed rate or fixed rate schedule expressed as explicit fixed rates and dates. In the case of a schedule, the step dates may be subject to adjustment in accordance with any adjustments specified in calculationPeriodDatesAdjustments.\n",
+    "type": {
+      "blueId": "99gatGS7rTE7ietGQC63KTgMHGR7ZEvwiMC26XTy9jqC"
+    }
+  }
+}

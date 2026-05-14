@@ -1,6 +1,6 @@
 # Blue Repository Generator, Tags, and repo.blue Summary
 
-Checked on 2026-05-12.
+Checked on 2026-05-12. Updated on 2026-05-14 after the repository bundle moved to repository version index 3.
 
 ## Sources Checked
 
@@ -18,6 +18,31 @@ Checked on 2026-05-12.
 `blue-js/libs/repository-generator` is not primarily a TypeScript model/accessor generator. It is the source repository bundle generator for `BlueRepository.blue`. It scans package folders containing `.blue` and `.dev.blue` files, replaces type aliases with BlueIds, computes type and repository BlueIds, enforces stable/dev versioning rules, and writes or checks the deterministic `BlueRepository.blue` bundle.
 
 That makes it directly relevant to `blue-repo-java`, but as the upstream source-of-truth generator, not as something to copy line-for-line for Java model output.
+
+## 2026-05-14 Repository Update
+
+The current upstream `BlueRepository.blue` is now the bundle tagged:
+
+```text
+EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz
+```
+
+The generated Java package maps this repository bundle to Java artifact/package
+version `1.3.0` and package segment `blue.repo.v1_3_0`.
+
+Current generated bundle facts:
+
+| Field | Value |
+| --- | --- |
+| Repository version index | `3` |
+| Repository BlueId | `EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz` |
+| Repository versions in bundle | `4` |
+| Generated definitions | `1136` |
+| Packages | `Common`, `Conversation`, `Core`, `FINOS-CDM-6.0-d07`, `MyOS`, `PayNote` |
+
+The previously generated bundle was repository version index `2`, BlueId
+`sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv`, mapped to Java/catalog version
+`1.2.0`.
 
 ## How the JS Repository Generator Works
 
@@ -79,7 +104,7 @@ The public GitHub tags page is paginated and the unauthenticated text view only 
 git ls-remote --refs --tags https://github.com/bluecontract/blue-repository.git
 ```
 
-returned 34 repository tags. The tag names are repository BlueIds:
+returned 35 repository tags after the 2026-05-14 update. The tag names are repository BlueIds:
 
 ```text
 22xxEjtpjUSpttaRiHX5XbmGNcFhpgLipai685YMdMWv
@@ -105,6 +130,7 @@ C6oygUcsKjgqmSej2DMZkuDMqT7frfFL3t11gHGMFebY
 CQn9FCus2xkhgCdSZQqKQmKGRLKnqTboSyiJXn3pya68
 EQTRE5bBZZb7P6GB6r3p9scPTTgwbR1SHFhYePo3ji4x
 EbEJF1ttddLLVTPtGjxo8TnjxdZsQvtfmanjgUheQuvp
+EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz
 EpCTtQtiyxppoVxqFbVZLiV7684165ENL3M2qwJigMFP
 EpNsiwie3wUf5Hqeo9fdiycvemBQm681hXEaWPEKNAuF
 FLEAJh7wxmniwWikxfZmDDZvHKjBKuNQeBbQUbBqdJ7E
@@ -118,7 +144,7 @@ sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv
 vb22qGkPkict5EnAXzF9oyoEGBW6PYxucfAFeegBb6G
 ```
 
-The local sibling clone is currently at:
+The older local sibling clone was previously at:
 
 ```text
 254570b release: sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv
@@ -128,20 +154,16 @@ but its local tag refs are not complete unless tags are fetched. Any automation 
 
 ## repo.blue Conversation Version Check
 
-Live `repo.blue` fetches on 2026-05-12 show the current Conversation package as `v1.2.0`.
+Live `repo.blue` and the upstream `BlueRepository.blue` now expose repository
+version index `3` as current. At the time of the Java refresh, the JS package
+repository still lagged this new bundle, so Java uses the repository version
+catalog from `BlueRepository.blue` directly.
 
-The install page uses the unified generated JS package:
-
-```bash
-npm install @blue-repository/types@1.2.0
-yarn add @blue-repository/types@1.2.0
-pnpm add @blue-repository/types@1.2.0
-```
-
-The versions page currently exposes these Conversation package revisions:
+The versions page exposes these repository revisions:
 
 | SDK version | Repository BlueId | Present as Git tag |
 | --- | --- | --- |
+| Java `1.3.0` / repository index `3` | `EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz` | yes |
 | `1.2.0` | `sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv` | yes |
 | `1.1.0` | `B4qWEbNWRcgabYrDTxtebfRSP5nBnEYvpX5YWqa2PcE4` | yes |
 | `1.0.0` | `5gmX9Fhnu4qM9ZJuqKAVZQXCQng3h4hZbWoaSEufSzij` | yes |
@@ -153,24 +175,30 @@ repositoryVersions:
   - 5gmX9Fhnu4qM9ZJuqKAVZQXCQng3h4hZbWoaSEufSzij
   - B4qWEbNWRcgabYrDTxtebfRSP5nBnEYvpX5YWqa2PcE4
   - sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv
+  - EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz
 ```
 
 Some indexed/search views and text browser snapshots showed stale older Conversation versions such as `0.6.0`, `0.24.0`, `0.25.0`, and `0.30.0`. The live Next-rendered HTML is the better source for current package/version data.
 
 ## Installed JS SDK Shape
 
-The Conversation install page points consumers to the unified package:
+At the time of this refresh, the `blue-repository-js` clone and npm metadata
+were still behind the new repository bundle. Treat JS package metadata as a
+consumer SDK signal, not as the source of truth for Java generation, until it
+contains repository BlueId `EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz`.
+
+The latest checked JS package shape points consumers to the unified package:
 
 ```bash
-npm install @blue-repository/types@1.2.0
+npm install @blue-repository/types
 ```
 
-The published package metadata for `@blue-repository/types@1.2.0` declares:
+The published package metadata declares:
 
 - package repository: `https://github.com/bluecontract/blue-repository-js`;
 - peer dependencies: `@blue-labs/language` and `zod`;
 - `blueType.moduleName`: `Blue Repository`;
-- `blueType.moduleBlueId`: `sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv`;
+- `blueType.moduleBlueId`: the repository BlueId packaged by that JS release;
 - exports for root metadata, repository data, packages, per-package metadata, per-package BlueIds, contents, and schemas.
 
 The generated JS package layout is:
@@ -203,6 +231,7 @@ export const repositoryVersions = [
   '5gmX9Fhnu4qM9ZJuqKAVZQXCQng3h4hZbWoaSEufSzij',
   'B4qWEbNWRcgabYrDTxtebfRSP5nBnEYvpX5YWqa2PcE4',
   'sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv',
+  'EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz',
 ];
 ```
 
@@ -232,18 +261,18 @@ The Java project already has the right generated companion shape: classpath reso
 
 Current generator behavior in `/Users/piotr/data/blue-repo-java/tools/generate-repository-sources.js` after the latest-version correction:
 
-- defaults to `repositoryVersion = '1.2.0'`;
-- defaults Java package/resource paths under `v1_2_0`;
+- defaults to `repositoryVersion = '1.3.0'`;
+- defaults Java package/resource paths under `v1_3_0`;
 - accepts `--source`, `--repository-version`, `--java-package-segment`, `--resource-base`, and `--java-package` overrides;
-- still reads a moving source file from `../blue-repository/BlueRepository.blue` by default;
-- records the current repository BlueId from that moving source bundle.
+- reads the checked-in current `BlueRepository.blue` by default, or an explicit `--source` / `-PblueRepositorySource=...` when refreshing from upstream;
+- records the current repository BlueId from the selected source bundle.
 
 This fixes the previous public-version mismatch for the current checked manifest:
 
 ```json
 {
-  "repositoryVersion": "1.2.0",
-  "repositoryVersionBlueId": "sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv"
+  "repositoryVersion": "1.3.0",
+  "repositoryVersionBlueId": "EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz"
 }
 ```
 
@@ -251,7 +280,7 @@ The remaining gap is source acquisition. The default source path is still a loca
 
 The Java generator should be changed to consume explicit repository tags and explicit version metadata. It should not read a moving sibling `main` checkout unless the task is intentionally "generate from local working tree".
 
-The current generated manifest preserves the three `repositoryVersions` entries present in the latest `BlueRepository.blue` bundle and labels them `1.0.0`, `1.1.0`, and `1.2.0`. That is separate from the larger public Git tag history, which currently has 34 repository BlueId tags. See `docs/repository-tag-numbering.md` for the ordered tag inventory.
+The current generated manifest preserves the four `repositoryVersions` entries present in the latest `BlueRepository.blue` bundle and labels them `1.0.0`, `1.1.0`, `1.2.0`, and `1.3.0`. That is separate from the larger public Git tag history, which currently has 35 repository BlueId tags. See `docs/repository-tag-numbering.md` for the ordered tag inventory.
 
 ## Practical Conclusion
 

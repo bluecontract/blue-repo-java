@@ -1,0 +1,19 @@
+{
+  "name": "FieldWithMetaMatrixTermEnum",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/legaldocumentation/common"
+  },
+  "meta": {
+    "type": {
+      "blueId": "JD8ko8cUQ19mR5qp9RzbrvvRZvuXuQ6zGjMNd5e4cbmF"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "9zzbCupj2CEmZ6PcPuVfCC77NcZsn9ikC1vS1QDwCFZJ"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "name": "Valuation",
+  "description": "Defines the value of an investment, asset, or security",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/common"
+  },
+  "amount": {
+    "description": "Current value of the outstanding contract",
+    "type": {
+      "blueId": "AbAR9hDgkuDPyGUVbpg2virbQmHfou9H5TMSUKaAAQo3"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "delta": {
+    "description": "The ratio of the change in the price of a derivative transaction to the change in the price of the underlying. This field is applicable only to options and swaptions.\n",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    }
+  },
+  "method": {
+    "description": "Method used for the valuation of the transaction by the valuation party.",
+    "type": {
+      "blueId": "D3VMtonyci4qfM6Qx7SMuPJb2R2F7wp7wr5VXd9izi1E"
+    }
+  },
+  "priceComponent": {
+    "description": "Denotes the price used to compute the valuation.",
+    "type": {
+      "blueId": "34JSSaiNLZkZGJCPhZGY4wsFrAd7HeP7M2MEwHXHZp2u"
+    }
+  },
+  "source": {
+    "description": "Source of the valuation of the transaction by the valuation party.",
+    "type": {
+      "blueId": "6chynTE7doczteLDPS9js6De19CD4x3HpCgi1eNY4AYf"
+    }
+  },
+  "timestamp": {
+    "description": "Date and time of the last valuation marked to market, provided by the central counterparty (CCP) or calculated using the current or last available market price of the inputs.\n",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "valuationTiming": {
+    "description": "Denotes when the valuation was sourced during a business day.",
+    "type": {
+      "blueId": "92se4Ba3TmRSHGQNifUy8GkDX3hnE53p7mQpXSfBh4DD"
+    }
+  }
+}

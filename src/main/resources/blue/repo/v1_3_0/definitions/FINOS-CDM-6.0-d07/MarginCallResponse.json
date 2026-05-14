@@ -1,0 +1,161 @@
+{
+  "name": "MarginCallResponse",
+  "description": "Represents common attributes required for a Margin Call Response under a legal agreement such as a credit support document or equivalent.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/common"
+  },
+  "agreedAmountBaseCurrency": {
+    "description": "Indicates the amount that posting entity agrees to remit in response to margin call (in base currency).",
+    "type": {
+      "blueId": "AbAR9hDgkuDPyGUVbpg2virbQmHfou9H5TMSUKaAAQo3"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "agreementMinimumTransferAmount": {
+    "description": "Specifies the collateral legal agreement minimum transfer amount in base currency.",
+    "type": {
+      "blueId": "AbAR9hDgkuDPyGUVbpg2virbQmHfou9H5TMSUKaAAQo3"
+    }
+  },
+  "agreementRounding": {
+    "description": "Specifies the collateral legal agreement rounding in base currency.",
+    "type": {
+      "blueId": "AbAR9hDgkuDPyGUVbpg2virbQmHfou9H5TMSUKaAAQo3"
+    }
+  },
+  "agreementThreshold": {
+    "description": "Specifies the collateral legal agreement threshold amount in base currency.",
+    "type": {
+      "blueId": "AbAR9hDgkuDPyGUVbpg2virbQmHfou9H5TMSUKaAAQo3"
+    }
+  },
+  "baseCurrencyExposure": {
+    "description": "Represents the current mark to market value or IM calculation value of the trade portfolio as recorded by the principle (in base currency), to be referenced in a margin call.\n",
+    "type": {
+      "blueId": "A2YXaFYtBQ5XjGpPB2afYb3gtjXMPebzjP6kvK7juQS4#0"
+    }
+  },
+  "callAgreementType": {
+    "description": "Specifies the legal agreement type the margin call is generated from and governed by.",
+    "type": {
+      "blueId": "C3Rbxa18Z256JdLBEGN8PmNSiuJrh7LRhCYX6g2DhwPm"
+    }
+  },
+  "callIdentifier": {
+    "description": "Represents a unique Identifier for a margin call message, that can be referenced throughout all points of the process.\n",
+    "type": {
+      "blueId": "EdjJv5JTyG4VPv5esPYfbiA1VSWQfZA9erSSr785y3C1"
+    }
+  },
+  "clearingBroker": {
+    "description": "Indicates the name of the Clearing Broker FCM/DCM.",
+    "type": {
+      "blueId": "AVN4ESaeQMFu31gp5PDiR55P6nWzHRiWZR2pKxQS5d6W"
+    }
+  },
+  "collateralPortfolio": {
+    "description": "Represents attributes to define the details of collateral assets within a collateral portfolio to be used in margin call messaging and contribute to collateral balances e.g securities in a collateral account recorded by the principal as held or posted.\n",
+    "type": {
+      "blueId": "5UyZUBPtKP7SwnGXChThEWd8g9iWwd7qYgjpsV4uzfzs"
+    }
+  },
+  "independentAmountBalance": {
+    "description": "Represents additional credit support amount over and above mark to market value.",
+    "type": {
+      "blueId": "4tU5cfKeZno5jB7UN5smWaAt85EutMjDqZuWCsFcxUmX"
+    }
+  },
+  "instructionType": {
+    "description": "Identifies the enumeration values to specify the call notification type, direction, specific action type.",
+    "type": {
+      "blueId": "GK9MNZK8Fab6YvBAMyckTu32b1D5zaTeJwanK3RxFUYD"
+    }
+  },
+  "marginCallResponseAction": {
+    "description": "Specifies the margin call action details, including collateral to be moved and direction.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "9r1NhtS1hPXYLCDwey3jEsZEeRNY3hbUMpXDHSKWpw84"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 1
+      }
+    }
+  },
+  "marginResponseType": {
+    "description": "Indicates the response type, such as, is the margin call response a 'full' 'part' agreement or 'dispute'.",
+    "type": {
+      "blueId": "6ye878dRLRvvrkhmiYEsuka5ZnJgp3nvzEXeeXhXmbPr"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "party": {
+    "description": "Represents the parties to the margin call. The cardinality is optional to address the case where both parties of the event are specified and a third party if applicable.\n",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "AVN4ESaeQMFu31gp5PDiR55P6nWzHRiWZR2pKxQS5d6W"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "partyRole": {
+    "description": "Represents the role each specified party takes in the margin call. further to the principal roles, payer and receiver.\n",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "HjRiCP4U2kbina9KzZmsLbxfxuEKtL8de46X5Pvi5j4Q"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "regIMRole": {
+    "description": "Indicates the role of the party in an regulatory initial margin call instruction (i.e Pledgor party or Secured party).\n",
+    "type": {
+      "blueId": "A7edPZ2CbK443w3XiyQMPaQHm4DeV51KTTWvbZVvuMEL"
+    }
+  },
+  "regMarginType": {
+    "description": "Identifies margin type and if related regulatory mandate",
+    "type": {
+      "blueId": "BAfxMKfyh37Uh2KRUJf6XgoHnc7AnAYYCeNKGR7RMJ8J"
+    }
+  }
+}

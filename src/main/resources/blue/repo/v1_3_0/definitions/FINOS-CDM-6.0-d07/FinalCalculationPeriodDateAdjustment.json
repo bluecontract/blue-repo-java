@@ -1,0 +1,52 @@
+{
+  "name": "FinalCalculationPeriodDateAdjustment",
+  "description": "A data to:  define business date convention adjustment to final payment period per leg.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/common/schedule"
+  },
+  "businessDayConvention": {
+    "description": "Override business date convention. This takes precedence over leg level information.",
+    "type": {
+      "blueId": "FYjKvmcTzRNBddpxNjEdu31EQrd26VAAYESVaWq8SfR4"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "relevantUnderlyingDateReference": {
+    "description": "Reference to the unadjusted cancellation effective dates.",
+    "type": {
+      "blueId": "77rbUUqNwNB6xiJ5CqBs1ZD6D2pZFac1qRjTqD9WuRR3"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "swapStreamReference": {
+    "description": "Reference to the leg, where date adjustments may apply.",
+    "type": {
+      "blueId": "Co6Mx7GBcPGwW8nSVv14zcnUFMA1sdbM3HcE2c3JUR6d"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

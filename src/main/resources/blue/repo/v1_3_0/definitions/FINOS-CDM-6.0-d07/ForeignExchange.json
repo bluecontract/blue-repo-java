@@ -1,0 +1,44 @@
+{
+  "name": "ForeignExchange",
+  "description": "From FpML: A type defining either a spot or forward FX transactions.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/asset"
+  },
+  "exchangedCurrency1": {
+    "description": "This is the first of the two currency flows that define a single leg of a standard foreign exchange transaction.\n",
+    "type": {
+      "blueId": "4ZiCrYCYd4S7KUQNZk1v2d6TA68XChy7R8cbY4LZBGVw"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "exchangedCurrency2": {
+    "description": "This is the second of the two currency flows that define a single leg of a standard foreign exchange transaction.\n",
+    "type": {
+      "blueId": "4ZiCrYCYd4S7KUQNZk1v2d6TA68XChy7R8cbY4LZBGVw"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "tenorPeriod": {
+    "description": "A tenor expressed as a period type and multiplier (e.g. 1D, 1Y, etc.)",
+    "type": {
+      "blueId": "DvFZ2x4FbWKKUWDZYbURfz4u6KAciqiKaaB4rHHcgyEL"
+    }
+  }
+}

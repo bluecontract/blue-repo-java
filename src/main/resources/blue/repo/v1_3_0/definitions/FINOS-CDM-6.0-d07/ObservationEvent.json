@@ -1,0 +1,22 @@
+{
+  "name": "ObservationEvent",
+  "description": "Specifies the necessary information to create any observation event.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/common"
+  },
+  "corporateAction": {
+    "description": "Specifies the necessary information to create a corporate action.",
+    "type": {
+      "blueId": "5QURHG6ufFy8YbE2SwBJnk3xnCwoqdrEdDmxYedupBB7"
+    }
+  },
+  "creditEvent": {
+    "description": "Specifies the necessary information to create a credit event.",
+    "type": {
+      "blueId": "F53FK8FmZbRvA3FdzPhh7a2KwsZD9iXWUfKiJ7jefC3F"
+    }
+  }
+}

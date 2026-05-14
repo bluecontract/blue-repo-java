@@ -1,0 +1,80 @@
+{
+  "name": "FixedAmountCalculationDetails",
+  "description": "Type for reporting the detailed results of calculating a cash flow for a calculation period.  This is enhanced relative to the FpML-based cashflows structure to allow more information to be returned about daily compounded rates.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/asset"
+  },
+  "calculatedAmount": {
+    "description": "The amount of the cash flow that was computed, including any spreads and other processing.",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "calculationPeriod": {
+    "description": "The calculation period for which the floating calculation was performed.",
+    "type": {
+      "blueId": "8HxGXBgYZPyirVyritWo12kVT2cL8N2ZjWmPRVFZXMRZ"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "calculationPeriodNotionalAmount": {
+    "description": "The notional in effect during the calculation period.",
+    "type": {
+      "blueId": "AbAR9hDgkuDPyGUVbpg2virbQmHfou9H5TMSUKaAAQo3"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "fixedRate": {
+    "description": "The value of the fixed rate that was used.",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "yearFraction": {
+    "description": "The fraction of a year that this calculation represents, according to the day count fraction method.",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

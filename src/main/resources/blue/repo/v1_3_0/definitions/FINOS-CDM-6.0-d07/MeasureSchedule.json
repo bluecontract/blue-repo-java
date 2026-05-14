@@ -1,0 +1,39 @@
+{
+  "name": "MeasureSchedule",
+  "description": "A set of measures, all in the same unit, where the values are defined through a schedule of steps. The initial value may be defined either as part of the steps, or using the single amount attribute.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/math"
+  },
+  "datedValue": {
+    "description": "A schedule of step date and value pairs. On each step date the associated step value becomes effective. The step dates are used to order the steps by ascending order. This attribute is optional so the data type may be used to define a schedule with a single value.\n",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "7888m5Pj75TZM8EopkeMnKhKBTVVQk4XKcRS1i3TPhEu"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "unit": {
+    "description": "Qualifies the unit by which the amount is measured. Optional because a measure may be unit-less (e.g. when representing a ratio between amounts in the same unit).\n",
+    "type": {
+      "blueId": "HfXGfTuZyTzdeeqQYqEwHY1aHpiGoC8VBxxVrumR378G"
+    }
+  },
+  "val": {
+    "description": "Specifies the value of the measure as a number. Optional because in a measure vector or schedule, this single value may be omitted.\n",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    }
+  }
+}

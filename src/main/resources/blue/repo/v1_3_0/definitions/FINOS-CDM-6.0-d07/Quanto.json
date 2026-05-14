@@ -1,0 +1,39 @@
+{
+  "name": "Quanto",
+  "description": "Determines the currency rate that the seller of the equity amounts will apply at each valuation date for converting the respective amounts into a currency that is different from the currency denomination of the underlier.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/template"
+  },
+  "fixingTime": {
+    "description": "The time at which the spot currency exchange rate will be observed. It is specified as a time in a business day calendar location, e.g. 11:00am London time.\n",
+    "type": {
+      "blueId": "ETs9sz3NN8RvLtTf1kAJnYcSLRTW91uqxzhL5q7jTEuK"
+    }
+  },
+  "fxRate": {
+    "description": "Specifies a currency conversion rate.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "92SHwxzT1biTfbFpaW8VaqdzRRZNLQtBncCUDfPdoGsG"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "fxSpotRateSource": {
+    "description": "Specifies the methodology (reference source and, optionally, fixing time) to be used for determining a currency conversion rate.\n",
+    "type": {
+      "blueId": "HcS1NSBYjFJGhKb3zX1JsfFJtnQxXFzAXHaK4xB9CFGV"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "IssuerAgencyRating",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/collateral"
+  },
+  "issuerAgencyRating": {
+    "description": "Represents an agency rating based on default risk and creditors claim in event of default associated with asset issuer.\n",
+    "type": {
+      "blueId": "3uCr8zw3jqoaK7CbPzdZPXZJodRNwszY8DMyc81j6RZ5"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

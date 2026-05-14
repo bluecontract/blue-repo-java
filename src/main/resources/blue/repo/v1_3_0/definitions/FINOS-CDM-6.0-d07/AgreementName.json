@@ -1,0 +1,111 @@
+{
+  "name": "AgreementName",
+  "description": "Specifies the agreement name through an agreement type and optional detailed sub agreement type.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/legaldocumentation/common"
+  },
+  "agreementType": {
+    "description": "Specification of the legal agreement type.",
+    "type": {
+      "blueId": "3Y65zs3Y5popHuK1MAYkSQXghxeWRxsRmJcySPmkmiAs"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "contractualDefinitionsType": {
+    "description": "The definitions such as those published by ISDA that will define the terms of the trade.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "t93oTquqSBuW9ND69UgcErUQAho8dsS7QHNdKcYxLuK"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "contractualMatrix": {
+    "description": "A reference to a contractual matrix of elected terms/values (such as those published by ISDA) that shall be deemed to apply to the trade. The applicable matrix is identified by reference to a name and optionally a publication date. Depending on the structure of the matrix, an additional term (specified in the matrixTerm element) may be required to further identify a subset of applicable terms/values within the matrix.\n",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "7fwKe2RsQpcydq7pZB4oNWqxMZxf9owz1Kga2Y9Q4xsQ"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "contractualTermsSupplement": {
+    "description": "A contractual supplement (such as those published by ISDA) that will apply to the trade.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "9vXHKDGSaT72BZjk6Y4K1WkfG4GXC5ftTqUzKo4zyjLM"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "creditSupportAgreementMarginType": {
+    "description": "specifies the type of margin for which a legal agreement is named.",
+    "type": {
+      "blueId": "BqYjzkxAuNczGZxmxpnEsb5vTBSTN4aZ7qMSgsEssGcb"
+    }
+  },
+  "creditSupportAgreementType": {
+    "description": "Specification of the credit support agreement type.",
+    "type": {
+      "blueId": "Ce8CijvABWhPsM7CZ4uru8uq4cEX3giReLi7en2CretD"
+    }
+  },
+  "masterAgreementType": {
+    "description": "Specification of the master agreement type.",
+    "type": {
+      "blueId": "3kM8TG6eYoWE4KWCGBACMt6YA1my77RH9MFKdBrmvSwA"
+    }
+  },
+  "masterConfirmationAnnexType": {
+    "description": "The type of master confirmation annex executed between the parties.",
+    "type": {
+      "blueId": "DzXMS1nfi6ei9b7S3MewSQouA7MMwcuycJFb3ADkTBGz"
+    }
+  },
+  "masterConfirmationType": {
+    "description": "The type of master confirmation executed between the parties.",
+    "type": {
+      "blueId": "DBc4zoB2wTeJiVazBHPHg5qS2Ay7NfpjNezJh3vShu2K"
+    }
+  },
+  "otherAgreement": {
+    "description": "Definition of an agreement that is not enumerated in the CDM.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}

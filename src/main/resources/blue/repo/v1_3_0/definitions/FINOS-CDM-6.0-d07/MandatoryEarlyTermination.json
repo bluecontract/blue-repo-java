@@ -1,0 +1,58 @@
+{
+  "name": "MandatoryEarlyTermination",
+  "description": "A data to:  define an early termination provision for which exercise is mandatory.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/template"
+  },
+  "calculationAgent": {
+    "description": "The ISDA Calculation Agent responsible for performing duties associated with an optional early termination.",
+    "type": {
+      "blueId": "9Ju3htjUpZsgbz7MaSgs7ntw7biN6ZPVQg9UaUQA1NqT"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "cashSettlement": {
+    "description": "If specified, this means that cash settlement is applicable to the transaction and defines the parameters associated with the cash settlement procedure. If not specified, then physical settlement is applicable.\n",
+    "type": {
+      "blueId": "66ZPCNS5fga1DiK68TWqgzqDViQ1u8Rb1k829D6Z6iHR"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "mandatoryEarlyTerminationAdjustedDates": {
+    "description": "The adjusted dates associated with a mandatory early termination provision. These dates have been adjusted for any applicable business day convention.\n",
+    "type": {
+      "blueId": "H34XH9GWap8TpMnABfry9nXVTS23aaXT4d69uJ47UiUH"
+    }
+  },
+  "mandatoryEarlyTerminationDate": {
+    "description": "The early termination date associated with a mandatory early termination of a swap.",
+    "type": {
+      "blueId": "GgLuKofJbYPcFoAaAqP8AVcenx7So5VoHUcuJViFuER5"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

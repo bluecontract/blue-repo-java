@@ -1,0 +1,88 @@
+{
+  "name": "PrimitiveInstruction",
+  "description": "A Primitive Instruction describes the inputs required to pass into the corresponding PrimitiveEvent function.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/common"
+  },
+  "contractFormation": {
+    "description": "Specifies instructions describing an contract formation primitive event.",
+    "type": {
+      "blueId": "CRqRQeAFfhq8ixw2B32fY8marGsn7ut2Cv7f6JB8LQvs"
+    }
+  },
+  "execution": {
+    "description": "Specifies instructions describing an execution primitive event.",
+    "type": {
+      "blueId": "2puub4sUnSzzA14qFtmrXy2V6wrKNPU2Csv5daijiK2B"
+    }
+  },
+  "exercise": {
+    "description": "Specifies instructions describing an exercise primitive event.",
+    "type": {
+      "blueId": "this#0"
+    }
+  },
+  "indexTransition": {
+    "description": "Specifies inputs needed to process a Index Transition business event.",
+    "type": {
+      "blueId": "8sdpVbE19DFSDywL5jx1MoFbNwvZCdojPT5K1Y66dAZ5"
+    }
+  },
+  "observation": {
+    "description": "Specifies inputs needed to process an observation.",
+    "type": {
+      "blueId": "DzM5sGcVfArSCky2KmpzWFMw3oBrB6McwRYm4d7prwrz"
+    }
+  },
+  "partyChange": {
+    "description": "Specifies instructions describing a party change primitive event.",
+    "type": {
+      "blueId": "3W57yuWACA5hKrWMkZrMDtfsvGPkWaAGavArEtssgmNs"
+    }
+  },
+  "quantityChange": {
+    "description": "Specifies instructions describing an quantity change primitive event.",
+    "type": {
+      "blueId": "Bi1RP9sBGiA58sEevRkPDUC311vFvwFGx6Eaym2qMwgt"
+    }
+  },
+  "reset": {
+    "description": "Specifies instructions describing a reset event.",
+    "type": {
+      "blueId": "71SQ3pyckiJYBKQhdrg2QwBgmHU8ma4L1f9d2rwrG2Xn"
+    }
+  },
+  "split": {
+    "description": "Specifies instructions to split a trade into multiple branches.",
+    "type": {
+      "blueId": "this#1"
+    }
+  },
+  "stockSplit": {
+    "description": "Specifies inputs needed to process a Stock Split business event.",
+    "type": {
+      "blueId": "CZrFeAfW5MgoKi9ED165pJm5GiYaLF46FP9DShA93TmX"
+    }
+  },
+  "termsChange": {
+    "description": "Specifies instructions describing a terms change primitive event.",
+    "type": {
+      "blueId": "D1BiT1GRmKWtpKmF9y3yHV6hE9frJtiZ2TKZ9NYLgvKF"
+    }
+  },
+  "transfer": {
+    "description": "Specifies instructions describing a transfer primitive event.",
+    "type": {
+      "blueId": "B49k8aRP9SQWr81cKo8P3WebsN8L7imZoSbkCJYpvET5"
+    }
+  },
+  "valuation": {
+    "description": "Specifies inputs needed to process an update of a valuation.",
+    "type": {
+      "blueId": "GGjTPZ3AzfgfkzK5oceBGSwW8AjwGocN5iK3Z2hNf4Ss"
+    }
+  }
+}

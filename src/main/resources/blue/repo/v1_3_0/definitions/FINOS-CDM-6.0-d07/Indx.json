@@ -1,0 +1,22 @@
+{
+  "name": "Indx",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/regulation"
+  },
+  "nm": {
+    "type": {
+      "blueId": "H7Qme61VgkFMR4cZh9Xsw2SWDY2ks3hkhEN56GA6gSDR"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

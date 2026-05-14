@@ -1,0 +1,56 @@
+{
+  "name": "CollateralPortfolio",
+  "description": "Represents common attributes to define the details of collateral assets, to be used in margin call messaging and contribute to collateral balances e.g securities in a collateral account.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/common"
+  },
+  "collateralBalance": {
+    "description": "Represents the populated or calculated collateral aggregate balance amount for the collateral portfolio.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "4tU5cfKeZno5jB7UN5smWaAt85EutMjDqZuWCsFcxUmX"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "collateralPosition": {
+    "description": "Specifies the individual components of the collateral positions in the collateral portfolio.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "C8Mnx6MLf56N9kcyR81gdNd7rtp69b8DHt5x2wqVPkna"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "legalAgreement": {
+    "description": "The specification of a legal agreement between two parties governing the collateral relationship such as Credit Support Agreement or Collateral Transfer Agreement etc. (NB: this can be provided by reference to a global key for each LegalAgreement object).\n",
+    "type": {
+      "blueId": "AjCp4R3pFvJjo6gs8KhfRQ9fBhHxMt47ESENVQjSDJHb"
+    }
+  },
+  "portfolioIdentifier": {
+    "description": "Specifies a unique identifier for a set of collateral positions in a portfolio.",
+    "type": {
+      "blueId": "EdjJv5JTyG4VPv5esPYfbiA1VSWQfZA9erSSr785y3C1"
+    }
+  }
+}

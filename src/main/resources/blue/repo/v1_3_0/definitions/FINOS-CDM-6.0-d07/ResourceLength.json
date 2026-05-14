@@ -1,0 +1,38 @@
+{
+  "name": "ResourceLength",
+  "description": "A class to indicate the length of the resource.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/legaldocumentation/common"
+  },
+  "lengthUnit": {
+    "description": "The length unit of the resource. For example, pages (pdf, text documents) or time (audio, video files).",
+    "type": {
+      "blueId": "74dmjW8PH4ugiNGFVQu6zxcyah2WUB1THAP4i5JjXguY"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "lengthValue": {
+    "description": "The length value of the resource.",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

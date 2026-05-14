@@ -1,0 +1,50 @@
+{
+  "name": "CommodityReferenceFramework",
+  "description": "Specifies the type of commodity.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/staticdata/asset/common"
+  },
+  "capacityUnit": {
+    "description": "Provides an enumerated value for a capacity unit, generally used in the context of defining quantities for commodities.\n",
+    "type": {
+      "blueId": "2w9AigpM9KEZGhXep7EUFbz6DLHYFWLJ89vSuKnhyvM7"
+    }
+  },
+  "commodityName": {
+    "description": "Identifies the commodity more specifically. Where possible, this should follow the naming convention used in the 2005 ISDA Commodity Definitions SubAnnex A, including the subCommodity and additional qualifiers, but should be limited to 256 characters or less.\n",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "currency": {
+    "description": "Defines the currency in which the commodity is priced.",
+    "type": {
+      "blueId": "DkAAYuMhrcUQRrFdCEPKwcQDCnee3rxTu6vYVSURpWWY"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "weatherUnit": {
+    "description": "Provides an enumerated values for a weather unit, generally used in the context of defining quantities for commodities.\n",
+    "type": {
+      "blueId": "8UqSkL8PAWWbLyRMecbkbJ2X8ffU58B259Wf2579RjLL"
+    }
+  }
+}

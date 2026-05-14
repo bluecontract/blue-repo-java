@@ -40,17 +40,19 @@ These ordinals are useful for discussion and diagnostics only. They should not b
 | 32 | 2026-04-30 | `d2f0bfc` | `5gmX9Fhnu4qM9ZJuqKAVZQXCQng3h4hZbWoaSEufSzij` |
 | 33 | 2026-05-06 | `951e3f7` | `B4qWEbNWRcgabYrDTxtebfRSP5nBnEYvpX5YWqa2PcE4` |
 | 34 | 2026-05-06 | `93dcdec` | `sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv` |
+| 35 | 2026-05-14 | `9f87aa8` | `EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz` |
 
 ## Current Java Mapping
 
-The current Java package is generated from tag `sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv`, which is ordinal 34 in the public Git tag list.
+The current Java package is generated from tag `EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz`, which is ordinal 35 in the public Git tag list.
 
-The checked `BlueRepository.blue` bundle itself contains only three `repositoryVersions` entries after the repository reset:
+The checked `BlueRepository.blue` bundle itself contains four `repositoryVersions` entries after the repository reset:
 
 | Bundle index | Java/catalog label | Repository BlueId |
 | --- | --- | --- |
 | 0 | `1.0.0` | `5gmX9Fhnu4qM9ZJuqKAVZQXCQng3h4hZbWoaSEufSzij` |
 | 1 | `1.1.0` | `B4qWEbNWRcgabYrDTxtebfRSP5nBnEYvpX5YWqa2PcE4` |
 | 2 | `1.2.0` | `sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv` |
+| 3 | `1.3.0` | `EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz` |
 
-That is why `blue-repo-java` now exposes `blue.repo.v1_2_0`: it follows the public package/catalog version for the latest bundle, not the ordinal position of the Git tag list.
+That is why `blue-repo-java` now exposes `blue.repo.v1_3_0`: it follows the public package/catalog version for the latest bundle, not the ordinal position of the Git tag list.

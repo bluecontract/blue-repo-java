@@ -1,0 +1,49 @@
+{
+  "name": "BoundedVariance",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/asset"
+  },
+  "daysInRangeAdjustment": {
+    "description": "The contract specifies whether the notional should be scaled by the Number of Days in Range divided by the Expected N. The number of Days in Ranges refers to the number of returns that contribute to the realized volatility.\n",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "lowerBarrier": {
+    "description": "All observations below this price level will be excluded from the variance calculation.",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    }
+  },
+  "realisedVarianceMethod": {
+    "description": "The contract specifies which price must satisfy the boundary condition.",
+    "type": {
+      "blueId": "BMHHytB9uJcQTToFmzaJTDmnkUxNkkskWcxr6SqJk3MH"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "upperBarrier": {
+    "description": "All observations above this price level will be excluded from the variance calculation.",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    }
+  }
+}

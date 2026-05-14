@@ -1,0 +1,33 @@
+{
+  "name": "ObservationSchedule",
+  "description": "Specifies a single date on which market observations take place and specifies optional associated weighting.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/common/schedule"
+  },
+  "dateAdjustments": {
+    "description": "The business day convention and financial business centers used for adjusting the date if it would otherwise fall on a day that is not a business date in the specified business centers.\n",
+    "type": {
+      "blueId": "G6NRh7uJ9nHqamG4NyjfGcr5Wfk3qujsowe9hwpvpBNp"
+    }
+  },
+  "observationDate": {
+    "description": "Specifies an adjusted or unadjusted date for a market observation.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "CiVeAe7TnVLFbXqzQuh8wfmVQXXt3SCFB8Ge4p4B7YpR"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  }
+}

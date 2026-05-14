@@ -1,0 +1,22 @@
+{
+  "name": "PeriodRange",
+  "description": "Indicates The period range defined as either a lower and upper period bound, or both.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/datetime"
+  },
+  "lowerBound": {
+    "description": "Specifies the lower bound of a period range, e.g. greater than or equal to 5Y.",
+    "type": {
+      "blueId": "AnLRDB9DjaRT1NysLrKRGZY4ggbGDxBHd4MnXp87pRZS"
+    }
+  },
+  "upperBound": {
+    "description": "Specifies the upper bound of a period range, e.g. less than to 10Y.",
+    "type": {
+      "blueId": "AnLRDB9DjaRT1NysLrKRGZY4ggbGDxBHd4MnXp87pRZS"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "StandardizedScheduleTradeInfo",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/margin/schedule"
+  },
+  "assetClass": {
+    "type": {
+      "blueId": "A27E1xohHPbrcdgjuzS1bMcf9KzC9xb1fXL5FJEL3gby"
+    }
+  },
+  "grossInitialMargin": {
+    "type": {
+      "blueId": "AbAR9hDgkuDPyGUVbpg2virbQmHfou9H5TMSUKaAAQo3"
+    }
+  },
+  "markToMarketValue": {
+    "type": {
+      "blueId": "AbAR9hDgkuDPyGUVbpg2virbQmHfou9H5TMSUKaAAQo3"
+    }
+  },
+  "productClass": {
+    "type": {
+      "blueId": "6mED6TzgHRLmqptsxAXMaehW3dHSrErTWm6HY6aeKKsu"
+    }
+  }
+}

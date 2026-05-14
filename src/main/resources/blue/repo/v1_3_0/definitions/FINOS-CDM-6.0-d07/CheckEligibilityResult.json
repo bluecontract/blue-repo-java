@@ -1,0 +1,69 @@
+{
+  "name": "CheckEligibilityResult",
+  "description": "Result for the CheckEligibilityByDetails and CheckEligibilityForProduct functions",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/collateral"
+  },
+  "eligibilityQuery": {
+    "description": "a copy of the input query that was checked against the eligible collateral specification",
+    "type": {
+      "blueId": "5aiVGtjgYsUkhvTFqiHbWX4Hu1WSoEkYAXAZNdi7XPTk"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "isEligible": {
+    "description": "a simple boolean which is set to true if the asset described in the EligibilityQuery input is eligible",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "matchingEligibleCriteria": {
+    "description": "if there was a match, this will be the one or more criteria that were supplied in the EligbilityCollateralSpecification which matched with the query input\n",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "GBEjAv1Sq34YZbzbYvKfWnzWG5QHDjmBayZf13xAeW89"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "specification": {
+    "description": "a copy of the input EligbilityCollateralSpecification that was checked against the query",
+    "type": {
+      "blueId": "BYmrgGgfScxJpKSKuGQH8Gch59qEvVjYytYpTafxFaBe"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "FieldWithMetaInterestRateIndex",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/observable/asset"
+  },
+  "meta": {
+    "type": {
+      "blueId": "JD8ko8cUQ19mR5qp9RzbrvvRZvuXuQ6zGjMNd5e4cbmF"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "5H9s4M17sm1hip58MAWHhPPSkhcUJFU8itdTmKrx7Bfb"
+    }
+  }
+}

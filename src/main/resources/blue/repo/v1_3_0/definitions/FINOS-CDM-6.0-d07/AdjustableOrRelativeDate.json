@@ -1,0 +1,22 @@
+{
+  "name": "AdjustableOrRelativeDate",
+  "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/datetime"
+  },
+  "adjustableDate": {
+    "description": "A date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.\n",
+    "type": {
+      "blueId": "GgLuKofJbYPcFoAaAqP8AVcenx7So5VoHUcuJViFuER5"
+    }
+  },
+  "relativeDate": {
+    "description": "A date specified as some offset to another date (the anchor date).",
+    "type": {
+      "blueId": "4Bn4UjJ5wyJD2wnAH9KECmxuQwXJQSheu8KjM7LicENA"
+    }
+  }
+}

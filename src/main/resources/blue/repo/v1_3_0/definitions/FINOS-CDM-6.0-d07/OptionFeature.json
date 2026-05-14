@@ -1,0 +1,57 @@
+{
+  "name": "OptionFeature",
+  "description": "Defines additional optional features that can be included in an option contract.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/template"
+  },
+  "averagingFeature": {
+    "description": "Defines an option feature in which an average market observation price is determined on valuation and compared to the strike to determine a settlement amount.\n",
+    "type": {
+      "blueId": "4PEMh5H4JmbBLGo2qSFrUZHLkTPfUs9vTyV1RSmuoLXc"
+    }
+  },
+  "barrier": {
+    "description": "Specifies a barrier feature.",
+    "type": {
+      "blueId": "FaKwxq6McrxtiiFXorgePjXJzsfsXmxeAkn9n1TxL1Dm"
+    }
+  },
+  "fxFeature": {
+    "description": "Describes a quanto or composite FX feature.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "5YdyCjLAe8G3254EizBaSqFHMqHcLkHE69iZL39qyER6"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "knock": {
+    "description": "Specifies a knock in or knock out feature.",
+    "type": {
+      "blueId": "CmhyMFWHpSz7snSPjZB1tRSK6XMGnEFCmW9kXNLcjUNj"
+    }
+  },
+  "passThrough": {
+    "description": "Specifies the rules for pass-through payments from the underlier, such as dividends.",
+    "type": {
+      "blueId": "AgykQU6o8mJ3oCAArudFCaMCXcEWuPx5iXqhq8QEun4J"
+    }
+  },
+  "strategyFeature": {
+    "description": "Defines a simple strategy feature.",
+    "type": {
+      "blueId": "7Qn8dmcBqxZ4qHmVEiaUne3TKGFv3prKnwre6AbrSM68"
+    }
+  }
+}

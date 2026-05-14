@@ -1,0 +1,58 @@
+{
+  "name": "WorkflowStepApproval",
+  "description": "Party approvals associated to the current WorkflowStep.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/workflow"
+  },
+  "approved": {
+    "description": "Flag denoting whether the workflow step is approved or not",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "party": {
+    "description": "Reference to the Party who is approving/rejecting this workflow step",
+    "type": {
+      "blueId": "DVG4WkiKTRaHwt4MUfbHBGMX2YwcBypUv2HBVkEJGyse"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "rejectedReason": {
+    "description": "Optional reason for rejecting the workflow step",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "timestamp": {
+    "description": "Timestamp of the approval",
+    "type": {
+      "blueId": "FGY4T85sJV5uNzmuYPfAAerjSoVbrDPjaCBHmc8Pa6H4"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

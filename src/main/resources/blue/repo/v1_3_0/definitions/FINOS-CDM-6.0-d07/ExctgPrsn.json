@@ -1,0 +1,22 @@
+{
+  "name": "ExctgPrsn",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/regulation"
+  },
+  "prsn": {
+    "type": {
+      "blueId": "Zy4ykqiA5gdfj4kc4E4YvJgsWP2iDydoQTNLD26oy9c"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "ExercisePeriod",
+  "description": "This defines the time interval to the start of the exercise period, i.e. the earliest exercise date, and the frequency of subsequent exercise dates (if any).\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/template"
+  },
+  "earliestExerciseDateTenor": {
+    "description": "The time interval to the first (and possibly only) exercise date in the exercise period.",
+    "type": {
+      "blueId": "DvFZ2x4FbWKKUWDZYbURfz4u6KAciqiKaaB4rHHcgyEL"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "exerciseFrequency": {
+    "description": "The frequency of subsequent exercise dates in the exercise period following the earliest exercise date. An interval of 1 day should be used to indicate an American style exercise period.\n",
+    "type": {
+      "blueId": "DvFZ2x4FbWKKUWDZYbURfz4u6KAciqiKaaB4rHHcgyEL"
+    }
+  }
+}

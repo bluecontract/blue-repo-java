@@ -1,0 +1,29 @@
+{
+  "name": "ReferenceSwapCurve",
+  "description": "A complex type used to specify the option and convertible bond option strike when expressed in reference to a swap curve.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/observable/asset"
+  },
+  "makeWholeAmount": {
+    "description": "Amount to be paid by the buyer of the option if the option is exercised prior to the Early Call Date. (The market practice in the convertible bond option space being that the buyer should be penalised if he/she exercises the option early on.)\n",
+    "type": {
+      "blueId": "DcecGr6BEQsR9CKK6qXNAmZqsrqFcAWTw8LdQfmUcvbW"
+    }
+  },
+  "swapUnwindValue": {
+    "type": {
+      "blueId": "8uTpR6nDjzouocdjg6RhQJoqyzsvgUQafdC4iK85zN7W"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

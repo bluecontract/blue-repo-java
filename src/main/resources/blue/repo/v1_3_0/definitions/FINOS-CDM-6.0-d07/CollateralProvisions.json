@@ -1,0 +1,47 @@
+{
+  "name": "CollateralProvisions",
+  "description": "Contains collateral attributes which can also inherit information from a GMRA",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/collateral"
+  },
+  "collateralType": {
+    "description": "Enumerates the collateral types which are accepted by the Seller.",
+    "type": {
+      "blueId": "Dnoa3g5i2QYJuFDjb4giKCn96sAMoPTp9f4s5uocQx9"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "eligibleCollateral": {
+    "description": "The eligible collateral as specified in relation to the transaction.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "GBEjAv1Sq34YZbzbYvKfWnzWG5QHDjmBayZf13xAeW89"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "substitutionProvisions": {
+    "description": "The provisions for collateral substitutions such as how many and when they are allowed.",
+    "type": {
+      "blueId": "C1LEMTt1iuPcDQrv44JKMTs6ZshZHpQ4dkDP1dhh6qRi"
+    }
+  }
+}

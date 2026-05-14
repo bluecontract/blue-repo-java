@@ -1,0 +1,19 @@
+{
+  "name": "FieldWithMetaLimitLevelEnum",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/workflow"
+  },
+  "meta": {
+    "type": {
+      "blueId": "JD8ko8cUQ19mR5qp9RzbrvvRZvuXuQ6zGjMNd5e4cbmF"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "Ck1mZy4M4149QLXabhWMxgW12GkjXM8UqNTh9wZJSPbn"
+    }
+  }
+}

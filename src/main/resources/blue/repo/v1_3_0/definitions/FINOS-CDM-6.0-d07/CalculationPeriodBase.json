@@ -1,0 +1,22 @@
+{
+  "name": "CalculationPeriodBase",
+  "description": "The calculation period adjusted start and end dates, which are the baseline arguments needed to compute an interest accrual calculation.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/common/schedule"
+  },
+  "adjustedEndDate": {
+    "description": "The calculation period end date, adjusted according to any relevant business day convention.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "adjustedStartDate": {
+    "description": "The calculation period start date, adjusted according to any relevant business day convention.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}

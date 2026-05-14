@@ -32,7 +32,7 @@ class RepositoryHistoricalVersionTest {
         assertEquals("repo-v1", manifest.repositoryVersionByVersion("1.0.0")
                 .orElseThrow(AssertionError::new)
                 .repositoryBlueId());
-        assertEquals("1.2.0", manifest.repositoryVersionByBlueId("repo-v3")
+        assertEquals("1.3.0", manifest.repositoryVersionByBlueId("repo-v3")
                 .orElseThrow(AssertionError::new)
                 .version());
 
@@ -180,13 +180,13 @@ class RepositoryHistoricalVersionTest {
     private static RepositoryManifest syntheticManifest() {
         return RepositoryManifest.fromMap(map(
                 "repositoryName", "Blue Repository",
-                "repositoryVersion", "1.2.0",
+                "repositoryVersion", "1.3.0",
                 "repositoryVersionBlueId", "repo-v3",
                 "sourceResource", "synthetic/BlueRepository.blue",
                 "repositoryVersions", Arrays.asList(
                         map("index", 0, "version", "1.0.0", "repositoryBlueId", "repo-v1"),
                         map("index", 1, "version", "1.1.0", "repositoryBlueId", "repo-v2"),
-                        map("index", 2, "version", "1.2.0", "repositoryBlueId", "repo-v3")
+                        map("index", 2, "version", "1.3.0", "repositoryBlueId", "repo-v3")
                 ),
                 "definitions", Arrays.asList(
                         map(
@@ -294,7 +294,7 @@ class RepositoryHistoricalVersionTest {
                 "node",
                 "tools/generate-repository-sources.js",
                 "--source", source.toString(),
-                "--repository-version", "1.2.0",
+                "--repository-version", "1.3.0",
                 "--java-package-segment", "vtest",
                 "--resource-base", "blue/repo/vtest",
                 "--java-package", "blue.repo.vtest",

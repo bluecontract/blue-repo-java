@@ -1,0 +1,91 @@
+{
+  "name": "CollateralInterestCalculationParameters",
+  "description": "Represents parameters for calculating the amount the floating interest calculation, e.g.  for a single currency or defaults for all currencies.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/collateral"
+  },
+  "compoundingBusinessCenter": {
+    "description": "Specifies the applicable business centers for compounding.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "AFWUrY5FWgFnzVAmZJHAH1wEhtyCfPunsEwybUry8Ssy"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "compoundingType": {
+    "description": "Specifies the type of compounding to be applied (None, Business, Calendar).",
+    "type": {
+      "blueId": "4KC3AgSLWT5QiSes7iW3SW5wYtSECeUCgQbYvRmkT3iJ"
+    }
+  },
+  "dayCountFraction": {
+    "description": "Specifies the day count fraction to use for that currency.",
+    "type": {
+      "blueId": "5bZzUQNsNnzkmG2eE3m4swRuEC1fmuR47tVB1LXC7Hvt"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "fixedRate": {
+    "description": "Specifies the applicable fixed rate  if used.",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    }
+  },
+  "floatingRate": {
+    "description": "Specifies the floating interest rate to be used.",
+    "type": {
+      "blueId": "3WtJDuRmCXKh7PPYRQj8TCmAaW1npCv961KbBcrHUHW7"
+    }
+  },
+  "inBaseCurrency": {
+    "description": "If True, specifies that the interest transfers should be converted to base currency equivalent, or if False specifies that the transfer should be in the currency of the collateral.\n",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "rounding": {
+    "description": "Specifies the rounding rules for settling in that currency.",
+    "type": {
+      "blueId": "FVu5RjukdCMpkCtoN39tLH9myXLM65Xm7U13S2nUvuXV"
+    }
+  },
+  "roundingFrequency": {
+    "description": "Specifies when/how often is rounding applied?",
+    "type": {
+      "blueId": "6ucmPrnAi2NaGgGBP8wE2dyrfhNrEWDLHH3Q8MpAT3UX"
+    }
+  },
+  "withholdingTaxRate": {
+    "description": "Specifies the withholding tax rate if a withholding tax is applicable.",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    }
+  }
+}

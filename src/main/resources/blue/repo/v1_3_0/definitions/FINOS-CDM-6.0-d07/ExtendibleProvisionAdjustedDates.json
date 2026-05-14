@@ -1,0 +1,27 @@
+{
+  "name": "ExtendibleProvisionAdjustedDates",
+  "description": "A data defining:  the adjusted dates associated with a provision to extend a swap.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/template"
+  },
+  "extensionEvent": {
+    "description": "The adjusted dates associated with a single extendible exercise date.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "4NGpRraKTgNfVCz1m7eYCGenaQMtfCTVRRBwMfvo8Pix"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 1
+      }
+    }
+  }
+}

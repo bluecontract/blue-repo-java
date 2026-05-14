@@ -1,0 +1,95 @@
+{
+  "name": "VolatilityReturnTerms",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/asset"
+  },
+  "annualizationFactor": {
+    "description": "This specifies the numerator of an annualization factor. Frequently this number is equal to the number of observations of prices in a year e.g. 252.\n",
+    "type": {
+      "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+    }
+  },
+  "dividendApplicability": {
+    "description": "The parameters which define whether dividends are applicable",
+    "type": {
+      "blueId": "7YPXekUAnhSyp9AcFCEqPbCAU21zbcDE5gTMTqxEu6f4"
+    }
+  },
+  "equityUnderlierProvisions": {
+    "description": "Contains Equity Underlyer provisions regarding jurisdiction and fallbacks.",
+    "type": {
+      "blueId": "68bTDtRvgynPZurH7nT19Jy72N8v8n4ZcDksksPDZ3pd"
+    }
+  },
+  "exchangeTradedContractNearest": {
+    "description": "Specification of the exchange traded contract nearest.",
+    "type": {
+      "blueId": "CkeF18aQokqFBEX3MBXjrXciqtnKfoa1FHbLDTBZ3H8C"
+    }
+  },
+  "expectedN": {
+    "description": "Expected number of trading days.",
+    "type": {
+      "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+    }
+  },
+  "initialLevel": {
+    "description": "Contract will strike off this initial level. Providing just the initialLevel without initialLevelSource, infers that this is AgreedInitialPrice - a specified Initial Index Level.\n",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    }
+  },
+  "initialLevelSource": {
+    "description": "In this context, this is AgreedInitialPrice - a specified Initial Index Level.",
+    "type": {
+      "blueId": "A4xQ1M4K4Bxgfj42oJzfRc6Jc8n5qjBuZW3DA5zJEgMy"
+    }
+  },
+  "meanAdjustment": {
+    "description": "Specifies whether Mean Adjustment is applicable or not in the calculation of the Realized Volatility, Variance or Correlation\n",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    }
+  },
+  "performance": {
+    "description": "Performance calculation, in accordance with Part 1 Section 12 of the 2018 ISDA CDM Equity Confirmation for Security Equity Swap, Para 75. 'Equity Performance'. Cumulative performance is used as a notional multiplier factor on both legs of an Equity Swap.\n",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "sharePriceDividendAdjustment": {
+    "description": "Indicates whether the price of shares is adjusted for dividends or not.",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    }
+  },
+  "valuationTerms": {
+    "description": "Contains all non-date valuation information.",
+    "type": {
+      "blueId": "HBPyekApP6oSxJLXSqMqQEf4uuZaocEC84epkGmriddV"
+    }
+  },
+  "volatilityCapFloor": {
+    "description": "Contains volatility-based barriers",
+    "type": {
+      "blueId": "Ad6xt3gxZGZhgoVLeMQ7CEg6aLkmfkexpd4EFmE4kLzn"
+    }
+  },
+  "volatilityStrikePrice": {
+    "description": "Volatility Strike Price in accordance with the ISDA 2011 Equity Derivatives Definitions.",
+    "type": {
+      "blueId": "34JSSaiNLZkZGJCPhZGY4wsFrAd7HeP7M2MEwHXHZp2u"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

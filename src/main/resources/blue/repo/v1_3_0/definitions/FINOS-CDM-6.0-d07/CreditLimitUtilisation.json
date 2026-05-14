@@ -1,0 +1,22 @@
+{
+  "name": "CreditLimitUtilisation",
+  "description": "Credit limit utilisation breakdown by executed trades and pending orders.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/workflow"
+  },
+  "executed": {
+    "description": "Credit limit utilisation attributable to executed trades.",
+    "type": {
+      "blueId": "BUhco6CQs6AuL1wXvMQJ1XRok4Nwovp2ZTBx2rWbwVQZ"
+    }
+  },
+  "pending": {
+    "description": "Credit limit utilisation attributable to pending unexecuted orders.",
+    "type": {
+      "blueId": "BUhco6CQs6AuL1wXvMQJ1XRok4Nwovp2ZTBx2rWbwVQZ"
+    }
+  }
+}

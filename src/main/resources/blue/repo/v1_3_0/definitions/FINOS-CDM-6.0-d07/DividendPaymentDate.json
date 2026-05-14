@@ -1,0 +1,20 @@
+{
+  "name": "DividendPaymentDate",
+  "description": "A class describing the date on which the dividend will be paid/received. This class is also used to specify the date on which the FX rate will be determined, when applicable.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/asset"
+  },
+  "dividendDate": {
+    "type": {
+      "blueId": "6Syh8ww8U6aA4EfU72SMAXFhYKJ4nZhn5RdrYDiA8Gy"
+    }
+  },
+  "dividendDateReference": {
+    "type": {
+      "blueId": "9t7RYd2VTVhGfo1qzS5dd7kK2zpc4TgpigJWQebhcChk"
+    }
+  }
+}

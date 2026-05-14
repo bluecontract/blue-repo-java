@@ -1,0 +1,22 @@
+{
+  "name": "SpreadSchedule",
+  "description": "Adds an optional spread type element to the Schedule to identify a long or short spread value.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/asset"
+  },
+  "price": {
+    "description": "The initial rate. An initial rate of 5% would be represented as 0.05.",
+    "type": {
+      "blueId": "45HfgL64TRdHGgokLmTPwnhDVyVxw776BCEtmU9wpwVs"
+    }
+  },
+  "spreadScheduleType": {
+    "description": "An element which purpose is to identify a long or short spread value.",
+    "type": {
+      "blueId": "8nxPn6ytb7bcpHS3EsKSHxAexnYSJuX5m3ov7V2PsEgM"
+    }
+  }
+}

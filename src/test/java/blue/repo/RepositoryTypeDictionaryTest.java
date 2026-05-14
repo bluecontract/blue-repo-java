@@ -14,7 +14,7 @@ class RepositoryTypeDictionaryTest {
 
     @Test
     void dictionaryBlueIdsContainsRepositoryVersionBlueId() {
-        BlueRepository repository = BlueRepository.v1_2_0();
+        BlueRepository repository = BlueRepository.v1_3_0();
         TypeDictionary dictionary = repository.typeDictionary();
 
         assertEquals(BlueRepository.DICTIONARY_NAME, dictionary.name());
@@ -26,7 +26,7 @@ class RepositoryTypeDictionaryTest {
 
     @Test
     void currentBlueIdReturnsCurrentIdForKnownType() {
-        BlueRepository repository = BlueRepository.v1_2_0();
+        BlueRepository repository = BlueRepository.v1_3_0();
         TypeDictionary dictionary = repository.typeDictionary();
         String operationBlueId = ConversationTypes.OPERATION.blueId();
 
@@ -35,7 +35,7 @@ class RepositoryTypeDictionaryTest {
 
     @Test
     void typeBlueIdForReturnsCurrentTypeIdForSupportedDictionaryVersion() {
-        BlueRepository repository = BlueRepository.v1_2_0();
+        BlueRepository repository = BlueRepository.v1_3_0();
         TypeDictionary dictionary = repository.typeDictionary();
         String operationBlueId = ConversationTypes.OPERATION.blueId();
 
@@ -47,7 +47,7 @@ class RepositoryTypeDictionaryTest {
 
     @Test
     void definitionReturnsFullFreshNodeForKnownType() {
-        BlueRepository repository = BlueRepository.v1_2_0();
+        BlueRepository repository = BlueRepository.v1_3_0();
         TypeDictionary dictionary = repository.typeDictionary();
         String operationBlueId = ConversationTypes.OPERATION.blueId();
 
@@ -62,7 +62,7 @@ class RepositoryTypeDictionaryTest {
 
     @Test
     void unknownTypeAndDictionaryVersionReturnEmpty() {
-        BlueRepository repository = BlueRepository.v1_2_0();
+        BlueRepository repository = BlueRepository.v1_3_0();
         TypeDictionary dictionary = repository.typeDictionary();
 
         assertFalse(dictionary.currentBlueId("unknown-type-blue-id").isPresent());
@@ -72,7 +72,7 @@ class RepositoryTypeDictionaryTest {
 
     @Test
     void supportedDictionaryExportKeepsCompactTypeReference() {
-        BlueRepository repository = BlueRepository.v1_2_0();
+        BlueRepository repository = BlueRepository.v1_3_0();
         Blue blue = repository.configureForExport(new Blue());
         ExportContext context = ExportContext.builder()
                 .dictionary(BlueRepository.DICTIONARY_NAME, repository.repositoryVersionBlueId())
@@ -94,7 +94,7 @@ class RepositoryTypeDictionaryTest {
 
     @Test
     void exportWithoutDictionaryContextInlinesKnownRepositoryType() {
-        BlueRepository repository = BlueRepository.v1_2_0();
+        BlueRepository repository = BlueRepository.v1_3_0();
         Blue blue = repository.configureForExport(new Blue());
 
         Node document = new Node()
@@ -111,7 +111,7 @@ class RepositoryTypeDictionaryTest {
 
     @Test
     void strictExportWithoutSupportedDictionaryThrows() {
-        BlueRepository repository = BlueRepository.v1_2_0();
+        BlueRepository repository = BlueRepository.v1_3_0();
         Blue blue = repository.configureForExport(new Blue());
         ExportContext strict = ExportContext.builder()
                 .inlineUnsupportedTypes(false)
@@ -126,7 +126,7 @@ class RepositoryTypeDictionaryTest {
 
     @Test
     void recursiveInliningInlinesNestedRepositoryTypesButKeepsCoreTypesCompact() {
-        BlueRepository repository = BlueRepository.v1_2_0();
+        BlueRepository repository = BlueRepository.v1_3_0();
         Blue blue = repository.configureForExport(new Blue());
 
         Node document = new Node()

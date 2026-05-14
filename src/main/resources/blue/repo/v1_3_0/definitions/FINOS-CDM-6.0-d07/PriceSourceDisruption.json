@@ -1,0 +1,24 @@
+{
+  "name": "PriceSourceDisruption",
+  "description": "A data defining:  the parameters used to get a price quote to replace the settlement rate option that is disrupted.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/observable/asset"
+  },
+  "fallbackReferencePrice": {
+    "description": "The method, prioritised by the order it is listed in this element, to get a replacement rate for the disrupted settlement rate option.\n",
+    "type": {
+      "blueId": "CBuAJiMsCvXZ2Uq7xDDLkUhnWrgWWb6ELFeyFWPmkyMm"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

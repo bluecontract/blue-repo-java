@@ -1,0 +1,19 @@
+{
+  "name": "FieldWithMetaPersonIdentifier",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/staticdata/party"
+  },
+  "meta": {
+    "type": {
+      "blueId": "JD8ko8cUQ19mR5qp9RzbrvvRZvuXuQ6zGjMNd5e4cbmF"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "5gB5WyiiL6HzqGSVtJzPy6jc3hj3j1WXhzpZodFHyCb6"
+    }
+  }
+}

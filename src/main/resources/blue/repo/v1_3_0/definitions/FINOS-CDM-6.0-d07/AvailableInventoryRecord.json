@@ -1,0 +1,74 @@
+{
+  "name": "AvailableInventoryRecord",
+  "description": "An individual piece of available inventory. This represents a single security and its associated criteria. The criteria are used to describe any restrictions on the securities.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/position"
+  },
+  "collateral": {
+    "description": "The type of collateral can often be required when determining if the piece of availability being described is suitable for a party.\n",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "2yyk9C9m7MJ7bKTB13P7TidBUyur7Yd2PVveJetpPLLp"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "expirationDateTime": {
+    "description": "There may be a set period/time restriction associated to the security.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "identifer": {
+    "description": "Unique identifier for this record. This can be used to uniquely identify a specific piece of inventory.",
+    "type": {
+      "blueId": "9WB67XpgjeVBGSB6fTP5EjK3G6esoKBVmp8qhevGVTeu"
+    }
+  },
+  "interestRate": {
+    "description": "An optional element which can be used to hold a rate associated to this piece of availability.",
+    "type": {
+      "blueId": "34JSSaiNLZkZGJCPhZGY4wsFrAd7HeP7M2MEwHXHZp2u"
+    }
+  },
+  "partyRole": {
+    "description": "An individual security may be held by several agents. Including the party role at this level allows us to reference the party holding this specific item.\n",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "HjRiCP4U2kbina9KzZmsLbxfxuEKtL8de46X5Pvi5j4Q"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "quantity": {
+    "description": "The quantity of the security",
+    "type": {
+      "blueId": "Dbuu2Nbin93McrV6zGUuHz3TZRvVgykmW8cbo77KwMnu"
+    }
+  },
+  "security": {
+    "description": "The security details.",
+    "type": {
+      "blueId": "63T48TnoQTtqwqJhapzoroXE67oBew8rTpLWkaMbEoWt"
+    }
+  }
+}

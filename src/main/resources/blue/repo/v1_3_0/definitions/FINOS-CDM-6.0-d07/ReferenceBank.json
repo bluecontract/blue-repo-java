@@ -1,0 +1,30 @@
+{
+  "name": "ReferenceBank",
+  "description": "A class to describe an institution (party) identified by means of a coding scheme and an optional name.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/staticdata/party"
+  },
+  "referenceBankId": {
+    "description": "An institution (party) identifier, e.g. a bank identifier code (BIC). FpML specifies a referenceBankIdScheme.",
+    "type": {
+      "blueId": "DkAAYuMhrcUQRrFdCEPKwcQDCnee3rxTu6vYVSURpWWY"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "referenceBankName": {
+    "description": "The name of the institution (party). A free format string. FpML does not define usage rules for the element.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}

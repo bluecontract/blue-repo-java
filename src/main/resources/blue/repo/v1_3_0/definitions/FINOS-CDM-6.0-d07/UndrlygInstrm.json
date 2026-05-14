@@ -1,0 +1,22 @@
+{
+  "name": "UndrlygInstrm",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/regulation"
+  },
+  "swp": {
+    "type": {
+      "blueId": "5R7EuXfdy4vmSUeFxAEqofYUptX3RvtdEed27shg1ywa"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "FieldWithMetaCommodityBusinessCalendarEnum",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/datetime"
+  },
+  "meta": {
+    "type": {
+      "blueId": "JD8ko8cUQ19mR5qp9RzbrvvRZvuXuQ6zGjMNd5e4cbmF"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "7Eoz68wBSHAQKZXhptmjomDHuv1wimem7KyeroCtLPtC"
+    }
+  }
+}

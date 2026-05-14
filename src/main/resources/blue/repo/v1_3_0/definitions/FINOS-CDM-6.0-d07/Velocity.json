@@ -1,0 +1,19 @@
+{
+  "name": "Velocity",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/event/workflow"
+  },
+  "period": {
+    "type": {
+      "blueId": "ADwrEfXfooJEb8C6T7boEZDWG8yXLrbUKNFtJxgTk4Ji"
+    }
+  },
+  "periodMultiplier": {
+    "type": {
+      "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+    }
+  }
+}

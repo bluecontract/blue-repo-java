@@ -1,0 +1,19 @@
+{
+  "name": "FieldWithMetaDayCountFractionEnum",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/datetime/daycount"
+  },
+  "meta": {
+    "type": {
+      "blueId": "JD8ko8cUQ19mR5qp9RzbrvvRZvuXuQ6zGjMNd5e4cbmF"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "5bZzUQNsNnzkmG2eE3m4swRuEC1fmuR47tVB1LXC7Hvt"
+    }
+  }
+}

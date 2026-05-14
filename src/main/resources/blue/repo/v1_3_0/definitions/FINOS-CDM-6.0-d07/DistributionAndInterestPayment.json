@@ -1,0 +1,27 @@
+{
+  "name": "DistributionAndInterestPayment",
+  "description": "A class to specify the Distributions and Interest Payment provisions applicable to the collateral agreement.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/collateral"
+  },
+  "interestParameters": {
+    "description": "Represents the interest parameters for the various currencies, margin types, posting parties.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "34fG1hJEjHTwQhNCQVnQRJysknf9iHKGAh9yPh8wsD4R"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  }
+}

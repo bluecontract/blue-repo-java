@@ -1,0 +1,34 @@
+{
+  "name": "AdjustableOrAdjustedOrRelativeDate",
+  "description": "This Rosetta class specifies the date as either an unadjusted, adjusted or relative date. It supplements the features of the AdjustableOrAdjustedDate to support the credit default swap option premium, which uses the relative date construct.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/datetime"
+  },
+  "adjustedDate": {
+    "description": "The date once the adjustment has been performed. (Note that this date may change if the business center holidays change).\n",
+    "type": {
+      "blueId": "DkAAYuMhrcUQRrFdCEPKwcQDCnee3rxTu6vYVSURpWWY"
+    }
+  },
+  "dateAdjustments": {
+    "description": "The business day convention and financial business centers used for adjusting the date if it would otherwise fall on a day that is not a business date in the specified business centers.\n",
+    "type": {
+      "blueId": "G6NRh7uJ9nHqamG4NyjfGcr5Wfk3qujsowe9hwpvpBNp"
+    }
+  },
+  "relativeDate": {
+    "description": "A date specified as some offset to another date (the anchor date).",
+    "type": {
+      "blueId": "k9HgXaUDtMTpLPttfBXXf8LCfPgNGBwYyAkMswVBvas"
+    }
+  },
+  "unadjustedDate": {
+    "description": "A date subject to adjustment.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}

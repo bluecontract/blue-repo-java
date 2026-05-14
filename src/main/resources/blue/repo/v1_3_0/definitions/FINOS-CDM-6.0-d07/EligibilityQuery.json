@@ -1,0 +1,108 @@
+{
+  "name": "EligibilityQuery",
+  "description": "Query to check against an EligibleCollateralSpecification",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/collateral"
+  },
+  "agencyRating": {
+    "description": "The agency rating based on default risk and creditors claim in event of default associated with specific instrument.\n",
+    "type": {
+      "blueId": "3uCr8zw3jqoaK7CbPzdZPXZJodRNwszY8DMyc81j6RZ5"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "assetCountryOfOrigin": {
+    "description": "The asset country of origin.",
+    "type": {
+      "blueId": "H4mh3RSWAWGHZvMSf8mFsQwYe7v869PNkynUeyXUqwDw"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "collateralAssetType": {
+    "description": "The asset product type.",
+    "type": {
+      "blueId": "FRqYRTWRxZfg1RuMuPbNaxZkgGMc8oTTuf4gi5Mhrb8C"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "denominatedCurrency": {
+    "description": "The underlying asset denominated currency.",
+    "type": {
+      "blueId": "5Cc32mKEHfv3Tf4CoTNWUzsdGeG7nU65jGHC1nN3yvEr"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "issuerName": {
+    "description": "Specifies the issuing entity name or LEI.",
+    "type": {
+      "blueId": "9q5Aqc2sXyQHBEB1fEH7YnXg3xyueB94fHUPswAoFjxZ"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "issuerType": {
+    "description": "Represents a filter based on the type of entity issuing the asset.",
+    "type": {
+      "blueId": "CUSCzsVUYy2xHJZtmwG5CREevRxEgURVHDk7QJm9UBmM"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "maturity": {
+    "description": "Maturity in years",
+    "type": {
+      "blueId": "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

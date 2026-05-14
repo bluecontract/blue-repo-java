@@ -1,0 +1,80 @@
+{
+  "name": "ExtraordinaryEvents",
+  "description": "Where the underlying is shares, defines market events affecting the issuer of those shares that may require the terms of the transaction to be adjusted.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/legaldocumentation/master"
+  },
+  "additionalBespokeTerms": {
+    "description": "Where parties may optionnaly describe any extra bespoke agreements, in regards of the standardized Extraordinary Events.\n",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "EVgp9YqpNEEAKJ6zejQEdWosYA5WtcDyhgTFxeycdfBE#0"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "additionalDisruptionEvents": {
+    "description": "Per the 2002 ISDA Equity Derivatives Definitions | 2018 ISDA CDM Equity Confirmation for Security Equity Swaps",
+    "type": {
+      "blueId": "9dUGrNsv7ZaPQb3MQXhaaixopR8M8bEt239dF1jv1gxv"
+    }
+  },
+  "compositionOfCombinedConsideration": {
+    "description": "Per the 2002 ISDA Equity Derivatives Definitions:",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    }
+  },
+  "delisting": {
+    "description": "Per the 2002 ISDA Equity Derivatives Definitions | 2018 ISDA CDM Equity Confirmation for Security Equity Swap:",
+    "type": {
+      "blueId": "JAjnk6yKqKMUA23F5ct6Ms2BTzRTqVmTrTSr8hzKaBeM"
+    }
+  },
+  "failureToDeliver": {
+    "description": "If true, failure to deliver is applicable.",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    }
+  },
+  "indexAdjustmentEvents": {
+    "description": "Per the 2002 ISDA Equity Derivatives Definitions: Adjustments to Indices\n",
+    "type": {
+      "blueId": "6P2CHxFyZ8wBooMX8J6djRTQAKsnFysk852JqkyZMu7K"
+    }
+  },
+  "mergerEvents": {
+    "description": "Per the 2018 ISDA CDM Equity Confirmation for Security Equity Swap",
+    "type": {
+      "blueId": "8L1q1FLbHwLUdeRvc2vqwXVjLu1eg4CfnkNygFtoftvn"
+    }
+  },
+  "nationalizationOrInsolvency": {
+    "description": "Per the 2002 ISDA Equity Derivatives Definitions | 2018 ISDA CDM Equity Confirmation for Security Equity Swap",
+    "type": {
+      "blueId": "JAjnk6yKqKMUA23F5ct6Ms2BTzRTqVmTrTSr8hzKaBeM"
+    }
+  },
+  "representations": {
+    "type": {
+      "blueId": "FJMPQCybMRSwF2N5UZaHJi336ZBSmqpFxmiCBtQLR3md"
+    }
+  },
+  "tenderOfferEvents": {
+    "description": "Per the 2002 ISDA Equity Derivatives Definitions:",
+    "type": {
+      "blueId": "8L1q1FLbHwLUdeRvc2vqwXVjLu1eg4CfnkNygFtoftvn"
+    }
+  }
+}

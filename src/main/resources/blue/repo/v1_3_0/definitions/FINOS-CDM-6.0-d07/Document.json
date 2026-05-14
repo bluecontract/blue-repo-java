@@ -1,0 +1,22 @@
+{
+  "name": "Document",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/regulation"
+  },
+  "finInstrmRptgTxRpt": {
+    "type": {
+      "blueId": "3CXCcYihBkBDi9xYFpidZMYXBwaYSVnC84wn37cNPVZm"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

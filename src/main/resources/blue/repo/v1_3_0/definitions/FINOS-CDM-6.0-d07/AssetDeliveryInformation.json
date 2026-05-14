@@ -1,0 +1,39 @@
+{
+  "name": "AssetDeliveryInformation",
+  "description": "Contains the information relative to the delivery of the asset.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/asset"
+  },
+  "deliveryCapacity": {
+    "description": "The number of units included in the transaction for each delivery interval",
+    "type": {
+      "blueId": "Dbuu2Nbin93McrV6zGUuHz3TZRvVgykmW8cbo77KwMnu"
+    }
+  },
+  "location": {
+    "description": "Defines the location of the delivery of the commodity.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "6aJo9GdQojGqm8Y7NyHocBSoLaDMiighDW47xaQC6p2X"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "periods": {
+    "description": "Defines the periods of delivery, including the delivery profile.",
+    "type": {
+      "blueId": "9zcj1ZGxU1cLHVpZ9GysZ3qti7nfBYUQZXWAt4qkh6PZ"
+    }
+  }
+}

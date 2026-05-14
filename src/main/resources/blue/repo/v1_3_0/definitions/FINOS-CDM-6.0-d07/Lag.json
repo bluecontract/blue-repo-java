@@ -1,0 +1,30 @@
+{
+  "name": "Lag",
+  "description": "The pricing period per calculation period if the pricing days do not wholly fall within the respective calculation period.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/common/schedule"
+  },
+  "firstObservationDateOffset": {
+    "description": "Defines the offset of the series of pricing dates relative to the calculation period.",
+    "type": {
+      "blueId": "3YofSJJpqeirp9CQ6fcF1B2sxmu6NtLpMguqwgW4gire"
+    }
+  },
+  "lagDuration": {
+    "description": "Defines the offset of the series of pricing dates relative to the calculation period.",
+    "type": {
+      "blueId": "3YofSJJpqeirp9CQ6fcF1B2sxmu6NtLpMguqwgW4gire"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

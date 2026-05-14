@@ -1,0 +1,119 @@
+{
+  "name": "ForeignExchangeRateIndex",
+  "description": "Specification of a rate based on the exchange of a pair of cash assets in specific currencies, e.g. USD versus GBP.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/observable/asset"
+  },
+  "assetClass": {
+    "description": "The Asset Class of the Index.",
+    "type": {
+      "blueId": "3dZtY2hfeoswgWaGxZBeGSs8NNkxSeQmXX4nAa1yGoqR"
+    }
+  },
+  "exchange": {
+    "description": "If the Asset is listed, defines the public exchange of the listing.",
+    "type": {
+      "blueId": "9q5Aqc2sXyQHBEB1fEH7YnXg3xyueB94fHUPswAoFjxZ"
+    }
+  },
+  "identifier": {
+    "description": "Asset Identifiers are used to uniquely identify an Asset, using a specified Asset Identifier Type.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "2aVbLJJSBqA4CEk4y99kfeaGjWR1LMijC7oGiybxWqC4"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 1
+      }
+    }
+  },
+  "isExchangeListed": {
+    "description": "Defines whether the Asset is listed on a public exchange.",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    }
+  },
+  "primaryFxSpotRateSource": {
+    "description": "Specifies the primary source from which a rate should be observed.",
+    "type": {
+      "blueId": "BYznx4LTYbPtRKfdQhomF2y7EFmy1KW8hh7yoTpMo45w"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "provider": {
+    "description": "The organisation that creates or maintains the Index.",
+    "type": {
+      "blueId": "9q5Aqc2sXyQHBEB1fEH7YnXg3xyueB94fHUPswAoFjxZ"
+    }
+  },
+  "quotedCurrencyPair": {
+    "description": "Describes the composition of a rate that has been quoted or is to be quoted.",
+    "type": {
+      "blueId": "DaGEPkk25fwLDMfqeRknXCGC4nvxbBKhgzAP3MCgtXgf"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "relatedExchange": {
+    "description": "Provides the related Exchanges, if applicable.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "9q5Aqc2sXyQHBEB1fEH7YnXg3xyueB94fHUPswAoFjxZ"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "secondaryFxSpotRateSource": {
+    "description": "Specifies an alternative, or secondary, source from which a rate should be observed.",
+    "type": {
+      "blueId": "BYznx4LTYbPtRKfdQhomF2y7EFmy1KW8hh7yoTpMo45w"
+    }
+  },
+  "taxonomy": {
+    "description": "Defines the taxonomy of an object by combining a taxonomy source (i.e. the rules to classify the object) and a value (i.e. the output of those rules on the object.\n",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "HFNW44RszHHmv3rZU8MyQULFubFmMwmZvmNHgpUek4vb"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  }
+}

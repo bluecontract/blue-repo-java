@@ -1,0 +1,19 @@
+{
+  "name": "FieldWithMetaCommodityReferencePriceEnum",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/observable/asset"
+  },
+  "meta": {
+    "type": {
+      "blueId": "JD8ko8cUQ19mR5qp9RzbrvvRZvuXuQ6zGjMNd5e4cbmF"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "ANGa5VARZehQFEWaSUBwwneoDMYRDt22j3S1esKYuhDw"
+    }
+  }
+}

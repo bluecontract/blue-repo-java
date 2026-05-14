@@ -1,0 +1,51 @@
+{
+  "name": "CalculationScheduleDeliveryPeriods",
+  "description": "Period and time profile over which the delivery takes place.",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/asset"
+  },
+  "deliveryCapacity": {
+    "description": "The number of units included in the transaction for each delivery interval",
+    "type": {
+      "blueId": "Dbuu2Nbin93McrV6zGUuHz3TZRvVgykmW8cbo77KwMnu"
+    }
+  },
+  "endDate": {
+    "description": "Delivery end date",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  },
+  "priceTimeIntervalQuantity": {
+    "description": "Price per quantity per delivery time interval.",
+    "type": {
+      "blueId": "34JSSaiNLZkZGJCPhZGY4wsFrAd7HeP7M2MEwHXHZp2u"
+    }
+  },
+  "profile": {
+    "description": "Defines the delivery profile of the asset, including the load type and the delivery intervals.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "CMPtS5jRjUoiDerQMiTJoExYduc2NvAbW6imuFppsy8d"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "startDate": {
+    "description": "Delivery start date",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    }
+  }
+}

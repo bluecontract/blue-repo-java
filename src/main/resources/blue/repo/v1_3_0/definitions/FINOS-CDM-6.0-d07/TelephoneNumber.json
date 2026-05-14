@@ -1,0 +1,30 @@
+{
+  "name": "TelephoneNumber",
+  "description": "A class to specify a telephone number as a type of phone number (e.g. work, personal, ...) alongside with the actual number.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/staticdata/party"
+  },
+  "number": {
+    "description": "The actual telephone number.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "telephoneNumberType": {
+    "description": "The type of telephone number, e.g. work, mobile.",
+    "type": {
+      "blueId": "7BQBZywPFAD4dWxBXLoXWBNBFeW33LU6D4nFBLTKCVEW"
+    }
+  }
+}

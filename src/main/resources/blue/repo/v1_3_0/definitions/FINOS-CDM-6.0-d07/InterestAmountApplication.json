@@ -1,0 +1,38 @@
+{
+  "name": "InterestAmountApplication",
+  "description": "A class to specify the application of Interest Amount with respect to the Delivery Amount and the Return Amount.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/collateral"
+  },
+  "deliveryAmount": {
+    "description": "The application of Interest Amount with respect the Delivery Amount.",
+    "type": {
+      "blueId": "C2bsvVodgLo5zkFMPHsZKgtQGqHBYEy6whzSRXKFJU85"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "returnAmount": {
+    "description": "The application of Interest Amount with respect the Return Amount.",
+    "type": {
+      "blueId": "Br596jsZmfvtR5BdQv1bE5NgFBbCK9NduSFiK4oAJ2ch"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  }
+}

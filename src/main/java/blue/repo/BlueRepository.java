@@ -4,7 +4,7 @@ import blue.language.Blue;
 import blue.language.dictionary.TypeDictionary;
 import blue.language.model.Node;
 import blue.language.utils.TypeClassResolver;
-import blue.repo.v1_2_0.BlueRepositoryV1_2_0;
+import blue.repo.v1_3_0.BlueRepositoryV1_3_0;
 import blue.repo.provider.RepositoryNodeProvider;
 
 import java.util.LinkedHashMap;
@@ -14,9 +14,9 @@ import java.util.Set;
 
 public final class BlueRepository {
     public static final String DICTIONARY_NAME = "Blue Repository";
-    public static final String V1_2_0 = "1.2.0";
-    public static final String LATEST = V1_2_0;
-    public static final String V1_2_0_MANIFEST = "blue/repo/v1_2_0/manifest.json";
+    public static final String V1_3_0 = "1.3.0";
+    public static final String LATEST = V1_3_0;
+    public static final String V1_3_0_MANIFEST = "blue/repo/v1_3_0/manifest.json";
 
     private static final String REPLACE_INLINE_TYPES_BLUE_ID = "27B7fuxQCS1VAptiCPc2RMkKoutP5qxkh3uDxZ7dr6Eo";
     private static final String INFER_BASIC_TYPES_BLUE_ID = "FGYuTXwaoSKfZmpTysLTLsb8WzSqf43384rKZDkXhxD4";
@@ -35,21 +35,21 @@ public final class BlueRepository {
         this.nodeProvider = nodeProvider;
     }
 
-    public static BlueRepository v1_2_0() {
-        return v1_2_0(classLoader());
+    public static BlueRepository v1_3_0() {
+        return v1_3_0(classLoader());
     }
 
-    public static BlueRepository v1_2_0(ClassLoader classLoader) {
-        RepositoryManifest manifest = RepositoryManifest.load(classLoader, V1_2_0_MANIFEST);
+    public static BlueRepository v1_3_0(ClassLoader classLoader) {
+        RepositoryManifest manifest = RepositoryManifest.load(classLoader, V1_3_0_MANIFEST);
         return new BlueRepository(manifest, new RepositoryNodeProvider(manifest, classLoader));
     }
 
     public static BlueRepository latest() {
-        return v1_2_0();
+        return v1_3_0();
     }
 
     public static BlueRepository latest(ClassLoader classLoader) {
-        return v1_2_0(classLoader);
+        return v1_3_0(classLoader);
     }
 
     public static Optional<BlueRepository> byRepositoryBlueId(String repositoryBlueId) {
@@ -57,7 +57,7 @@ public final class BlueRepository {
     }
 
     public static Optional<BlueRepository> byRepositoryBlueId(String repositoryBlueId, ClassLoader classLoader) {
-        BlueRepository repository = v1_2_0(classLoader);
+        BlueRepository repository = v1_3_0(classLoader);
         if (repository.manifest().repositoryVersionByBlueId(repositoryBlueId).isPresent()) {
             return Optional.of(repository);
         }
@@ -85,7 +85,7 @@ public final class BlueRepository {
     }
 
     public TypeClassResolver typeClassResolver() {
-        return BlueRepositoryV1_2_0.typeClassResolver();
+        return BlueRepositoryV1_3_0.typeClassResolver();
     }
 
     public Blue configure(Blue blue) {

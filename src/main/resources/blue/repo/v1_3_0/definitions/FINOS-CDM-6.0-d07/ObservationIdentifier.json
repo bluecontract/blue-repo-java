@@ -1,0 +1,56 @@
+{
+  "name": "ObservationIdentifier",
+  "description": "Defines the parameters needed to uniquely identify a piece of data among the population of all available market data.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/observable/event"
+  },
+  "determinationMethodology": {
+    "description": "Specifies the method according to which an amount or a date is determined.",
+    "type": {
+      "blueId": "BFbdcWmFpVvDuQueFKpinoesXVRnRPkFLUCxzjzjdRH4"
+    }
+  },
+  "informationSource": {
+    "description": "Represents where the market data published and should be observed.",
+    "type": {
+      "blueId": "BYznx4LTYbPtRKfdQhomF2y7EFmy1KW8hh7yoTpMo45w"
+    }
+  },
+  "observable": {
+    "description": "Represents the asset or rate to which the observation relates.",
+    "type": {
+      "blueId": "PWePpKep1ZNi4mVrywzWxFnYdRTxiJ53US3VULBFgnW"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "observationDate": {
+    "description": "Specifies the date value to use when resolving the market data.",
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "observationTime": {
+    "description": "Represents the time and time-zone.",
+    "type": {
+      "blueId": "45Wv4ogpouwGvDwjrVuFyuVJncwL5JkeK8KcuBbzdgDr"
+    }
+  }
+}

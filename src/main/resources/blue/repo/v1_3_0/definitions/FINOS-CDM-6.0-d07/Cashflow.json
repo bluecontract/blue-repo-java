@@ -1,0 +1,62 @@
+{
+  "name": "Cashflow",
+  "description": "Class to specify a cashflow, i.e. the outcome of either of computation (e.g. interest accrual) or an assessment of some sort (e.g. a fee). The cashflow can then be turned into a cash transfer, artefact to be used as the input to a payment system or the outcome of it. The associated globalKey denotes the ability to associate a hash value to the Cashflow instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/common/settlement"
+  },
+  "asset": {
+    "description": "Represents the object that is subject to the transfer, it could be an asset or a reference.",
+    "type": {
+      "blueId": "Ha46gf3kVKXBNGggEB3oSexk9WX18MmmWrLadADimzeB"
+    }
+  },
+  "cashflowType": {
+    "description": "The qualification of the type of cashflow, e.g. brokerage fee, premium, upfront fee etc. Particularly relevant when it cannot be inferred directly through lineage.\n",
+    "type": {
+      "blueId": "HFLE8QVSxkYmjLKtwEnzRTkupVu8kcpZnikU9B8bnSH3"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "payerReceiver": {
+    "description": "Specifies who pays / receives the cashflow, though a normalised Party1 / Party2 enumerator.",
+    "type": {
+      "blueId": "CNBnVnWSC7atVmZFrAE1NPVmcdah8bgGoEUdZ9fxKq75"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "paymentDiscounting": {
+    "description": "FpML specifies the FpML PaymentDiscounting.model group for representing the discounting elements that can be associated with a payment.\n",
+    "type": {
+      "blueId": "3vicc7as3nn2YJ2rjji6rMd8bpBRgzRM3q4GYempHppN"
+    }
+  },
+  "quantity": {
+    "description": "Represents the amount of the asset to be transferred. The cashflow amount is always a positive number, as the cashflow direction is implied by the payer/receiver attribute.\n",
+    "type": {
+      "blueId": "LzqjcnUmDthjDZkgp95CFhWjxPvLYNv2nrFan3MHY99"
+    }
+  },
+  "settlementDate": {
+    "description": "Represents the date on which the transfer to due.",
+    "type": {
+      "blueId": "FYJyVGYxP2GD7vW6m7fwvfBppdWaSDvxizuhuvvgtibD"
+    }
+  }
+}

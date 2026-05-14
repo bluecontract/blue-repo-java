@@ -1,0 +1,19 @@
+{
+  "name": "FieldWithMetaAccountTypeEnum",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/base/staticdata/party"
+  },
+  "meta": {
+    "type": {
+      "blueId": "JD8ko8cUQ19mR5qp9RzbrvvRZvuXuQ6zGjMNd5e4cbmF"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "7iY29Qc8N7SxeB3ohV4Pb6Joza7SEk7ggbvKWkNkLAdZ"
+    }
+  }
+}

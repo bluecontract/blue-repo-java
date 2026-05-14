@@ -1,0 +1,77 @@
+{
+  "name": "OptionalEarlyTermination",
+  "description": "A data defining:  an early termination provision where either or both parties have the right to exercise.\n",
+  "namespace": {
+    "type": {
+      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+    },
+    "value": "cdm/product/template"
+  },
+  "calculationAgent": {
+    "description": "The ISDA Calculation Agent responsible for performing duties associated with an optional early termination.",
+    "type": {
+      "blueId": "9Ju3htjUpZsgbz7MaSgs7ntw7biN6ZPVQg9UaUQA1NqT"
+    }
+  },
+  "cashSettlement": {
+    "description": "If specified, this means that cash settlement is applicable to the transaction and defines the parameters associated with the cash settlement procedure. If not specified, then physical settlement is applicable.\n",
+    "type": {
+      "blueId": "66ZPCNS5fga1DiK68TWqgzqDViQ1u8Rb1k829D6Z6iHR"
+    }
+  },
+  "exerciseNotice": {
+    "description": "Definition of the party to whom notice of exercise should be given.",
+    "type": {
+      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+    },
+    "itemType": {
+      "blueId": "4WHcnjNzfDhcouxnovj55LxdzR8HSPWN5eQgVjvJgfkQ"
+    },
+    "schema": {
+      "minItems": {
+        "type": {
+          "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
+        },
+        "value": 0
+      }
+    }
+  },
+  "exerciseTerms": {
+    "description": "The exercise terms associated with the optional early termination, including details such as exercise style, exercise fees, and any other relevant conditions or terms.\n",
+    "type": {
+      "blueId": "7YsKn7ZHgyDD7pQjRrdAkov3VoAWp2jXx6L8KBayqGLZ"
+    },
+    "schema": {
+      "required": {
+        "type": {
+          "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+        },
+        "value": true
+      }
+    }
+  },
+  "followUpConfirmation": {
+    "description": "A flag to indicate whether follow-up confirmation of exercise (written or electronic) is required following telephonic notice by the buyer to the seller or seller's agent.\n",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    }
+  },
+  "mutualEarlyTermination": {
+    "description": "Used for specifying whether the Mutual Early Termination Right that is detailed in the Master Confirmation will apply.\n",
+    "type": {
+      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+    }
+  },
+  "optionalEarlyTerminationAdjustedDates": {
+    "description": "An early termination provision to terminate the trade at fair value where one or both parties have the right to decide on termination.\n",
+    "type": {
+      "blueId": "EEamWGTMq4E2YzbSwSemTFs9Ao67H1N13ndqKGvxodGy"
+    }
+  },
+  "singlePartyOption": {
+    "description": "If optional early termination is not available to both parties then this component specifies the buyer and seller of the option. In FpML, this attribute is of type SinglePsrtyOption, which actually consists of the BuyerSeller.model.\n",
+    "type": {
+      "blueId": "2NTQ6yhLwyT6d3nvsfpZ7tgtfSN5eHcvqKpQhyD8XjK1"
+    }
+  }
+}
