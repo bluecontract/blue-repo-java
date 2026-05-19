@@ -1,0 +1,39 @@
+package blue.repo.myos;
+
+import blue.language.model.Node;
+import blue.language.model.TypeBlueId;
+import blue.repo.RepositoryType;
+import blue.repo.conversation.Response;
+
+@TypeBlueId("AG6fiGy88gX5eKoUcHS2BV17EfMssiYZj99kx9RcpKEX")
+public class SingleDocumentPermissionValidated extends Response {
+    public static String blueId() {
+        return "AG6fiGy88gX5eKoUcHS2BV17EfMssiYZj99kx9RcpKEX";
+    }
+
+    public static String packageName() {
+        return "MyOS";
+    }
+
+    public static String typeName() {
+        return "Single Document Permission Validated";
+    }
+
+    public static String qualifiedName() {
+        return "MyOS/Single Document Permission Validated";
+    }
+
+    public static String resourcePath() {
+        return "blue/repo/definitions/MyOS/SingleDocumentPermissionValidated.json";
+    }
+
+    public static RepositoryType repositoryType() {
+        return RepositoryType.of(
+                packageName(),
+                typeName(),
+                qualifiedName(),
+                blueId(),
+                resourcePath());
+    }
+
+}

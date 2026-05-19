@@ -1,6 +1,8 @@
 # Blue Repository Generator, Tags, and repo.blue Summary
 
-Checked on 2026-05-12. Updated on 2026-05-14 after the repository bundle moved to repository version index 3.
+Checked on 2026-05-12. Updated on 2026-05-20 after the generated Java API moved to stable `blue.repo.*` packages.
+
+Current checked-in generation uses the local sibling `../blue-repository/BlueRepository.blue`. Its latest repository-version BlueId is `ApBvKPTrXaHj627c3SHErc7FwpxTN5kLX1Y3frvRyoYg`, and the generated Java packages are stable (`blue.repo.conversation`, `blue.repo.core`, etc.) rather than versioned (`blue.repo.v...`). Older notes below describe the tag/version investigation that led to this setup.
 
 ## Sources Checked
 
@@ -28,7 +30,7 @@ EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz
 ```
 
 The generated Java package maps this repository bundle to Java artifact/package
-version `1.3.0` and package segment `blue.repo.v1_3_0`.
+version `1.3.0` and package segment `blue.repo`.
 
 Current generated bundle facts:
 
@@ -262,7 +264,7 @@ The Java project already has the right generated companion shape: classpath reso
 Current generator behavior in `/Users/piotr/data/blue-repo-java/tools/generate-repository-sources.js` after the latest-version correction:
 
 - defaults to `repositoryVersion = '1.3.0'`;
-- defaults Java package/resource paths under `v1_3_0`;
+- defaults Java package/resource paths under stable `blue.repo` / `blue/repo`;
 - accepts `--source`, `--repository-version`, `--java-package-segment`, `--resource-base`, and `--java-package` overrides;
 - reads the checked-in current `BlueRepository.blue` by default, or an explicit `--source` / `-PblueRepositorySource=...` when refreshing from upstream;
 - records the current repository BlueId from the selected source bundle.
@@ -272,7 +274,7 @@ This fixes the previous public-version mismatch for the current checked manifest
 ```json
 {
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz"
+  "repositoryVersionBlueId": "ApBvKPTrXaHj627c3SHErc7FwpxTN5kLX1Y3frvRyoYg"
 }
 ```
 
@@ -280,7 +282,7 @@ The remaining gap is source acquisition. The default source path is still a loca
 
 The Java generator should be changed to consume explicit repository tags and explicit version metadata. It should not read a moving sibling `main` checkout unless the task is intentionally "generate from local working tree".
 
-The current generated manifest preserves the four `repositoryVersions` entries present in the latest `BlueRepository.blue` bundle and labels them `1.0.0`, `1.1.0`, `1.2.0`, and `1.3.0`. That is separate from the larger public Git tag history, which currently has 35 repository BlueId tags. See `docs/repository-tag-numbering.md` for the ordered tag inventory.
+The current generated manifest preserves the `repositoryVersions` entries present in the latest `BlueRepository.blue` bundle. The newest entry is exposed as the artifact's public repository version, while older entries remain available as dictionary BlueIds for export compatibility. That is separate from the larger public Git tag history; see `docs/repository-tag-numbering.md` for the ordered tag inventory.
 
 ## Practical Conclusion
 

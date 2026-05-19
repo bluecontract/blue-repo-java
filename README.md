@@ -39,7 +39,7 @@ It provides:
 - lookup by qualified name and BlueId;
 - `NodeProvider` integration for Blue reference resolution;
 - `TypeDictionary` integration for compact/portable export;
-- generated Java classes under `blue.repo.v1_3_0`;
+- generated Java classes under `blue.repo`;
 - generated type constants under `blue.repo.types`;
 - a `TypeClassResolver` configured with all generated `@TypeBlueId` classes;
 - type alias preprocessing so YAML can use names like
@@ -106,7 +106,7 @@ Maven Central or `mavenLocal()`; it does not include the sibling
 ```java
 import blue.repo.BlueRepository;
 
-BlueRepository repo = BlueRepository.v1_3_0();
+BlueRepository repo = BlueRepository.latest();
 
 System.out.println(repo.repositoryVersion());
 System.out.println(repo.blueId("Conversation/Operation"));
@@ -119,7 +119,7 @@ System.out.println(repo.packageNames());
 import blue.language.model.Node;
 import blue.repo.BlueRepository;
 
-BlueRepository repo = BlueRepository.v1_3_0();
+BlueRepository repo = BlueRepository.latest();
 
 Node operationType = repo.nodeByName("Conversation/Operation")
         .orElseThrow(IllegalStateException::new);
@@ -136,7 +136,7 @@ import blue.language.model.Node;
 import blue.repo.BlueRepository;
 import blue.repo.types.ConversationTypes;
 
-BlueRepository repo = BlueRepository.v1_3_0();
+BlueRepository repo = BlueRepository.latest();
 Blue blue = repo.configure(new Blue(repo.nodeProvider()));
 
 Node message = new Node()
@@ -160,7 +160,7 @@ import blue.language.model.Node;
 import blue.repo.BlueRepository;
 import blue.repo.types.ConversationTypes;
 
-BlueRepository repo = BlueRepository.v1_3_0();
+BlueRepository repo = BlueRepository.latest();
 Blue blue = repo.configureForExport(new Blue());
 
 Node document = new Node()
@@ -230,7 +230,7 @@ import blue.repo.BlueRepository;
 
 import static blue.language.utils.UncheckedObjectMapper.YAML_MAPPER;
 
-BlueRepository repo = BlueRepository.v1_3_0();
+BlueRepository repo = BlueRepository.latest();
 Blue blue = repo.configure(new Blue(repo.nodeProvider()));
 
 Node document = YAML_MAPPER.readValue(yaml, Node.class)
@@ -242,17 +242,19 @@ Node resolved = blue.resolve(preprocessed);
 
 ### Use Generated Java Model Classes
 
-Generated model classes live under versioned packages:
+Generated model classes live under stable packages. The artifact version and
+repository manifest identify which repo.blue dictionary version is packaged,
+while Java imports remain stable across compatible repository updates:
 
 ```java
 import blue.language.Blue;
 import blue.language.model.Node;
 import blue.repo.BlueRepository;
-import blue.repo.v1_3_0.conversation.ChatMessage;
-import blue.repo.v1_3_0.conversation.Operation;
-import blue.repo.v1_3_0.conversation.SequentialWorkflowOperation;
+import blue.repo.conversation.ChatMessage;
+import blue.repo.conversation.Operation;
+import blue.repo.conversation.SequentialWorkflowOperation;
 
-BlueRepository repo = BlueRepository.v1_3_0();
+BlueRepository repo = BlueRepository.latest();
 Blue blue = repo.configure(new Blue(repo.nodeProvider()));
 
 ChatMessage message = new ChatMessage()
@@ -297,7 +299,7 @@ import blue.language.NodeProvider;
 import blue.repo.BlueRepository;
 import blue.repo.provider.CompositeNodeProvider;
 
-BlueRepository repo = BlueRepository.v1_3_0();
+BlueRepository repo = BlueRepository.latest();
 
 NodeProvider appProvider = blueId -> null; // your storage/provider
 NodeProvider provider = CompositeNodeProvider.of(
@@ -327,12 +329,12 @@ catalog data; the contract package is executable behavior.
 
 Current generated package groups include:
 
-- `blue.repo.v1_3_0.core`
-- `blue.repo.v1_3_0.common`
-- `blue.repo.v1_3_0.conversation`
-- `blue.repo.v1_3_0.finoscdm60d07`
-- `blue.repo.v1_3_0.myos`
-- `blue.repo.v1_3_0.paynote`
+- `blue.repo.core`
+- `blue.repo.common`
+- `blue.repo.conversation`
+- `blue.repo.finoscdm60d07`
+- `blue.repo.myos`
+- `blue.repo.paynote`
 
 Convenience constants:
 
@@ -429,11 +431,16 @@ The `blue.repo` namespace must be verified in Maven Central before release.
 src/main/java/blue/repo
   BlueRepository.java                  main facade
   RepositoryManifest.java              manifest loader/model
+  common/                              generated Common model classes
+  conversation/                        generated Conversation model classes
+  core/                                generated Core model classes
+  finoscdm60d07/                       generated FINOS CDM model classes
+  myos/                                generated MyOS model classes
+  paynote/                             generated PayNote model classes
   provider/                            repository NodeProvider helpers
   types/                               generated RepositoryType constants
-  v1_3_0/                             generated versioned Java classes
 
-src/main/resources/blue/repo/v1_3_0
+src/main/resources/blue/repo
   manifest.json
   definitions/
   BlueRepository.blue

@@ -4,7 +4,6 @@ import blue.language.Blue;
 import blue.language.dictionary.TypeDictionary;
 import blue.language.model.Node;
 import blue.language.utils.TypeClassResolver;
-import blue.repo.v1_3_0.BlueRepositoryV1_3_0;
 import blue.repo.provider.RepositoryNodeProvider;
 
 import java.util.LinkedHashMap;
@@ -16,7 +15,8 @@ public final class BlueRepository {
     public static final String DICTIONARY_NAME = "Blue Repository";
     public static final String V1_3_0 = "1.3.0";
     public static final String LATEST = V1_3_0;
-    public static final String V1_3_0_MANIFEST = "blue/repo/v1_3_0/manifest.json";
+    public static final String MANIFEST = "blue/repo/manifest.json";
+    public static final String V1_3_0_MANIFEST = MANIFEST;
 
     private static final String REPLACE_INLINE_TYPES_BLUE_ID = "27B7fuxQCS1VAptiCPc2RMkKoutP5qxkh3uDxZ7dr6Eo";
     private static final String INFER_BASIC_TYPES_BLUE_ID = "FGYuTXwaoSKfZmpTysLTLsb8WzSqf43384rKZDkXhxD4";
@@ -40,7 +40,7 @@ public final class BlueRepository {
     }
 
     public static BlueRepository v1_3_0(ClassLoader classLoader) {
-        RepositoryManifest manifest = RepositoryManifest.load(classLoader, V1_3_0_MANIFEST);
+        RepositoryManifest manifest = RepositoryManifest.load(classLoader, MANIFEST);
         return new BlueRepository(manifest, new RepositoryNodeProvider(manifest, classLoader));
     }
 
@@ -85,7 +85,7 @@ public final class BlueRepository {
     }
 
     public TypeClassResolver typeClassResolver() {
-        return BlueRepositoryV1_3_0.typeClassResolver();
+        return BlueRepositoryModels.typeClassResolver();
     }
 
     public Blue configure(Blue blue) {

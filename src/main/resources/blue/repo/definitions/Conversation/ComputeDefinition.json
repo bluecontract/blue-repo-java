@@ -1,0 +1,16 @@
+{
+  "name": "Compute Definition",
+  "description": "Reusable compute logic for Conversation/Compute steps.\nA Compute Definition may contain named constants and named functions. A Conversation/Compute step can reference the definition and select an entry function.\nThis type intentionally does not strongly type BEX functions or operators. BEX syntax and execution semantics are defined by the Compute processor and BEX specification, not by repo.blue field-level schemas in this version.\n",
+  "constants": {
+    "description": "Named constants available through `$const`. Keys are constant names; values are arbitrary Blue values.\n",
+    "type": {
+      "blueId": "G7fBT9PSod1RfHLHkpafAGBDVAJMrMhAMY51ERcyXNrj"
+    }
+  },
+  "functions": {
+    "description": "Named reusable BEX functions. Keys are function names; values are function definitions.\n",
+    "type": {
+      "blueId": "G7fBT9PSod1RfHLHkpafAGBDVAJMrMhAMY51ERcyXNrj"
+    }
+  }
+}

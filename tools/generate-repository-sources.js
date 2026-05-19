@@ -39,9 +39,9 @@ function registryClassName(versionSegment) {
 
 const repositoryVersion = option('repository-version', '1.3.0');
 const javaVersionSegment = option('java-package-segment', versionPackageSegment(repositoryVersion));
-const resourceBase = option('resource-base', `blue/repo/${javaVersionSegment}`);
-const javaVersionPackage = option('java-package', `blue.repo.${javaVersionSegment}`);
-const versionRegistryClassName = registryClassName(javaVersionSegment);
+const resourceBase = option('resource-base', 'blue/repo');
+const javaVersionPackage = option('java-package', 'blue.repo');
+const versionRegistryClassName = option('registry-class', 'BlueRepositoryModels');
 const defaultSourceBundle = path.join(repoRoot, 'src', 'main', 'resources', resourceBase, 'BlueRepository.blue');
 const sourceBundle = option(
   'source',
@@ -722,7 +722,15 @@ function main() {
 
   fs.rmSync(resourcesRoot, { recursive: true, force: true });
   fs.rmSync(constantsRoot, { recursive: true, force: true });
-  fs.rmSync(modelsRoot, { recursive: true, force: true });
+  for (const packageName of definitionsByPackage.keys()) {
+    fs.rmSync(path.join(modelsRoot, packageSegment(packageName)), { recursive: true, force: true });
+  }
+  fs.rmSync(path.join(modelsRoot, `${versionRegistryClassName}.java`), { force: true });
+  for (const entry of fs.existsSync(modelsRoot) ? fs.readdirSync(modelsRoot, { withFileTypes: true }) : []) {
+    if (entry.isDirectory() && /^v\d+_/.test(entry.name)) {
+      fs.rmSync(path.join(modelsRoot, entry.name), { recursive: true, force: true });
+    }
+  }
   mkdirp(resourcesRoot);
   mkdirp(definitionsRoot);
   mkdirp(constantsRoot);

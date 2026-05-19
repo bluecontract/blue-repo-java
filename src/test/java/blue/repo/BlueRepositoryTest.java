@@ -17,28 +17,27 @@ import blue.repo.types.CoreTypes;
 import blue.repo.types.FINOSCDM60d07Types;
 import blue.repo.types.MyOSTypes;
 import blue.repo.types.PayNoteTypes;
-import blue.repo.v1_3_0.BlueRepositoryV1_3_0;
-import blue.repo.v1_3_0.common.Document;
-import blue.repo.v1_3_0.conversation.AcceptChangeWorkflow;
-import blue.repo.v1_3_0.conversation.ChatMessage;
-import blue.repo.v1_3_0.conversation.Operation;
-import blue.repo.v1_3_0.conversation.SequentialWorkflow;
-import blue.repo.v1_3_0.conversation.SequentialWorkflowOperation;
-import blue.repo.v1_3_0.conversation.TimelineChannel;
-import blue.repo.v1_3_0.conversation.UpdateDocument;
-import blue.repo.v1_3_0.core.ChannelEventCheckpoint;
-import blue.repo.v1_3_0.core.DocumentUpdateChannel;
-import blue.repo.v1_3_0.core.EmbeddedNodeChannel;
-import blue.repo.v1_3_0.core.JsonPatchEntry;
-import blue.repo.v1_3_0.core.LifecycleEventChannel;
-import blue.repo.v1_3_0.core.ProcessEmbedded;
-import blue.repo.v1_3_0.core.TriggeredEventChannel;
-import blue.repo.v1_3_0.finoscdm60d07.AllCriteria;
-import blue.repo.v1_3_0.finoscdm60d07.Clause;
-import blue.repo.v1_3_0.finoscdm60d07.CollateralCriteria;
-import blue.repo.v1_3_0.myos.InformUserToInstallMyOSPackage;
-import blue.repo.v1_3_0.myos.MyOSPackage;
-import blue.repo.v1_3_0.paynote.CaptureFundsRequested;
+import blue.repo.common.Document;
+import blue.repo.conversation.AcceptChangeWorkflow;
+import blue.repo.conversation.ChatMessage;
+import blue.repo.conversation.Operation;
+import blue.repo.conversation.SequentialWorkflow;
+import blue.repo.conversation.SequentialWorkflowOperation;
+import blue.repo.conversation.TimelineChannel;
+import blue.repo.conversation.UpdateDocument;
+import blue.repo.core.ChannelEventCheckpoint;
+import blue.repo.core.DocumentUpdateChannel;
+import blue.repo.core.EmbeddedNodeChannel;
+import blue.repo.core.JsonPatchEntry;
+import blue.repo.core.LifecycleEventChannel;
+import blue.repo.core.ProcessEmbedded;
+import blue.repo.core.TriggeredEventChannel;
+import blue.repo.finoscdm60d07.AllCriteria;
+import blue.repo.finoscdm60d07.Clause;
+import blue.repo.finoscdm60d07.CollateralCriteria;
+import blue.repo.myos.InformUserToInstallMyOSPackage;
+import blue.repo.myos.MyOSPackage;
+import blue.repo.paynote.CaptureFundsRequested;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.jupiter.api.Test;
@@ -153,7 +152,7 @@ class BlueRepositoryTest {
         BlueRepository repo = BlueRepository.v1_3_0();
 
         assertEquals(ChatMessage.class, repo.typeClassResolver().resolveClass(ConversationTypes.CHAT_MESSAGE.blueId()));
-        assertEquals(Operation.class, BlueRepositoryV1_3_0.typeClassResolver()
+        assertEquals(Operation.class, BlueRepositoryModels.typeClassResolver()
                 .resolveClass(ConversationTypes.OPERATION.blueId()));
         assertEquals(repo.manifest().definitions().size(), repo.typeClassResolver().getBlueIdMap().size());
     }
@@ -536,7 +535,7 @@ class BlueRepositoryTest {
                 RepositoryType.class,
                 CompositeNodeProvider.class,
                 RepositoryNodeProvider.class,
-                BlueRepositoryV1_3_0.class,
+                BlueRepositoryModels.class,
                 Operation.class,
                 SequentialWorkflowOperation.class,
                 ChatMessage.class

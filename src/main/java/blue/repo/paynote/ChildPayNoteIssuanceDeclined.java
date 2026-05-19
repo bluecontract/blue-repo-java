@@ -1,0 +1,50 @@
+package blue.repo.paynote;
+
+import blue.language.model.Node;
+import blue.language.model.TypeBlueId;
+import blue.repo.RepositoryType;
+import blue.repo.conversation.Response;
+
+@TypeBlueId("DFKVw43E36kimqj64FyiiVxE9yNuB22SETFx5M4WAi9m")
+public class ChildPayNoteIssuanceDeclined extends Response {
+    public static String blueId() {
+        return "DFKVw43E36kimqj64FyiiVxE9yNuB22SETFx5M4WAi9m";
+    }
+
+    public static String packageName() {
+        return "PayNote";
+    }
+
+    public static String typeName() {
+        return "Child PayNote Issuance Declined";
+    }
+
+    public static String qualifiedName() {
+        return "PayNote/Child PayNote Issuance Declined";
+    }
+
+    public static String resourcePath() {
+        return "blue/repo/definitions/PayNote/ChildPayNoteIssuanceDeclined.json";
+    }
+
+    public static RepositoryType repositoryType() {
+        return RepositoryType.of(
+                packageName(),
+                typeName(),
+                qualifiedName(),
+                blueId(),
+                resourcePath());
+    }
+
+    private String reason;
+
+    public String getReason() {
+        return reason;
+    }
+
+    public ChildPayNoteIssuanceDeclined reason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+
+}
