@@ -3,12 +3,13 @@ package blue.repo.conversation;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
+import blue.repo.core.Marker;
 import java.util.Map;
 
-@TypeBlueId("5dvPe44DscitgTA17nv7sa8Wzq2oiwKvaxeDnGc4DtaL")
-public class ComputeDefinition {
+@TypeBlueId("4fwPW7iJA5p7MuRhc3xpn43EsU3TkruGRpujcuwDGbw3")
+public class ComputeDefinition extends Marker {
     public static String blueId() {
-        return "5dvPe44DscitgTA17nv7sa8Wzq2oiwKvaxeDnGc4DtaL";
+        return "4fwPW7iJA5p7MuRhc3xpn43EsU3TkruGRpujcuwDGbw3";
     }
 
     public static String packageName() {

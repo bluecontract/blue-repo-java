@@ -940,6 +940,8 @@ packages:
             Reusable compute logic for Conversation/Compute steps.
             A Compute Definition may contain named constants and named functions. A Conversation/Compute step can reference the definition and select an entry function.
             This type intentionally does not strongly type BEX functions or operators. BEX syntax and execution semantics are defined by the Compute processor and BEX specification, not by repo.blue field-level schemas in this version.
+          type:
+            blueId: 7QACj919YMRvFCTELCf6jfQTp41RVhtHdE6bPazLUZQ6
           constants:
             description: |
               Named constants available through `$const`. Keys are constant names; values are arbitrary Blue values.
@@ -951,8 +953,8 @@ packages:
             type:
               blueId: G7fBT9PSod1RfHLHkpafAGBDVAJMrMhAMY51ERcyXNrj
         versions:
-          - repositoryVersionIndex: 4
-            typeBlueId: 5dvPe44DscitgTA17nv7sa8Wzq2oiwKvaxeDnGc4DtaL
+          - repositoryVersionIndex: 5
+            typeBlueId: 4fwPW7iJA5p7MuRhc3xpn43EsU3TkruGRpujcuwDGbw3
             attributesAdded: []
       - status: dev
         content:
@@ -47774,3 +47776,4 @@ repositoryVersions:
   - sUk1iHFrf7UQXAMeQvWRyvYVxxStUjfARaE5e4EgDKv
   - EoCY8mgNhP1aniwnSFs9UX74tYDu35zL5LUZNJxf8vqz
   - ApBvKPTrXaHj627c3SHErc7FwpxTN5kLX1Y3frvRyoYg
+  - Bi9h5j7grXVR1HrSfX8H4PQkepUxnaDQXrHGN41Zh65K

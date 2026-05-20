@@ -1,7 +1,7 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "ApBvKPTrXaHj627c3SHErc7FwpxTN5kLX1Y3frvRyoYg",
+  "repositoryVersionBlueId": "Bi9h5j7grXVR1HrSfX8H4PQkepUxnaDQXrHGN41Zh65K",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
@@ -26,8 +26,13 @@
     },
     {
       "index": 4,
-      "version": "1.3.0",
+      "version": "repository-5",
       "repositoryBlueId": "ApBvKPTrXaHj627c3SHErc7FwpxTN5kLX1Y3frvRyoYg"
+    },
+    {
+      "index": 5,
+      "version": "1.3.0",
+      "repositoryBlueId": "Bi9h5j7grXVR1HrSfX8H4PQkepUxnaDQXrHGN41Zh65K"
     }
   ],
   "packageNames": [
@@ -536,14 +541,14 @@
       "packageName": "Conversation",
       "name": "Compute Definition",
       "qualifiedName": "Conversation/Compute Definition",
-      "blueId": "5dvPe44DscitgTA17nv7sa8Wzq2oiwKvaxeDnGc4DtaL",
+      "blueId": "4fwPW7iJA5p7MuRhc3xpn43EsU3TkruGRpujcuwDGbw3",
       "resourcePath": "blue/repo/definitions/Conversation/ComputeDefinition.json",
       "status": "dev",
-      "repositoryVersionIndex": 4,
+      "repositoryVersionIndex": 5,
       "versions": [
         {
-          "repositoryVersionIndex": 4,
-          "typeBlueId": "5dvPe44DscitgTA17nv7sa8Wzq2oiwKvaxeDnGc4DtaL",
+          "repositoryVersionIndex": 5,
+          "typeBlueId": "4fwPW7iJA5p7MuRhc3xpn43EsU3TkruGRpujcuwDGbw3",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
