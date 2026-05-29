@@ -6,7 +6,7 @@ import blue.repo.RepositoryType;
 import java.util.List;
 
 @TypeBlueId("MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv")
-public class SequentialWorkflow {
+public class SequentialWorkflow extends blue.language.processor.model.HandlerContract {
     public static String blueId() {
         return "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv";
     }

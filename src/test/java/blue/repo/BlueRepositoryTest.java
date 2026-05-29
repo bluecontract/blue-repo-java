@@ -4,6 +4,9 @@ import blue.language.Blue;
 import blue.language.NodeProvider;
 import blue.language.model.TypeBlueId;
 import blue.language.model.Node;
+import blue.language.processor.model.ChannelContract;
+import blue.language.processor.model.HandlerContract;
+import blue.language.processor.model.MarkerContract;
 import blue.language.utils.BlueIdResolver;
 import blue.language.utils.BlueIdCalculator;
 import blue.language.utils.TypeClassResolver;
@@ -130,6 +133,10 @@ class BlueRepositoryTest {
         assertEquals(CoordinationTypes.SEQUENTIAL_WORKFLOW_OPERATION.blueId(),
                 BlueIdResolver.resolveBlueId(SequentialWorkflowOperation.class));
         assertTrue(SequentialWorkflow.class.isAssignableFrom(SequentialWorkflowOperation.class));
+        assertTrue(new SequentialWorkflow() instanceof HandlerContract);
+        assertTrue(new SequentialWorkflowOperation() instanceof HandlerContract);
+        assertTrue(new TimelineChannel() instanceof ChannelContract);
+        assertTrue(new Operation() instanceof MarkerContract);
 
         Operation operation = new Operation().channel("operations").request(new Node().name("Request"));
         assertEquals("operations", operation.getChannel());
@@ -357,6 +364,7 @@ class BlueRepositoryTest {
 
         assertTrue(mapped instanceof SequentialWorkflowOperation);
         SequentialWorkflowOperation operation = (SequentialWorkflowOperation) mapped;
+        assertEquals("timeline", operation.getChannel());
         assertEquals("increment", operation.getOperation());
         assertEquals(1, operation.getSteps().size());
         assertTrue(operation.getSteps().get(0) instanceof UpdateDocument);

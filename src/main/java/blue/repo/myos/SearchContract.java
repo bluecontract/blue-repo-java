@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 @TypeBlueId("ACDXskXQ1cmM9uN8UCRKgH7fEHzqUW5XzyjKgsxgdujs")
-public class SearchContract {
+public class SearchContract extends blue.language.processor.model.MarkerContract {
     public static String blueId() {
         return "ACDXskXQ1cmM9uN8UCRKgH7fEHzqUW5XzyjKgsxgdujs";
     }

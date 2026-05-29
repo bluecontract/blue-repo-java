@@ -106,55 +106,94 @@ const basicBlueIdAliases = new Map(Object.keys(basicBlueIds)
     [legacyBasicBlueIds[key], basicBlueIds[key]],
   ]));
 
+const runtimeBlueIds = {
+  contract: '6WrVQoSpKHUUg5HPrwjkVV6pxe4sdkyGnakMs8ayEGeF',
+  handler: '7X46P3Q6FJrogqKrBXTALpqzkieyyiQeatnqLvWzAPXE',
+  channel: '4FAZ94JPExNM4pn2ZhtdHa4CVP7uASmLNVrBy7aCG1p5',
+  marker: '6zqbYGDGrMv5ReuEsjyzyyjjuqVnqDZxtY7RsPXdBTNy',
+  processEmbedded: '8FVc8MPz6DcTMgcY3RXU6EBpGa9arWPJ141K2H86yi8Q',
+  channelEventCheckpoint: '9GEC24YbFG9hj4banjYh2oEnDpAob1wAPmhjuykJp8T1',
+  documentUpdateChannel: 'Ac9LC5T7pHVa1TtkhMBjBRtxecShzvbe7ugUdXT1Mu2o',
+  triggeredEventChannel: '5HwxfbwRBCxG8xYpowWkCPC9akqUSKV7So2M4QHEmLsZ',
+  lifecycleEventChannel: '2DXGQUiQBQ6CT89jwAsTAXaEPhLgiSXhKCGh9Q7Hv3MQ',
+  embeddedNodeChannel: 'H6iUJp3GcLypsJDimMSVoxQQdxxuD8j6eqEUWWqCZ6i',
+};
+
 const booleanSchemaKeys = new Set(['required', 'uniqueItems']);
 const integerSchemaKeys = new Set(['minLength', 'maxLength', 'minItems', 'maxItems', 'minFields', 'maxFields']);
 const numericSchemaKeys = new Set(['minimum', 'maximum', 'exclusiveMinimum', 'exclusiveMaximum', 'multipleOf']);
 
-const externalBaseTypes = new Map([
-  ['Core/Contract', {
+const externalBaseDescriptors = {
+  contract: {
     extendsType: 'blue.language.processor.model.Contract',
     inheritedFields: new Set(['order']),
-  }],
-  ['Core/Handler', {
+  },
+  handler: {
     extendsType: 'blue.language.processor.model.HandlerContract',
-    inheritedFields: new Set(['channel', 'event']),
-  }],
-  ['Core/Channel', {
+    inheritedFields: new Set(['order', 'channel', 'event']),
+  },
+  channel: {
     extendsType: 'blue.language.processor.model.ChannelContract',
-    inheritedFields: new Set(['path', 'definition']),
-  }],
-  ['Core/Marker', {
+    inheritedFields: new Set(['order', 'path', 'definition']),
+  },
+  marker: {
     extendsType: 'blue.language.processor.model.MarkerContract',
-    inheritedFields: new Set(),
-  }],
-  ['Core/Document Update Channel', {
+    inheritedFields: new Set(['order']),
+  },
+  documentUpdateChannel: {
     extendsType: 'blue.language.processor.model.DocumentUpdateChannel',
     inheritedFields: new Set(['order', 'path', 'definition']),
     preserveParentFields: true,
-  }],
-  ['Core/Triggered Event Channel', {
+  },
+  triggeredEventChannel: {
     extendsType: 'blue.language.processor.model.TriggeredEventChannel',
     inheritedFields: new Set(['order', 'path', 'definition']),
     preserveParentFields: true,
-  }],
-  ['Core/Lifecycle Event Channel', {
+  },
+  lifecycleEventChannel: {
     extendsType: 'blue.language.processor.model.LifecycleChannel',
     inheritedFields: new Set(['order', 'path', 'definition']),
     preserveParentFields: true,
-  }],
-  ['Core/Embedded Node Channel', {
+  },
+  embeddedNodeChannel: {
     extendsType: 'blue.language.processor.model.EmbeddedNodeChannel',
     inheritedFields: new Set(['order', 'path', 'definition', 'childPath']),
     preserveParentFields: true,
-  }],
-  ['Core/Process Embedded', {
+  },
+  processEmbedded: {
     extendsType: 'blue.language.processor.model.ProcessEmbedded',
     inheritedFields: new Set(['order', 'paths']),
-  }],
-  ['Core/Channel Event Checkpoint', {
+  },
+  channelEventCheckpoint: {
     extendsType: 'blue.language.processor.model.ChannelEventCheckpoint',
     inheritedFields: new Set(['order', 'lastEvents', 'lastSignatures']),
-  }],
+  },
+};
+
+const externalBaseTypes = new Map([
+  ['Core/Contract', externalBaseDescriptors.contract],
+  ['Core/Handler', externalBaseDescriptors.handler],
+  ['Core/Channel', externalBaseDescriptors.channel],
+  ['Core/Marker', externalBaseDescriptors.marker],
+  ['Core/Document Update Channel', externalBaseDescriptors.documentUpdateChannel],
+  ['Core/Triggered Event Channel', externalBaseDescriptors.triggeredEventChannel],
+  ['Core/Lifecycle Event Channel', externalBaseDescriptors.lifecycleEventChannel],
+  ['Core/Embedded Node Channel', externalBaseDescriptors.embeddedNodeChannel],
+  ['Core/Process Embedded', externalBaseDescriptors.processEmbedded],
+  ['Core/Channel Event Checkpoint', externalBaseDescriptors.channelEventCheckpoint],
+]);
+
+const externalBaseTypesByBlueId = new Map([
+  [runtimeBlueIds.contract, externalBaseDescriptors.contract],
+  [runtimeBlueIds.handler, externalBaseDescriptors.handler],
+  [runtimeBlueIds.channel, externalBaseDescriptors.channel],
+  [runtimeBlueIds.marker, externalBaseDescriptors.marker],
+  [runtimeBlueIds.documentUpdateChannel, externalBaseDescriptors.documentUpdateChannel],
+  [runtimeBlueIds.triggeredEventChannel, externalBaseDescriptors.triggeredEventChannel],
+  [runtimeBlueIds.lifecycleEventChannel, externalBaseDescriptors.lifecycleEventChannel],
+  [runtimeBlueIds.embeddedNodeChannel, externalBaseDescriptors.embeddedNodeChannel],
+  [runtimeBlueIds.processEmbedded, externalBaseDescriptors.processEmbedded],
+  [runtimeBlueIds.channelEventCheckpoint, externalBaseDescriptors.channelEventCheckpoint],
 ]);
 
 function mkdirp(dir) {
@@ -918,6 +957,18 @@ function referencedDefinition(typeNode, byBlueId, currentDefinition = null) {
   return byBlueId.get(resolvedBlueIdReference(typeNode.blueId, currentDefinition)) || null;
 }
 
+function externalBaseForDefinition(definition) {
+  const byQualifiedName = externalBaseTypes.get(definition.qualifiedName);
+  if (byQualifiedName) {
+    return byQualifiedName;
+  }
+  const typeNode = definition.content && definition.content.type;
+  if (!typeNode || !typeNode.blueId) {
+    return null;
+  }
+  return externalBaseTypesByBlueId.get(resolvedBlueIdReference(typeNode.blueId, definition)) || null;
+}
+
 function javaType(typeNode, byBlueId, imports, currentDefinition) {
   if (!typeNode) {
     return 'Node';
@@ -1016,7 +1067,7 @@ function ownFields(definition) {
 
 function inheritedFieldNames(definition, byBlueId, seen = new Set()) {
   const result = new Set();
-  const externalBase = externalBaseTypes.get(definition.qualifiedName);
+  const externalBase = externalBaseForDefinition(definition);
   if (externalBase) {
     for (const fieldName of externalBase.inheritedFields) {
       result.add(fieldName);
@@ -1039,7 +1090,7 @@ function inheritedFieldNames(definition, byBlueId, seen = new Set()) {
 }
 
 function parentFieldsToPreserve(definition, byBlueId) {
-  const externalBase = externalBaseTypes.get(definition.qualifiedName);
+  const externalBase = externalBaseForDefinition(definition);
   if (!externalBase || !externalBase.preserveParentFields) {
     return [];
   }
@@ -1133,7 +1184,7 @@ function writeModelClass(definition, byBlueId) {
   ]);
   const parent = referencedDefinition(definition.content.type, byBlueId, definition);
   let extendsClause = '';
-  const externalBase = externalBaseTypes.get(definition.qualifiedName);
+  const externalBase = externalBaseForDefinition(definition);
   if (externalBase) {
     extendsClause = ` extends ${externalBase.extendsType}`;
   } else if (parent) {

@@ -58,7 +58,7 @@ repositories {
 }
 
 dependencies {
-    implementation "blue.repo:blue-repo-java:2.0.0"
+    implementation "blue.repo:blue-repo-java:2.0.1"
 }
 ```
 
@@ -75,14 +75,14 @@ implementation "blue.language:blue-language-java:3.0.0"
 <dependency>
     <groupId>blue.repo</groupId>
     <artifactId>blue-repo-java</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
 </dependency>
 ```
 
 ### Local Development
 
 Local builds use the version from `.cz.toml` with `-SNAPSHOT` appended, so this
-checkout builds as `2.0.0-SNAPSHOT` outside CI.
+checkout builds as `2.0.1-SNAPSHOT` outside CI.
 
 To test this package from another local project before release:
 
@@ -93,7 +93,7 @@ To test this package from another local project before release:
 Then depend on:
 
 ```groovy
-implementation "blue.repo:blue-repo-java:2.0.0-SNAPSHOT"
+implementation "blue.repo:blue-repo-java:2.0.1-SNAPSHOT"
 ```
 
 Local development uses the published `blue.language:blue-language-java`
@@ -402,7 +402,7 @@ The project targets Java 8 bytecode.
 ## Release Setup
 
 The project version is stored in `.cz.toml`. Local builds append `-SNAPSHOT`;
-CI builds publish the plain version, for example `2.0.0`.
+CI builds publish the plain version, for example `2.0.1`.
 
 Publishing uses the same JReleaser/Maven Central flow as `blue-language-java`:
 

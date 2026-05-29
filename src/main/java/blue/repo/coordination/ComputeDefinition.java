@@ -6,7 +6,7 @@ import blue.repo.RepositoryType;
 import java.util.Map;
 
 @TypeBlueId("HifMgFGBgsqstDFZ2kXeQ45LVKXQMP52fV8TqeN6Z1j3")
-public class ComputeDefinition {
+public class ComputeDefinition extends blue.language.processor.model.MarkerContract {
     public static String blueId() {
         return "HifMgFGBgsqstDFZ2kXeQ45LVKXQMP52fV8TqeN6Z1j3";
     }

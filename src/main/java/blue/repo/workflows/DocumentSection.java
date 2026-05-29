@@ -6,7 +6,7 @@ import blue.repo.RepositoryType;
 import java.util.List;
 
 @TypeBlueId("6R6asWqr9V6DAow5X6EjRRaABhM7xeT13UzcTegmhcjy")
-public class DocumentSection {
+public class DocumentSection extends blue.language.processor.model.MarkerContract {
     public static String blueId() {
         return "6R6asWqr9V6DAow5X6EjRRaABhM7xeT13UzcTegmhcjy";
     }
