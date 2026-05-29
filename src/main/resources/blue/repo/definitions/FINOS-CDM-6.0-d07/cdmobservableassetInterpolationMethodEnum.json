@@ -1,0 +1,14 @@
+{
+  "name": "cdm/observable/asset/InterpolationMethodEnum",
+  "description": "The enumerated values to specify the interpolation method, e.g. linear.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Linear",
+      "LinearZeroYield",
+      "None"
+    ]
+  }
+}

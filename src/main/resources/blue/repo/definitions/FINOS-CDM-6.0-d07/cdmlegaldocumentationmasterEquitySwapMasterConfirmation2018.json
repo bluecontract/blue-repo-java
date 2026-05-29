@@ -1,0 +1,58 @@
+{
+  "name": "cdm/legaldocumentation/master/EquitySwapMasterConfirmation2018",
+  "description": "Specification for the General Terms and Relationship Supplement Elections as provided in the 2018 ISDA CDM Equity Confirmation for Security Equity Swap.\n",
+  "equityCashSettlementDates": {
+    "description": "The parameters used to generate the payment date schedule, relative to the equityCalculationPeriod. Per Part 1 Section 12, 'Definitions', of the 2018 ISDA CDM Equity Confirmation. Para 73\n",
+    "type": {
+      "blueId": "CBUr6dnp1h3kfpUoLrpBXZBcvBQ9hmDnKezhtmhxPgi9"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "linearInterpolationElection": {
+    "description": "Per Part 1 Section 3, 'Floating Obligations', of the 2018 ISDA CDM Equity Confirmation. Para 3.3",
+    "type": {
+      "blueId": "E7cjhfunV73pRwireCDdsqgxtYY2bEGL3C846tFqicT8"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "pricingMethodElection": {
+    "description": "Per Part 1 Section 5, 'Pricing', of the 2018 ISDA CDM Equity Confirmation, Para 5.1",
+    "type": {
+      "blueId": "2ZFGdsnpngfaZgwXf8UoFcEbgom8Q9pJG8aRS9JWFGsi"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "settlementTerms": {
+    "description": "Per Part 1 Section 8, 'Settlement', of the 2018 ISDA CDM Equity Confirmation for Security Equity Swap",
+    "type": {
+      "blueId": "EPxCD8mPcZ6C9kuDs2tinVLVsqMQscWZPLMhYaQ4n9co"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "typeOfSwapElection": {
+    "description": "Per Part 1 Section 4, 'Dividend Obligations', of the 2018 ISDA CDM Equity Confirmation, Para 4.2 'Dividend Returns'\n",
+    "type": {
+      "blueId": "ATNDWufGC7qTCeS6fMDgq4TLPxxRGSXTd8BA2Sjtbw83"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "valuationDates": {
+    "description": "The parameters used to generate the 'Equity Valuation Dates' schedule, including the Effective Date and Termination Date for the Swap.\n",
+    "type": {
+      "blueId": "3cBd99L7MyBiag7p8zzhjJ2u52Nh4xxGjoAn8dH7uy8p"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

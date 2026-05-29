@@ -1,0 +1,46 @@
+{
+  "name": "cdm/base/staticdata/party/PartyContactInformation",
+  "description": "A class to specify contact information within a party: address and, optionally, associated business unit and person. This class also supports the ISDA CSA representation as a single string, through the address attribute.\n",
+  "additionalInformation": {
+    "description": "Specification of special instructions of the relevant party.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "businessUnit": {
+    "description": "Optional organization unit information used to describe the organization units (e.g. trading desks) involved in a transaction or business process, incl. the contact information (when relevant).\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "9kFJKtns9Sjozaqz3KCGTHgoS6kFB5DzZ3qpcGRaMYtz"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "contactInformation": {
+    "description": "The postal/street address, telephone number, email address and/or web page. If the contact information is specific to the associated business unit(s), it should be associated with those.\n",
+    "type": {
+      "blueId": "tWjzEXNpctUeMnop8Wj6gnxCUqcE9XJnXn31gdiq2xd"
+    }
+  },
+  "partyReference": {
+    "description": "The reference to the party to which the contact information refers to.",
+    "type": {
+      "blueId": "Doqu2fdYiHUWbSaMDHL5YoyEeuzbTrSjqbT1ZLqmB1Cr"
+    }
+  },
+  "person": {
+    "description": "Optional information about people involved in a transaction or business process. (These are employees of the party.)\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "4VLeT4uJM3cRp2H6JSAzzkxWxkFE6dxbawfkxq9Q2Kit"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "cdm/base/staticdata/party/ContactInformation",
+  "description": "A class to specify contact information associated with a party: telephone, postal/street address, email and web page.\n",
+  "address": {
+    "description": "The street/postal address.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "EUfxNe25QF1y8hA3hnoMZSZmjF2EsBu2cVS28qky456f"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "email": {
+    "description": "The email address.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "telephone": {
+    "description": "The telephone number.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "Bu9EEGZ85BZh64bWjZ7PR1Hd9aRbPZXAWCC5gJzfiDr5"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "webPage": {
+    "description": "The web page. This attribute is not specified as part of the FpML ContactInformation complex type.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

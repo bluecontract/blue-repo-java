@@ -1,0 +1,16 @@
+{
+  "name": "cdm/event/common/InstructionFunctionEnum",
+  "description": "The enumeration values indicating the BusinessEvent function associated input instructions.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Compression",
+      "ContractFormation",
+      "Execution",
+      "QuantityChange",
+      "Renegotiation"
+    ]
+  }
+}

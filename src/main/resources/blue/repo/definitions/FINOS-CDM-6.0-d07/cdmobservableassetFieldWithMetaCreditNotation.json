@@ -1,0 +1,13 @@
+{
+  "name": "cdm/observable/asset/FieldWithMetaCreditNotation",
+  "meta": {
+    "type": {
+      "blueId": "Fsr3CBPzzThx6Pern5QLDS8TKFXzv6W3TzjS6BYSmqCc"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "Ev89x8XtmWqpQ7gvtgihFRArYnu2oMHyCFeYmZeBYydt"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "name": "cdm/legaldocumentation/common/LegalAgreementBase",
+  "description": "Specifies the legal agreement baseline information, being negotiated or having been executed. It excludes specialized elections\n",
+  "agreementDate": {
+    "description": "The date on which the legal agreement has been agreed between the parties. This corresponds to the Date of Deed in an English Law document.\n",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "attachment": {
+    "description": "A human readable document, for example a confirmation.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "C2wMvRSYQpEwYdiQ2gBF1mcfAe8Lz35NGMPze9RFpaKa"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "contractualParty": {
+    "description": "The two contractual parties to the legal agreement, which reference information is positioned as part of the partyInformation attribute.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "Doqu2fdYiHUWbSaMDHL5YoyEeuzbTrSjqbT1ZLqmB1Cr"
+    },
+    "schema": {
+      "minItems": 2,
+      "maxItems": 2
+    }
+  },
+  "effectiveDate": {
+    "description": "The date on which, or as of which, the agreement is effective, if different from the agreement date. It is expected that it will most often correspond to the agreement date, although there could be situations where the parties will explicitly agree on a distinct effective date.\n",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "identifier": {
+    "description": "The legal agreement identifier. Several identifiers can be specified.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "DtCdHJZeccxHZbwaJQZhJKaibyxKYwbj9hKw2ZsK5K4r"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "legalAgreementIdentification": {
+    "description": "The type of legal agreement, identified via a set of composable attributes: agreementName, publisher, governing law and version, e.g. ISDA 2013 Standard Credit Support Annex English Law.\n",
+    "type": {
+      "blueId": "FqQXQEJvCb7kuzUDtY9N5gNGasRXEA7suL1s5v2CAses"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "otherParty": {
+    "description": "The role(s) that other party(ies) may have in relation to the legal agreement, further to the contractual parties.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "7N6isgUMMMsMJoxpjNRRfdVHiWizDFmyABkC7s3LeRZ6"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

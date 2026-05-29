@@ -1,0 +1,34 @@
+{
+  "name": "cdm/legaldocumentation/master/TransactionAdditionalTerms",
+  "description": "Additional specification for the extraordinary events that may affect a trade and the related contractual rights and obligation of the parties when this happens. Such terms are typically required to extend the economics terms, for the purpose of producing the final legal contractual form of the Transaction.\n",
+  "commoditiesAdditionalTerms": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "creditAdditionalTerms": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "digitalAssetAdditionalTerms": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "equityAdditionalTerms": {
+    "type": {
+      "blueId": "GPEKF3esejRsi7tvw3ESM72HsEiSAzwFUe3mrJasi8Fe"
+    }
+  },
+  "foreignExchangeAdditionalTerms": {
+    "type": {
+      "blueId": "BLcaRJ2SjxR7oB14E6Suf1722kgvEQ8vdXcTuTM6SxNg"
+    }
+  },
+  "interestRateAdditionalTerms": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

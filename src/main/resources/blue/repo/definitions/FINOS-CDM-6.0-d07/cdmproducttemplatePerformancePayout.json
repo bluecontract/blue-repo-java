@@ -1,0 +1,124 @@
+{
+  "name": "cdm/product/template/PerformancePayout",
+  "description": "Contains the necessary specifications for all performance payouts, encompassing equity return, dividend, variance, volatility and correlation products.\n",
+  "finalValuationPrice": {
+    "description": "Specifies the net final valuation price(s) of the underlier at Performance Payout level. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "2Uog2mdWokkHVaMVWG2ZhXCKPdQtauRk7oxemYRLn9hy"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "fxFeature": {
+    "description": "Defines quanto or composite FX features that are included in the swap leg.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "2tVrnHV4rwPAivz8J6tdUF2i9wMRGNsWuP2JFQuM68TW"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "initialValuationPrice": {
+    "description": "Specifies the net initial valuation price(s) of the underlier at Performance Payout level. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "2Uog2mdWokkHVaMVWG2ZhXCKPdQtauRk7oxemYRLn9hy"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "interimValuationPrice": {
+    "description": "Specifies the net initial valuation price(s) of the underlier at Performance Payout level. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "2Uog2mdWokkHVaMVWG2ZhXCKPdQtauRk7oxemYRLn9hy"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "observationTerms": {
+    "description": "Defines how and when a performance type option or performance type swap is to be observed.",
+    "type": {
+      "blueId": "FNoctYhsKwgCboDSosTkUysvMaBTvwKBpiXagnxJHGcW"
+    }
+  },
+  "payerReceiver": {
+    "description": "Canonical representation of the payer and receiver parties applicable to each payout leg.",
+    "type": {
+      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+    }
+  },
+  "paymentDates": {
+    "description": "Defines the payment date schedule, as defined by the parameters that are needed to specify it, either in a parametric way or by reference to another schedule of dates (e.g. the valuation dates).\n",
+    "type": {
+      "blueId": "CBUr6dnp1h3kfpUoLrpBXZBcvBQ9hmDnKezhtmhxPgi9"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "portfolioReturnTerms": {
+    "description": "Specifies an individual type of return of a Performance Payout, when such individual return is part of an aggregation of multiple similar returns, at Performance Payout level\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "2Xh7moC2QJbYy2RM9PLCBhn3T1YaL2G4A2xxtH7sqZZR"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "priceQuantity": {
+    "description": "Each payout leg must implement the quantity concept as a 'resolvable' type, which allows for different payout legs to be linked to each other (e.g. in the case of cross-curreny products).\n",
+    "type": {
+      "blueId": "DmcMrxC2wq7pSMrRaCK5QHkx54U9EtEgZqojTkmfedRF"
+    }
+  },
+  "principalPayment": {
+    "description": "The specification of the principal exchange. Optional as only applicable in the case of cross-currency or zero-coupon swaps with a final payment.\n",
+    "type": {
+      "blueId": "Hxc4Dbr7nrj5XkPBBiJGhPhQVnfNHWHn21HViV1FpBGM"
+    }
+  },
+  "returnTerms": {
+    "description": "Specifies the type of return of a performance payout.",
+    "type": {
+      "blueId": "3omNSBtAn8AEeitT62cedsBDzqzPJSDpHn85P7HyTtoD"
+    }
+  },
+  "settlementTerms": {
+    "description": "Each payout leg must specifies its settlement terms, including the delivery type (i.e. cash vs physical, and their respective terms), the transfer type (DvP etc.) and settlement date, if any.\n",
+    "type": {
+      "blueId": "EPxCD8mPcZ6C9kuDs2tinVLVsqMQscWZPLMhYaQ4n9co"
+    }
+  },
+  "underlier": {
+    "description": "Identifies the underlying product that is referenced for pricing of the applicable leg in a swap.  Referenced in the '2018 ISDA CDM Equity Confirmation for Security Equity Swap' as Security.\n",
+    "type": {
+      "blueId": "this#3"
+    }
+  },
+  "valuationDates": {
+    "description": "Defines how and when a performance type option or performance type swap is to be valued, including both interim and final valuation.\n",
+    "type": {
+      "blueId": "3cBd99L7MyBiag7p8zzhjJ2u52Nh4xxGjoAn8dH7uy8p"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

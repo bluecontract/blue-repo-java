@@ -1,0 +1,22 @@
+{
+  "name": "cdm/event/position/InventoryRecord",
+  "description": "An individual piece of inventory. This represents a single security.",
+  "identifer": {
+    "description": "Unique identifier for this record. This can be used to uniquely identify a specific piece of inventory.",
+    "type": {
+      "blueId": "6vYEknGbjoCarWNmjmqcTdYJ81Z265Kigep3twUZrjnt"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "security": {
+    "description": "The security details.",
+    "type": {
+      "blueId": "EqW2CBgcur4w9MgDu3cEAjCKESsF2Jhsjs2gHobFQZBA"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

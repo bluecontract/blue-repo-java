@@ -1,0 +1,16 @@
+{
+  "name": "cdm/event/common/ObservationEvent",
+  "description": "Specifies the necessary information to create any observation event.",
+  "corporateAction": {
+    "description": "Specifies the necessary information to create a corporate action.",
+    "type": {
+      "blueId": "MqJFwnhixsmW9wHf7jpHwJfin4RaUSMDgiBjfTQfLLk"
+    }
+  },
+  "creditEvent": {
+    "description": "Specifies the necessary information to create a credit event.",
+    "type": {
+      "blueId": "3xf2ZJfz9fnVzNzJPyWhUMkkKcPs7Sb7NgXSH9mkN32S"
+    }
+  }
+}

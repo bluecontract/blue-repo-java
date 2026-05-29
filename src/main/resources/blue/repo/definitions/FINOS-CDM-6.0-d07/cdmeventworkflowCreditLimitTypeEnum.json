@@ -1,0 +1,17 @@
+{
+  "name": "cdm/event/workflow/CreditLimitTypeEnum",
+  "description": "The enumeration values to qualify the type of credit limits.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "CS01",
+      "DV01",
+      "IM",
+      "NPV",
+      "Notional",
+      "PV01"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "PayNote Acceptance Requested",
+  "description": "A participant requests that the Guarantor accept this PayNote as governing the referenced transaction.\n",
+  "type": {
+    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
+  }
+}

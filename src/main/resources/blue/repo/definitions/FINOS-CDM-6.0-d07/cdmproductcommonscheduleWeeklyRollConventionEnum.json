@@ -1,0 +1,19 @@
+{
+  "name": "cdm/product/common/schedule/WeeklyRollConventionEnum",
+  "description": "The enumerated values to specify the weekly roll day.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "FRI",
+      "MON",
+      "SAT",
+      "SUN",
+      "TBILL",
+      "THU",
+      "TUE",
+      "WED"
+    ]
+  }
+}

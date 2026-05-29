@@ -1,0 +1,27 @@
+{
+  "name": "cdm/event/common/CorporateActionTypeEnum",
+  "description": "The enumerated values to specify the origin of a corporate action transfer.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "BonusIssue",
+      "CashDividend",
+      "ClassAction",
+      "Delisting",
+      "EarlyRedemption",
+      "Liquidation",
+      "Merger",
+      "ReverseStockSplit",
+      "RightsIssue",
+      "SpinOff",
+      "StockDividend",
+      "StockIdentifierChange",
+      "StockNameChange",
+      "StockReclassification",
+      "StockSplit",
+      "Takeover"
+    ]
+  }
+}

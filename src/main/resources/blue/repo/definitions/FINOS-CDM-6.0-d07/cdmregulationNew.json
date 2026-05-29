@@ -1,0 +1,99 @@
+{
+  "name": "cdm/regulation/New",
+  "addtlAttrbts": {
+    "type": {
+      "blueId": "6qmEG5FJ4nrH9k5cxhbxKt3J1QtRLfuLTNXs7oAK1cf7"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "buyr": {
+    "type": {
+      "blueId": "EJVgGHK414LeuM1X5W76WpRvs3cXU5HXu7XWGAdUhGwk"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "exctgPrsn": {
+    "type": {
+      "blueId": "EU7X8JgcsAwwcy8JVXbQoPnMtoY3ovRLivAiQvVrM8qC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "exctgPty": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "finInstrm": {
+    "type": {
+      "blueId": "E8cPvyNX1Zp6oFia9mMRATWBv5waaB7hQe55CMzA7YQX"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "invstmtDcsnPrsn": {
+    "type": {
+      "blueId": "G8UTNxqtBocLoZ1NzAcdw5xJipG4hD6iijvufXfiGsqZ"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "invstmtPtyInd": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "ordrTrnsmssn": {
+    "type": {
+      "blueId": "8ekyjZUiehC6furDhhx5mPDgvPdsY9Tx18sBP3Ede3YP"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "sellr": {
+    "type": {
+      "blueId": "JByVeRQuwGo1r31f79PCJ4eGzRKDqQhXVhKm9t5FXtS6"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "submitgPty": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "tx": {
+    "type": {
+      "blueId": "this#1"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "txId": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

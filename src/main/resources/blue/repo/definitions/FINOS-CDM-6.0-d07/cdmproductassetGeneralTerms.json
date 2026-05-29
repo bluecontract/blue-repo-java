@@ -1,0 +1,46 @@
+{
+  "name": "cdm/product/asset/GeneralTerms",
+  "description": "A class specifying a set of non-monetary terms for the Credit Derivative Transaction, including the buyer and seller and selected items from the ISDA 2014 Credit Definition article II, such as the reference obligation and related terms. The CDM GeneralTerms class corresponds to the FpML GeneralTerms complex type, except that the effectiveDate and scheduledTerminationDate have been positioned as part of the InterestRatePayout class in the CDM instead of in GeneralTerms.\n",
+  "additionalTerm": {
+    "description": "This attribute is used for representing information contained in the Additional Terms field of the 2003 Master Credit Derivatives confirm.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "basketReferenceInformation": {
+    "description": "This attribute contains all the terms relevant to defining the Credit Default Swap Basket.",
+    "type": {
+      "blueId": "34WKd2d1noR6VuBpVgUWFuSj9Tf6otKoAWTHbR9fvzco"
+    }
+  },
+  "indexReferenceInformation": {
+    "description": "This attribute contains all the terms relevant to the underlying Index.",
+    "type": {
+      "blueId": "3GcrvhEmyKDecx15dWYwdQeMyQiGRYMTR8tV2LSPfkE9"
+    }
+  },
+  "modifiedEquityDelivery": {
+    "description": "Value of this attribute set to 'true' indicates that modified equity delivery is applicable.",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    }
+  },
+  "referenceInformation": {
+    "description": "This attribute contains all the terms relevant to defining the reference entity and reference obligation(s).",
+    "type": {
+      "blueId": "21tUiXqcPZ47DD2nEZ5E9SUBV7kj7oUHASqgyyPNCnm7"
+    }
+  },
+  "substitution": {
+    "description": "Value of this attribute set to 'true' indicates that substitution is applicable.",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    }
+  }
+}

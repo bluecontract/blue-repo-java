@@ -1,0 +1,25 @@
+{
+  "name": "Subscription to Session Failed",
+  "description": "Indicates MyOS Admin rejected the subscription request before activation.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "subscriptionId": {
+    "description": "The subscription id that failed.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "targetSessionId": {
+    "description": "Session that was requested, if known.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "reason": {
+    "description": "Explanation why the subscription could not be established.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

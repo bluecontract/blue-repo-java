@@ -1,0 +1,19 @@
+{
+  "name": "cdm/regulation/Term",
+  "unit": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

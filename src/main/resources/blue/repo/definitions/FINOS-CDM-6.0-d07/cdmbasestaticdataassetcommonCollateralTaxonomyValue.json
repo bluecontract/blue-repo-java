@@ -1,0 +1,52 @@
+{
+  "name": "cdm/base/staticdata/asset/common/CollateralTaxonomyValue",
+  "description": "Specifies the collateral taxonomy value, either as a specified enumeration or as a string.",
+  "eu_EMIR_EligibleCollateral": {
+    "description": "Identifies European Union Eligible Collateral Assets classification categories based on EMIR Uncleared Margin Rules. Eligible Collateral asset classes for both initial margin (IM) and variation margin (VM) posted and collected between specified entities. Please note: EMIR regulation will detail which eligible collateral assets classes apply to each type of entity pairing (counterparty) and which apply to posting of IM and VM\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "7fd5idQ2CUjaKHXNf45Jt3nZRJBU3LX5xqgHSi3Bvmfn"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "nonEnumeratedTaxonomyValue": {
+    "description": "Identifies the taxonomy value when not specified as an enumeration.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "uk_EMIR_EligibleCollateral": {
+    "description": "Identifies United Kingdom Eligible Collateral Assets classification categories based on UK Onshored EMIR Uncleared Margin Rules Eligible Collateral asset classes for both initial margin (IM) and variation margin (VM) posted and collected between specified entities. Please note: UK EMIR regulation will detail which eligible collateral assets classes apply to each type of entity pairing (counterparty) and which apply to posting of IM and VM.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "HDwxG4xJ12vFn74aUb8UpGfVvn2YASSPBSYF3JHF6Paf"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "us_CFTC_PR_EligibleCollateral": {
+    "description": "Identifies US Eligible Collateral Assets classification categories based on Uncleared Margin Rules published by the CFTC and the US Prudential Regulator. Note: While the same basic categories exist in the CFTC and US Prudential Regulators’ margin rules, the precise definitions or application of those rules could differ between the two rules.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "9Btwy8KR7c95igiWcgS4v7Y36b5PPUhWgM7e9A7xgQEd"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

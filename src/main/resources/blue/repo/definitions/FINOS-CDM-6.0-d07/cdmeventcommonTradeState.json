@@ -1,0 +1,66 @@
+{
+  "name": "cdm/event/common/TradeState",
+  "description": "Defines the fundamental financial information that can be changed by a Primitive Event and by extension any business or life-cycle event. Each TradeState specifies where a Trade is in its life-cycle. TradeState is a root type and as such, can be created independently to any other CDM data type, but can also be used as part of the CDM Event Model.\n",
+  "observationHistory": {
+    "description": "Represents the observed events related to a particular product or process, such as credit events or corporate actions.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "AUKaDi8wBrSCiamYGMSXg4NnBaVJ6RqTbEPJLPGJvogZ"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "resetHistory": {
+    "description": "Represents the updated Trade attributes which can change as the result of a reset event. Only the changed values are captured, leaving the remaining data attributes empty. See Create_Reset function for further details on how TradeState is used in the Reset event. The TradeState data type is used to maintain backwards compatibility with the current Reset mechanism.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "HFVsjPq4dbaRXVa8vrWUTPdSo8R4CoRFz275RuCiohR7"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "state": {
+    "description": "Represents the State of the Trade through its life-cycle.",
+    "type": {
+      "blueId": "DDF17JAmF3yHugfuGeT3uuLfcet6BCAWJq9J8ooP4haZ"
+    }
+  },
+  "trade": {
+    "description": "Represents the Trade that has been effected by a business or life-cycle event.",
+    "type": {
+      "blueId": "E1UNjxGHFbX3n726dvG8b9sTrgzdFeTgyvGrc1m7KDpo"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "transferHistory": {
+    "description": "Represents the updated Trade attributes which can change as the result of a transfer event.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "7hRqvvNgHnPiEenLU9ckY2LfEXCpJfG25j1AXxTsRppV"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "valuationHistory": {
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "DuYQJ7immrjRPWFMqGY9eurJKTuzsqj6rmPjznZMGTTF"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

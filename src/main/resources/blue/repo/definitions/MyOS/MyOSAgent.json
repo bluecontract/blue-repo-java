@@ -1,0 +1,10 @@
+{
+  "name": "MyOS Agent",
+  "description": "MyOS-specific agent with optional agent identifier",
+  "agentId": {
+    "description": "Optional agent identifier",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

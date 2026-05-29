@@ -1,0 +1,28 @@
+{
+  "name": "cdm/product/common/settlement/CommodityPriceReturnTerms",
+  "description": "Defines parameters in which the commodity price is assessed.",
+  "conversionFactor": {
+    "description": "Defines the conversion applied if the quantity unit on contract is different from unit on referenced underlier.\n",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "rollFeature": {
+    "description": "Used in conjunction with an exchange-based pricing source. Identifies a way in which the futures contracts referenced will roll between periods.\n",
+    "type": {
+      "blueId": "7JFz2NCgc3MxRByeVMCacEpvzm76zmDksh3T9c9Sf6hM"
+    }
+  },
+  "rounding": {
+    "description": "Defines rounding rules and precision to be used in the rounding of a number.",
+    "type": {
+      "blueId": "DnXzzassZD8x4ZyWkS46bBpvzPMBW4txNdG32xcULQhy"
+    }
+  },
+  "spread": {
+    "description": "Defines a spread value for one or more defined dates.",
+    "type": {
+      "blueId": "4ikvU3PRMfzH6Bx7VquDqYDvsS7aUBVbyGwFApC3XhVi"
+    }
+  }
+}

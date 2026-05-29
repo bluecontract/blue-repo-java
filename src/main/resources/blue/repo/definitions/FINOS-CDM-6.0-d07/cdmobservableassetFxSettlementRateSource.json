@@ -1,0 +1,16 @@
+{
+  "name": "cdm/observable/asset/FxSettlementRateSource",
+  "description": "The source of the Foreign Exchange settlement rate.",
+  "nonstandardSettlementRate": {
+    "description": "Indicates that a non-standard rate source will be used for the fixing.",
+    "type": {
+      "blueId": "5wVbKCDzmU16WWgxzoWvLJxYeGKhRXcLyMpXneT7yMib"
+    }
+  },
+  "settlementRateOption": {
+    "description": "Indicates that an officially defined rate settlement rate option will be the used for the fixing.",
+    "type": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/asset/SpreadScheduleTypeEnum",
+  "description": "The enumerated values to specify a long or short spread value.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Long",
+      "Short"
+    ]
+  }
+}

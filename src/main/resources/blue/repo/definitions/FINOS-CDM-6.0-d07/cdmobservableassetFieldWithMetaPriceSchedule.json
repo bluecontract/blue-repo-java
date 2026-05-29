@@ -1,0 +1,13 @@
+{
+  "name": "cdm/observable/asset/FieldWithMetaPriceSchedule",
+  "meta": {
+    "type": {
+      "blueId": "Fsr3CBPzzThx6Pern5QLDS8TKFXzv6W3TzjS6BYSmqCc"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "Gu2s7TriyRGK7DyQz5P5jeE6mWkQBC6ZJYhvceLwhYq6"
+    }
+  }
+}

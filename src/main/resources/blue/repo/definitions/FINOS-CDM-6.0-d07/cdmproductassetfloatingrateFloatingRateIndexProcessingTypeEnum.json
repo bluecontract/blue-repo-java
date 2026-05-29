@@ -1,0 +1,17 @@
+{
+  "name": "cdm/product/asset/floatingrate/FloatingRateIndexProcessingTypeEnum",
+  "description": "This enumeration provides guidance on how to process a given floating rate index.  It's based on the ISDA Floating Rate Index information, but transforms it into the specific categories needed for calculation\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "CompoundIndex",
+      "Modular",
+      "OIS",
+      "OvernightAvg",
+      "RefBanks",
+      "Screen"
+    ]
+  }
+}

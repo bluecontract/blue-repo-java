@@ -1,0 +1,22 @@
+{
+  "name": "cdm/observable/asset/PremiumExpression",
+  "description": "This class corresponds to the FpML Premium.model group for representing the option premium when expressed in a way other than an amount.\n",
+  "percentageOfNotional": {
+    "description": "The amount of premium to be paid expressed as a percentage of the notional value of the transaction. A percentage of 5% would be expressed as 0.05.\n",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "premiumType": {
+    "description": "Forward start premium type",
+    "type": {
+      "blueId": "6Jf9P3g9vtFLVqHj9xjTQ9xTSDK5jFGuepY4749kJVWt"
+    }
+  },
+  "pricePerOption": {
+    "description": "The amount of premium to be paid expressed as a function of the number of options.",
+    "type": {
+      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+    }
+  }
+}

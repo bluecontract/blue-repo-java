@@ -1,0 +1,19 @@
+{
+  "name": "cdm/base/math/FinancialUnitEnum",
+  "description": "Provides enumerated values for financial units, generally used in the context of defining quantities for securities.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Contract",
+      "ContractualProduct",
+      "IndexUnit",
+      "LogNormalVolatility",
+      "Share",
+      "ValuePerDay",
+      "ValuePerPercent",
+      "Weight"
+    ]
+  }
+}

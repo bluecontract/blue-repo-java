@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/asset/NonCashDividendTreatmentEnum",
+  "description": "The enumerated values to specify the treatment of Non-Cash Dividends.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "CashEquivalent",
+      "PotentialAdjustmentEvent"
+    ]
+  }
+}

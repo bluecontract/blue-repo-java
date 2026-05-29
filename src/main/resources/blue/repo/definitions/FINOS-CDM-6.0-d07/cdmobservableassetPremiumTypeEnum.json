@@ -1,0 +1,15 @@
+{
+  "name": "cdm/observable/asset/PremiumTypeEnum",
+  "description": "The enumerated values to specify the premium type for forward start options.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Fixed",
+      "PostPaid",
+      "PrePaid",
+      "Variable"
+    ]
+  }
+}

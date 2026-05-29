@@ -1,0 +1,15 @@
+{
+  "name": "cdm/product/common/schedule/StubPeriodTypeEnum",
+  "description": "The enumerated values to specify how to deal with a non standard calculation period within a swap stream.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "LongFinal",
+      "LongInitial",
+      "ShortFinal",
+      "ShortInitial"
+    ]
+  }
+}

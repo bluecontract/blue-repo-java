@@ -1,0 +1,16 @@
+{
+  "name": "Service",
+  "description": "Broad document family for a document that is itself a service offering.\nUse the top-level `kind` to describe the specific offering,\nsuch as `Legal Service`, `Tutoring Service`, or `Analytics Service`.\n",
+  "type": {
+    "blueId": "B62tsckv8aQiyFAchgqgptfB5C6jtDPkS2pLT1h3G793"
+  },
+  "categories": {
+    "description": "Optional broad categories used to help humans discover the service.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

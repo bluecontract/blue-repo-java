@@ -1,0 +1,15 @@
+{
+  "name": "cdm/product/common/settlement/TransferSettlementEnum",
+  "description": "The enumeration values to specify how the transfer will settle, e.g. DvP.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "DeliveryVersusDelivery",
+      "DeliveryVersusPayment",
+      "NotCentralSettlement",
+      "PaymentVersusPayment"
+    ]
+  }
+}

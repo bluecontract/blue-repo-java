@@ -1,0 +1,34 @@
+{
+  "name": "cdm/event/common/CollateralBalance",
+  "description": "Represents common attributes to define a collateral balance recorded by the principal as held or posted.",
+  "amountBaseCurrency": {
+    "description": "Specifies the collateral balance amount in base currency determined within a collateral legal agreement, or defined for reporting purposes.\n",
+    "type": {
+      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "collateralBalanceStatus": {
+    "description": "Defines the collateral balance breakdown of settlement status.",
+    "type": {
+      "blueId": "9XNiSM6p3TKgrn7CpLyzqZkxD6Y2qELnuxek2UV5SHfT"
+    }
+  },
+  "haircutIndicator": {
+    "description": "Indicates if the collateral balance amount is based on pre or post haircut, if a haircut is associated with the collateral asset\n",
+    "type": {
+      "blueId": "Dy8Yv4LvwTLkD5iFPJEZXTSf871TRREcTCCA5GTtDtjg"
+    }
+  },
+  "payerReceiver": {
+    "description": "Specifies each of the parties in the collateral balance and its perspective with regards to the direction of the collateral balance, posted or received.\n",
+    "type": {
+      "blueId": "7eRUbcyv8yFT4EXTPWSQnHYKdrgzkQVJ2K2p7R9xF7BJ"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "cdm/event/common/MarginCallInstructionType",
+  "description": "Represents enumeration values to specify the call notification type, direction, specific action type.",
+  "callType": {
+    "description": "Indicates the status of the call message type, such as expected call, notification of a call or an actionable margin call.\n",
+    "type": {
+      "blueId": "4ACe7eTorzKyaW5YdMFZmrpYctgvKTCP5iPEp9xF5oKS"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "visibilityIndicator": {
+    "description": "Indicates the choice if the call instruction is visible or not to the other party.",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    }
+  }
+}

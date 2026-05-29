@@ -1,0 +1,15 @@
+{
+  "name": "cdm/event/workflow/Workflow",
+  "description": "A collection of workflow steps which together makeup an entire workflow sequence.",
+  "steps": {
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "AdfwhRjLSyPRX8wccLyrZsirdujU9C8KM5LT6Z6nC87e"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  }
+}

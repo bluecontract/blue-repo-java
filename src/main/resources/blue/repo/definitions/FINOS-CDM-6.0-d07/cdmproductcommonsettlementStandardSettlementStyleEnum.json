@@ -1,0 +1,15 @@
+{
+  "name": "cdm/product/common/settlement/StandardSettlementStyleEnum",
+  "description": "The enumerated values to specify whether a trade is settling using standard settlement instructions as well as whether it is a candidate for settlement netting.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Net",
+      "PairAndNet",
+      "Standard",
+      "StandardAndNet"
+    ]
+  }
+}

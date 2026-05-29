@@ -1,0 +1,23 @@
+{
+  "name": "cdm/margin/schedule/StandardizedScheduleTradeInfo",
+  "assetClass": {
+    "type": {
+      "blueId": "HXVDHCRqbEvzCXv8LwaeEzMy47NG3ogpguy7Gqu2K4Fh"
+    }
+  },
+  "grossInitialMargin": {
+    "type": {
+      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+    }
+  },
+  "markToMarketValue": {
+    "type": {
+      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+    }
+  },
+  "productClass": {
+    "type": {
+      "blueId": "HcbAjsykfijmo2YKjhqTPZuhRKVjh1MvNA2ZnQSoAZsG"
+    }
+  }
+}

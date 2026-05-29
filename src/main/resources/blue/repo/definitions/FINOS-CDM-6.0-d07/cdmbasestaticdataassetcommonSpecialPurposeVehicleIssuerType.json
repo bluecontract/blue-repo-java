@@ -1,0 +1,10 @@
+{
+  "name": "cdm/base/staticdata/asset/common/SpecialPurposeVehicleIssuerType",
+  "description": "Represents a class to allow specification of different types of special purpose vehicle (SPV) collateral.",
+  "creditRisk": {
+    "description": "Indicates tranched or untranched credit risk.",
+    "type": {
+      "blueId": "FW68ZrxzLqig4ysFVi5R7q5aAqpYgZqsGbsNCc4rDYHa"
+    }
+  }
+}

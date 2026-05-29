@@ -1,0 +1,16 @@
+{
+  "name": "cdm/observable/event/TriggerTypeEnum",
+  "description": "The enumerated values to specify whether an option will trigger or expire depending upon whether the spot rate is above or below the barrier rate.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Equal",
+      "EqualOrGreater",
+      "EqualOrLess",
+      "Greater",
+      "Less"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Subscription to Session Revoked",
+  "description": "Indicates MyOS Admin stopped forwarding updates for the subscription.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "subscriptionId": {
+    "description": "The subscription id that was revoked.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "targetSessionId": {
+    "description": "Session that is no longer being forwarded.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "reason": {
+    "description": "Optional explanation for the revocation.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "cdm/observable/asset/MultipleDebtTypes",
+  "description": "Represents a class to specify multiple credit debt types alongside a conditional 'any' or 'all' qualifier.",
+  "condition": {
+    "description": "An enumerated attribute, to qualify whether All or Any debt type applies.",
+    "type": {
+      "blueId": "E6D3rJPkCD3TTUB7RHMfgLuhDU9ajFgT85hyMcJkagsH"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "debtType": {
+    "description": "The type of debt, e.g. long term debt, deposit, ... FpML doesn't specific a scheme value, hence no enumeration is specified as part of the CDM. At least two debt types much be specified.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    },
+    "schema": {
+      "minItems": 2
+    }
+  }
+}

@@ -2,24 +2,27 @@ package blue.repo.types;
 
 import blue.repo.RepositoryType;
 
-import blue.repo.v1_3_0.common.Currency;
-import blue.repo.v1_3_0.common.Document;
-import blue.repo.v1_3_0.common.DocumentAnchor;
-import blue.repo.v1_3_0.common.DocumentAnchors;
-import blue.repo.v1_3_0.common.NamedEvent;
-import blue.repo.v1_3_0.common.Payment;
-import blue.repo.v1_3_0.common.PermissionGrant;
-import blue.repo.v1_3_0.common.Profile;
-import blue.repo.v1_3_0.common.Record;
-import blue.repo.v1_3_0.common.Relationship;
-import blue.repo.v1_3_0.common.Request;
-import blue.repo.v1_3_0.common.Response;
-import blue.repo.v1_3_0.common.Service;
-import blue.repo.v1_3_0.common.Space;
-import blue.repo.v1_3_0.common.Task;
-import blue.repo.v1_3_0.common.Timestamp;
+import blue.repo.common.CryptoEd25519Verify;
+import blue.repo.common.Currency;
+import blue.repo.common.Document;
+import blue.repo.common.DocumentAnchor;
+import blue.repo.common.DocumentAnchors;
+import blue.repo.common.NamedEvent;
+import blue.repo.common.Payment;
+import blue.repo.common.PermissionGrant;
+import blue.repo.common.Profile;
+import blue.repo.common.Record;
+import blue.repo.common.Relationship;
+import blue.repo.common.Request;
+import blue.repo.common.Response;
+import blue.repo.common.Service;
+import blue.repo.common.Space;
+import blue.repo.common.Task;
+import blue.repo.common.Timestamp;
 
 public final class CommonTypes {
+    public static final RepositoryType CRYPTO_ED25519_VERIFY = CryptoEd25519Verify.repositoryType();
+
     public static final RepositoryType CURRENCY = Currency.repositoryType();
 
     public static final RepositoryType DOCUMENT = Document.repositoryType();

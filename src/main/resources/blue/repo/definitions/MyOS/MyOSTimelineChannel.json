@@ -1,0 +1,19 @@
+{
+  "name": "MyOS Timeline Channel",
+  "description": "MyOS-specific Timeline Channel",
+  "type": {
+    "blueId": "AKRPLotcnGLq7gQRj3jHcfAkxkwaJpmxNXpC3G22GQQz"
+  },
+  "accountId": {
+    "description": "Account identifier for the MyOS timeline",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "email": {
+    "description": "Email address associated with the MyOS timeline",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

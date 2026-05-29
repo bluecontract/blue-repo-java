@@ -1,0 +1,12 @@
+{
+  "name": "Funds Reserved",
+  "description": "The Guarantor confirms that funds have been successfully reserved (held).",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "amountReserved": {
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "cdm/product/asset/DiscountingTypeEnum",
+  "description": "The enumerated values to specify the method of calculating discounted payment amounts. This enumerations combines the FpML DiscountingTypeEnum and FraDiscountingEnum enumerations.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AFMA",
+      "FRA",
+      "FRAYield",
+      "Standard"
+    ]
+  }
+}

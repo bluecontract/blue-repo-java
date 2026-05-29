@@ -1,0 +1,21 @@
+{
+  "name": "cdm/observable/asset/FxRateSourceFixing",
+  "description": "Describes a rate source to be fixed and the date the fixing occurs",
+  "fixingDate": {
+    "description": "The date on which the fixing is scheduled to occur.",
+    "type": {
+      "blueId": "vprnR4tQHf4wLZ7dp16UNnvc9DvyZpCLAWTNXcH1vQH"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "settlementRateSource": {
+    "type": {
+      "blueId": "HqYEDY83D9T1JxsyawqbHP5nkLxrpHXqWUG8JuQZ9dpa"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

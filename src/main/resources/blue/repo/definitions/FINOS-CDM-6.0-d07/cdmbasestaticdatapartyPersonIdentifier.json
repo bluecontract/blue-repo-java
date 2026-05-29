@@ -1,0 +1,25 @@
+{
+  "name": "cdm/base/staticdata/party/PersonIdentifier",
+  "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the PersonIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.\n",
+  "country": {
+    "description": "The ISO 3166 standard code for the country issuing the identifier.",
+    "type": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    }
+  },
+  "identifier": {
+    "description": "Provides an identifier associated with a person. The identifier is unique within the public source specified in the source attribute.\n",
+    "type": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "identifierType": {
+    "description": "Defines the source of the identifier.",
+    "type": {
+      "blueId": "8XTFsi2eDdUYMsGuRhywG3L5juCiC15L6EiJR27UCYQu"
+    }
+  }
+}

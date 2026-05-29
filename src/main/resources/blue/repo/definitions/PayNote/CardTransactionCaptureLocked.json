@@ -1,0 +1,13 @@
+{
+  "name": "Card Transaction Capture Locked",
+  "description": "Card transaction capture was locked. Any following card transaction capture requests will be rejected.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "lockedAt": {
+    "description": "Timestamp of when the card transaction capture was locked.",
+    "type": {
+      "blueId": "47EN5A1B1ZXXdXMEoURVJquMSjdDuKFNDjMrkvVxoVJk"
+    }
+  }
+}

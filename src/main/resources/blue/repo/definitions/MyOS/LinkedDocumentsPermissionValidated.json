@@ -1,0 +1,7 @@
+{
+  "name": "Linked Documents Permission Validated",
+  "description": "Emitted when the LDPG passes local validation.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  }
+}

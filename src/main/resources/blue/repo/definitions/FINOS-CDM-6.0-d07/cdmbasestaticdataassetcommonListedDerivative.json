@@ -1,0 +1,76 @@
+{
+  "name": "cdm/base/staticdata/asset/common/ListedDerivative",
+  "description": "A securitized derivative on another asset.",
+  "deliveryTerm": {
+    "description": "Also called contract month or delivery month. However, it's not always a month. It is usually expressed using a code, e.g. Z23 would be the Dec 2023 contract, (Z = December). For crude oil, the corresponding contract might be called CLZ23. Optional as this can be uniquely identified in the identifier.\n",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "exchange": {
+    "description": "If the Asset is listed, defines the public exchange of the listing.",
+    "type": {
+      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+    }
+  },
+  "identifier": {
+    "description": "Asset Identifiers are used to uniquely identify an Asset, using a specified Asset Identifier Type.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GUT2oVFRefXcoq5yqjB5Pm8exmKiYH7iksr34CNZ7yjH"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  },
+  "instrumentType": {
+    "description": "Identifies the type of an instrument using an enumerated list.",
+    "type": {
+      "blueId": "7MyPeAN5AJqMsYSWRXLnGyNnf2mXzbAA9n2ub5S3yC5U"
+    }
+  },
+  "isExchangeListed": {
+    "description": "Defines whether the Asset is listed on a public exchange.",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    }
+  },
+  "optionType": {
+    "description": "The type of option, ie Put or Call. Left empty if it is a Future.",
+    "type": {
+      "blueId": "F6EJ8L5pJwtHWnrqmLj3SaQrHckHpM8Z4S4PqqVytyg5"
+    }
+  },
+  "relatedExchange": {
+    "description": "Provides the related Exchanges, if applicable.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "strike": {
+    "description": "Specifies the strike of the option.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "taxonomy": {
+    "description": "Defines the taxonomy of an object by combining a taxonomy source (i.e. the rules to classify the object) and a value (i.e. the output of those rules on the object.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "8EKfmgSdnP6EYVXZagpfvygY1BhsDy43CQgKoKPw4Fio"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

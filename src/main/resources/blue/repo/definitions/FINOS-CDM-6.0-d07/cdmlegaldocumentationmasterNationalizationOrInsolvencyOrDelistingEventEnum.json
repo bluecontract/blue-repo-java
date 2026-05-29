@@ -1,0 +1,13 @@
+{
+  "name": "cdm/legaldocumentation/master/NationalizationOrInsolvencyOrDelistingEventEnum",
+  "description": "Defines the consequences of nationalization, insolvency and delisting events relating to the underlying.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "CancellationAndPayment",
+      "NegotiatedCloseout"
+    ]
+  }
+}

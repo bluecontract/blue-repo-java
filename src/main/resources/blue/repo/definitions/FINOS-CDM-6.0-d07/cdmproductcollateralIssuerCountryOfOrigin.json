@@ -1,0 +1,12 @@
+{
+  "name": "cdm/product/collateral/IssuerCountryOfOrigin",
+  "issuerCountryOfOrigin": {
+    "description": "Represents a filter on the issuing entity country of origin based on the ISO Standard 3166, which is the same as filtering by eligible Sovereigns.\n",
+    "type": {
+      "blueId": "845nMVYB54BfARn15dRu8SXv1PR2j5FyZagnkbQVX5in"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

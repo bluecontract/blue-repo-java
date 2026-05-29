@@ -1,0 +1,14 @@
+{
+  "name": "cdm/observable/asset/QuotationStyleEnum",
+  "description": "The enumerated values to specify the actual quotation style (e.g. PointsUpFront, TradedSpread) used to quote a credit default swap fee leg.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "PointsUpFront",
+      "Price",
+      "TradedSpread"
+    ]
+  }
+}

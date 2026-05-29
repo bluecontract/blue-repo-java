@@ -1,0 +1,31 @@
+{
+  "name": "cdm/product/asset/floatingrate/FloatingRateSettingDetails",
+  "description": "Type for reporting the raw (untreated) observed or calculated rate for a calculation period.  If this is a calculated rate, it allows details of the observations and the resulting rate to be returned.\n",
+  "calculationDetails": {
+    "description": "Calculated rate details (observation dates, values, and weights).",
+    "type": {
+      "blueId": "9Gb6FU4qiJ6wD7KFwcAb4p4ptohPmWKn8Ff2BEnZAjWQ"
+    }
+  },
+  "floatingRate": {
+    "description": "The resulting rate that was observed or calculated.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "observationDate": {
+    "description": "The day upon which the rate was observed (for term rates).",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "resetDate": {
+    "description": "The day for which the rate is needed (e.g. period beginning or end date).",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

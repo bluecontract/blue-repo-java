@@ -1,0 +1,19 @@
+{
+  "name": "cdm/product/collateral/ConcentrationLimitTypeEnum",
+  "description": "Represents the enumerated values to identify where a concentration limit is applied.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Asset",
+      "BaseCurrencyEquivalent",
+      "IndustrySector",
+      "IssueOutstandingAmount",
+      "Issuer",
+      "MarketCapitalisation",
+      "PrimaryExchange",
+      "UltimateParentInstitution"
+    ]
+  }
+}

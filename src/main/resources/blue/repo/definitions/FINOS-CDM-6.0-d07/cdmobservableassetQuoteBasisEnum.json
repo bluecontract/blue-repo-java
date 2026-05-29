@@ -1,0 +1,13 @@
+{
+  "name": "cdm/observable/asset/QuoteBasisEnum",
+  "description": "The enumerated values to specify how an exchange rate is quoted.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Currency1PerCurrency2",
+      "Currency2PerCurrency1"
+    ]
+  }
+}

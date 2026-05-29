@@ -1,0 +1,14 @@
+{
+  "name": "cdm/product/template/AveragingInOutEnum",
+  "description": "The enumerated values to specify the type of averaging used in an Asian option.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Both",
+      "In",
+      "Out"
+    ]
+  }
+}

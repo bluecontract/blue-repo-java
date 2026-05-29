@@ -1,0 +1,15 @@
+{
+  "name": "cdm/product/common/settlement/SettlementTypeEnum",
+  "description": "The enumeration values to specify how the option is to be settled when exercised.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Cash",
+      "CashOrPhysical",
+      "Election",
+      "Physical"
+    ]
+  }
+}

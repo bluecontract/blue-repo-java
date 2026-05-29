@@ -1,0 +1,14 @@
+{
+  "name": "cdm/legaldocumentation/common/MatrixTypeEnum",
+  "description": "The enumerated values to specify the identification the form of applicable matrix.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "CreditDerivativesPhysicalSettlementMatrix",
+      "EquityDerivativesMatrix",
+      "SettlementMatrix"
+    ]
+  }
+}

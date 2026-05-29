@@ -1,0 +1,16 @@
+{
+  "name": "cdm/base/staticdata/party/ReferenceBanks",
+  "description": "A class defining the list of reference institutions polled for relevant rates or prices when determining the cash settlement amount for a product where cash settlement is applicable.\n",
+  "referenceBank": {
+    "description": "An institution (party) identified by means of a coding scheme and an optional name.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "ECha7Z1Y7L1G56VqE9aNhmUNPp6V1VB7RAzRtVZYN6Ye"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  }
+}

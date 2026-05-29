@@ -1,0 +1,60 @@
+{
+  "name": "Start Worker Session Requested",
+  "description": "Parent worker requests from MyOS Admin to start a new child session. Parent worker requires to have Worker Agency Permission Grant.",
+  "type": {
+    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
+  },
+  "onBehalfOf": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "document": {
+    "description": "Target Blue document to be bootstrapped"
+  },
+  "channelBindings": {
+    "description": "Maps channel names to participant identifiers",
+    "type": {
+      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+    },
+    "keyType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "valueType": {
+      "blueId": "4FAZ94JPExNM4pn2ZhtdHa4CVP7uASmLNVrBy7aCG1p5"
+    }
+  },
+  "initialMessages": {
+    "description": "Messages sent to participants when inviting them to the bootstrapped document",
+    "defaultMessage": {
+      "description": "Default invitation message sent to all participants",
+      "type": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      }
+    },
+    "perChannel": {
+      "description": "Per-channel custom invitation messages",
+      "type": {
+        "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+      },
+      "keyType": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      },
+      "valueType": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      }
+    }
+  },
+  "capabilities": {
+    "description": "Optional MyOS Admin capability contracts to attach (participantsOrchestration, sessionInteraction, workerAgency)",
+    "type": {
+      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+    },
+    "keyType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "valueType": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    }
+  }
+}

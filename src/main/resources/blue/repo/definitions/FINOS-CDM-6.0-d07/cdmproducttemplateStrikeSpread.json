@@ -1,0 +1,22 @@
+{
+  "name": "cdm/product/template/StrikeSpread",
+  "description": "A class for defining a strike spread feature.",
+  "upperStrike": {
+    "description": "Upper strike in a strike spread.",
+    "type": {
+      "blueId": "9YpCvHpjjkVKVeqkUBkWZmQsEfzRzg4iTLiAnR8RFpVp"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "upperStrikeNumberOfOptions": {
+    "description": "Number of options at the upper strike price in a strike spread.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

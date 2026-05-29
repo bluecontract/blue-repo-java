@@ -1,0 +1,34 @@
+{
+  "name": "cdm/product/common/schedule/AveragingPeriod",
+  "description": "Period over which an average value is taken.",
+  "averagingDateTimes": {
+    "description": "An unweighted list of averaging observation date and times.",
+    "type": {
+      "blueId": "8GwvgXK5zu4RizciBCTxFPkB53t5QxmcJmRPuXj8Yxzi"
+    }
+  },
+  "averagingObservations": {
+    "description": "A weighted list of averaging observation date and times.",
+    "type": {
+      "blueId": "BGYW6t3HgtX9Gy86sgNBDJ2RAzTKZGsNRKQV3CDLYNh4"
+    }
+  },
+  "marketDisruption": {
+    "description": "The market disruption event as defined by ISDA 2002 Definitions.",
+    "type": {
+      "blueId": "FVS7VrRFsXuBC2py4JdjjUo1VMWqh3yWfMns2shTsdv4"
+    }
+  },
+  "schedule": {
+    "description": "A schedule for generating averaging observation dates.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "FEY2i95RwCX4jab9QimgpbtJ9Et1nTRvX5FUysN2eVx5"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

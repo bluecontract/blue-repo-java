@@ -1,0 +1,31 @@
+{
+  "name": "cdm/base/datetime/BusinessDateRange",
+  "description": "A class defining a range of contiguous business days by defining an unadjusted first date, an unadjusted last date and a business day convention and business centers for adjusting the first and last dates if they would otherwise fall on a non business day in the specified business centers. The days between the first and last date must also be good business days in the specified centers to be counted in the range.\n",
+  "businessCenters": {
+    "description": "The business center(s), specified either explicitly or by reference to those specified somewhere else in the instance document.\n",
+    "type": {
+      "blueId": "6H6qhfVQ1CTnjae8L3PvEdBtC4NMwMiaSJWK6kr5tEXf"
+    }
+  },
+  "businessDayConvention": {
+    "description": "The convention for adjusting a date if it would otherwise fall on a day that is not a business day, as specified by an ISDA convention (e.g. Following, Precedent).\n",
+    "type": {
+      "blueId": "74NpTvEaEEzgK6JYLfjq7ACR6d83uPFmACNmKfDZQ1hA"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "endDate": {
+    "description": "The last date of a date range.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "startDate": {
+    "description": "The first date of a date range.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "cdm/legaldocumentation/master/MasterAgreementClause",
+  "description": "Defines clauses that make up a Master Agreement",
+  "counterparty": {
+    "description": "Optional counterparty role. This can be used where a clause needs to be assigned to a specific party on the agreement based upon their role i.e. Party A or Party B.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "ANd6oSrWArfUtpgKvesbXu9YiaQ3XLSYDxhgbBotJcUy"
+    },
+    "schema": {
+      "minItems": 0,
+      "maxItems": 2
+    }
+  },
+  "identifer": {
+    "description": "Unique identifier for the clause",
+    "type": {
+      "blueId": "GCcaELKeCRU9fyz43TXFQgfw8JUz5axfcbVGwpkUg3y1"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "otherParty": {
+    "description": "Optional party. This can be required for umbrella agreements where a clause may need to be assigned to a specific party who may or may not be on the agreement.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "6UMNEgMf7MoM2raYDinEQ6ARUqrkL4BfKePrPf4YZPTq"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "variant": {
+    "description": "Allows multiple variants to be defined for a clause. This needs to be an array as some clauses can specify different variants for different parties. At least one variant must be specified for a clause.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "AAh5HuGfGwdE4XgPS2zLDA3ZLqDzvcnBAkKRdwUWP5Gr"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  }
+}

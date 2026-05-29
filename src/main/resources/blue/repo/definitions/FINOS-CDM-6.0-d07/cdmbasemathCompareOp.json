@@ -1,0 +1,15 @@
+{
+  "name": "cdm/base/math/CompareOp",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Equals",
+      "GreaterThan",
+      "GreaterThanOrEquals",
+      "LessThan",
+      "LessThanOrEquals"
+    ]
+  }
+}

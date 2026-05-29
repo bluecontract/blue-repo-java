@@ -1,0 +1,11 @@
+{
+  "name": "cdm/regulation/SwpOut",
+  "sngl": {
+    "type": {
+      "blueId": "FnJcPZE1JzSf6GHctG62W7j7zgxGdrXiSzK4Q712xsqw"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

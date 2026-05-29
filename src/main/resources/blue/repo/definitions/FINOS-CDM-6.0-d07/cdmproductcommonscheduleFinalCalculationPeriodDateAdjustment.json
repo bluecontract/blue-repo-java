@@ -1,0 +1,31 @@
+{
+  "name": "cdm/product/common/schedule/FinalCalculationPeriodDateAdjustment",
+  "description": "A data to:  define business date convention adjustment to final payment period per leg.\n",
+  "businessDayConvention": {
+    "description": "Override business date convention. This takes precedence over leg level information.",
+    "type": {
+      "blueId": "74NpTvEaEEzgK6JYLfjq7ACR6d83uPFmACNmKfDZQ1hA"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "relevantUnderlyingDateReference": {
+    "description": "Reference to the unadjusted cancellation effective dates.",
+    "type": {
+      "blueId": "F2nvaUqNbFKSuzYyyhRM8m7PgfFhFvkDbejeQWX9jYCs"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "swapStreamReference": {
+    "description": "Reference to the leg, where date adjustments may apply.",
+    "type": {
+      "blueId": "2U7YP6Ym1jX4mFm5GexJ4F3psZB836JfxHmp6MF1dcAF"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

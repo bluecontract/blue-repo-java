@@ -1,0 +1,46 @@
+{
+  "name": "cdm/product/asset/DividendPeriod",
+  "description": "Time bounded dividend payment periods, each with a dividend payment date per period.",
+  "basketConstituent": {
+    "description": "For basket underliers, reference to the basket component which is paying dividends in the specified period.",
+    "type": {
+      "blueId": "9TCszX7p3useiqzNm9UPp1AMdorfkHLknXYXqEVsE2N8"
+    }
+  },
+  "dateAdjustments": {
+    "description": "Date adjustments for all unadjusted dates in this dividend period.",
+    "type": {
+      "blueId": "5aQGMvRRbnA89dRVLVFr9uxQHNZp95ceK8mHHwAdWat"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "dividendPaymentDate": {
+    "description": "Specifies when the dividend will be paid to the receiver of the equity return. Has the meaning as defined in the ISDA 2002 Equity Derivatives Definitions. Is not applicable in the case of a dividend reinvestment election.\n",
+    "type": {
+      "blueId": "BPzDkboLdBzoFK2Tdpodd4LwFhMVfn1HLjFGBeq6K5vf"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "dividendValuationDate": {
+    "description": "Specifies the dividend valuation dates of the swap.",
+    "type": {
+      "blueId": "2gu7bBDYJXEVsffNg2iAYXou31qtdeR4oiwZHL2kaEgQ"
+    }
+  },
+  "endDate": {
+    "description": "Dividend period end date.",
+    "type": {
+      "blueId": "BPzDkboLdBzoFK2Tdpodd4LwFhMVfn1HLjFGBeq6K5vf"
+    }
+  },
+  "startDate": {
+    "description": "Dividend period start date.",
+    "type": {
+      "blueId": "BPzDkboLdBzoFK2Tdpodd4LwFhMVfn1HLjFGBeq6K5vf"
+    }
+  }
+}

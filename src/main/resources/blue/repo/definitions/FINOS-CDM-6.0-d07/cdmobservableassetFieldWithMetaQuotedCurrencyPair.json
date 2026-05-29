@@ -1,0 +1,13 @@
+{
+  "name": "cdm/observable/asset/FieldWithMetaQuotedCurrencyPair",
+  "meta": {
+    "type": {
+      "blueId": "Fsr3CBPzzThx6Pern5QLDS8TKFXzv6W3TzjS6BYSmqCc"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "DXAiGKu29FtmHTTw6rKnmRJz6B5adDP3YxmtC3Ct93wd"
+    }
+  }
+}

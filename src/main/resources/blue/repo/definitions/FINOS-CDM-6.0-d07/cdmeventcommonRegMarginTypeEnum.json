@@ -1,0 +1,14 @@
+{
+  "name": "cdm/event/common/RegMarginTypeEnum",
+  "description": "Represents the enumeration values to specify the margin type in relation to bilateral or regulatory obligation.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "NonRegIM",
+      "RegIM",
+      "VM"
+    ]
+  }
+}

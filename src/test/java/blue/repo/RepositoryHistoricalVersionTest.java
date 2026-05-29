@@ -4,6 +4,7 @@ import blue.language.Blue;
 import blue.language.dictionary.ExportContext;
 import blue.language.dictionary.TypeDictionary;
 import blue.language.model.Node;
+import blue.language.utils.UncheckedObjectMapper;
 import blue.repo.provider.RepositoryNodeProvider;
 import org.junit.jupiter.api.Test;
 
@@ -22,7 +23,7 @@ import java.util.Map;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RepositoryHistoricalVersionTest {
-    private static final String TEXT_BLUE_ID = "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K";
+    private static final String TEXT_BLUE_ID = "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC";
 
     @Test
     void manifestMapsHistoricalTypeVersions() {
@@ -161,14 +162,25 @@ class RepositoryHistoricalVersionTest {
 
         runGenerator(temp, source);
 
+        RepositoryManifest generatedManifest = RepositoryManifest.fromMap(
+                UncheckedObjectMapper.JSON_MAPPER.readValue(
+                        read(temp.resolve("resources/blue/repo/vtest/manifest.json")),
+                        Map.class));
+        String generatedOperationBlueId = generatedManifest.definitionByQualifiedName("Conversation/Operation")
+                .orElseThrow(AssertionError::new)
+                .blueId();
+        String generatedIncompatibleBlueId = generatedManifest.definitionByQualifiedName("Conversation/Incompatible History")
+                .orElseThrow(AssertionError::new)
+                .blueId();
+
         String operation = read(temp.resolve("java/blue/repo/vtest/conversation/Operation.java"));
         assertTrue(operation.contains("@TypeBlueId({"));
-        assertTrue(operation.contains("\"op-v3\""));
+        assertTrue(operation.contains("\"" + generatedOperationBlueId + "\""));
         assertTrue(operation.contains("\"op-v2\""));
         assertTrue(operation.contains("\"op-v1\""));
 
         String incompatible = read(temp.resolve("java/blue/repo/vtest/conversation/IncompatibleHistory.java"));
-        assertTrue(incompatible.contains("@TypeBlueId(\"incompatible-v3\")"));
+        assertTrue(incompatible.contains("@TypeBlueId(\"" + generatedIncompatibleBlueId + "\")"));
         assertFalse(incompatible.contains("incompatible-v1"));
     }
 

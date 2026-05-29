@@ -1,0 +1,16 @@
+{
+  "name": "cdm/event/common/Instruction",
+  "description": "Instruction to a function that will be used to perform a business event",
+  "before": {
+    "description": "Specifies the trade state that will be acted on by the primitive event functions.",
+    "type": {
+      "blueId": "EQ41UGrPkUeaUNXD9QmELA1aEoVBtx9tVzgQZ5Tp1rMT"
+    }
+  },
+  "primitiveInstruction": {
+    "description": "Specifies the primitive instructions that will be used to call primitive event functions.",
+    "type": {
+      "blueId": "BcvGAzoQ8R7FKbJ1pnoEgjPmP992MTDGuE1LPxWNjyqT#0"
+    }
+  }
+}

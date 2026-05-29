@@ -1,0 +1,33 @@
+{
+  "name": "cdm/observable/asset/QuotationSideEnum",
+  "description": "The enumerated values to specify the side from which perspective a value is quoted.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Afternoon",
+      "Ask",
+      "Bid",
+      "Closing",
+      "High",
+      "Index",
+      "LocationalMarginal",
+      "Low",
+      "MarginalHourly",
+      "MarketClearing",
+      "MeanOfBidAndAsk",
+      "MeanOfHighAndLow",
+      "Mid",
+      "Morning",
+      "NationalSingle",
+      "OSP",
+      "Official",
+      "Opening",
+      "Settlement",
+      "Spot",
+      "UnWeightedAverage",
+      "WeightedAverage"
+    ]
+  }
+}

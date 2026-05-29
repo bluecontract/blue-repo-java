@@ -1,0 +1,124 @@
+{
+  "name": "cdm/product/collateral/CollateralCriteria",
+  "description": "The possible different terms that can be combined, using AND, OR and NOT logic, to define the issuers and/or assets that meet a given criteria for collateral.\n",
+  "AllCriteria": {
+    "description": "Enables two or more Collateral Criteria to be combined using AND logic.",
+    "type": {
+      "blueId": "this#2"
+    }
+  },
+  "AnyCriteria": {
+    "description": "Enables two or more Collateral Criteria to be combined using OR logic.",
+    "type": {
+      "blueId": "this#0"
+    }
+  },
+  "AssetAgencyRating": {
+    "description": "Criteria is the agency rating(s) of the collateral asset.",
+    "type": {
+      "blueId": "H4jc1V4zuLMtqwE8zqFkPYyaSYKndRBqqjjYend5zB38"
+    }
+  },
+  "AssetCountryOfOrigin": {
+    "description": "Criteria is the collateral asset country of origin.",
+    "type": {
+      "blueId": "26qQ1yPz4NaSbvNvTNkSDEZTYTJ9hKrfHHqVyNq3pgVp"
+    }
+  },
+  "AssetMaturity": {
+    "description": "Criteria is the maturity characteristics of the collateral asset.",
+    "type": {
+      "blueId": "ASQH72x4qzJUvyeBJspqS5NdmiF2Y2jvehGEbB4ynBNG"
+    }
+  },
+  "AssetType": {
+    "description": "Criteria is the asset type of the collateral.",
+    "type": {
+      "blueId": "BLZTp7a5CtMHrTzCq445GpujBm3ymVzCSadXjNvKVxCH"
+    }
+  },
+  "CollateralIssuerType": {
+    "description": "Criteria is the type of entity issuing the asset.",
+    "type": {
+      "blueId": "H6PykJfXM1yFBz8mSRdqtcp1ATz1YwBbyjFBTGXM4Uvp"
+    }
+  },
+  "CollateralTaxonomy": {
+    "description": "Criteria is the taxonomy characteristics of an collateral.",
+    "type": {
+      "blueId": "9QmrYjPUZBBjtGVeuEVC16iw8qALNHhhiniVQRdwTUPP"
+    }
+  },
+  "CounterpartyOwnIssuePermitted": {
+    "description": "Criteria includes collateral issued by the counterparty.",
+    "type": {
+      "blueId": "Gy95RNhUriR4g4Z6ivBrL1Q5mBfGozWYn66Dyr11NkzN"
+    }
+  },
+  "CurrencyCodeEnum": {
+    "description": "Criteria is the denominated currency of the collateral.",
+    "type": {
+      "blueId": "Gtqxd5G7jocpQHSsEiQ53Nwe1hN6hBmF525c6ebfSZfA"
+    }
+  },
+  "DomesticCurrencyIssued": {
+    "description": "Criteria is that collateral must be denominated in the domestic currency of the issuer.",
+    "type": {
+      "blueId": "FykWqru8L8NjeaFwXj45abFeh3fBsEtoraJyp5afrDv3"
+    }
+  },
+  "Index": {
+    "description": "Criteria is that the collateral is a constituent of a specific index.",
+    "type": {
+      "blueId": "HKHCXJGfPqZZNKWct13zWNKfBSkqhj6Pxc1BS8pZVm7"
+    }
+  },
+  "IssuerAgencyRating": {
+    "description": "Criteria is the agency rating(s) of the issuer.",
+    "type": {
+      "blueId": "8aSwnZTn1xZmNkXpHFZUsRiBLytDQsYzQ3QBQEsDVexu"
+    }
+  },
+  "IssuerCountryOfOrigin": {
+    "description": "Criteria is the issuing entity country of origin.",
+    "type": {
+      "blueId": "CatSTTPz3ZtRwcqCKFQTUBKdZgmKfgghx1mvYL9PEk7Z"
+    }
+  },
+  "IssuerName": {
+    "description": "Criteria is a specific named issuer entity.",
+    "type": {
+      "blueId": "BnFyrspUFQp7Hd8TBLuWugr1a5cgZiUe6iN7STaNQats"
+    }
+  },
+  "ListingExchange": {
+    "description": "Criteria is that the collateral is listed on a specific exchange.",
+    "type": {
+      "blueId": "6urSQExyVoUwfm4Vt6U2WtGZwmvBe45QYPty5bgs3zKv"
+    }
+  },
+  "ListingSector": {
+    "description": "Criteria is the industry sector of the collateral asset.",
+    "type": {
+      "blueId": "2Z5coENJrpshEHpThKQuK4k3hQAQCCp9e519Vb971rjM"
+    }
+  },
+  "NegativeCriteria": {
+    "description": "Enables a single Collateral Criteria to be excluded using NOT logic.",
+    "type": {
+      "blueId": "this#3"
+    }
+  },
+  "SovereignAgencyRating": {
+    "description": "Criteria is the agency rating(s) of the country of the issuer.",
+    "type": {
+      "blueId": "FvaLi3jfQCFzyNekUiDuBrn66SmKL3PqGKqXmhw6WnRU"
+    }
+  },
+  "SpecificAsset": {
+    "description": "Criteria is a specifically identified asset",
+    "type": {
+      "blueId": "BmFYYZadhNjGW8TPCzKeW9g1YJfrJQnRgYDbS2VA3dVN"
+    }
+  }
+}

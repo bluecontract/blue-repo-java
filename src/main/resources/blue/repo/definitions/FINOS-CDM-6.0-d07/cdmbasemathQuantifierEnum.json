@@ -1,0 +1,13 @@
+{
+  "name": "cdm/base/math/QuantifierEnum",
+  "description": "Represents the enumerated values to specify a logical quantification, i.e. either All or Any.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "All",
+      "Any"
+    ]
+  }
+}

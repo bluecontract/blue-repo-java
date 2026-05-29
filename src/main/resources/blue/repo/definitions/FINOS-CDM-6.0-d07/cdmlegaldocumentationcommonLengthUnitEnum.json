@@ -1,0 +1,13 @@
+{
+  "name": "cdm/legaldocumentation/common/LengthUnitEnum",
+  "description": "The enumerated values to specify the length unit in the Resource type.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Pages",
+      "TimeUnit"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "cdm/event/common/CollateralStatusEnum",
+  "description": "Represents the enumeration list to identify the settlement status of the collateral.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "FullAmount",
+      "InTransitAmount",
+      "SettledAmount"
+    ]
+  }
+}

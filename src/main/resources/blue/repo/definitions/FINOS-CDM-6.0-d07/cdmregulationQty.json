@@ -1,0 +1,11 @@
+{
+  "name": "cdm/regulation/Qty",
+  "unit": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

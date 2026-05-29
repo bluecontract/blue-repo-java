@@ -1,0 +1,13 @@
+{
+  "name": "cdm/base/staticdata/identifier/TradeIdentifierTypeEnum",
+  "description": "Defines the enumerated values to specify the nature of a trade identifier.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "UniqueSwapIdentifier",
+      "UniqueTransactionIdentifier"
+    ]
+  }
+}

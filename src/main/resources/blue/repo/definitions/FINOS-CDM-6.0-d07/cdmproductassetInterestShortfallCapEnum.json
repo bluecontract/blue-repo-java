@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/asset/InterestShortfallCapEnum",
+  "description": "The enumerated values to specify the interest shortfall cap, applicable to mortgage derivatives.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Fixed",
+      "Variable"
+    ]
+  }
+}

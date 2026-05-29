@@ -1,0 +1,15 @@
+{
+  "name": "cdm/product/asset/DividendAmountTypeEnum",
+  "description": "The enumerated values to specify whether the dividend is paid with respect to the Dividend Period.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AsSpecifiedInMasterConfirmation",
+      "ExAmount",
+      "PaidAmount",
+      "RecordAmount"
+    ]
+  }
+}

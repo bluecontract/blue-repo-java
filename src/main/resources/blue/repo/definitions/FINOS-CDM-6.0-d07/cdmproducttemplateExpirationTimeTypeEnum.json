@@ -1,0 +1,18 @@
+{
+  "name": "cdm/product/template/ExpirationTimeTypeEnum",
+  "description": "The time of day at which the equity option expires, for example the official closing time of the exchange.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AsSpecifiedInMasterConfirmation",
+      "Close",
+      "DerivativesClose",
+      "OSP",
+      "Open",
+      "SpecificTime",
+      "XETRA"
+    ]
+  }
+}

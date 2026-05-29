@@ -1,0 +1,14 @@
+{
+  "name": "cdm/observable/asset/CashPriceTypeEnum",
+  "description": "Provides a list of possible types of cash prices, applicable when PriceTypeEnum is itself of type CashPrice.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Discount",
+      "Fee",
+      "Premium"
+    ]
+  }
+}

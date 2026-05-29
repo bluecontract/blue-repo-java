@@ -1,0 +1,15 @@
+{
+  "name": "cdm/product/asset/DayDistributionEnum",
+  "description": "Denotes the method by which the pricing days are distributed across the pricing period.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "All",
+      "First",
+      "Last",
+      "Penultimate"
+    ]
+  }
+}

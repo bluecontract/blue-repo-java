@@ -1,0 +1,16 @@
+{
+  "name": "Adding Participant Responded",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "request": {
+    "type": {
+      "blueId": "BmERQxQSUDw8vTBAR32U9XBcFGjdVfUfpfUhCm1xsxVV"
+    }
+  },
+  "status": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

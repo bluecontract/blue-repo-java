@@ -1,0 +1,27 @@
+{
+  "name": "cdm/event/common/TermsChangeInstruction",
+  "description": "Specifies instructions for terms change consisting of the new transaction terms, and the renegotiation fee.",
+  "adjustment": {
+    "type": {
+      "blueId": "48JDEpkM8WR1yds2w2SWP5KCjtrwqaKCSP2cmxPxjgxY"
+    }
+  },
+  "ancillaryParty": {
+    "description": "ancillary party to be changed",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "BEZVkHKyDMsBjAmDVvYY7wpeyTRwsqcq12e6SpKHUxm6"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "product": {
+    "description": "product to be changed",
+    "type": {
+      "blueId": "9qWGsXauVnxS5oNKRAwfaMctCyeviwAypHKtHdS4HXZd#4"
+    }
+  }
+}

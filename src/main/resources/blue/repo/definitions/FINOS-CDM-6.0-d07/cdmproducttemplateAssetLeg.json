@@ -1,0 +1,22 @@
+{
+  "name": "cdm/product/template/AssetLeg",
+  "description": "Defines each asset movement of an asset payout.",
+  "deliveryMethod": {
+    "description": "Specifies a delivery method for the security transaction.",
+    "type": {
+      "blueId": "37grwt2PkwzdxYRTGd1FEUrRxY4Z8oHpoq2HZnisBGax"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "settlementDate": {
+    "description": "Specifies the settlement date of securities.  In a repo transaction the purchase date would always be the effective date as specified under Economic Terms, the repurchase date would always be the termination date as specified under Economic Terms.\n",
+    "type": {
+      "blueId": "2gu7bBDYJXEVsffNg2iAYXou31qtdeR4oiwZHL2kaEgQ"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

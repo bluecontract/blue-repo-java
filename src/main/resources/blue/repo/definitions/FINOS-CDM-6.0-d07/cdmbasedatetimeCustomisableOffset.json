@@ -1,0 +1,14 @@
+{
+  "name": "cdm/base/datetime/CustomisableOffset",
+  "description": "A class to specify an offset either as a normalized [multiplier, period, dayType] or as a custom provision of type string.\n",
+  "customProvision": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "offset": {
+    "type": {
+      "blueId": "HtjNf3aJBBJnxx21C9ZjvmgVj3CJyaSF1wwWaT6fJciq"
+    }
+  }
+}

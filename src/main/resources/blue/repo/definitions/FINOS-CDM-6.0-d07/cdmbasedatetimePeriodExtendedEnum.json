@@ -1,0 +1,18 @@
+{
+  "name": "cdm/base/datetime/PeriodExtendedEnum",
+  "description": "The enumerated values to specify a time period containing the additional value of Term.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "C",
+      "D",
+      "H",
+      "M",
+      "T",
+      "W",
+      "Y"
+    ]
+  }
+}

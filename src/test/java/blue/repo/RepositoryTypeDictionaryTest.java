@@ -4,13 +4,13 @@ import blue.language.Blue;
 import blue.language.dictionary.ExportContext;
 import blue.language.dictionary.TypeDictionary;
 import blue.language.model.Node;
-import blue.repo.types.ConversationTypes;
+import blue.repo.types.CoordinationTypes;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class RepositoryTypeDictionaryTest {
-    private static final String LIST_BLUE_ID = "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY";
+    private static final String LIST_BLUE_ID = "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF";
 
     @Test
     void dictionaryBlueIdsContainsRepositoryVersionBlueId() {
@@ -28,7 +28,7 @@ class RepositoryTypeDictionaryTest {
     void currentBlueIdReturnsCurrentIdForKnownType() {
         BlueRepository repository = BlueRepository.v1_3_0();
         TypeDictionary dictionary = repository.typeDictionary();
-        String operationBlueId = ConversationTypes.OPERATION.blueId();
+        String operationBlueId = CoordinationTypes.OPERATION.blueId();
 
         assertEquals(operationBlueId, dictionary.currentBlueId(operationBlueId).orElse(null));
     }
@@ -37,7 +37,7 @@ class RepositoryTypeDictionaryTest {
     void typeBlueIdForReturnsCurrentTypeIdForSupportedDictionaryVersion() {
         BlueRepository repository = BlueRepository.v1_3_0();
         TypeDictionary dictionary = repository.typeDictionary();
-        String operationBlueId = ConversationTypes.OPERATION.blueId();
+        String operationBlueId = CoordinationTypes.OPERATION.blueId();
 
         assertEquals(operationBlueId,
                 dictionary.typeBlueIdFor(operationBlueId, repository.repositoryVersionBlueId()).orElse(null));
@@ -49,7 +49,7 @@ class RepositoryTypeDictionaryTest {
     void definitionReturnsFullFreshNodeForKnownType() {
         BlueRepository repository = BlueRepository.v1_3_0();
         TypeDictionary dictionary = repository.typeDictionary();
-        String operationBlueId = ConversationTypes.OPERATION.blueId();
+        String operationBlueId = CoordinationTypes.OPERATION.blueId();
 
         Node first = dictionary.definition(operationBlueId).orElseThrow(AssertionError::new);
         Node second = dictionary.definition(operationBlueId).orElseThrow(AssertionError::new);
@@ -67,7 +67,7 @@ class RepositoryTypeDictionaryTest {
 
         assertFalse(dictionary.currentBlueId("unknown-type-blue-id").isPresent());
         assertFalse(dictionary.definition("unknown-type-blue-id").isPresent());
-        assertFalse(dictionary.typeBlueIdFor(ConversationTypes.OPERATION.blueId(), "unknown-dictionary-blue-id").isPresent());
+        assertFalse(dictionary.typeBlueIdFor(CoordinationTypes.OPERATION.blueId(), "unknown-dictionary-blue-id").isPresent());
     }
 
     @Test
@@ -80,16 +80,16 @@ class RepositoryTypeDictionaryTest {
 
         Node document = new Node()
                 .name("operation")
-                .type(ConversationTypes.OPERATION.reference());
+                .type(CoordinationTypes.OPERATION.reference());
 
         Node exported = blue.exportNode(document, context);
         String yaml = blue.nodeToYaml(document, context);
 
         assertNotNull(exported.getType());
         assertTrue(exported.getType().isReferenceOnly());
-        assertEquals(ConversationTypes.OPERATION.blueId(), exported.getType().getBlueId());
-        assertTrue(yaml.contains("blueId: \"" + ConversationTypes.OPERATION.blueId() + "\"")
-                || yaml.contains("blueId: " + ConversationTypes.OPERATION.blueId()));
+        assertEquals(CoordinationTypes.OPERATION.blueId(), exported.getType().getBlueId());
+        assertTrue(yaml.contains("blueId: \"" + CoordinationTypes.OPERATION.blueId() + "\"")
+                || yaml.contains("blueId: " + CoordinationTypes.OPERATION.blueId()));
     }
 
     @Test
@@ -99,7 +99,7 @@ class RepositoryTypeDictionaryTest {
 
         Node document = new Node()
                 .name("operation")
-                .type(ConversationTypes.OPERATION.reference());
+                .type(CoordinationTypes.OPERATION.reference());
 
         Node exported = blue.exportNode(document, ExportContext.empty());
 
@@ -119,19 +119,19 @@ class RepositoryTypeDictionaryTest {
 
         Node document = new Node()
                 .name("operation")
-                .type(ConversationTypes.OPERATION.reference());
+                .type(CoordinationTypes.OPERATION.reference());
 
         assertThrows(IllegalArgumentException.class, () -> blue.nodeToYaml(document, strict));
     }
 
     @Test
-    void recursiveInliningInlinesNestedRepositoryTypesButKeepsCoreTypesCompact() {
+    void recursiveInliningInlinesRepositoryTypesAndKeepsUnknownItemTypesCompact() {
         BlueRepository repository = BlueRepository.v1_3_0();
         Blue blue = repository.configureForExport(new Blue());
 
         Node document = new Node()
                 .name("update")
-                .type(ConversationTypes.UPDATE_DOCUMENT.reference());
+                .type(CoordinationTypes.UPDATE_DOCUMENT.reference());
 
         Node exported = blue.exportNode(document, ExportContext.empty());
         Node updateDocument = exported.getType();
@@ -140,8 +140,9 @@ class RepositoryTypeDictionaryTest {
 
         assertEquals("Update Document", updateDocument.getName());
         assertNull(updateDocument.getBlueId());
-        assertEquals("Json Patch Entry", itemType.getName());
-        assertNull(itemType.getBlueId());
+        assertNull(itemType.getName());
+        assertNotNull(itemType.getBlueId());
+        assertTrue(itemType.isReferenceOnly());
         assertEquals(LIST_BLUE_ID, changeset.getType().getBlueId());
         assertTrue(changeset.getType().isReferenceOnly());
     }

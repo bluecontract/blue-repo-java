@@ -1,0 +1,53 @@
+{
+  "name": "cdm/product/common/schedule/ParametricDates",
+  "description": "Defines rules for the dates on which the price will be determined.",
+  "businessCenters": {
+    "description": "The enumerated values to specify the business centers.",
+    "type": {
+      "blueId": "6H6qhfVQ1CTnjae8L3PvEdBtC4NMwMiaSJWK6kr5tEXf"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "dayDistribution": {
+    "description": "Denotes the method by which the pricing days are distributed across the pricing period.",
+    "type": {
+      "blueId": "4V61LKivAKnWRngVbwPjzRDyXMVUFyY3g62gpR8PmZgu"
+    }
+  },
+  "dayFrequency": {
+    "description": "Defines the occurrence of the dayOfWeek within the pricing period on which pricing will take place, e.g. the 3rd Friday within each Calculation Period. If omitted, every dayOfWeek will be a pricing day.\n",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "dayOfWeek": {
+    "description": "Indicates the days of the week on which the price will be determined.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "3VxAg9cA9onwdJoxhBB5kEdwqKLqxsmhNk3MY7upD6KS"
+    },
+    "schema": {
+      "minItems": 0,
+      "maxItems": 7
+    }
+  },
+  "dayType": {
+    "description": "Denotes the enumerated values to specify the day type classification used in counting the number of days between two dates.\n",
+    "type": {
+      "blueId": "7dgaT32onr9y4LwzshGyXjtcH3w8SvWi5SN63ZkT6VCC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "lag": {
+    "description": "The pricing period per calculation period if the pricing days do not wholly fall within the respective calculation period.\n",
+    "type": {
+      "blueId": "ASQD6wk2ffTYaLoFZKXdxoCz4zKwMV3aU1vMdc3sVbSi"
+    }
+  }
+}

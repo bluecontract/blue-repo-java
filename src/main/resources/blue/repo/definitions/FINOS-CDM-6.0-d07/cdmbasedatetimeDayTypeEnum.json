@@ -1,0 +1,16 @@
+{
+  "name": "cdm/base/datetime/DayTypeEnum",
+  "description": "Lists the enumerated values to specify the day type classification used in counting the number of days between two dates.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Business",
+      "Calendar",
+      "CurrencyBusiness",
+      "ExchangeBusiness",
+      "ScheduledTradingDay"
+    ]
+  }
+}

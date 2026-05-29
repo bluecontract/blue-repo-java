@@ -1,0 +1,15 @@
+{
+  "name": "Single Document Permission Invalid",
+  "description": "Emitted on initialise when local shape checks fail.",
+  "type": {
+    "blueId": "ENRQ621TbJpLg2cGyYkgTmPRLGKZkPqCzkBgm4yEXKF5"
+  },
+  "issues": {
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

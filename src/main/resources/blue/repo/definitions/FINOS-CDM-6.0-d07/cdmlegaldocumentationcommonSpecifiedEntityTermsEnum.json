@@ -1,0 +1,16 @@
+{
+  "name": "cdm/legaldocumentation/common/SpecifiedEntityTermsEnum",
+  "description": "The enumerated values to specify the specified entity terms for the Event of Default or Termination Event specified.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AnyAffiliate",
+      "MaterialSubsidiary",
+      "NamedSpecifiedEntity",
+      "None",
+      "OtherSpecifiedEntity"
+    ]
+  }
+}

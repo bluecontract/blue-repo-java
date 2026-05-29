@@ -1,0 +1,15 @@
+{
+  "name": "cdm/observable/asset/PriceExpressionEnum",
+  "description": "Enumerated values to specify whether the price is expressed in absolute or relative terms.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AbsoluteTerms",
+      "ParValueFraction",
+      "PerOption",
+      "PercentageOfNotional"
+    ]
+  }
+}

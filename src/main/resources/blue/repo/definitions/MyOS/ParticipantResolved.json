@@ -1,0 +1,13 @@
+{
+  "name": "Participant Resolved",
+  "channelName": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "participant": {
+    "type": {
+      "blueId": "BDWxt7xTGsK2mZKinCxD4hENHUUfEtupZPtaYzwLmKJm"
+    }
+  }
+}

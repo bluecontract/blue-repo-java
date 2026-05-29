@@ -1,0 +1,16 @@
+{
+  "name": "cdm/event/common/ContractFormationInstruction",
+  "description": "Specifies instructions to create a fully formed contract, with optional legal agreements.",
+  "legalAgreement": {
+    "description": "Optional legal agreements associated to the contract being formed, for instance a master agreement.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "WWuVy37MMwzsNRXgD8TXSToyVmMW1twgT9HY7KXrSL1#0"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

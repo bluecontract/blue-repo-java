@@ -1,0 +1,11 @@
+{
+  "name": "cdm/regulation/Document",
+  "finInstrmRptgTxRpt": {
+    "type": {
+      "blueId": "BqLX1TegQA5JsKg5FGBrDParU4JFJmL7RRiHz86fd4wK"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

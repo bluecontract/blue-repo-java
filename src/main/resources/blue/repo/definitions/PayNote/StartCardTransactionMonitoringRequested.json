@@ -1,0 +1,27 @@
+{
+  "name": "Start Card Transaction Monitoring Requested",
+  "description": "Request to start monitoring card events for a target merchant.",
+  "type": {
+    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
+  },
+  "targetMerchantId": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "events": {
+    "description": "Requested card event categories.\nFor now:\n- transaction\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "requestedAt": {
+    "description": "Timestamp (microseconds since epoch).",
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    }
+  }
+}

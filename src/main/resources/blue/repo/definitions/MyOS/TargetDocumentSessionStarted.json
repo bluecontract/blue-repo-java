@@ -1,0 +1,15 @@
+{
+  "name": "Target Document Session Started",
+  "document": {
+    "description": "The final, canonicalized document state with all timelineIds filled in."
+  },
+  "initiatorSessionIds": {
+    "description": "Session IDs created for the bootstrap initiator (caller)",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

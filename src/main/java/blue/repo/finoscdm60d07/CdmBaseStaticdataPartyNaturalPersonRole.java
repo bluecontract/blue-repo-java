@@ -1,0 +1,61 @@
+package blue.repo.finoscdm60d07;
+
+import blue.language.model.Node;
+import blue.language.model.TypeBlueId;
+import blue.repo.RepositoryType;
+import java.util.List;
+
+@TypeBlueId("3bCU1Vgs5rzeWEHa8vgP8TUztDqR6A8xE1mL547a5tTr")
+public class CdmBaseStaticdataPartyNaturalPersonRole {
+    public static String blueId() {
+        return "3bCU1Vgs5rzeWEHa8vgP8TUztDqR6A8xE1mL547a5tTr";
+    }
+
+    public static String packageName() {
+        return "FINOS-CDM-6.0-d07";
+    }
+
+    public static String typeName() {
+        return "cdm/base/staticdata/party/NaturalPersonRole";
+    }
+
+    public static String qualifiedName() {
+        return "FINOS-CDM-6.0-d07/cdm/base/staticdata/party/NaturalPersonRole";
+    }
+
+    public static String resourcePath() {
+        return "blue/repo/definitions/FINOS-CDM-6.0-d07/cdmbasestaticdatapartyNaturalPersonRole.json";
+    }
+
+    public static RepositoryType repositoryType() {
+        return RepositoryType.of(
+                packageName(),
+                typeName(),
+                qualifiedName(),
+                blueId(),
+                resourcePath());
+    }
+
+    private CdmBaseStaticdataPartyMetafieldsReferenceWithMetaNaturalPerson personReference;
+
+    private List<CdmBaseStaticdataPartyFieldWithMetaNaturalPersonRoleEnum> role;
+
+    public CdmBaseStaticdataPartyMetafieldsReferenceWithMetaNaturalPerson getPersonReference() {
+        return personReference;
+    }
+
+    public CdmBaseStaticdataPartyNaturalPersonRole personReference(CdmBaseStaticdataPartyMetafieldsReferenceWithMetaNaturalPerson personReference) {
+        this.personReference = personReference;
+        return this;
+    }
+
+    public List<CdmBaseStaticdataPartyFieldWithMetaNaturalPersonRoleEnum> getRole() {
+        return role;
+    }
+
+    public CdmBaseStaticdataPartyNaturalPersonRole role(List<CdmBaseStaticdataPartyFieldWithMetaNaturalPersonRoleEnum> role) {
+        this.role = role;
+        return this;
+    }
+
+}

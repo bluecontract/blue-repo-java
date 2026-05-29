@@ -1,0 +1,16 @@
+{
+  "name": "cdm/product/common/schedule/AveragingObservationList",
+  "description": "An unordered list of weighted averaging observations.",
+  "averagingObservation": {
+    "description": "A single weighted averaging observation.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "BPVeZ4siFvYW3kWeoZXfbEDkzr1gkSN9UvW1HD4pPoRV"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  }
+}

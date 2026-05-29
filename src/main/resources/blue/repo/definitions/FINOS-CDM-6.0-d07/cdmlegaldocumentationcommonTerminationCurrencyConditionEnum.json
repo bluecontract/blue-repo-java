@@ -1,0 +1,14 @@
+{
+  "name": "cdm/legaldocumentation/common/TerminationCurrencyConditionEnum",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "FreelyAvailable",
+      "PaymentsDue",
+      "PaymentsDueAndFreelyAvailable",
+      "Specified"
+    ]
+  }
+}

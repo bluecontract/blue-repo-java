@@ -1,0 +1,19 @@
+{
+  "name": "cdm/product/asset/DividendDateReference",
+  "description": "A class to specify the dividend date by reference to another date, with the ability to apply and offset. This class doesn't exist in FpML and is meant to simplify the choice constraint associated with the DividendPaymentDate class.\n",
+  "dateReference": {
+    "description": "Specification of the dividend date using an enumeration, with values such as the pay date, the ex-date or the record date.\n",
+    "type": {
+      "blueId": "6br9B66aFAjXQYz3P7NMBRxgYD4ZFW5KhTZHG9DhpU9s"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "paymentDateOffset": {
+    "description": "Only to be used when SharePayment has been specified in the dividendDateReference element. The number of Currency Business Days following the day on which the Issuer of the Shares pays the relevant dividend to holders of record of the Shares.\n",
+    "type": {
+      "blueId": "HtjNf3aJBBJnxx21C9ZjvmgVj3CJyaSF1wwWaT6fJciq"
+    }
+  }
+}

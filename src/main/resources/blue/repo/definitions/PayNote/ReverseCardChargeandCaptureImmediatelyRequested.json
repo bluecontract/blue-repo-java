@@ -1,0 +1,22 @@
+{
+  "name": "Reverse Card Charge and Capture Immediately Requested",
+  "description": "Request to create a reverse-direction card charge and capture it immediately.",
+  "type": {
+    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
+  },
+  "amount": {
+    "description": "Charge amount in minor currency units.",
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    }
+  },
+  "paymentMandateDocumentId": {
+    "description": "Optional Payment Mandate document id used to authorize charge execution.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "paynote": {
+    "description": "Optional PayNote document to bootstrap for the created charge context."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "cdm/product/template/ExerciseNoticeGiverEnum",
+  "description": "Defines the principal party to the trade that has the right to exercise.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AsSpecifiedInMasterAgreement",
+      "Both",
+      "Buyer",
+      "Seller"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "cdm/base/staticdata/party/PartyRole",
+  "description": "A class to specify the role(s) that party(ies) may have in relation to the execution, contract or other legal agreement.\n",
+  "ownershipPartyReference": {
+    "description": "A reference to the party that has ownership of this party role information. FpML specifies that For shared trade information, this attribute will reference the originator of the data (for example, an execution facility or clearing house).\n",
+    "type": {
+      "blueId": "Doqu2fdYiHUWbSaMDHL5YoyEeuzbTrSjqbT1ZLqmB1Cr"
+    }
+  },
+  "partyReference": {
+    "description": "A reference to the party to which the role refers to.",
+    "type": {
+      "blueId": "Doqu2fdYiHUWbSaMDHL5YoyEeuzbTrSjqbT1ZLqmB1Cr"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "role": {
+    "description": "The party role.",
+    "type": {
+      "blueId": "6UMNEgMf7MoM2raYDinEQ6ARUqrkL4BfKePrPf4YZPTq"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

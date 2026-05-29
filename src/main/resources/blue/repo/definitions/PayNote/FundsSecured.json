@@ -1,0 +1,12 @@
+{
+  "name": "Funds Secured",
+  "description": "The Guarantor confirms that value is now secured / under its control.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "amountSecured": {
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    }
+  }
+}

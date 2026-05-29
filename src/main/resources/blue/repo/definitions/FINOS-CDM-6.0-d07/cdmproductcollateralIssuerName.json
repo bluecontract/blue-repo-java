@@ -1,0 +1,12 @@
+{
+  "name": "cdm/product/collateral/IssuerName",
+  "issuerName": {
+    "description": "Specifies the issuing entity name or LEI.",
+    "type": {
+      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

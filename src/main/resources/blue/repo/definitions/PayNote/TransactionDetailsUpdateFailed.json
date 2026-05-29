@@ -1,0 +1,12 @@
+{
+  "name": "Transaction Details Update Failed",
+  "description": "The Guarantor attempted to apply the transaction details update, but a technical or provider-level failure occurred.\n",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "reason": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

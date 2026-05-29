@@ -1,0 +1,13 @@
+{
+  "name": "Principal Actor",
+  "description": "The base type for a direct action by the account owner.",
+  "type": {
+    "blueId": "GnMntk3hLvHEsZTBE8Gk7ytPBexj6jhBJHdaxnJYhEQ7"
+  },
+  "accountId": {
+    "description": "MyOS account ID of the principal.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

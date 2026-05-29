@@ -1,0 +1,12 @@
+{
+  "name": "Reservation Release Declined",
+  "description": "The Guarantor failed to release the reserved funds.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "reason": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

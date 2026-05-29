@@ -1,0 +1,52 @@
+{
+  "name": "cdm/event/common/BillingRecordInstruction",
+  "description": "Specifies the instructions for creation of a billing record.",
+  "observation": {
+    "description": "The observations used to calculate the billing amount.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "AZ5AJk5sJpW2FYB29tkVVsPniL7HfrwzmyoyJ4ZZvgfG"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  },
+  "recordEndDate": {
+    "description": "The ending date of the period described by this record",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "recordStartDate": {
+    "description": "The starting date of the period described by this record",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "settlementDate": {
+    "description": "The date for settlement of the transfer.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "tradeState": {
+    "description": "The trade for the individual billing record.",
+    "type": {
+      "blueId": "EQ41UGrPkUeaUNXD9QmELA1aEoVBtx9tVzgQZ5Tp1rMT"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

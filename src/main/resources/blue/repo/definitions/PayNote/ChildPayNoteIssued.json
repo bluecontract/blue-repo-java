@@ -1,0 +1,10 @@
+{
+  "name": "Child PayNote Issued",
+  "description": "The Guarantor confirms that a new Child PayNote has been issued against this parent.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "childPayNote": {
+    "description": "Content of the issued PayNote"
+  }
+}

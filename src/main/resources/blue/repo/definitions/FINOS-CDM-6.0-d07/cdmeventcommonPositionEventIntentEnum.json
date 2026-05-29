@@ -1,0 +1,17 @@
+{
+  "name": "cdm/event/common/PositionEventIntentEnum",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "CorporateActionAdjustment",
+      "Decrease",
+      "Increase",
+      "OptionExercise",
+      "PositionCreation",
+      "Transfer",
+      "Valuation"
+    ]
+  }
+}

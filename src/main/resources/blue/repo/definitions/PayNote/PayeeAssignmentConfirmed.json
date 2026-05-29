@@ -1,0 +1,12 @@
+{
+  "name": "Payee Assignment Confirmed",
+  "description": "The Guarantor accepted and recorded payee assignment.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "payeeRef": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "cdm/observable/asset/InformationProviderEnum",
+  "description": "The enumerated values to specify the list of information providers.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AssocBanksSingapore",
+      "BancoCentralChile",
+      "BankOfCanada",
+      "BankOfEngland",
+      "BankOfJapan",
+      "Bloomberg",
+      "EuroCentralBank",
+      "FHLBSF",
+      "FederalReserve",
+      "ICESWAP",
+      "ISDA",
+      "Refinitiv",
+      "ReserveBankAustralia",
+      "ReserveBankNewZealand",
+      "Reuters",
+      "SAFEX",
+      "TOKYOSWAP",
+      "Telerate"
+    ]
+  }
+}

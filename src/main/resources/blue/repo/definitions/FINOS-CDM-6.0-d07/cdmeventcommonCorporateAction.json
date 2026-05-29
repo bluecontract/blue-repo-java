@@ -1,0 +1,40 @@
+{
+  "name": "cdm/event/common/CorporateAction",
+  "description": "Specifies the relevant data regarding a corporate action.",
+  "corporateActionType": {
+    "description": "The type of corporate action taking place.",
+    "type": {
+      "blueId": "4UEoeZWF5eyedQHWfs5Bckogecv82AECMRXiRHuB7sVp"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "exDate": {
+    "description": "The date on which the corporate action is known to have taken place.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "payDate": {
+    "description": "The date on which resulting from the corporate action are delivered.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "underlier": {
+    "description": "The underlier impacted by the corporate action.",
+    "type": {
+      "blueId": "9qWGsXauVnxS5oNKRAwfaMctCyeviwAypHKtHdS4HXZd#3"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

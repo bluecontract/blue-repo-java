@@ -1,0 +1,21 @@
+{
+  "name": "cdm/base/staticdata/party/EntityTypeEnum",
+  "description": "The enumerated values to specify the reference entity types corresponding to a list of types defined in the ISDA First to Default documentation.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Asian",
+      "AustralianAndNewZealand",
+      "EuropeanEmergingMarkets",
+      "Japanese",
+      "NorthAmericanHighYield",
+      "NorthAmericanInsurance",
+      "NorthAmericanInvestmentGrade",
+      "Singaporean",
+      "WesternEuropean",
+      "WesternEuropeanInsurance"
+    ]
+  }
+}

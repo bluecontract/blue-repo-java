@@ -1,0 +1,46 @@
+{
+  "name": "cdm/observable/asset/CreditNotation",
+  "description": "Represents a class to specify the credit notation as the combination of agency, notation, scale and debt type qualifications.\n",
+  "agency": {
+    "description": "Specifies The credit agency to which the other variables (notation, scale, debt type) refer to.",
+    "type": {
+      "blueId": "4cXm34z6DXgmjwV5da5VyP8ugnbd319u4ZyJ25GU13PG"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "creditWatch": {
+    "description": "Indicates the potential direction of a short-term or long-term rating. It focuses on identifiable events and short-term trends that cause ratings to be placed under special surveillance.\n",
+    "type": {
+      "blueId": "AypdMrs5yFGWasr1ZTJNgqsdz8PvoNad2XeiCUovjZ9W"
+    }
+  },
+  "debt": {
+    "description": "Specifies the credit rating debt type (e.g. long term, high yield, deposits, ...) associated with the credit rating notation and scale.\n",
+    "type": {
+      "blueId": "3Sa9vCGQDydCQHFrJmmRXAexddWAaVev6uns5Sc9gjJw"
+    }
+  },
+  "notation": {
+    "description": "Specifies The credit rating notation. As it varies among credit rating agencies, FpML doesn't specify a default scheme.\n",
+    "type": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "outlook": {
+    "description": "Assesses the potential direction of a long-term credit rating over the intermediate term, which is generally up to two years for investment grade and generally up to one year for speculative grade.\n",
+    "type": {
+      "blueId": "Wgjfhw9rhw1PxAaaMPVeRb46YjQNddhJ9TytEtoFXii"
+    }
+  },
+  "scale": {
+    "description": "Specifies the credit rating scale, with a typical distinction between short term, long term. FpML doesn't specify a default scheme, which is hence not specified as an enumeration as part of the CDM.\n",
+    "type": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    }
+  }
+}

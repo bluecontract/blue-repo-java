@@ -1,0 +1,25 @@
+{
+  "name": "cdm/base/datetime/daycount/DayCountFractionEnum",
+  "description": "The enumerated values to specify the day count fraction.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "ACT/360",
+      "ACT/364",
+      "ACT/365L",
+      "ACT/365.FIXED",
+      "ACT/ACT.AFB",
+      "ACT/ACT.ICMA",
+      "ACT/ACT.ISDA",
+      "ACT/ACT.ISMA",
+      "CAL/252",
+      "RBA Bond Basis",
+      "1/1",
+      "30E/360",
+      "30E/360.ISDA",
+      "30/360"
+    ]
+  }
+}

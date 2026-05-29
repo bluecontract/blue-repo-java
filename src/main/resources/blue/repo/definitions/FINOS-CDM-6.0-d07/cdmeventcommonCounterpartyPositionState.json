@@ -1,0 +1,42 @@
+{
+  "name": "cdm/event/common/CounterpartyPositionState",
+  "description": "Defines the fundamental financial information that can be changed by a Primitive Event and by extension any business or life-cycle event. Each PositionState specifies where a Position is in its life-cycle. PositionState is a root type and as such, can be created independently to any other CDM data type, but can also be used as part of the CDM Event Model.\n",
+  "counterpartyPosition": {
+    "description": "Represents the Position that has been effected by a business or life-cycle event.",
+    "type": {
+      "blueId": "Hn6w21tS9k9kDCw9ST7gQk8qVRsRsevccA4tm7FpaDxk"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "observationHistory": {
+    "description": "Represents the observed events related to a particular product or process, such as credit events or corporate actions.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "AUKaDi8wBrSCiamYGMSXg4NnBaVJ6RqTbEPJLPGJvogZ"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "state": {
+    "description": "Represents the State of the Position through its life-cycle.",
+    "type": {
+      "blueId": "DDF17JAmF3yHugfuGeT3uuLfcet6BCAWJq9J8ooP4haZ"
+    }
+  },
+  "valuationHistory": {
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "DuYQJ7immrjRPWFMqGY9eurJKTuzsqj6rmPjznZMGTTF"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

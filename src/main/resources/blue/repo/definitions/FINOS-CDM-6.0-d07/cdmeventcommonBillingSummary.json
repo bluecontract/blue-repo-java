@@ -1,0 +1,19 @@
+{
+  "name": "cdm/event/common/BillingSummary",
+  "description": "Specifies individual summaries within a billing invoice.",
+  "summaryAmountType": {
+    "description": "The account level for the billing summary.",
+    "type": {
+      "blueId": "ARDsZpRxQicigT4PhYAFVVd59csit2WJn69UmEjvD83e"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "summaryTransfer": {
+    "description": "The settlement terms for the billing summary",
+    "type": {
+      "blueId": "4ULkob7geaFi4FNFPUCGaZCPoXvyGtqo3MQvvnJjoxSA"
+    }
+  }
+}

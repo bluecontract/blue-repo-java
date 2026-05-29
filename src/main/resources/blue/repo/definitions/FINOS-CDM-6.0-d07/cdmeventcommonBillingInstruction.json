@@ -1,0 +1,64 @@
+{
+  "name": "cdm/event/common/BillingInstruction",
+  "description": "Specifies the instructions for creation of a Security Lending billing invoice.",
+  "billingEndDate": {
+    "description": "The ending date of the period described by this invoice",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "billingRecordInstruction": {
+    "description": "Instructions for creating the billing records contained within the invoice",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GHNWM47xcm5vyjPo7RH5WkGHLiTCEPRnnfhWju5doeaU"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  },
+  "billingStartDate": {
+    "description": "The starting date of the period described by this invoice",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "billingSummary": {
+    "description": "The billing summaries contained within the invoice",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "5h1XJBdwYg2VGdJNBNbMXHaKgzY2T6kexXbw8RWBRNNV"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "receivingParty": {
+    "description": "The party receiving the invoice",
+    "type": {
+      "blueId": "AhMzsyCZTs6HTjAUKURsN7RTVyw8rXkq1JPPNPUdYnBq"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "sendingParty": {
+    "description": "The party issuing the invoice",
+    "type": {
+      "blueId": "AhMzsyCZTs6HTjAUKURsN7RTVyw8rXkq1JPPNPUdYnBq"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

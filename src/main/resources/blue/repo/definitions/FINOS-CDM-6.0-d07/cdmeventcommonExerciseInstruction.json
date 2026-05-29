@@ -1,0 +1,43 @@
+{
+  "name": "cdm/event/common/ExerciseInstruction",
+  "description": "Specifies the information required to communicate the choices made by the exercising party, in a financial product endowing the party with at least one option.\n",
+  "exerciseDate": {
+    "description": "Specifies the date on which an option contained within the financial product would be exercised. The date may be omitted if the contractual product allows for only a single date of exercise (European exercise).\n",
+    "type": {
+      "blueId": "BBAVDUrM5cNHg3smnVaPuKgDAYDE74qgwS7DzDDcrvHs"
+    }
+  },
+  "exerciseOption": {
+    "description": "Specifies the Option Payout being exercised on the trade.",
+    "type": {
+      "blueId": "E8kNFVq5rjJaDyLo4StMphfzm1hmN8457CXWNFQVj2iH"
+    }
+  },
+  "exerciseQuantity": {
+    "description": "Contains instructions for exercising the option including a quantity change, and optionally a transfer.",
+    "type": {
+      "blueId": "this#0"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "exerciseTime": {
+    "description": "Specifies the time at which an option contained within the financial product woulld be exercised. The time may be omitted if the contractual product allows for only a single time of exercise (European exercise).\n",
+    "type": {
+      "blueId": "DJHcCUvgkjrpH1UjAWPG6z2avBDGcvFeWgf2oWZMM7ef"
+    }
+  },
+  "replacementTradeIdentifier": {
+    "description": "Specifies the trade identifier to apply to the replacement trade for physical exercise.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "61T88AjWwvbxc7kozKt8kg9syaAo43s8CfQtNmM2hGQa"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

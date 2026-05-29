@@ -1,0 +1,10 @@
+{
+  "name": "Transaction Details Updated",
+  "description": "The Guarantor accepted and recorded updated transaction details.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "transactionDetails": {
+    "description": "Opaque transaction details payload confirmed by the Guarantor."
+  }
+}

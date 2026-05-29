@@ -1,0 +1,28 @@
+{
+  "name": "cdm/event/workflow/PartyCustomisedWorkflow",
+  "description": "A class to specify a party-related, non-standardized data in a generic form.",
+  "customisedWorkflow": {
+    "description": "Non-standardized data in a generic form.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "9o6dftGzWQkngHfD75K68QMrzPCrZvWJNhFG49ShH3Yr"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  },
+  "partyName": {
+    "description": "The party name to which the workflow pertains to.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "partyReference": {
+    "description": "Reference to the party to which the workflow pertains to.",
+    "type": {
+      "blueId": "Doqu2fdYiHUWbSaMDHL5YoyEeuzbTrSjqbT1ZLqmB1Cr"
+    }
+  }
+}

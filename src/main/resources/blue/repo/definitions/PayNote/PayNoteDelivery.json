@@ -1,0 +1,2464 @@
+{
+  "name": "PayNote Delivery",
+  "description": "Tracks delivery of a PayNote through a deliverer (e.g., bank) to a receiver (payer - client).",
+  "contracts": {
+    "payNoteSender": {
+      "description": "Participant submitting the PayNote delivery (merchant or processor).",
+      "type": {
+        "blueId": "DwLMXCJcg3AL4GHW1SjraxoNDPpswXH6RHsx4fNDT6rg"
+      }
+    },
+    "payNoteDeliverer": {
+      "description": "Participant delivering and reporting status (e.g., bank).",
+      "type": {
+        "blueId": "DwLMXCJcg3AL4GHW1SjraxoNDPpswXH6RHsx4fNDT6rg"
+      }
+    },
+    "initLifecycleChannel": {
+      "type": {
+        "blueId": "2DXGQUiQBQ6CT89jwAsTAXaEPhLgiSXhKCGh9Q7Hv3MQ"
+      },
+      "event": {
+        "type": {
+          "blueId": "Ht1o66MTLKf7JmnEiR27rRLSwdz8FUTgf2mGPNuLSDUL"
+        }
+      }
+    },
+    "initialize": {
+      "type": {
+        "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
+      },
+      "channel": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "initLifecycleChannel"
+      },
+      "steps": {
+        "items": [
+          {
+            "name": "Initialize Delivery State",
+            "type": {
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
+            },
+            "changeset": {
+              "items": [
+                {
+                  "op": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "replace"
+                  },
+                  "path": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "/deliveryStatus"
+                  },
+                  "val": {
+                    "type": {
+                      "blueId": "CE3FgdBrYRhs4Vvz93ArW8TvzWgQvouEyuJ72bGiidXS"
+                    }
+                  }
+                },
+                {
+                  "op": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "replace"
+                  },
+                  "path": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "/transactionIdentificationStatus"
+                  },
+                  "val": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "pending"
+                  }
+                },
+                {
+                  "op": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "replace"
+                  },
+                  "path": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "/clientDecisionStatus"
+                  },
+                  "val": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "pending"
+                  }
+                },
+                {
+                  "op": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "replace"
+                  },
+                  "path": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "/deliveryError"
+                  },
+                  "val": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": ""
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "updateTransactionIdentificationStatus": {
+      "type": {
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+      },
+      "channel": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "payNoteDeliverer"
+      },
+      "request": {
+        "description": "True when the transaction is identified.",
+        "type": {
+          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+        }
+      }
+    },
+    "updateTransactionIdentificationStatusImpl": {
+      "type": {
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+      },
+      "operation": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "updateTransactionIdentificationStatus"
+      },
+      "steps": {
+        "items": [
+          {
+            "name": "ClassifyIdentificationResult",
+            "type": {
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+            },
+            "do": {
+              "items": [
+                {
+                  "$let": {
+                    "order": {
+                      "items": [
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "identified"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "currentStatus"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "canUpdate"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "nextIdentificationStatus"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "nextDeliveryStatus"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "nextDeliveryError"
+                        }
+                      ]
+                    },
+                    "vars": {
+                      "identified": {
+                        "$eq": {
+                          "items": [
+                            {
+                              "$event": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "/message/request"
+                              }
+                            },
+                            {
+                              "type": {
+                                "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                              },
+                              "value": true
+                            }
+                          ]
+                        }
+                      },
+                      "currentStatus": {
+                        "$document": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/transactionIdentificationStatus"
+                        }
+                      },
+                      "canUpdate": {
+                        "$not": {
+                          "$or": {
+                            "items": [
+                              {
+                                "$eq": {
+                                  "items": [
+                                    {
+                                      "$document": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/transactionIdentificationStatus"
+                                      }
+                                    },
+                                    {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "identified"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "$eq": {
+                                  "items": [
+                                    {
+                                      "$document": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/transactionIdentificationStatus"
+                                      }
+                                    },
+                                    {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "failed"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "nextIdentificationStatus": {
+                        "$choose": {
+                          "cond": {
+                            "$var": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "canUpdate"
+                            }
+                          },
+                          "then": {
+                            "$choose": {
+                              "cond": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "identified"
+                                }
+                              },
+                              "then": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "identified"
+                              },
+                              "else": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "failed"
+                              }
+                            }
+                          },
+                          "else": {
+                            "$var": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "currentStatus"
+                            }
+                          }
+                        }
+                      },
+                      "nextDeliveryStatus": {
+                        "$choose": {
+                          "cond": {
+                            "$var": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "canUpdate"
+                            }
+                          },
+                          "then": {
+                            "$choose": {
+                              "cond": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "identified"
+                                }
+                              },
+                              "then": {
+                                "type": {
+                                  "blueId": "5BQB6Hsr3qxMsZikHdqd2LGeKdQafEQ4jo6TBqm9JZuB"
+                                },
+                                "mode": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "active"
+                                }
+                              },
+                              "else": {
+                                "type": {
+                                  "blueId": "6tenJidVxJRDqxtYM4xGs6fxD2E7MVvGQwv5rF4HnGsh"
+                                },
+                                "mode": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "terminated"
+                                }
+                              }
+                            }
+                          },
+                          "else": {
+                            "$default": {
+                              "items": [
+                                {
+                                  "$document": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/deliveryStatus"
+                                  }
+                                },
+                                {
+                                  "type": {
+                                    "blueId": "CE3FgdBrYRhs4Vvz93ArW8TvzWgQvouEyuJ72bGiidXS"
+                                  },
+                                  "mode": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "pending"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "nextDeliveryError": {
+                        "$choose": {
+                          "cond": {
+                            "$var": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "canUpdate"
+                            }
+                          },
+                          "then": {
+                            "$choose": {
+                              "cond": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "identified"
+                                }
+                              },
+                              "then": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": ""
+                              },
+                              "else": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "Transaction identification failed"
+                              }
+                            }
+                          },
+                          "else": {
+                            "$default": {
+                              "items": [
+                                {
+                                  "$document": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/deliveryError"
+                                  }
+                                },
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": ""
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
+                    },
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/transactionIdentificationStatus"
+                    },
+                    "val": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "nextIdentificationStatus"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
+                    },
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/deliveryStatus"
+                    },
+                    "val": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "nextDeliveryStatus"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
+                    },
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/deliveryError"
+                    },
+                    "val": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "nextDeliveryError"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$if": {
+                    "cond": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "canUpdate"
+                      }
+                    },
+                    "then": {
+                      "items": [
+                        {
+                          "$if": {
+                            "cond": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "identified"
+                              }
+                            },
+                            "then": {
+                              "items": [
+                                {
+                                  "$appendEvent": {
+                                    "type": {
+                                      "blueId": "BDeXDAG91B72CFtoPcDUk3odhFMBhiueneS1RcM4nbPf"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            "else": {
+                              "items": [
+                                {
+                                  "$appendEvent": {
+                                    "type": {
+                                      "blueId": "7zoVbzvzqxvKAcvdbSSxGPR4RxjQ9iNip3WhU52bRBtb"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "changeset": {
+                      "$changeset": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    },
+                    "events": {
+                      "$events": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "acceptPayNote": {
+      "type": {
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+      },
+      "channel": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "payNoteDeliverer"
+      },
+      "request": {
+        "acceptedAt": {
+          "description": "Timestamp when the client accepted.",
+          "type": {
+            "blueId": "47EN5A1B1ZXXdXMEoURVJquMSjdDuKFNDjMrkvVxoVJk"
+          }
+        }
+      }
+    },
+    "acceptPayNoteImpl": {
+      "type": {
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+      },
+      "operation": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "acceptPayNote"
+      },
+      "steps": {
+        "items": [
+          {
+            "name": "CaptureAcceptanceTimestamp",
+            "type": {
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+            },
+            "entry": {
+              "type": {
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+              },
+              "value": "accept"
+            },
+            "functions": {
+              "asText": {
+                "args": {
+                  "val": {
+                    "description": "BEX helper argument."
+                  }
+                },
+                "expr": {
+                  "$choose": {
+                    "cond": {
+                      "$isKind": {
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "val"
+                          }
+                        },
+                        "kind": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "text"
+                        }
+                      }
+                    },
+                    "then": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "val"
+                      }
+                    },
+                    "else": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": ""
+                    }
+                  }
+                }
+              },
+              "accept": {
+                "do": {
+                  "items": [
+                    {
+                      "$let": {
+                        "order": {
+                          "items": [
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "acceptedAt"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "currentDecisionStatus"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "alreadyDecided"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "transactionStatus"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "canAccept"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "discardReason"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "nextDecisionStatus"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "nextAcceptedAt"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "nextDeliveryStatus"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "nextDeliveryError"
+                            }
+                          ]
+                        },
+                        "vars": {
+                          "acceptedAt": {
+                            "$call": {
+                              "function": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "asText"
+                              },
+                              "args": {
+                                "val": {
+                                  "$event": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/message/request/acceptedAt"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "currentDecisionStatus": {
+                            "$call": {
+                              "function": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "asText"
+                              },
+                              "args": {
+                                "val": {
+                                  "$document": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/clientDecisionStatus"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "alreadyDecided": {
+                            "$or": {
+                              "items": [
+                                {
+                                  "$eq": {
+                                    "items": [
+                                      {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "currentDecisionStatus"
+                                        }
+                                      },
+                                      {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "accepted"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "$eq": {
+                                    "items": [
+                                      {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "currentDecisionStatus"
+                                        }
+                                      },
+                                      {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "rejected"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "transactionStatus": {
+                            "$call": {
+                              "function": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "asText"
+                              },
+                              "args": {
+                                "val": {
+                                  "$document": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/transactionIdentificationStatus"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "canAccept": {
+                            "$and": {
+                              "items": [
+                                {
+                                  "$eq": {
+                                    "items": [
+                                      {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "transactionStatus"
+                                        }
+                                      },
+                                      {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "identified"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "$eq": {
+                                    "items": [
+                                      {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "currentDecisionStatus"
+                                        }
+                                      },
+                                      {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "pending"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "discardReason": {
+                            "$choose": {
+                              "cond": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "canAccept"
+                                }
+                              },
+                              "then": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": ""
+                              },
+                              "else": {
+                                "$choose": {
+                                  "cond": {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "alreadyDecided"
+                                    }
+                                  },
+                                  "then": {
+                                    "$concat": {
+                                      "items": [
+                                        {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "PayNote already"
+                                        },
+                                        {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": " "
+                                        },
+                                        {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "currentDecisionStatus"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "else": {
+                                    "$choose": {
+                                      "cond": {
+                                        "$eq": {
+                                          "items": [
+                                            {
+                                              "$var": {
+                                                "type": {
+                                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                },
+                                                "value": "transactionStatus"
+                                              }
+                                            },
+                                            {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "failed"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "then": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "Transaction identification failed"
+                                      },
+                                      "else": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "Transaction not identified"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "nextDecisionStatus": {
+                            "$choose": {
+                              "cond": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "canAccept"
+                                }
+                              },
+                              "then": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "accepted"
+                              },
+                              "else": {
+                                "$choose": {
+                                  "cond": {
+                                    "$truthy": {
+                                      "$var": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "currentDecisionStatus"
+                                      }
+                                    }
+                                  },
+                                  "then": {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "currentDecisionStatus"
+                                    }
+                                  },
+                                  "else": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "pending"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "nextAcceptedAt": {
+                            "$choose": {
+                              "cond": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "canAccept"
+                                }
+                              },
+                              "then": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "acceptedAt"
+                                }
+                              },
+                              "else": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "asText"
+                                  },
+                                  "args": {
+                                    "val": {
+                                      "$document": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/clientAcceptedAt"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "nextDeliveryStatus": {
+                            "$choose": {
+                              "cond": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "canAccept"
+                                }
+                              },
+                              "then": {
+                                "type": {
+                                  "blueId": "BEc6aieqN1iaXT2bNQVag1a1cGygZCLCjXf3mvupetNg"
+                                },
+                                "mode": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "terminated"
+                                }
+                              },
+                              "else": {
+                                "$default": {
+                                  "items": [
+                                    {
+                                      "$document": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/deliveryStatus"
+                                      }
+                                    },
+                                    {
+                                      "type": {
+                                        "blueId": "CE3FgdBrYRhs4Vvz93ArW8TvzWgQvouEyuJ72bGiidXS"
+                                      },
+                                      "mode": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "pending"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "nextDeliveryError": {
+                            "$choose": {
+                              "cond": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "canAccept"
+                                }
+                              },
+                              "then": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": ""
+                              },
+                              "else": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "asText"
+                                  },
+                                  "args": {
+                                    "val": {
+                                      "$document": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/deliveryError"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$appendChange": {
+                        "op": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "replace"
+                        },
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/clientDecisionStatus"
+                        },
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "nextDecisionStatus"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$appendChange": {
+                        "op": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "replace"
+                        },
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/clientAcceptedAt"
+                        },
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "nextAcceptedAt"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$appendChange": {
+                        "op": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "replace"
+                        },
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/deliveryStatus"
+                        },
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "nextDeliveryStatus"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$appendChange": {
+                        "op": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "replace"
+                        },
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/deliveryError"
+                        },
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "nextDeliveryError"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$if": {
+                        "cond": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "canAccept"
+                          }
+                        },
+                        "then": {
+                          "items": [
+                            {
+                              "$appendEvent": {
+                                "type": {
+                                  "blueId": "9ST1DLJxByDzvtdeJt8SFeZadSYokstVbWYcGVXnrEzk"
+                                },
+                                "acceptedAt": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "acceptedAt"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "$appendEvent": {
+                                "$document": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "/payNoteBootstrapRequest"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "else": {
+                          "items": [
+                            {
+                              "$appendEvent": {
+                                "type": {
+                                  "blueId": "FR7p4QLk7jBBdXGzTwYN2KAeBx6gVGf9kTyF4pn45wLE"
+                                },
+                                "decision": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "accepted"
+                                },
+                                "reason": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "discardReason"
+                                  }
+                                },
+                                "decisionAt": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "acceptedAt"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "$return": {
+                        "changeset": {
+                          "$changeset": {
+                            "type": {
+                              "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                            },
+                            "value": true
+                          }
+                        },
+                        "events": {
+                          "$events": {
+                            "type": {
+                              "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                            },
+                            "value": true
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "rejectPayNote": {
+      "type": {
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+      },
+      "channel": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "payNoteDeliverer"
+      },
+      "request": {
+        "reason": {
+          "description": "Optional rejection reason.",
+          "type": {
+            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+          }
+        },
+        "rejectedAt": {
+          "description": "Timestamp when the client rejected.",
+          "type": {
+            "blueId": "47EN5A1B1ZXXdXMEoURVJquMSjdDuKFNDjMrkvVxoVJk"
+          }
+        }
+      }
+    },
+    "rejectPayNoteImpl": {
+      "type": {
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+      },
+      "operation": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "rejectPayNote"
+      },
+      "steps": {
+        "items": [
+          {
+            "name": "CaptureRejectionReason",
+            "type": {
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+            },
+            "entry": {
+              "type": {
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+              },
+              "value": "reject"
+            },
+            "functions": {
+              "asText": {
+                "args": {
+                  "val": {
+                    "description": "BEX helper argument."
+                  }
+                },
+                "expr": {
+                  "$choose": {
+                    "cond": {
+                      "$isKind": {
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "val"
+                          }
+                        },
+                        "kind": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "text"
+                        }
+                      }
+                    },
+                    "then": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "val"
+                      }
+                    },
+                    "else": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": ""
+                    }
+                  }
+                }
+              },
+              "reject": {
+                "do": {
+                  "items": [
+                    {
+                      "$let": {
+                        "order": {
+                          "items": [
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "request"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "safeReason"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "rejectedAt"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "currentDecisionStatus"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "alreadyDecided"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "transactionStatus"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "canReject"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "discardReason"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "nextDecisionStatus"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "nextRejectedAt"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "nextDeliveryStatus"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "nextDeliveryError"
+                            }
+                          ]
+                        },
+                        "vars": {
+                          "request": {
+                            "$event": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/message/request"
+                            }
+                          },
+                          "safeReason": {
+                            "$choose": {
+                              "cond": {
+                                "$isKind": {
+                                  "val": {
+                                    "$event": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "/message/request"
+                                    }
+                                  },
+                                  "kind": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "text"
+                                  }
+                                }
+                              },
+                              "then": {
+                                "$event": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "/message/request"
+                                }
+                              },
+                              "else": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "asText"
+                                  },
+                                  "args": {
+                                    "val": {
+                                      "$event": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/message/request/reason"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "rejectedAt": {
+                            "$call": {
+                              "function": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "asText"
+                              },
+                              "args": {
+                                "val": {
+                                  "$event": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/message/request/rejectedAt"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "currentDecisionStatus": {
+                            "$call": {
+                              "function": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "asText"
+                              },
+                              "args": {
+                                "val": {
+                                  "$document": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/clientDecisionStatus"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "alreadyDecided": {
+                            "$or": {
+                              "items": [
+                                {
+                                  "$eq": {
+                                    "items": [
+                                      {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "currentDecisionStatus"
+                                        }
+                                      },
+                                      {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "accepted"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "$eq": {
+                                    "items": [
+                                      {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "currentDecisionStatus"
+                                        }
+                                      },
+                                      {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "rejected"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "transactionStatus": {
+                            "$call": {
+                              "function": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "asText"
+                              },
+                              "args": {
+                                "val": {
+                                  "$document": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/transactionIdentificationStatus"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "canReject": {
+                            "$and": {
+                              "items": [
+                                {
+                                  "$eq": {
+                                    "items": [
+                                      {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "transactionStatus"
+                                        }
+                                      },
+                                      {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "identified"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "$eq": {
+                                    "items": [
+                                      {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "currentDecisionStatus"
+                                        }
+                                      },
+                                      {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "pending"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "discardReason": {
+                            "$choose": {
+                              "cond": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "canReject"
+                                }
+                              },
+                              "then": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": ""
+                              },
+                              "else": {
+                                "$choose": {
+                                  "cond": {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "alreadyDecided"
+                                    }
+                                  },
+                                  "then": {
+                                    "$concat": {
+                                      "items": [
+                                        {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "PayNote already"
+                                        },
+                                        {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": " "
+                                        },
+                                        {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "currentDecisionStatus"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "else": {
+                                    "$choose": {
+                                      "cond": {
+                                        "$eq": {
+                                          "items": [
+                                            {
+                                              "$var": {
+                                                "type": {
+                                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                },
+                                                "value": "transactionStatus"
+                                              }
+                                            },
+                                            {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "failed"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "then": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "Transaction identification failed"
+                                      },
+                                      "else": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "Transaction not identified"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "nextDecisionStatus": {
+                            "$choose": {
+                              "cond": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "canReject"
+                                }
+                              },
+                              "then": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "rejected"
+                              },
+                              "else": {
+                                "$choose": {
+                                  "cond": {
+                                    "$truthy": {
+                                      "$var": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "currentDecisionStatus"
+                                      }
+                                    }
+                                  },
+                                  "then": {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "currentDecisionStatus"
+                                    }
+                                  },
+                                  "else": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "pending"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "nextRejectedAt": {
+                            "$choose": {
+                              "cond": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "canReject"
+                                }
+                              },
+                              "then": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "rejectedAt"
+                                }
+                              },
+                              "else": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "asText"
+                                  },
+                                  "args": {
+                                    "val": {
+                                      "$document": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/clientRejectedAt"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "nextDeliveryStatus": {
+                            "$choose": {
+                              "cond": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "canReject"
+                                }
+                              },
+                              "then": {
+                                "type": {
+                                  "blueId": "6tenJidVxJRDqxtYM4xGs6fxD2E7MVvGQwv5rF4HnGsh"
+                                },
+                                "mode": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "terminated"
+                                }
+                              },
+                              "else": {
+                                "$default": {
+                                  "items": [
+                                    {
+                                      "$document": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/deliveryStatus"
+                                      }
+                                    },
+                                    {
+                                      "type": {
+                                        "blueId": "CE3FgdBrYRhs4Vvz93ArW8TvzWgQvouEyuJ72bGiidXS"
+                                      },
+                                      "mode": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "pending"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "nextDeliveryError": {
+                            "$choose": {
+                              "cond": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "canReject"
+                                }
+                              },
+                              "then": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "safeReason"
+                                }
+                              },
+                              "else": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "asText"
+                                  },
+                                  "args": {
+                                    "val": {
+                                      "$document": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/deliveryError"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$appendChange": {
+                        "op": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "replace"
+                        },
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/clientDecisionStatus"
+                        },
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "nextDecisionStatus"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$appendChange": {
+                        "op": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "replace"
+                        },
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/clientRejectedAt"
+                        },
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "nextRejectedAt"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$appendChange": {
+                        "op": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "replace"
+                        },
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/deliveryStatus"
+                        },
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "nextDeliveryStatus"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$appendChange": {
+                        "op": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "replace"
+                        },
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/deliveryError"
+                        },
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "nextDeliveryError"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$if": {
+                        "cond": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "canReject"
+                          }
+                        },
+                        "then": {
+                          "items": [
+                            {
+                              "$appendEvent": {
+                                "type": {
+                                  "blueId": "7jrHNe8HAs3LiLz5hmTZsAHCNwEaVNXQHf5ZomHVyVZC"
+                                },
+                                "reason": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "safeReason"
+                                  }
+                                },
+                                "rejectedAt": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "rejectedAt"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "else": {
+                          "items": [
+                            {
+                              "$appendEvent": {
+                                "type": {
+                                  "blueId": "FR7p4QLk7jBBdXGzTwYN2KAeBx6gVGf9kTyF4pn45wLE"
+                                },
+                                "decision": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "rejected"
+                                },
+                                "reason": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "discardReason"
+                                  }
+                                },
+                                "decisionAt": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "rejectedAt"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "$return": {
+                        "changeset": {
+                          "$changeset": {
+                            "type": {
+                              "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                            },
+                            "value": true
+                          }
+                        },
+                        "events": {
+                          "$events": {
+                            "type": {
+                              "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                            },
+                            "value": true
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "reportDeliveryError": {
+      "type": {
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+      },
+      "channel": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "payNoteDeliverer"
+      },
+      "request": {
+        "description": "Delivery error reason.",
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        }
+      }
+    },
+    "reportDeliveryErrorImpl": {
+      "type": {
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+      },
+      "operation": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "reportDeliveryError"
+      },
+      "steps": {
+        "items": [
+          {
+            "name": "CaptureDeliveryFailureReason",
+            "type": {
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+            },
+            "do": {
+              "items": [
+                {
+                  "$let": {
+                    "name": "reason",
+                    "expr": {
+                      "$choose": {
+                        "cond": {
+                          "$isKind": {
+                            "val": {
+                              "$event": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "/message/request"
+                              }
+                            },
+                            "kind": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "text"
+                            }
+                          }
+                        },
+                        "then": {
+                          "$event": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "/message/request"
+                          }
+                        },
+                        "else": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": ""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$appendEvent": {
+                    "type": {
+                      "blueId": "GJhhepPZcpJxJjNrFscPYJCaUQN8EgvXVZDobduzhSKy"
+                    },
+                    "reason": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "reason"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
+                    },
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/deliveryStatus"
+                    },
+                    "val": {
+                      "type": {
+                        "blueId": "6tenJidVxJRDqxtYM4xGs6fxD2E7MVvGQwv5rF4HnGsh"
+                      },
+                      "mode": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "terminated"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
+                    },
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/deliveryError"
+                    },
+                    "val": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "reason"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "changeset": {
+                      "$changeset": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    },
+                    "events": {
+                      "$events": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "payNoteBootstrapRequest": {
+    "description": "PayNote bootstrap request details.",
+    "type": {
+      "blueId": "3Uch8WXAZXUnHiWYF1Y2KaDBnfAFyUbZoDkeoPRYHZWC"
+    },
+    "document": {
+      "type": {
+        "blueId": "6S6GNBUumRoRS4YWJxiiKeiyZ2dYH2nhcSpzGYvBJAha"
+      }
+    }
+  },
+  "paymentMandateBootstrapRequest": {
+    "description": "Optional Payment Mandate bootstrap request details for Delivery flows that require mandate attachment before proposal exposure.",
+    "type": {
+      "blueId": "3Uch8WXAZXUnHiWYF1Y2KaDBnfAFyUbZoDkeoPRYHZWC"
+    },
+    "document": {
+      "type": {
+        "blueId": "GEPKwP2gi9PW5dvK92etfK89S4NZtwoUBd6arwrjMs2c"
+      }
+    }
+  },
+  "cardTransactionDetails": {
+    "description": "Card network identifiers used to match processor and issuer records.",
+    "type": {
+      "blueId": "DVykYmmbhDsjsNQCjETGqumKJW5doNkkk6K6R4xeFWTV"
+    }
+  },
+  "deliveryStatus": {
+    "description": "High-level delivery status.",
+    "type": {
+      "blueId": "9rzc7B4yEw9gVuuaoFbRUpfajTPuxBLecVWkmHuBSg7z"
+    }
+  },
+  "transactionIdentificationStatus": {
+    "description": "Identification state (pending, identified, failed).",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "clientDecisionStatus": {
+    "description": "Client decision (pending, accepted, rejected).",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "clientAcceptedAt": {
+    "description": "Timestamp when the client accepted.",
+    "type": {
+      "blueId": "47EN5A1B1ZXXdXMEoURVJquMSjdDuKFNDjMrkvVxoVJk"
+    }
+  },
+  "clientRejectedAt": {
+    "description": "Timestamp when the client rejected.",
+    "type": {
+      "blueId": "47EN5A1B1ZXXdXMEoURVJquMSjdDuKFNDjMrkvVxoVJk"
+    }
+  },
+  "deliveryError": {
+    "description": "Error message when delivery fails.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "cdm/product/asset/floatingrate/FloatingRateProcessingDetails",
+  "description": "Type for reporting the details of the rate treatment.  This could potentially be replaced by the existing FloatingRateDefinition type , but this is slightly more detailed.\n",
+  "processedRate": {
+    "description": "The value of the rate after processing.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "processingParameters": {
+    "type": {
+      "blueId": "R5PJ18bhofLkJDdUS99qvBSZNCVQdrJzZJwLgQucMdm"
+    }
+  },
+  "rawRate": {
+    "description": "The raw or untreated rate, prior to any of the rate treatments.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "spreadExclusiveRate": {
+    "description": "The value of the processed rate without the spread applied, for subsequent compounding, etc.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

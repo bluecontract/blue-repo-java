@@ -1,0 +1,22 @@
+{
+  "name": "cdm/event/workflow/CustomisedWorkflow",
+  "description": "In its initial iteration, this class is meant to support the DTCC TIW workflow information.",
+  "itemName": {
+    "description": "In this initial iteration, this corresponds to the DTCC TIW element name.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "itemValue": {
+    "description": "In this initial iteration, this corresponds to the DTCC value.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

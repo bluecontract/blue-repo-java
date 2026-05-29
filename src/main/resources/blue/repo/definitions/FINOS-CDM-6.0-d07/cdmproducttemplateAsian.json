@@ -1,0 +1,30 @@
+{
+  "name": "cdm/product/template/Asian",
+  "description": "As per ISDA 2002 Definitions.",
+  "averagingInOut": {
+    "type": {
+      "blueId": "APmRwdptBxmVfgZptczwdHn8ZSrZoTRLvcWTEU7FYVBC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "averagingPeriodIn": {
+    "description": "The averaging in period.",
+    "type": {
+      "blueId": "G4QH9eBf6seqbHqMK1aKvxG7LfDwzyiS1ywSE5cmzJUi"
+    }
+  },
+  "averagingPeriodOut": {
+    "description": "The averaging out period.",
+    "type": {
+      "blueId": "G4QH9eBf6seqbHqMK1aKvxG7LfDwzyiS1ywSE5cmzJUi"
+    }
+  },
+  "strikeFactor": {
+    "description": "The factor of strike.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  }
+}

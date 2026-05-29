@@ -1,0 +1,72 @@
+{
+  "name": "cdm/event/position/AggregationParameters",
+  "description": "Parameters to be used to filter events that are relevant to a given portfolio in order to calculate the state of this portfolio. The attributes correspond to all the possible aggregation criteria that can be used and these criteria can be combined. All the attributes are optional.\n",
+  "dateTime": {
+    "description": "To aggregate as of a particular date",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "party": {
+    "description": "To aggregate based on a selection of party(ies) / legal entity(ies).",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "Doqu2fdYiHUWbSaMDHL5YoyEeuzbTrSjqbT1ZLqmB1Cr"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "positionStatus": {
+    "description": "To aggregate based on position status (EXECUTED, SETTLED etc)",
+    "type": {
+      "blueId": "Hjv5ZV6rWqMpMXguagZogWFoFn6pJLRB3L7AZDENVefw"
+    }
+  },
+  "product": {
+    "description": "To aggregate based on a selection of products.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "9qWGsXauVnxS5oNKRAwfaMctCyeviwAypHKtHdS4HXZd#4"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "productQualifier": {
+    "description": "To aggregate based on a selection of product type(s).",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "totalPosition": {
+    "description": "Specifies whether to calculate total position to given date, or only daily position for the given date.",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    }
+  },
+  "tradeReference": {
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "C5nADRBcWM2dKjXzJRRmahbypM7x2DUsv7Mxpuc9uPRu"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

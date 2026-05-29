@@ -1,0 +1,22 @@
+{
+  "name": "Linked Documents Permission Revoking in Progress",
+  "description": "MyOS Admin has started revoking this LDPG.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "targetSessionId": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "links": {
+    "type": {
+      "blueId": "DsDibGYwridS8uYoUcwFbBHa49UFAA7MtLNboXrXudmn"
+    }
+  },
+  "reason": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

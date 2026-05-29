@@ -1,0 +1,13 @@
+{
+  "name": "cdm/event/common/ObservationInstruction",
+  "description": "Specifies inputs needed to process an observation.",
+  "observationEvent": {
+    "description": "Contains all information related to an observation.",
+    "type": {
+      "blueId": "AUKaDi8wBrSCiamYGMSXg4NnBaVJ6RqTbEPJLPGJvogZ"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

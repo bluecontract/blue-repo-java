@@ -1,0 +1,55 @@
+{
+  "name": "cdm/event/position/AvailableInventory",
+  "description": "A data type that can be used to describe the inventory of securities that a party holds. The securities are held in the AvailableInventoryRecord, with each item in the array being an individual security and its associated criteria. Criteria can include the quantity available, the rate at which the security is available to borrow at, as well as other details that can affect the decision as to whether a party wants to utilise the securities listed.\n",
+  "availableInventoryRecord": {
+    "description": "An array holding the list of inventory being described. Each element in the inventoryRecord array represents an individual piece of inventory i.e. a security.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "2PzqS7CAzS1pzkkhqUiSY7UMcE8ABiMod4Mxfurbm6Xt"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "availableInventoryType": {
+    "description": "Defines the purpose of this inventory.",
+    "type": {
+      "blueId": "612RE9TFuXBPY2bmjLeagbJ3SGrCXp6rFSqovXoFm1wc"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "messageInformation": {
+    "description": "Allows details related to the availability messaging use case to be defined",
+    "type": {
+      "blueId": "7uXYNM1zzhrWKy2sTqMNZgVn2cTfvQDp8VZoL6n51Sdn"
+    }
+  },
+  "party": {
+    "description": "Defines all parties involved for the list of inventory records in this set of inventory. For example, when used to describe securities lending availability, this could hold the sender of the availability, the intended recipient, the beneficial owner(s), the lender (which may differ from the sender as the lender may have the same piece of availability going through multiple agents), an agent or a venue.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "AhMzsyCZTs6HTjAUKURsN7RTVyw8rXkq1JPPNPUdYnBq"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "partyRole": {
+    "description": "Defines the role(s) that party(ies) may have in relation to the inventory.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "7N6isgUMMMsMJoxpjNRRfdVHiWizDFmyABkC7s3LeRZ6"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

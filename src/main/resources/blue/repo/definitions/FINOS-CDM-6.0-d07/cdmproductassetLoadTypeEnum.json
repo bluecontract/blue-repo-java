@@ -1,0 +1,18 @@
+{
+  "name": "cdm/product/asset/LoadTypeEnum",
+  "description": "Specifies the load type of the delivery.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "BaseLoad",
+      "BlockHours",
+      "GasDay",
+      "OffPeak",
+      "Other",
+      "PeakLoad",
+      "Shaped"
+    ]
+  }
+}

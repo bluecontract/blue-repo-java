@@ -1,0 +1,15 @@
+{
+  "name": "cdm/observable/asset/CreditRatingOutlookEnum",
+  "description": "Represents the enumerated values to specify the credit rating outlook.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Developing",
+      "Negative",
+      "Positive",
+      "Stable"
+    ]
+  }
+}

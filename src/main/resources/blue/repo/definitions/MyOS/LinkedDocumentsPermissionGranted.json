@@ -1,0 +1,23 @@
+{
+  "name": "Linked Documents Permission Granted",
+  "description": "All initial rights from this LDPG have been persisted.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "targetSessionId": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "links": {
+    "type": {
+      "blueId": "DsDibGYwridS8uYoUcwFbBHa49UFAA7MtLNboXrXudmn"
+    }
+  },
+  "grantDocumentId": {
+    "description": "Optional. Stable handle of the created permission grant document. Required in request/response document-grant flows that later support self-revoke from the grantee document.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

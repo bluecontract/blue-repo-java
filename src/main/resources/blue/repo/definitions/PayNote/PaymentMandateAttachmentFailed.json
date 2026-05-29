@@ -1,0 +1,13 @@
+{
+  "name": "Payment Mandate Attachment Failed",
+  "description": "Payment Mandate attachment to PayNote failed.",
+  "type": {
+    "blueId": "ENRQ621TbJpLg2cGyYkgTmPRLGKZkPqCzkBgm4yEXKF5"
+  },
+  "reason": {
+    "description": "Failure reason explaining why attachment failed.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

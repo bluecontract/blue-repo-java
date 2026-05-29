@@ -1,0 +1,21 @@
+{
+  "name": "cdm/legaldocumentation/common/LegalAgreementPublisherEnum",
+  "description": "The enumerated values to specify the legal agreement publisher.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AFB",
+      "BNYM",
+      "EMTA",
+      "ICMA",
+      "ISDA",
+      "ISDAClearstream",
+      "ISDAEuroclear",
+      "ISLA",
+      "JPMorgan",
+      "TheFXCommittee"
+    ]
+  }
+}

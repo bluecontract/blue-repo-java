@@ -1,0 +1,11 @@
+{
+  "name": "cdm/regulation/Buyr",
+  "acctOwnr": {
+    "type": {
+      "blueId": "CXTPKZ5YReXQj11xMFirCdoxj9AYZWA5r8uNPxE15Shm"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

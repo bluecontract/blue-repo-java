@@ -1,0 +1,46 @@
+{
+  "name": "cdm/event/common/BillingRecord",
+  "description": "Specifies individual records within a billing invoice.",
+  "minimumFee": {
+    "description": "Indicates the minimum fee amount applied to the billing record, if any.",
+    "type": {
+      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+    }
+  },
+  "recordEndDate": {
+    "description": "The ending date of the period described by this record",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "recordStartDate": {
+    "description": "The starting date of the period described by this record",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "recordTransfer": {
+    "description": "The settlement terms for the billing record",
+    "type": {
+      "blueId": "4ULkob7geaFi4FNFPUCGaZCPoXvyGtqo3MQvvnJjoxSA"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "tradeState": {
+    "description": "The trade for the individual billing record.",
+    "type": {
+      "blueId": "EQ41UGrPkUeaUNXD9QmELA1aEoVBtx9tVzgQZ5Tp1rMT"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

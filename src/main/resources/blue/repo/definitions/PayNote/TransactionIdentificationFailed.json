@@ -1,0 +1,13 @@
+{
+  "name": "Transaction Identification Failed",
+  "description": "The deliverer could not identify the card transaction.",
+  "type": {
+    "blueId": "ENRQ621TbJpLg2cGyYkgTmPRLGKZkPqCzkBgm4yEXKF5"
+  },
+  "reason": {
+    "description": "Optional failure reason.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

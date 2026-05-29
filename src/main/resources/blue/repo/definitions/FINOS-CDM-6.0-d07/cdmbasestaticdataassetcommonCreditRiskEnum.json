@@ -1,0 +1,13 @@
+{
+  "name": "cdm/base/staticdata/asset/common/CreditRiskEnum",
+  "description": "Represents an enumeration list to identify tranched or untranched credit risk.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "TranchedCreditRisk",
+      "UntranchedCreditRisk"
+    ]
+  }
+}

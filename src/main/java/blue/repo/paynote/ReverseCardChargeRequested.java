@@ -1,0 +1,73 @@
+package blue.repo.paynote;
+
+import blue.language.model.Node;
+import blue.language.model.TypeBlueId;
+import blue.repo.RepositoryType;
+import blue.repo.coordination.Request;
+import java.math.BigInteger;
+
+@TypeBlueId("5ZqjnjtJJMxKao4htfHUAJGTbPedxv9HMdELRsXaR8mR")
+public class ReverseCardChargeRequested extends Request {
+    public static String blueId() {
+        return "5ZqjnjtJJMxKao4htfHUAJGTbPedxv9HMdELRsXaR8mR";
+    }
+
+    public static String packageName() {
+        return "PayNote";
+    }
+
+    public static String typeName() {
+        return "Reverse Card Charge Requested";
+    }
+
+    public static String qualifiedName() {
+        return "PayNote/Reverse Card Charge Requested";
+    }
+
+    public static String resourcePath() {
+        return "blue/repo/definitions/PayNote/ReverseCardChargeRequested.json";
+    }
+
+    public static RepositoryType repositoryType() {
+        return RepositoryType.of(
+                packageName(),
+                typeName(),
+                qualifiedName(),
+                blueId(),
+                resourcePath());
+    }
+
+    private BigInteger amount;
+
+    private String paymentMandateDocumentId;
+
+    private Node paynote;
+
+    public BigInteger getAmount() {
+        return amount;
+    }
+
+    public ReverseCardChargeRequested amount(BigInteger amount) {
+        this.amount = amount;
+        return this;
+    }
+
+    public String getPaymentMandateDocumentId() {
+        return paymentMandateDocumentId;
+    }
+
+    public ReverseCardChargeRequested paymentMandateDocumentId(String paymentMandateDocumentId) {
+        this.paymentMandateDocumentId = paymentMandateDocumentId;
+        return this;
+    }
+
+    public Node getPaynote() {
+        return paynote;
+    }
+
+    public ReverseCardChargeRequested paynote(Node paynote) {
+        this.paynote = paynote;
+        return this;
+    }
+
+}

@@ -1,0 +1,15 @@
+{
+  "name": "cdm/product/collateral/AlternativeToInterestAmountEnum",
+  "description": "If there is an alternative to interest amounts, how is it specified?",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "ActualAmountReceived",
+      "Other",
+      "Standard",
+      "TransferIfDeliveryAmountBelowMTA"
+    ]
+  }
+}

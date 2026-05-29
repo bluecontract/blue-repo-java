@@ -1,0 +1,24 @@
+{
+  "name": "Participant",
+  "accountId": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "email": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "timelineId": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "status": {
+    "description": "Participant activation status",
+    "type": {
+      "blueId": "ASa82RtPSXwdys7M5Xs5s3brTjYgJmQqJt2uyraQGrNA"
+    }
+  }
+}

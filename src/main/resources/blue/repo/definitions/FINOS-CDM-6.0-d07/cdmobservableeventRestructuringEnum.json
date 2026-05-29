@@ -1,0 +1,14 @@
+{
+  "name": "cdm/observable/event/RestructuringEnum",
+  "description": "The enumerated values to specify the form of the restructuring credit event that is applicable to the credit default swap.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "ModModR",
+      "ModR",
+      "R"
+    ]
+  }
+}

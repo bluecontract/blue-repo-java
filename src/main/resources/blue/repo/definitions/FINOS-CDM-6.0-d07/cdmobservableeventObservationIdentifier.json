@@ -1,0 +1,40 @@
+{
+  "name": "cdm/observable/event/ObservationIdentifier",
+  "description": "Defines the parameters needed to uniquely identify a piece of data among the population of all available market data.\n",
+  "determinationMethodology": {
+    "description": "Specifies the method according to which an amount or a date is determined.",
+    "type": {
+      "blueId": "FAHuKUTUeHs89cUaSXBHoJwfDkB5aXgT89caEM3A55z"
+    }
+  },
+  "informationSource": {
+    "description": "Represents where the market data published and should be observed.",
+    "type": {
+      "blueId": "GC12RddYoz1a7Q6sFJRGkckLjBH6TTumB7DKHyyBM3FL"
+    }
+  },
+  "observable": {
+    "description": "Represents the asset or rate to which the observation relates.",
+    "type": {
+      "blueId": "54FLifHpXsPqo7RAqsHZ5C4WxvmU2i8aDbM6EMkx64PM"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "observationDate": {
+    "description": "Specifies the date value to use when resolving the market data.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "observationTime": {
+    "description": "Represents the time and time-zone.",
+    "type": {
+      "blueId": "EqFtLUWpvw3DLzuAcBrVrto1J9g2RmH7gHRUakSBSnpr"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Reserve Funds Requested",
+  "description": "A participant requests the Guarantor to reserve (hold) a specific amount.",
+  "type": {
+    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
+  },
+  "amount": {
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    }
+  }
+}

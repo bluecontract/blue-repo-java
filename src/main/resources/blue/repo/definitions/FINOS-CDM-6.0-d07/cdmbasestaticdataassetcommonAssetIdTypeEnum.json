@@ -1,0 +1,27 @@
+{
+  "name": "cdm/base/staticdata/asset/common/AssetIdTypeEnum",
+  "description": "Extends product identifiers with additional identifier sources for Assets.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "BBGID",
+      "BBGTICKER",
+      "CUSIP",
+      "ClearingCode",
+      "CurrencyCode",
+      "ExchangeCode",
+      "FIGI",
+      "ISDACRP",
+      "ISIN",
+      "Name",
+      "Other",
+      "RIC",
+      "SEDOL",
+      "Sicovam",
+      "UPI",
+      "Wertpapier"
+    ]
+  }
+}

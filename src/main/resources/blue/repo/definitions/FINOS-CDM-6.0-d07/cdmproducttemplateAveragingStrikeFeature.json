@@ -1,0 +1,22 @@
+{
+  "name": "cdm/product/template/AveragingStrikeFeature",
+  "description": "Defines the terms required to calculate the average observations associated with an averaging strike.",
+  "averagingCalculation": {
+    "description": "Defines parameters for use in cases when a valuation or other term is based on an average of market observations.\n",
+    "type": {
+      "blueId": "8c8jodXTXZTXGtEBBCLNdZGym3ZQYVbB5FZcWZCRXJ8i"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "observationTerms": {
+    "description": "Class containing terms that are associated with observing a price/benchmark/index across either single or multple observations.\n",
+    "type": {
+      "blueId": "FNoctYhsKwgCboDSosTkUysvMaBTvwKBpiXagnxJHGcW"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

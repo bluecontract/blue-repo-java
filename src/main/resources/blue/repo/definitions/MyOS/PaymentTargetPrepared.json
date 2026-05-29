@@ -1,0 +1,55 @@
+{
+  "name": "Payment Target Prepared",
+  "description": "Result emitted after MyOS Admin successfully prepares an opaque recipient payment target.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "recipient": {
+    "description": "Prepared recipient reference.",
+    "type": {
+      "blueId": "9aVaJJvfRrGjLZ55HbKbrd4AUgA9RmjEUCxtfCtqodM9"
+    },
+    "token": {
+      "description": "Opaque prepared recipient token.",
+      "type": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      }
+    }
+  },
+  "amount": {
+    "description": "Optional effective amount constraint echoed back to the caller.",
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    }
+  },
+  "currency": {
+    "description": "Optional effective currency constraint echoed back to the caller.",
+    "type": {
+      "blueId": "rdiMJ9tNu3geCKLDwXxCCjVQzKvCyaFXHiZTFAkRsCJ"
+    }
+  },
+  "expiresAt": {
+    "description": "Optional expiry echoed back to the caller.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "allowedPayer": {
+    "description": "Optional effective payer restriction echoed back to the caller.",
+    "type": {
+      "blueId": "Cw952SXno2SWR9HL8EwUxWGeioRjxHjCd7G7uFAwC9kN"
+    }
+  },
+  "context": {
+    "description": "Optional business-context reference.",
+    "documentId": {
+      "description": "Blue document id identifying the business document this payment is for.",
+      "type": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      }
+    }
+  },
+  "expectedPaynote": {
+    "description": "Optional effective PayNote matcher echoed back to the caller."
+  }
+}

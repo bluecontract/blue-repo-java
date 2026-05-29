@@ -1,0 +1,85 @@
+{
+  "name": "cdm/event/position/CounterpartyPosition",
+  "description": "A Position describes the accumulated effect of a set of securities or financial transactions.",
+  "collateral": {
+    "description": "Represents the collateral obligations of a party.",
+    "type": {
+      "blueId": "5okT4PBEHijywnb7jBieEoVCyGTRkhzDmbMEDnxtpD92"
+    }
+  },
+  "contractDetails": {
+    "description": "Represents information specific to trades or positions involving contractual products.",
+    "type": {
+      "blueId": "9QvPaXwgMX4bfTdirhDyje4sXJhxGdfrXikFFGpngwAb"
+    }
+  },
+  "executionDetails": {
+    "description": "Defines specific attributes that relate to trade or position executions.",
+    "type": {
+      "blueId": "AveBbPNcyiENsH8aGj4xhEY7GkX7xuoVApDW87Er969J"
+    }
+  },
+  "openDateTime": {
+    "description": "The date and time when the position was opened.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "party": {
+    "description": "The parties involved in the position, including the Clearing Organization.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "AhMzsyCZTs6HTjAUKURsN7RTVyw8rXkq1JPPNPUdYnBq"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "partyRole": {
+    "description": "Represents the role each specified party takes in the position.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "7N6isgUMMMsMJoxpjNRRfdVHiWizDFmyABkC7s3LeRZ6"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "positionBase": {
+    "description": "Encapsulates the core constituents that characterize a position.",
+    "type": {
+      "blueId": "EkSENpAwscSiBYK9XZGkE1KyRfSRT6ZSxwF7X7PNxcvA"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "positionIdentifier": {
+    "description": "Represents the identifier(s) that uniquely identify a position for an identity issuer. A position can include multiple identifiers, for example an internal position identifer and a UTI (Unique Trade Identifier).\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "ycMy3qXJMa1XB7Pdp2kuzG1VD86CqRNtzoM93v1Ca6W"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "tradeReference": {
+    "description": "Reference to all the trades that constitute the position.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "EQ41UGrPkUeaUNXD9QmELA1aEoVBtx9tVzgQZ5Tp1rMT"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

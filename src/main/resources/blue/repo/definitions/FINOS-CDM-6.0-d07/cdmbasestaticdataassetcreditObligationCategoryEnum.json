@@ -1,0 +1,17 @@
+{
+  "name": "cdm/base/staticdata/asset/credit/ObligationCategoryEnum",
+  "description": "The enumerated values used in both the obligations and deliverable obligations of the credit default swap to represent a class or type of securities which apply.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Bond",
+      "BondOrLoan",
+      "BorrowedMoney",
+      "Loan",
+      "Payment",
+      "ReferenceObligationsOnly"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "cdm/base/staticdata/party/LegalEntity",
+  "description": "A class to specify a legal entity, with a required name and an optional entity identifier (such as the LEI).",
+  "entityId": {
+    "description": "A legal entity identifier (e.g. RED entity code).",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

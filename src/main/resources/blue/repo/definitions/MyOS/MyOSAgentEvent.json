@@ -1,0 +1,25 @@
+{
+  "name": "MyOS Agent Event",
+  "description": "MyOS-specific agent event with agent ID, timestamp, and event data",
+  "agentId": {
+    "description": "Optional agent identifier",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "id": {
+    "description": "Optional event ID",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "timestamp": {
+    "description": "Optional timestamp for the event",
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    }
+  },
+  "event": {
+    "description": "Optional event node reference"
+  }
+}

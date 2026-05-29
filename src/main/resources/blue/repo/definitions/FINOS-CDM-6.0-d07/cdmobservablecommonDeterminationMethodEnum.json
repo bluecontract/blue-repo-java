@@ -1,0 +1,27 @@
+{
+  "name": "cdm/observable/common/DeterminationMethodEnum",
+  "description": "The enumerated values to specify the method according to which an amount or a date is determined.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AgreedInitialPrice",
+      "AsSpecifiedInMasterConfirmation",
+      "CalculationAgent",
+      "ClosingPrice",
+      "DividendCurrency",
+      "ExpiringContractLevel",
+      "HedgeExecution",
+      "IssuerPaymentCurrency",
+      "NAV",
+      "OSPPrice",
+      "OpenPrice",
+      "SettlementCurrency",
+      "StrikeDateDetermination",
+      "TWAPPrice",
+      "VWAPPrice",
+      "ValuationTime"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "cdm/observable/asset/FxSpotRateSource",
+  "description": "A class defining the rate source and fixing time for an FX rate.",
+  "primarySource": {
+    "description": "The primary source for where the rate observation will occur. Will typically be either a page or a reference bank published rate.\n",
+    "type": {
+      "blueId": "GC12RddYoz1a7Q6sFJRGkckLjBH6TTumB7DKHyyBM3FL"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "secondarySource": {
+    "description": "An alternative, or secondary, source for where the rate observation will occur. Will typically be either a page or a reference bank published rate.\n",
+    "type": {
+      "blueId": "GC12RddYoz1a7Q6sFJRGkckLjBH6TTumB7DKHyyBM3FL"
+    }
+  }
+}

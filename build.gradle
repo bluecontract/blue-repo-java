@@ -41,7 +41,7 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 dependencies {
-    api 'blue.language:blue-language-java:2.0.0'
+    api 'blue.language:blue-language-java:3.0.0'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
 
     testImplementation platform('org.junit:junit-bom:5.10.2')
@@ -69,6 +69,7 @@ test {
 ext.genResourcesDir = file("$buildDir/generated-resources")
 task generateBuildProperties {
     ext.buildPropertiesFile = file("$genResourcesDir/blue/repo/build.properties")
+    inputs.property('projectVersion', project.version.toString())
     outputs.file(buildPropertiesFile)
     doLast {
         buildPropertiesFile.text = """\
@@ -80,16 +81,26 @@ task generateBuildProperties {
 sourceSets.main.output.dir genResourcesDir, builtBy: generateBuildProperties
 
 def generatedRepositorySourcePaths = [
-        'src/main/java/blue/repo/v1_3_0',
+        'src/main/java/blue/repo/BlueRepositoryModels.java',
+        'src/main/java/blue/repo/common',
+        'src/main/java/blue/repo/coordination',
+        'src/main/java/blue/repo/finoscdm60d07',
+        'src/main/java/blue/repo/myos',
+        'src/main/java/blue/repo/paynote',
         'src/main/java/blue/repo/types',
-        'src/main/resources/blue/repo/v1_3_0'
+        'src/main/java/blue/repo/workflows',
+        'src/main/resources/blue/repo'
 ]
 
 def snapshotGeneratedRepositoryFiles = {
     def snapshot = new TreeMap<String, String>()
     generatedRepositorySourcePaths.each { relativePath ->
         def root = file(relativePath)
-        if (root.exists()) {
+        if (root.isFile()) {
+            def digest = java.security.MessageDigest.getInstance('SHA-256')
+            digest.update(root.bytes)
+            snapshot[relativePath] = digest.digest().encodeHex().toString()
+        } else if (root.exists()) {
             fileTree(root).visit { details ->
                 if (!details.directory) {
                     def digest = java.security.MessageDigest.getInstance('SHA-256')
@@ -139,7 +150,7 @@ def repositoryGeneratorArgs = {
 
 tasks.register('generateRepositorySources', Exec) {
     group = 'blue repository'
-    description = 'Generates v1.3.0 Java sources, constants, resources, and manifest from BlueRepository.blue.'
+    description = 'Generates stable-package Java sources, constants, resources, and manifest from BlueRepository.blue.'
     commandLine([nodeExecutable()] + repositoryGeneratorArgs())
 }
 

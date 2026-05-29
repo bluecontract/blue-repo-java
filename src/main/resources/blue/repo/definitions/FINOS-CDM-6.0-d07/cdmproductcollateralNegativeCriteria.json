@@ -1,0 +1,12 @@
+{
+  "name": "cdm/product/collateral/NegativeCriteria",
+  "description": "Used to apply a NOT logic condition to a single Collateral Criteria.",
+  "negativeCriteria": {
+    "type": {
+      "blueId": "this#1"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "cdm/event/common/MarginCallResponseAction",
+  "description": "Specifies the margin call action details, including collateral to be moved and its direction.",
+  "collateralPositionComponent": {
+    "description": "Specifies the collateral to be moved and its direction.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "CdGh67FpM7EuwY9DiNzkNvxn9zmpEPUE2dbCxLwEspEW"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  },
+  "marginCallAction": {
+    "description": "Specifies the margin call action details, specified as either Delivery or Return.",
+    "type": {
+      "blueId": "HLrSvugbtiErSMbzz2PSatSkJG7VWWXeHhF2sxCatuqa"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

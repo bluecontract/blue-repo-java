@@ -1,0 +1,1590 @@
+{
+  "name": "Worker Agency Permission Grant",
+  "type": {
+    "blueId": "FMWYekdjwkDnoM2YfHmwuUATHZovSgmDEvSVTmyVmbHc"
+  },
+  "contracts": {
+    "granterChannel": {
+      "description": "Granter/owner’s timeline (direct grant-document revoke lives here).",
+      "type": {
+        "blueId": "DwLMXCJcg3AL4GHW1SjraxoNDPpswXH6RHsx4fNDT6rg"
+      }
+    },
+    "initLifecycleChannel": {
+      "type": {
+        "blueId": "2DXGQUiQBQ6CT89jwAsTAXaEPhLgiSXhKCGh9Q7Hv3MQ"
+      },
+      "event": {
+        "type": {
+          "blueId": "Ht1o66MTLKf7JmnEiR27rRLSwdz8FUTgf2mGPNuLSDUL"
+        }
+      }
+    },
+    "revoke": {
+      "description": "Granter requests revocation on the grant document. Grantee-document self-revoke uses the existing revoke-request event with grantDocumentId emitted from the grantee document itself.",
+      "type": {
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+      },
+      "channel": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "granterChannel"
+      },
+      "request": {
+        "description": "Optional human-readable reason",
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        }
+      }
+    },
+    "revokeImplGranter": {
+      "type": {
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+      },
+      "operation": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "revoke"
+      },
+      "steps": {
+        "items": [
+          {
+            "name": "EmitRevokeRequested",
+            "type": {
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+            },
+            "do": {
+              "items": [
+                {
+                  "$appendEvent": {
+                    "type": {
+                      "blueId": "GeNaTohvYFC1xu9RLJS1buzqj1JpqyernRsvJiTiSTTY"
+                    },
+                    "reason": {
+                      "$event": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "/message/request"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "events": {
+                      "$events": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "validateOnInit": {
+      "type": {
+        "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
+      },
+      "channel": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "initLifecycleChannel"
+      },
+      "steps": {
+        "items": [
+          {
+            "name": "ValidateBasicShape",
+            "type": {
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+            },
+            "entry": {
+              "type": {
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+              },
+              "value": "validate"
+            },
+            "functions": {
+              "asList": {
+                "args": {
+                  "val": {
+                    "description": "BEX helper argument."
+                  }
+                },
+                "expr": {
+                  "$choose": {
+                    "cond": {
+                      "$isKind": {
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "val"
+                          }
+                        },
+                        "kind": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "list"
+                        }
+                      }
+                    },
+                    "then": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "val"
+                      }
+                    },
+                    "else": {
+                      "items": []
+                    }
+                  }
+                }
+              },
+              "asObject": {
+                "args": {
+                  "val": {
+                    "description": "BEX helper argument."
+                  }
+                },
+                "expr": {
+                  "$choose": {
+                    "cond": {
+                      "$isKind": {
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "val"
+                          }
+                        },
+                        "kind": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "object"
+                        }
+                      }
+                    },
+                    "then": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "val"
+                      }
+                    },
+                    "else": {
+                      "$emptyObject": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              },
+              "isNonEmptyText": {
+                "args": {
+                  "val": {
+                    "description": "BEX helper argument."
+                  }
+                },
+                "expr": {
+                  "$and": {
+                    "items": [
+                      {
+                        "$isKind": {
+                          "val": {
+                            "$var": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "val"
+                            }
+                          },
+                          "kind": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "text"
+                          }
+                        }
+                      },
+                      {
+                        "$truthy": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "val"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "hasBadSingleOps": {
+                "args": {
+                  "ops": {
+                    "description": "BEX helper argument."
+                  }
+                },
+                "expr": {
+                  "$some": {
+                    "in": {
+                      "$call": {
+                        "function": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "asList"
+                        },
+                        "args": {
+                          "val": {
+                            "$var": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "ops"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "item": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "opName"
+                    },
+                    "where": {
+                      "$not": {
+                        "$call": {
+                          "function": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "isNonEmptyText"
+                          },
+                          "args": {
+                            "val": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "opName"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "validate": {
+                "do": {
+                  "items": [
+                    {
+                      "$let": {
+                        "order": {
+                          "items": [
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "issues"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "seenWorkerTypes"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "granterId"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "granteeDocumentId"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "permissionsList"
+                            }
+                          ]
+                        },
+                        "vars": {
+                          "issues": {
+                            "items": []
+                          },
+                          "seenWorkerTypes": {
+                            "$emptyObject": {
+                              "type": {
+                                "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                              },
+                              "value": true
+                            }
+                          },
+                          "granterId": {
+                            "$document": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/contracts/granterChannel/accountId"
+                            }
+                          },
+                          "granteeDocumentId": {
+                            "$document": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/granteeDocumentId"
+                            }
+                          },
+                          "permissionsList": {
+                            "$choose": {
+                              "cond": {
+                                "$exists": {
+                                  "$document": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/allowedWorkerAgencyPermissions"
+                                  }
+                                }
+                              },
+                              "then": {
+                                "$document": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "/allowedWorkerAgencyPermissions"
+                                }
+                              },
+                              "else": {
+                                "items": []
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$if": {
+                        "cond": {
+                          "$not": {
+                            "$call": {
+                              "function": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "isNonEmptyText"
+                              },
+                              "args": {
+                                "val": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "granterId"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "then": {
+                          "items": [
+                            {
+                              "$set": {
+                                "name": "issues",
+                                "expr": {
+                                  "$listConcat": {
+                                    "items": [
+                                      {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "issues"
+                                        }
+                                      },
+                                      {
+                                        "items": [
+                                          {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "granterChannel must be bound to an accountId"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "$if": {
+                        "cond": {
+                          "$not": {
+                            "$call": {
+                              "function": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "isNonEmptyText"
+                              },
+                              "args": {
+                                "val": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "granteeDocumentId"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "then": {
+                          "items": [
+                            {
+                              "$set": {
+                                "name": "issues",
+                                "expr": {
+                                  "$listConcat": {
+                                    "items": [
+                                      {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "issues"
+                                        }
+                                      },
+                                      {
+                                        "items": [
+                                          {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "granteeDocumentId must be a non-empty string"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "$if": {
+                        "cond": {
+                          "$eq": {
+                            "items": [
+                              {
+                                "$size": {
+                                  "$call": {
+                                    "function": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "asList"
+                                    },
+                                    "args": {
+                                      "val": {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "permissionsList"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": {
+                                  "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                                },
+                                "value": 0
+                              }
+                            ]
+                          }
+                        },
+                        "then": {
+                          "items": [
+                            {
+                              "$set": {
+                                "name": "issues",
+                                "expr": {
+                                  "$listConcat": {
+                                    "items": [
+                                      {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "issues"
+                                        }
+                                      },
+                                      {
+                                        "items": [
+                                          {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "allowedWorkerAgencyPermissions must be a non-empty array"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "$forEach": {
+                        "in": {
+                          "$call": {
+                            "function": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "asList"
+                            },
+                            "args": {
+                              "val": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "permissionsList"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "item": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "item"
+                        },
+                        "index": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "idx"
+                        },
+                        "do": {
+                          "items": [
+                            {
+                              "$let": {
+                                "order": {
+                                  "items": [
+                                    {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "itemPath"
+                                    },
+                                    {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "itemObject"
+                                    },
+                                    {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "workerType"
+                                    },
+                                    {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "perms"
+                                    },
+                                    {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "singleOps"
+                                    },
+                                    {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "hasSingle"
+                                    }
+                                  ]
+                                },
+                                "vars": {
+                                  "itemPath": {
+                                    "$concat": {
+                                      "items": [
+                                        {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "/allowedWorkerAgencyPermissions["
+                                        },
+                                        {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "idx"
+                                          }
+                                        },
+                                        {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "]"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "itemObject": {
+                                    "$call": {
+                                      "function": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "asObject"
+                                      },
+                                      "args": {
+                                        "val": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "item"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "workerType": {
+                                    "$var": {
+                                      "name": "itemObject",
+                                      "path": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/workerType"
+                                      }
+                                    }
+                                  },
+                                  "perms": {
+                                    "$choose": {
+                                      "cond": {
+                                        "$exists": {
+                                          "$var": {
+                                            "name": "itemObject",
+                                            "path": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "/permissions"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "then": {
+                                        "$call": {
+                                          "function": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "asObject"
+                                          },
+                                          "args": {
+                                            "val": {
+                                              "$var": {
+                                                "name": "itemObject",
+                                                "path": {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "/permissions"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "else": {
+                                        "$emptyObject": {
+                                          "type": {
+                                            "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                                          },
+                                          "value": true
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "singleOps": {
+                                    "$choose": {
+                                      "cond": {
+                                        "$exists": {
+                                          "$var": {
+                                            "name": "perms",
+                                            "path": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "/singleOps"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "then": {
+                                        "$var": {
+                                          "name": "perms",
+                                          "path": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "/singleOps"
+                                          }
+                                        }
+                                      },
+                                      "else": {
+                                        "items": []
+                                      }
+                                    }
+                                  },
+                                  "hasSingle": {
+                                    "$gt": {
+                                      "items": [
+                                        {
+                                          "$size": {
+                                            "$call": {
+                                              "function": {
+                                                "type": {
+                                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                },
+                                                "value": "asList"
+                                              },
+                                              "args": {
+                                                "val": {
+                                                  "$var": {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "singleOps"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "type": {
+                                            "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                                          },
+                                          "value": 0
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "$if": {
+                                "cond": {
+                                  "$not": {
+                                    "$isKind": {
+                                      "val": {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "item"
+                                        }
+                                      },
+                                      "kind": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "object"
+                                      }
+                                    }
+                                  }
+                                },
+                                "then": {
+                                  "items": [
+                                    {
+                                      "$set": {
+                                        "name": "issues",
+                                        "expr": {
+                                          "$listConcat": {
+                                            "items": [
+                                              {
+                                                "$var": {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "issues"
+                                                }
+                                              },
+                                              {
+                                                "items": [
+                                                  {
+                                                    "$concat": {
+                                                      "items": [
+                                                        {
+                                                          "$var": {
+                                                            "type": {
+                                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                            },
+                                                            "value": "itemPath"
+                                                          }
+                                                        },
+                                                        {
+                                                          "type": {
+                                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                          },
+                                                          "value": " must be an object"
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "$if": {
+                                "cond": {
+                                  "$not": {
+                                    "$call": {
+                                      "function": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "isNonEmptyText"
+                                      },
+                                      "args": {
+                                        "val": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "workerType"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "then": {
+                                  "items": [
+                                    {
+                                      "$set": {
+                                        "name": "issues",
+                                        "expr": {
+                                          "$listConcat": {
+                                            "items": [
+                                              {
+                                                "$var": {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "issues"
+                                                }
+                                              },
+                                              {
+                                                "items": [
+                                                  {
+                                                    "$concat": {
+                                                      "items": [
+                                                        {
+                                                          "$var": {
+                                                            "type": {
+                                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                            },
+                                                            "value": "itemPath"
+                                                          }
+                                                        },
+                                                        {
+                                                          "type": {
+                                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                          },
+                                                          "value": ".workerType must be a non-empty string"
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "else": {
+                                  "items": [
+                                    {
+                                      "$if": {
+                                        "cond": {
+                                          "$hasKey": {
+                                            "object": {
+                                              "$var": {
+                                                "type": {
+                                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                },
+                                                "value": "seenWorkerTypes"
+                                              }
+                                            },
+                                            "key": {
+                                              "$var": {
+                                                "type": {
+                                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                },
+                                                "value": "workerType"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "then": {
+                                          "items": [
+                                            {
+                                              "$set": {
+                                                "name": "issues",
+                                                "expr": {
+                                                  "$listConcat": {
+                                                    "items": [
+                                                      {
+                                                        "$var": {
+                                                          "type": {
+                                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                          },
+                                                          "value": "issues"
+                                                        }
+                                                      },
+                                                      {
+                                                        "items": [
+                                                          {
+                                                            "$concat": {
+                                                              "items": [
+                                                                {
+                                                                  "type": {
+                                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                  },
+                                                                  "value": "duplicate workerType '"
+                                                                },
+                                                                {
+                                                                  "$var": {
+                                                                    "type": {
+                                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                    },
+                                                                    "value": "workerType"
+                                                                  }
+                                                                },
+                                                                {
+                                                                  "type": {
+                                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                  },
+                                                                  "value": "' in allowedWorkerAgencyPermissions"
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        "else": {
+                                          "items": [
+                                            {
+                                              "$set": {
+                                                "name": "seenWorkerTypes",
+                                                "expr": {
+                                                  "$objectSet": {
+                                                    "object": {
+                                                      "$var": {
+                                                        "type": {
+                                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                        },
+                                                        "value": "seenWorkerTypes"
+                                                      }
+                                                    },
+                                                    "key": {
+                                                      "$var": {
+                                                        "type": {
+                                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                        },
+                                                        "value": "workerType"
+                                                      }
+                                                    },
+                                                    "val": {
+                                                      "type": {
+                                                        "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                                                      },
+                                                      "value": true
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "$if": {
+                                "cond": {
+                                  "$not": {
+                                    "$exists": {
+                                      "$var": {
+                                        "name": "itemObject",
+                                        "path": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "/permissions"
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "then": {
+                                  "items": [
+                                    {
+                                      "$set": {
+                                        "name": "issues",
+                                        "expr": {
+                                          "$listConcat": {
+                                            "items": [
+                                              {
+                                                "$var": {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "issues"
+                                                }
+                                              },
+                                              {
+                                                "items": [
+                                                  {
+                                                    "$concat": {
+                                                      "items": [
+                                                        {
+                                                          "$var": {
+                                                            "type": {
+                                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                            },
+                                                            "value": "itemPath"
+                                                          }
+                                                        },
+                                                        {
+                                                          "type": {
+                                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                          },
+                                                          "value": ".permissions is required"
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "else": {
+                                  "items": [
+                                    {
+                                      "$if": {
+                                        "cond": {
+                                          "$eq": {
+                                            "items": [
+                                              {
+                                                "$size": {
+                                                  "$keys": {
+                                                    "$var": {
+                                                      "type": {
+                                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                      },
+                                                      "value": "perms"
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              {
+                                                "type": {
+                                                  "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                                                },
+                                                "value": 0
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "then": {
+                                          "items": [
+                                            {
+                                              "$set": {
+                                                "name": "issues",
+                                                "expr": {
+                                                  "$listConcat": {
+                                                    "items": [
+                                                      {
+                                                        "$var": {
+                                                          "type": {
+                                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                          },
+                                                          "value": "issues"
+                                                        }
+                                                      },
+                                                      {
+                                                        "items": [
+                                                          {
+                                                            "$concat": {
+                                                              "items": [
+                                                                {
+                                                                  "$var": {
+                                                                    "type": {
+                                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                    },
+                                                                    "value": "itemPath"
+                                                                  }
+                                                                },
+                                                                {
+                                                                  "type": {
+                                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                  },
+                                                                  "value": ".permissions must be an object"
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "$if": {
+                                        "cond": {
+                                          "$ne": {
+                                            "items": [
+                                              {
+                                                "$var": {
+                                                  "name": "perms",
+                                                  "path": {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "/read"
+                                                  }
+                                                }
+                                              },
+                                              {
+                                                "type": {
+                                                  "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                                                },
+                                                "value": true
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "then": {
+                                          "items": [
+                                            {
+                                              "$set": {
+                                                "name": "issues",
+                                                "expr": {
+                                                  "$listConcat": {
+                                                    "items": [
+                                                      {
+                                                        "$var": {
+                                                          "type": {
+                                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                          },
+                                                          "value": "issues"
+                                                        }
+                                                      },
+                                                      {
+                                                        "items": [
+                                                          {
+                                                            "$concat": {
+                                                              "items": [
+                                                                {
+                                                                  "$var": {
+                                                                    "type": {
+                                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                    },
+                                                                    "value": "itemPath"
+                                                                  }
+                                                                },
+                                                                {
+                                                                  "type": {
+                                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                  },
+                                                                  "value": ".permissions.read must be true"
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "$if": {
+                                        "cond": {
+                                          "$call": {
+                                            "function": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "hasBadSingleOps"
+                                            },
+                                            "args": {
+                                              "ops": {
+                                                "$var": {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "singleOps"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "then": {
+                                          "items": [
+                                            {
+                                              "$set": {
+                                                "name": "issues",
+                                                "expr": {
+                                                  "$listConcat": {
+                                                    "items": [
+                                                      {
+                                                        "$var": {
+                                                          "type": {
+                                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                          },
+                                                          "value": "issues"
+                                                        }
+                                                      },
+                                                      {
+                                                        "items": [
+                                                          {
+                                                            "$concat": {
+                                                              "items": [
+                                                                {
+                                                                  "$var": {
+                                                                    "type": {
+                                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                    },
+                                                                    "value": "itemPath"
+                                                                  }
+                                                                },
+                                                                {
+                                                                  "type": {
+                                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                  },
+                                                                  "value": ".permissions.singleOps must contain only non-empty strings"
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "$if": {
+                                        "cond": {
+                                          "$and": {
+                                            "items": [
+                                              {
+                                                "$eq": {
+                                                  "items": [
+                                                    {
+                                                      "$var": {
+                                                        "name": "perms",
+                                                        "path": {
+                                                          "type": {
+                                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                          },
+                                                          "value": "/allOps"
+                                                        }
+                                                      }
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                                                      },
+                                                      "value": true
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              {
+                                                "$var": {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "hasSingle"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "then": {
+                                          "items": [
+                                            {
+                                              "$set": {
+                                                "name": "issues",
+                                                "expr": {
+                                                  "$listConcat": {
+                                                    "items": [
+                                                      {
+                                                        "$var": {
+                                                          "type": {
+                                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                          },
+                                                          "value": "issues"
+                                                        }
+                                                      },
+                                                      {
+                                                        "items": [
+                                                          {
+                                                            "$concat": {
+                                                              "items": [
+                                                                {
+                                                                  "$var": {
+                                                                    "type": {
+                                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                    },
+                                                                    "value": "itemPath"
+                                                                  }
+                                                                },
+                                                                {
+                                                                  "type": {
+                                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                  },
+                                                                  "value": ".permissions.allOps=true and"
+                                                                },
+                                                                {
+                                                                  "type": {
+                                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                  },
+                                                                  "value": " "
+                                                                },
+                                                                {
+                                                                  "$var": {
+                                                                    "type": {
+                                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                    },
+                                                                    "value": "itemPath"
+                                                                  }
+                                                                },
+                                                                {
+                                                                  "type": {
+                                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                                  },
+                                                                  "value": ".permissions.singleOps are mutually exclusive"
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "$if": {
+                        "cond": {
+                          "$gt": {
+                            "items": [
+                              {
+                                "$size": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "issues"
+                                  }
+                                }
+                              },
+                              {
+                                "type": {
+                                  "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                                },
+                                "value": 0
+                              }
+                            ]
+                          }
+                        },
+                        "then": {
+                          "items": [
+                            {
+                              "$appendEvent": {
+                                "type": {
+                                  "blueId": "B1RnGH4azPberZAn1F3YrP5c2sGV939EpruSPBD2Kc1u"
+                                },
+                                "issues": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "issues"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "else": {
+                          "items": [
+                            {
+                              "$appendEvent": {
+                                "type": {
+                                  "blueId": "J7ssmNEa6YpxrLFTqZfwgD4uiz3cSyNLNaC4WbnLEhj7"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "$return": {
+                        "events": {
+                          "$events": {
+                            "type": {
+                              "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                            },
+                            "value": true
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "granteeDocumentId": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "allowedWorkerAgencyPermissions": {
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GjxBN2eRsYCbipBAFk2eRneiDSs5rWS7eUzZBpPHz2JH"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "cdm/regulation/ExctgPrsn",
+  "prsn": {
+    "type": {
+      "blueId": "DRmKhNgn8dNZVoyp8tVg2ARdqm6q1J6PKusAjz7eGEub"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

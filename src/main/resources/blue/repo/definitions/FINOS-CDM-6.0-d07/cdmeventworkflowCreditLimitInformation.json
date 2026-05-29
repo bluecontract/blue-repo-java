@@ -1,0 +1,15 @@
+{
+  "name": "cdm/event/workflow/CreditLimitInformation",
+  "description": "A class to represent the credit limit utilisation information.",
+  "limitApplicable": {
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "3oftioAyxXt4zXaExnLzmUSRNMbQXT2nouGtMDDsSt3c"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  }
+}

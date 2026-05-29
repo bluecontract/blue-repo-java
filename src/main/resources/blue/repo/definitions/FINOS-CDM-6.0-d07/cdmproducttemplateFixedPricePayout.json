@@ -1,0 +1,52 @@
+{
+  "name": "cdm/product/template/FixedPricePayout",
+  "description": "Represents a fixed price payout. There is no underlier associated with this payout type and is based on fixed pricing per a given unit (e.g. in commodities price per barrel)\n",
+  "fixedPrice": {
+    "description": "Specifies the fixed price on which fixed forward payments are based.",
+    "type": {
+      "blueId": "3WvaxijQwR1ELLMK9QtedoyNZ1wy9YZrGnGe2wvdpVWk"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "payerReceiver": {
+    "description": "Canonical representation of the payer and receiver parties applicable to each payout leg.",
+    "type": {
+      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+    }
+  },
+  "paymentDates": {
+    "description": "Specifies the parameters to generate the payment date schedule, either through a parametric representation or by reference to specified dates.\n",
+    "type": {
+      "blueId": "CBUr6dnp1h3kfpUoLrpBXZBcvBQ9hmDnKezhtmhxPgi9"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "priceQuantity": {
+    "description": "Each payout leg must implement the quantity concept as a 'resolvable' type, which allows for different payout legs to be linked to each other (e.g. in the case of cross-curreny products).\n",
+    "type": {
+      "blueId": "DmcMrxC2wq7pSMrRaCK5QHkx54U9EtEgZqojTkmfedRF"
+    }
+  },
+  "principalPayment": {
+    "description": "The specification of the principal exchange. Optional as only applicable in the case of cross-currency or zero-coupon swaps with a final payment.\n",
+    "type": {
+      "blueId": "Hxc4Dbr7nrj5XkPBBiJGhPhQVnfNHWHn21HViV1FpBGM"
+    }
+  },
+  "schedule": {
+    "description": "Allows the full representation of a payout by defining a set of schedule periods. It supports standard schedule customization by expressing all the dates, quantities, and pricing data in a non-parametric way.\n",
+    "type": {
+      "blueId": "ArKxUfT7icBqdZQkhyPcZmMW5oqfaGEvnvM2i8dwWnEv"
+    }
+  },
+  "settlementTerms": {
+    "description": "Each payout leg must specifies its settlement terms, including the delivery type (i.e. cash vs physical, and their respective terms), the transfer type (DvP etc.) and settlement date, if any.\n",
+    "type": {
+      "blueId": "EPxCD8mPcZ6C9kuDs2tinVLVsqMQscWZPLMhYaQ4n9co"
+    }
+  }
+}

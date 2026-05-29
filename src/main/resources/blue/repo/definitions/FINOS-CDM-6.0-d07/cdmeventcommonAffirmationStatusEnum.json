@@ -1,0 +1,13 @@
+{
+  "name": "cdm/event/common/AffirmationStatusEnum",
+  "description": "Enumeration for the different types of affirmation status.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Affirmed",
+      "Unaffirmed"
+    ]
+  }
+}

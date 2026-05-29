@@ -1,0 +1,72 @@
+package blue.repo.myos;
+
+import blue.language.model.Node;
+import blue.language.model.TypeBlueId;
+import blue.repo.RepositoryType;
+import blue.repo.coordination.Response;
+
+@TypeBlueId("Duis7QaVJkoKiQ5v9HEroE47AST1pi5zJGcVkgFiie8N")
+public class SingleDocumentPermissionGrantingInProgress extends Response {
+    public static String blueId() {
+        return "Duis7QaVJkoKiQ5v9HEroE47AST1pi5zJGcVkgFiie8N";
+    }
+
+    public static String packageName() {
+        return "MyOS";
+    }
+
+    public static String typeName() {
+        return "Single Document Permission Granting in Progress";
+    }
+
+    public static String qualifiedName() {
+        return "MyOS/Single Document Permission Granting in Progress";
+    }
+
+    public static String resourcePath() {
+        return "blue/repo/definitions/MyOS/SingleDocumentPermissionGrantinginProgress.json";
+    }
+
+    public static RepositoryType repositoryType() {
+        return RepositoryType.of(
+                packageName(),
+                typeName(),
+                qualifiedName(),
+                blueId(),
+                resourcePath());
+    }
+
+    private String targetSessionId;
+
+    private SingleDocumentPermissionSet permissions;
+
+    private String note;
+
+    public String getTargetSessionId() {
+        return targetSessionId;
+    }
+
+    public SingleDocumentPermissionGrantingInProgress targetSessionId(String targetSessionId) {
+        this.targetSessionId = targetSessionId;
+        return this;
+    }
+
+    public SingleDocumentPermissionSet getPermissions() {
+        return permissions;
+    }
+
+    public SingleDocumentPermissionGrantingInProgress permissions(SingleDocumentPermissionSet permissions) {
+        this.permissions = permissions;
+        return this;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public SingleDocumentPermissionGrantingInProgress note(String note) {
+        this.note = note;
+        return this;
+    }
+
+}

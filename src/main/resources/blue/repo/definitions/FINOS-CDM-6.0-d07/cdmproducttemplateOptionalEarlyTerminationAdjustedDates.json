@@ -1,0 +1,16 @@
+{
+  "name": "cdm/product/template/OptionalEarlyTerminationAdjustedDates",
+  "description": "A data defining:  the adjusted dates associated with an optional early termination provision.\n",
+  "earlyTerminationEvent": {
+    "description": "The adjusted dates associated with an individual early termination date.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "Bsu7yKrKiwjYKpoRKPKrM3d9hpsNTBunvz9Xot21HqYD"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  }
+}

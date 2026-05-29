@@ -1,0 +1,35 @@
+{
+  "name": "cdm/regulation/DerivInstrmAttrbts",
+  "dlvryTp": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "pricMltplr": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "undrlygInstrm": {
+    "type": {
+      "blueId": "6o8WNRx5H8A5FMtHCx8CDYXvnBdnsPwifQMXwpG7VqEo"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "xpryDt": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

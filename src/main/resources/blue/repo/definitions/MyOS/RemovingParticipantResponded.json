@@ -1,0 +1,16 @@
+{
+  "name": "Removing Participant Responded",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "request": {
+    "type": {
+      "blueId": "89DqHza36mvWnBgbqWi2ttccLd5LZBCbTDxjQyEwvAxf"
+    }
+  },
+  "status": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

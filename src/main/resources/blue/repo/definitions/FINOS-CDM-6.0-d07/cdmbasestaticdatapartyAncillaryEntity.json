@@ -1,0 +1,15 @@
+{
+  "name": "cdm/base/staticdata/party/AncillaryEntity",
+  "description": "Holds an identifier for an ancillary entity, either identified directly via its ancillary role or directly as a legal entity.\n",
+  "ancillaryParty": {
+    "description": "Identifies a party via its ancillary role on a transaction (e.g. CCP or DCO through which the trade should be cleared.)\n",
+    "type": {
+      "blueId": "2YmGLtgJ5as5H64M8bRYDDRaGWwqzAGqrQSSzEm1Jvjm"
+    }
+  },
+  "legalEntity": {
+    "type": {
+      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+    }
+  }
+}

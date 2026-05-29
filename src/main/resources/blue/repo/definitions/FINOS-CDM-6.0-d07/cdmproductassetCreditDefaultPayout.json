@@ -1,0 +1,55 @@
+{
+  "name": "cdm/product/asset/CreditDefaultPayout",
+  "description": "The credit default payout specification provides the details necessary for determining when a credit payout will be triggered as well as the parameters for calculating the payout and the settlement terms. The associated globalKey denotes the ability to associate a hash value to the CreditDefaultPayout instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.\n",
+  "generalTerms": {
+    "description": "The specification of the non-monetary terms for the Credit Derivative Transaction, including the buyer and seller and selected items from the ISDA 2014 Credit Definition article II, such as the reference obligation and related terms.\n",
+    "type": {
+      "blueId": "C7GBqLBRyCKfTtj9ihUbBy2SjPEAn3Y4vEwNxsFgX62k"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "payerReceiver": {
+    "description": "Canonical representation of the payer and receiver parties applicable to each payout leg.",
+    "type": {
+      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+    }
+  },
+  "priceQuantity": {
+    "description": "Each payout leg must implement the quantity concept as a 'resolvable' type, which allows for different payout legs to be linked to each other (e.g. in the case of cross-curreny products).\n",
+    "type": {
+      "blueId": "DmcMrxC2wq7pSMrRaCK5QHkx54U9EtEgZqojTkmfedRF"
+    }
+  },
+  "principalPayment": {
+    "description": "The specification of the principal exchange. Optional as only applicable in the case of cross-currency or zero-coupon swaps with a final payment.\n",
+    "type": {
+      "blueId": "Hxc4Dbr7nrj5XkPBBiJGhPhQVnfNHWHn21HViV1FpBGM"
+    }
+  },
+  "protectionTerms": {
+    "description": "Specifies the terms for calculating a payout to protect the buyer of the swap in the case of a qualified credit event. These terms include the applicable credit events, the reference obligation, and in the case of a CDS on mortgage-backed securities, the floatingAmountEvents.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "7txErgdQycZvodfEV5dd6UhpNESp5eKR8kWy2BYtJYja"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "settlementTerms": {
+    "description": "Each payout leg must specifies its settlement terms, including the delivery type (i.e. cash vs physical, and their respective terms), the transfer type (DvP etc.) and settlement date, if any.\n",
+    "type": {
+      "blueId": "EPxCD8mPcZ6C9kuDs2tinVLVsqMQscWZPLMhYaQ4n9co"
+    }
+  },
+  "transactedPrice": {
+    "description": "The qualification of the price at which the contract has been transacted, in terms of market fixed rate, initial points, market price and/or quotation style. In FpML, those attributes are positioned as part of the fee leg.\n",
+    "type": {
+      "blueId": "FC5qtLcq8fhQandN4L4LHMUUK5cqeFtGFj8D3JnRYd9Z"
+    }
+  }
+}

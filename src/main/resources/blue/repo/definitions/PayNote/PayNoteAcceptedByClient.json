@@ -1,0 +1,13 @@
+{
+  "name": "PayNote Accepted By Client",
+  "description": "The client accepted the PayNote.",
+  "type": {
+    "blueId": "ENRQ621TbJpLg2cGyYkgTmPRLGKZkPqCzkBgm4yEXKF5"
+  },
+  "acceptedAt": {
+    "description": "Timestamp when the client accepted.",
+    "type": {
+      "blueId": "47EN5A1B1ZXXdXMEoURVJquMSjdDuKFNDjMrkvVxoVJk"
+    }
+  }
+}

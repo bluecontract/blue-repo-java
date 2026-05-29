@@ -1,0 +1,16 @@
+{
+  "name": "cdm/event/common/TransferStatusEnum",
+  "description": "The enumeration values to specify the transfer status.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Disputed",
+      "Instructed",
+      "Netted",
+      "Pending",
+      "Settled"
+    ]
+  }
+}

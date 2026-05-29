@@ -1,0 +1,10 @@
+{
+  "name": "MyOS Balance Account",
+  "description": "A prepared or direct MyOS balance-account reference used in payment requests.",
+  "token": {
+    "description": "Opaque token representing a prepared recipient payment target.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

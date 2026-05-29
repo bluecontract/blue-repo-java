@@ -1,0 +1,14 @@
+{
+  "name": "cdm/base/staticdata/party/AccountTypeEnum",
+  "description": "The enumeration values to qualify the type of account.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AggregateClient",
+      "Client",
+      "House"
+    ]
+  }
+}

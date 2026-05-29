@@ -1,0 +1,12 @@
+{
+  "name": "cdm/product/collateral/DomesticCurrencyIssued",
+  "domesticCurrencyIssued": {
+    "description": "Identifies that the Security must be denominated in the domestic currency of the issuer.",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

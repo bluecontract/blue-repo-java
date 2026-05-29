@@ -3,8 +3,8 @@ package blue.repo;
 import blue.language.Blue;
 import blue.language.dictionary.TypeDictionary;
 import blue.language.model.Node;
+import blue.language.provider.BootstrapProvider;
 import blue.language.utils.TypeClassResolver;
-import blue.repo.v1_3_0.BlueRepositoryV1_3_0;
 import blue.repo.provider.RepositoryNodeProvider;
 
 import java.util.LinkedHashMap;
@@ -16,16 +16,19 @@ public final class BlueRepository {
     public static final String DICTIONARY_NAME = "Blue Repository";
     public static final String V1_3_0 = "1.3.0";
     public static final String LATEST = V1_3_0;
-    public static final String V1_3_0_MANIFEST = "blue/repo/v1_3_0/manifest.json";
+    public static final String MANIFEST = "blue/repo/manifest.json";
+    public static final String V1_3_0_MANIFEST = MANIFEST;
 
-    private static final String REPLACE_INLINE_TYPES_BLUE_ID = "27B7fuxQCS1VAptiCPc2RMkKoutP5qxkh3uDxZ7dr6Eo";
-    private static final String INFER_BASIC_TYPES_BLUE_ID = "FGYuTXwaoSKfZmpTysLTLsb8WzSqf43384rKZDkXhxD4";
-    private static final String TEXT_BLUE_ID = "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K";
-    private static final String DOUBLE_BLUE_ID = "7pwXmXYCJtWnd348c2JQGBkm9C4renmZRwxbfaypsx5y";
-    private static final String INTEGER_BLUE_ID = "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1";
-    private static final String BOOLEAN_BLUE_ID = "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u";
-    private static final String LIST_BLUE_ID = "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY";
-    private static final String DICTIONARY_BLUE_ID = "G7fBT9PSod1RfHLHkpafAGBDVAJMrMhAMY51ERcyXNrj";
+    private static final String REPLACE_INLINE_TYPES_BLUE_ID = "53yFLQ3dpuGwa2svHubDyzyhYz9RQNmctiJRdi3gRYr7";
+    private static final String REPLACE_INLINE_TYPES_LEGACY_BLUE_ID = "27B7fuxQCS1VAptiCPc2RMkKoutP5qxkh3uDxZ7dr6Eo";
+    private static final String INFER_BASIC_TYPES_BLUE_ID = "49hrWpkoXavNmK8PpZag11zB2vYwzhQZahwioz6vDk2i";
+    private static final String INFER_BASIC_TYPES_LEGACY_BLUE_ID = "FGYuTXwaoSKfZmpTysLTLsb8WzSqf43384rKZDkXhxD4";
+    private static final String TEXT_BLUE_ID = "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC";
+    private static final String DOUBLE_BLUE_ID = "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ";
+    private static final String INTEGER_BLUE_ID = "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq";
+    private static final String BOOLEAN_BLUE_ID = "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2";
+    private static final String LIST_BLUE_ID = "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF";
+    private static final String DICTIONARY_BLUE_ID = "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG";
 
     private final RepositoryManifest manifest;
     private final RepositoryNodeProvider nodeProvider;
@@ -40,7 +43,7 @@ public final class BlueRepository {
     }
 
     public static BlueRepository v1_3_0(ClassLoader classLoader) {
-        RepositoryManifest manifest = RepositoryManifest.load(classLoader, V1_3_0_MANIFEST);
+        RepositoryManifest manifest = RepositoryManifest.load(classLoader, MANIFEST);
         return new BlueRepository(manifest, new RepositoryNodeProvider(manifest, classLoader));
     }
 
@@ -85,7 +88,7 @@ public final class BlueRepository {
     }
 
     public TypeClassResolver typeClassResolver() {
-        return BlueRepositoryV1_3_0.typeClassResolver();
+        return BlueRepositoryModels.typeClassResolver();
     }
 
     public Blue configure(Blue blue) {
@@ -164,10 +167,28 @@ public final class BlueRepository {
 
         return new Node().items(
                 new Node()
-                        .type(new Node().blueId(REPLACE_INLINE_TYPES_BLUE_ID))
+                        .type(new Node().blueId(preprocessingTransformationBlueId(
+                                REPLACE_INLINE_TYPES_BLUE_ID,
+                                REPLACE_INLINE_TYPES_LEGACY_BLUE_ID)))
                         .properties("mappings", new Node().properties(mappings)),
-                new Node().type(new Node().blueId(INFER_BASIC_TYPES_BLUE_ID))
+                new Node().type(new Node().blueId(preprocessingTransformationBlueId(
+                        INFER_BASIC_TYPES_BLUE_ID,
+                        INFER_BASIC_TYPES_LEGACY_BLUE_ID)))
         );
+    }
+
+    private static String preprocessingTransformationBlueId(String preferredBlueId, String legacyBlueId) {
+        if (hasBootstrapDefinition(preferredBlueId)) {
+            return preferredBlueId;
+        }
+        if (hasBootstrapDefinition(legacyBlueId)) {
+            return legacyBlueId;
+        }
+        return preferredBlueId;
+    }
+
+    private static boolean hasBootstrapDefinition(String blueId) {
+        return BootstrapProvider.INSTANCE.fetchFirstByBlueId(blueId) != null;
     }
 
     private static void addBasicTypeAliases(Map<String, Node> mappings) {

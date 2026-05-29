@@ -1,0 +1,21 @@
+{
+  "name": "cdm/base/staticdata/party/PersonIdentifierTypeEnum",
+  "description": "The enumeration values associated with person identifier sources.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "ARNU",
+      "CCPT",
+      "CUST",
+      "DRLC",
+      "EMPL",
+      "NIDN",
+      "NPID",
+      "PLID",
+      "SOSE",
+      "TXID"
+    ]
+  }
+}

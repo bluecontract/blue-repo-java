@@ -1,0 +1,16 @@
+{
+  "name": "cdm/product/common/schedule/PayRelativeToEnum",
+  "description": "The enumerated values to specify whether payments occur relative to the calculation period start date or end date, each reset date, valuation date or the last pricing date.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "CalculationPeriodEndDate",
+      "CalculationPeriodStartDate",
+      "LastPricingDate",
+      "ResetDate",
+      "ValuationDate"
+    ]
+  }
+}

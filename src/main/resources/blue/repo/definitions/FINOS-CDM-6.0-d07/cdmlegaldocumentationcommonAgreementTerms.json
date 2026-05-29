@@ -1,0 +1,32 @@
+{
+  "name": "cdm/legaldocumentation/common/AgreementTerms",
+  "description": "Specification of the content of a legal agreement.",
+  "agreement": {
+    "description": "Specification of the standard set of terms that define a legal agreement.",
+    "type": {
+      "blueId": "4fmy4Qo8UGQhTJf2hzAXQtAt4TuNn76X6ZYy3v3ZWwTq"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "clauseLibrary": {
+    "description": "Specification of whether the agreement terms have been negotiated using the clause library methodology.",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    }
+  },
+  "counterparty": {
+    "description": "Specification of the roles of the counterparties to the agreement.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "E1uMUhyFkX83bxaZhuKemTmb5S99vPebKwnFVHu6KQTn"
+    },
+    "schema": {
+      "minItems": 2,
+      "maxItems": 2
+    }
+  }
+}

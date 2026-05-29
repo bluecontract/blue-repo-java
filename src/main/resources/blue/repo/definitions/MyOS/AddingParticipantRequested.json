@@ -1,0 +1,25 @@
+{
+  "name": "Adding Participant Requested",
+  "type": {
+    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
+  },
+  "channelName": {
+    "description": "The abstract channel name for the new participant.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "participantBinding": {
+    "description": "How to identify the new user.",
+    "email": {
+      "type": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      }
+    },
+    "accountId": {
+      "type": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      }
+    }
+  }
+}

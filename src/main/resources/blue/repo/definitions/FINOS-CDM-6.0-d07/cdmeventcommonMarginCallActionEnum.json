@@ -1,0 +1,13 @@
+{
+  "name": "cdm/event/common/MarginCallActionEnum",
+  "description": "Represents the enumeration values to identify the collateral action instruction.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Delivery",
+      "Return"
+    ]
+  }
+}

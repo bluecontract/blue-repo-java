@@ -1,0 +1,17 @@
+{
+  "name": "cdm/base/staticdata/asset/common/AssetClassEnum",
+  "description": "The enumerated values to specify the FpML asset class categorization.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Commodity",
+      "Credit",
+      "Equity",
+      "ForeignExchange",
+      "InterestRate",
+      "MoneyMarket"
+    ]
+  }
+}

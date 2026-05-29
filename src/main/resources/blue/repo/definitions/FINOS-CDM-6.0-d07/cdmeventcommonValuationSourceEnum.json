@@ -1,0 +1,12 @@
+{
+  "name": "cdm/event/common/ValuationSourceEnum",
+  "description": "Source for the valuation of the transaction by the valuation party.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "CentralCounterparty"
+    ]
+  }
+}

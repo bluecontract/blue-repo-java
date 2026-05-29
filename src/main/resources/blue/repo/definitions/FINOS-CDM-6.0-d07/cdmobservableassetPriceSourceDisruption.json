@@ -1,0 +1,13 @@
+{
+  "name": "cdm/observable/asset/PriceSourceDisruption",
+  "description": "A data defining:  the parameters used to get a price quote to replace the settlement rate option that is disrupted.\n",
+  "fallbackReferencePrice": {
+    "description": "The method, prioritised by the order it is listed in this element, to get a replacement rate for the disrupted settlement rate option.\n",
+    "type": {
+      "blueId": "Fj3meSzrVFT3h4kz7H1dk4yNznhXthX2WJNYfktCL71J"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

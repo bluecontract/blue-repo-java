@@ -1,0 +1,16 @@
+{
+  "name": "cdm/product/template/CalculationSchedule",
+  "description": "A class that allows the full representation of a payout by defining a set of schedule periods. It supports standard schedule customization by expressing all the dates, quantities, and pricing data in a non-parametric way.\n",
+  "schedulePeriod": {
+    "description": "Defines a period of a calculation schedule structure.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GVf5UQUN1FP9wzEkH6gWBuXNjQp9mnsoejxyKU358PRt"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  }
+}

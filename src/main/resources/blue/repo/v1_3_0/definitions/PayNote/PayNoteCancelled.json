@@ -1,7 +1,0 @@
-{
-  "name": "PayNote Cancelled",
-  "description": "The Guarantor confirms PayNote cancellation requested by Payer.",
-  "type": {
-    "blueId": "36epvrpVHZLjapbeZsNodz2NDnm7XZeNZcnkWHgkP1pp"
-  }
-}

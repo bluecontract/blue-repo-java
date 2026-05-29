@@ -1,0 +1,19 @@
+{
+  "name": "Linked PayNote Start Responded",
+  "description": "Decision response for starting a linked PayNote after successful charge.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "status": {
+    "description": "Decision status (\"accepted\" | \"rejected\").",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "reason": {
+    "description": "Optional rejection reason.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

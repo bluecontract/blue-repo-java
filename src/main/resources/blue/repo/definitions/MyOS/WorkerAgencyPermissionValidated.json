@@ -1,0 +1,7 @@
+{
+  "name": "Worker Agency Permission Validated",
+  "description": "Emitted on initialise when local shape checks pass.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  }
+}

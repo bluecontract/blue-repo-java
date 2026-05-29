@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/common/settlement/SettlementCentreEnum",
+  "description": "Defines the settlement centre for a securities transaction.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "ClearstreamBankingLuxembourg",
+      "EuroclearBank"
+    ]
+  }
+}

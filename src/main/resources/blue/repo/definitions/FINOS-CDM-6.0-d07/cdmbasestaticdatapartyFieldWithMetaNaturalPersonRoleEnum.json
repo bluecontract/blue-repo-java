@@ -1,0 +1,13 @@
+{
+  "name": "cdm/base/staticdata/party/FieldWithMetaNaturalPersonRoleEnum",
+  "meta": {
+    "type": {
+      "blueId": "Fsr3CBPzzThx6Pern5QLDS8TKFXzv6W3TzjS6BYSmqCc"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "9tPoADpnGiVnU2BMMT67cyTxq9y2NNP7pnrEYowvURZm"
+    }
+  }
+}

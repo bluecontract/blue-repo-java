@@ -1,0 +1,12 @@
+{
+  "name": "Transaction Details Update Rejected",
+  "description": "The Guarantor rejected the proposed transaction details update.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "reason": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

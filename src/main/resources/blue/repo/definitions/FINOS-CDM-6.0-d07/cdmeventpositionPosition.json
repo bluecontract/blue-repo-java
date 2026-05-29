@@ -1,0 +1,37 @@
+{
+  "name": "cdm/event/position/Position",
+  "description": "A Position describes how much of a given Product is being held and constitutes the atomic element of a Portfolio.\n",
+  "cashBalance": {
+    "description": "The aggregate cost of proceeds",
+    "type": {
+      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+    }
+  },
+  "priceQuantity": {
+    "description": "Position with many price quantities.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "7ZZfSxTMhHstRLpYQMESSSTY9jN668fPJwkSAzcVT7aR"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  },
+  "product": {
+    "description": "The product underlying the position.",
+    "type": {
+      "blueId": "9qWGsXauVnxS5oNKRAwfaMctCyeviwAypHKtHdS4HXZd#0"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "tradeReference": {
+    "description": "Reference to the Contract, in case product is contractual and the contract has been formed",
+    "type": {
+      "blueId": "EQ41UGrPkUeaUNXD9QmELA1aEoVBtx9tVzgQZ5Tp1rMT"
+    }
+  }
+}

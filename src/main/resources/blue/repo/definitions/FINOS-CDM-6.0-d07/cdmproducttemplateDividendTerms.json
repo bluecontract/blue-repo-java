@@ -1,0 +1,25 @@
+{
+  "name": "cdm/product/template/DividendTerms",
+  "description": "Information related to dividends and payments.",
+  "dividendEntitlement": {
+    "description": "Defines the date on which the receiver of the equity return is entitled to the dividend.",
+    "type": {
+      "blueId": "G3BKTS1eRAojgA7wPVuMNozjWCqJSoYHasAuyT9X1WeS"
+    }
+  },
+  "manufacturedIncomeRequirement": {
+    "description": "Specifies the proportion of the value of the dividend on the borrowed shares that the borrower is legally obligated to return to the lender.\n",
+    "type": {
+      "blueId": "8s4tpuu4oGPZmBzhToqTQoVaESXwgLUVywAUzRoTtpcJ"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "minimumBillingAmount": {
+    "description": "daily fee increments accrue until a threshold is crossed, at which point payment becomes due)",
+    "type": {
+      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+    }
+  }
+}

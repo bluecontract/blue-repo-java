@@ -1,0 +1,13 @@
+{
+  "name": "cdm/observable/asset/FieldWithMetaObservable",
+  "meta": {
+    "type": {
+      "blueId": "Fsr3CBPzzThx6Pern5QLDS8TKFXzv6W3TzjS6BYSmqCc"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "54FLifHpXsPqo7RAqsHZ5C4WxvmU2i8aDbM6EMkx64PM"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Payment Target Preparation Failed",
+  "description": "Failure result emitted when MyOS Admin cannot prepare an opaque recipient payment target.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "code": {
+    "description": "Stable machine-readable failure code.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "reason": {
+    "description": "Human-readable explanation of failure.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "cdm/observable/asset/CashPrice",
+  "description": "Specifies the nature of a cash price either as a fee type, cash price type, or premium expression.",
+  "cashPriceType": {
+    "description": "Specifies the type of Cash Price.",
+    "type": {
+      "blueId": "9dUrzD1y7GL9TdKFceXPYzF4LkjJbsTTRtWN9aaKMyW7"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "feeType": {
+    "description": "Specifies the event type associated with a fee.",
+    "type": {
+      "blueId": "4GqDqHjWQFyqR2KmPsKUPRiPtFGkKgdCjAUHQCgAVHzW"
+    }
+  },
+  "premiumExpression": {
+    "description": "Specifies a premium when expressed in a way other than an amount, and any required forward starting price definition.\n",
+    "type": {
+      "blueId": "C3b31ujUecjD3uHficrorQPDZh2w4VibSWay98MhDZYs"
+    }
+  }
+}

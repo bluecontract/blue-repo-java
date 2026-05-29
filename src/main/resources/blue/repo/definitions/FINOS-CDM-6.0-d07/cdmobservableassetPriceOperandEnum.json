@@ -1,0 +1,13 @@
+{
+  "name": "cdm/observable/asset/PriceOperandEnum",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AccruedInterest",
+      "Commission",
+      "ForwardPoint"
+    ]
+  }
+}

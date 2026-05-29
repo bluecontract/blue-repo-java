@@ -1,0 +1,61 @@
+{
+  "name": "cdm/event/common/CreditEvent",
+  "description": "Specifies the relevant data regarding a credit event.",
+  "auctionDate": {
+    "description": "The date on which the auction is scheduled to occur.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "creditEventType": {
+    "description": "The type of credit event taking place.",
+    "type": {
+      "blueId": "EGfSLCNfWu5DGbdZ2ngfezkkWe9fy92E6WNeXcAUzWAP"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "eventDeterminationDate": {
+    "description": "The date in which the credit event is determined by the Credit Derivatives Determinations Comitee.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "finalPrice": {
+    "description": "The final price resulting from the auction.",
+    "type": {
+      "blueId": "BD3VPcMR7j62CWudW3xXH1Aropvfs515RCLZFP4cZY4P"
+    }
+  },
+  "publiclyAvailableInformation": {
+    "description": "A public information source, e.g. a particular newspaper or electronic news service, that may publish relevant information used in the determination of whether or not a credit event has occurred.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "C2wMvRSYQpEwYdiQ2gBF1mcfAe8Lz35NGMPze9RFpaKa"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "recoveryPercent": {
+    "description": "The percentage of the original value of the asset affected by the credit event that can be recovered.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "referenceInformation": {
+    "description": "The reference entity, part of a credit basket, impacted by the credit event.",
+    "type": {
+      "blueId": "21tUiXqcPZ47DD2nEZ5E9SUBV7kj7oUHASqgyyPNCnm7"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

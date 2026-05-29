@@ -1,0 +1,14 @@
+{
+  "name": "cdm/product/collateral/CollateralInterestHandlingEnum",
+  "description": "How is collateral interest to be handled?",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Adjust",
+      "Transfer",
+      "Transfer_or_Adjust"
+    ]
+  }
+}

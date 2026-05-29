@@ -1,0 +1,13 @@
+{
+  "name": "cdm/event/workflow/Velocity",
+  "period": {
+    "type": {
+      "blueId": "JCE6fgtxeu7PPY6oPWYkFuTZWzEfFSq592BcAkjYuzbw"
+    }
+  },
+  "periodMultiplier": {
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    }
+  }
+}

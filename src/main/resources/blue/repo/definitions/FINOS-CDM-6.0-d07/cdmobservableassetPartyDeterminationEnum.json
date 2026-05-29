@@ -1,0 +1,16 @@
+{
+  "name": "cdm/observable/asset/PartyDeterminationEnum",
+  "description": "The enumerated values to specify how a calculation agent will be determined.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AsSpecifiedInMasterAgreement",
+      "AsSpecifiedInStandardTermsSupplement",
+      "Both",
+      "ExercisingParty",
+      "NonExercisingParty"
+    ]
+  }
+}

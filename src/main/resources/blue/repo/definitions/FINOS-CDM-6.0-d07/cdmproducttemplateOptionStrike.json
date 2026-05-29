@@ -1,0 +1,28 @@
+{
+  "name": "cdm/product/template/OptionStrike",
+  "description": "Defines the strike price of an option.",
+  "averagingStrikeFeature": {
+    "description": "Defines an  option strike that is calculated from an average of observed market prices.",
+    "type": {
+      "blueId": "8pFLS6aLxk9oXBuqyXeqDYzovBKubBdD4M9Cd57HDFBL"
+    }
+  },
+  "referenceSwapCurve": {
+    "description": "Defines the strike of an option when expressed by reference to a swap curve (Typically the case for a convertible bond option).\n",
+    "type": {
+      "blueId": "7ai2UcB66NBXjpmX6d6FRM6bbkqzs7qH2HihbAR72FaX"
+    }
+  },
+  "strikePrice": {
+    "description": "Defines the strike of an option in the form of a price that could be a cash price, interestRate, or other types.\n",
+    "type": {
+      "blueId": "BD3VPcMR7j62CWudW3xXH1Aropvfs515RCLZFP4cZY4P"
+    }
+  },
+  "strikeReference": {
+    "description": "Defines the strike of an option in reference to the spread of the underlying swap (typical practice in the case of an option on a credit single name swaps).\n",
+    "type": {
+      "blueId": "9MuxTNnqdBfc2jXWLVxrcXeAQkmmc3aoj2AuNQ46RBnh"
+    }
+  }
+}

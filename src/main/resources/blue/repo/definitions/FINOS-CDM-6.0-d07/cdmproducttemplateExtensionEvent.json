@@ -1,0 +1,22 @@
+{
+  "name": "cdm/product/template/ExtensionEvent",
+  "description": "A data to:  define the adjusted dates associated with an individual extension event.\n",
+  "adjustedExerciseDate": {
+    "description": "The date on which option exercise takes place. This date should already be adjusted for any applicable business day convention.\n",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "adjustedExtendedTerminationDate": {
+    "description": "The termination date if an extendible provision is exercised. This date should already be adjusted for any applicable business day convention.\n",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

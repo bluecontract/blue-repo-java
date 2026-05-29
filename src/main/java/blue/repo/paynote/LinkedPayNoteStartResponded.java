@@ -1,0 +1,61 @@
+package blue.repo.paynote;
+
+import blue.language.model.Node;
+import blue.language.model.TypeBlueId;
+import blue.repo.RepositoryType;
+import blue.repo.coordination.Response;
+
+@TypeBlueId("25NBCk2eHaVrp8z8c81y75HAiL55nNZRSZ7uxDsHEGuX")
+public class LinkedPayNoteStartResponded extends Response {
+    public static String blueId() {
+        return "25NBCk2eHaVrp8z8c81y75HAiL55nNZRSZ7uxDsHEGuX";
+    }
+
+    public static String packageName() {
+        return "PayNote";
+    }
+
+    public static String typeName() {
+        return "Linked PayNote Start Responded";
+    }
+
+    public static String qualifiedName() {
+        return "PayNote/Linked PayNote Start Responded";
+    }
+
+    public static String resourcePath() {
+        return "blue/repo/definitions/PayNote/LinkedPayNoteStartResponded.json";
+    }
+
+    public static RepositoryType repositoryType() {
+        return RepositoryType.of(
+                packageName(),
+                typeName(),
+                qualifiedName(),
+                blueId(),
+                resourcePath());
+    }
+
+    private String status;
+
+    private String reason;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public LinkedPayNoteStartResponded status(String status) {
+        this.status = status;
+        return this;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public LinkedPayNoteStartResponded reason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+
+}

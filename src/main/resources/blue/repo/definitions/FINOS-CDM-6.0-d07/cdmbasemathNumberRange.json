@@ -1,0 +1,16 @@
+{
+  "name": "cdm/base/math/NumberRange",
+  "description": "The number range defined as either a lower and upper number bound, or both.",
+  "lowerBound": {
+    "description": "The lower bound of a number range, e.g. greater than or equal to 5.",
+    "type": {
+      "blueId": "CwWx8XsxrUYgak8RN53tW3tLepuFKA8mhVaMtFE9tbbB"
+    }
+  },
+  "upperBound": {
+    "description": "The upper bound of a number range, e.g. less than 10.",
+    "type": {
+      "blueId": "CwWx8XsxrUYgak8RN53tW3tLepuFKA8mhVaMtFE9tbbB"
+    }
+  }
+}

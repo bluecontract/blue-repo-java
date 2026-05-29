@@ -1,0 +1,49 @@
+{
+  "name": "Payment Mandate Spend Settlement Responded",
+  "description": "Validation result emitted by Payment Mandate after processing a settlement update.",
+  "type": {
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+  },
+  "authorizationId": {
+    "description": "Correlation key copied from Payment Mandate Spend Settled.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "settlementId": {
+    "description": "Optional settlement correlation id copied from settlement request.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "status": {
+    "description": "Settlement processing status (\"accepted\" | \"rejected\").",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "reason": {
+    "description": "Optional rejection or informational reason.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "amountReserved": {
+    "description": "Current mandate amountReserved after applying (or rejecting) settlement.",
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    }
+  },
+  "amountCaptured": {
+    "description": "Current mandate amountCaptured after applying (or rejecting) settlement.",
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    }
+  },
+  "respondedAt": {
+    "description": "Timestamp when mandate emitted settlement processing result.",
+    "type": {
+      "blueId": "47EN5A1B1ZXXdXMEoURVJquMSjdDuKFNDjMrkvVxoVJk"
+    }
+  }
+}
