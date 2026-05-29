@@ -5,7 +5,7 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
 @TypeBlueId("316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66")
-public class Operation {
+public class Operation extends blue.language.processor.model.MarkerContract {
     public static String blueId() {
         return "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66";
     }

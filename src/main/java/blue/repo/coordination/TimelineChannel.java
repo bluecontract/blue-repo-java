@@ -5,7 +5,7 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
 @TypeBlueId("AKRPLotcnGLq7gQRj3jHcfAkxkwaJpmxNXpC3G22GQQz")
-public class TimelineChannel {
+public class TimelineChannel extends blue.language.processor.model.ChannelContract {
     public static String blueId() {
         return "AKRPLotcnGLq7gQRj3jHcfAkxkwaJpmxNXpC3G22GQQz";
     }
