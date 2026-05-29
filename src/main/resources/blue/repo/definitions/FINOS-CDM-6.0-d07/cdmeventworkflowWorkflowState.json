@@ -1,0 +1,37 @@
+{
+  "name": "cdm/event/workflow/WorkflowState",
+  "description": "A class to specify workflow information, which is conceptually applicable to all lifecycle events.",
+  "comment": {
+    "description": "A comment field to be associated with the workflow, e.g. to specify why a transaction event was rejected by a party.\n",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "partyCustomisedWorkflow": {
+    "description": "Workflow data that is specific to certain market participants and is expressed as part of the CDM in a very generic manner, which can be party-specific. The initial use cases have been derived from the CME clearing and the DTCC TIW submissions.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "CQMkHmPeXp141BCihNcnGrkqMwtnK6JXd4LtcJnTYn68"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "warehouseIdentity": {
+    "description": "The identity of the warehouse, if any, that is executing that workflow step.",
+    "type": {
+      "blueId": "6UKLtucck8wKUGq1SM7EXskspVeaUHEtL1jDSJFYfx26"
+    }
+  },
+  "workflowStatus": {
+    "description": "The workflow status indicator, e.g. Accepted, Rejected, ...",
+    "type": {
+      "blueId": "5xDWF4yXns6FiXkR2GQfwzF1s3n6rUxufgxVksBJFxoX"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

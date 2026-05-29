@@ -3,12 +3,12 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Response;
+import blue.repo.coordination.Response;
 
-@TypeBlueId("GcotFgiqo3GMHp4xKrArDJi7AqciJGgYKvHodoAJwcWp")
+@TypeBlueId("6ewyxdBpb5oNdVSBkXZSDK6aUaAnzc2ad453V7vjXHu6")
 public class SubscriptionToSessionRevoked extends Response {
     public static String blueId() {
-        return "GcotFgiqo3GMHp4xKrArDJi7AqciJGgYKvHodoAJwcWp";
+        return "6ewyxdBpb5oNdVSBkXZSDK6aUaAnzc2ad453V7vjXHu6";
     }
 
     public static String packageName() {

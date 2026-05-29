@@ -1,0 +1,22 @@
+{
+  "name": "cdm/product/template/PassThroughItem",
+  "description": "Class to represent a single pass through payment.",
+  "passThroughPercentage": {
+    "description": "Percentage of payments from the underlier which are passed through.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "payerReceiver": {
+    "description": "This attribute doesn't exists in the FpML construct, which makes use of the PayerReceiver.model group.",
+    "type": {
+      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

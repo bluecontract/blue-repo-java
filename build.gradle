@@ -41,7 +41,7 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 dependencies {
-    api 'blue.language:blue-language-java:2.0.0'
+    api 'blue.language:blue-language-java:3.0.0'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
 
     testImplementation platform('org.junit:junit-bom:5.10.2')
@@ -69,6 +69,7 @@ test {
 ext.genResourcesDir = file("$buildDir/generated-resources")
 task generateBuildProperties {
     ext.buildPropertiesFile = file("$genResourcesDir/blue/repo/build.properties")
+    inputs.property('projectVersion', project.version.toString())
     outputs.file(buildPropertiesFile)
     doLast {
         buildPropertiesFile.text = """\
@@ -82,12 +83,12 @@ sourceSets.main.output.dir genResourcesDir, builtBy: generateBuildProperties
 def generatedRepositorySourcePaths = [
         'src/main/java/blue/repo/BlueRepositoryModels.java',
         'src/main/java/blue/repo/common',
-        'src/main/java/blue/repo/conversation',
-        'src/main/java/blue/repo/core',
+        'src/main/java/blue/repo/coordination',
         'src/main/java/blue/repo/finoscdm60d07',
         'src/main/java/blue/repo/myos',
         'src/main/java/blue/repo/paynote',
         'src/main/java/blue/repo/types',
+        'src/main/java/blue/repo/workflows',
         'src/main/resources/blue/repo'
 ]
 

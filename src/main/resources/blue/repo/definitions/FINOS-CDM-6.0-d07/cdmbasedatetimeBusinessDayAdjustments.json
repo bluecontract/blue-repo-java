@@ -1,0 +1,19 @@
+{
+  "name": "cdm/base/datetime/BusinessDayAdjustments",
+  "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.\n",
+  "businessCenters": {
+    "description": "The business center(s), specified either explicitly or by reference to those specified somewhere else in the instance document.\n",
+    "type": {
+      "blueId": "6H6qhfVQ1CTnjae8L3PvEdBtC4NMwMiaSJWK6kr5tEXf"
+    }
+  },
+  "businessDayConvention": {
+    "description": "The convention for adjusting a date if it would otherwise fall on a day that is not a business day.",
+    "type": {
+      "blueId": "74NpTvEaEEzgK6JYLfjq7ACR6d83uPFmACNmKfDZQ1hA"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "cdm/observable/asset/QuotationRateTypeEnum",
+  "description": "The enumerated values to specify the type of quotation rate to be obtained from each cash settlement reference bank.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Ask",
+      "Bid",
+      "ExercisingPartyPays",
+      "Mid"
+    ]
+  }
+}

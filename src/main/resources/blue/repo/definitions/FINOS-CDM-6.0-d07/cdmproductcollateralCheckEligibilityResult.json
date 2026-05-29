@@ -1,0 +1,43 @@
+{
+  "name": "cdm/product/collateral/CheckEligibilityResult",
+  "description": "Result for the CheckEligibilityByDetails and CheckEligibilityForProduct functions",
+  "eligibilityQuery": {
+    "description": "a copy of the input query that was checked against the eligible collateral specification",
+    "type": {
+      "blueId": "74k6s48z9t7RguYoPUYhSB5pC7v3N78pRNnLJfHXHkmy"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "isEligible": {
+    "description": "a simple boolean which is set to true if the asset described in the EligibilityQuery input is eligible",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "matchingEligibleCriteria": {
+    "description": "if there was a match, this will be the one or more criteria that were supplied in the EligbilityCollateralSpecification which matched with the query input\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "JBhQJD9vEAMUPeT6WopuEMTpVwyxLPZwxZa4Djj9Uh4L"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "specification": {
+    "description": "a copy of the input EligbilityCollateralSpecification that was checked against the query",
+    "type": {
+      "blueId": "BcyLTtz7PCvjtQ62vawwZU9iJiBPFvhNZfSYetBTLZiM"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

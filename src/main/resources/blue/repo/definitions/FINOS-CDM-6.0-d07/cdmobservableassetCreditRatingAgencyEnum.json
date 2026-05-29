@@ -1,0 +1,19 @@
+{
+  "name": "cdm/observable/asset/CreditRatingAgencyEnum",
+  "description": "Represents the enumerated values to specify the rating agencies.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AMBest",
+      "CBRS",
+      "DBRS",
+      "Fitch",
+      "Japanagency",
+      "Moodys",
+      "RatingAndInvestmentInformation",
+      "StandardAndPoors"
+    ]
+  }
+}

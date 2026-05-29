@@ -1,0 +1,52 @@
+{
+  "name": "cdm/product/asset/floatingrate/FloatingRateProcessingParameters",
+  "description": "Type to hold the processing parameters that should be or were used to calculate a floating amount.  These parameters can vary over a schedule so this type holds the acutal values applicable to this calculation.\n",
+  "capRate": {
+    "description": "capt to be applied to the floating rate.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "floorRate": {
+    "description": "floor to be applied to the floating rate.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "initialRate": {
+    "description": "The rate to be applied for the initial period.",
+    "type": {
+      "blueId": "BD3VPcMR7j62CWudW3xXH1Aropvfs515RCLZFP4cZY4P"
+    }
+  },
+  "multiplier": {
+    "description": "floating rate multiplier.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "negativeTreatment": {
+    "description": "How to handle negative interest rates.",
+    "type": {
+      "blueId": "EXwPjSissXAhf18rgWNAhF9XWD3q9VM5Xm8Guns2ATKR"
+    }
+  },
+  "rounding": {
+    "description": "THe final rate rounding to be applied.",
+    "type": {
+      "blueId": "DnXzzassZD8x4ZyWkS46bBpvzPMBW4txNdG32xcULQhy"
+    }
+  },
+  "spread": {
+    "description": "spread to be added to the floating rate.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "treatment": {
+    "description": "US rate treatment (Bond Equivalent Yield or Money Market Yield, if applicable.",
+    "type": {
+      "blueId": "mvBCUTQVk9D7HJtya2wZLDbfSeAwb1HXhfnPT1TPdts"
+    }
+  }
+}

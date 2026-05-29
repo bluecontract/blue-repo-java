@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.math.BigInteger;
 
-@TypeBlueId("GiYocGMGQcneiMPm4NH9MxVj7Fr4jwg2BUAMzwZcWRNR")
+@TypeBlueId("BsNKTXtCKag31WrdujJg7PSqD4rWg9b57DqHPq14Tpn7")
 public class MyOSAgentEvent {
     public static String blueId() {
-        return "GiYocGMGQcneiMPm4NH9MxVj7Fr4jwg2BUAMzwZcWRNR";
+        return "BsNKTXtCKag31WrdujJg7PSqD4rWg9b57DqHPq14Tpn7";
     }
 
     public static String packageName() {

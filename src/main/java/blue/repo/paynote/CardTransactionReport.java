@@ -5,13 +5,13 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.common.Currency;
 import blue.repo.common.Timestamp;
-import blue.repo.conversation.Event;
+import blue.repo.coordination.Event;
 import java.math.BigInteger;
 
-@TypeBlueId("2ibvMNB7oxcpkYpxpag2HLC81sRs3PUBFtqjbqN7ET8X")
+@TypeBlueId("2eNmDqhcQGV7Z7cJ6EJ9WnnpVKrqCuJrYfyiz1sfSPxC")
 public class CardTransactionReport extends Event {
     public static String blueId() {
-        return "2ibvMNB7oxcpkYpxpag2HLC81sRs3PUBFtqjbqN7ET8X";
+        return "2eNmDqhcQGV7Z7cJ6EJ9WnnpVKrqCuJrYfyiz1sfSPxC";
     }
 
     public static String packageName() {

@@ -1,0 +1,14 @@
+{
+  "name": "cdm/event/common/RecordAmountTypeEnum",
+  "description": "The enumeration of the account level for the billing summary.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AccountTotal",
+      "GrandTotal",
+      "ParentTotal"
+    ]
+  }
+}

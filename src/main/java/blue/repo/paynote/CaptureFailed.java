@@ -3,12 +3,12 @@ package blue.repo.paynote;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Response;
+import blue.repo.coordination.Response;
 
-@TypeBlueId("FUh3TARSh4TjnWKAkM5ydjFWLWEmrFByKMBQzcgQfqRW")
+@TypeBlueId("9UCqtGPAjKMd77NN7G4oTL6DKKimkLoT5V69AiUh6knx")
 public class CaptureFailed extends Response {
     public static String blueId() {
-        return "FUh3TARSh4TjnWKAkM5ydjFWLWEmrFByKMBQzcgQfqRW";
+        return "9UCqtGPAjKMd77NN7G4oTL6DKKimkLoT5V69AiUh6knx";
     }
 
     public static String packageName() {

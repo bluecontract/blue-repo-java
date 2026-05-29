@@ -1,0 +1,15 @@
+{
+  "name": "cdm/base/datetime/PeriodEnum",
+  "description": "The enumerated values to specify the period, e.g. day, week.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "D",
+      "M",
+      "W",
+      "Y"
+    ]
+  }
+}

@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("FfJjBeSAe4JWfA5FVnPDgL9pzLPYELskQnBSanPC9E8L")
+@TypeBlueId("Bv2m44vKZdG4tekaEBmCTQTDAvhBjnojy8sbPKZYTe9V")
 public class Task extends Document {
     public static String blueId() {
-        return "FfJjBeSAe4JWfA5FVnPDgL9pzLPYELskQnBSanPC9E8L";
+        return "Bv2m44vKZdG4tekaEBmCTQTDAvhBjnojy8sbPKZYTe9V";
     }
 
     public static String packageName() {

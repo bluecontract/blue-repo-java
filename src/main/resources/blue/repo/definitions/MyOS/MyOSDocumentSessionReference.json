@@ -4,13 +4,13 @@
   "documentId": {
     "description": "The initial blueId of the logical document.",
     "type": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     }
   },
   "sessionId": {
     "description": "The id of a specific, live processing session.",
     "type": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     }
   }
 }

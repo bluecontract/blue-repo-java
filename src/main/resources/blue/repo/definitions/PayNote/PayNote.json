@@ -1,100 +1,15 @@
 {
   "name": "PayNote",
   "description": "A document attached to exactly one transaction that governs what should happen with that transaction.\n",
-  "kind": {
-    "type": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-    },
-    "value": "PayNote"
-  },
-  "status": {
-    "description": "Current lifecycle state of this PayNote. Expected values include: Pending, Accepted, Initiated, Secured, Completed, Cancelled, Reversed, Rejected, Failed.\n",
-    "type": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-    }
-  },
-  "currency": {
-    "description": "ISO 4217 currency code.",
-    "type": {
-      "blueId": "CBnZ7aaNetj9KEqXpUWj5jvjKbmviLivP98T2EiyxiYc"
-    }
-  },
-  "amount": {
-    "description": "Amount values associated with this PayNote.",
-    "expectedTotal": {
-      "description": "The initially expected total amount in minor units.\n",
-      "type": {
-        "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
-      }
-    },
-    "finalResolved": {
-      "description": "The final resolved amount for completion, if known.\n",
-      "type": {
-        "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
-      }
-    },
-    "secured": {
-      "description": "Amount currently secured / under guarantor control.\n",
-      "type": {
-        "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
-      }
-    },
-    "completed": {
-      "description": "Amount already completed / finalized.\n",
-      "type": {
-        "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
-      }
-    },
-    "reversed": {
-      "description": "Amount already reversed after completion.\n",
-      "type": {
-        "blueId": "5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"
-      }
-    }
-  },
-  "transactionDetails": {
-    "description": "Transaction attachment information confirmed by the Guarantor.\n"
-  },
-  "controls": {
-    "completionLocked": {
-      "type": {
-        "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
-      }
-    },
-    "reversalLocked": {
-      "type": {
-        "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
-      }
-    },
-    "transactionDetailsUpdateLocked": {
-      "type": {
-        "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
-      }
-    }
-  },
-  "payNoteInitialStateDescription": {
-    "summary": {
-      "description": "Short explanation of what this PayNote is for.\n",
-      "type": {
-        "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-      }
-    },
-    "details": {
-      "description": "Full explanation of the process, conditions, and special rules. Markdown recommended.\n",
-      "type": {
-        "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-      }
-    }
-  },
   "contracts": {
     "search": {
       "type": {
-        "blueId": "5KdjguBmn7AwB9d8tjKxRh4xUHU9T8WDJ4dbaY6qgPvx"
+        "blueId": "ACDXskXQ1cmM9uN8UCRKgH7fEHzqUW5XzyjKgsxgdujs"
       },
       "kv": {
         "kind": {
           "type": {
-            "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
           },
           "value": "/kind"
         }
@@ -102,238 +17,456 @@
     },
     "payerChannel": {
       "type": {
-        "blueId": "DcoJyCh7XXxy1nR5xjy7qfkUgQ1GiZnKKSxh8DJusBSr"
+        "blueId": "4FAZ94JPExNM4pn2ZhtdHa4CVP7uASmLNVrBy7aCG1p5"
       }
     },
     "payeeChannel": {
       "type": {
-        "blueId": "DcoJyCh7XXxy1nR5xjy7qfkUgQ1GiZnKKSxh8DJusBSr"
+        "blueId": "4FAZ94JPExNM4pn2ZhtdHa4CVP7uASmLNVrBy7aCG1p5"
       }
     },
     "guarantorChannel": {
       "type": {
-        "blueId": "DcoJyCh7XXxy1nR5xjy7qfkUgQ1GiZnKKSxh8DJusBSr"
+        "blueId": "4FAZ94JPExNM4pn2ZhtdHa4CVP7uASmLNVrBy7aCG1p5"
       }
     },
     "initLifecycleChannel": {
       "type": {
-        "blueId": "H2aCCTUcLMTJozWkn7HPUjyFBFxamraw1q8DyWk87zxr"
+        "blueId": "2DXGQUiQBQ6CT89jwAsTAXaEPhLgiSXhKCGh9Q7Hv3MQ"
       },
       "event": {
         "type": {
-          "blueId": "BrpmpNt5JkapeUvPqYcxgXZrHNZX3R757dRwuXXdfNM2"
+          "blueId": "Ht1o66MTLKf7JmnEiR27rRLSwdz8FUTgf2mGPNuLSDUL"
         }
       }
     },
     "initialize": {
       "type": {
-        "blueId": "7X3LkN54Yp88JgZbppPhP6hM3Jqiqv8Z2i4kS7phXtQe"
+        "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "initLifecycleChannel"
       },
       "steps": {
         "items": [
           {
-            "name": "Resolve PayNote Runtime Defaults",
+            "name": "ResolveRuntimeDefaults",
             "type": {
-              "blueId": "ExZxT61PSpWHpEAtP2WKMXXqxEYN7Z13j7Zv36Dp99kS"
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
             },
-            "code": {
-              "type": {
-                "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-              },
-              "value": "const fallback = (current, value) =>\n  current === null || current === undefined ? value : current;\n\nreturn {\n  status: fallback(document('/status'), 'Pending'),\n  amountFinalResolved: fallback(document('/amount/finalResolved'), 0),\n  amountSecured: fallback(document('/amount/secured'), 0),\n  amountCompleted: fallback(document('/amount/completed'), 0),\n  amountReversed: fallback(document('/amount/reversed'), 0),\n  completionLocked: fallback(document('/controls/completionLocked'), false),\n  reversalLocked: fallback(document('/controls/reversalLocked'), false),\n  transactionDetailsUpdateLocked: fallback(\n    document('/controls/transactionDetailsUpdateLocked'),\n    false\n  ),\n  transactionDetails: fallback(document('/transactionDetails'), {}),\n};\n"
-            }
-          },
-          {
-            "name": "Initialize PayNote Runtime State",
-            "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
-            },
-            "changeset": {
+            "do": {
               "items": [
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "add"
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/status"
                     },
-                    "value": "/status"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${steps['Resolve PayNote Runtime Defaults'].status}"
+                    "val": {
+                      "$choose": {
+                        "cond": {
+                          "$exists": {
+                            "$document": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/status"
+                            }
+                          }
+                        },
+                        "then": {
+                          "$document": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "/status"
+                          }
+                        },
+                        "else": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "Pending"
+                        }
+                      }
+                    }
                   }
                 },
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "add"
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/amount/finalResolved"
                     },
-                    "value": "/amount/finalResolved"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${steps['Resolve PayNote Runtime Defaults'].amountFinalResolved}"
+                    "val": {
+                      "$choose": {
+                        "cond": {
+                          "$exists": {
+                            "$document": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/amount/finalResolved"
+                            }
+                          }
+                        },
+                        "then": {
+                          "$document": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "/amount/finalResolved"
+                          }
+                        },
+                        "else": {
+                          "type": {
+                            "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                          },
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 },
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "add"
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/amount/secured"
                     },
-                    "value": "/amount/secured"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${steps['Resolve PayNote Runtime Defaults'].amountSecured}"
+                    "val": {
+                      "$choose": {
+                        "cond": {
+                          "$exists": {
+                            "$document": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/amount/secured"
+                            }
+                          }
+                        },
+                        "then": {
+                          "$document": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "/amount/secured"
+                          }
+                        },
+                        "else": {
+                          "type": {
+                            "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                          },
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 },
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "add"
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/amount/completed"
                     },
-                    "value": "/amount/completed"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${steps['Resolve PayNote Runtime Defaults'].amountCompleted}"
+                    "val": {
+                      "$choose": {
+                        "cond": {
+                          "$exists": {
+                            "$document": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/amount/completed"
+                            }
+                          }
+                        },
+                        "then": {
+                          "$document": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "/amount/completed"
+                          }
+                        },
+                        "else": {
+                          "type": {
+                            "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                          },
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 },
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "add"
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/amount/reversed"
                     },
-                    "value": "/amount/reversed"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${steps['Resolve PayNote Runtime Defaults'].amountReversed}"
+                    "val": {
+                      "$choose": {
+                        "cond": {
+                          "$exists": {
+                            "$document": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/amount/reversed"
+                            }
+                          }
+                        },
+                        "then": {
+                          "$document": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "/amount/reversed"
+                          }
+                        },
+                        "else": {
+                          "type": {
+                            "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                          },
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 },
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "add"
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/controls/completionLocked"
                     },
-                    "value": "/controls/completionLocked"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${steps['Resolve PayNote Runtime Defaults'].completionLocked}"
+                    "val": {
+                      "$choose": {
+                        "cond": {
+                          "$exists": {
+                            "$document": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/controls/completionLocked"
+                            }
+                          }
+                        },
+                        "then": {
+                          "$document": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "/controls/completionLocked"
+                          }
+                        },
+                        "else": {
+                          "type": {
+                            "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                          },
+                          "value": false
+                        }
+                      }
+                    }
                   }
                 },
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "add"
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/controls/reversalLocked"
                     },
-                    "value": "/controls/reversalLocked"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${steps['Resolve PayNote Runtime Defaults'].reversalLocked}"
+                    "val": {
+                      "$choose": {
+                        "cond": {
+                          "$exists": {
+                            "$document": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/controls/reversalLocked"
+                            }
+                          }
+                        },
+                        "then": {
+                          "$document": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "/controls/reversalLocked"
+                          }
+                        },
+                        "else": {
+                          "type": {
+                            "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                          },
+                          "value": false
+                        }
+                      }
+                    }
                   }
                 },
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "add"
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/controls/transactionDetailsUpdateLocked"
                     },
-                    "value": "/controls/transactionDetailsUpdateLocked"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${steps['Resolve PayNote Runtime Defaults'].transactionDetailsUpdateLocked}"
+                    "val": {
+                      "$choose": {
+                        "cond": {
+                          "$exists": {
+                            "$document": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/controls/transactionDetailsUpdateLocked"
+                            }
+                          }
+                        },
+                        "then": {
+                          "$document": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "/controls/transactionDetailsUpdateLocked"
+                          }
+                        },
+                        "else": {
+                          "type": {
+                            "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                          },
+                          "value": false
+                        }
+                      }
+                    }
                   }
                 },
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "add"
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/transactionDetails"
                     },
-                    "value": "/transactionDetails"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${steps['Resolve PayNote Runtime Defaults'].transactionDetails}"
+                    "val": {
+                      "$choose": {
+                        "cond": {
+                          "$exists": {
+                            "$document": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/transactionDetails"
+                            }
+                          }
+                        },
+                        "then": {
+                          "$document": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "/transactionDetails"
+                          }
+                        },
+                        "else": {
+                          "$emptyObject": {
+                            "type": {
+                              "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                            },
+                            "value": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "changeset": {
+                      "$changeset": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
                   }
                 }
               ]
@@ -344,27 +477,27 @@
     },
     "acceptPayNote": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "CfSpcRXYk2qwu1vNs9LL8rycBsxzL2R4LGyDdrDzwCjh"
+          "blueId": "Hcg9rpEFRbEcsVyx2Doq7MHZx9bhP4J32x3jA74AgTz7"
         }
       }
     },
     "acceptPayNoteImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "acceptPayNote"
       },
@@ -373,26 +506,26 @@
           {
             "name": "Mark PayNote Accepted",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Accepted"
                   }
@@ -403,11 +536,11 @@
           {
             "name": "Emit PayNote Accepted",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "CfSpcRXYk2qwu1vNs9LL8rycBsxzL2R4LGyDdrDzwCjh"
+                "blueId": "Hcg9rpEFRbEcsVyx2Doq7MHZx9bhP4J32x3jA74AgTz7"
               }
             }
           }
@@ -416,69 +549,138 @@
     },
     "rejectPayNote": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "AdKfkwRfzRUxUKSzhRfYANsaUBNnz4u6JFWR66qhzyZe"
+          "blueId": "9XRGf45TaohQEHutFaNYPHkYYe2NWsyXsSsv2UoTfm6L"
         }
       }
     },
     "rejectPayNoteImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "rejectPayNote"
       },
       "steps": {
         "items": [
           {
-            "name": "Validate and Forward Rejection",
+            "name": "ValidateForwardAndReject",
             "type": {
-              "blueId": "ExZxT61PSpWHpEAtP2WKMXXqxEYN7Z13j7Zv36Dp99kS"
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
             },
-            "code": {
-              "type": {
-                "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-              },
-              "value": "const request =\n  event && event.message ? event.message.request : null;\n\nif (!request || typeof request !== 'object' || Array.isArray(request)) {\n  throw new Error('PayNote rejection request must be an object.');\n}\n\nreturn { events: [request] };\n"
-            }
-          },
-          {
-            "name": "Mark PayNote Rejected",
-            "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
-            },
-            "changeset": {
+            "do": {
               "items": [
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                  "$let": {
+                    "name": "request",
+                    "expr": {
+                      "$event": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "/message/request"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$if": {
+                    "cond": {
+                      "$not": {
+                        "$isKind": {
+                          "val": {
+                            "$var": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "request"
+                            }
+                          },
+                          "kind": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "object"
+                          }
+                        }
+                      }
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "then": {
+                      "items": [
+                        {
+                          "$fail": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "PayNote rejection request must be an object."
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "$appendEvent": {
+                    "$var": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "request"
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
                     },
-                    "value": "/status"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/status"
                     },
-                    "value": "Rejected"
+                    "val": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "Rejected"
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "changeset": {
+                      "$changeset": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    },
+                    "events": {
+                      "$events": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
                   }
                 }
               ]
@@ -489,92 +691,420 @@
     },
     "recordTransactionInitiated": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "14UHCXtf9XLpi3Z3n4xbo1dmXRzfXnDEH23iVaechxzh"
+          "blueId": "75FqpZhMunC4H25PrrsmNRCRGoLj5UJ1Ldc4eVsHqjGM"
         }
       }
     },
     "recordTransactionInitiatedImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "recordTransactionInitiated"
       },
       "steps": {
         "items": [
           {
-            "name": "Merge Initiation Transaction Details",
+            "name": "MergeInitiationTransactionDetails",
             "type": {
-              "blueId": "ExZxT61PSpWHpEAtP2WKMXXqxEYN7Z13j7Zv36Dp99kS"
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
             },
-            "code": {
+            "entry": {
               "type": {
-                "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
               },
-              "value": "const request =\n  event && event.message ? event.message.request : null;\n\nif (!request || typeof request !== 'object' || Array.isArray(request)) {\n  throw new Error('Transaction initiated payload must be an object.');\n}\n\nconst current = document('/transactionDetails');\nconst next =\n  current && typeof current === 'object' && !Array.isArray(current)\n    ? { ...current }\n    : {};\nconst keys = Object.keys(request);\nlet index = 0;\nwhile (index < keys.length) {\n  const key = keys[index];\n  if (key !== 'type') {\n    next[key] = request[key];\n  }\n  index += 1;\n}\n\nreturn { nextTransactionDetails: next, events: [request] };\n"
-            }
-          },
-          {
-            "name": "Update Initiation State",
-            "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "value": "merge"
             },
-            "changeset": {
-              "items": [
-                {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "/status"
-                  },
+            "functions": {
+              "asObject": {
+                "args": {
                   "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "Initiated"
+                    "description": "BEX helper argument."
                   }
                 },
-                {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                "expr": {
+                  "$choose": {
+                    "cond": {
+                      "$isKind": {
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "val"
+                          }
+                        },
+                        "kind": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "object"
+                        }
+                      }
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "then": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "val"
+                      }
                     },
-                    "value": "/transactionDetails"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${steps['Merge Initiation Transaction Details'].nextTransactionDetails}"
+                    "else": {
+                      "$emptyObject": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
                   }
                 }
-              ]
+              },
+              "objectWithoutType": {
+                "args": {
+                  "val": {
+                    "description": "BEX helper argument."
+                  }
+                },
+                "expr": {
+                  "$objectFromEntries": {
+                    "$map": {
+                      "in": {
+                        "$filter": {
+                          "in": {
+                            "$keys": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "asObject"
+                                },
+                                "args": {
+                                  "val": {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "val"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "item": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "key"
+                          },
+                          "where": {
+                            "$ne": {
+                              "items": [
+                                {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "key"
+                                  }
+                                },
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "type"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "item": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "key"
+                      },
+                      "expr": {
+                        "key": {
+                          "$text": {
+                            "$var": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "key"
+                            }
+                          }
+                        },
+                        "val": {
+                          "$get": {
+                            "object": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "asObject"
+                                },
+                                "args": {
+                                  "val": {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "val"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "key": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "key"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "merge": {
+                "do": {
+                  "items": [
+                    {
+                      "$let": {
+                        "order": {
+                          "items": [
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "request"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "nextTransactionDetails"
+                            }
+                          ]
+                        },
+                        "vars": {
+                          "request": {
+                            "$event": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/message/request"
+                            }
+                          },
+                          "nextTransactionDetails": {
+                            "$merge": {
+                              "items": [
+                                {
+                                  "$call": {
+                                    "function": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "asObject"
+                                    },
+                                    "args": {
+                                      "val": {
+                                        "$choose": {
+                                          "cond": {
+                                            "$exists": {
+                                              "$document": {
+                                                "type": {
+                                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                },
+                                                "value": "/transactionDetails"
+                                              }
+                                            }
+                                          },
+                                          "then": {
+                                            "$document": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "/transactionDetails"
+                                            }
+                                          },
+                                          "else": {
+                                            "$emptyObject": {
+                                              "type": {
+                                                "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                                              },
+                                              "value": true
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "$call": {
+                                    "function": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "objectWithoutType"
+                                    },
+                                    "args": {
+                                      "val": {
+                                        "$event": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "/message/request"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$if": {
+                        "cond": {
+                          "$not": {
+                            "$isKind": {
+                              "val": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "request"
+                                }
+                              },
+                              "kind": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "object"
+                              }
+                            }
+                          }
+                        },
+                        "then": {
+                          "items": [
+                            {
+                              "$fail": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "Transaction initiated payload must be an object."
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "$appendEvent": {
+                        "$var": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "request"
+                        }
+                      }
+                    },
+                    {
+                      "$appendChange": {
+                        "op": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "replace"
+                        },
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/status"
+                        },
+                        "val": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "Initiated"
+                        }
+                      }
+                    },
+                    {
+                      "$appendChange": {
+                        "op": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "replace"
+                        },
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/transactionDetails"
+                        },
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "nextTransactionDetails"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$return": {
+                        "changeset": {
+                          "$changeset": {
+                            "type": {
+                              "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                            },
+                            "value": true
+                          }
+                        },
+                        "events": {
+                          "$events": {
+                            "type": {
+                              "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                            },
+                            "value": true
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           }
         ]
@@ -582,27 +1112,27 @@
     },
     "recordTransactionInitiationFailed": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "FSfMCJpFDcB9zNfrd4gDhaDXpFhaSNToGbAdxSkw55V7"
+          "blueId": "AAEsZ5p6qEHZYr4ZP9oFMyYvJkFNbF6miqtnnYYkovTE"
         }
       }
     },
     "recordTransactionInitiationFailedImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "recordTransactionInitiationFailed"
       },
@@ -611,26 +1141,26 @@
           {
             "name": "Mark Initiation Failed",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Failed"
                   }
@@ -641,17 +1171,14 @@
           {
             "name": "Emit Transaction Initiation Failed",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "FSfMCJpFDcB9zNfrd4gDhaDXpFhaSNToGbAdxSkw55V7"
+                "blueId": "AAEsZ5p6qEHZYr4ZP9oFMyYvJkFNbF6miqtnnYYkovTE"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -660,72 +1187,312 @@
     },
     "confirmPayeeAssignment": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "34v52X6nVj6muiD11W8nohLFn7DjT2RiaRYwjRNpq4v3"
+          "blueId": "44BS4uToUQLVy8cFfUjbxr99ozR6fiAtCtC3Wd38VPwd"
         }
       }
     },
     "confirmPayeeAssignmentImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "confirmPayeeAssignment"
       },
       "steps": {
         "items": [
           {
-            "name": "Merge Payee Assignment",
+            "name": "MergePayeeAssignment",
             "type": {
-              "blueId": "ExZxT61PSpWHpEAtP2WKMXXqxEYN7Z13j7Zv36Dp99kS"
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
             },
-            "code": {
+            "entry": {
               "type": {
-                "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
               },
-              "value": "const request =\n  event && event.message ? event.message.request : null;\n\nif (!request || typeof request !== 'object' || Array.isArray(request)) {\n  throw new Error('Payee assignment payload must be an object.');\n}\nif (typeof request.payeeRef !== 'string') {\n  throw new Error('Payee assignment payload must include payeeRef.');\n}\n\nconst current = document('/transactionDetails');\nconst next =\n  current && typeof current === 'object' && !Array.isArray(current)\n    ? { ...current }\n    : {};\nnext.payeeRef = request.payeeRef;\n\nreturn { nextTransactionDetails: next, events: [request] };\n"
-            }
-          },
-          {
-            "name": "Update Payee Assignment",
-            "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "value": "merge"
             },
-            "changeset": {
-              "items": [
-                {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "/transactionDetails"
-                  },
+            "functions": {
+              "asObject": {
+                "args": {
                   "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "description": "BEX helper argument."
+                  }
+                },
+                "expr": {
+                  "$choose": {
+                    "cond": {
+                      "$isKind": {
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "val"
+                          }
+                        },
+                        "kind": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "object"
+                        }
+                      }
                     },
-                    "value": "${steps['Merge Payee Assignment'].nextTransactionDetails}"
+                    "then": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "val"
+                      }
+                    },
+                    "else": {
+                      "$emptyObject": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
                   }
                 }
-              ]
+              },
+              "merge": {
+                "do": {
+                  "items": [
+                    {
+                      "$let": {
+                        "order": {
+                          "items": [
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "request"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "nextTransactionDetails"
+                            }
+                          ]
+                        },
+                        "vars": {
+                          "request": {
+                            "$event": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/message/request"
+                            }
+                          },
+                          "nextTransactionDetails": {
+                            "$merge": {
+                              "items": [
+                                {
+                                  "$call": {
+                                    "function": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "asObject"
+                                    },
+                                    "args": {
+                                      "val": {
+                                        "$choose": {
+                                          "cond": {
+                                            "$exists": {
+                                              "$document": {
+                                                "type": {
+                                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                },
+                                                "value": "/transactionDetails"
+                                              }
+                                            }
+                                          },
+                                          "then": {
+                                            "$document": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "/transactionDetails"
+                                            }
+                                          },
+                                          "else": {
+                                            "$emptyObject": {
+                                              "type": {
+                                                "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                                              },
+                                              "value": true
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "payeeRef": {
+                                    "$event": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "/message/request/payeeRef"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$if": {
+                        "cond": {
+                          "$not": {
+                            "$isKind": {
+                              "val": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "request"
+                                }
+                              },
+                              "kind": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "object"
+                              }
+                            }
+                          }
+                        },
+                        "then": {
+                          "items": [
+                            {
+                              "$fail": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "Payee assignment payload must be an object."
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "$if": {
+                        "cond": {
+                          "$not": {
+                            "$isKind": {
+                              "val": {
+                                "$var": {
+                                  "name": "request",
+                                  "path": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/payeeRef"
+                                  }
+                                }
+                              },
+                              "kind": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "text"
+                              }
+                            }
+                          }
+                        },
+                        "then": {
+                          "items": [
+                            {
+                              "$fail": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "Payee assignment payload must include payeeRef."
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "$appendEvent": {
+                        "$var": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "request"
+                        }
+                      }
+                    },
+                    {
+                      "$appendChange": {
+                        "op": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "replace"
+                        },
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/transactionDetails"
+                        },
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "nextTransactionDetails"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$return": {
+                        "changeset": {
+                          "$changeset": {
+                            "type": {
+                              "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                            },
+                            "value": true
+                          }
+                        },
+                        "events": {
+                          "$events": {
+                            "type": {
+                              "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                            },
+                            "value": true
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           }
         ]
@@ -733,27 +1500,27 @@
     },
     "rejectPayeeAssignment": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "CNFxs2PfxjDh7HNCaehyxNJ8zAdLbmgTcH12rU8VA7yi"
+          "blueId": "3zCHLCtMCUoM1LiZP7skhLwZ5NGcTmVLQbdfPkDuv4q4"
         }
       }
     },
     "rejectPayeeAssignmentImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "rejectPayeeAssignment"
       },
@@ -762,17 +1529,14 @@
           {
             "name": "Emit Payee Assignment Rejected",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "CNFxs2PfxjDh7HNCaehyxNJ8zAdLbmgTcH12rU8VA7yi"
+                "blueId": "3zCHLCtMCUoM1LiZP7skhLwZ5NGcTmVLQbdfPkDuv4q4"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -781,72 +1545,333 @@
     },
     "confirmTransactionDetailsUpdated": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "EsyQj8xWb1Kf2ESjDq1UR6PK2hx4fpnyGiEWJ14ttC8a"
+          "blueId": "28nyzzqFkwjPojUURBiBoHQeGb4B74JGQSe5Ly5zXjK3"
         }
       }
     },
     "confirmTransactionDetailsUpdatedImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "confirmTransactionDetailsUpdated"
       },
       "steps": {
         "items": [
           {
-            "name": "Merge Transaction Details Update",
+            "name": "MergeTransactionDetailsUpdate",
             "type": {
-              "blueId": "ExZxT61PSpWHpEAtP2WKMXXqxEYN7Z13j7Zv36Dp99kS"
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
             },
-            "code": {
+            "entry": {
               "type": {
-                "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
               },
-              "value": "const request =\n  event && event.message ? event.message.request : null;\n\nif (!request || typeof request !== 'object' || Array.isArray(request)) {\n  throw new Error('Transaction details update payload must be an object.');\n}\nif (\n  !request.transactionDetails ||\n  typeof request.transactionDetails !== 'object' ||\n  Array.isArray(request.transactionDetails)\n) {\n  throw new Error(\n    'Transaction details update payload must include transactionDetails object.'\n  );\n}\n\nconst current = document('/transactionDetails');\nconst next =\n  current && typeof current === 'object' && !Array.isArray(current)\n    ? { ...current }\n    : {};\nconst patch = request.transactionDetails;\n\nconst patchKeys = Object.keys(patch);\nlet index = 0;\nwhile (index < patchKeys.length) {\n  const key = patchKeys[index];\n  next[key] = patch[key];\n  index += 1;\n}\n\nreturn { nextTransactionDetails: next, events: [request] };\n"
-            }
-          },
-          {
-            "name": "Apply Transaction Details Update",
-            "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "value": "merge"
             },
-            "changeset": {
-              "items": [
-                {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "/transactionDetails"
-                  },
+            "functions": {
+              "asObject": {
+                "args": {
                   "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "description": "BEX helper argument."
+                  }
+                },
+                "expr": {
+                  "$choose": {
+                    "cond": {
+                      "$isKind": {
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "val"
+                          }
+                        },
+                        "kind": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "object"
+                        }
+                      }
                     },
-                    "value": "${steps['Merge Transaction Details Update'].nextTransactionDetails}"
+                    "then": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "val"
+                      }
+                    },
+                    "else": {
+                      "$emptyObject": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
                   }
                 }
-              ]
+              },
+              "merge": {
+                "do": {
+                  "items": [
+                    {
+                      "$let": {
+                        "order": {
+                          "items": [
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "request"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "patch"
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "nextTransactionDetails"
+                            }
+                          ]
+                        },
+                        "vars": {
+                          "request": {
+                            "$event": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/message/request"
+                            }
+                          },
+                          "patch": {
+                            "$event": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/message/request/transactionDetails"
+                            }
+                          },
+                          "nextTransactionDetails": {
+                            "$merge": {
+                              "items": [
+                                {
+                                  "$call": {
+                                    "function": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "asObject"
+                                    },
+                                    "args": {
+                                      "val": {
+                                        "$choose": {
+                                          "cond": {
+                                            "$exists": {
+                                              "$document": {
+                                                "type": {
+                                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                },
+                                                "value": "/transactionDetails"
+                                              }
+                                            }
+                                          },
+                                          "then": {
+                                            "$document": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "/transactionDetails"
+                                            }
+                                          },
+                                          "else": {
+                                            "$emptyObject": {
+                                              "type": {
+                                                "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                                              },
+                                              "value": true
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "$call": {
+                                    "function": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "asObject"
+                                    },
+                                    "args": {
+                                      "val": {
+                                        "$event": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "/message/request/transactionDetails"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$if": {
+                        "cond": {
+                          "$not": {
+                            "$isKind": {
+                              "val": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "request"
+                                }
+                              },
+                              "kind": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "object"
+                              }
+                            }
+                          }
+                        },
+                        "then": {
+                          "items": [
+                            {
+                              "$fail": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "Transaction details update payload must be an object."
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "$if": {
+                        "cond": {
+                          "$not": {
+                            "$isKind": {
+                              "val": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "patch"
+                                }
+                              },
+                              "kind": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "object"
+                              }
+                            }
+                          }
+                        },
+                        "then": {
+                          "items": [
+                            {
+                              "$fail": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "Transaction details update payload must include transactionDetails object."
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "$appendEvent": {
+                        "$var": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "request"
+                        }
+                      }
+                    },
+                    {
+                      "$appendChange": {
+                        "op": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "replace"
+                        },
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/transactionDetails"
+                        },
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "nextTransactionDetails"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$return": {
+                        "changeset": {
+                          "$changeset": {
+                            "type": {
+                              "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                            },
+                            "value": true
+                          }
+                        },
+                        "events": {
+                          "$events": {
+                            "type": {
+                              "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                            },
+                            "value": true
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           }
         ]
@@ -854,27 +1879,27 @@
     },
     "rejectTransactionDetailsUpdate": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "tF2fYwf8b7HwErSWAduxWXoV8v7pMQPHVCsSZhZzhmT"
+          "blueId": "3BD7DPACFH2DZWxs9kb8YCBNypzJYMzctkyu6GZDsf85"
         }
       }
     },
     "rejectTransactionDetailsUpdateImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "rejectTransactionDetailsUpdate"
       },
@@ -883,17 +1908,14 @@
           {
             "name": "Emit Transaction Details Update Rejected",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "tF2fYwf8b7HwErSWAduxWXoV8v7pMQPHVCsSZhZzhmT"
+                "blueId": "3BD7DPACFH2DZWxs9kb8YCBNypzJYMzctkyu6GZDsf85"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -902,27 +1924,27 @@
     },
     "failTransactionDetailsUpdate": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "2dmAPySotyaWEPRLBYMiooqrqa3v42pyrHYvWskMMsMb"
+          "blueId": "2ZtTQ2b9sFY65w4f4wWYQctRGj9o9ApkRb6tMXyiUqMb"
         }
       }
     },
     "failTransactionDetailsUpdateImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "failTransactionDetailsUpdate"
       },
@@ -931,17 +1953,14 @@
           {
             "name": "Emit Transaction Details Update Failed",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "2dmAPySotyaWEPRLBYMiooqrqa3v42pyrHYvWskMMsMb"
+                "blueId": "2ZtTQ2b9sFY65w4f4wWYQctRGj9o9ApkRb6tMXyiUqMb"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -950,27 +1969,27 @@
     },
     "secureFunds": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "DvxVaiLspGpmTY5SiZDb85sJLcvzBCoJCjCHSAmVFbGT"
+          "blueId": "BRCYCbhWLNL4eV9PPiXyR9jD5vUwZJM1QzVRitbzgttG"
         }
       }
     },
     "secureFundsImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "secureFunds"
       },
@@ -979,26 +1998,26 @@
           {
             "name": "Update Secured Amount",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Secured"
                   }
@@ -1006,21 +2025,18 @@
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/amount/secured"
                   },
                   "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${event.message.request.amountSecured}"
+                    "$event": "/message/request/amountSecured"
                   }
                 }
               ]
@@ -1029,17 +2045,14 @@
           {
             "name": "Emit Funds Secured",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "DvxVaiLspGpmTY5SiZDb85sJLcvzBCoJCjCHSAmVFbGT"
+                "blueId": "BRCYCbhWLNL4eV9PPiXyR9jD5vUwZJM1QzVRitbzgttG"
               },
               "amountSecured": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.amountSecured}"
+                "$event": "/message/request/amountSecured"
               }
             }
           }
@@ -1048,27 +2061,27 @@
     },
     "declineSecureFunds": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "8PufMmsuBgpX5YCpiS7XuiCFUWDan1fN8c3TLLwh57gL"
+          "blueId": "F9uGVcesweVvK72Uw95r5uoC3N9rK7wEqrLesNF2dg6t"
         }
       }
     },
     "declineSecureFundsImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "declineSecureFunds"
       },
@@ -1077,26 +2090,26 @@
           {
             "name": "Mark Funds Securing Declined",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Rejected"
                   }
@@ -1107,17 +2120,14 @@
           {
             "name": "Emit Funds Securing Declined",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "8PufMmsuBgpX5YCpiS7XuiCFUWDan1fN8c3TLLwh57gL"
+                "blueId": "F9uGVcesweVvK72Uw95r5uoC3N9rK7wEqrLesNF2dg6t"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -1126,27 +2136,27 @@
     },
     "failSecureFunds": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "67BprL1WeSSpJDKawcnaNC6VF2vz68JQ5qrVfi37biBA"
+          "blueId": "BWyf1rwHSCFApt6cTx1pq758Cwkmf6ip1XdEBg4QnCv8"
         }
       }
     },
     "failSecureFundsImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "failSecureFunds"
       },
@@ -1155,26 +2165,26 @@
           {
             "name": "Mark Funds Securing Failed",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Failed"
                   }
@@ -1185,17 +2195,14 @@
           {
             "name": "Emit Funds Securing Failed",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "67BprL1WeSSpJDKawcnaNC6VF2vz68JQ5qrVfi37biBA"
+                "blueId": "BWyf1rwHSCFApt6cTx1pq758Cwkmf6ip1XdEBg4QnCv8"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -1204,27 +2211,27 @@
     },
     "completePayment": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "72eeCYvygiChLj529TP1HKKBaYyB5TBa15Y3cn3JGsak"
+          "blueId": "5hNfvS7YBGdFfwoUt214LTTk8NSsVETTwDfDTzqcWihu"
         }
       }
     },
     "completePaymentImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "completePayment"
       },
@@ -1233,26 +2240,26 @@
           {
             "name": "Update Completed Amount",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Completed"
                   }
@@ -1260,21 +2267,18 @@
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/amount/completed"
                   },
                   "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${event.message.request.amountCompleted}"
+                    "$event": "/message/request/amountCompleted"
                   }
                 }
               ]
@@ -1283,17 +2287,14 @@
           {
             "name": "Emit Payment Completed",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "72eeCYvygiChLj529TP1HKKBaYyB5TBa15Y3cn3JGsak"
+                "blueId": "5hNfvS7YBGdFfwoUt214LTTk8NSsVETTwDfDTzqcWihu"
               },
               "amountCompleted": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.amountCompleted}"
+                "$event": "/message/request/amountCompleted"
               }
             }
           }
@@ -1302,27 +2303,27 @@
     },
     "declineCompletePayment": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "9AL8hghruGSH1ibFSYE8N7xoPLWLkktTCMFRkdoNsfTN"
+          "blueId": "os4PgmBBxgt26WMaUg4XC4kmHkHygU5WL6PD5bHhShL"
         }
       }
     },
     "declineCompletePaymentImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "declineCompletePayment"
       },
@@ -1331,26 +2332,26 @@
           {
             "name": "Mark Payment Completion Declined",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Rejected"
                   }
@@ -1361,17 +2362,14 @@
           {
             "name": "Emit Payment Completion Declined",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "9AL8hghruGSH1ibFSYE8N7xoPLWLkktTCMFRkdoNsfTN"
+                "blueId": "os4PgmBBxgt26WMaUg4XC4kmHkHygU5WL6PD5bHhShL"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -1380,27 +2378,27 @@
     },
     "failCompletePayment": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "An4JGf9zvSwEtYPJjZaWRnHaPXXvmyHg7oNLmJRKuxSV"
+          "blueId": "6NZSd6JgMDdXikYHCDkeQ6aJsWCvMaznrRWdAaGRxnAL"
         }
       }
     },
     "failCompletePaymentImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "failCompletePayment"
       },
@@ -1409,26 +2407,26 @@
           {
             "name": "Mark Payment Completion Failed",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Failed"
                   }
@@ -1439,17 +2437,14 @@
           {
             "name": "Emit Payment Completion Failed",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "An4JGf9zvSwEtYPJjZaWRnHaPXXvmyHg7oNLmJRKuxSV"
+                "blueId": "6NZSd6JgMDdXikYHCDkeQ6aJsWCvMaznrRWdAaGRxnAL"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -1458,27 +2453,27 @@
     },
     "cancelBeforeCompletion": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "9hvBQjesbYZPkZSaikm5avp7sFjTHsjRkQS2gas1u49p"
+          "blueId": "EUw3vUNYpwxKrtvF9FE7jwGzMo7NByVZcLuaTi8Pks7X"
         }
       }
     },
     "cancelBeforeCompletionImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "cancelBeforeCompletion"
       },
@@ -1487,26 +2482,26 @@
           {
             "name": "Mark Cancelled Before Completion",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Cancelled"
                   }
@@ -1517,11 +2512,11 @@
           {
             "name": "Emit Payment Cancelled Before Completion",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "9hvBQjesbYZPkZSaikm5avp7sFjTHsjRkQS2gas1u49p"
+                "blueId": "EUw3vUNYpwxKrtvF9FE7jwGzMo7NByVZcLuaTi8Pks7X"
               }
             }
           }
@@ -1530,27 +2525,27 @@
     },
     "declineCancelBeforeCompletion": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "4witPJDjFKHNHyucepuDn9KXyUTTqZQTVsKHvcrVbGvY"
+          "blueId": "7QLdg1jcp7zdZHW8TMek1KRhdhpjmXNyJv83qmMLedkp"
         }
       }
     },
     "declineCancelBeforeCompletionImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "declineCancelBeforeCompletion"
       },
@@ -1559,26 +2554,26 @@
           {
             "name": "Mark Payment Cancellation Declined",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Rejected"
                   }
@@ -1589,17 +2584,14 @@
           {
             "name": "Emit Payment Cancellation Declined",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "4witPJDjFKHNHyucepuDn9KXyUTTqZQTVsKHvcrVbGvY"
+                "blueId": "7QLdg1jcp7zdZHW8TMek1KRhdhpjmXNyJv83qmMLedkp"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -1608,27 +2600,27 @@
     },
     "failCancelBeforeCompletion": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "ExfGtqDcSr7RkvA7XzdV5B1MVc7CPacHpanjGBtGhjyk"
+          "blueId": "3PohjSUMX4izceADM8gpy4Mg9988TNPWX9fKGrMBtZ8a"
         }
       }
     },
     "failCancelBeforeCompletionImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "failCancelBeforeCompletion"
       },
@@ -1637,26 +2629,26 @@
           {
             "name": "Mark Payment Cancellation Failed",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Failed"
                   }
@@ -1667,17 +2659,14 @@
           {
             "name": "Emit Payment Cancellation Failed",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "ExfGtqDcSr7RkvA7XzdV5B1MVc7CPacHpanjGBtGhjyk"
+                "blueId": "3PohjSUMX4izceADM8gpy4Mg9988TNPWX9fKGrMBtZ8a"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -1686,27 +2675,27 @@
     },
     "reverseAfterCompletion": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "81whmkSDanPULQUi4sMuVkxiWDLHb3VPC5PeLfJCXCGo"
+          "blueId": "BZL11BoCdd5wXZ1XGwPqckiCzfinoVLNUpmFt4cXGEQ8"
         }
       }
     },
     "reverseAfterCompletionImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "reverseAfterCompletion"
       },
@@ -1715,26 +2704,26 @@
           {
             "name": "Update Reversed Amount",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Reversed"
                   }
@@ -1742,21 +2731,18 @@
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/amount/reversed"
                   },
                   "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${event.message.request.amountReversed}"
+                    "$event": "/message/request/amountReversed"
                   }
                 }
               ]
@@ -1765,17 +2751,14 @@
           {
             "name": "Emit Payment Reversed After Completion",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "81whmkSDanPULQUi4sMuVkxiWDLHb3VPC5PeLfJCXCGo"
+                "blueId": "BZL11BoCdd5wXZ1XGwPqckiCzfinoVLNUpmFt4cXGEQ8"
               },
               "amountReversed": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.amountReversed}"
+                "$event": "/message/request/amountReversed"
               }
             }
           }
@@ -1784,27 +2767,27 @@
     },
     "declineReverseAfterCompletion": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "Fk96a7GFSo2c3w7xWzaqnYhXXhLAAxj9Dwao8Hg9sdX"
+          "blueId": "HsMuLH95bFaoqknkp6z3ZxMZyAmP21Qx9aYBTtc41zES"
         }
       }
     },
     "declineReverseAfterCompletionImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "declineReverseAfterCompletion"
       },
@@ -1813,26 +2796,26 @@
           {
             "name": "Mark Payment Reversal Declined",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Rejected"
                   }
@@ -1843,17 +2826,14 @@
           {
             "name": "Emit Payment Reversal Declined",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "Fk96a7GFSo2c3w7xWzaqnYhXXhLAAxj9Dwao8Hg9sdX"
+                "blueId": "HsMuLH95bFaoqknkp6z3ZxMZyAmP21Qx9aYBTtc41zES"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -1862,27 +2842,27 @@
     },
     "failReverseAfterCompletion": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "FNZQJMETUdV57VFyWHGPdQVPSjWsvGj7u4n2oKYbgAaH"
+          "blueId": "Aa45Pf6wk1T9YFxjxBk7fVRygZk9XQ7FWvXquQyLdGZH"
         }
       }
     },
     "failReverseAfterCompletionImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "failReverseAfterCompletion"
       },
@@ -1891,26 +2871,26 @@
           {
             "name": "Mark Payment Reversal Failed",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/status"
                   },
                   "val": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "Failed"
                   }
@@ -1921,17 +2901,14 @@
           {
             "name": "Emit Payment Reversal Failed",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "FNZQJMETUdV57VFyWHGPdQVPSjWsvGj7u4n2oKYbgAaH"
+                "blueId": "Aa45Pf6wk1T9YFxjxBk7fVRygZk9XQ7FWvXquQyLdGZH"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -1940,27 +2917,27 @@
     },
     "resolveFinalAmount": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "7oKW3Fozo1KUPgxo4PdF6jJJQ83z11mBbpZF2xCENGDX"
+          "blueId": "wi22d16wHycXs4G9op3SEHvcR2rK3JTedywGewUt27F"
         }
       }
     },
     "resolveFinalAmountImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "resolveFinalAmount"
       },
@@ -1969,28 +2946,25 @@
           {
             "name": "Update Final Amount",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/amount/finalResolved"
                   },
                   "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${event.message.request.finalAmount}"
+                    "$event": "/message/request/finalAmount"
                   }
                 }
               ]
@@ -1999,17 +2973,14 @@
           {
             "name": "Emit Final Amount Resolved",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "7oKW3Fozo1KUPgxo4PdF6jJJQ83z11mBbpZF2xCENGDX"
+                "blueId": "wi22d16wHycXs4G9op3SEHvcR2rK3JTedywGewUt27F"
               },
               "finalAmount": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.finalAmount}"
+                "$event": "/message/request/finalAmount"
               }
             }
           }
@@ -2018,27 +2989,27 @@
     },
     "rejectFinalAmountResolution": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "E6zFPqoEmEdP9xFa1A9FDSsDJDb7BaR7tXakVD7RN8oH"
+          "blueId": "72A3S6dDAqoMPUbC1EUUoCCsnfecvpS1L3cYevSydsai"
         }
       }
     },
     "rejectFinalAmountResolutionImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "rejectFinalAmountResolution"
       },
@@ -2047,17 +3018,14 @@
           {
             "name": "Emit Final Amount Resolution Rejected",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "E6zFPqoEmEdP9xFa1A9FDSsDJDb7BaR7tXakVD7RN8oH"
+                "blueId": "72A3S6dDAqoMPUbC1EUUoCCsnfecvpS1L3cYevSydsai"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -2066,27 +3034,27 @@
     },
     "lockPaymentCompletion": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "BKBtKSbxAxg1vyg2ZcghVANjaS4viMxUFY2un6TDPWbw"
+          "blueId": "GnhJBCKaSH7HSDuD2LihE7ds3Dcddfg8ueDEcaC5VV2Q"
         }
       }
     },
     "lockPaymentCompletionImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "lockPaymentCompletion"
       },
@@ -2095,26 +3063,26 @@
           {
             "name": "Enable Completion Lock",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/controls/completionLocked"
                   },
                   "val": {
                     "type": {
-                      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+                      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
                     },
                     "value": true
                   }
@@ -2125,17 +3093,14 @@
           {
             "name": "Emit Payment Completion Locked",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "BKBtKSbxAxg1vyg2ZcghVANjaS4viMxUFY2un6TDPWbw"
+                "blueId": "GnhJBCKaSH7HSDuD2LihE7ds3Dcddfg8ueDEcaC5VV2Q"
               },
               "lockedAt": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.lockedAt}"
+                "$event": "/message/request/lockedAt"
               }
             }
           }
@@ -2144,27 +3109,27 @@
     },
     "unlockPaymentCompletion": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "BZxWkxpxVygutoo7KuBd7C63nZwYDuPXFhffXhZ319z9"
+          "blueId": "BGqFuh1FHNRvBYfqDegotUCuCkZUyHPi4cMzfzZMEsGH"
         }
       }
     },
     "unlockPaymentCompletionImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "unlockPaymentCompletion"
       },
@@ -2173,26 +3138,26 @@
           {
             "name": "Disable Completion Lock",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/controls/completionLocked"
                   },
                   "val": {
                     "type": {
-                      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+                      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
                     },
                     "value": false
                   }
@@ -2203,17 +3168,14 @@
           {
             "name": "Emit Payment Completion Unlocked",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "BZxWkxpxVygutoo7KuBd7C63nZwYDuPXFhffXhZ319z9"
+                "blueId": "BGqFuh1FHNRvBYfqDegotUCuCkZUyHPi4cMzfzZMEsGH"
               },
               "unlockedAt": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.unlockedAt}"
+                "$event": "/message/request/unlockedAt"
               }
             }
           }
@@ -2222,27 +3184,27 @@
     },
     "failPaymentCompletionLockChange": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "DG24you4q9reWwc93JPhCK21WoAtP8w9Y6HThyWmL41e"
+          "blueId": "WAYPYNWJEBL2TPtMuk8R3HYXcSR1itCizbyQoKwg2bn"
         }
       }
     },
     "failPaymentCompletionLockChangeImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "failPaymentCompletionLockChange"
       },
@@ -2251,17 +3213,14 @@
           {
             "name": "Emit Payment Completion Lock Change Failed",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "DG24you4q9reWwc93JPhCK21WoAtP8w9Y6HThyWmL41e"
+                "blueId": "WAYPYNWJEBL2TPtMuk8R3HYXcSR1itCizbyQoKwg2bn"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -2270,27 +3229,27 @@
     },
     "lockPaymentReversal": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "5fKdfddLui1nNGHq2hKyEZm8pR6vaN7BRcuomWJPj82Z"
+          "blueId": "4VMcLbCnPdsVT5VozPcgoQhEi9HyxKwoWZw92PdHSBQZ"
         }
       }
     },
     "lockPaymentReversalImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "lockPaymentReversal"
       },
@@ -2299,26 +3258,26 @@
           {
             "name": "Enable Reversal Lock",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/controls/reversalLocked"
                   },
                   "val": {
                     "type": {
-                      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+                      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
                     },
                     "value": true
                   }
@@ -2329,17 +3288,14 @@
           {
             "name": "Emit Payment Reversal Locked",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "5fKdfddLui1nNGHq2hKyEZm8pR6vaN7BRcuomWJPj82Z"
+                "blueId": "4VMcLbCnPdsVT5VozPcgoQhEi9HyxKwoWZw92PdHSBQZ"
               },
               "lockedAt": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.lockedAt}"
+                "$event": "/message/request/lockedAt"
               }
             }
           }
@@ -2348,27 +3304,27 @@
     },
     "unlockPaymentReversal": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "HPLY55rtyD7BVZaHWhB9iUP7AoFTykn6ZCF3K3BaBbVu"
+          "blueId": "G2Nsw7CtbAig3r87U1GJSV8Rhvvg86gmS6dwP657ZTNF"
         }
       }
     },
     "unlockPaymentReversalImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "unlockPaymentReversal"
       },
@@ -2377,26 +3333,26 @@
           {
             "name": "Disable Reversal Lock",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/controls/reversalLocked"
                   },
                   "val": {
                     "type": {
-                      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+                      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
                     },
                     "value": false
                   }
@@ -2407,17 +3363,14 @@
           {
             "name": "Emit Payment Reversal Unlocked",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "HPLY55rtyD7BVZaHWhB9iUP7AoFTykn6ZCF3K3BaBbVu"
+                "blueId": "G2Nsw7CtbAig3r87U1GJSV8Rhvvg86gmS6dwP657ZTNF"
               },
               "unlockedAt": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.unlockedAt}"
+                "$event": "/message/request/unlockedAt"
               }
             }
           }
@@ -2426,27 +3379,27 @@
     },
     "failPaymentReversalLockChange": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "DYUz7mcFpgQdRNwwsSSBdDe3CYtfRbAeAUiEv6tuLDhy"
+          "blueId": "2a2gKUm58bHAhhod7QW8ET32tB1UsNAMcfTCkP6i42TM"
         }
       }
     },
     "failPaymentReversalLockChangeImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "failPaymentReversalLockChange"
       },
@@ -2455,17 +3408,14 @@
           {
             "name": "Emit Payment Reversal Lock Change Failed",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "DYUz7mcFpgQdRNwwsSSBdDe3CYtfRbAeAUiEv6tuLDhy"
+                "blueId": "2a2gKUm58bHAhhod7QW8ET32tB1UsNAMcfTCkP6i42TM"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
@@ -2474,27 +3424,27 @@
     },
     "lockTransactionDetailsUpdate": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "eoi7pHyfDPfN9EkHcCNMekiZubrBa9EyywmnWrGUsGb"
+          "blueId": "8rhab2RQZiMZ4zqT85vNKR2zVCk9ZfCXGMLWERMnWF7R"
         }
       }
     },
     "lockTransactionDetailsUpdateImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "lockTransactionDetailsUpdate"
       },
@@ -2503,26 +3453,26 @@
           {
             "name": "Enable Transaction Details Update Lock",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/controls/transactionDetailsUpdateLocked"
                   },
                   "val": {
                     "type": {
-                      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+                      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
                     },
                     "value": true
                   }
@@ -2533,17 +3483,14 @@
           {
             "name": "Emit Transaction Details Update Locked",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "eoi7pHyfDPfN9EkHcCNMekiZubrBa9EyywmnWrGUsGb"
+                "blueId": "8rhab2RQZiMZ4zqT85vNKR2zVCk9ZfCXGMLWERMnWF7R"
               },
               "lockedAt": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.lockedAt}"
+                "$event": "/message/request/lockedAt"
               }
             }
           }
@@ -2552,27 +3499,27 @@
     },
     "unlockTransactionDetailsUpdate": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "8H1L8VGE9vXzbGgrv5RNkpYXngf43futPHQvnJ4SJD2B"
+          "blueId": "9MDjTe2agSVnBooUFpMSzXenPYPgTC7Z4CvTB9nkyCyc"
         }
       }
     },
     "unlockTransactionDetailsUpdateImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "unlockTransactionDetailsUpdate"
       },
@@ -2581,26 +3528,26 @@
           {
             "name": "Disable Transaction Details Update Lock",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/controls/transactionDetailsUpdateLocked"
                   },
                   "val": {
                     "type": {
-                      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
+                      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
                     },
                     "value": false
                   }
@@ -2611,17 +3558,14 @@
           {
             "name": "Emit Transaction Details Update Unlocked",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "8H1L8VGE9vXzbGgrv5RNkpYXngf43futPHQvnJ4SJD2B"
+                "blueId": "9MDjTe2agSVnBooUFpMSzXenPYPgTC7Z4CvTB9nkyCyc"
               },
               "unlockedAt": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.unlockedAt}"
+                "$event": "/message/request/unlockedAt"
               }
             }
           }
@@ -2630,27 +3574,27 @@
     },
     "failTransactionDetailsUpdateLockChange": {
       "type": {
-        "blueId": "BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC"
+        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "guarantorChannel"
       },
       "request": {
         "type": {
-          "blueId": "1j22qLMeLkRgtwiMHWXJNopKeBHdACS4vELfLxc1mnA"
+          "blueId": "AGmjYB8hJAL9JUR3vsoqktdA7RcivcsjgoGjxQq3RQgj"
         }
       }
     },
     "failTransactionDetailsUpdateLockChangeImpl": {
       "type": {
-        "blueId": "CGdxkNjPcsdescqLPz6SNLsMyak6demQQr7RoKNHbCyv"
+        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
       },
       "operation": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "failTransactionDetailsUpdateLockChange"
       },
@@ -2659,21 +3603,103 @@
           {
             "name": "Emit Transaction Details Update Lock Change Failed",
             "type": {
-              "blueId": "2bSWEoMSZwzf32Hnr4BDVsuq8NRjrWEpnhZvMZAJGhh2"
+              "blueId": "Dg3nc6K9P7AWn4K1dpGCAKG3YXJjsUWRhG3YxfqyLTeK"
             },
             "event": {
               "type": {
-                "blueId": "1j22qLMeLkRgtwiMHWXJNopKeBHdACS4vELfLxc1mnA"
+                "blueId": "AGmjYB8hJAL9JUR3vsoqktdA7RcivcsjgoGjxQq3RQgj"
               },
               "reason": {
-                "type": {
-                  "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                },
-                "value": "${event.message.request.reason}"
+                "$event": "/message/request/reason"
               }
             }
           }
         ]
+      }
+    }
+  },
+  "kind": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "value": "PayNote"
+  },
+  "status": {
+    "description": "Current lifecycle state of this PayNote. Expected values include: Pending, Accepted, Initiated, Secured, Completed, Cancelled, Reversed, Rejected, Failed.\n",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "currency": {
+    "description": "ISO 4217 currency code.",
+    "type": {
+      "blueId": "rdiMJ9tNu3geCKLDwXxCCjVQzKvCyaFXHiZTFAkRsCJ"
+    }
+  },
+  "amount": {
+    "description": "Amount values associated with this PayNote.",
+    "expectedTotal": {
+      "description": "The initially expected total amount in minor units.\n",
+      "type": {
+        "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+      }
+    },
+    "finalResolved": {
+      "description": "The final resolved amount for completion, if known.\n",
+      "type": {
+        "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+      }
+    },
+    "secured": {
+      "description": "Amount currently secured / under guarantor control.\n",
+      "type": {
+        "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+      }
+    },
+    "completed": {
+      "description": "Amount already completed / finalized.\n",
+      "type": {
+        "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+      }
+    },
+    "reversed": {
+      "description": "Amount already reversed after completion.\n",
+      "type": {
+        "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+      }
+    }
+  },
+  "transactionDetails": {
+    "description": "Transaction attachment information confirmed by the Guarantor.\n"
+  },
+  "controls": {
+    "completionLocked": {
+      "type": {
+        "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+      }
+    },
+    "reversalLocked": {
+      "type": {
+        "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+      }
+    },
+    "transactionDetailsUpdateLocked": {
+      "type": {
+        "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+      }
+    }
+  },
+  "payNoteInitialStateDescription": {
+    "summary": {
+      "description": "Short explanation of what this PayNote is for.\n",
+      "type": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      }
+    },
+    "details": {
+      "description": "Full explanation of the process, conditions, and special rules. Markdown recommended.\n",
+      "type": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
       }
     }
   }

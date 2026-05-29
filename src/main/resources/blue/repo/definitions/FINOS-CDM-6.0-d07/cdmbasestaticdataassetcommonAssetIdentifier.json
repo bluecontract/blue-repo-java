@@ -1,0 +1,22 @@
+{
+  "name": "cdm/base/staticdata/asset/common/AssetIdentifier",
+  "description": "The unique identifier for an Asset, specified using an Asset Identifier Type enumerator.",
+  "identifier": {
+    "description": "The identifier value.",
+    "type": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "identifierType": {
+    "description": "Defines the symbology source of the Asset Identifier, eg CUSIP, ISIN, etc.",
+    "type": {
+      "blueId": "7MvZoPQy6WE1716DnEsD2wftRhX2z6osUQYhdPkKSvRN"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

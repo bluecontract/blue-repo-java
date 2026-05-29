@@ -1,0 +1,60 @@
+package blue.repo.finoscdm60d07;
+
+import blue.language.model.Node;
+import blue.language.model.TypeBlueId;
+import blue.repo.RepositoryType;
+
+@TypeBlueId("4CmhkpynLWSo5owqAWd5TVHw9WP8xz82ZerWeEectzZv")
+public class CdmProductAssetFieldWithMetaIndexAnnexSourceEnum {
+    public static String blueId() {
+        return "4CmhkpynLWSo5owqAWd5TVHw9WP8xz82ZerWeEectzZv";
+    }
+
+    public static String packageName() {
+        return "FINOS-CDM-6.0-d07";
+    }
+
+    public static String typeName() {
+        return "cdm/product/asset/FieldWithMetaIndexAnnexSourceEnum";
+    }
+
+    public static String qualifiedName() {
+        return "FINOS-CDM-6.0-d07/cdm/product/asset/FieldWithMetaIndexAnnexSourceEnum";
+    }
+
+    public static String resourcePath() {
+        return "blue/repo/definitions/FINOS-CDM-6.0-d07/cdmproductassetFieldWithMetaIndexAnnexSourceEnum.json";
+    }
+
+    public static RepositoryType repositoryType() {
+        return RepositoryType.of(
+                packageName(),
+                typeName(),
+                qualifiedName(),
+                blueId(),
+                resourcePath());
+    }
+
+    private ComRosettaModelMetafieldsMetaFields meta;
+
+    private CdmProductAssetIndexAnnexSourceEnum val;
+
+    public ComRosettaModelMetafieldsMetaFields getMeta() {
+        return meta;
+    }
+
+    public CdmProductAssetFieldWithMetaIndexAnnexSourceEnum meta(ComRosettaModelMetafieldsMetaFields meta) {
+        this.meta = meta;
+        return this;
+    }
+
+    public CdmProductAssetIndexAnnexSourceEnum getVal() {
+        return val;
+    }
+
+    public CdmProductAssetFieldWithMetaIndexAnnexSourceEnum val(CdmProductAssetIndexAnnexSourceEnum val) {
+        this.val = val;
+        return this;
+    }
+
+}

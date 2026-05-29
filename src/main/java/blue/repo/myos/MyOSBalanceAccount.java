@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("3WA2ppJtUKib2upsEARBgCNJuHXSqHJjm38uLtZf6dNb")
+@TypeBlueId("9aVaJJvfRrGjLZ55HbKbrd4AUgA9RmjEUCxtfCtqodM9")
 public class MyOSBalanceAccount {
     public static String blueId() {
-        return "3WA2ppJtUKib2upsEARBgCNJuHXSqHJjm38uLtZf6dNb";
+        return "9aVaJJvfRrGjLZ55HbKbrd4AUgA9RmjEUCxtfCtqodM9";
     }
 
     public static String packageName() {

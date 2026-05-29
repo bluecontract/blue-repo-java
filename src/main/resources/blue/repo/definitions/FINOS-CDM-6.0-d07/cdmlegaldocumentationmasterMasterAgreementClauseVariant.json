@@ -1,0 +1,50 @@
+{
+  "name": "cdm/legaldocumentation/master/MasterAgreementClauseVariant",
+  "description": "Sets the details for a specific variant associated to a clause in a Master Agreement",
+  "counterparty": {
+    "description": "Optional counterparty role. This can be used where a clause needs to assign a different variant to the different parties on the agreement based upon their role i.e. Party A or Party B.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "ANd6oSrWArfUtpgKvesbXu9YiaQ3XLSYDxhgbBotJcUy"
+    },
+    "schema": {
+      "minItems": 0,
+      "maxItems": 2
+    }
+  },
+  "identifier": {
+    "description": "Unique identifier for this variant",
+    "type": {
+      "blueId": "4bpqTzAszzpvcDwHXgfdNDjg2Q89yuK1w2nreBdu3hbc"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "otherParty": {
+    "description": "Optional party. This can be used where a clause needs to assign different variants to different parties who may or may not be on the agreement.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "6UMNEgMf7MoM2raYDinEQ6ARUqrkL4BfKePrPf4YZPTq"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "variableSet": {
+    "description": "For some variants of some clauses additional details are required to work out what has been elected. This array can be used to define the name and value of these variables. Please refer to the agreement documentation for more details of the variables that are available for any clause.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "9afZipQ8gy2eWFkpZxZvWSZjQD57W7UGTrwELvXRoF9m#0"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

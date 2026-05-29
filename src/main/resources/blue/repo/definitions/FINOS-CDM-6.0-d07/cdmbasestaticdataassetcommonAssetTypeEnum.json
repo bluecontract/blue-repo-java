@@ -1,0 +1,15 @@
+{
+  "name": "cdm/base/staticdata/asset/common/AssetTypeEnum",
+  "description": "Represents an enumeration list to identify the asset type.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Cash",
+      "Commodity",
+      "Other",
+      "Security"
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "name": "cdm/base/staticdata/party/NaturalPerson",
+  "description": "A class to represent the attributes that are specific to a natural person.",
+  "contactInformation": {
+    "description": "The contact information for such person, when different from the contact information associated with the party.\n",
+    "type": {
+      "blueId": "tWjzEXNpctUeMnop8Wj6gnxCUqcE9XJnXn31gdiq2xd"
+    }
+  },
+  "dateOfBirth": {
+    "description": "The natural person's date of birth.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "firstName": {
+    "description": "The natural person's first name. It is optional in FpML.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "honorific": {
+    "description": "An honorific title, such as Mr., Ms., Dr. etc.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "initial": {
+    "description": "The natural person's middle initial(s). If a middle initial is provided then a name should be absent.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "middleName": {
+    "description": "The natural person's middle name(s). If a middle name is provided then an initial should be absent.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "personId": {
+    "description": "The identifier associated with a person, e.g. the internal identification code.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "269hBnV1LaaPacCuzjk8qkNB4PpsS7x2VSMETTxh6KVi"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "suffix": {
+    "description": "Name suffix, such as Jr., III, etc.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "surname": {
+    "description": "The natural person's surname.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

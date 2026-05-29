@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("75CyJPe82hSjV9T2tsir5R3343vhqvG41w2EzFhCp5Y9")
+@TypeBlueId("DsDibGYwridS8uYoUcwFbBHa49UFAA7MtLNboXrXudmn")
 public class LinkedDocumentsPermissionSet {
     public static String blueId() {
-        return "75CyJPe82hSjV9T2tsir5R3343vhqvG41w2EzFhCp5Y9";
+        return "DsDibGYwridS8uYoUcwFbBHa49UFAA7MtLNboXrXudmn";
     }
 
     public static String packageName() {

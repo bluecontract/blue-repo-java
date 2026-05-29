@@ -1,0 +1,70 @@
+{
+  "name": "cdm/product/collateral/CollateralInterestCalculationParameters",
+  "description": "Represents parameters for calculating the amount the floating interest calculation, e.g.  for a single currency or defaults for all currencies.\n",
+  "compoundingBusinessCenter": {
+    "description": "Specifies the applicable business centers for compounding.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "5b7tz2hPJ3dwwRSghTiFtwhoDJrB6oMLyV5ssbsSiZkL"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "compoundingType": {
+    "description": "Specifies the type of compounding to be applied (None, Business, Calendar).",
+    "type": {
+      "blueId": "N2yDh1aUmejh3WDVGnvBYY2BaV9B6VHrmpgt3zuBmhF"
+    }
+  },
+  "dayCountFraction": {
+    "description": "Specifies the day count fraction to use for that currency.",
+    "type": {
+      "blueId": "5GLpcsNAL73F1CNS5Qbg2LX25pGwoC2sVruAPL18DLcU"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "fixedRate": {
+    "description": "Specifies the applicable fixed rate  if used.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "floatingRate": {
+    "description": "Specifies the floating interest rate to be used.",
+    "type": {
+      "blueId": "817ccL7zmPpuQgVm2pSBEjp1qpEwsdSJNWq7FzyxL7Q5"
+    }
+  },
+  "inBaseCurrency": {
+    "description": "If True, specifies that the interest transfers should be converted to base currency equivalent, or if False specifies that the transfer should be in the currency of the collateral.\n",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "rounding": {
+    "description": "Specifies the rounding rules for settling in that currency.",
+    "type": {
+      "blueId": "DnXzzassZD8x4ZyWkS46bBpvzPMBW4txNdG32xcULQhy"
+    }
+  },
+  "roundingFrequency": {
+    "description": "Specifies when/how often is rounding applied?",
+    "type": {
+      "blueId": "DTLWxzvo1pJxwoEniV1Y6SRR2DF42rdJML8n5m7LUE2"
+    }
+  },
+  "withholdingTaxRate": {
+    "description": "Specifies the withholding tax rate if a withholding tax is applicable.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  }
+}

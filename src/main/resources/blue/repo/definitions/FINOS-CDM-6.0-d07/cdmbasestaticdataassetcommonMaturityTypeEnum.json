@@ -1,0 +1,14 @@
+{
+  "name": "cdm/base/staticdata/asset/common/MaturityTypeEnum",
+  "description": "Represents an enumeration list to identify the Maturity.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "FromIssuance",
+      "OriginalMaturity",
+      "RemainingMaturity"
+    ]
+  }
+}

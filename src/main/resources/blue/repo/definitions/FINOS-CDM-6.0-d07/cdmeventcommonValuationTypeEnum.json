@@ -1,0 +1,13 @@
+{
+  "name": "cdm/event/common/ValuationTypeEnum",
+  "description": "Method used for the valuation of the transaction by the valuation party.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "MarkToMarket",
+      "MarkToModel"
+    ]
+  }
+}

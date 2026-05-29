@@ -3,12 +3,12 @@ package blue.repo.common;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Event;
+import blue.repo.coordination.Event;
 
-@TypeBlueId("GrD4wCAmKoK8rm8Pztmv9GkFBRwJy4zpDUzDWHtsEJCX")
+@TypeBlueId("AJXU1CbY6HmjCknkWm1ng2pGvStRPzhs3jq4WWLVwWLK")
 public class NamedEvent extends Event {
     public static String blueId() {
-        return "GrD4wCAmKoK8rm8Pztmv9GkFBRwJy4zpDUzDWHtsEJCX";
+        return "AJXU1CbY6HmjCknkWm1ng2pGvStRPzhs3jq4WWLVwWLK";
     }
 
     public static String packageName() {

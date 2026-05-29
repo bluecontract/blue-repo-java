@@ -1,0 +1,13 @@
+{
+  "name": "cdm/event/common/HaircutIndicatorEnum",
+  "description": "Represents the enumeration indicators to specify if an asset or group of assets valuation is based on any valuation treatment haircut.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "PostHaircut",
+      "PreHaircut"
+    ]
+  }
+}

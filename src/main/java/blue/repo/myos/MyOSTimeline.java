@@ -3,12 +3,12 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Timeline;
+import blue.repo.coordination.Timeline;
 
-@TypeBlueId("2gyToM86KgFJpB8inz8TBVEMZk8UVGYdRozF4mfvxtuk")
+@TypeBlueId("9TnFznYnqWWjHhGzcKngTLfq1a2H4sVd5EM4vfek2ec5")
 public class MyOSTimeline extends Timeline {
     public static String blueId() {
-        return "2gyToM86KgFJpB8inz8TBVEMZk8UVGYdRozF4mfvxtuk";
+        return "9TnFznYnqWWjHhGzcKngTLfq1a2H4sVd5EM4vfek2ec5";
     }
 
     public static String packageName() {

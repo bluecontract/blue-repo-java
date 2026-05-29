@@ -1,0 +1,15 @@
+{
+  "name": "cdm/base/staticdata/party/TelephoneTypeEnum",
+  "description": "The enumerated values to specify the type of telephone number, e.g. work vs. mobile.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Fax",
+      "Mobile",
+      "Personal",
+      "Work"
+    ]
+  }
+}

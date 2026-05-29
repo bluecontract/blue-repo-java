@@ -1,0 +1,34 @@
+{
+  "name": "cdm/observable/asset/ValuationSource",
+  "description": "A class describing the method for obtaining a settlement rate, specified through either an information source (page), a settlement rate option (fixing) or by using quotes from reference banks.\n",
+  "dealerOrCCP": {
+    "description": "Holds an identifier for the reference entity that is agreed by both parties as a basis for cash settlement calculations. This could be a dealer from whom quotations are obtained by the calculation agent on the reference obligation for purposes of cash settlement in a credit event. ISDA 2003 Term: Dealer. This could be the clearing organization (CCP, DCO) to which the trade should be cleared, as applicable for cash-settled swaptions.\n",
+    "type": {
+      "blueId": "6JvELeMZDRr5R6W3QUM7r6arPAr4DsSTRGGTzLNuuBTv"
+    }
+  },
+  "informationSource": {
+    "description": "The information source where a published or displayed market rate will be obtained, e.g. Telerate Page 3750.",
+    "type": {
+      "blueId": "Er5xdgizmYHVQiqxbHxo9DYjuP1uTdYqWsrVPJRV2S5P"
+    }
+  },
+  "quotedCurrencyPair": {
+    "description": "Defines the two currencies for an FX trade and the quotation relationship between the two currencies.  This attribute was formerly part of 'fxSettlementTerms', which is now being harmonised into a common 'CashSettlementTerms' that includes a 'ValuationDate'.\n",
+    "type": {
+      "blueId": "AyEBp4Mbar43fuYsMicvQsPWCtvzqv7kEt3G9UEdSbHx"
+    }
+  },
+  "referenceBanks": {
+    "description": "A container for a set of reference institutions that may be called upon to provide rate quotations as part of the method to determine the applicable cash settlement amount. If institutions are not specified, it is assumed that reference institutions will be agreed between the parties on the exercise date, or in the case of swap transaction to which mandatory early termination is applicable, the cash settlement valuation date.\n",
+    "type": {
+      "blueId": "2NcfvAKBjmr59p4hGfzqHPSBDq3VSGW78Wh1wxp3omCc"
+    }
+  },
+  "settlementRateOption": {
+    "description": "The rate option to use for the fixing. Currently only applicable to foreign exchange fixing in case of cross-currency settlement.\n",
+    "type": {
+      "blueId": "4B8gL98zT6ocpQrME9dbzFDoNoAEADRkQYHK7jNWo17N"
+    }
+  }
+}

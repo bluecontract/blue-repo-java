@@ -1,0 +1,19 @@
+{
+  "name": "cdm/base/staticdata/asset/common/DebtInterestEnum",
+  "description": "Represents an enumeration list that specifies the general rule for periodic interest rate payment.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Fixed",
+      "Floating",
+      "IndexLinked",
+      "InflationLinked",
+      "InterestOnly",
+      "InverseFloating",
+      "OtherStructured",
+      "ZeroCoupon"
+    ]
+  }
+}

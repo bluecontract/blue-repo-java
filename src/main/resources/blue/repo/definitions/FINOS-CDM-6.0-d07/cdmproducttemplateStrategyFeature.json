@@ -1,0 +1,16 @@
+{
+  "name": "cdm/product/template/StrategyFeature",
+  "description": "A class for defining option strategy features.",
+  "calendarSpread": {
+    "description": "Definition of the later expiration date in a calendar spread.",
+    "type": {
+      "blueId": "FEhRMWBqqnPsX9Ec6tokpUuLYiGnr7HNrr3JGoL4HpZ6"
+    }
+  },
+  "strikeSpread": {
+    "description": "Definition of the upper strike in a strike spread.",
+    "type": {
+      "blueId": "tu7oUB7pG1FK89HRRCDbAK9ZXx6gkkATw7e4FZuXGDy"
+    }
+  }
+}

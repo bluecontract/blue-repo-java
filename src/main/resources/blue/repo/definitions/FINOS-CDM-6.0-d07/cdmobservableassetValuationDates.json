@@ -1,0 +1,25 @@
+{
+  "name": "cdm/observable/asset/ValuationDates",
+  "description": "Defines how and when a performance type option or performance type swap is to be valued, including initial, interim and final valuation dates.\n",
+  "finalValuationDate": {
+    "description": "Specifies the final valuation dates of the underlyer.",
+    "type": {
+      "blueId": "ErgBHpekrQT9MScdkmCRfHuFyvtMMoF8oMiRN8pyzfM8"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "initialValuationDate": {
+    "description": "Specifies the initial valuation dates of the underlyer.",
+    "type": {
+      "blueId": "ErgBHpekrQT9MScdkmCRfHuFyvtMMoF8oMiRN8pyzfM8"
+    }
+  },
+  "interimValuationDate": {
+    "description": "Specifies the interim valuation dates of the underlyer.",
+    "type": {
+      "blueId": "ErgBHpekrQT9MScdkmCRfHuFyvtMMoF8oMiRN8pyzfM8"
+    }
+  }
+}

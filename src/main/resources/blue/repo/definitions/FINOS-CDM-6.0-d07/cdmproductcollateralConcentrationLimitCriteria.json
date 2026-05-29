@@ -1,0 +1,47 @@
+{
+  "name": "cdm/product/collateral/ConcentrationLimitCriteria",
+  "description": "Respresents a class to describe a set of criteria to describe specific assets that the concentration limits apply to.\n",
+  "appliesTo": {
+    "description": "Specifies which of the two counterparties the criteria applies to (either one or both counterparties). This attribute is optional, in case the applicable party is already specified elsewhere within a party election.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "ANd6oSrWArfUtpgKvesbXu9YiaQ3XLSYDxhgbBotJcUy"
+    },
+    "schema": {
+      "minItems": 0,
+      "maxItems": 2
+    }
+  },
+  "averageTradingVolume": {
+    "description": "Specifies an average trading volume on an exchange in relation to Equity products.",
+    "type": {
+      "blueId": "8PqHPUoGKs3oJ9YT3Kd94U2F8yAHn5uNr8DoNQg3avbg"
+    }
+  },
+  "collateralCriteria": {
+    "description": "The specific criteria that applies. It can be created using AND, OR and NOT logic, and both asset and issuer characteristics.\n",
+    "type": {
+      "blueId": "2aL2NQaQbMhz8a7RuZ8Ky15BtLM1XFLhLRU2XZsBN6ke#1"
+    }
+  },
+  "concentrationLimitType": {
+    "description": "Specifies the type of concentration limit to be applied.",
+    "type": {
+      "blueId": "7NU27Rw9Fpmshp58cpLR3GB8QRc21PsWjsSoekYpyhpT"
+    }
+  },
+  "ratingPriorityResolution": {
+    "description": "Denotes which Criteria has priority if more than one agency rating applies.",
+    "type": {
+      "blueId": "2wxJKuhkbHJhLkG8QWx1aoGSMb25PwNZXoLdahTJdMAs"
+    }
+  },
+  "restrictTo": {
+    "description": "Restrict the criteria to only apply to a specific type of margin, ie IM or VM.",
+    "type": {
+      "blueId": "EqwvsDqu5dzbPfAwBRR81oAKSZPXzM8ai3nSTFxkVJGW"
+    }
+  }
+}

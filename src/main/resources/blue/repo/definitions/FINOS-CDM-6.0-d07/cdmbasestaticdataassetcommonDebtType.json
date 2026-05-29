@@ -1,0 +1,22 @@
+{
+  "name": "cdm/base/staticdata/asset/common/DebtType",
+  "description": "Specifies the type of debt instrument.",
+  "debtClass": {
+    "description": "Specifies the characteristics of a debt instrument.",
+    "type": {
+      "blueId": "7j5qD4JU5gUCa5ieYio2Cw2ex4ceqo17c2rx7TPN4WKJ"
+    }
+  },
+  "debtEconomics": {
+    "description": "Specifies selected financial terms of a debt instrument.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "6pwjGqPGpPkFg14hVjHRwDcai7hz9SBRs7HVJkQs3oZP"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

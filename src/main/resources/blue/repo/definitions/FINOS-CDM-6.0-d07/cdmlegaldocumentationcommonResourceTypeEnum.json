@@ -1,0 +1,14 @@
+{
+  "name": "cdm/legaldocumentation/common/ResourceTypeEnum",
+  "description": "The enumerated values to specify the type of a resource (e.g. document).",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Confirmation",
+      "SupplementalMaterialEconomicTerms",
+      "TermSheet"
+    ]
+  }
+}

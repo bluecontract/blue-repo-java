@@ -1,0 +1,13 @@
+{
+  "name": "cdm/observable/asset/Curve",
+  "commodityCurve": {
+    "type": {
+      "blueId": "B883YDTRXBoX2WCD3XdedD3pr4Y39JHy84t3N9GAej7p"
+    }
+  },
+  "interestRateCurve": {
+    "type": {
+      "blueId": "83NusanAivksgKtND6q2fvn7R6uYqidWtFCebXFTvyPT"
+    }
+  }
+}

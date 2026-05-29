@@ -1,0 +1,106 @@
+{
+  "name": "cdm/product/template/CancelableProvision",
+  "description": "A data defining:  the right of a party to cancel a swap transaction on the specified exercise dates. The provision is for 'walk-away' cancellation (i.e. the fair value of the swap is not paid). A fee payable on exercise can be specified. As a difference from the FpML construct, the canonical model extends the BuyerSeller class.\n",
+  "buyer": {
+    "description": "Buyer party that can be resolved as one of the two principal parties to the transaction. The party that buys this instrument, i.e. pays for this instrument and receives the rights defined by it. ISDA 2002 Equity Definitions section 1.18: `Buyer` means the party specified as such in the related Confirmation. | ISDA 2006 Definitions article 12.1 (b)(i) relating to a Swaption: 'Buyer' means the party that will, on each Premium Payment Date, pay to Seller the Premium | ISDA 2006 Definitions article 12.1 (b)(ii) relating to Swap Transactions with applicable Early Termination: the party specified as such in the related Confirmation, or the Exercising Party if neither party is specified | ISDA 2006 Definitions article 12.1 (b)(iii) relating to any other Option Transaction: the party specified as such in the related Confirmation. | ISDA 2014 Credit Definition article 1.4: `Buyer` means the Fixed Rate Payer.\n",
+    "type": {
+      "blueId": "ANd6oSrWArfUtpgKvesbXu9YiaQ3XLSYDxhgbBotJcUy"
+    }
+  },
+  "callingParty": {
+    "description": "The party with right to exercise a cancellation. Allows for buyer, seller or either.",
+    "type": {
+      "blueId": "EuuiYnC1PJEQCnRvxPDJTmUFJ5mZKaDLVpbMUdcYYnUQ"
+    }
+  },
+  "cancelableProvisionAdjustedDates": {
+    "description": "The adjusted dates associated with a cancelable provision. These dates have been adjusted for any applicable business day convention.\n",
+    "type": {
+      "blueId": "6DNFiRoVjU8DZ2HZKtNeAoWWLz6tz8C98NUvXao5eTDv"
+    }
+  },
+  "earliestCancellationTime": {
+    "description": "The earliest time in a business day that notice of cancelation can be given.",
+    "type": {
+      "blueId": "DJHcCUvgkjrpH1UjAWPG6z2avBDGcvFeWgf2oWZMM7ef"
+    }
+  },
+  "earliestDate": {
+    "description": "The first day when cancelation is permitted to take effect. A party may give notice prior to this date and taken together with the effective period would be necessary to cancel on this date.\n",
+    "type": {
+      "blueId": "2gu7bBDYJXEVsffNg2iAYXou31qtdeR4oiwZHL2kaEgQ"
+    }
+  },
+  "effectiveDate": {
+    "description": "The effective date if cancelation is invoked otherwise the cancellation period defines the cancellation date.",
+    "type": {
+      "blueId": "4a7o3vFE8XmyiKHpknQLrYF3NFsnbEWrQWHq6NxhexW9"
+    }
+  },
+  "effectivePeriod": {
+    "description": "Effective period for cancelation when notice is given. This is the period after notice is given that cancellation becomes effecticve.\n",
+    "type": {
+      "blueId": "D2zD5eW4h5CVwkas6bYant1Kmgdg4zt95zb3kYgR87RE"
+    }
+  },
+  "exerciseNotice": {
+    "description": "Definition of the party to whom notice of exercise should be given.",
+    "type": {
+      "blueId": "F8n3p8PCK7bnKSfrxZvFaQrmN6MMnQDF5pD1pKsUeaNX"
+    }
+  },
+  "exerciseTerms": {
+    "description": "The exercise terms associated with the cancelable provision, including details such as exercise style, exercise fees, and any other relevant conditions or terms governing the cancellation of the swap transaction.\n",
+    "type": {
+      "blueId": "9io8G2vbJGqzR733au9TnujLuDNcokNmiUPRUcsgiY8e"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "expirationDate": {
+    "description": "The last day within the term of the contract that cancelation is allowed.",
+    "type": {
+      "blueId": "2gu7bBDYJXEVsffNg2iAYXou31qtdeR4oiwZHL2kaEgQ"
+    }
+  },
+  "finalCalculationPeriodDateAdjustment": {
+    "description": "Business date convention adjustment to final payment period per leg (swapStream) upon exercise event. The adjustments can be made in-line with leg level BDC's or they can be specified separately.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "BA5cyyo2FNoYc3Pfr6sj7YZ4ARyeHGEgQtxmzGSxpszB"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "followUpConfirmation": {
+    "description": "A flag to indicate whether follow-up confirmation of exercise (written or electronic) is required following telephonic notice by the buyer to the seller or seller's agent.\n",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "initialFee": {
+    "description": "An initial fee for the cancelable option.",
+    "type": {
+      "blueId": "4ULkob7geaFi4FNFPUCGaZCPoXvyGtqo3MQvvnJjoxSA"
+    }
+  },
+  "latestCancelationTime": {
+    "description": "The latest time at which notice of cancelation can be given.",
+    "type": {
+      "blueId": "DJHcCUvgkjrpH1UjAWPG6z2avBDGcvFeWgf2oWZMM7ef"
+    }
+  },
+  "seller": {
+    "description": "Seller party that can be resolved as one of the two principal parties to the transaction. The party that sells ('writes') this instrument, i.e. that grants the rights defined by this instrument and in return receives a payment for it. ISDA 2002 Equity Definitions section 1.19: `Seller` means the party specified as such in the related Confirmation. | ISDA 2006 Definitions article 12.1 (a)(i) relating to a Swaption: 'Seller' means the party the party specified as such or as writer in the related Confirmation | ISDA 2006 Definitions article 12.1 (a)(ii) relating to Swap Transactions with applicable Early Termination: the party specified as such or as writer in the related Confirmation or, if neither party is specified as such, the Non-exercising Party | ISDA 2006 Definitions article 12.1 (a)(iii) relating to any other Option Transaction: the party specified as such in the related Confirmation. | ISDA 2014 Credit Definition article 1.4: `Seller` means the Floating Rate Payer.\n",
+    "type": {
+      "blueId": "ANd6oSrWArfUtpgKvesbXu9YiaQ3XLSYDxhgbBotJcUy"
+    }
+  }
+}

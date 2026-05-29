@@ -1,0 +1,25 @@
+{
+  "name": "cdm/event/common/ExecutionDetails",
+  "description": "Defines specific attributes that relate to trade executions.",
+  "executionType": {
+    "description": "Identifies the type of execution, e.g. via voice, electronically...",
+    "type": {
+      "blueId": "EgWLfqeCMLfrkZGVBfRCn2rCwqqVCYrrdk4J6QwPjLJY"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "executionVenue": {
+    "description": "Represents the venue on which a trade was executed.",
+    "type": {
+      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+    }
+  },
+  "packageReference": {
+    "description": "A reference to the package linking the trade with other trades, in case the trade was executed as part of a package (hence this attribute is optional).\n",
+    "type": {
+      "blueId": "AbV2aBGu9sz4TqGaWrnYqEhAyYUbGm94B28cfiZe4tA5"
+    }
+  }
+}

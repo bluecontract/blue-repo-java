@@ -1,0 +1,33 @@
+{
+  "name": "cdm/base/datetime/BusinessCenters",
+  "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.\n",
+  "businessCenter": {
+    "description": "A code identifying one or several business day calendar location(s). The set of business day calendar locations are specified by the business day calendar location enumeration which is maintained by the FpML standard.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "FCTe9fTVPMRvH2mPZc7gj1HSgSdKhN3zdDDLsdkB8Z6i"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "businessCentersReference": {
+    "description": "A reference to a financial business center location specified elsewhere in the instance document.",
+    "type": {
+      "blueId": "7ACnecbuWHtBLYhrw8BaioS3DSUQFiDskjpaDNspEmof"
+    }
+  },
+  "commodityBusinessCalendar": {
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "5hUyTnyuM3VaJeAsHwukFdzyvQEKMSYj9PSjy6gD5cKC"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

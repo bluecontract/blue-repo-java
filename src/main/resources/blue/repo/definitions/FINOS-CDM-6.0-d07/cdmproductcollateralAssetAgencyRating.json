@@ -1,0 +1,12 @@
+{
+  "name": "cdm/product/collateral/AssetAgencyRating",
+  "assetAgencyRating": {
+    "description": "Represents an agency rating based on default risk and creditors claim in event of default associated with specific instrument.\n",
+    "type": {
+      "blueId": "H5d8SCeSAPow9BSQ9yQxQpEBETpJvMhAZfaDPQtsKHSx"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

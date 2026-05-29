@@ -1,0 +1,14 @@
+{
+  "name": "cdm/product/asset/RealisedVarianceMethodEnum",
+  "description": "The contract specifies which price must satisfy the boundary condition.  Used for variance, volatility and correlation caps and floors.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Both",
+      "Last",
+      "Previous"
+    ]
+  }
+}

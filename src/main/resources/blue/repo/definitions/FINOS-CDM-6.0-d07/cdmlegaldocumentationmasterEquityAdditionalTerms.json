@@ -1,0 +1,25 @@
+{
+  "name": "cdm/legaldocumentation/master/EquityAdditionalTerms",
+  "description": "Transaction AdditionalTerms that apply to Equity asset class.",
+  "determinationTerms": {
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "2CBRVBHp8NK926NLXhHSWTgFBfRXppF92DVzGUsaWnb5"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  },
+  "extraordinaryEvents": {
+    "type": {
+      "blueId": "21iyBn5bFfXBhVCAEu6xHs3EVyGVENqWeU81ygZsZSYB"
+    }
+  },
+  "substitutionProvision": {
+    "type": {
+      "blueId": "BwxgtWNf5zgBVUwjUpvEnuczVvkc32QPPvCsnLqs7uAC"
+    }
+  }
+}

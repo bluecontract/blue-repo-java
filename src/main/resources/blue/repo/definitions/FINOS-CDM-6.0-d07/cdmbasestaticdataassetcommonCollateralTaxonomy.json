@@ -1,0 +1,22 @@
+{
+  "name": "cdm/base/staticdata/asset/common/CollateralTaxonomy",
+  "description": "Specifies the collateral taxonomy, which is composed of a taxonomy value and a taxonomy source.",
+  "taxonomySource": {
+    "description": "Specifies the taxonomy source.",
+    "type": {
+      "blueId": "BqVKf5kjSXYKGPcRR5b36H8VLo9HRAiZm3VMuFVHtQpU"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "taxonomyValue": {
+    "description": "Specifies the taxonomy value.",
+    "type": {
+      "blueId": "HyXNVDmDxEPeDSSNQXVrStDaEGA3kiQJX6J14kavi83F"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

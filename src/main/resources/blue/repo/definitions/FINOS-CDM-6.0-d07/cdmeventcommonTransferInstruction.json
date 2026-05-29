@@ -1,0 +1,16 @@
+{
+  "name": "cdm/event/common/TransferInstruction",
+  "description": "Defines the payout on which to create a Transfer along with all necessary resets.",
+  "transferState": {
+    "description": "Specifies the terms and state of a transfers.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "7hRqvvNgHnPiEenLU9ckY2LfEXCpJfG25j1AXxTsRppV"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

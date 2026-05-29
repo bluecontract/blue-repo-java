@@ -1,0 +1,18 @@
+{
+  "name": "cdm/observable/asset/fro/FloatingRateIndexDefinition",
+  "calculationDefaults": {
+    "description": "Any calculation default values.",
+    "type": {
+      "blueId": "B1cMPbY37zSuZ5Uu8uFbfBZkneAMEub3MxxHEiBJBvrW"
+    }
+  },
+  "fro": {
+    "description": "The underlying FRO name and designated maturity.",
+    "type": {
+      "blueId": "8LAQKNSHCMRFJgRQ76HA4Qq3hKZxHfc2SkEF2b8u7ssp"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

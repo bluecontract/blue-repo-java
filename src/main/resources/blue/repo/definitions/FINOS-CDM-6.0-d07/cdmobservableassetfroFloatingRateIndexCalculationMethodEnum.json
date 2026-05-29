@@ -1,0 +1,15 @@
+{
+  "name": "cdm/observable/asset/fro/FloatingRateIndexCalculationMethodEnum",
+  "description": "3rd level ISDA FRO category.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "All-In Compounded Index",
+      "Overnight Averaging",
+      "Compounded Index",
+      "OIS Compounding"
+    ]
+  }
+}

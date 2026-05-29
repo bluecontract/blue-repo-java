@@ -1,0 +1,14 @@
+{
+  "name": "cdm/observable/asset/CsaTypeEnum",
+  "description": "How is the Creadit Support Annex defined for this transaction as defined in the 2021 ISDA Definitions, section 18.2.1\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "ExistingCSA",
+      "NoCSA",
+      "ReferenceVMCSA"
+    ]
+  }
+}

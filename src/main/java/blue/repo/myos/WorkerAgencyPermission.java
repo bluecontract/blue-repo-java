@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("EKPgicPVdFxx8X4ZBsnx7mT387M3VXDeMjSBnmAreUsS")
+@TypeBlueId("GjxBN2eRsYCbipBAFk2eRneiDSs5rWS7eUzZBpPHz2JH")
 public class WorkerAgencyPermission {
     public static String blueId() {
-        return "EKPgicPVdFxx8X4ZBsnx7mT387M3VXDeMjSBnmAreUsS";
+        return "GjxBN2eRsYCbipBAFk2eRneiDSs5rWS7eUzZBpPHz2JH";
     }
 
     public static String packageName() {

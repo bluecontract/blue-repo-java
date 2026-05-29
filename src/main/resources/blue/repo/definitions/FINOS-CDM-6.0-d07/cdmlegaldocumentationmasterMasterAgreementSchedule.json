@@ -1,0 +1,16 @@
+{
+  "name": "cdm/legaldocumentation/master/MasterAgreementSchedule",
+  "description": "The set of elections which specify a Master Agreement.",
+  "clause": {
+    "description": "Clauses that have had elections made against them in this Master Agreement. There must be at least one clause defined in the agreement.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "FDdzyh2M5DUGb32KJS2wGJCxLh2Vvpvk6w4FqgcCnGWj"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "cdm/observable/asset/CreditNotationMismatchResolutionEnum",
+  "description": "Represents an enumeration list to identify the characteristics of the rating if there are several agency issue ratings but not equivalent, reference will be made to label characteristics of the rating such as the lowest/highest available.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Average",
+      "Highest",
+      "Lowest",
+      "Other",
+      "ReferenceAgency",
+      "SecondBest"
+    ]
+  }
+}

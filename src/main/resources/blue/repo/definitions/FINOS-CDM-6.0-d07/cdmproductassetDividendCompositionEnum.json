@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/asset/DividendCompositionEnum",
+  "description": "The enumerated values to specify how the composition of Dividends is to be determined.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "CalculationAgentElection",
+      "EquityAmountReceiverElection"
+    ]
+  }
+}

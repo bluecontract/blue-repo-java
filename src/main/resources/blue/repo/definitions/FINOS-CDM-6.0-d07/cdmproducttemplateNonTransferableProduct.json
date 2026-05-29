@@ -1,0 +1,37 @@
+{
+  "name": "cdm/product/template/NonTransferableProduct",
+  "description": "A data type to specify the financial product's economic terms, alongside the product identification and product taxonomy. The non-transferable product data type represents a product that can be traded (as part of a TradableProduct) but cannot be transferred to others.  It is meant to be used across the pre-execution, execution and (as part of the Contract) post-execution lifecycle contexts.\n",
+  "economicTerms": {
+    "description": "The price forming features, including payouts and provisions.",
+    "type": {
+      "blueId": "this#6"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "identifier": {
+    "description": "Comprises a identifier and a source to uniquely identify the nonTransferableProduct.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "5c5XyFaNNdcdGuZPhYzhFNJbrCZNBVfdVn4MoNwXRkgD"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "taxonomy": {
+    "description": "Specifies the product taxonomy, which is composed of a taxonomy value and a taxonomy source.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "67LnTFwSF3LowHqQnYb93TGL9SjY4NsEqwoAkLvRET5M"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

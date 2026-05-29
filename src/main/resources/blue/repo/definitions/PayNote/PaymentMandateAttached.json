@@ -2,12 +2,12 @@
   "name": "Payment Mandate Attached",
   "description": "Payment Mandate was successfully attached to the PayNote context.",
   "type": {
-    "blueId": "5Wz4G9qcnBJnntYRkz4dgLK5bSuoMpYJZj4j5M59z4we"
+    "blueId": "ENRQ621TbJpLg2cGyYkgTmPRLGKZkPqCzkBgm4yEXKF5"
   },
   "paymentMandateDocumentId": {
     "description": "Document id of the attached Payment Mandate.",
     "type": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     }
   }
 }

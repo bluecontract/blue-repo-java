@@ -1,0 +1,22 @@
+{
+  "name": "cdm/base/staticdata/asset/common/ProductIdentifier",
+  "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the ProductIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.\n",
+  "identifier": {
+    "description": "Provides an identifier associated with a specific product.  The identifier is unique within the public source specified in the source attribute.\n",
+    "type": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "source": {
+    "description": "Defines the source of the identifier.",
+    "type": {
+      "blueId": "6V8L7fF5m6HSsfpQMXzE1QMay5SRtGSdqf93abs25g4g"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

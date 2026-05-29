@@ -1,0 +1,18 @@
+{
+  "name": "cdm/base/staticdata/asset/common/InstrumentTypeEnum",
+  "description": "Represents an enumeration list to indentify the type of an instrument.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Certificate",
+      "Debt",
+      "Equity",
+      "Fund",
+      "LetterOfCredit",
+      "ListedDerivative",
+      "Warrant"
+    ]
+  }
+}

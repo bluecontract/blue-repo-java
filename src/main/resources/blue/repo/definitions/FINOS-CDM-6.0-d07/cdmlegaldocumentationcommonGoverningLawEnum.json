@@ -1,0 +1,33 @@
+{
+  "name": "cdm/legaldocumentation/common/GoverningLawEnum",
+  "description": "The enumerated values to specify the law governing the contract or legal document.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AsSpecifiedInMasterAgreement",
+      "BE",
+      "CAAB",
+      "CABC",
+      "CAMN",
+      "CAON",
+      "CAQC",
+      "DE",
+      "FR",
+      "GBEN",
+      "GBGY",
+      "GBIM",
+      "GBJY",
+      "GBSC",
+      "IE",
+      "JP",
+      "LU",
+      "RelatedMasterAgreement",
+      "USCA",
+      "USDE",
+      "USIL",
+      "USNY"
+    ]
+  }
+}

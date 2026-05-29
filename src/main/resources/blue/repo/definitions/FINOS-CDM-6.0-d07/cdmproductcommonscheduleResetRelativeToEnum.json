@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/common/schedule/ResetRelativeToEnum",
+  "description": "The enumerated values to specify whether resets occur relative to the first or last day of a calculation period.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "CalculationPeriodEndDate",
+      "CalculationPeriodStartDate"
+    ]
+  }
+}

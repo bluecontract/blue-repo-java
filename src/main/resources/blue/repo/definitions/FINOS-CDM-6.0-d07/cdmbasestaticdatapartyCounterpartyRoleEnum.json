@@ -1,0 +1,13 @@
+{
+  "name": "cdm/base/staticdata/party/CounterpartyRoleEnum",
+  "description": "Defines the enumerated values to specify the two counterparties to the transaction.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Party1",
+      "Party2"
+    ]
+  }
+}

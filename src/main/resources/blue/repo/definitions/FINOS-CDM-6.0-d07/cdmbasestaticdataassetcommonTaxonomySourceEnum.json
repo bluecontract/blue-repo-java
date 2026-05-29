@@ -1,0 +1,20 @@
+{
+  "name": "cdm/base/staticdata/asset/common/TaxonomySourceEnum",
+  "description": "Represents the enumerated values to specify taxonomy sources.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "CFI",
+      "EMIR",
+      "EU_EMIR_EligibleCollateralAssetClass",
+      "ICAD",
+      "ISDA",
+      "MAS",
+      "Other",
+      "UK_EMIR_EligibleCollateralAssetClass",
+      "US_CFTC_PR_EligibleCollateralAssetClass"
+    ]
+  }
+}

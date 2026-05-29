@@ -3,12 +3,12 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Event;
+import blue.repo.coordination.Event;
 
-@TypeBlueId("2gc8djtKGGRPjGfMQzvJZMviaXm4ytM1nA4DVbfyjkrW")
+@TypeBlueId("8afv356wxUZxou95jDEYEgp5dL6VmnpFmYUjx3aDuFXi")
 public class SubscriptionUpdate extends Event {
     public static String blueId() {
-        return "2gc8djtKGGRPjGfMQzvJZMviaXm4ytM1nA4DVbfyjkrW";
+        return "8afv356wxUZxou95jDEYEgp5dL6VmnpFmYUjx3aDuFXi";
     }
 
     public static String packageName() {

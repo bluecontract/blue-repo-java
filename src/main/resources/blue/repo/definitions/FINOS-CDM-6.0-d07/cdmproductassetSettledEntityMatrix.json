@@ -1,0 +1,19 @@
+{
+  "name": "cdm/product/asset/SettledEntityMatrix",
+  "description": "A class to specify the Relevant Settled Entity Matrix.",
+  "matrixSource": {
+    "description": "Relevant settled entity matrix source.",
+    "type": {
+      "blueId": "9tZ8BrwCpC2J8NwtkjzPsfCpfY28GPuQz1TD89m6bt6p"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "publicationDate": {
+    "description": "Specifies the publication date of the applicable version of the matrix. When this element is omitted, the Standard Terms Supplement defines rules for which version of the matrix is applicable.\n",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

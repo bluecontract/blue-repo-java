@@ -1,0 +1,22 @@
+{
+  "name": "cdm/product/common/settlement/PricingDates",
+  "description": "Specifies specific dates or parametric rules for the dates on which the price will be determined",
+  "parametricDates": {
+    "description": "Defines rules for the dates on which the price will be determined.",
+    "type": {
+      "blueId": "3G1rTAy4mfXMfESNWydvuZNryTZG6b89Cxa7M68H5Tuc"
+    }
+  },
+  "specifiedDates": {
+    "description": "Defines specified dates on which the price will be determined.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "AVEa3cHBFc7jh53rsx2pWGAwUUpJLSHnfwdjU8K2F8Er"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

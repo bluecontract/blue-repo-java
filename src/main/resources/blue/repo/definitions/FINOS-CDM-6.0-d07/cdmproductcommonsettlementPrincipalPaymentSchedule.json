@@ -1,0 +1,22 @@
+{
+  "name": "cdm/product/common/settlement/PrincipalPaymentSchedule",
+  "description": "Describe dates schedules for Principal Exchanges and related role of the parties when known.",
+  "finalPrincipalPayment": {
+    "description": "Principal Payment at Trade maturity",
+    "type": {
+      "blueId": "CzkYzPZygBS1BTrbW8ifgv9kMcZw7AKSUt2PhTYckz9U"
+    }
+  },
+  "initialPrincipalPayment": {
+    "description": "Principal Payment made at Trade inception.",
+    "type": {
+      "blueId": "CzkYzPZygBS1BTrbW8ifgv9kMcZw7AKSUt2PhTYckz9U"
+    }
+  },
+  "intermediatePrincipalPayment": {
+    "description": "Principal Payment as part of the Trade lifecycle e.g. as part of notional reset adjustements in a Cross Currency Swap with a varying notional leg.\n",
+    "type": {
+      "blueId": "GqMDcJT2X4pbkcA4TWqyfyLp2xKadMY8F8DW2abYfujx"
+    }
+  }
+}

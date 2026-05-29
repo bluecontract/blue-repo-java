@@ -1,0 +1,31 @@
+{
+  "name": "cdm/observable/asset/calculatedrate/FallbackRateParameters",
+  "description": "Defines the structure needed to represent fallback rate parameters. This type is used to represent modular computed rates in interestRatePayouts.\n",
+  "calculationParameters": {
+    "description": "Support for modular calculated rates, such such as lockout compound calculations.",
+    "type": {
+      "blueId": "AnEVQ8QEqMeNfEqRyShdBktAzThJWGoQ4pPd64mu6ngG"
+    }
+  },
+  "effectiveDate": {
+    "description": "The date the fallback rate takes effect.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "floatingRateIndex": {
+    "description": "The floating rate index that is used as the basis of the fallback rate.",
+    "type": {
+      "blueId": "94ZSjm1tubYgDRVxoNemu9wBkqkuU4YE5cvNxw8BSwek"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "spreadAdjustment": {
+    "description": "The economic spread applied to the underlying fallback rate to replicate the original risky rate.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  }
+}

@@ -3,13 +3,12 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.core.Channel;
 import java.util.Map;
 
-@TypeBlueId("5cg55kgH8ckRVji4oWSBBxthJQFYmB5Lb1Pea7achyNr")
+@TypeBlueId("FX9yvQWAiZMMwnUF1vY1HMumJNNg7ENP7ETxha1kvWkn")
 public class MyOSPackage extends Agent {
     public static String blueId() {
-        return "5cg55kgH8ckRVji4oWSBBxthJQFYmB5Lb1Pea7achyNr";
+        return "FX9yvQWAiZMMwnUF1vY1HMumJNNg7ENP7ETxha1kvWkn";
     }
 
     public static String packageName() {
@@ -41,7 +40,7 @@ public class MyOSPackage extends Agent {
 
     private String agentStoreDescription;
 
-    private Map<String, Channel> channelBindings;
+    private Map<String, Node> channelBindings;
 
     private String installerChannel;
 
@@ -69,11 +68,11 @@ public class MyOSPackage extends Agent {
         return this;
     }
 
-    public Map<String, Channel> getChannelBindings() {
+    public Map<String, Node> getChannelBindings() {
         return channelBindings;
     }
 
-    public MyOSPackage channelBindings(Map<String, Channel> channelBindings) {
+    public MyOSPackage channelBindings(Map<String, Node> channelBindings) {
         this.channelBindings = channelBindings;
         return this;
     }

@@ -1,0 +1,24 @@
+{
+  "name": "cdm/base/staticdata/asset/common/ProductIdTypeEnum",
+  "description": "Provides the enumerated values to specify the product identifier source.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "BBGID",
+      "BBGTICKER",
+      "CUSIP",
+      "FIGI",
+      "ISDACRP",
+      "ISIN",
+      "Name",
+      "Other",
+      "RIC",
+      "SEDOL",
+      "Sicovam",
+      "UPI",
+      "Wertpapier"
+    ]
+  }
+}

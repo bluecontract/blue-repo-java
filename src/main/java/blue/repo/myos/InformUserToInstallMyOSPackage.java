@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@TypeBlueId("CrGV4ZYjvPvMqrgNQAfgZCUnFjFW6HDjYNdon2chLKU3")
+@TypeBlueId("B7HmEAQxcEvr6CPyXwPZGLVGYcddcaajrDKgt5eEubQa")
 public class InformUserToInstallMyOSPackage {
     public static String blueId() {
-        return "CrGV4ZYjvPvMqrgNQAfgZCUnFjFW6HDjYNdon2chLKU3";
+        return "B7HmEAQxcEvr6CPyXwPZGLVGYcddcaajrDKgt5eEubQa";
     }
 
     public static String packageName() {

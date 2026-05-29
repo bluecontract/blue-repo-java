@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("5cZ3J1QiMJEJV4FV5kfSkeG2oJmweWCyJo3v2TSc3Xuw")
+@TypeBlueId("9L2spAU6UyAkHicQ4vEqeWWoaEEndi1iVdt8Vdbpi4Yq")
 public class SingleDocumentPermissionSet {
     public static String blueId() {
-        return "5cZ3J1QiMJEJV4FV5kfSkeG2oJmweWCyJo3v2TSc3Xuw";
+        return "9L2spAU6UyAkHicQ4vEqeWWoaEEndi1iVdt8Vdbpi4Yq";
     }
 
     public static String packageName() {

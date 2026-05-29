@@ -2,6 +2,7 @@ package blue.repo.types;
 
 import blue.repo.RepositoryType;
 
+import blue.repo.common.CryptoEd25519Verify;
 import blue.repo.common.Currency;
 import blue.repo.common.Document;
 import blue.repo.common.DocumentAnchor;
@@ -20,6 +21,8 @@ import blue.repo.common.Task;
 import blue.repo.common.Timestamp;
 
 public final class CommonTypes {
+    public static final RepositoryType CRYPTO_ED25519_VERIFY = CryptoEd25519Verify.repositoryType();
+
     public static final RepositoryType CURRENCY = Currency.repositoryType();
 
     public static final RepositoryType DOCUMENT = Document.repositoryType();

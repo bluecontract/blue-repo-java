@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("EHTR6jFrqbmjPf7dNSJUsGUJrgr5kLh62QiT2bxD6KRp")
+@TypeBlueId("EqJ715y2fFsWhgBRXg5X9GDBxrkEsdend14hHmSsD8Ma")
 public class PermissionGrant extends Document {
     public static String blueId() {
-        return "EHTR6jFrqbmjPf7dNSJUsGUJrgr5kLh62QiT2bxD6KRp";
+        return "EqJ715y2fFsWhgBRXg5X9GDBxrkEsdend14hHmSsD8Ma";
     }
 
     public static String packageName() {

@@ -3,13 +3,13 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Response;
+import blue.repo.coordination.Response;
 import java.util.List;
 
-@TypeBlueId("3P4vsTx8Ky2pucXxKgkn8MouveP2DBRjkwZckCG5b9Lb")
+@TypeBlueId("Cm4GjXHCv2s4zEhfqd15xTX2PwvAYSBzvYFkqaxfGfyF")
 public class CallOperationResponded extends Response {
     public static String blueId() {
-        return "3P4vsTx8Ky2pucXxKgkn8MouveP2DBRjkwZckCG5b9Lb";
+        return "Cm4GjXHCv2s4zEhfqd15xTX2PwvAYSBzvYFkqaxfGfyF";
     }
 
     public static String packageName() {

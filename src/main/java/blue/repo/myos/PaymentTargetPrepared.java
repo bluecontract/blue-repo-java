@@ -4,13 +4,13 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.common.Currency;
-import blue.repo.conversation.Response;
+import blue.repo.coordination.Response;
 import java.math.BigInteger;
 
-@TypeBlueId("N7tRCfv2oxjN8ncrkPQb8c16CjUdJbM7aWDUJDR1C5k")
+@TypeBlueId("49LXZn6EhFE2ZsAXib7p6pRAMazeHJPe7a12RVYSAjNh")
 public class PaymentTargetPrepared extends Response {
     public static String blueId() {
-        return "N7tRCfv2oxjN8ncrkPQb8c16CjUdJbM7aWDUJDR1C5k";
+        return "49LXZn6EhFE2ZsAXib7p6pRAMazeHJPe7a12RVYSAjNh";
     }
 
     public static String packageName() {

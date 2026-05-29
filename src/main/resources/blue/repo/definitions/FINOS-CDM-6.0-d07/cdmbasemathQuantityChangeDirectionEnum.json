@@ -1,0 +1,14 @@
+{
+  "name": "cdm/base/math/QuantityChangeDirectionEnum",
+  "description": "Specifies whether a quantity change is an increase, a decrease or a replacement, whereby the quantity is always specified as a positive number.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Decrease",
+      "Increase",
+      "Replace"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/asset/FinalPrincipalExchangeCalculationEnum",
+  "description": "To be specified only for products that embed a redemption payment.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Floored",
+      "NonFloored"
+    ]
+  }
+}

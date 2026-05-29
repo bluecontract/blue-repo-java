@@ -1,0 +1,16 @@
+{
+  "name": "cdm/product/template/PassThrough",
+  "description": "Type which contains pass through payments.",
+  "passThroughItem": {
+    "description": "One to many pass through payment items.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "4ffJJii1Z4jwfVHBttkajN4eiGqNhNxvwCgK6LDERqSp"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  }
+}

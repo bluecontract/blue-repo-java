@@ -1,0 +1,16 @@
+{
+  "name": "cdm/product/common/settlement/ShapingProvision",
+  "description": "Defines the applicable settlement limits that may require a settlement to be 'shaped', i.e. broken-down into smaller amounts.\n",
+  "shapeSchedule": {
+    "description": "Defines applicable settlement limits in each currency.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  }
+}

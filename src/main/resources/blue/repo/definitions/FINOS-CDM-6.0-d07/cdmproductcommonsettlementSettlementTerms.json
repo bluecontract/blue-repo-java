@@ -1,0 +1,64 @@
+{
+  "name": "cdm/product/common/settlement/SettlementTerms",
+  "description": "Specifies the settlement terms, which can either be cash, physical, or fx-based cash-settlement. This class can be used for the settlement of options and forwards, cash transactions (e.g. securities or foreign exchange), or in case of credit event.\n",
+  "cashSettlementTerms": {
+    "description": "Specifies the parameters associated with the cash settlement procedure.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "F5KjnQMMfEGVJJX3gbJCn8y2RE7dehHwQ5SW9jZCGBzY"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "physicalSettlementTerms": {
+    "description": "Specifies the physical settlement terms which apply to the transaction.",
+    "type": {
+      "blueId": "GzmcaJGcxxbPSQHg1zYpF1BYQeqKk1vY6A9wfJNZDzzt"
+    }
+  },
+  "settlementCentre": {
+    "description": "Optional settlement centre as an enumerated list: Euroclear, Clearstream.\n",
+    "type": {
+      "blueId": "CtptCKfWbV6AxnCMpdayAQqny85RkBJ3hXoumq4bqpC2"
+    }
+  },
+  "settlementCurrency": {
+    "description": "The settlement currency is to be specified when the Settlement Amount cannot be known in advance. The list of valid currencies is not presently positioned as an enumeration as part of the CDM because that scope is limited to the values specified by ISDA and FpML. As a result, implementers have to make reference to the relevant standard, such as the ISO 4217 standard for currency codes.\n",
+    "type": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    }
+  },
+  "settlementDate": {
+    "description": "The date on which the settlement amount will be paid, subject to adjustment in accordance with any applicable business day convention. This component would not be present for a mandatory early termination provision where the cash settlement payment date is the mandatory early termination date.\n",
+    "type": {
+      "blueId": "74ZPNZomeMuV9sNwQJ4xyxnTGvQRrzmAbkvhx1m6se5Q"
+    }
+  },
+  "settlementProvision": {
+    "description": "Optionally defines the parameters that regulate a settlement.",
+    "type": {
+      "blueId": "7QEnknzp6vj79Sby1jPaesidRLAV5FSUBdYAAk5o7Pz9"
+    }
+  },
+  "settlementType": {
+    "description": "Whether the settlement will be cash, physical, by election, ...",
+    "type": {
+      "blueId": "DqU5FdZ5Dx3sCZL9c4CVzueweQDXhYp47CtwGmxjTq4P"
+    }
+  },
+  "standardSettlementStyle": {
+    "description": "Settlement Style.",
+    "type": {
+      "blueId": "ALhQzGrA32hE8baH358zYvBh9rD9PF2xh4sf7hEWJqnJ"
+    }
+  },
+  "transferSettlementType": {
+    "description": "The qualification as to how the transfer will settle, e.g. a DvP settlement.",
+    "type": {
+      "blueId": "HnJN89X6ERJByePXruVe1jxmcRm34KMpyTavLyHTuQK4"
+    }
+  }
+}

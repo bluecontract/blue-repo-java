@@ -1,0 +1,79 @@
+{
+  "name": "cdm/observable/asset/InflationIndex",
+  "description": "Specification of an index that measures inflation in a specific market, e.g. the US Consumer Price Index.",
+  "assetClass": {
+    "description": "The Asset Class of the Index.",
+    "type": {
+      "blueId": "7SEgYnbcXhWKAHMtc5CwTcvZ8JWeE8F687Hd7328mgJ9"
+    }
+  },
+  "exchange": {
+    "description": "If the Asset is listed, defines the public exchange of the listing.",
+    "type": {
+      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+    }
+  },
+  "identifier": {
+    "description": "Asset Identifiers are used to uniquely identify an Asset, using a specified Asset Identifier Type.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GUT2oVFRefXcoq5yqjB5Pm8exmKiYH7iksr34CNZ7yjH"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  },
+  "indexTenor": {
+    "description": "The ISDA Designated Maturity, i.e. the floating rate tenor.",
+    "type": {
+      "blueId": "D2zD5eW4h5CVwkas6bYant1Kmgdg4zt95zb3kYgR87RE"
+    }
+  },
+  "inflationRateIndex": {
+    "description": "The reference index that is used to specify the inflation interest rate.",
+    "type": {
+      "blueId": "3Feh9LP1zPwni1cBtKiog4JXpHngGthVXmwprxawBop6"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "isExchangeListed": {
+    "description": "Defines whether the Asset is listed on a public exchange.",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    }
+  },
+  "provider": {
+    "description": "The organisation that creates or maintains the Index.",
+    "type": {
+      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+    }
+  },
+  "relatedExchange": {
+    "description": "Provides the related Exchanges, if applicable.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "taxonomy": {
+    "description": "Defines the taxonomy of an object by combining a taxonomy source (i.e. the rules to classify the object) and a value (i.e. the output of those rules on the object.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "8EKfmgSdnP6EYVXZagpfvygY1BhsDy43CQgKoKPw4Fio"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

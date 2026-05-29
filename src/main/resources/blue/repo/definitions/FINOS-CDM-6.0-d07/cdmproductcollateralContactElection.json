@@ -1,0 +1,17 @@
+{
+  "name": "cdm/product/collateral/ContactElection",
+  "description": "A class to specify the parties' election to specify contact information, in relation to elections such as the Addresses for Transfer or the Demand and Notices as specified in the ISDA Credit Support Annex agreement.\n",
+  "partyElection": {
+    "description": "The parties' contact information election.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "5Vjv2XQNPdtQNKN8mvEx3JGyY4QKNuVtTwTEo1HZ3Gxy"
+    },
+    "schema": {
+      "minItems": 2,
+      "maxItems": 2
+    }
+  }
+}

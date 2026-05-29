@@ -3,12 +3,12 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Response;
+import blue.repo.coordination.Response;
 
-@TypeBlueId("GAFsQ4MjLuJZfEgPE1J1jp8fpihkgRq6Q1meF4xsmJYv")
+@TypeBlueId("9gkE6ybqoLeFGySKvhWmAM9K6ARCWEeBoyEDY6jw8X3U")
 public class DocumentInitialSnapshotResolved extends Response {
     public static String blueId() {
-        return "GAFsQ4MjLuJZfEgPE1J1jp8fpihkgRq6Q1meF4xsmJYv";
+        return "9gkE6ybqoLeFGySKvhWmAM9K6ARCWEeBoyEDY6jw8X3U";
     }
 
     public static String packageName() {

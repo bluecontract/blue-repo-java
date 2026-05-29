@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/template/RepoDurationEnum",
+  "description": "A duration code for a Repo (or Securities Lending) transaction. There are many business and market rules that are derived from the duration of the transaction.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Overnight",
+      "Term"
+    ]
+  }
+}

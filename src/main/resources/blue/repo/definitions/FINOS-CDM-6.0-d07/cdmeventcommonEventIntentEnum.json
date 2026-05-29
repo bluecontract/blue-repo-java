@@ -1,0 +1,34 @@
+{
+  "name": "cdm/event/common/EventIntentEnum",
+  "description": "The enumeration values to qualify the intent associated with a transaction event.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Allocation",
+      "CashFlow",
+      "Clearing",
+      "Compression",
+      "ContractFormation",
+      "ContractTermsAmendment",
+      "CorporateActionAdjustment",
+      "CreditEvent",
+      "Decrease",
+      "EarlyTerminationProvision",
+      "Increase",
+      "IndexTransition",
+      "NotionalReset",
+      "NotionalStep",
+      "Novation",
+      "ObservationRecord",
+      "OptionExercise",
+      "OptionalCancellation",
+      "OptionalExtension",
+      "PortfolioRebalancing",
+      "PrincipalExchange",
+      "Reallocation",
+      "Repurchase"
+    ]
+  }
+}

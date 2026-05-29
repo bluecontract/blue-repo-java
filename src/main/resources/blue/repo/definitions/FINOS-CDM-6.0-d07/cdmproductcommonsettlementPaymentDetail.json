@@ -1,0 +1,23 @@
+{
+  "name": "cdm/product/common/settlement/PaymentDetail",
+  "paymentAmount": {
+    "description": "A fixed payment amount.",
+    "type": {
+      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+    }
+  },
+  "paymentDate": {
+    "type": {
+      "blueId": "2gu7bBDYJXEVsffNg2iAYXou31qtdeR4oiwZHL2kaEgQ"
+    }
+  },
+  "paymentRule": {
+    "description": "The calculation rule.",
+    "type": {
+      "blueId": "DMDgnRgDHXDgM8qMpbsMeSSLbKoLV6VHGnnXkhMPQtFY"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

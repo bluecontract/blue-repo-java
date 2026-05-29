@@ -1,0 +1,28 @@
+{
+  "name": "cdm/product/template/Composite",
+  "description": "Specifies the conditions to be applied for converting into a reference currency when the actual currency rate is not determined upfront.\n",
+  "determinationMethod": {
+    "description": "Specifies the method according to which an amount or a date is determined.",
+    "type": {
+      "blueId": "FTE7qqGQusB8UEjsRpipyFrw42V2W8VA1TNPNLGTJwKU"
+    }
+  },
+  "fixingTime": {
+    "description": "The time at which the spot currency exchange rate will be observed. It is specified as a time in a business day calendar location, e.g. 11:00am London time.\n",
+    "type": {
+      "blueId": "DJHcCUvgkjrpH1UjAWPG6z2avBDGcvFeWgf2oWZMM7ef"
+    }
+  },
+  "fxSpotRateSource": {
+    "description": "Specifies the methodology (reference source and, optionally, fixing time) to be used for determining a currency conversion rate.\n",
+    "type": {
+      "blueId": "Er5xdgizmYHVQiqxbHxo9DYjuP1uTdYqWsrVPJRV2S5P"
+    }
+  },
+  "relativeDate": {
+    "description": "A date specified as some offset to another date (the anchor date).",
+    "type": {
+      "blueId": "7QxGhWQtmouskKThF8wotN1SAyBt25xWupZQKMHgcTYw"
+    }
+  }
+}

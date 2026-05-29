@@ -1,0 +1,16 @@
+{
+  "name": "cdm/product/common/schedule/DateRelativeToCalculationPeriodDates",
+  "description": "A data to:  provide the ability to point to multiple payment nodes in the document through the unbounded paymentDatesReference.\n",
+  "calculationPeriodDatesReference": {
+    "description": "A set of href pointers to calculation period dates defined somewhere else in the document.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "5kML8V9qeDP2N3N3L173vbHKEbT1tjwLQ89bXgwhB2jf"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  }
+}

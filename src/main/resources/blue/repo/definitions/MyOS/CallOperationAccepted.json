@@ -2,18 +2,18 @@
   "name": "Call Operation Accepted",
   "description": "MyOS Admin accepted the call and submitted the operation request.",
   "type": {
-    "blueId": "36epvrpVHZLjapbeZsNodz2NDnm7XZeNZcnkWHgkP1pp"
+    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
   },
   "targetSessionId": {
     "description": "Target document session that received the request.",
     "type": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     }
   },
   "operation": {
     "description": "Operation name that was invoked.",
     "type": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     }
   }
 }

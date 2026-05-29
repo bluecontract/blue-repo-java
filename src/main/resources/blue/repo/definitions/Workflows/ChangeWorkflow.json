@@ -1,0 +1,3626 @@
+{
+  "name": "Change Workflow",
+  "description": "Applies a requested changeset immediately to the document.",
+  "type": {
+    "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+  },
+  "request": {
+    "description": "Expected request payload for this workflow.",
+    "type": {
+      "blueId": "6DTYzUFXoVEV5WjVKmQveSztfXfVN5nr1bso3ygW9ocU"
+    }
+  },
+  "steps": {
+    "items": [
+      {
+        "name": "Prepare",
+        "type": {
+          "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+        },
+        "entry": {
+          "type": {
+            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+          },
+          "value": "prepare"
+        },
+        "functions": {
+          "invalid": {
+            "args": {
+              "reason": {
+                "description": "BEX helper argument."
+              }
+            },
+            "expr": {
+              "changeset": {
+                "items": []
+              },
+              "events": {
+                "items": [
+                  {
+                    "type": {
+                      "blueId": "6jcAKEeVpGCPenpSnfwwamL2iTHBACRXPFQjEDU5pX1y"
+                    },
+                    "reason": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "reason"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "asList": {
+            "args": {
+              "val": {
+                "description": "BEX helper argument."
+              }
+            },
+            "expr": {
+              "$choose": {
+                "cond": {
+                  "$isKind": {
+                    "val": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "val"
+                      }
+                    },
+                    "kind": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "list"
+                    }
+                  }
+                },
+                "then": {
+                  "$var": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "val"
+                  }
+                },
+                "else": {
+                  "items": []
+                }
+              }
+            }
+          },
+          "asObject": {
+            "args": {
+              "val": {
+                "description": "BEX helper argument."
+              }
+            },
+            "expr": {
+              "$choose": {
+                "cond": {
+                  "$isKind": {
+                    "val": {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "val"
+                      }
+                    },
+                    "kind": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "object"
+                    }
+                  }
+                },
+                "then": {
+                  "$var": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "val"
+                  }
+                },
+                "else": {
+                  "$emptyObject": {
+                    "type": {
+                      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                    },
+                    "value": true
+                  }
+                }
+              }
+            }
+          },
+          "isMetaKey": {
+            "args": {
+              "key": {
+                "description": "BEX helper argument."
+              }
+            },
+            "expr": {
+              "$or": {
+                "items": [
+                  {
+                    "$eq": {
+                      "items": [
+                        {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "key"
+                          }
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "type"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "$eq": {
+                      "items": [
+                        {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "key"
+                          }
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "keyType"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "$eq": {
+                      "items": [
+                        {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "key"
+                          }
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "valueType"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "$eq": {
+                      "items": [
+                        {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "key"
+                          }
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "description"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "contractKeys": {
+            "args": {
+              "contractsMap": {
+                "description": "BEX helper argument."
+              }
+            },
+            "expr": {
+              "$filter": {
+                "in": {
+                  "$keys": {
+                    "$call": {
+                      "function": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "asObject"
+                      },
+                      "args": {
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "contractsMap"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "item": {
+                  "type": {
+                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                  },
+                  "value": "contractKey"
+                },
+                "where": {
+                  "$not": {
+                    "$call": {
+                      "function": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "isMetaKey"
+                      },
+                      "args": {
+                        "key": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "contractKey"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "keySetObject": {
+            "args": {
+              "keys": {
+                "description": "BEX helper argument."
+              }
+            },
+            "expr": {
+              "$objectFromEntries": {
+                "$map": {
+                  "in": {
+                    "$call": {
+                      "function": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "asList"
+                      },
+                      "args": {
+                        "val": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "keys"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "item": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "key"
+                  },
+                  "expr": {
+                    "key": {
+                      "$text": {
+                        "$var": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "key"
+                        }
+                      }
+                    },
+                    "val": {
+                      "type": {
+                        "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                      },
+                      "value": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "contractPath": {
+            "args": {
+              "key": {
+                "description": "BEX helper argument."
+              }
+            },
+            "expr": {
+              "$pointerJoin": {
+                "items": [
+                  {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "contracts"
+                  },
+                  {
+                    "$var": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "key"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "isContractsPatchEntry": {
+            "args": {
+              "entry": {
+                "description": "BEX helper argument."
+              }
+            },
+            "expr": {
+              "$or": {
+                "items": [
+                  {
+                    "$eq": {
+                      "items": [
+                        {
+                          "$text": {
+                            "$default": {
+                              "items": [
+                                {
+                                  "$var": {
+                                    "name": "entry",
+                                    "path": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "/path"
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": ""
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/contracts"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "$startsWith": {
+                      "items": [
+                        {
+                          "$text": {
+                            "$default": {
+                              "items": [
+                                {
+                                  "$var": {
+                                    "name": "entry",
+                                    "path": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "/path"
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": ""
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/contracts/"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "isProposedChangePatchEntry": {
+            "args": {
+              "entry": {
+                "description": "BEX helper argument."
+              }
+            },
+            "expr": {
+              "$startsWith": {
+                "items": [
+                  {
+                    "$text": {
+                      "$default": {
+                        "items": [
+                          {
+                            "$var": {
+                              "name": "entry",
+                              "path": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "/path"
+                              }
+                            }
+                          },
+                          {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": ""
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "/proposedChange"
+                  }
+                ]
+              }
+            }
+          },
+          "hasMatchingRelatedContracts": {
+            "args": {
+              "section": {
+                "description": "BEX helper argument."
+              },
+              "contractKeys": {
+                "description": "BEX helper argument."
+              }
+            },
+            "do": {
+              "items": [
+                {
+                  "$let": {
+                    "order": {
+                      "items": [
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "related"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "relatedMap"
+                        }
+                      ]
+                    },
+                    "vars": {
+                      "related": {
+                        "$call": {
+                          "function": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "asList"
+                          },
+                          "args": {
+                            "val": {
+                              "$choose": {
+                                "cond": {
+                                  "$exists": {
+                                    "$var": {
+                                      "name": "section",
+                                      "path": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/relatedContracts"
+                                      }
+                                    }
+                                  }
+                                },
+                                "then": {
+                                  "$var": {
+                                    "name": "section",
+                                    "path": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "/relatedContracts"
+                                    }
+                                  }
+                                },
+                                "else": {
+                                  "items": []
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "relatedMap": {
+                        "$call": {
+                          "function": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "keySetObject"
+                          },
+                          "args": {
+                            "keys": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "related"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$returnIf": {
+                    "cond": {
+                      "$eq": {
+                        "items": [
+                          {
+                            "$size": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "related"
+                              }
+                            }
+                          },
+                          {
+                            "type": {
+                              "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                            },
+                            "value": 0
+                          }
+                        ]
+                      }
+                    },
+                    "expr": {
+                      "type": {
+                        "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                      },
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "$returnIf": {
+                    "cond": {
+                      "$ne": {
+                        "items": [
+                          {
+                            "$size": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "related"
+                              }
+                            }
+                          },
+                          {
+                            "$size": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "contractKeys"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "expr": {
+                      "type": {
+                        "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                      },
+                      "value": false
+                    }
+                  }
+                },
+                {
+                  "$returnIf": {
+                    "cond": {
+                      "$ne": {
+                        "items": [
+                          {
+                            "$size": {
+                              "$keys": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "relatedMap"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "$size": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "contractKeys"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "expr": {
+                      "type": {
+                        "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                      },
+                      "value": false
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "$not": {
+                      "$some": {
+                        "in": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "contractKeys"
+                          }
+                        },
+                        "item": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "contractKey"
+                        },
+                        "where": {
+                          "$not": {
+                            "$hasKey": {
+                              "object": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "relatedMap"
+                                }
+                              },
+                              "key": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "contractKey"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "normalizeSection": {
+            "args": {
+              "section": {
+                "description": "BEX helper argument."
+              },
+              "contractKeys": {
+                "description": "BEX helper argument."
+              }
+            },
+            "do": {
+              "items": [
+                {
+                  "$let": {
+                    "name": "related",
+                    "expr": {
+                      "$call": {
+                        "function": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "asList"
+                        },
+                        "args": {
+                          "val": {
+                            "$choose": {
+                              "cond": {
+                                "$exists": {
+                                  "$var": {
+                                    "name": "section",
+                                    "path": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "/relatedContracts"
+                                    }
+                                  }
+                                }
+                              },
+                              "then": {
+                                "$var": {
+                                  "name": "section",
+                                  "path": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/relatedContracts"
+                                  }
+                                }
+                              },
+                              "else": {
+                                "items": []
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "$merge": {
+                      "items": [
+                        {
+                          "$call": {
+                            "function": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "asObject"
+                            },
+                            "args": {
+                              "val": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "section"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "type": {
+                            "blueId": "6R6asWqr9V6DAow5X6EjRRaABhM7xeT13UzcTegmhcjy"
+                          },
+                          "relatedContracts": {
+                            "$choose": {
+                              "cond": {
+                                "$gt": {
+                                  "items": [
+                                    {
+                                      "$size": {
+                                        "$var": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "related"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": {
+                                        "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                                      },
+                                      "value": 0
+                                    }
+                                  ]
+                                }
+                              },
+                              "then": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "related"
+                                }
+                              },
+                              "else": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "contractKeys"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "sectionKeyForRemove": {
+            "args": {
+              "entry": {
+                "description": "BEX helper argument."
+              }
+            },
+            "expr": {
+              "$text": {
+                "$default": {
+                  "items": [
+                    {
+                      "$var": {
+                        "name": "entry",
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/sectionKey"
+                        }
+                      }
+                    },
+                    {
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "entry"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "prepare": {
+            "do": {
+              "items": [
+                {
+                  "$let": {
+                    "order": {
+                      "items": [
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "change"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "summary"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "requestChangeset"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "sectionChanges"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "documentContracts"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "policy"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "policyEnabled"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "seenSectionKeys"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "seenContractKeys"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "existingContractKeys"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "sectionChangeCount"
+                        }
+                      ]
+                    },
+                    "vars": {
+                      "change": {
+                        "$event": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/message/request"
+                        }
+                      },
+                      "summary": {
+                        "$event": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/message/request/summary"
+                        }
+                      },
+                      "requestChangeset": {
+                        "$call": {
+                          "function": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "asList"
+                          },
+                          "args": {
+                            "val": {
+                              "$event": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "/message/request/changeset"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "sectionChanges": {
+                        "$call": {
+                          "function": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "asObject"
+                          },
+                          "args": {
+                            "val": {
+                              "$event": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "/message/request/sectionChanges"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "documentContracts": {
+                        "$call": {
+                          "function": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "asObject"
+                          },
+                          "args": {
+                            "val": {
+                              "$document": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "/contracts"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "policy": {
+                        "$find": {
+                          "in": {
+                            "$var": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "documentContracts"
+                            }
+                          },
+                          "item": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "contract"
+                          },
+                          "where": {
+                            "$exists": {
+                              "$var": {
+                                "name": "contract",
+                                "path": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "/requireSectionChanges"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "policyEnabled": {
+                        "$and": {
+                          "items": [
+                            {
+                              "$exists": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "policy"
+                                }
+                              }
+                            },
+                            {
+                              "$ne": {
+                                "items": [
+                                  {
+                                    "$var": {
+                                      "name": "policy",
+                                      "path": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/requireSectionChanges"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": {
+                                      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                                    },
+                                    "value": false
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "seenSectionKeys": {
+                        "$emptyObject": {
+                          "type": {
+                            "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                          },
+                          "value": true
+                        }
+                      },
+                      "seenContractKeys": {
+                        "$emptyObject": {
+                          "type": {
+                            "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                          },
+                          "value": true
+                        }
+                      },
+                      "existingContractKeys": {
+                        "$call": {
+                          "function": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "keySetObject"
+                          },
+                          "args": {
+                            "keys": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "contractKeys"
+                                },
+                                "args": {
+                                  "contractsMap": {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "documentContracts"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "sectionChangeCount": {
+                        "type": {
+                          "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                        },
+                        "value": 0
+                      }
+                    }
+                  }
+                },
+                {
+                  "$returnIf": {
+                    "cond": {
+                      "$or": {
+                        "items": [
+                          {
+                            "$not": {
+                              "$truthy": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "summary"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "$not": {
+                              "$isKind": {
+                                "val": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "summary"
+                                  }
+                                },
+                                "kind": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "text"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "expr": {
+                      "$call": {
+                        "function": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "invalid"
+                        },
+                        "args": {
+                          "reason": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "summary is missing"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$returnIf": {
+                    "cond": {
+                      "$and": {
+                        "items": [
+                          {
+                            "$var": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "policyEnabled"
+                            }
+                          },
+                          {
+                            "$some": {
+                              "in": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "requestChangeset"
+                                }
+                              },
+                              "item": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "entry"
+                              },
+                              "where": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "isContractsPatchEntry"
+                                  },
+                                  "args": {
+                                    "entry": {
+                                      "$var": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "entry"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "expr": {
+                      "$call": {
+                        "function": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "invalid"
+                        },
+                        "args": {
+                          "reason": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "changeset cannot modify /contracts when Contracts Change Policy is enabled"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$returnIf": {
+                    "cond": {
+                      "$some": {
+                        "in": {
+                          "$var": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "requestChangeset"
+                          }
+                        },
+                        "item": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "entry"
+                        },
+                        "where": {
+                          "$call": {
+                            "function": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "isProposedChangePatchEntry"
+                            },
+                            "args": {
+                              "entry": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "entry"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "expr": {
+                      "$call": {
+                        "function": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "invalid"
+                        },
+                        "args": {
+                          "reason": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "changeset cannot modify /proposedChange"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$forEach": {
+                    "in": {
+                      "$call": {
+                        "function": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "asList"
+                        },
+                        "args": {
+                          "val": {
+                            "$var": {
+                              "name": "sectionChanges",
+                              "path": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "/add"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "item": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "entry"
+                    },
+                    "do": {
+                      "items": [
+                        {
+                          "$let": {
+                            "order": {
+                              "items": [
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "sectionKey"
+                                },
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "contractsMap"
+                                },
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "contractKeys"
+                                }
+                              ]
+                            },
+                            "vars": {
+                              "sectionKey": {
+                                "$text": {
+                                  "$default": {
+                                    "items": [
+                                      {
+                                        "$var": {
+                                          "name": "entry",
+                                          "path": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "/sectionKey"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": ""
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "contractsMap": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "asObject"
+                                  },
+                                  "args": {
+                                    "val": {
+                                      "$var": {
+                                        "name": "entry",
+                                        "path": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "/contracts"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "contractKeys": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "contractKeys"
+                                  },
+                                  "args": {
+                                    "contractsMap": {
+                                      "$var": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "contractsMap"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$returnIf": {
+                            "cond": {
+                              "$not": {
+                                "$truthy": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "sectionKey"
+                                  }
+                                }
+                              }
+                            },
+                            "expr": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "invalid"
+                                },
+                                "args": {
+                                  "reason": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "sectionChanges.add is missing sectionKey"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$returnIf": {
+                            "cond": {
+                              "$hasKey": {
+                                "object": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "seenSectionKeys"
+                                  }
+                                },
+                                "key": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "sectionKey"
+                                  }
+                                }
+                              }
+                            },
+                            "expr": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "invalid"
+                                },
+                                "args": {
+                                  "reason": {
+                                    "$concat": {
+                                      "items": [
+                                        {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "section key duplicated in sectionChanges: "
+                                        },
+                                        {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "sectionKey"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$set": {
+                            "name": "seenSectionKeys",
+                            "expr": {
+                              "$objectSet": {
+                                "object": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "seenSectionKeys"
+                                  }
+                                },
+                                "key": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "sectionKey"
+                                  }
+                                },
+                                "val": {
+                                  "type": {
+                                    "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                                  },
+                                  "value": true
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$returnIf": {
+                            "cond": {
+                              "$hasKey": {
+                                "object": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "existingContractKeys"
+                                  }
+                                },
+                                "key": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "sectionKey"
+                                  }
+                                }
+                              }
+                            },
+                            "expr": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "invalid"
+                                },
+                                "args": {
+                                  "reason": {
+                                    "$concat": {
+                                      "items": [
+                                        {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "contract key already exists at"
+                                        },
+                                        {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": " "
+                                        },
+                                        {
+                                          "$call": {
+                                            "function": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "contractPath"
+                                            },
+                                            "args": {
+                                              "key": {
+                                                "$var": {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "sectionKey"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$returnIf": {
+                            "cond": {
+                              "$not": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "hasMatchingRelatedContracts"
+                                  },
+                                  "args": {
+                                    "section": {
+                                      "$var": {
+                                        "name": "entry",
+                                        "path": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "/section"
+                                        }
+                                      }
+                                    },
+                                    "contractKeys": {
+                                      "$var": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "contractKeys"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "expr": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "invalid"
+                                },
+                                "args": {
+                                  "reason": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "relatedContracts must match contracts"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$forEach": {
+                            "in": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "contractKeys"
+                              }
+                            },
+                            "item": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "contractKey"
+                            },
+                            "do": {
+                              "items": [
+                                {
+                                  "$returnIf": {
+                                    "cond": {
+                                      "$hasKey": {
+                                        "object": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "existingContractKeys"
+                                          }
+                                        },
+                                        "key": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "contractKey"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "expr": {
+                                      "$call": {
+                                        "function": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "invalid"
+                                        },
+                                        "args": {
+                                          "reason": {
+                                            "$concat": {
+                                              "items": [
+                                                {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "contract key already exists at"
+                                                },
+                                                {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": " "
+                                                },
+                                                {
+                                                  "$call": {
+                                                    "function": {
+                                                      "type": {
+                                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                      },
+                                                      "value": "contractPath"
+                                                    },
+                                                    "args": {
+                                                      "key": {
+                                                        "$var": {
+                                                          "type": {
+                                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                          },
+                                                          "value": "contractKey"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "$let": {
+                                    "name": "existingSection",
+                                    "expr": {
+                                      "$get": {
+                                        "object": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "seenContractKeys"
+                                          }
+                                        },
+                                        "key": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "contractKey"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "$returnIf": {
+                                    "cond": {
+                                      "$and": {
+                                        "items": [
+                                          {
+                                            "$exists": {
+                                              "$var": {
+                                                "type": {
+                                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                },
+                                                "value": "existingSection"
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "$ne": {
+                                              "items": [
+                                                {
+                                                  "$var": {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "existingSection"
+                                                  }
+                                                },
+                                                {
+                                                  "$var": {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "sectionKey"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "expr": {
+                                      "$call": {
+                                        "function": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "invalid"
+                                        },
+                                        "args": {
+                                          "reason": {
+                                            "$concat": {
+                                              "items": [
+                                                {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "contract key used by multiple sections in request: "
+                                                },
+                                                {
+                                                  "$var": {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "contractKey"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "$set": {
+                                    "name": "seenContractKeys",
+                                    "expr": {
+                                      "$objectSet": {
+                                        "object": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "seenContractKeys"
+                                          }
+                                        },
+                                        "key": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "contractKey"
+                                          }
+                                        },
+                                        "val": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "sectionKey"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "$forEach": {
+                            "in": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "contractKeys"
+                              }
+                            },
+                            "item": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "contractKey"
+                            },
+                            "do": {
+                              "items": [
+                                {
+                                  "$appendChange": {
+                                    "op": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "add"
+                                    },
+                                    "path": {
+                                      "$call": {
+                                        "function": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "contractPath"
+                                        },
+                                        "args": {
+                                          "key": {
+                                            "$var": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "contractKey"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "val": {
+                                      "$get": {
+                                        "object": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "contractsMap"
+                                          }
+                                        },
+                                        "key": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "contractKey"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "$set": {
+                                    "name": "sectionChangeCount",
+                                    "expr": {
+                                      "$add": {
+                                        "items": [
+                                          {
+                                            "$var": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "sectionChangeCount"
+                                            }
+                                          },
+                                          {
+                                            "type": {
+                                              "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                                            },
+                                            "value": 1
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "$appendChange": {
+                            "op": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "add"
+                            },
+                            "path": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "contractPath"
+                                },
+                                "args": {
+                                  "key": {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "sectionKey"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "val": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "normalizeSection"
+                                },
+                                "args": {
+                                  "section": {
+                                    "$var": {
+                                      "name": "entry",
+                                      "path": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/section"
+                                      }
+                                    }
+                                  },
+                                  "contractKeys": {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "contractKeys"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$set": {
+                            "name": "sectionChangeCount",
+                            "expr": {
+                              "$add": {
+                                "items": [
+                                  {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "sectionChangeCount"
+                                    }
+                                  },
+                                  {
+                                    "type": {
+                                      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                                    },
+                                    "value": 1
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "$forEach": {
+                    "in": {
+                      "$call": {
+                        "function": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "asList"
+                        },
+                        "args": {
+                          "val": {
+                            "$choose": {
+                              "cond": {
+                                "$exists": {
+                                  "$var": {
+                                    "name": "sectionChanges",
+                                    "path": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "/modify"
+                                    }
+                                  }
+                                }
+                              },
+                              "then": {
+                                "$var": {
+                                  "name": "sectionChanges",
+                                  "path": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/modify"
+                                  }
+                                }
+                              },
+                              "else": {
+                                "items": []
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "item": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "entry"
+                    },
+                    "do": {
+                      "items": [
+                        {
+                          "$let": {
+                            "order": {
+                              "items": [
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "sectionKey"
+                                },
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "existingRelated"
+                                },
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "existingRelatedMap"
+                                },
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "contractsMap"
+                                },
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "contractKeys"
+                                }
+                              ]
+                            },
+                            "vars": {
+                              "sectionKey": {
+                                "$text": {
+                                  "$default": {
+                                    "items": [
+                                      {
+                                        "$var": {
+                                          "name": "entry",
+                                          "path": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "/sectionKey"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": ""
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "existingRelated": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "asList"
+                                  },
+                                  "args": {
+                                    "val": {
+                                      "$choose": {
+                                        "cond": {
+                                          "$exists": {
+                                            "$document": {
+                                              "path": {
+                                                "$pointerJoin": {
+                                                  "items": [
+                                                    {
+                                                      "type": {
+                                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                      },
+                                                      "value": "contracts"
+                                                    },
+                                                    {
+                                                      "$var": {
+                                                        "type": {
+                                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                        },
+                                                        "value": "sectionKey"
+                                                      }
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                      },
+                                                      "value": "relatedContracts"
+                                                    }
+                                                  ]
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "then": {
+                                          "$document": {
+                                            "path": {
+                                              "$pointerJoin": {
+                                                "items": [
+                                                  {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "contracts"
+                                                  },
+                                                  {
+                                                    "$var": {
+                                                      "type": {
+                                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                      },
+                                                      "value": "sectionKey"
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "relatedContracts"
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "else": {
+                                          "items": []
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "existingRelatedMap": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "keySetObject"
+                                  },
+                                  "args": {
+                                    "keys": {
+                                      "$var": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "existingRelated"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "contractsMap": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "asObject"
+                                  },
+                                  "args": {
+                                    "val": {
+                                      "$var": {
+                                        "name": "entry",
+                                        "path": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "/contracts"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "contractKeys": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "contractKeys"
+                                  },
+                                  "args": {
+                                    "contractsMap": {
+                                      "$var": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "contractsMap"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$returnIf": {
+                            "cond": {
+                              "$not": {
+                                "$truthy": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "sectionKey"
+                                  }
+                                }
+                              }
+                            },
+                            "expr": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "invalid"
+                                },
+                                "args": {
+                                  "reason": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "sectionChanges.modify is missing sectionKey"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$returnIf": {
+                            "cond": {
+                              "$hasKey": {
+                                "object": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "seenSectionKeys"
+                                  }
+                                },
+                                "key": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "sectionKey"
+                                  }
+                                }
+                              }
+                            },
+                            "expr": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "invalid"
+                                },
+                                "args": {
+                                  "reason": {
+                                    "$concat": {
+                                      "items": [
+                                        {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "section key duplicated in sectionChanges: "
+                                        },
+                                        {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "sectionKey"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$set": {
+                            "name": "seenSectionKeys",
+                            "expr": {
+                              "$objectSet": {
+                                "object": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "seenSectionKeys"
+                                  }
+                                },
+                                "key": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "sectionKey"
+                                  }
+                                },
+                                "val": {
+                                  "type": {
+                                    "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                                  },
+                                  "value": true
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$returnIf": {
+                            "cond": {
+                              "$not": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "hasMatchingRelatedContracts"
+                                  },
+                                  "args": {
+                                    "section": {
+                                      "$var": {
+                                        "name": "entry",
+                                        "path": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "/section"
+                                        }
+                                      }
+                                    },
+                                    "contractKeys": {
+                                      "$var": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "contractKeys"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "expr": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "invalid"
+                                },
+                                "args": {
+                                  "reason": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "relatedContracts must match contracts"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$forEach": {
+                            "in": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "contractKeys"
+                              }
+                            },
+                            "item": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "contractKey"
+                            },
+                            "do": {
+                              "items": [
+                                {
+                                  "$let": {
+                                    "name": "existingSection",
+                                    "expr": {
+                                      "$get": {
+                                        "object": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "seenContractKeys"
+                                          }
+                                        },
+                                        "key": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "contractKey"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "$returnIf": {
+                                    "cond": {
+                                      "$and": {
+                                        "items": [
+                                          {
+                                            "$exists": {
+                                              "$var": {
+                                                "type": {
+                                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                },
+                                                "value": "existingSection"
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "$ne": {
+                                              "items": [
+                                                {
+                                                  "$var": {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "existingSection"
+                                                  }
+                                                },
+                                                {
+                                                  "$var": {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "sectionKey"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "expr": {
+                                      "$call": {
+                                        "function": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "invalid"
+                                        },
+                                        "args": {
+                                          "reason": {
+                                            "$concat": {
+                                              "items": [
+                                                {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "contract key used by multiple sections in request: "
+                                                },
+                                                {
+                                                  "$var": {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "contractKey"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "$returnIf": {
+                                    "cond": {
+                                      "$and": {
+                                        "items": [
+                                          {
+                                            "$hasKey": {
+                                              "object": {
+                                                "$var": {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "existingContractKeys"
+                                                }
+                                              },
+                                              "key": {
+                                                "$var": {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "contractKey"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "$not": {
+                                              "$hasKey": {
+                                                "object": {
+                                                  "$var": {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "existingRelatedMap"
+                                                  }
+                                                },
+                                                "key": {
+                                                  "$var": {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "contractKey"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "expr": {
+                                      "$call": {
+                                        "function": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "invalid"
+                                        },
+                                        "args": {
+                                          "reason": {
+                                            "$concat": {
+                                              "items": [
+                                                {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "contract key already exists at"
+                                                },
+                                                {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": " "
+                                                },
+                                                {
+                                                  "$call": {
+                                                    "function": {
+                                                      "type": {
+                                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                      },
+                                                      "value": "contractPath"
+                                                    },
+                                                    "args": {
+                                                      "key": {
+                                                        "$var": {
+                                                          "type": {
+                                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                          },
+                                                          "value": "contractKey"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "$set": {
+                                    "name": "seenContractKeys",
+                                    "expr": {
+                                      "$objectSet": {
+                                        "object": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "seenContractKeys"
+                                          }
+                                        },
+                                        "key": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "contractKey"
+                                          }
+                                        },
+                                        "val": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "sectionKey"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "$forEach": {
+                            "in": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "contractKeys"
+                              }
+                            },
+                            "item": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "contractKey"
+                            },
+                            "do": {
+                              "items": [
+                                {
+                                  "$appendChange": {
+                                    "op": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "add"
+                                    },
+                                    "path": {
+                                      "$call": {
+                                        "function": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "contractPath"
+                                        },
+                                        "args": {
+                                          "key": {
+                                            "$var": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "contractKey"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "val": {
+                                      "$get": {
+                                        "object": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "contractsMap"
+                                          }
+                                        },
+                                        "key": {
+                                          "$var": {
+                                            "type": {
+                                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                            },
+                                            "value": "contractKey"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "$set": {
+                                    "name": "sectionChangeCount",
+                                    "expr": {
+                                      "$add": {
+                                        "items": [
+                                          {
+                                            "$var": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "sectionChangeCount"
+                                            }
+                                          },
+                                          {
+                                            "type": {
+                                              "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                                            },
+                                            "value": 1
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "$forEach": {
+                            "in": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "existingRelated"
+                              }
+                            },
+                            "item": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "oldKey"
+                            },
+                            "do": {
+                              "items": [
+                                {
+                                  "$if": {
+                                    "cond": {
+                                      "$not": {
+                                        "$includes": {
+                                          "list": {
+                                            "$var": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "contractKeys"
+                                            }
+                                          },
+                                          "val": {
+                                            "$var": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "oldKey"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "then": {
+                                      "items": [
+                                        {
+                                          "$appendChange": {
+                                            "op": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "remove"
+                                            },
+                                            "path": {
+                                              "$call": {
+                                                "function": {
+                                                  "type": {
+                                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                  },
+                                                  "value": "contractPath"
+                                                },
+                                                "args": {
+                                                  "key": {
+                                                    "$var": {
+                                                      "type": {
+                                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                      },
+                                                      "value": "oldKey"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "$set": {
+                                            "name": "sectionChangeCount",
+                                            "expr": {
+                                              "$add": {
+                                                "items": [
+                                                  {
+                                                    "$var": {
+                                                      "type": {
+                                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                      },
+                                                      "value": "sectionChangeCount"
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": {
+                                                      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                                                    },
+                                                    "value": 1
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "$appendChange": {
+                            "op": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "add"
+                            },
+                            "path": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "contractPath"
+                                },
+                                "args": {
+                                  "key": {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "sectionKey"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "val": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "normalizeSection"
+                                },
+                                "args": {
+                                  "section": {
+                                    "$var": {
+                                      "name": "entry",
+                                      "path": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "/section"
+                                      }
+                                    }
+                                  },
+                                  "contractKeys": {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "contractKeys"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$set": {
+                            "name": "sectionChangeCount",
+                            "expr": {
+                              "$add": {
+                                "items": [
+                                  {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "sectionChangeCount"
+                                    }
+                                  },
+                                  {
+                                    "type": {
+                                      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                                    },
+                                    "value": 1
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "$forEach": {
+                    "in": {
+                      "$call": {
+                        "function": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "asList"
+                        },
+                        "args": {
+                          "val": {
+                            "$choose": {
+                              "cond": {
+                                "$exists": {
+                                  "$var": {
+                                    "name": "sectionChanges",
+                                    "path": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "/remove"
+                                    }
+                                  }
+                                }
+                              },
+                              "then": {
+                                "$var": {
+                                  "name": "sectionChanges",
+                                  "path": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/remove"
+                                  }
+                                }
+                              },
+                              "else": {
+                                "items": []
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "item": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "entry"
+                    },
+                    "do": {
+                      "items": [
+                        {
+                          "$let": {
+                            "order": {
+                              "items": [
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "sectionKey"
+                                },
+                                {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "related"
+                                }
+                              ]
+                            },
+                            "vars": {
+                              "sectionKey": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "sectionKeyForRemove"
+                                  },
+                                  "args": {
+                                    "entry": {
+                                      "$var": {
+                                        "type": {
+                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                        },
+                                        "value": "entry"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "related": {
+                                "$call": {
+                                  "function": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "asList"
+                                  },
+                                  "args": {
+                                    "val": {
+                                      "$choose": {
+                                        "cond": {
+                                          "$exists": {
+                                            "$document": {
+                                              "path": {
+                                                "$pointerJoin": {
+                                                  "items": [
+                                                    {
+                                                      "type": {
+                                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                      },
+                                                      "value": "contracts"
+                                                    },
+                                                    {
+                                                      "$var": {
+                                                        "type": {
+                                                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                        },
+                                                        "value": "sectionKey"
+                                                      }
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                      },
+                                                      "value": "relatedContracts"
+                                                    }
+                                                  ]
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "then": {
+                                          "$document": {
+                                            "path": {
+                                              "$pointerJoin": {
+                                                "items": [
+                                                  {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "contracts"
+                                                  },
+                                                  {
+                                                    "$var": {
+                                                      "type": {
+                                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                      },
+                                                      "value": "sectionKey"
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": {
+                                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                                    },
+                                                    "value": "relatedContracts"
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "else": {
+                                          "items": []
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$returnIf": {
+                            "cond": {
+                              "$not": {
+                                "$truthy": {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "sectionKey"
+                                  }
+                                }
+                              }
+                            },
+                            "expr": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "invalid"
+                                },
+                                "args": {
+                                  "reason": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "sectionChanges.remove is missing sectionKey"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$forEach": {
+                            "in": {
+                              "$var": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "related"
+                              }
+                            },
+                            "item": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "contractKey"
+                            },
+                            "do": {
+                              "items": [
+                                {
+                                  "$appendChange": {
+                                    "op": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "remove"
+                                    },
+                                    "path": {
+                                      "$call": {
+                                        "function": {
+                                          "type": {
+                                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                          },
+                                          "value": "contractPath"
+                                        },
+                                        "args": {
+                                          "key": {
+                                            "$var": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "contractKey"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "$set": {
+                                    "name": "sectionChangeCount",
+                                    "expr": {
+                                      "$add": {
+                                        "items": [
+                                          {
+                                            "$var": {
+                                              "type": {
+                                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                              },
+                                              "value": "sectionChangeCount"
+                                            }
+                                          },
+                                          {
+                                            "type": {
+                                              "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                                            },
+                                            "value": 1
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "$appendChange": {
+                            "op": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "remove"
+                            },
+                            "path": {
+                              "$call": {
+                                "function": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "contractPath"
+                                },
+                                "args": {
+                                  "key": {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "sectionKey"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "$set": {
+                            "name": "sectionChangeCount",
+                            "expr": {
+                              "$add": {
+                                "items": [
+                                  {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "sectionChangeCount"
+                                    }
+                                  },
+                                  {
+                                    "type": {
+                                      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                                    },
+                                    "value": 1
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "$returnIf": {
+                    "cond": {
+                      "$eq": {
+                        "items": [
+                          {
+                            "$add": {
+                              "items": [
+                                {
+                                  "$var": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "sectionChangeCount"
+                                  }
+                                },
+                                {
+                                  "$size": {
+                                    "$var": {
+                                      "type": {
+                                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                      },
+                                      "value": "requestChangeset"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": {
+                              "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+                            },
+                            "value": 0
+                          }
+                        ]
+                      }
+                    },
+                    "expr": {
+                      "$call": {
+                        "function": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "invalid"
+                        },
+                        "args": {
+                          "reason": {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "no changes provided"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$appendChanges": {
+                    "$var": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "requestChangeset"
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "changeset": {
+                      "$changeset": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    },
+                    "events": {
+                      "$events": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

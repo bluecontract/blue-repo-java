@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("BFxgEnovNHQ693YR2YvALi4FP8vjcwSQiX63LiLwjUhk")
+@TypeBlueId("CfdjCV1cjPJCd5sBHLMzNUx3EtkgrmBekLxB5c9Qw1Qh")
 public class DocumentLink extends Link {
     public static String blueId() {
-        return "BFxgEnovNHQ693YR2YvALi4FP8vjcwSQiX63LiLwjUhk";
+        return "CfdjCV1cjPJCd5sBHLMzNUx3EtkgrmBekLxB5c9Qw1Qh";
     }
 
     public static String packageName() {

@@ -1,0 +1,43 @@
+{
+  "name": "cdm/observable/event/FeaturePayment",
+  "description": "Payment made following trigger occurrence.",
+  "amount": {
+    "description": "The monetary quantity in currency units.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "currency": {
+    "description": "The currency in which an amount is denominated.",
+    "type": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    }
+  },
+  "levelPercentage": {
+    "description": "The trigger level percentage.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "payerReceiver": {
+    "description": "This attribute doesn't exist as part of the FpML construct, which makes use of the PayerReceiver.model group.",
+    "type": {
+      "blueId": "7eRUbcyv8yFT4EXTPWSQnHYKdrgzkQVJ2K2p7R9xF7BJ"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "paymentDate": {
+    "description": "The feature payment date.",
+    "type": {
+      "blueId": "2gu7bBDYJXEVsffNg2iAYXou31qtdeR4oiwZHL2kaEgQ"
+    }
+  },
+  "time": {
+    "description": "The feature payment time.",
+    "type": {
+      "blueId": "2xhGBDM2Kt4jeHX2wMnpZymz3UupNVcvkkwM9R3kh5dT"
+    }
+  }
+}

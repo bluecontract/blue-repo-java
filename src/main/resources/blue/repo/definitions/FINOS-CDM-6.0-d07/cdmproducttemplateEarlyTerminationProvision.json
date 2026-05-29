@@ -1,0 +1,28 @@
+{
+  "name": "cdm/product/template/EarlyTerminationProvision",
+  "description": "A data defining:  an early termination provision for a swap. This early termination is at fair value, i.e. on termination the fair value of the product must be settled between the parties.\n",
+  "mandatoryEarlyTermination": {
+    "description": "A mandatory early termination provision to terminate the swap at fair value.",
+    "type": {
+      "blueId": "5tjWhqsZVUeZaraK4vLWm7YUe1Zy6yaTaZMD1QEU4hXJ"
+    }
+  },
+  "mandatoryEarlyTerminationDateTenor": {
+    "description": "Period after trade date of the mandatory early termination date.",
+    "type": {
+      "blueId": "D2zD5eW4h5CVwkas6bYant1Kmgdg4zt95zb3kYgR87RE"
+    }
+  },
+  "optionalEarlyTermination": {
+    "description": "An option for either or both parties to terminate the swap at fair value.",
+    "type": {
+      "blueId": "BLZRwYLwJwyifFcxGPYh8VWsdWjMN1TQktKjRaeU557v"
+    }
+  },
+  "optionalEarlyTerminationParameters": {
+    "description": "Definition of the first early termination date and the frequency of the termination dates subsequent to that. American exercise is defined by having a frequency of one day.\n",
+    "type": {
+      "blueId": "EmwZhjddftGhjHyN21m8sf4f2DU47bmm4Sr9CRk5yM8b"
+    }
+  }
+}

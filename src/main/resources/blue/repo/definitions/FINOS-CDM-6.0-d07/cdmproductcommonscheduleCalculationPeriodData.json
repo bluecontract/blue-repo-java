@@ -1,0 +1,51 @@
+{
+  "name": "cdm/product/common/schedule/CalculationPeriodData",
+  "daysInLeapYearPeriod": {
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "daysInPeriod": {
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "endDate": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "isFirstPeriod": {
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "isLastPeriod": {
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "startDate": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

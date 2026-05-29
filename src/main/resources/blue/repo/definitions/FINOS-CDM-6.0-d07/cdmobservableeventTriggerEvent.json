@@ -1,0 +1,37 @@
+{
+  "name": "cdm/observable/event/TriggerEvent",
+  "description": "Observation point for trigger.",
+  "featurePayment": {
+    "description": "The feature payment, i.e. the payment made following trigger occurrence.",
+    "type": {
+      "blueId": "3kL7RjTFp8yyMzH9CMML5d9mtdx22WFLgVuptocznNEb"
+    }
+  },
+  "schedule": {
+    "description": "A derivative schedule.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "FEY2i95RwCX4jab9QimgpbtJ9Et1nTRvX5FUysN2eVx5"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "trigger": {
+    "description": "The trigger level",
+    "type": {
+      "blueId": "EtRtJbAYawm4BahJ614Gb2M2Tet6P158rBXpLguQyhY8"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "triggerDates": {
+    "description": "The trigger Dates.",
+    "type": {
+      "blueId": "2Tny5tjkpirWXonV1DGCZP51GA7gCYZZW7p5yNvucV6b"
+    }
+  }
+}

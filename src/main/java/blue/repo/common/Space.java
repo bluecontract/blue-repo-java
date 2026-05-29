@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("Bdyasci5huobiunZqkShQUiWzCyHLhY4fpMkG4YF5BiS")
+@TypeBlueId("9NWJbMy2sRh6KdLQGhQqFx6Ta8LZen5NMcdg2vqeG9yC")
 public class Space extends Document {
     public static String blueId() {
-        return "Bdyasci5huobiunZqkShQUiWzCyHLhY4fpMkG4YF5BiS";
+        return "9NWJbMy2sRh6KdLQGhQqFx6Ta8LZen5NMcdg2vqeG9yC";
     }
 
     public static String packageName() {

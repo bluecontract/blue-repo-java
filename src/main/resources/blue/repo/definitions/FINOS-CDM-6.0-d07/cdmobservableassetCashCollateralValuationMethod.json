@@ -1,0 +1,47 @@
+{
+  "name": "cdm/observable/asset/CashCollateralValuationMethod",
+  "description": "This type is a generic structure that can represent the parameters of several mid-market valuation and replacement value methods described in the 2021 ISDA Definitions.\n",
+  "agreedDiscountRate": {
+    "description": "This may be used to indicate the discount rate to be used for cash collateral for cash settlement purposes.",
+    "type": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    }
+  },
+  "applicableCsa": {
+    "description": "This may be used to specify what type of CSA (credit support annex/agreement) is to be used for cash settlement purposes.\n",
+    "type": {
+      "blueId": "yA2n1J9daFi3PrMiT68dfX4cptTivqK3iXit12WTzux"
+    }
+  },
+  "cashCollateralCurrency": {
+    "description": "This may be used to indicate the currency of cash collateral for cash settlement purposes.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "cashCollateralInterestRate": {
+    "description": "This may be used to indicate the interest rate to be used for cash collateral for cash settlement purposes.",
+    "type": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    }
+  },
+  "prescribedDocumentationAdjustment": {
+    "description": "This may be used to indicate that 'prescribed documentation adjustment' is applicable.",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    }
+  },
+  "protectedParty": {
+    "description": "This may be used to specify which party is protected (e.g. under Replacement Value cash settlement methods).",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "8krxWVwRaKaSm7xfiiiiSJj8d6m3cjCEpw57cHX1ht5U"
+    },
+    "schema": {
+      "minItems": 0,
+      "maxItems": 2
+    }
+  }
+}

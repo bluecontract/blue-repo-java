@@ -1,0 +1,13 @@
+{
+  "name": "cdm/base/staticdata/asset/common/EquityTypeEnum",
+  "description": "Represents an enumeration list to identify the type of Equity.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "NonConvertiblePreference",
+      "Ordinary"
+    ]
+  }
+}

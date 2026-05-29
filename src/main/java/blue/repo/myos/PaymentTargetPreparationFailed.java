@@ -3,12 +3,12 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Response;
+import blue.repo.coordination.Response;
 
-@TypeBlueId("GSfJG3nahccpaqXHWBXes8RvNDENL17bz2yXdvn1suRY")
+@TypeBlueId("7ov2LtAu257ETtdWgw7aMTYHypK9yKnswb8MZH9QCSRG")
 public class PaymentTargetPreparationFailed extends Response {
     public static String blueId() {
-        return "GSfJG3nahccpaqXHWBXes8RvNDENL17bz2yXdvn1suRY";
+        return "7ov2LtAu257ETtdWgw7aMTYHypK9yKnswb8MZH9QCSRG";
     }
 
     public static String packageName() {

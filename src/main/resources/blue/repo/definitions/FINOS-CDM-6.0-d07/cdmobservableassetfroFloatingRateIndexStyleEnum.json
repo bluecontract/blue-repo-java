@@ -1,0 +1,21 @@
+{
+  "name": "cdm/observable/asset/fro/FloatingRateIndexStyleEnum",
+  "description": "Second level ISDA FRO category.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Average FRO",
+      "Compounded FRO",
+      "Compounded Index",
+      "Index",
+      "Other",
+      "Overnight Rate",
+      "Published Average Rate",
+      "Specified Formula",
+      "Swap Rate",
+      "Term Rate"
+    ]
+  }
+}

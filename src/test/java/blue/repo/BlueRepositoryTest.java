@@ -4,37 +4,29 @@ import blue.language.Blue;
 import blue.language.NodeProvider;
 import blue.language.model.TypeBlueId;
 import blue.language.model.Node;
-import blue.language.processor.model.ChannelContract;
-import blue.language.processor.model.HandlerContract;
 import blue.language.utils.BlueIdResolver;
+import blue.language.utils.BlueIdCalculator;
 import blue.language.utils.TypeClassResolver;
 import blue.language.utils.UncheckedObjectMapper;
 import blue.repo.provider.CompositeNodeProvider;
 import blue.repo.provider.RepositoryNodeProvider;
 import blue.repo.types.CommonTypes;
-import blue.repo.types.ConversationTypes;
-import blue.repo.types.CoreTypes;
+import blue.repo.types.CoordinationTypes;
 import blue.repo.types.FINOSCDM60d07Types;
 import blue.repo.types.MyOSTypes;
 import blue.repo.types.PayNoteTypes;
+import blue.repo.types.WorkflowsTypes;
 import blue.repo.common.Document;
-import blue.repo.conversation.AcceptChangeWorkflow;
-import blue.repo.conversation.ChatMessage;
-import blue.repo.conversation.Operation;
-import blue.repo.conversation.SequentialWorkflow;
-import blue.repo.conversation.SequentialWorkflowOperation;
-import blue.repo.conversation.TimelineChannel;
-import blue.repo.conversation.UpdateDocument;
-import blue.repo.core.ChannelEventCheckpoint;
-import blue.repo.core.DocumentUpdateChannel;
-import blue.repo.core.EmbeddedNodeChannel;
-import blue.repo.core.JsonPatchEntry;
-import blue.repo.core.LifecycleEventChannel;
-import blue.repo.core.ProcessEmbedded;
-import blue.repo.core.TriggeredEventChannel;
-import blue.repo.finoscdm60d07.AllCriteria;
-import blue.repo.finoscdm60d07.Clause;
-import blue.repo.finoscdm60d07.CollateralCriteria;
+import blue.repo.coordination.ChatMessage;
+import blue.repo.coordination.Operation;
+import blue.repo.coordination.SequentialWorkflow;
+import blue.repo.coordination.SequentialWorkflowOperation;
+import blue.repo.coordination.TimelineChannel;
+import blue.repo.coordination.UpdateDocument;
+import blue.repo.workflows.AcceptChangeWorkflow;
+import blue.repo.finoscdm60d07.CdmLegaldocumentationMasterClause;
+import blue.repo.finoscdm60d07.CdmProductCollateralAllCriteria;
+import blue.repo.finoscdm60d07.CdmProductCollateralCollateralCriteria;
 import blue.repo.myos.InformUserToInstallMyOSPackage;
 import blue.repo.myos.MyOSPackage;
 import blue.repo.paynote.CaptureFundsRequested;
@@ -63,13 +55,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class BlueRepositoryTest {
 
     @Test
-    void knownConversationTypesResolveByQualifiedNameAndBlueId() {
+    void knownCoordinationTypesResolveByQualifiedNameAndBlueId() {
         BlueRepository repo = BlueRepository.v1_3_0();
 
-        String operationBlueId = repo.blueId("Conversation/Operation");
-        assertEquals(ConversationTypes.OPERATION.blueId(), operationBlueId);
+        String operationBlueId = repo.blueId("Coordination/Operation");
+        assertEquals(CoordinationTypes.OPERATION.blueId(), operationBlueId);
 
-        Node byName = repo.nodeByName("Conversation/Operation").orElseThrow(AssertionError::new);
+        Node byName = repo.nodeByName("Coordination/Operation").orElseThrow(AssertionError::new);
         assertEquals("Operation", byName.getName());
         assertEquals(operationBlueId, byName.getBlueId());
 
@@ -77,11 +69,11 @@ class BlueRepositoryTest {
         assertEquals("Operation", byBlueId.getName());
         assertEquals(operationBlueId, byBlueId.getBlueId());
 
-        assertEquals(ConversationTypes.SEQUENTIAL_WORKFLOW_OPERATION.blueId(),
-                repo.blueId("Conversation/Sequential Workflow Operation"));
-        assertEquals(ConversationTypes.UPDATE_DOCUMENT.blueId(), repo.blueId("Conversation/Update Document"));
-        assertEquals(ConversationTypes.JAVASCRIPT_CODE.blueId(), repo.blueId("Conversation/JavaScript Code"));
-        assertEquals(ConversationTypes.CHAT_MESSAGE.blueId(), repo.blueId("Conversation/Chat Message"));
+        assertEquals(CoordinationTypes.SEQUENTIAL_WORKFLOW_OPERATION.blueId(),
+                repo.blueId("Coordination/Sequential Workflow Operation"));
+        assertEquals(CoordinationTypes.UPDATE_DOCUMENT.blueId(), repo.blueId("Coordination/Update Document"));
+        assertEquals(CoordinationTypes.CHAT_MESSAGE.blueId(), repo.blueId("Coordination/Chat Message"));
+        assertEquals(WorkflowsTypes.ACCEPT_CHANGE_WORKFLOW.blueId(), repo.blueId("Workflows/Accept Change Workflow"));
     }
 
     @Test
@@ -89,10 +81,10 @@ class BlueRepositoryTest {
         TrackingClassLoader classLoader = new TrackingClassLoader(BlueRepository.class.getClassLoader());
         BlueRepository repo = BlueRepository.v1_3_0(classLoader);
 
-        assertEquals("Operation", repo.nodeByName("Conversation/Operation").orElseThrow(AssertionError::new).getName());
+        assertEquals("Operation", repo.nodeByName("Coordination/Operation").orElseThrow(AssertionError::new).getName());
 
         assertTrue(classLoader.resources.contains(BlueRepository.V1_3_0_MANIFEST));
-        assertTrue(classLoader.resources.contains(ConversationTypes.OPERATION.resourcePath()));
+        assertTrue(classLoader.resources.contains(CoordinationTypes.OPERATION.resourcePath()));
         for (String resource : classLoader.resources) {
             assertTrue(resource.startsWith("blue/repo/"), "unexpected non-repository classpath resource: " + resource);
         }
@@ -105,13 +97,13 @@ class BlueRepositoryTest {
 
         Node document = new Node()
                 .name("message")
-                .type(ConversationTypes.CHAT_MESSAGE.reference())
+                .type(CoordinationTypes.CHAT_MESSAGE.reference())
                 .properties("message", new Node().value("hello"));
 
         Node resolved = blue.resolve(document);
 
         assertNotNull(resolved.getType());
-        assertEquals(ConversationTypes.CHAT_MESSAGE.blueId(), resolved.getType().getBlueId());
+        assertEquals(CoordinationTypes.CHAT_MESSAGE.blueId(), resolved.getType().getBlueId());
         assertEquals("Chat Message", resolved.getType().getName());
         assertNotNull(resolved.getProperties().get("message").getType());
     }
@@ -124,7 +116,7 @@ class BlueRepositoryTest {
         ChatMessage message = new ChatMessage().message("hello");
         Node messageNode = blue.objectToNode(message);
 
-        assertEquals(ConversationTypes.CHAT_MESSAGE.blueId(), messageNode.getType().getBlueId());
+        assertEquals(CoordinationTypes.CHAT_MESSAGE.blueId(), messageNode.getType().getBlueId());
         assertEquals("hello", messageNode.getProperties().get("message").getValue());
 
         Object converted = blue.nodeToObject(messageNode, Object.class);
@@ -134,8 +126,8 @@ class BlueRepositoryTest {
 
     @Test
     void generatedModelClassesUseActualBlueIdsAndInheritance() {
-        assertEquals(ConversationTypes.OPERATION.blueId(), BlueIdResolver.resolveBlueId(Operation.class));
-        assertEquals(ConversationTypes.SEQUENTIAL_WORKFLOW_OPERATION.blueId(),
+        assertEquals(CoordinationTypes.OPERATION.blueId(), BlueIdResolver.resolveBlueId(Operation.class));
+        assertEquals(CoordinationTypes.SEQUENTIAL_WORKFLOW_OPERATION.blueId(),
                 BlueIdResolver.resolveBlueId(SequentialWorkflowOperation.class));
         assertTrue(SequentialWorkflow.class.isAssignableFrom(SequentialWorkflowOperation.class));
 
@@ -151,9 +143,9 @@ class BlueRepositoryTest {
     void generatedVersionRegistryRegistersAllManifestTypes() {
         BlueRepository repo = BlueRepository.v1_3_0();
 
-        assertEquals(ChatMessage.class, repo.typeClassResolver().resolveClass(ConversationTypes.CHAT_MESSAGE.blueId()));
+        assertEquals(ChatMessage.class, repo.typeClassResolver().resolveClass(CoordinationTypes.CHAT_MESSAGE.blueId()));
         assertEquals(Operation.class, BlueRepositoryModels.typeClassResolver()
-                .resolveClass(ConversationTypes.OPERATION.blueId()));
+                .resolveClass(CoordinationTypes.OPERATION.blueId()));
         assertEquals(repo.manifest().definitions().size(), repo.typeClassResolver().getBlueIdMap().size());
     }
 
@@ -179,6 +171,45 @@ class BlueRepositoryTest {
             Node node = repo.nodeProvider().fetchFirstByBlueId(definition.blueId());
             assertNotNull(node, definition.qualifiedName());
             assertEquals(definition.name(), node.getName(), definition.qualifiedName());
+        }
+    }
+
+    @Test
+    void everyManifestBlueIdMatchesCalculatedResourceContent() throws Exception {
+        BlueRepository repo = BlueRepository.v1_3_0();
+        Map<String, List<RepositoryDefinition>> fragmentsByBaseBlueId = new LinkedHashMap<>();
+
+        for (RepositoryDefinition definition : repo.manifest().definitions()) {
+            if (definition.blueId().contains("#")) {
+                String baseBlueId = baseBlueId(definition.blueId());
+                List<RepositoryDefinition> fragments = fragmentsByBaseBlueId.get(baseBlueId);
+                if (fragments == null) {
+                    fragments = new ArrayList<>();
+                    fragmentsByBaseBlueId.put(baseBlueId, fragments);
+                }
+                fragments.add(definition);
+                continue;
+            }
+
+            Node resource = readNodeResource(definition.resourcePath());
+            assertEquals(definition.blueId(), BlueIdCalculator.calculateBlueId(resource),
+                    definition.qualifiedName());
+        }
+
+        for (Map.Entry<String, List<RepositoryDefinition>> entry : fragmentsByBaseBlueId.entrySet()) {
+            List<RepositoryDefinition> fragments = entry.getValue();
+            fragments.sort((left, right) -> Integer.compare(
+                    fragmentIndex(left.blueId()),
+                    fragmentIndex(right.blueId())));
+            List<Node> resources = new ArrayList<>();
+            for (int index = 0; index < fragments.size(); index++) {
+                RepositoryDefinition fragment = fragments.get(index);
+                assertEquals(index, fragmentIndex(fragment.blueId()), fragment.qualifiedName());
+                resources.add(readNodeResource(fragment.resourcePath()));
+            }
+
+            String calculatedBaseBlueId = BlueIdCalculator.calculateBlueIdAllowingCyclicPlaceholders(resources);
+            assertEquals(entry.getKey(), calculatedBaseBlueId, fragments.get(0).qualifiedName());
         }
     }
 
@@ -224,75 +255,24 @@ class BlueRepositoryTest {
     }
 
     @Test
-    void generatedContractTypesBridgeToProcessorModelBaseClasses() {
-        assertTrue(ChannelContract.class.isAssignableFrom(TimelineChannel.class));
-        assertTrue(HandlerContract.class.isAssignableFrom(SequentialWorkflowOperation.class));
-    }
-
-    @Test
-    void generatedCoreProcessorManagedTypesBridgeToFoundationRuntimeClasses() {
-        assertTrue(new TriggeredEventChannel() instanceof blue.language.processor.model.TriggeredEventChannel);
-        assertTrue(new LifecycleEventChannel() instanceof blue.language.processor.model.LifecycleChannel);
-        assertTrue(new DocumentUpdateChannel() instanceof blue.language.processor.model.DocumentUpdateChannel);
-        assertTrue(new EmbeddedNodeChannel() instanceof blue.language.processor.model.EmbeddedNodeChannel);
-        assertTrue(new ProcessEmbedded() instanceof blue.language.processor.model.ProcessEmbedded);
-        assertTrue(new ChannelEventCheckpoint() instanceof blue.language.processor.model.ChannelEventCheckpoint);
-    }
-
-    @Test
-    void generatedCoreProcessorManagedTypesLoadFromRepositoryYaml() throws Exception {
-        BlueRepository repo = BlueRepository.v1_3_0();
-        Blue blue = repo.configure(new Blue(repo.nodeProvider()));
-        String yaml = ""
-                + "contracts:\n"
-                + "  triggered:\n"
-                + "    type: Core/Triggered Event Channel\n"
-                + "    event: Trigger Event\n"
-                + "  life:\n"
-                + "    type: Core/Lifecycle Event Channel\n"
-                + "  embedded:\n"
-                + "    type: Core/Process Embedded\n"
-                + "    paths:\n"
-                + "      - /child\n";
-
-        Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(yaml, Node.class)
-                .blue(repo.typeAliasBlue());
-        Node resolved = blue.resolve(blue.preprocess(document));
-        Map<String, Node> contracts = resolved.getProperties().get("contracts").getProperties();
-
-        Object triggered = blue.nodeToObject(contracts.get("triggered"), Object.class);
-        Object lifecycle = blue.nodeToObject(contracts.get("life"), Object.class);
-        Object embedded = blue.nodeToObject(contracts.get("embedded"), Object.class);
-
-        assertTrue(triggered instanceof TriggeredEventChannel);
-        assertTrue(triggered instanceof blue.language.processor.model.TriggeredEventChannel);
-        assertEquals("Trigger Event", ((TriggeredEventChannel) triggered).getEvent().getValue());
-
-        assertTrue(lifecycle instanceof LifecycleEventChannel);
-        assertTrue(lifecycle instanceof blue.language.processor.model.LifecycleChannel);
-
-        assertTrue(embedded instanceof ProcessEmbedded);
-        assertTrue(embedded instanceof blue.language.processor.model.ProcessEmbedded);
-        assertEquals(Collections.singletonList("/child"), ((ProcessEmbedded) embedded).getPaths());
-    }
-
-    @Test
-    void updateDocumentChangesetUsesJsonPatchEntryItemType() throws Exception {
+    void updateDocumentChangesetUsesNodeItemTypeWhenPatchEntryIsNotInRepository() throws Exception {
         Field changeset = UpdateDocument.class.getDeclaredField("changeset");
         assertEquals(List.class, changeset.getType());
         ParameterizedType type = (ParameterizedType) changeset.getGenericType();
-        assertEquals(JsonPatchEntry.class, type.getActualTypeArguments()[0]);
+        assertEquals(Node.class, type.getActualTypeArguments()[0]);
     }
 
     @Test
     void generatedLocalThisFragmentReferencesUseSpecificJavaTypes() throws Exception {
-        Field clauseSubcomponents = Clause.class.getDeclaredField("subcomponents");
+        Field clauseSubcomponents = CdmLegaldocumentationMasterClause.class.getDeclaredField("subcomponents");
         assertEquals(List.class, clauseSubcomponents.getType());
-        assertEquals(Clause.class, ((ParameterizedType) clauseSubcomponents.getGenericType()).getActualTypeArguments()[0]);
+        assertEquals(CdmLegaldocumentationMasterClause.class,
+                ((ParameterizedType) clauseSubcomponents.getGenericType()).getActualTypeArguments()[0]);
 
-        Field allCriteria = AllCriteria.class.getDeclaredField("allCriteria");
+        Field allCriteria = CdmProductCollateralAllCriteria.class.getDeclaredField("allCriteria");
         assertEquals(List.class, allCriteria.getType());
-        assertEquals(CollateralCriteria.class, ((ParameterizedType) allCriteria.getGenericType()).getActualTypeArguments()[0]);
+        assertEquals(CdmProductCollateralCollateralCriteria.class,
+                ((ParameterizedType) allCriteria.getGenericType()).getActualTypeArguments()[0]);
     }
 
     @Test
@@ -307,7 +287,7 @@ class BlueRepositoryTest {
         Node node = new Node()
                 .type(CaptureFundsRequested.repositoryType().reference())
                 .properties("amount", new Node()
-                        .type(new Node().blueId("5WNMiV9Knz63B4dVY5JtMyh3FB4FSGqv7ceScvuapdE1"))
+                        .type(new Node().blueId("E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"))
                         .value(largeAmount));
         Object converted = blue.nodeToObject(node, Object.class);
         assertTrue(converted instanceof CaptureFundsRequested);
@@ -347,17 +327,17 @@ class BlueRepositoryTest {
     @Test
     void repositoryProvidesQualifiedTypeAliasesForPreprocessing() throws Exception {
         BlueRepository repo = BlueRepository.v1_3_0();
-        assertEquals(ConversationTypes.TIMELINE_CHANNEL.blueId(),
-                repo.typeAliases().get("Conversation/Timeline Channel"));
+        assertEquals(CoordinationTypes.TIMELINE_CHANNEL.blueId(),
+                repo.typeAliases().get("Coordination/Timeline Channel"));
 
         Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterDocumentYaml(), Node.class)
                 .blue(repo.typeAliasBlue());
         Node preprocessed = new Blue(repo.nodeProvider()).preprocess(document);
-        Map<String, Node> contracts = preprocessed.getProperties().get("contracts").getProperties();
+        Map<String, Node> contracts = preprocessed.getContracts().getProperties();
 
-        assertEquals(ConversationTypes.TIMELINE_CHANNEL.blueId(),
+        assertEquals(CoordinationTypes.TIMELINE_CHANNEL.blueId(),
                 contracts.get("timeline").getType().getBlueId());
-        assertEquals(ConversationTypes.SEQUENTIAL_WORKFLOW_OPERATION.blueId(),
+        assertEquals(CoordinationTypes.SEQUENTIAL_WORKFLOW_OPERATION.blueId(),
                 contracts.get("incrementImpl").getType().getBlueId());
     }
 
@@ -369,8 +349,7 @@ class BlueRepositoryTest {
         Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterDocumentYaml(), Node.class)
                 .blue(repo.typeAliasBlue());
         Node resolved = blue.resolve(blue.preprocess(document));
-        Node incrementImpl = resolved.getProperties()
-                .get("contracts")
+        Node incrementImpl = resolved.getContracts()
                 .getProperties()
                 .get("incrementImpl");
 
@@ -379,17 +358,15 @@ class BlueRepositoryTest {
         assertTrue(mapped instanceof SequentialWorkflowOperation);
         SequentialWorkflowOperation operation = (SequentialWorkflowOperation) mapped;
         assertEquals("increment", operation.getOperation());
-        assertEquals("timeline", operation.getChannel());
         assertEquals(1, operation.getSteps().size());
         assertTrue(operation.getSteps().get(0) instanceof UpdateDocument);
 
         UpdateDocument updateDocument = (UpdateDocument) operation.getSteps().get(0);
         assertEquals(1, updateDocument.getChangeset().size());
-        assertTrue(updateDocument.getChangeset().get(0) instanceof JsonPatchEntry);
 
-        JsonPatchEntry patch = updateDocument.getChangeset().get(0);
-        assertEquals("replace", patch.getOp());
-        assertEquals("/count", patch.getPath());
+        Node patch = updateDocument.getChangeset().get(0);
+        assertEquals("replace", patch.getProperties().get("op").getValue());
+        assertEquals("/count", patch.getProperties().get("path").getValue());
     }
 
     @Test
@@ -402,7 +379,7 @@ class BlueRepositoryTest {
 
         NodeProvider composite = CompositeNodeProvider.of(repo.nodeProvider(), userProvider);
 
-        assertEquals("Operation", composite.fetchFirstByBlueId(ConversationTypes.OPERATION.blueId()).getName());
+        assertEquals("Operation", composite.fetchFirstByBlueId(CoordinationTypes.OPERATION.blueId()).getName());
         assertEquals("User Document Type", composite.fetchFirstByBlueId(userBlueId).getName());
     }
 
@@ -411,11 +388,11 @@ class BlueRepositoryTest {
         BlueRepository repo = BlueRepository.v1_3_0();
         List<Class<?>> typeClasses = Arrays.asList(
                 CommonTypes.class,
-                ConversationTypes.class,
-                CoreTypes.class,
+                CoordinationTypes.class,
                 FINOSCDM60d07Types.class,
                 MyOSTypes.class,
-                PayNoteTypes.class
+                PayNoteTypes.class,
+                WorkflowsTypes.class
         );
 
         for (Class<?> typeClass : typeClasses) {
@@ -436,23 +413,23 @@ class BlueRepositoryTest {
     @Test
     void manifestIncludesPackageQualifiedBlueIdAndResourceMetadata() {
         BlueRepository repo = BlueRepository.v1_3_0();
-        RepositoryDefinition operation = repo.definition("Conversation/Operation").orElseThrow(AssertionError::new);
+        RepositoryDefinition operation = repo.definition("Coordination/Operation").orElseThrow(AssertionError::new);
 
         assertEquals("1.3.0", repo.repositoryVersion());
         assertFalse(repo.repositoryVersionBlueId().isEmpty());
         assertTrue(repo.packageNames().containsAll(Arrays.asList(
                 "Common",
-                "Core",
-                "Conversation",
+                "Coordination",
                 "FINOS-CDM-6.0-d07",
                 "MyOS",
-                "PayNote"
+                "PayNote",
+                "Workflows"
         )));
-        assertEquals("Conversation", operation.packageName());
+        assertEquals("Coordination", operation.packageName());
         assertEquals("Operation", operation.name());
-        assertEquals("Conversation/Operation", operation.qualifiedName());
-        assertEquals(ConversationTypes.OPERATION.blueId(), operation.blueId());
-        assertEquals(ConversationTypes.OPERATION.resourcePath(), operation.resourcePath());
+        assertEquals("Coordination/Operation", operation.qualifiedName());
+        assertEquals(CoordinationTypes.OPERATION.blueId(), operation.blueId());
+        assertEquals(CoordinationTypes.OPERATION.resourcePath(), operation.resourcePath());
         assertNotNull(BlueRepository.class.getClassLoader().getResource(operation.resourcePath()));
     }
 
@@ -460,15 +437,15 @@ class BlueRepositoryTest {
     void providerResolvesFragmentedRepositoryBlueIds() {
         BlueRepository repo = BlueRepository.v1_3_0();
 
-        Node allCriteria = repo.nodeByBlueId(FINOSCDM60d07Types.ALLCRITERIA.blueId())
+        Node allCriteria = repo.nodeByBlueId(FINOSCDM60d07Types.CDM_PRODUCT_COLLATERAL_ALLCRITERIA.blueId())
                 .orElseThrow(AssertionError::new);
-        Node clause = repo.nodeByBlueId(FINOSCDM60d07Types.CLAUSE.blueId())
+        Node clause = repo.nodeByBlueId(FINOSCDM60d07Types.CDM_LEGALDOCUMENTATION_MASTER_CLAUSE.blueId())
                 .orElseThrow(AssertionError::new);
 
-        assertEquals("AllCriteria", allCriteria.getName());
-        assertEquals(FINOSCDM60d07Types.ALLCRITERIA.blueId(), allCriteria.getBlueId());
-        assertEquals("Clause", clause.getName());
-        assertEquals(FINOSCDM60d07Types.CLAUSE.blueId(), clause.getBlueId());
+        assertEquals("cdm/product/collateral/AllCriteria", allCriteria.getName());
+        assertEquals(FINOSCDM60d07Types.CDM_PRODUCT_COLLATERAL_ALLCRITERIA.blueId(), allCriteria.getBlueId());
+        assertEquals("cdm/legaldocumentation/master/Clause", clause.getName());
+        assertEquals(FINOSCDM60d07Types.CDM_LEGALDOCUMENTATION_MASTER_CLAUSE.blueId(), clause.getBlueId());
     }
 
     @Test
@@ -492,9 +469,10 @@ class BlueRepositoryTest {
     void commonPackageIncludesCurrentRepositoryTypes() {
         BlueRepository repo = BlueRepository.v1_3_0();
 
-        assertEquals(16, repo.manifest().definitions().stream()
+        assertEquals(17, repo.manifest().definitions().stream()
                 .filter(definition -> "Common".equals(definition.packageName()))
                 .count());
+        assertTrue(repo.definition("Common/Crypto Ed25519 Verify").isPresent());
         assertTrue(repo.definition("Common/Document").isPresent());
         assertTrue(repo.definition("Common/Document Anchor").isPresent());
         assertTrue(repo.definition("Common/Document Anchors").isPresent());
@@ -514,16 +492,16 @@ class BlueRepositoryTest {
     @Test
     void repositoryTypeConstantsComeFromGeneratedModelClasses() {
         assertEquals(Document.repositoryType(), CommonTypes.DOCUMENT);
-        assertEquals(AcceptChangeWorkflow.repositoryType(), ConversationTypes.ACCEPT_CHANGE_WORKFLOW);
+        assertEquals(AcceptChangeWorkflow.repositoryType(), WorkflowsTypes.ACCEPT_CHANGE_WORKFLOW);
         assertEquals(Document.blueId(), CommonTypes.DOCUMENT.blueId());
-        assertEquals(AcceptChangeWorkflow.blueId(), ConversationTypes.ACCEPT_CHANGE_WORKFLOW.blueId());
+        assertEquals(AcceptChangeWorkflow.blueId(), WorkflowsTypes.ACCEPT_CHANGE_WORKFLOW.blueId());
     }
 
     @Test
     void mainClassesAreJava8ClassFiles() throws Exception {
         assertClassFileMajorVersionAtMost52(BlueRepository.class);
         assertClassFileMajorVersionAtMost52(RepositoryNodeProvider.class);
-        assertClassFileMajorVersionAtMost52(ConversationTypes.class);
+        assertClassFileMajorVersionAtMost52(CoordinationTypes.class);
     }
 
     @Test
@@ -599,6 +577,13 @@ class BlueRepositoryTest {
         }
     }
 
+    private static Node readNodeResource(String resourcePath) throws Exception {
+        try (InputStream inputStream = BlueRepository.class.getClassLoader().getResourceAsStream(resourcePath)) {
+            assertNotNull(inputStream, resourcePath);
+            return UncheckedObjectMapper.JSON_MAPPER.readValue(inputStream, Node.class);
+        }
+    }
+
     private static boolean containsUnresolvedThisFragmentReference(JsonNode node) {
         if (node == null || node.isNull()) {
             return false;
@@ -660,17 +645,16 @@ class BlueRepositoryTest {
                 + "name: Counter\n"
                 + "contracts:\n"
                 + "  timeline:\n"
-                + "    type: Conversation/Timeline Channel\n"
+                + "    type: Coordination/Timeline Channel\n"
                 + "    timelineId: counter-events\n"
                 + "  incrementImpl:\n"
-                + "    type: Conversation/Sequential Workflow Operation\n"
+                + "    type: Coordination/Sequential Workflow Operation\n"
                 + "    channel: timeline\n"
                 + "    operation: increment\n"
                 + "    steps:\n"
-                + "      - type: Conversation/Update Document\n"
+                + "      - type: Coordination/Update Document\n"
                 + "        changeset:\n"
-                + "          - type: Core/Json Patch Entry\n"
-                + "            op: replace\n"
+                + "          - op: replace\n"
                 + "            path: /count\n"
                 + "            val: 1\n"
                 + "count: 0\n";

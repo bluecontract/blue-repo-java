@@ -1,0 +1,85 @@
+{
+  "name": "cdm/legaldocumentation/common/AgreementName",
+  "description": "Specifies the agreement name through an agreement type and optional detailed sub agreement type.",
+  "agreementType": {
+    "description": "Specification of the legal agreement type.",
+    "type": {
+      "blueId": "932vbaLUnsu9RytizAMqD85iNR9UhCo8U3SUcdw2Bgmb"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "contractualDefinitionsType": {
+    "description": "The definitions such as those published by ISDA that will define the terms of the trade.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "Ah7JMurAWmA8pAkUBkAGU4jEPSg7nGqPPKPhGCxntgyn"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "contractualMatrix": {
+    "description": "A reference to a contractual matrix of elected terms/values (such as those published by ISDA) that shall be deemed to apply to the trade. The applicable matrix is identified by reference to a name and optionally a publication date. Depending on the structure of the matrix, an additional term (specified in the matrixTerm element) may be required to further identify a subset of applicable terms/values within the matrix.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "3e32PM1CGVDHQozzu4ndi3SVic7NRJq4mfSBWfA2ci7h"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "contractualTermsSupplement": {
+    "description": "A contractual supplement (such as those published by ISDA) that will apply to the trade.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "9DMMJcGz3tPR2vWU7WV6uDZ2Uhin56x2y48jpPgQ4n3d"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "creditSupportAgreementMarginType": {
+    "description": "specifies the type of margin for which a legal agreement is named.",
+    "type": {
+      "blueId": "EqwvsDqu5dzbPfAwBRR81oAKSZPXzM8ai3nSTFxkVJGW"
+    }
+  },
+  "creditSupportAgreementType": {
+    "description": "Specification of the credit support agreement type.",
+    "type": {
+      "blueId": "3Ji7cJv31ymeE3LhMK2Are2K8W53uN54A645uAc3B1Bg"
+    }
+  },
+  "masterAgreementType": {
+    "description": "Specification of the master agreement type.",
+    "type": {
+      "blueId": "24tJcLgKACgmfFfHRF8BdQP4aYmY9FN2eZkFyQidShZr"
+    }
+  },
+  "masterConfirmationAnnexType": {
+    "description": "The type of master confirmation annex executed between the parties.",
+    "type": {
+      "blueId": "7ghJVbps3QPTKW4wtyzWJyNVuwen9wsKsFA4KLboPurG"
+    }
+  },
+  "masterConfirmationType": {
+    "description": "The type of master confirmation executed between the parties.",
+    "type": {
+      "blueId": "5BXxvUQ6iFc2CEBU4s2oBRTaT8kVAFEYTLCwaMS9CuNF"
+    }
+  },
+  "otherAgreement": {
+    "description": "Definition of an agreement that is not enumerated in the CDM.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

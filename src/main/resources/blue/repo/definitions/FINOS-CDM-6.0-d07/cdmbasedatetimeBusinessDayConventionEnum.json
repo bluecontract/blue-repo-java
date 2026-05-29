@@ -1,0 +1,19 @@
+{
+  "name": "cdm/base/datetime/BusinessDayConventionEnum",
+  "description": "The enumerated values to specify the convention for adjusting any relevant date if it would otherwise fall on a day that is not a valid business day.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "FOLLOWING",
+      "FRN",
+      "MODFOLLOWING",
+      "MODPRECEDING",
+      "NEAREST",
+      "NONE",
+      "NotApplicable",
+      "PRECEDING"
+    ]
+  }
+}

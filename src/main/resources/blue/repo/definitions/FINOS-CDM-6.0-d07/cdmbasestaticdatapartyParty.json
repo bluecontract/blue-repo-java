@@ -1,0 +1,64 @@
+{
+  "name": "cdm/base/staticdata/party/Party",
+  "description": "A class to specify a party, without a qualification as to whether this party is a legal entity or a natural person, although the model provides the ability to associate a person (or set of persons) to a party, which use case would imply that such party would be a legal entity (even if not formally specified as such).\n",
+  "account": {
+    "description": "The account that might be associated with the party. At most one account can be specified, as it is expected that this information is used in the context of a contract or legal document where only one account per party can be associated with such object.\n",
+    "type": {
+      "blueId": "6Vbn1a7hkPz7Zf7wVzNq7o5zvB8p8jMU3Kz6djiVfCur"
+    }
+  },
+  "businessUnit": {
+    "description": "Optional organization unit information used to describe the organization units (e.g. trading desks) involved in a transaction or business process, incl. the contact information (when relevant).\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "9kFJKtns9Sjozaqz3KCGTHgoS6kFB5DzZ3qpcGRaMYtz"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "contactInformation": {
+    "description": "The postal/street address, telephone number, email address and/or web page. If the contact information is specific to the associated business unit(s) or person (s), it should be associated with those.\n",
+    "type": {
+      "blueId": "tWjzEXNpctUeMnop8Wj6gnxCUqcE9XJnXn31gdiq2xd"
+    }
+  },
+  "partyId": {
+    "description": "The identifier associated with a party, e.g. the 20 digits LEI code.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "6VWEBnos8dmnjp7rduTmQFzWs5p8BR5ZjJTL3Zinsg5U"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  },
+  "person": {
+    "description": "The person(s) who might be associated with the party as part of the execution, contract or legal document.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "4VLeT4uJM3cRp2H6JSAzzkxWxkFE6dxbawfkxq9Q2Kit"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "personRole": {
+    "description": "The role of the person(s)",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "3bCU1Vgs5rzeWEHa8vgP8TUztDqR6A8xE1mL547a5tTr"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

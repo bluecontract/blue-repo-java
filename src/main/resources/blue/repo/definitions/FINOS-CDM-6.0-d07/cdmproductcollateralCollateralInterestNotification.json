@@ -1,0 +1,40 @@
+{
+  "name": "cdm/product/collateral/CollateralInterestNotification",
+  "description": "Represents the parameters describing when notifications should be made for required collateral interest transfers.\n",
+  "notificationDayType": {
+    "description": "The type of days on which notification should occur.",
+    "type": {
+      "blueId": "7dgaT32onr9y4LwzshGyXjtcH3w8SvWi5SN63ZkT6VCC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "notificationTime": {
+    "description": "Specifies the time of day that the notification should occur.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "offset": {
+    "description": "Specifies the number of days before (negative) or after (positive) the trigger event.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "trigger": {
+    "description": "Specifies what triggers notification (should be enum) Interest Statement Frequency, Period End Date.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

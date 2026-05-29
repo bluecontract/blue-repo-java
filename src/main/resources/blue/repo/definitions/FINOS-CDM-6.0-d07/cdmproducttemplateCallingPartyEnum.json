@@ -1,0 +1,15 @@
+{
+  "name": "cdm/product/template/CallingPartyEnum",
+  "description": "Identifies a party to the on-demand repo transaction that has a right to demand for termination of the Security Finance transaction.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AsDefinedInMasterAgreement",
+      "Either",
+      "InitialBuyer",
+      "InitialSeller"
+    ]
+  }
+}

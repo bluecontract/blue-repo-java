@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("GZLRe2fEsvs1v7dVcg9kEnCrWEdM3cUZYhFH4XqN5jQT")
+@TypeBlueId("DVykYmmbhDsjsNQCjETGqumKJW5doNkkk6K6R4xeFWTV")
 public class CardTransactionDetails {
     public static String blueId() {
-        return "GZLRe2fEsvs1v7dVcg9kEnCrWEdM3cUZYhFH4XqN5jQT";
+        return "DVykYmmbhDsjsNQCjETGqumKJW5doNkkk6K6R4xeFWTV";
     }
 
     public static String packageName() {

@@ -1,0 +1,13 @@
+{
+  "name": "cdm/event/common/BillingSummaryInstruction",
+  "description": "Specifies the instructions for creation of a billing summary.",
+  "summaryAmountType": {
+    "description": "The account level for the billing summary.",
+    "type": {
+      "blueId": "ARDsZpRxQicigT4PhYAFVVd59csit2WJn69UmEjvD83e"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

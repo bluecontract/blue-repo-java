@@ -1,0 +1,19 @@
+{
+  "name": "cdm/regulation/Nm",
+  "refRate": {
+    "type": {
+      "blueId": "FZ7WxoPfFpozcg79A3iH1T6VcWY77nwvVRrc12XRhoHr"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "term": {
+    "type": {
+      "blueId": "GbULufXmoeMFxoHNGtvmQUqPmwnLY7caxb2TY3sKrRAR"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

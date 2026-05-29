@@ -1,0 +1,22 @@
+{
+  "name": "cdm/product/common/settlement/PercentageRule",
+  "description": "A class defining a content model for a calculation rule defined as percentage of the notional amount.",
+  "notionalAmountReference": {
+    "description": "A reference to the notional amount.",
+    "type": {
+      "blueId": "EP1r4ouVVbfJhEazX6iBArCJYk3u6aP7hwxJSGLBFbet"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "paymentPercent": {
+    "description": "A percentage of the notional amount.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

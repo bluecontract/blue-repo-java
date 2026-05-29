@@ -1,0 +1,28 @@
+{
+  "name": "cdm/product/asset/AssetDeliveryPeriods",
+  "description": "Defines the periods of delivery, including the delivery profile.",
+  "endDate": {
+    "description": "Delivery end date",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "profile": {
+    "description": "Defines the delivery profile of the asset, including the load type and the delivery intervals.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "CYD6nw1hgcwSeunSuqJQfyinq7rnuPXYzsgnq4wBvsin"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "startDate": {
+    "description": "Delivery start date",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "cdm/product/asset/FixedAmountCalculationDetails",
+  "description": "Type for reporting the detailed results of calculating a cash flow for a calculation period.  This is enhanced relative to the FpML-based cashflows structure to allow more information to be returned about daily compounded rates.\n",
+  "calculatedAmount": {
+    "description": "The amount of the cash flow that was computed, including any spreads and other processing.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "calculationPeriod": {
+    "description": "The calculation period for which the floating calculation was performed.",
+    "type": {
+      "blueId": "HjEmRrvzUJGJ8GfKAGdbcnZbK68UnqsEfHnP7fQL2aXu"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "calculationPeriodNotionalAmount": {
+    "description": "The notional in effect during the calculation period.",
+    "type": {
+      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "fixedRate": {
+    "description": "The value of the fixed rate that was used.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "yearFraction": {
+    "description": "The fraction of a year that this calculation represents, according to the day count fraction method.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

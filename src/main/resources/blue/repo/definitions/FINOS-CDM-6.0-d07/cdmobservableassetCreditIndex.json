@@ -1,0 +1,124 @@
+{
+  "name": "cdm/observable/asset/CreditIndex",
+  "description": "Specification of an index based on credit risk, typically composed using corporate debt instruments in a region or industry sector, e.g. the iTraxx indices.\n",
+  "assetClass": {
+    "description": "The Asset Class of the Index.",
+    "type": {
+      "blueId": "7SEgYnbcXhWKAHMtc5CwTcvZ8JWeE8F687Hd7328mgJ9"
+    }
+  },
+  "exchange": {
+    "description": "If the Asset is listed, defines the public exchange of the listing.",
+    "type": {
+      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+    }
+  },
+  "excludedReferenceEntity": {
+    "description": "Excluded reference entity.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "21tUiXqcPZ47DD2nEZ5E9SUBV7kj7oUHASqgyyPNCnm7"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "identifier": {
+    "description": "Asset Identifiers are used to uniquely identify an Asset, using a specified Asset Identifier Type.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GUT2oVFRefXcoq5yqjB5Pm8exmKiYH7iksr34CNZ7yjH"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  },
+  "indexAnnexDate": {
+    "description": "A CDS index series annex date.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "indexAnnexSource": {
+    "description": "A CDS index series annex source.",
+    "type": {
+      "blueId": "4CmhkpynLWSo5owqAWd5TVHw9WP8xz82ZerWeEectzZv"
+    }
+  },
+  "indexAnnexVersion": {
+    "description": "A CDS index series version identifier, e.g. 1, 2, 3 etc.",
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    }
+  },
+  "indexFactor": {
+    "description": "Index Factor is the index version factor or percent, expressed as an absolute decimal value between 0 and 1, that multiplied by the original notional amount yields the notional amount covered by the seller of protection.\n",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "indexSeries": {
+    "description": "A CDS index series identifier, e.g. 1, 2, 3 etc.",
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    }
+  },
+  "isExchangeListed": {
+    "description": "Defines whether the Asset is listed on a public exchange.",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    }
+  },
+  "provider": {
+    "description": "The organisation that creates or maintains the Index.",
+    "type": {
+      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+    }
+  },
+  "relatedExchange": {
+    "description": "Provides the related Exchanges, if applicable.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "seniority": {
+    "description": "Seniority of debt instruments comprising the index.",
+    "type": {
+      "blueId": "EURkUNg3iyiu6Ki46XfSicu1eMX2BbzKJrMJjZ76vdiJ"
+    }
+  },
+  "settledEntityMatrix": {
+    "description": "Used to specify the Relevant Settled Entity Matrix when there are settled entities at the time of the trade.",
+    "type": {
+      "blueId": "3XQqU6hjTNehCbVpVy5iZEXrQd9ffNSAAxNXJctsstbK"
+    }
+  },
+  "taxonomy": {
+    "description": "Defines the taxonomy of an object by combining a taxonomy source (i.e. the rules to classify the object) and a value (i.e. the output of those rules on the object.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "8EKfmgSdnP6EYVXZagpfvygY1BhsDy43CQgKoKPw4Fio"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "tranche": {
+    "description": "This element contains CDS tranche terms.",
+    "type": {
+      "blueId": "aDvCozKvAwWf7xy5gDFQfBZJNDM7KsjHBzsuAhcN817"
+    }
+  }
+}

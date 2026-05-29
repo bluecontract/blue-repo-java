@@ -1,0 +1,13 @@
+{
+  "name": "cdm/base/math/AveragingWeightingMethodEnum",
+  "description": "The enumerated values to specify the method of calculation to be used when averaging rates. Per ISDA 2000 Definitions, Section 6.2. Certain Definitions Relating to Floating Amounts.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Unweighted",
+      "Weighted"
+    ]
+  }
+}

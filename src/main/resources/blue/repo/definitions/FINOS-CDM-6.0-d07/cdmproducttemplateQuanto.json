@@ -1,0 +1,28 @@
+{
+  "name": "cdm/product/template/Quanto",
+  "description": "Determines the currency rate that the seller of the equity amounts will apply at each valuation date for converting the respective amounts into a currency that is different from the currency denomination of the underlier.\n",
+  "fixingTime": {
+    "description": "The time at which the spot currency exchange rate will be observed. It is specified as a time in a business day calendar location, e.g. 11:00am London time.\n",
+    "type": {
+      "blueId": "DJHcCUvgkjrpH1UjAWPG6z2avBDGcvFeWgf2oWZMM7ef"
+    }
+  },
+  "fxRate": {
+    "description": "Specifies a currency conversion rate.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "9ckjvQUVET3Ngrrx4MafJVHq6idJAxX6WnY4HNKKkuj"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "fxSpotRateSource": {
+    "description": "Specifies the methodology (reference source and, optionally, fixing time) to be used for determining a currency conversion rate.\n",
+    "type": {
+      "blueId": "Er5xdgizmYHVQiqxbHxo9DYjuP1uTdYqWsrVPJRV2S5P"
+    }
+  }
+}

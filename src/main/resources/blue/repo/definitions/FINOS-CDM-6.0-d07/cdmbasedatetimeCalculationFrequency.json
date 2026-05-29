@@ -1,0 +1,67 @@
+{
+  "name": "cdm/base/datetime/CalculationFrequency",
+  "description": "Represents the parameters for describing how often something (such as collateral interest) is to be calculated.\n",
+  "businessCenter": {
+    "description": "Specifies the business center for adjustment of calculation period.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "5b7tz2hPJ3dwwRSghTiFtwhoDJrB6oMLyV5ssbsSiZkL"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "dateLocation": {
+    "description": "Specifies where is the time measured.",
+    "type": {
+      "blueId": "DJHcCUvgkjrpH1UjAWPG6z2avBDGcvFeWgf2oWZMM7ef"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "dayOfMonth": {
+    "description": "Specifies the day of the month if used.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "dayOfWeek": {
+    "description": "Specifies the day of the week if used.",
+    "type": {
+      "blueId": "3VxAg9cA9onwdJoxhBB5kEdwqKLqxsmhNk3MY7upD6KS"
+    }
+  },
+  "monthOfYear": {
+    "description": "Specifies the month of the year if used.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "offsetDays": {
+    "description": "Specifies how many days from the trigger event should the payment occur.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "period": {
+    "description": "Specifies the time period at which calculation is performed, e.g. 1 month.",
+    "type": {
+      "blueId": "D2zD5eW4h5CVwkas6bYant1Kmgdg4zt95zb3kYgR87RE"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "weekOfMonth": {
+    "description": "Specifies the week of the month if used.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  }
+}

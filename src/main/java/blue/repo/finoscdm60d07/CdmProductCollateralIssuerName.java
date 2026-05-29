@@ -1,0 +1,49 @@
+package blue.repo.finoscdm60d07;
+
+import blue.language.model.Node;
+import blue.language.model.TypeBlueId;
+import blue.repo.RepositoryType;
+
+@TypeBlueId("BnFyrspUFQp7Hd8TBLuWugr1a5cgZiUe6iN7STaNQats")
+public class CdmProductCollateralIssuerName {
+    public static String blueId() {
+        return "BnFyrspUFQp7Hd8TBLuWugr1a5cgZiUe6iN7STaNQats";
+    }
+
+    public static String packageName() {
+        return "FINOS-CDM-6.0-d07";
+    }
+
+    public static String typeName() {
+        return "cdm/product/collateral/IssuerName";
+    }
+
+    public static String qualifiedName() {
+        return "FINOS-CDM-6.0-d07/cdm/product/collateral/IssuerName";
+    }
+
+    public static String resourcePath() {
+        return "blue/repo/definitions/FINOS-CDM-6.0-d07/cdmproductcollateralIssuerName.json";
+    }
+
+    public static RepositoryType repositoryType() {
+        return RepositoryType.of(
+                packageName(),
+                typeName(),
+                qualifiedName(),
+                blueId(),
+                resourcePath());
+    }
+
+    private CdmBaseStaticdataPartyLegalEntity issuerName;
+
+    public CdmBaseStaticdataPartyLegalEntity getIssuerName() {
+        return issuerName;
+    }
+
+    public CdmProductCollateralIssuerName issuerName(CdmBaseStaticdataPartyLegalEntity issuerName) {
+        this.issuerName = issuerName;
+        return this;
+    }
+
+}

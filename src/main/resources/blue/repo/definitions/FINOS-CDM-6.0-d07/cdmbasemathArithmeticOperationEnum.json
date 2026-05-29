@@ -1,0 +1,17 @@
+{
+  "name": "cdm/base/math/ArithmeticOperationEnum",
+  "description": "An arithmetic operator that can be passed to a function",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Add",
+      "Divide",
+      "Max",
+      "Min",
+      "Multiply",
+      "Subtract"
+    ]
+  }
+}

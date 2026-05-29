@@ -1,0 +1,37 @@
+{
+  "name": "cdm/product/template/MandatoryEarlyTermination",
+  "description": "A data to:  define an early termination provision for which exercise is mandatory.\n",
+  "calculationAgent": {
+    "description": "The ISDA Calculation Agent responsible for performing duties associated with an optional early termination.",
+    "type": {
+      "blueId": "83ZskooQhyiWk16zpdvkhMh9qwBm9bHyByQH4RxkYEyR"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "cashSettlement": {
+    "description": "If specified, this means that cash settlement is applicable to the transaction and defines the parameters associated with the cash settlement procedure. If not specified, then physical settlement is applicable.\n",
+    "type": {
+      "blueId": "EPxCD8mPcZ6C9kuDs2tinVLVsqMQscWZPLMhYaQ4n9co"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "mandatoryEarlyTerminationAdjustedDates": {
+    "description": "The adjusted dates associated with a mandatory early termination provision. These dates have been adjusted for any applicable business day convention.\n",
+    "type": {
+      "blueId": "66XXZrW4apiDFikVhDV39jZpeMTG6oHtiLMpuyJfvJcL"
+    }
+  },
+  "mandatoryEarlyTerminationDate": {
+    "description": "The early termination date associated with a mandatory early termination of a swap.",
+    "type": {
+      "blueId": "vprnR4tQHf4wLZ7dp16UNnvc9DvyZpCLAWTNXcH1vQH"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

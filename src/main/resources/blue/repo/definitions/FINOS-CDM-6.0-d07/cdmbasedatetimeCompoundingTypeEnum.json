@@ -1,0 +1,14 @@
+{
+  "name": "cdm/base/datetime/CompoundingTypeEnum",
+  "description": "The enumerated values to specify how the compounding calculation is done",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Business",
+      "Calendar",
+      "None"
+    ]
+  }
+}

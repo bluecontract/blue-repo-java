@@ -1,0 +1,13 @@
+{
+  "name": "cdm/base/staticdata/asset/common/SupraNationalIssuerTypeEnum",
+  "description": "Represents an enumeration list to identify the type of supranational entity issuing the asset.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "InternationalOrganisation",
+      "MultilateralBank"
+    ]
+  }
+}

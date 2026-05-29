@@ -1,0 +1,13 @@
+{
+  "name": "cdm/observable/asset/CreditNotationBoundaryEnum",
+  "description": "Identifies an agency rating as a simple scale boundary of minimum or maximum.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Maximum",
+      "Minimum"
+    ]
+  }
+}

@@ -8,7 +8,7 @@ repo.blue types by qualified name or BlueId, use generated model classes, and
 configure `blue-language-java` with the repository type catalog.
 
 It does not execute contracts. Runtime behavior for contracts such as
-Conversation workflows or timeline channels belongs in `blue-contract-java`.
+Coordination workflows or timeline channels belongs in `blue-contract-java`.
 
 ## How This Fits
 
@@ -20,9 +20,9 @@ Conversation workflows or timeline channels belongs in `blue-contract-java`.
 
 Use this project when you need Java access to real repo.blue types:
 
-- `Core/Document Update Channel`
-- `Conversation/Operation`
-- `Conversation/Sequential Workflow Operation`
+- `Coordination/Operation`
+- `Coordination/Sequential Workflow Operation`
+- `Workflows/Accept Change Workflow`
 - `FINOS-CDM-6.0-d07/Trade`
 - `MyOS/MyOS Timeline Channel`
 - `PayNote/PayNote`
@@ -30,7 +30,8 @@ Use this project when you need Java access to real repo.blue types:
 
 ## What You Get
 
-This package currently includes repository version `1.3.0`.
+This artifact is versioned independently from the bundled Blue repository
+dictionary. It currently includes repository version `1.3.0`.
 
 It provides:
 
@@ -43,7 +44,7 @@ It provides:
 - generated type constants under `blue.repo.types`;
 - a `TypeClassResolver` configured with all generated `@TypeBlueId` classes;
 - type alias preprocessing so YAML can use names like
-  `Conversation/Operation` instead of raw BlueIds.
+  `Coordination/Operation` instead of raw BlueIds.
 
 ## Installation
 
@@ -57,7 +58,7 @@ repositories {
 }
 
 dependencies {
-    implementation "blue.repo:blue-repo-java:1.3.0"
+    implementation "blue.repo:blue-repo-java:2.0.0"
 }
 ```
 
@@ -65,7 +66,7 @@ dependencies {
 directly, use the published language artifact:
 
 ```groovy
-implementation "blue.language:blue-language-java:2.0.0"
+implementation "blue.language:blue-language-java:3.0.0"
 ```
 
 ### Maven
@@ -74,14 +75,14 @@ implementation "blue.language:blue-language-java:2.0.0"
 <dependency>
     <groupId>blue.repo</groupId>
     <artifactId>blue-repo-java</artifactId>
-    <version>1.3.0</version>
+    <version>2.0.0</version>
 </dependency>
 ```
 
 ### Local Development
 
 Local builds use the version from `.cz.toml` with `-SNAPSHOT` appended, so this
-checkout builds as `1.3.0-SNAPSHOT` outside CI.
+checkout builds as `2.0.0-SNAPSHOT` outside CI.
 
 To test this package from another local project before release:
 
@@ -92,12 +93,12 @@ To test this package from another local project before release:
 Then depend on:
 
 ```groovy
-implementation "blue.repo:blue-repo-java:1.3.0-SNAPSHOT"
+implementation "blue.repo:blue-repo-java:2.0.0-SNAPSHOT"
 ```
 
-This repository now resolves `blue.language:blue-language-java:2.0.0` from
-Maven Central or `mavenLocal()`; it does not include the sibling
-`../blue-language-java` composite build by default.
+Local development uses the published `blue.language:blue-language-java`
+coordinate from Maven repositories. It does not substitute a sibling
+`../blue-language-java` checkout.
 
 ## Quick Start
 
@@ -109,7 +110,7 @@ import blue.repo.BlueRepository;
 BlueRepository repo = BlueRepository.latest();
 
 System.out.println(repo.repositoryVersion());
-System.out.println(repo.blueId("Conversation/Operation"));
+System.out.println(repo.blueId("Coordination/Operation"));
 System.out.println(repo.packageNames());
 ```
 
@@ -121,7 +122,7 @@ import blue.repo.BlueRepository;
 
 BlueRepository repo = BlueRepository.latest();
 
-Node operationType = repo.nodeByName("Conversation/Operation")
+Node operationType = repo.nodeByName("Coordination/Operation")
         .orElseThrow(IllegalStateException::new);
 
 System.out.println(operationType.getName());
@@ -134,13 +135,13 @@ System.out.println(operationType.getBlueId());
 import blue.language.Blue;
 import blue.language.model.Node;
 import blue.repo.BlueRepository;
-import blue.repo.types.ConversationTypes;
+import blue.repo.types.CoordinationTypes;
 
 BlueRepository repo = BlueRepository.latest();
 Blue blue = repo.configure(new Blue(repo.nodeProvider()));
 
 Node message = new Node()
-        .type(ConversationTypes.CHAT_MESSAGE.reference())
+        .type(CoordinationTypes.CHAT_MESSAGE.reference())
         .properties("message", new Node().value("hello"));
 
 Node resolved = blue.resolve(message);
@@ -158,13 +159,13 @@ import blue.language.Blue;
 import blue.language.dictionary.ExportContext;
 import blue.language.model.Node;
 import blue.repo.BlueRepository;
-import blue.repo.types.ConversationTypes;
+import blue.repo.types.CoordinationTypes;
 
 BlueRepository repo = BlueRepository.latest();
 Blue blue = repo.configureForExport(new Blue());
 
 Node document = new Node()
-        .type(ConversationTypes.OPERATION.reference());
+        .type(CoordinationTypes.OPERATION.reference());
 
 ExportContext context = ExportContext.builder()
         .dictionary(BlueRepository.DICTIONARY_NAME, repo.repositoryVersionBlueId())
@@ -214,7 +215,7 @@ Repository-authored documents usually use qualified type names:
 name: Example
 contracts:
   increment:
-    type: Conversation/Operation
+    type: Coordination/Operation
     channel: ownerChannel
     request:
       type: Integer
@@ -250,9 +251,9 @@ while Java imports remain stable across compatible repository updates:
 import blue.language.Blue;
 import blue.language.model.Node;
 import blue.repo.BlueRepository;
-import blue.repo.conversation.ChatMessage;
-import blue.repo.conversation.Operation;
-import blue.repo.conversation.SequentialWorkflowOperation;
+import blue.repo.coordination.ChatMessage;
+import blue.repo.coordination.Operation;
+import blue.repo.coordination.SequentialWorkflowOperation;
 
 BlueRepository repo = BlueRepository.latest();
 Blue blue = repo.configure(new Blue(repo.nodeProvider()));
@@ -285,7 +286,7 @@ Example:
 
 ```java
 String id = Operation.blueId();
-String name = Operation.qualifiedName(); // Conversation/Operation
+String name = Operation.qualifiedName(); // Coordination/Operation
 ```
 
 ## Combine With Application Types
@@ -316,9 +317,10 @@ This project does not implement contract behavior.
 
 For example:
 
-- `Conversation/Update Document` is generated here as a model class;
-- `Conversation/Sequential Workflow Operation` is generated here as a model
+- `Coordination/Update Document` is generated here as a model class;
+- `Coordination/Sequential Workflow Operation` is generated here as a model
   class;
+- `Workflows/Accept Change Workflow` is generated here as a model class;
 - `MyOS/MyOS Timeline Channel` is generated here as a model class;
 - but executing those contracts is `blue-contract-java`'s job.
 
@@ -329,21 +331,21 @@ catalog data; the contract package is executable behavior.
 
 Current generated package groups include:
 
-- `blue.repo.core`
 - `blue.repo.common`
-- `blue.repo.conversation`
+- `blue.repo.coordination`
 - `blue.repo.finoscdm60d07`
 - `blue.repo.myos`
 - `blue.repo.paynote`
+- `blue.repo.workflows`
 
 Convenience constants:
 
-- `blue.repo.types.CoreTypes`
 - `blue.repo.types.CommonTypes`
-- `blue.repo.types.ConversationTypes`
+- `blue.repo.types.CoordinationTypes`
 - `blue.repo.types.FINOSCDM60d07Types`
 - `blue.repo.types.MyOSTypes`
 - `blue.repo.types.PayNoteTypes`
+- `blue.repo.types.WorkflowsTypes`
 
 ## Regenerating Sources
 
@@ -400,7 +402,7 @@ The project targets Java 8 bytecode.
 ## Release Setup
 
 The project version is stored in `.cz.toml`. Local builds append `-SNAPSHOT`;
-CI builds publish the plain version, for example `1.3.0`.
+CI builds publish the plain version, for example `2.0.0`.
 
 Publishing uses the same JReleaser/Maven Central flow as `blue-language-java`:
 
@@ -432,11 +434,11 @@ src/main/java/blue/repo
   BlueRepository.java                  main facade
   RepositoryManifest.java              manifest loader/model
   common/                              generated Common model classes
-  conversation/                        generated Conversation model classes
-  core/                                generated Core model classes
+  coordination/                        generated Coordination model classes
   finoscdm60d07/                       generated FINOS CDM model classes
   myos/                                generated MyOS model classes
   paynote/                             generated PayNote model classes
+  workflows/                           generated Workflows model classes
   provider/                            repository NodeProvider helpers
   types/                               generated RepositoryType constants
 
@@ -451,7 +453,7 @@ tools/
 
 ## Common Pitfalls
 
-`type: Conversation/Operation` does not resolve by itself.
+`type: Coordination/Operation` does not resolve by itself.
 
 You need `repo.typeAliasBlue()` or direct BlueId references:
 
@@ -462,7 +464,7 @@ Node preprocessed = blue.preprocess(document);
 
 Generated classes are not processors.
 
-If you want to execute Conversation workflows, add `blue-contract-java` and call:
+If you want to execute Coordination workflows, add `blue-contract-java` and call:
 
 ```java
 BlueDocumentProcessors.registerWith(blue);

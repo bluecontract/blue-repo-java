@@ -1,0 +1,15 @@
+{
+  "name": "cdm/legaldocumentation/common/SpecifiedEntityClauseEnum",
+  "description": "The enumerated values to specify the Event of Default or Termination event for which Specified Entities terms are being defined.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Bankruptcy",
+      "CreditEventUponMerger",
+      "CrossDefault",
+      "DefaultUnderSpecifiedTransaction"
+    ]
+  }
+}

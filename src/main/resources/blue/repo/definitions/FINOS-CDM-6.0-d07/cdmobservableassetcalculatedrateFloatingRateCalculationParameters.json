@@ -1,0 +1,43 @@
+{
+  "name": "cdm/observable/asset/calculatedrate/FloatingRateCalculationParameters",
+  "description": "Defines the structures needed to represent the calculation parameters for daily averaged and compounded modular rates as defined in the 2021 ISDA Definitions in Section 7. This type is used to represent modular computed rates in interestRatePayouts.\n",
+  "applicableBusinessDays": {
+    "description": "the business days that are applicable for the calculation.",
+    "type": {
+      "blueId": "6H6qhfVQ1CTnjae8L3PvEdBtC4NMwMiaSJWK6kr5tEXf"
+    }
+  },
+  "calculationMethod": {
+    "description": "calculation type (averaging or compounding).",
+    "type": {
+      "blueId": "FKWAgioXHQQe5q5qqHq28ZZh5DjpyX34cQhG3Hkv18vS"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "lockoutCalculation": {
+    "description": "any lockout  parameters if applicable.",
+    "type": {
+      "blueId": "FNvJ5Bykw9Ak2JRJJJ1nizpUFbufUY7ciCjGoMLUAQzA"
+    }
+  },
+  "lookbackCalculation": {
+    "description": "any lookback  parameters if applicable.",
+    "type": {
+      "blueId": "FNvJ5Bykw9Ak2JRJJJ1nizpUFbufUY7ciCjGoMLUAQzA"
+    }
+  },
+  "observationParameters": {
+    "description": "any applicable observation parameters, such as daily caps or floors.",
+    "type": {
+      "blueId": "DKxKbxnu2Fwsa8UzqKbgTU29eJKTYiwMNoJTqTNZLM6p"
+    }
+  },
+  "observationShiftCalculation": {
+    "description": "any obervation shift parameters if applicable.",
+    "type": {
+      "blueId": "HEc8z3edG3DSLZQTC6FRhMSLXYAKX9B1JRJsZvsdAFKh"
+    }
+  }
+}

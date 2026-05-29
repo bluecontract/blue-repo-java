@@ -1,0 +1,11 @@
+{
+  "name": "cdm/regulation/FinInstrmRptgTxRpt",
+  "tx": {
+    "type": {
+      "blueId": "23F7KKihHU28GJTaJVx2j8htgvvDKTCdfeBN4GmL46FA#1"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

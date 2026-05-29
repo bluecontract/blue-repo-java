@@ -1,0 +1,13 @@
+{
+  "name": "cdm/base/staticdata/party/FieldWithMetaPersonIdentifier",
+  "meta": {
+    "type": {
+      "blueId": "Fsr3CBPzzThx6Pern5QLDS8TKFXzv6W3TzjS6BYSmqCc"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "Axft5QvGc31WDc7YcQv6d3doTrDMHiHcTj5JwoFZSsjR"
+    }
+  }
+}

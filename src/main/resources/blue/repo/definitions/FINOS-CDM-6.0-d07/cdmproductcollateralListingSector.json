@@ -1,0 +1,16 @@
+{
+  "name": "cdm/product/collateral/ListingSector",
+  "description": "Specifies a filter based on an industry sector.",
+  "sector": {
+    "description": "Represents a filter based on an industry sector defined under a system for classifying industry types such as Global Industry Classification Standard (GICS) and North American Industry Classification System (NAICS)\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  }
+}

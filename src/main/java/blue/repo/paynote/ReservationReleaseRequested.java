@@ -3,13 +3,13 @@ package blue.repo.paynote;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Request;
+import blue.repo.coordination.Request;
 import java.math.BigInteger;
 
-@TypeBlueId("GU8nkSnUuMs6632rHQyBndRtjDcMB9ZSbgwkGYcfGt97")
+@TypeBlueId("9wv1GB7j71PTZFYmatANzxk34KPaCeouB4yc4AxYirrU")
 public class ReservationReleaseRequested extends Request {
     public static String blueId() {
-        return "GU8nkSnUuMs6632rHQyBndRtjDcMB9ZSbgwkGYcfGt97";
+        return "9wv1GB7j71PTZFYmatANzxk34KPaCeouB4yc4AxYirrU";
     }
 
     public static String packageName() {

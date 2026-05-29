@@ -1,0 +1,14 @@
+{
+  "name": "cdm/base/math/AveragingCalculationMethodEnum",
+  "description": "Specifies enumerations for the type of averaging calculation.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Arithmetic",
+      "Geometric",
+      "Harmonic"
+    ]
+  }
+}

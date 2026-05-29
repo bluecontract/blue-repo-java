@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/asset/FPVFinalPriceElectionFallbackEnum",
+  "description": "Specifies the fallback provisions in respect to the applicable Futures Price Valuation.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "FPVClose",
+      "FPVHedgeExecution"
+    ]
+  }
+}

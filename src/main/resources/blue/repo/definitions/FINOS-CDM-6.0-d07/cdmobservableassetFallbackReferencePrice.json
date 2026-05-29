@@ -1,0 +1,34 @@
+{
+  "name": "cdm/observable/asset/FallbackReferencePrice",
+  "description": "The method, prioritised by the order it is listed in this element, to get a replacement rate for the disrupted settlement rate option.\n",
+  "calculationAgentDetermination": {
+    "description": "The calculation agent will decide the rate.",
+    "type": {
+      "blueId": "83ZskooQhyiWk16zpdvkhMh9qwBm9bHyByQH4RxkYEyR"
+    }
+  },
+  "fallBackSettlementRateOption": {
+    "description": "This settlement rate option will be used in its place.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "21coEyT7ssdAjeceX6KNSWdCFQhFKv1xukphm8Kb7GA4"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "fallbackSurveyValuationPostponement": {
+    "description": "Request rate quotes from the market. This element is set as type Empty in FpML. When present, the FpML synonym is mapped to a value True in the CDM.\n",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    }
+  },
+  "valuationPostponement": {
+    "description": "Specifies how long to wait to get a quote from a settlement rate option upon a price source disruption.",
+    "type": {
+      "blueId": "3kT8om5teSJVU4BuEG6MNfGJSMe31DGUrn3EiaobN6B8"
+    }
+  }
+}

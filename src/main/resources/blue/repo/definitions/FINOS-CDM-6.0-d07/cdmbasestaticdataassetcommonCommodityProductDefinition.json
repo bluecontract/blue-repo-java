@@ -1,0 +1,34 @@
+{
+  "name": "cdm/base/staticdata/asset/common/CommodityProductDefinition",
+  "description": "Specifies the commodity underlier in the event that no ISDA Commodity Reference Price exists.",
+  "commodityInfoPublisher": {
+    "description": "Specifies the publication where the commodity prices can be found.",
+    "type": {
+      "blueId": "DAHAw2kHhu4z1hfnkRJfSLjBS3se2mBgxftVVkVsUdze"
+    }
+  },
+  "exchangeId": {
+    "description": "Identifies the exchange from which the reference price should be sourced, using the scheme at the following url: http://www.fpml.org/coding-scheme/external/exchange-id-MIC-1-0\n",
+    "type": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "priceSource": {
+    "description": "Specifies a publication that provides the commodity price, including, where applicable the details of where in the publication the price is published.  Applicable when the commodity reference price is not a futures contract\n",
+    "type": {
+      "blueId": "9cKexvJrDaUPGeWrFbhoCCZusMyx6BQgo6y3JSXk6dX5"
+    }
+  },
+  "referenceFramework": {
+    "description": "Specifies the type of commodity.",
+    "type": {
+      "blueId": "7hbzWaFewEqQf385W2nMwWPrZrrTaHfqshbZoG9H8Nes"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

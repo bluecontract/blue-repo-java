@@ -3,12 +3,12 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Response;
+import blue.repo.coordination.Response;
 
-@TypeBlueId("GiEwEdvT2jPoT4bK8hvmjTBJUVQqRtHoAejfdpM7HtuD")
+@TypeBlueId("theUsA9gT88zXXPPqnyeft1Zy77EAA9nD2t6YgfPSgF")
 public class PaymentInitiationAccepted extends Response {
     public static String blueId() {
-        return "GiEwEdvT2jPoT4bK8hvmjTBJUVQqRtHoAejfdpM7HtuD";
+        return "theUsA9gT88zXXPPqnyeft1Zy77EAA9nD2t6YgfPSgF";
     }
 
     public static String packageName() {

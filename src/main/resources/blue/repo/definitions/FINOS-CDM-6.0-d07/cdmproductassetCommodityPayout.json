@@ -1,0 +1,91 @@
+{
+  "name": "cdm/product/asset/CommodityPayout",
+  "description": "Payout based on the averaged price of a referenced underlier. (e.g. Commodities). Can represent both average (average of many) & bullet (average of 1) pricing\n",
+  "averagingFeature": {
+    "description": "Indicates if the averaging calculation, when applicable, is weighted or unweighted.",
+    "type": {
+      "blueId": "8c8jodXTXZTXGtEBBCLNdZGym3ZQYVbB5FZcWZCRXJ8i"
+    }
+  },
+  "calculationPeriodDates": {
+    "description": "Defines the calculation period dates schedule.",
+    "type": {
+      "blueId": "GspR7mKpmQb8fd9qDWmUZgupMnwzzd77ERPzdYLb2X5h"
+    }
+  },
+  "commodityPriceReturnTerms": {
+    "description": "Defines parameters in which the commodity price is assessed.",
+    "type": {
+      "blueId": "7TtU1hUAjvsacfDaexUF7KT2eUEoXBSdb42ndSSufh5a"
+    }
+  },
+  "delivery": {
+    "description": "Contains the information relative to the delivery of the asset.",
+    "type": {
+      "blueId": "Fnt7VAuUDjTmnYtzK4X7xHxWYA18N1XsK32d9sV2dugm"
+    }
+  },
+  "fxFeature": {
+    "description": "Defines quanto or composite FX features that are included in the swap leg.",
+    "type": {
+      "blueId": "2tVrnHV4rwPAivz8J6tdUF2i9wMRGNsWuP2JFQuM68TW"
+    }
+  },
+  "payerReceiver": {
+    "description": "Canonical representation of the payer and receiver parties applicable to each payout leg.",
+    "type": {
+      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+    }
+  },
+  "paymentDates": {
+    "description": "Defines the payment date schedule, as defined by the parameters that are needed to specify it, either in a parametric way or by reference to another schedule of dates (e.g. the valuation dates).\n",
+    "type": {
+      "blueId": "CBUr6dnp1h3kfpUoLrpBXZBcvBQ9hmDnKezhtmhxPgi9"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "priceQuantity": {
+    "description": "Each payout leg must implement the quantity concept as a 'resolvable' type, which allows for different payout legs to be linked to each other (e.g. in the case of cross-curreny products).\n",
+    "type": {
+      "blueId": "DmcMrxC2wq7pSMrRaCK5QHkx54U9EtEgZqojTkmfedRF"
+    }
+  },
+  "pricingDates": {
+    "description": "Specifies specific dates or parametric rules for the dates on which the price will be determined.",
+    "type": {
+      "blueId": "H8eHAeKLc9qFxkC2223mjTBSdXp7ipHmZx3tTndiJS4R"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "principalPayment": {
+    "description": "The specification of the principal exchange. Optional as only applicable in the case of cross-currency or zero-coupon swaps with a final payment.\n",
+    "type": {
+      "blueId": "Hxc4Dbr7nrj5XkPBBiJGhPhQVnfNHWHn21HViV1FpBGM"
+    }
+  },
+  "schedule": {
+    "description": "Allows the full representation of a payout by defining a set of schedule periods. It supports standard schedule customization by expressing all the dates, quantities, and pricing data in a non-parametric way.\n",
+    "type": {
+      "blueId": "ArKxUfT7icBqdZQkhyPcZmMW5oqfaGEvnvM2i8dwWnEv"
+    }
+  },
+  "settlementTerms": {
+    "description": "Each payout leg must specifies its settlement terms, including the delivery type (i.e. cash vs physical, and their respective terms), the transfer type (DvP etc.) and settlement date, if any.\n",
+    "type": {
+      "blueId": "EPxCD8mPcZ6C9kuDs2tinVLVsqMQscWZPLMhYaQ4n9co"
+    }
+  },
+  "underlier": {
+    "description": "Identifies the underlying product that is referenced for pricing of the applicable leg in a swap. Referenced in the '2018 ISDA CDM Equity Confirmation for Security Equity Swap' as Security.\n",
+    "type": {
+      "blueId": "this#3"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

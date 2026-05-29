@@ -1,0 +1,22 @@
+{
+  "name": "cdm/margin/schedule/StandardizedScheduleInitialMargin",
+  "netInitialMargin": {
+    "type": {
+      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "tradeInfo": {
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "Ctsg17TB9rBQjJs4s98goHxx8FLXt5azmFtdhAR7Bc9e"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

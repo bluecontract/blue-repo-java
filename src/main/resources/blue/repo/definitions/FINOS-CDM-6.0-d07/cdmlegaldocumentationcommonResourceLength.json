@@ -1,0 +1,22 @@
+{
+  "name": "cdm/legaldocumentation/common/ResourceLength",
+  "description": "A class to indicate the length of the resource.",
+  "lengthUnit": {
+    "description": "The length unit of the resource. For example, pages (pdf, text documents) or time (audio, video files).",
+    "type": {
+      "blueId": "7n8DXzfx87XqsraHqGJ8o1sa64evjLYbMWaHHFJ4xMoM"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "lengthValue": {
+    "description": "The length value of the resource.",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

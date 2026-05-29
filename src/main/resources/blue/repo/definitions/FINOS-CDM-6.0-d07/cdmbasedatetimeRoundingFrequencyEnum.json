@@ -1,0 +1,13 @@
+{
+  "name": "cdm/base/datetime/RoundingFrequencyEnum",
+  "description": "How often is rounding performed",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Daily",
+      "PeriodEnd"
+    ]
+  }
+}

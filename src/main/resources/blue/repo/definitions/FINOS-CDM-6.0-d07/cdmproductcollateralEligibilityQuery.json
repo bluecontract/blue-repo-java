@@ -1,0 +1,67 @@
+{
+  "name": "cdm/product/collateral/EligibilityQuery",
+  "description": "Query to check against an EligibleCollateralSpecification",
+  "agencyRating": {
+    "description": "The agency rating based on default risk and creditors claim in event of default associated with specific instrument.\n",
+    "type": {
+      "blueId": "H5d8SCeSAPow9BSQ9yQxQpEBETpJvMhAZfaDPQtsKHSx"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "assetCountryOfOrigin": {
+    "description": "The asset country of origin.",
+    "type": {
+      "blueId": "845nMVYB54BfARn15dRu8SXv1PR2j5FyZagnkbQVX5in"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "collateralAssetType": {
+    "description": "The asset product type.",
+    "type": {
+      "blueId": "BLZTp7a5CtMHrTzCq445GpujBm3ymVzCSadXjNvKVxCH"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "denominatedCurrency": {
+    "description": "The underlying asset denominated currency.",
+    "type": {
+      "blueId": "Gtqxd5G7jocpQHSsEiQ53Nwe1hN6hBmF525c6ebfSZfA"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "issuerName": {
+    "description": "Specifies the issuing entity name or LEI.",
+    "type": {
+      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "issuerType": {
+    "description": "Represents a filter based on the type of entity issuing the asset.",
+    "type": {
+      "blueId": "H6PykJfXM1yFBz8mSRdqtcp1ATz1YwBbyjFBTGXM4Uvp"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "maturity": {
+    "description": "Maturity in years",
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

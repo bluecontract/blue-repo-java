@@ -3,12 +3,12 @@ package blue.repo.paynote;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Response;
+import blue.repo.coordination.Response;
 
-@TypeBlueId("1j22qLMeLkRgtwiMHWXJNopKeBHdACS4vELfLxc1mnA")
+@TypeBlueId("AGmjYB8hJAL9JUR3vsoqktdA7RcivcsjgoGjxQq3RQgj")
 public class TransactionDetailsUpdateLockChangeFailed extends Response {
     public static String blueId() {
-        return "1j22qLMeLkRgtwiMHWXJNopKeBHdACS4vELfLxc1mnA";
+        return "AGmjYB8hJAL9JUR3vsoqktdA7RcivcsjgoGjxQq3RQgj";
     }
 
     public static String packageName() {

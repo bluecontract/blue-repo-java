@@ -1,0 +1,37 @@
+{
+  "name": "cdm/observable/asset/PerformanceValuationDates",
+  "description": "Defines how and when a performance type option or performance type swap is to be valued.",
+  "determinationMethod": {
+    "description": "Specifies the method according to which an amount or a date is determined.",
+    "type": {
+      "blueId": "FTE7qqGQusB8UEjsRpipyFrw42V2W8VA1TNPNLGTJwKU"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "valuationDate": {
+    "description": "2018 ISDA CDM Equity Confirmation for Security Equity Swap: Pricing Date\n",
+    "type": {
+      "blueId": "2gu7bBDYJXEVsffNg2iAYXou31qtdeR4oiwZHL2kaEgQ"
+    }
+  },
+  "valuationDates": {
+    "description": "2018 ISDA CDM Equity Confirmation for Security Equity Swap: Pricing Date\n",
+    "type": {
+      "blueId": "GqMDcJT2X4pbkcA4TWqyfyLp2xKadMY8F8DW2abYfujx"
+    }
+  },
+  "valuationTime": {
+    "description": "The specific time of day at which the calculation agent values the underlying. The SpecificTime is the only case when the valuationTime (time + business center location  e.g. 10:00:00 USNY) should be provided. You should be able to provide just the valuationTime without valuationTimeType, which infer that this is a specific time.\n",
+    "type": {
+      "blueId": "DJHcCUvgkjrpH1UjAWPG6z2avBDGcvFeWgf2oWZMM7ef"
+    }
+  },
+  "valuationTimeType": {
+    "description": "The time of day at which the calculation agent values the underlying, for example the official closing time of the exchange.\n",
+    "type": {
+      "blueId": "2xhGBDM2Kt4jeHX2wMnpZymz3UupNVcvkkwM9R3kh5dT"
+    }
+  }
+}

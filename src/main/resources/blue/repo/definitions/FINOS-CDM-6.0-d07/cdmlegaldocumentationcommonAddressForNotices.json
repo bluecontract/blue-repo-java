@@ -1,0 +1,25 @@
+{
+  "name": "cdm/legaldocumentation/common/AddressForNotices",
+  "description": "Specification of the address and other details for notices.",
+  "additionalNotices": {
+    "description": "The optional specification of additional information when a party requires notices to be delivered to more than one address.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "5Vjv2XQNPdtQNKN8mvEx3JGyY4QKNuVtTwTEo1HZ3Gxy"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "primaryNotices": {
+    "description": "Specification of primary notice details",
+    "type": {
+      "blueId": "J722dCWWnZv47rzGnZF3uhEYkSgEZWdQGd9kmgfTMXEK"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

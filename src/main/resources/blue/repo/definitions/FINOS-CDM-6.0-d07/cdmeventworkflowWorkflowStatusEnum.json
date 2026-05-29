@@ -1,0 +1,24 @@
+{
+  "name": "cdm/event/workflow/WorkflowStatusEnum",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Accepted",
+      "Affirmed",
+      "Alleged",
+      "Amended",
+      "Cancelled",
+      "Certain",
+      "Cleared",
+      "Confirmed",
+      "Pending",
+      "Rejected",
+      "Submitted",
+      "Terminated",
+      "Uncertain",
+      "Unconfirmed"
+    ]
+  }
+}

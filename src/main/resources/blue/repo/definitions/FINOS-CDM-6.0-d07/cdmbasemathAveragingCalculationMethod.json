@@ -1,0 +1,22 @@
+{
+  "name": "cdm/base/math/AveragingCalculationMethod",
+  "description": "Defines the ways in which multiple values can be aggregated into a single value.",
+  "calculationMethod": {
+    "description": "Identifies which of the Pythagorean means is being used to compute an average value.",
+    "type": {
+      "blueId": "6WbM3vJuFcsppFLtLXftF91dWRsbhz9KDaK4U67o8tQe"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "isWeighted": {
+    "description": "Identifies whether the average values will be weighted or unweighted.",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

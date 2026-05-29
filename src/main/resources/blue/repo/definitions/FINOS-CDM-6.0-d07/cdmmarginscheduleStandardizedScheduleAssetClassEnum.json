@@ -1,0 +1,15 @@
+{
+  "name": "cdm/margin/schedule/StandardizedScheduleAssetClassEnum",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Commodity",
+      "Credit",
+      "Equity",
+      "ForeignExchange",
+      "InterestRates"
+    ]
+  }
+}

@@ -9,10 +9,10 @@ import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
 
-@TypeBlueId("BAcWp1auMPeb8VAkkswfKBAuLzP3RHuAVrhdHXc2KfUB")
+@TypeBlueId("GEPKwP2gi9PW5dvK92etfK89S4NZtwoUBd6arwrjMs2c")
 public class PaymentMandate {
     public static String blueId() {
-        return "BAcWp1auMPeb8VAkkswfKBAuLzP3RHuAVrhdHXc2KfUB";
+        return "GEPKwP2gi9PW5dvK92etfK89S4NZtwoUBd6arwrjMs2c";
     }
 
     public static String packageName() {
@@ -39,6 +39,8 @@ public class PaymentMandate {
                 blueId(),
                 resourcePath());
     }
+
+    private Node contracts;
 
     private String granterType;
 
@@ -70,7 +72,14 @@ public class PaymentMandate {
 
     private Map<String, Node> chargeAttempts;
 
-    private Node contracts;
+    public Node getContracts() {
+        return contracts;
+    }
+
+    public PaymentMandate contracts(Node contracts) {
+        this.contracts = contracts;
+        return this;
+    }
 
     public String getGranterType() {
         return granterType;
@@ -204,15 +213,6 @@ public class PaymentMandate {
 
     public PaymentMandate chargeAttempts(Map<String, Node> chargeAttempts) {
         this.chargeAttempts = chargeAttempts;
-        return this;
-    }
-
-    public Node getContracts() {
-        return contracts;
-    }
-
-    public PaymentMandate contracts(Node contracts) {
-        this.contracts = contracts;
         return this;
     }
 

@@ -1,0 +1,46 @@
+{
+  "name": "cdm/legaldocumentation/master/MasterAgreementTypeEnum",
+  "description": "The enumerated values to specify the type of the master agreement governing the transaction.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AFB",
+      "Bespoke",
+      "CMA",
+      "CMOF",
+      "EEIPower",
+      "EFETElectricity",
+      "EFETGas",
+      "EMA",
+      "FBF",
+      "GMRA",
+      "GMSLA",
+      "GTMA",
+      "GasEDI",
+      "German",
+      "ICOM",
+      "IETA-ERPA",
+      "IETA-ETMA",
+      "IETA-IETMA",
+      "IFEMA",
+      "IFEOMA",
+      "ISDAFIA-CDEA",
+      "ISDAIIFM-TMA",
+      "ISDAMaster",
+      "JSCC",
+      "LBMA",
+      "LEAP",
+      "MCPSA",
+      "NAESBGas",
+      "NBP",
+      "RussianDerivatives",
+      "RussianRepo",
+      "SCoTA",
+      "Swiss",
+      "TTF",
+      "ZBT"
+    ]
+  }
+}

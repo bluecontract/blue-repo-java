@@ -1,0 +1,15 @@
+{
+  "name": "cdm/product/collateral/AllCriteria",
+  "description": "Used to combine two or more Collateral Criteria using AND logic.",
+  "allCriteria": {
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "this#1"
+    },
+    "schema": {
+      "minItems": 2
+    }
+  }
+}

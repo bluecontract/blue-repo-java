@@ -2,118 +2,31 @@
   "name": "Document Session Bootstrap",
   "description": "MyOS-specific document for bootstrapping document sessions and tracking bootstrap progress",
   "type": {
-    "blueId": "8qXt15h35iHYF2yBcPJ82HzizzZv7iuU2Lu3qorweJfB"
-  },
-  "document": {
-    "description": "Target Blue document to be bootstrapped"
-  },
-  "avatarUrl": {
-    "description": "Uploaded avatar URL propagated to the bootstrapped target sessions",
-    "type": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-    }
-  },
-  "channelBindings": {
-    "description": "Maps channel names to participant identifiers",
-    "type": {
-      "blueId": "G7fBT9PSod1RfHLHkpafAGBDVAJMrMhAMY51ERcyXNrj"
-    },
-    "keyType": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-    },
-    "valueType": {
-      "blueId": "DcoJyCh7XXxy1nR5xjy7qfkUgQ1GiZnKKSxh8DJusBSr"
-    }
-  },
-  "initialMessages": {
-    "description": "Messages sent to participants when inviting them to the bootstrapped document",
-    "defaultMessage": {
-      "description": "Default invitation message sent to all participants",
-      "type": {
-        "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-      }
-    },
-    "perChannel": {
-      "description": "Per-channel custom invitation messages",
-      "type": {
-        "blueId": "G7fBT9PSod1RfHLHkpafAGBDVAJMrMhAMY51ERcyXNrj"
-      },
-      "keyType": {
-        "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-      },
-      "valueType": {
-        "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-      }
-    }
-  },
-  "capabilities": {
-    "description": "Optional MyOS Admin capability contracts to attach (participantsOrchestration, sessionInteraction, workerAgency)",
-    "type": {
-      "blueId": "G7fBT9PSod1RfHLHkpafAGBDVAJMrMhAMY51ERcyXNrj"
-    },
-    "keyType": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-    },
-    "valueType": {
-      "blueId": "4EzhSubEimSQD3zrYHRtobfPPWntUuhEz8YcdxHsi12u"
-    }
-  },
-  "bootstrapStatus": {
-    "description": "Overall bootstrap process status",
-    "type": {
-      "blueId": "58B8orsFkxxy7bWqjLXJmtBs2b5rwnNQNbeoAbGhPkJc"
-    }
-  },
-  "bootstrapError": {
-    "description": "Error message explaining bootstrap failure",
-    "type": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-    }
-  },
-  "initiatorSessionIds": {
-    "description": "Session IDs created for the bootstrap initiator (caller)",
-    "type": {
-      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
-    },
-    "itemType": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-    }
-  },
-  "participantsState": {
-    "description": "Maps channel names to participant activation tracking",
-    "type": {
-      "blueId": "G7fBT9PSod1RfHLHkpafAGBDVAJMrMhAMY51ERcyXNrj"
-    },
-    "keyType": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-    },
-    "valueType": {
-      "blueId": "CocmZUt2K7LuGukwuPSAFC7EFo5HZonozAm4tUsSmuFB"
-    }
+    "blueId": "FMWYekdjwkDnoM2YfHmwuUATHZovSgmDEvSVTmyVmbHc"
   },
   "contracts": {
     "triggeredEventsChannel": {
       "type": {
-        "blueId": "C77W4kVGcxL7Mkx9WL9QESPEFFL2GzWAe647s1Efprt"
+        "blueId": "5HwxfbwRBCxG8xYpowWkCPC9akqUSKV7So2M4QHEmLsZ"
       }
     },
     "lifecycle": {
       "type": {
-        "blueId": "H2aCCTUcLMTJozWkn7HPUjyFBFxamraw1q8DyWk87zxr"
+        "blueId": "2DXGQUiQBQ6CT89jwAsTAXaEPhLgiSXhKCGh9Q7Hv3MQ"
       },
       "event": {
         "type": {
-          "blueId": "BrpmpNt5JkapeUvPqYcxgXZrHNZX3R757dRwuXXdfNM2"
+          "blueId": "Ht1o66MTLKf7JmnEiR27rRLSwdz8FUTgf2mGPNuLSDUL"
         }
       }
     },
     "initHandler": {
       "type": {
-        "blueId": "7X3LkN54Yp88JgZbppPhP6hM3Jqiqv8Z2i4kS7phXtQe"
+        "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "lifecycle"
       },
@@ -122,26 +35,26 @@
           {
             "name": "Initialize Bootstrap Status",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/bootstrapStatus"
                   },
                   "val": {
                     "type": {
-                      "blueId": "FDEV1Q9rBZwaponjfRmZ4HsUHRwPC4gvmeHiRqvkLAkY"
+                      "blueId": "5BQB6Hsr3qxMsZikHdqd2LGeKdQafEQ4jo6TBqm9JZuB"
                     }
                   }
                 }
@@ -153,58 +66,171 @@
     },
     "handleParticipantResolved": {
       "type": {
-        "blueId": "7X3LkN54Yp88JgZbppPhP6hM3Jqiqv8Z2i4kS7phXtQe"
+        "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "triggeredEventsChannel"
       },
       "event": {
         "type": {
-          "blueId": "EQVu8aZyp5ivTyKpSm8ueVsDLgprfcrHzr5QWdH1p6Cz"
+          "blueId": "BswjhjkdTDksVCcc8ijoU2RWcPam7Rphcecc67HJjZRi"
         }
       },
       "steps": {
         "items": [
           {
-            "name": "Prepare Participant State",
+            "name": "Update Participant State",
             "type": {
-              "blueId": "ExZxT61PSpWHpEAtP2WKMXXqxEYN7Z13j7Zv36Dp99kS"
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
             },
-            "code": {
-              "type": {
-                "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-              },
-              "value": "const participantState = {\n  accountStatus: event.participant?.status?.accountStatus || 'Unknown', // \"Active\" | \"Inactive\"\n  errorMessage: ''\n};\n\nreturn {\n  participantState,\n  channelName: event.channelName\n};\n"
-            }
-          },
-          {
-            "name": "Update Participants State",
-            "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
-            },
-            "changeset": {
+            "do": {
               "items": [
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                  "$if": {
+                    "cond": {
+                      "$not": {
+                        "$is": {
+                          "node": {
+                            "$event": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/"
+                            }
+                          },
+                          "pattern": {
+                            "type": {
+                              "blueId": "BswjhjkdTDksVCcc8ijoU2RWcPam7Rphcecc67HJjZRi"
+                            }
+                          }
+                        }
+                      }
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "then": {
+                      "items": [
+                        {
+                          "$return": {
+                            "changeset": {
+                              "items": []
+                            },
+                            "events": {
+                              "items": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "$let": {
+                    "order": {
+                      "items": [
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "channelName"
+                        },
+                        {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "accountStatus"
+                        }
+                      ]
                     },
-                    "value": "/participantsState/${steps['Prepare Participant State'].channelName}"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "vars": {
+                      "channelName": {
+                        "$event": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/channelName"
+                        }
+                      },
+                      "accountStatus": {
+                        "$default": {
+                          "items": [
+                            {
+                              "$event": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "/participant/status/accountStatus"
+                              }
+                            },
+                            {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "Unknown"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
                     },
-                    "value": "${steps['Prepare Participant State'].participantState}"
+                    "path": {
+                      "$pointerJoin": {
+                        "items": [
+                          {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "participantsState"
+                          },
+                          {
+                            "$var": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "channelName"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "val": {
+                      "accountStatus": {
+                        "$var": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "accountStatus"
+                        }
+                      },
+                      "errorMessage": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": ""
+                      }
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "changeset": {
+                      "$changeset": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
                   }
                 }
               ]
@@ -215,61 +241,128 @@
     },
     "handleTargetDocumentSessionStarted": {
       "type": {
-        "blueId": "7X3LkN54Yp88JgZbppPhP6hM3Jqiqv8Z2i4kS7phXtQe"
+        "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "triggeredEventsChannel"
       },
       "event": {
         "type": {
-          "blueId": "FoHDf4WzS4idtPc8rWwVFFvALQ27WzMHxPdXovy7DH4p"
+          "blueId": "4RvVyoEwATa2dtpRRoXbnRLbizq2vqeeMQVmqUrCd8JN"
         }
       },
       "steps": {
         "items": [
           {
-            "name": "Update Initiator Session",
+            "name": "Update Initiator Session And Emit Completion",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
             },
-            "changeset": {
+            "do": {
               "items": [
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                  "$if": {
+                    "cond": {
+                      "$not": {
+                        "$is": {
+                          "node": {
+                            "$event": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/"
+                            }
+                          },
+                          "pattern": {
+                            "type": {
+                              "blueId": "4RvVyoEwATa2dtpRRoXbnRLbizq2vqeeMQVmqUrCd8JN"
+                            }
+                          }
+                        }
+                      }
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "then": {
+                      "items": [
+                        {
+                          "$return": {
+                            "changeset": {
+                              "items": []
+                            },
+                            "events": {
+                              "items": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
                     },
-                    "value": "/initiatorSessionIds"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/initiatorSessionIds"
                     },
-                    "value": "${event.initiatorSessionIds}"
+                    "val": {
+                      "$event": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "/initiatorSessionIds"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$appendEvent": {
+                    "type": {
+                      "blueId": "8crrz93vvovMkh91qyLj6ajwEDAZw1DdTZ3NBjK6jaqV"
+                    },
+                    "status": {
+                      "type": {
+                        "blueId": "BEc6aieqN1iaXT2bNQVag1a1cGygZCLCjXf3mvupetNg"
+                      },
+                      "mode": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "terminated"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "changeset": {
+                      "$changeset": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    },
+                    "events": {
+                      "$events": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
                   }
                 }
               ]
-            }
-          },
-          {
-            "name": "Emit Completion Event",
-            "type": {
-              "blueId": "ExZxT61PSpWHpEAtP2WKMXXqxEYN7Z13j7Zv36Dp99kS"
-            },
-            "code": {
-              "type": {
-                "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-              },
-              "value": "return { events: [ { type: 'Conversation/Status Change', status: { type: 'Conversation/Status Completed' } } ] };\n"
             }
           }
         ]
@@ -277,61 +370,128 @@
     },
     "handleBootstrapFailed": {
       "type": {
-        "blueId": "7X3LkN54Yp88JgZbppPhP6hM3Jqiqv8Z2i4kS7phXtQe"
+        "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "triggeredEventsChannel"
       },
       "event": {
         "type": {
-          "blueId": "9iEADVdqxqgacF3GAZVMFZu4m5ywuNpsGzButLUNkPWo"
+          "blueId": "FaZorE1FNvj9ar6rxL8jHRNYQ6WYo4hERoE35v7A5DnL"
         }
       },
       "steps": {
         "items": [
           {
-            "name": "Update Error Message",
+            "name": "Update Error And Emit Failure",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
             },
-            "changeset": {
+            "do": {
               "items": [
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                  "$if": {
+                    "cond": {
+                      "$not": {
+                        "$is": {
+                          "node": {
+                            "$event": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/"
+                            }
+                          },
+                          "pattern": {
+                            "type": {
+                              "blueId": "FaZorE1FNvj9ar6rxL8jHRNYQ6WYo4hERoE35v7A5DnL"
+                            }
+                          }
+                        }
+                      }
                     },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "then": {
+                      "items": [
+                        {
+                          "$return": {
+                            "changeset": {
+                              "items": []
+                            },
+                            "events": {
+                              "items": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
                     },
-                    "value": "/bootstrapError"
-                  },
-                  "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/bootstrapError"
                     },
-                    "value": "${event.reason}"
+                    "val": {
+                      "$event": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "/reason"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$appendEvent": {
+                    "type": {
+                      "blueId": "8crrz93vvovMkh91qyLj6ajwEDAZw1DdTZ3NBjK6jaqV"
+                    },
+                    "status": {
+                      "type": {
+                        "blueId": "6tenJidVxJRDqxtYM4xGs6fxD2E7MVvGQwv5rF4HnGsh"
+                      },
+                      "mode": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "terminated"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "changeset": {
+                      "$changeset": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    },
+                    "events": {
+                      "$events": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
                   }
                 }
               ]
-            }
-          },
-          {
-            "name": "Emit Failure Event",
-            "type": {
-              "blueId": "ExZxT61PSpWHpEAtP2WKMXXqxEYN7Z13j7Zv36Dp99kS"
-            },
-            "code": {
-              "type": {
-                "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-              },
-              "value": "return { events: [ { type: 'Conversation/Status Change', status: { type: 'Conversation/Status Failed' } } ] };\n"
             }
           }
         ]
@@ -339,17 +499,17 @@
     },
     "handleStatusChange": {
       "type": {
-        "blueId": "7X3LkN54Yp88JgZbppPhP6hM3Jqiqv8Z2i4kS7phXtQe"
+        "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
       },
       "channel": {
         "type": {
-          "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "triggeredEventsChannel"
       },
       "event": {
         "type": {
-          "blueId": "C48nKSkbxraMSv4gCiGYVHKFjmtK12k63Yasn95zknWE"
+          "blueId": "8crrz93vvovMkh91qyLj6ajwEDAZw1DdTZ3NBjK6jaqV"
         }
       },
       "steps": {
@@ -357,28 +517,25 @@
           {
             "name": "Update Bootstrap Status",
             "type": {
-              "blueId": "FtHZJzH4hqAoGxFBjsmy1svfT4BwEBB4aHpFSZycZLLa"
+              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
             },
             "changeset": {
               "items": [
                 {
                   "op": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "replace"
                   },
                   "path": {
                     "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/bootstrapStatus"
                   },
                   "val": {
-                    "type": {
-                      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
-                    },
-                    "value": "${event.status}"
+                    "$event": "/status"
                   }
                 }
               ]
@@ -386,6 +543,93 @@
           }
         ]
       }
+    }
+  },
+  "document": {
+    "description": "Target Blue document to be bootstrapped"
+  },
+  "avatarUrl": {
+    "description": "Uploaded avatar URL propagated to the bootstrapped target sessions",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "channelBindings": {
+    "description": "Maps channel names to participant identifiers",
+    "type": {
+      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+    },
+    "keyType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "valueType": {
+      "blueId": "4FAZ94JPExNM4pn2ZhtdHa4CVP7uASmLNVrBy7aCG1p5"
+    }
+  },
+  "initialMessages": {
+    "description": "Messages sent to participants when inviting them to the bootstrapped document",
+    "defaultMessage": {
+      "description": "Default invitation message sent to all participants",
+      "type": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      }
+    },
+    "perChannel": {
+      "description": "Per-channel custom invitation messages",
+      "type": {
+        "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+      },
+      "keyType": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      },
+      "valueType": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      }
+    }
+  },
+  "capabilities": {
+    "description": "Optional MyOS Admin capability contracts to attach (participantsOrchestration, sessionInteraction, workerAgency)",
+    "type": {
+      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+    },
+    "keyType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "valueType": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    }
+  },
+  "bootstrapStatus": {
+    "description": "Overall bootstrap process status",
+    "type": {
+      "blueId": "9rzc7B4yEw9gVuuaoFbRUpfajTPuxBLecVWkmHuBSg7z"
+    }
+  },
+  "bootstrapError": {
+    "description": "Error message explaining bootstrap failure",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "initiatorSessionIds": {
+    "description": "Session IDs created for the bootstrap initiator (caller)",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "participantsState": {
+    "description": "Maps channel names to participant activation tracking",
+    "type": {
+      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+    },
+    "keyType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "valueType": {
+      "blueId": "ASa82RtPSXwdys7M5Xs5s3brTjYgJmQqJt2uyraQGrNA"
     }
   }
 }

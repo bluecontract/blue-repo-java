@@ -1,0 +1,22 @@
+{
+  "name": "cdm/observable/asset/FeeTypeEnum",
+  "description": "The enumerated values to specify an event that has given rise to a fee.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Assignment",
+      "BrokerageCommission",
+      "CorporateAction",
+      "CreditEvent",
+      "Increase",
+      "Novation",
+      "PartialTermination",
+      "Premium",
+      "Renegotiation",
+      "Termination",
+      "Upfront"
+    ]
+  }
+}

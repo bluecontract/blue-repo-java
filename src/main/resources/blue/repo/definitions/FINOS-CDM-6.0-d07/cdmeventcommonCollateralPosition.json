@@ -1,0 +1,46 @@
+{
+  "name": "cdm/event/common/CollateralPosition",
+  "description": "Specifies the individual components of collateral positions.",
+  "cashBalance": {
+    "description": "The aggregate cost of proceeds",
+    "type": {
+      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+    }
+  },
+  "collateralPositionStatus": {
+    "description": "Indicates the collateral positions settlement status.",
+    "type": {
+      "blueId": "9XNiSM6p3TKgrn7CpLyzqZkxD6Y2qELnuxek2UV5SHfT"
+    }
+  },
+  "priceQuantity": {
+    "description": "Position with many price quantities.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "7ZZfSxTMhHstRLpYQMESSSTY9jN668fPJwkSAzcVT7aR"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  },
+  "product": {
+    "description": "The product underlying the position.",
+    "type": {
+      "blueId": "9qWGsXauVnxS5oNKRAwfaMctCyeviwAypHKtHdS4HXZd#0"
+    }
+  },
+  "tradeReference": {
+    "description": "Reference to the Contract, in case product is contractual and the contract has been formed",
+    "type": {
+      "blueId": "EQ41UGrPkUeaUNXD9QmELA1aEoVBtx9tVzgQZ5Tp1rMT"
+    }
+  },
+  "treatment": {
+    "description": "Specifies if there is any treatment to be applied to collateral, such as percentage discount which will impact collateral value.\n",
+    "type": {
+      "blueId": "7Goz9bVSPKwrh2w1JemH5yTx3WzBpEtoy2a6er7Qn1hs"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "cdm/product/collateral/CounterpartyOwnIssuePermitted",
+  "counterpartyOwnIssuePermitted": {
+    "description": "Represents a filter based on whether it is permitted for the underlying asset to be issued by the posting entity or part of their corporate family.\n",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "cdm/observable/asset/InformationSource",
+  "description": "A class defining the source for a piece of information (e.g. a rate fix or an FX fixing). The attribute names have been adjusted from FpML to address the fact that the information is not limited to rates.\n",
+  "sourcePage": {
+    "description": "A specific page for the source for obtaining a market data point. In FpML, this is specified as a scheme, rateSourcePageScheme, for which no coding Scheme or URI is specified.\n",
+    "type": {
+      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+    }
+  },
+  "sourcePageHeading": {
+    "description": "The heading for the source on a given source page.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "sourceProvider": {
+    "description": "An information source for obtaining a market data point. For example Bloomberg, Reuters, Telerate, etc.",
+    "type": {
+      "blueId": "F146JGqnWZ5sfLAxTTdw6wibcDWTqzmMxom6z62GKkRB"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

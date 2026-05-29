@@ -3,14 +3,13 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Request;
-import blue.repo.core.Channel;
+import blue.repo.coordination.Request;
 import java.util.Map;
 
-@TypeBlueId("3f9PA4RUDBxs6DsqGEYjna2RNf8XhCDHjQGDjLyNZyRh")
+@TypeBlueId("FWgJ8eninbRZvg2SWY4VxbfpvZvRxseALoAvwTu9bqVr")
 public class StartWorkerSessionRequested extends Request {
     public static String blueId() {
-        return "3f9PA4RUDBxs6DsqGEYjna2RNf8XhCDHjQGDjLyNZyRh";
+        return "FWgJ8eninbRZvg2SWY4VxbfpvZvRxseALoAvwTu9bqVr";
     }
 
     public static String packageName() {
@@ -42,7 +41,7 @@ public class StartWorkerSessionRequested extends Request {
 
     private Node document;
 
-    private Map<String, Channel> channelBindings;
+    private Map<String, Node> channelBindings;
 
     private Node initialMessages;
 
@@ -66,11 +65,11 @@ public class StartWorkerSessionRequested extends Request {
         return this;
     }
 
-    public Map<String, Channel> getChannelBindings() {
+    public Map<String, Node> getChannelBindings() {
         return channelBindings;
     }
 
-    public StartWorkerSessionRequested channelBindings(Map<String, Channel> channelBindings) {
+    public StartWorkerSessionRequested channelBindings(Map<String, Node> channelBindings) {
         this.channelBindings = channelBindings;
         return this;
     }

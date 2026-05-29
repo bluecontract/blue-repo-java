@@ -1,0 +1,11 @@
+{
+  "name": "cdm/regulation/FinInstrm",
+  "othr": {
+    "type": {
+      "blueId": "R98V7nqJGiVMkb7J8LKaFUdH2rzyHEqy34FbMR19zSG"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

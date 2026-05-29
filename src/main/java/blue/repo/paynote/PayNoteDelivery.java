@@ -4,13 +4,13 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.common.Timestamp;
-import blue.repo.conversation.DocumentBootstrapRequested;
-import blue.repo.conversation.DocumentStatus;
+import blue.repo.coordination.DocumentBootstrapRequested;
+import blue.repo.coordination.DocumentStatus;
 
-@TypeBlueId("8NU68ai4UMAsKXphbR5sH8FythK6AE7eDUMEFzDEWMKR")
+@TypeBlueId("8qyV7LVoZPHGuMfoK89S2Km3ChruvvCNknwXAuf3VQeN")
 public class PayNoteDelivery {
     public static String blueId() {
-        return "8NU68ai4UMAsKXphbR5sH8FythK6AE7eDUMEFzDEWMKR";
+        return "8qyV7LVoZPHGuMfoK89S2Km3ChruvvCNknwXAuf3VQeN";
     }
 
     public static String packageName() {
@@ -38,6 +38,8 @@ public class PayNoteDelivery {
                 resourcePath());
     }
 
+    private Node contracts;
+
     private DocumentBootstrapRequested payNoteBootstrapRequest;
 
     private DocumentBootstrapRequested paymentMandateBootstrapRequest;
@@ -56,7 +58,14 @@ public class PayNoteDelivery {
 
     private String deliveryError;
 
-    private Node contracts;
+    public Node getContracts() {
+        return contracts;
+    }
+
+    public PayNoteDelivery contracts(Node contracts) {
+        this.contracts = contracts;
+        return this;
+    }
 
     public DocumentBootstrapRequested getPayNoteBootstrapRequest() {
         return payNoteBootstrapRequest;
@@ -136,15 +145,6 @@ public class PayNoteDelivery {
 
     public PayNoteDelivery deliveryError(String deliveryError) {
         this.deliveryError = deliveryError;
-        return this;
-    }
-
-    public Node getContracts() {
-        return contracts;
-    }
-
-    public PayNoteDelivery contracts(Node contracts) {
-        this.contracts = contracts;
         return this;
     }
 

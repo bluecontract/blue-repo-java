@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/asset/DividendEntitlementEnum",
+  "description": "The enumerated values to specify the date on which the receiver of the equity payout is entitled to the dividend.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "ExDate",
+      "RecordDate"
+    ]
+  }
+}

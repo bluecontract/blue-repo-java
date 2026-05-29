@@ -4,12 +4,12 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.common.Timestamp;
-import blue.repo.conversation.Event;
+import blue.repo.coordination.Event;
 
-@TypeBlueId("6VQC585V4SdpyA5hCeQQGM178bbeW3D2WcKt8ZCWK9s3")
+@TypeBlueId("9ST1DLJxByDzvtdeJt8SFeZadSYokstVbWYcGVXnrEzk")
 public class PayNoteAcceptedByClient extends Event {
     public static String blueId() {
-        return "6VQC585V4SdpyA5hCeQQGM178bbeW3D2WcKt8ZCWK9s3";
+        return "9ST1DLJxByDzvtdeJt8SFeZadSYokstVbWYcGVXnrEzk";
     }
 
     public static String packageName() {

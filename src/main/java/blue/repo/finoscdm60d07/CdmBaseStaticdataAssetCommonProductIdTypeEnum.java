@@ -1,0 +1,38 @@
+package blue.repo.finoscdm60d07;
+
+import blue.language.model.Node;
+import blue.language.model.TypeBlueId;
+import blue.repo.RepositoryType;
+
+@TypeBlueId("6V8L7fF5m6HSsfpQMXzE1QMay5SRtGSdqf93abs25g4g")
+public class CdmBaseStaticdataAssetCommonProductIdTypeEnum {
+    public static String blueId() {
+        return "6V8L7fF5m6HSsfpQMXzE1QMay5SRtGSdqf93abs25g4g";
+    }
+
+    public static String packageName() {
+        return "FINOS-CDM-6.0-d07";
+    }
+
+    public static String typeName() {
+        return "cdm/base/staticdata/asset/common/ProductIdTypeEnum";
+    }
+
+    public static String qualifiedName() {
+        return "FINOS-CDM-6.0-d07/cdm/base/staticdata/asset/common/ProductIdTypeEnum";
+    }
+
+    public static String resourcePath() {
+        return "blue/repo/definitions/FINOS-CDM-6.0-d07/cdmbasestaticdataassetcommonProductIdTypeEnum.json";
+    }
+
+    public static RepositoryType repositoryType() {
+        return RepositoryType.of(
+                packageName(),
+                typeName(),
+                qualifiedName(),
+                blueId(),
+                resourcePath());
+    }
+
+}

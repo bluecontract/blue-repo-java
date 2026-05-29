@@ -1,0 +1,31 @@
+{
+  "name": "cdm/product/collateral/AgencyRatingCriteria",
+  "description": "Represents a class to specify a credit notation.",
+  "boundary": {
+    "description": "Indicates the boundary of a credit agency rating i.e minimum or maximum.",
+    "type": {
+      "blueId": "4XLXe5YqD28Aub8ZHx8MKqrY6BkJJoM83r457RwiTaAn"
+    }
+  },
+  "creditNotation": {
+    "description": "Indicates the agency rating criteria specified for the asset or issuer.",
+    "type": {
+      "blueId": "Ev89x8XtmWqpQ7gvtgihFRArYnu2oMHyCFeYmZeBYydt"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "mismatchResolution": {
+    "description": "Indicator for options to be used if several agency ratings (>1) are specified and its necessary to identify specific charateristics. i.e (lowest or highest).\n",
+    "type": {
+      "blueId": "9oe4gPYKe4ctpZwSdP3YSVnweREZzsq9SJfff8y3RmAE"
+    }
+  },
+  "referenceAgency": {
+    "description": "identifies the dominant reference agency if there is a missmatch and several reference agencies exsist.",
+    "type": {
+      "blueId": "4cXm34z6DXgmjwV5da5VyP8ugnbd319u4ZyJ25GU13PG"
+    }
+  }
+}

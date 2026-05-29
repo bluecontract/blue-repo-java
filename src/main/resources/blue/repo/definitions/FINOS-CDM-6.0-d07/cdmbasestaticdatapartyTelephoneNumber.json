@@ -1,0 +1,19 @@
+{
+  "name": "cdm/base/staticdata/party/TelephoneNumber",
+  "description": "A class to specify a telephone number as a type of phone number (e.g. work, personal, ...) alongside with the actual number.\n",
+  "number": {
+    "description": "The actual telephone number.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "telephoneNumberType": {
+    "description": "The type of telephone number, e.g. work, mobile.",
+    "type": {
+      "blueId": "9X11EysMRWHqLshucfQEjhcCcx55Z9wuDwUzYiVfGdjM"
+    }
+  }
+}

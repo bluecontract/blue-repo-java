@@ -1,0 +1,19 @@
+{
+  "name": "cdm/observable/asset/ValuationMethodEnum",
+  "description": "The enumerated values to specify the ISDA defined methodology for determining the final price of the reference obligation for purposes of cash settlement.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "AverageBlendedHighest",
+      "AverageBlendedMarket",
+      "AverageHighest",
+      "AverageMarket",
+      "BlendedHighest",
+      "BlendedMarket",
+      "Highest",
+      "Market"
+    ]
+  }
+}

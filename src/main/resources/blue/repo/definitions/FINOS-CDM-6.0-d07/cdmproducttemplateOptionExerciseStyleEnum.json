@@ -1,0 +1,14 @@
+{
+  "name": "cdm/product/template/OptionExerciseStyleEnum",
+  "description": "The enumerated values to specify the option exercise style. i.e., European, Bermuda or American.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "American",
+      "Bermuda",
+      "European"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "cdm/base/datetime/PeriodTimeEnum",
+  "description": "The enumeration values to specify a time period containing additional values such as Term.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Hour",
+      "Minute",
+      "Second"
+    ]
+  }
+}

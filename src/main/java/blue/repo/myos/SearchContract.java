@@ -3,14 +3,13 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.core.Marker;
 import java.util.List;
 import java.util.Map;
 
-@TypeBlueId("5KdjguBmn7AwB9d8tjKxRh4xUHU9T8WDJ4dbaY6qgPvx")
-public class SearchContract extends Marker {
+@TypeBlueId("ACDXskXQ1cmM9uN8UCRKgH7fEHzqUW5XzyjKgsxgdujs")
+public class SearchContract {
     public static String blueId() {
-        return "5KdjguBmn7AwB9d8tjKxRh4xUHU9T8WDJ4dbaY6qgPvx";
+        return "ACDXskXQ1cmM9uN8UCRKgH7fEHzqUW5XzyjKgsxgdujs";
     }
 
     public static String packageName() {

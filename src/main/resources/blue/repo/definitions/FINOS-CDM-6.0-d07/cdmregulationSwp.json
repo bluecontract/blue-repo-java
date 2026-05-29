@@ -1,0 +1,19 @@
+{
+  "name": "cdm/regulation/Swp",
+  "swpIn": {
+    "type": {
+      "blueId": "HQjrDN5yinN1LgwNgkzW9pLtWVtutNzMayxjjPkcUCt6"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "swpOut": {
+    "type": {
+      "blueId": "2RoWhn142Vg6owzojCoYuHek5Q5yLzM4UCxxbF7hfqn8"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

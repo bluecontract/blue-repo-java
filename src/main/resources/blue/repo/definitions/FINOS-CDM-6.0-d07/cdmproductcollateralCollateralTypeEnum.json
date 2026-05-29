@@ -1,0 +1,14 @@
+{
+  "name": "cdm/product/collateral/CollateralTypeEnum",
+  "description": "Specifies the types of collateral that are accepted by the Lender",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Cash",
+      "CashPool",
+      "NonCash"
+    ]
+  }
+}

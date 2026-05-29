@@ -1,0 +1,34 @@
+{
+  "name": "cdm/product/template/ReturnTerms",
+  "description": "Specifies the type of return of a performance payout.",
+  "correlationReturnTerms": {
+    "description": "Return terms based upon the observed correlation between the components of the underlying basket.",
+    "type": {
+      "blueId": "CvssjVgch1so8V8JYuFKEaj2QvTbjKmpVK1t775XNXnT"
+    }
+  },
+  "dividendReturnTerms": {
+    "description": "Return terms based upon dividend payments associated to the underlier.",
+    "type": {
+      "blueId": "2CHEapm6xLHpsPWkBsoiBWggdLnwY1nwkXUCdtwXBUCG"
+    }
+  },
+  "priceReturnTerms": {
+    "description": "Return terms based upon the underlier's observed price.",
+    "type": {
+      "blueId": "2ZFGdsnpngfaZgwXf8UoFcEbgom8Q9pJG8aRS9JWFGsi"
+    }
+  },
+  "varianceReturnTerms": {
+    "description": "Return terms based upon the observed variance of the underlier's price.",
+    "type": {
+      "blueId": "DPJFmC7X7Caf3hiNzMyRFk7wsjNXsQBvhTxu3cB7cuiU"
+    }
+  },
+  "volatilityReturnTerms": {
+    "description": "Return terms based upon the observed volatility of the underlier's price.",
+    "type": {
+      "blueId": "7fKwqT861aADrPe1YbmaU9d3Vc76AwfZKE17YydZoAw5"
+    }
+  }
+}

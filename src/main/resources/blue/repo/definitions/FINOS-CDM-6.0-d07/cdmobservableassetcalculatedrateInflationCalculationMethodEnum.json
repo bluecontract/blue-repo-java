@@ -1,0 +1,14 @@
+{
+  "name": "cdm/observable/asset/calculatedrate/InflationCalculationMethodEnum",
+  "description": "Indicates how to use the inflation index to calculate the payment (e.g. Ratio, Return, Spread). Added for Inflation Asset Swap\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Ratio",
+      "Return",
+      "Spread"
+    ]
+  }
+}

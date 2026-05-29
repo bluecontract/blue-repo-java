@@ -1,0 +1,12 @@
+{
+  "name": "cdm/event/common/AssetTransferTypeEnum",
+  "description": "The qualification of the type of asset transfer.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "FreeOfPayment"
+    ]
+  }
+}

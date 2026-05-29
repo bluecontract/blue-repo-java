@@ -1,0 +1,28 @@
+{
+  "name": "cdm/product/asset/AssetDeliveryInformation",
+  "description": "Contains the information relative to the delivery of the asset.",
+  "deliveryCapacity": {
+    "description": "The number of units included in the transaction for each delivery interval",
+    "type": {
+      "blueId": "BADvBimj9VPGxtVkguZSpocTXA84MV8LnKjm4ocmButh"
+    }
+  },
+  "location": {
+    "description": "Defines the location of the delivery of the commodity.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "Fybw1anv7w9FihkJHjQD3jM7XDfkfsTJuNBNw9xCrbw2"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "periods": {
+    "description": "Defines the periods of delivery, including the delivery profile.",
+    "type": {
+      "blueId": "H6t8NffsdWqtanqDpN7t7icMs8RXqgzAi66JLpnZD6Vr"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "cdm/base/staticdata/party/NaturalPersonRole",
+  "description": "A class to specify the role(s) that natural person(s) may have in relation to the contract.",
+  "personReference": {
+    "description": "A reference to the natural person to whom the role refers to.",
+    "type": {
+      "blueId": "AqRajqKToreHabAHCgT66Zc87qk24EdQSawSThmGb9Eu"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "role": {
+    "description": "FpML specifies a person role that is distinct from the party role.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "8BPN2WzENM9uNEUW9V5skTwkbnYKVTQEUnxnvziaZsix"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

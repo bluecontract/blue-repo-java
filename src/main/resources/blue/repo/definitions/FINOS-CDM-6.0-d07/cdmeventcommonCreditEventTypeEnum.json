@@ -1,0 +1,24 @@
+{
+  "name": "cdm/event/common/CreditEventTypeEnum",
+  "description": "Represents the enumerated values to specify a credit event type.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Bankruptcy",
+      "DistressedRatingsDowngrade",
+      "FailureToPay",
+      "FailureToPayInterest",
+      "FailureToPayPrincipal",
+      "GovernmentalIntervention",
+      "ImpliedWritedown",
+      "MaturityExtension",
+      "ObligationAcceleration",
+      "ObligationDefault",
+      "RepudiationMoratorium",
+      "Restructuring",
+      "Writedown"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "cdm/margin/schedule/StandardizedSchedule",
+  "assetClass": {
+    "type": {
+      "blueId": "HXVDHCRqbEvzCXv8LwaeEzMy47NG3ogpguy7Gqu2K4Fh"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "durationInYears": {
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    }
+  },
+  "notional": {
+    "type": {
+      "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "notionalCurrency": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "productClass": {
+    "type": {
+      "blueId": "HcbAjsykfijmo2YKjhqTPZuhRKVjh1MvNA2ZnQSoAZsG"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

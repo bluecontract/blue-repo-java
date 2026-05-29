@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("GQaGqFxHDz64L1c9QkCbz52ths6bMVtpHnw4QDngzQYs")
+@TypeBlueId("47EN5A1B1ZXXdXMEoURVJquMSjdDuKFNDjMrkvVxoVJk")
 public class Timestamp {
     public static String blueId() {
-        return "GQaGqFxHDz64L1c9QkCbz52ths6bMVtpHnw4QDngzQYs";
+        return "47EN5A1B1ZXXdXMEoURVJquMSjdDuKFNDjMrkvVxoVJk";
     }
 
     public static String packageName() {

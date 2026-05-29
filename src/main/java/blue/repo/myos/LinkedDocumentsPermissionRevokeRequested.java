@@ -3,12 +3,12 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Request;
+import blue.repo.coordination.Request;
 
-@TypeBlueId("4XzYndDA5v9yL5LYBq1Jk7ibA5x2ebN8vbSbEAoRrjaG")
+@TypeBlueId("BKyVzxDr2rJp7weHvuzyrgSJ42ATwN3SizPchqu7QMVc")
 public class LinkedDocumentsPermissionRevokeRequested extends Request {
     public static String blueId() {
-        return "4XzYndDA5v9yL5LYBq1Jk7ibA5x2ebN8vbSbEAoRrjaG";
+        return "BKyVzxDr2rJp7weHvuzyrgSJ42ATwN3SizPchqu7QMVc";
     }
 
     public static String packageName() {

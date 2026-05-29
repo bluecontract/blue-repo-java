@@ -1,0 +1,19 @@
+{
+  "name": "cdm/product/asset/CreditSeniorityEnum",
+  "description": "Seniority of debt instruments comprising the index.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Other",
+      "SeniorLossAbsorbingCapacity",
+      "SeniorSec",
+      "SeniorUnSec",
+      "SubLowerTier2",
+      "SubTier1",
+      "SubTier3",
+      "SubUpperTier2"
+    ]
+  }
+}

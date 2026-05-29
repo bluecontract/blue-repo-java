@@ -1,0 +1,18 @@
+{
+  "name": "cdm/base/datetime/DayOfWeekEnum",
+  "description": "The enumerated values to specify a day of the seven-day week.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "FRI",
+      "MON",
+      "SAT",
+      "SUN",
+      "THU",
+      "TUE",
+      "WED"
+    ]
+  }
+}

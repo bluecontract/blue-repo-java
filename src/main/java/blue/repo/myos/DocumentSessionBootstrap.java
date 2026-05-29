@@ -3,15 +3,14 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.DocumentStatus;
-import blue.repo.core.Channel;
+import blue.repo.coordination.DocumentStatus;
 import java.util.List;
 import java.util.Map;
 
-@TypeBlueId("AhSRfEjNdQ8AvA3AFigjdyQzAtoc2J29jpacEcKBNa32")
+@TypeBlueId("H61Vdu2AMWzF3ZFLWFQrYws565TrsvVg7S5CcFFx3EbP")
 public class DocumentSessionBootstrap extends MyOSAdminBase {
     public static String blueId() {
-        return "AhSRfEjNdQ8AvA3AFigjdyQzAtoc2J29jpacEcKBNa32";
+        return "H61Vdu2AMWzF3ZFLWFQrYws565TrsvVg7S5CcFFx3EbP";
     }
 
     public static String packageName() {
@@ -43,7 +42,7 @@ public class DocumentSessionBootstrap extends MyOSAdminBase {
 
     private String avatarUrl;
 
-    private Map<String, Channel> channelBindings;
+    private Map<String, Node> channelBindings;
 
     private Node initialMessages;
 
@@ -75,11 +74,11 @@ public class DocumentSessionBootstrap extends MyOSAdminBase {
         return this;
     }
 
-    public Map<String, Channel> getChannelBindings() {
+    public Map<String, Node> getChannelBindings() {
         return channelBindings;
     }
 
-    public DocumentSessionBootstrap channelBindings(Map<String, Channel> channelBindings) {
+    public DocumentSessionBootstrap channelBindings(Map<String, Node> channelBindings) {
         this.channelBindings = channelBindings;
         return this;
     }

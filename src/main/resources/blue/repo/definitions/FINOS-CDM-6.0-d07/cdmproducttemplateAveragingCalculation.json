@@ -1,0 +1,22 @@
+{
+  "name": "cdm/product/template/AveragingCalculation",
+  "description": "Defines parameters for use in cases when a valuation or other term is based on an average of market observations.\n",
+  "averagingMethod": {
+    "description": "Specifies enumerations for the type of averaging calculation.",
+    "type": {
+      "blueId": "BfP14BhNSGgCtaihCTUKBZUmocYb1YMoa8xwWZ25aGqL"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "precision": {
+    "description": "Rounding applied to the average calculation.",
+    "type": {
+      "blueId": "DnXzzassZD8x4ZyWkS46bBpvzPMBW4txNdG32xcULQhy"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

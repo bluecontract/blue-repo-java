@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.common.Currency;
 
-@TypeBlueId("emSg8pWstEHBtnbUPNu7rmqMzWskDCUbyggteUdk32w")
+@TypeBlueId("6S6GNBUumRoRS4YWJxiiKeiyZ2dYH2nhcSpzGYvBJAha")
 public class PayNote {
     public static String blueId() {
-        return "emSg8pWstEHBtnbUPNu7rmqMzWskDCUbyggteUdk32w";
+        return "6S6GNBUumRoRS4YWJxiiKeiyZ2dYH2nhcSpzGYvBJAha";
     }
 
     public static String packageName() {
@@ -36,6 +36,8 @@ public class PayNote {
                 resourcePath());
     }
 
+    private Node contracts;
+
     private String kind;
 
     private String status;
@@ -50,7 +52,14 @@ public class PayNote {
 
     private Node payNoteInitialStateDescription;
 
-    private Node contracts;
+    public Node getContracts() {
+        return contracts;
+    }
+
+    public PayNote contracts(Node contracts) {
+        this.contracts = contracts;
+        return this;
+    }
 
     public String getKind() {
         return kind;
@@ -112,15 +121,6 @@ public class PayNote {
 
     public PayNote payNoteInitialStateDescription(Node payNoteInitialStateDescription) {
         this.payNoteInitialStateDescription = payNoteInitialStateDescription;
-        return this;
-    }
-
-    public Node getContracts() {
-        return contracts;
-    }
-
-    public PayNote contracts(Node contracts) {
-        this.contracts = contracts;
         return this;
     }
 

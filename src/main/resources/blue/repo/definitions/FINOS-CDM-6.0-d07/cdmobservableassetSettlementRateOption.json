@@ -1,0 +1,19 @@
+{
+  "name": "cdm/observable/asset/SettlementRateOption",
+  "description": "Defines the settlement rate option to use for fixing in case of cash settlement. Currently only applicable to foreign exchange fixing in case of cross-currency settlement.\n",
+  "priceSourceDisruption": {
+    "description": "An attribute defining the parameters to get a new quote when a settlement rate option is disrupted.",
+    "type": {
+      "blueId": "T1PcoKuCw9V4QBzrSLDHPHGXfswvbw8m9j78jcf91g7"
+    }
+  },
+  "settlementRateOption": {
+    "description": "The rate source for the conversion to the settlement currency. This source is specified through a scheme that reflects the terms of the Annex A to the 1998 FX and Currency Option Definitions.\n",
+    "type": {
+      "blueId": "21coEyT7ssdAjeceX6KNSWdCFQhFKv1xukphm8Kb7GA4"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

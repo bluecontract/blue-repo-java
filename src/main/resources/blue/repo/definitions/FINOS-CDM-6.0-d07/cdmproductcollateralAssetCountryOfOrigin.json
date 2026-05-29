@@ -1,0 +1,12 @@
+{
+  "name": "cdm/product/collateral/AssetCountryOfOrigin",
+  "assetCountryOfOrigin": {
+    "description": "Represents a filter on the asset country of origin based on the ISO Standard 3166.",
+    "type": {
+      "blueId": "845nMVYB54BfARn15dRu8SXv1PR2j5FyZagnkbQVX5in"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

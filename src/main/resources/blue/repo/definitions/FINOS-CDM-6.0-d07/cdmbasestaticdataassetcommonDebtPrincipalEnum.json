@@ -1,0 +1,19 @@
+{
+  "name": "cdm/base/staticdata/asset/common/DebtPrincipalEnum",
+  "description": "Represents an enumeration list that specifies the general rule for repayment of principal.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Amortising",
+      "Bullet",
+      "Callable",
+      "IndexLinked",
+      "InflationLinked",
+      "OtherStructured",
+      "PrincipalOnly",
+      "Puttable"
+    ]
+  }
+}

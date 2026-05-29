@@ -1,0 +1,19 @@
+{
+  "name": "cdm/regulation/Prsn",
+  "ctryOfBrnch": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "othr": {
+    "type": {
+      "blueId": "R98V7nqJGiVMkb7J8LKaFUdH2rzyHEqy34FbMR19zSG"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

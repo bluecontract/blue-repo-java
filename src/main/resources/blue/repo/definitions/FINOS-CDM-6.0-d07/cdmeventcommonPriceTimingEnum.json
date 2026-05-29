@@ -1,0 +1,12 @@
+{
+  "name": "cdm/event/common/PriceTimingEnum",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "ClosingPrice",
+      "OpeningPrice"
+    ]
+  }
+}

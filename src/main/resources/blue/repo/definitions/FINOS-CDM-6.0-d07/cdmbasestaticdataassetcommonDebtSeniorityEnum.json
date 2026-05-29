@@ -1,0 +1,14 @@
+{
+  "name": "cdm/base/staticdata/asset/common/DebtSeniorityEnum",
+  "description": "Specifies the order of repayment in the event of a sale or bankruptcy of the issuer or a related party (eg guarantor).\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Secured",
+      "Senior",
+      "Subordinated"
+    ]
+  }
+}

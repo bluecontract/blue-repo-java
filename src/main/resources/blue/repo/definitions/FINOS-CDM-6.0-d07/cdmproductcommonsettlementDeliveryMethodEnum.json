@@ -1,0 +1,15 @@
+{
+  "name": "cdm/product/common/settlement/DeliveryMethodEnum",
+  "description": "Specifies delivery methods for securities transactions. This coding-scheme defines the possible delivery methods for securities.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "DeliveryVersusPayment",
+      "FreeOfPayment",
+      "PreDelivery",
+      "PrePayment"
+    ]
+  }
+}

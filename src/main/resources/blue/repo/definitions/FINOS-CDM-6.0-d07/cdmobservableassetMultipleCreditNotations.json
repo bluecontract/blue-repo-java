@@ -1,0 +1,35 @@
+{
+  "name": "cdm/observable/asset/MultipleCreditNotations",
+  "description": "Represetns a class to specify multiple credit notations alongside a conditional 'any' or 'all' qualifier.",
+  "condition": {
+    "description": "An enumerated element, to qualify whether All or Any credit notation applies.",
+    "type": {
+      "blueId": "E6D3rJPkCD3TTUB7RHMfgLuhDU9ajFgT85hyMcJkagsH"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "creditNotation": {
+    "description": "At least two credit notations much be specified.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "J9Pxr5r3aXac8695zdk4ZHX7ZTpzYtpJRUFtEa5paeA1"
+    },
+    "schema": {
+      "minItems": 2
+    }
+  },
+  "mismatchResolution": {
+    "type": {
+      "blueId": "9oe4gPYKe4ctpZwSdP3YSVnweREZzsq9SJfff8y3RmAE"
+    }
+  },
+  "referenceAgency": {
+    "type": {
+      "blueId": "4cXm34z6DXgmjwV5da5VyP8ugnbd319u4ZyJ25GU13PG"
+    }
+  }
+}

@@ -4,12 +4,12 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.common.Timestamp;
-import blue.repo.conversation.Response;
+import blue.repo.coordination.Response;
 
-@TypeBlueId("8H1L8VGE9vXzbGgrv5RNkpYXngf43futPHQvnJ4SJD2B")
+@TypeBlueId("9MDjTe2agSVnBooUFpMSzXenPYPgTC7Z4CvTB9nkyCyc")
 public class TransactionDetailsUpdateUnlocked extends Response {
     public static String blueId() {
-        return "8H1L8VGE9vXzbGgrv5RNkpYXngf43futPHQvnJ4SJD2B";
+        return "9MDjTe2agSVnBooUFpMSzXenPYPgTC7Z4CvTB9nkyCyc";
     }
 
     public static String packageName() {

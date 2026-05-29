@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("GSMPZr2s6Nb6SwHzx8XwLRwbJnUdboZDPckMQhwLgvJ7")
+@TypeBlueId("5oupQbnbuoBTUDvTSy58EKZkra3cBjvAcdiZSLchcwiv")
 public class LinkedDocumentsPermissionGrantToDocument extends MyOSAdminBase {
     public static String blueId() {
-        return "GSMPZr2s6Nb6SwHzx8XwLRwbJnUdboZDPckMQhwLgvJ7";
+        return "5oupQbnbuoBTUDvTSy58EKZkra3cBjvAcdiZSLchcwiv";
     }
 
     public static String packageName() {

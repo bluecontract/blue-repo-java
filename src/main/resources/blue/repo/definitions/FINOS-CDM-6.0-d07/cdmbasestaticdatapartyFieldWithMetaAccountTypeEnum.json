@@ -1,0 +1,13 @@
+{
+  "name": "cdm/base/staticdata/party/FieldWithMetaAccountTypeEnum",
+  "meta": {
+    "type": {
+      "blueId": "Fsr3CBPzzThx6Pern5QLDS8TKFXzv6W3TzjS6BYSmqCc"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "GwoJSDF4S42wUA9r47hrcNkckwLPEgv4X849LBRqvmvZ"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "cdm/product/collateral/EligibleCollateralSpecification",
+  "description": "Represents a set of criteria used to specify eligible collateral.",
+  "counterparty": {
+    "description": "Specification of the roles of the counterparties to the specification.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "E1uMUhyFkX83bxaZhuKemTmb5S99vPebKwnFVHu6KQTn"
+    },
+    "schema": {
+      "minItems": 0,
+      "maxItems": 2
+    }
+  },
+  "criteria": {
+    "description": "Represents a set of criteria used to specify eligible collateral.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "JBhQJD9vEAMUPeT6WopuEMTpVwyxLPZwxZa4Djj9Uh4L"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  },
+  "identifier": {
+    "description": "Specifies the identifier(s) to uniquely identify eligible collateral or a set of eligible collateral, such as a schedule or equivalant for an identity issuer.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "DtCdHJZeccxHZbwaJQZhJKaibyxKYwbj9hKw2ZsK5K4r"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "party": {
+    "description": "The parties associated with the specification.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "AhMzsyCZTs6HTjAUKURsN7RTVyw8rXkq1JPPNPUdYnBq"
+    },
+    "schema": {
+      "minItems": 0,
+      "maxItems": 2
+    }
+  },
+  "partyRole": {
+    "description": "Specifies the role(s) that each of the party(s) is playing in the context of the specification, eg Payor or Receiver.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "7N6isgUMMMsMJoxpjNRRfdVHiWizDFmyABkC7s3LeRZ6"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

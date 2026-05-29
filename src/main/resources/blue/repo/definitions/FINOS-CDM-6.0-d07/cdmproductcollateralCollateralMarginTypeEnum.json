@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/collateral/CollateralMarginTypeEnum",
+  "description": "The enumerated values to specify the type of margin for which a legal agreement is named.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "InitialMargin",
+      "VariationMargin"
+    ]
+  }
+}

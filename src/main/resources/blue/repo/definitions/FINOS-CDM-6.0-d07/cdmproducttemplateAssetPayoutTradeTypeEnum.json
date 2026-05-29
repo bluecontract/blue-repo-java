@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/template/AssetPayoutTradeTypeEnum",
+  "description": "An enumerator to differentiate the different trade types used in securities finance and modelled on an AssetPayout.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Buy/Sell-Back",
+      "Repo"
+    ]
+  }
+}

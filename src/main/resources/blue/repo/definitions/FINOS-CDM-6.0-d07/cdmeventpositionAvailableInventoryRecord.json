@@ -1,0 +1,58 @@
+{
+  "name": "cdm/event/position/AvailableInventoryRecord",
+  "description": "An individual piece of available inventory. This represents a single security and its associated criteria. The criteria are used to describe any restrictions on the securities.\n",
+  "collateral": {
+    "description": "The type of collateral can often be required when determining if the piece of availability being described is suitable for a party.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "ERwzfUVyHoEXVE9rhTfvQ3nRPiD7c1SgCt8LS9VJZp6E"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "expirationDateTime": {
+    "description": "There may be a set period/time restriction associated to the security.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "identifer": {
+    "description": "Unique identifier for this record. This can be used to uniquely identify a specific piece of inventory.",
+    "type": {
+      "blueId": "6vYEknGbjoCarWNmjmqcTdYJ81Z265Kigep3twUZrjnt"
+    }
+  },
+  "interestRate": {
+    "description": "An optional element which can be used to hold a rate associated to this piece of availability.",
+    "type": {
+      "blueId": "BD3VPcMR7j62CWudW3xXH1Aropvfs515RCLZFP4cZY4P"
+    }
+  },
+  "partyRole": {
+    "description": "An individual security may be held by several agents. Including the party role at this level allows us to reference the party holding this specific item.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "7N6isgUMMMsMJoxpjNRRfdVHiWizDFmyABkC7s3LeRZ6"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "quantity": {
+    "description": "The quantity of the security",
+    "type": {
+      "blueId": "BADvBimj9VPGxtVkguZSpocTXA84MV8LnKjm4ocmButh"
+    }
+  },
+  "security": {
+    "description": "The security details.",
+    "type": {
+      "blueId": "EqW2CBgcur4w9MgDu3cEAjCKESsF2Jhsjs2gHobFQZBA"
+    }
+  }
+}

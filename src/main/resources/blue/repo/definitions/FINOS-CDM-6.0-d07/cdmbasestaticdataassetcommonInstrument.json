@@ -1,0 +1,22 @@
+{
+  "name": "cdm/base/staticdata/asset/common/Instrument",
+  "description": "A type of Asset that is issued by one party to one or more others.",
+  "ListedDerivative": {
+    "description": "A securitized derivative on another asset that is created by an exchange.",
+    "type": {
+      "blueId": "AFW7LezE8ba1KeRYYpRUo3k2zvPgqFsmeCUhkSphMZGb"
+    }
+  },
+  "Loan": {
+    "description": "An Asset that represents a loan or borrow obligation.",
+    "type": {
+      "blueId": "65gPA57fQDjNz6BqJxeCaUFu7wDhxpRktX2seB6isKCS"
+    }
+  },
+  "Security": {
+    "description": "An Asset that is issued by a party to be held by or transferred to others.",
+    "type": {
+      "blueId": "EqW2CBgcur4w9MgDu3cEAjCKESsF2Jhsjs2gHobFQZBA"
+    }
+  }
+}

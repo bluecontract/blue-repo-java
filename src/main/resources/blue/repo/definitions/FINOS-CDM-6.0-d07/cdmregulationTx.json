@@ -1,0 +1,59 @@
+{
+  "name": "cdm/regulation/Tx",
+  "ctryOfBrnch": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "newTx": {
+    "type": {
+      "blueId": "this#0"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "pric": {
+    "type": {
+      "blueId": "4wFEjgDZMbCLTeTfgq8yfWpPVxDT13TGqKJMpUzWYokn#0"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "qty": {
+    "type": {
+      "blueId": "DkpH2T6cyriTEkT83nmR8ePNeY1eeeGRqnfpNWJTD2BZ"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "tradDt": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "tradgCpcty": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "tradVn": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

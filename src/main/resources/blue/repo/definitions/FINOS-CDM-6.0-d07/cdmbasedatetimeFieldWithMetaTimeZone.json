@@ -1,0 +1,13 @@
+{
+  "name": "cdm/base/datetime/FieldWithMetaTimeZone",
+  "meta": {
+    "type": {
+      "blueId": "Fsr3CBPzzThx6Pern5QLDS8TKFXzv6W3TzjS6BYSmqCc"
+    }
+  },
+  "val": {
+    "type": {
+      "blueId": "EqFtLUWpvw3DLzuAcBrVrto1J9g2RmH7gHRUakSBSnpr"
+    }
+  }
+}

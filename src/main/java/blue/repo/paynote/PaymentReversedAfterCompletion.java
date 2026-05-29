@@ -3,13 +3,13 @@ package blue.repo.paynote;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Response;
+import blue.repo.coordination.Response;
 import java.math.BigInteger;
 
-@TypeBlueId("81whmkSDanPULQUi4sMuVkxiWDLHb3VPC5PeLfJCXCGo")
+@TypeBlueId("BZL11BoCdd5wXZ1XGwPqckiCzfinoVLNUpmFt4cXGEQ8")
 public class PaymentReversedAfterCompletion extends Response {
     public static String blueId() {
-        return "81whmkSDanPULQUi4sMuVkxiWDLHb3VPC5PeLfJCXCGo";
+        return "BZL11BoCdd5wXZ1XGwPqckiCzfinoVLNUpmFt4cXGEQ8";
     }
 
     public static String packageName() {

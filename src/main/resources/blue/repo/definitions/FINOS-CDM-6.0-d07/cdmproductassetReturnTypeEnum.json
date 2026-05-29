@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/asset/ReturnTypeEnum",
+  "description": "The enumerated values to specify the type of return associated the equity payout.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Price",
+      "Total"
+    ]
+  }
+}

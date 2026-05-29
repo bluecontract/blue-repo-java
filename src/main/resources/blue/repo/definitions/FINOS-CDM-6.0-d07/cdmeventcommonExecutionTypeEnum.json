@@ -1,0 +1,14 @@
+{
+  "name": "cdm/event/common/ExecutionTypeEnum",
+  "description": "The enumerated values to specify how a contract has been executed, e.g. electronically, verbally, ...",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Electronic",
+      "OffFacility",
+      "OnVenue"
+    ]
+  }
+}

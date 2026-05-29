@@ -1,0 +1,11 @@
+{
+  "name": "cdm/regulation/UndrlygInstrm",
+  "swp": {
+    "type": {
+      "blueId": "865BPSAXzh16iUBhT1mKdYY7Gg4QdP4k6g8ijpqrQj82"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "cdm/observable/asset/fro/FloatingRateIndexCategoryEnum",
+  "description": "Top level ISDA FRO category.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Calculated Rate",
+      "Reference Banks Rate",
+      "Screen Rate"
+    ]
+  }
+}

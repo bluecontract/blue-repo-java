@@ -1,0 +1,39 @@
+{
+  "name": "cdm/observable/event/Trigger",
+  "description": "Trigger point at which feature is effective.",
+  "creditEvents": {
+    "type": {
+      "blueId": "EpJqsoXTVcp1F9NJqCAR3w9hR9QPLqThmA3cCtazLdXh"
+    }
+  },
+  "creditEventsReference": {
+    "type": {
+      "blueId": "FWcQmx5gu2ihsKm9K2BYniLmbetQeMxPF6ZpzM3uVXXD"
+    }
+  },
+  "level": {
+    "description": "The trigger level.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "Gu2s7TriyRGK7DyQz5P5jeE6mWkQBC6ZJYhvceLwhYq6"
+    },
+    "schema": {
+      "minItems": 0,
+      "maxItems": 2
+    }
+  },
+  "triggerTimeType": {
+    "description": "The valuation time type of knock condition.",
+    "type": {
+      "blueId": "AP1KsnZALX2AnC7MkkZzNkc16JMP218CyXxg7ZBQfa7N"
+    }
+  },
+  "triggerType": {
+    "description": "The Triggering condition.",
+    "type": {
+      "blueId": "2Q3U8s1q4CetshyF1cYiUuB2PqoQbvX4qgg2CR1ovvHC"
+    }
+  }
+}

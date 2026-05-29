@@ -1,0 +1,11 @@
+{
+  "name": "cdm/regulation/AcctOwnr",
+  "id": {
+    "type": {
+      "blueId": "8N9iq1raa5GoQKBHfgkDYyHdyV4wJoNowqupenj2fqAx"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

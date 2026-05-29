@@ -1,0 +1,29 @@
+{
+  "name": "com/rosetta/model/metafields/MetaFields",
+  "externalKey": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "globalKey": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "key": {
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "3dJskTcZWkGvVvc2CnvQkC12gkgaSGjZ8ix7XR2XxxjR"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "scheme": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

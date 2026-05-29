@@ -1,0 +1,18 @@
+{
+  "name": "cdm/base/staticdata/asset/common/IssuerTypeEnum",
+  "description": "Represents an enumeration list to identify the type of entity issuing the asset.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Corporate",
+      "Fund",
+      "QuasiGovernment",
+      "RegionalGovernment",
+      "SovereignCentralBank",
+      "SpecialPurposeVehicle",
+      "SupraNational"
+    ]
+  }
+}

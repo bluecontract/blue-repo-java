@@ -1,0 +1,19 @@
+{
+  "name": "cdm/regulation/Sngl",
+  "indx": {
+    "type": {
+      "blueId": "3cxXB1W8Tthon8HA1Z9R5ra12AfuQQPN6GfbdVTTjhvc"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "isin": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

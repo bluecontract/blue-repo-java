@@ -3,12 +3,12 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.PrincipalActor;
+import blue.repo.coordination.PrincipalActor;
 
-@TypeBlueId("8CHJQMaaPFCmvSrDfrNWitRCBcMMiUzJFaW42HtH1Thw")
+@TypeBlueId("G6EVpoRpQQb6f93eZtJPqDRAK47D1RXvUAmbXvhpsL6Y")
 public class MyOSPrincipalActor extends PrincipalActor {
     public static String blueId() {
-        return "8CHJQMaaPFCmvSrDfrNWitRCBcMMiUzJFaW42HtH1Thw";
+        return "G6EVpoRpQQb6f93eZtJPqDRAK47D1RXvUAmbXvhpsL6Y";
     }
 
     public static String packageName() {

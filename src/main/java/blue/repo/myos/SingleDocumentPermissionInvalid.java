@@ -3,13 +3,13 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Event;
+import blue.repo.coordination.Event;
 import java.util.List;
 
-@TypeBlueId("567voUMtKJQoqru6ZVPYb4EGwdeV99rUSAqsnod7gqfd")
+@TypeBlueId("7BEbHgR3h4y9HDLvxnKSMyGZZqYnA8Jm2cFuTMjDuCJg")
 public class SingleDocumentPermissionInvalid extends Event {
     public static String blueId() {
-        return "567voUMtKJQoqru6ZVPYb4EGwdeV99rUSAqsnod7gqfd";
+        return "7BEbHgR3h4y9HDLvxnKSMyGZZqYnA8Jm2cFuTMjDuCJg";
     }
 
     public static String packageName() {

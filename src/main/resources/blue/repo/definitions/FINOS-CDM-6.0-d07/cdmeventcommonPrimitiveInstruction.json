@@ -1,0 +1,82 @@
+{
+  "name": "cdm/event/common/PrimitiveInstruction",
+  "description": "A Primitive Instruction describes the inputs required to pass into the corresponding PrimitiveEvent function.",
+  "contractFormation": {
+    "description": "Specifies instructions describing an contract formation primitive event.",
+    "type": {
+      "blueId": "CagkxHfJyKMb4xNhYsbXRRAmCkYcSuGT1oNxjWcbXXTd"
+    }
+  },
+  "execution": {
+    "description": "Specifies instructions describing an execution primitive event.",
+    "type": {
+      "blueId": "9H5n33KxBWeKUEPg7fi3gzTT1HdPH3sHtdi11nVAdz28"
+    }
+  },
+  "exercise": {
+    "description": "Specifies instructions describing an exercise primitive event.",
+    "type": {
+      "blueId": "this#1"
+    }
+  },
+  "indexTransition": {
+    "description": "Specifies inputs needed to process a Index Transition business event.",
+    "type": {
+      "blueId": "94FMjBuFK4je9fYyijAy2UhgEyWUXPjMyATn38Hr5vpQ"
+    }
+  },
+  "observation": {
+    "description": "Specifies inputs needed to process an observation.",
+    "type": {
+      "blueId": "3bxECwfuRpjDkRbRi65BdbAgFLzfEiRhhMwYcm7YHZ4K"
+    }
+  },
+  "partyChange": {
+    "description": "Specifies instructions describing a party change primitive event.",
+    "type": {
+      "blueId": "HuSN4JmgpVcuiK2kJpZc7ZCk7WapVPTCz7xkr7dcLNuA"
+    }
+  },
+  "quantityChange": {
+    "description": "Specifies instructions describing an quantity change primitive event.",
+    "type": {
+      "blueId": "3yb5cSr8RvznwDH8gvLgj6hp8DQ5MhJukKWZmPMCbcmd"
+    }
+  },
+  "reset": {
+    "description": "Specifies instructions describing a reset event.",
+    "type": {
+      "blueId": "9hMX7rG9WvCmENd3JuSqHb5MANu9NJeK8JnzmxLF7K6s"
+    }
+  },
+  "split": {
+    "description": "Specifies instructions to split a trade into multiple branches.",
+    "type": {
+      "blueId": "this#2"
+    }
+  },
+  "stockSplit": {
+    "description": "Specifies inputs needed to process a Stock Split business event.",
+    "type": {
+      "blueId": "2CYLBaUhCH8pZrQuzhg5gHTavpakb9RVakLSWtPwu27p"
+    }
+  },
+  "termsChange": {
+    "description": "Specifies instructions describing a terms change primitive event.",
+    "type": {
+      "blueId": "Dcj3ZjmVGrhZ6jDFJHxspYni4BnYiWnxA8SKDQYhsGav"
+    }
+  },
+  "transfer": {
+    "description": "Specifies instructions describing a transfer primitive event.",
+    "type": {
+      "blueId": "F2UqdquxSuKdvbbUUq7EKxQo9Tx43SKBeVyWz7YHta2y"
+    }
+  },
+  "valuation": {
+    "description": "Specifies inputs needed to process an update of a valuation.",
+    "type": {
+      "blueId": "8Eg9CAXQy3tisACZn5XJjC3FGnh3VTyfha9iCYffQEYe"
+    }
+  }
+}

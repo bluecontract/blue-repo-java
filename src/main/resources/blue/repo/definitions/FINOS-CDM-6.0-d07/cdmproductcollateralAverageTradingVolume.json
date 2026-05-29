@@ -1,0 +1,22 @@
+{
+  "name": "cdm/product/collateral/AverageTradingVolume",
+  "description": "Represents the average trading volume of an Equity product upon an exchange or set of exchanges.",
+  "methodology": {
+    "description": "Indicates the type of equity average trading volume being stated (single) the highest amount on one exchange, or (consolidated) volumes across multiple exchanges.\n",
+    "type": {
+      "blueId": "HbEHxVJkXcDoderJeBNkbGMjep6SNBDd9n6PuUs6vC8F"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "period": {
+    "description": "Represents the period of the equities average trading volume on the exchange/s.",
+    "type": {
+      "blueId": "D2zD5eW4h5CVwkas6bYant1Kmgdg4zt95zb3kYgR87RE"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

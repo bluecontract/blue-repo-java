@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("3KRfhgbFdvyW9SGuKiq3WxWF9bHSATEb8tMso8Pykpre")
+@TypeBlueId("5UhQNW5kxq9QrAkjnajrGV7B4nN5Cun6puDNkqUyxF4e")
 public class DocumentAnchors {
     public static String blueId() {
-        return "3KRfhgbFdvyW9SGuKiq3WxWF9bHSATEb8tMso8Pykpre";
+        return "5UhQNW5kxq9QrAkjnajrGV7B4nN5Cun6puDNkqUyxF4e";
     }
 
     public static String packageName() {

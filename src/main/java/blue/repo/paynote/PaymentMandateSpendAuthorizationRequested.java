@@ -5,13 +5,13 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.common.Currency;
 import blue.repo.common.Timestamp;
-import blue.repo.conversation.Request;
+import blue.repo.coordination.Request;
 import java.math.BigInteger;
 
-@TypeBlueId("7EKvVzbT63C2taKWfLf9J2BiVL7BCL6Ld86tH8b9kmxF")
+@TypeBlueId("8jsJ7UY8wiQvDtpsjqXvnrQUMhqXZhfF6EKBzhtkUKqo")
 public class PaymentMandateSpendAuthorizationRequested extends Request {
     public static String blueId() {
-        return "7EKvVzbT63C2taKWfLf9J2BiVL7BCL6Ld86tH8b9kmxF";
+        return "8jsJ7UY8wiQvDtpsjqXvnrQUMhqXZhfF6EKBzhtkUKqo";
     }
 
     public static String packageName() {

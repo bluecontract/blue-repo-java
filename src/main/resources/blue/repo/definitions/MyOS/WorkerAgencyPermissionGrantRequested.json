@@ -2,19 +2,19 @@
   "name": "Worker Agency Permission Grant Requested",
   "description": "Parent worker requests authority to start specific sub-worker types and receive per-instance SDPGs.",
   "type": {
-    "blueId": "8f9UhHMbRe62sFgzQVheToaJPYi7t7HPNVvpQTbqfL5n"
+    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
   },
   "onBehalfOf": {
     "type": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     }
   },
   "allowedWorkerAgencyPermissions": {
     "type": {
-      "blueId": "6aehfNAxHLC1PHHoDr3tYtFH3RWNbiWdFancJ1bypXEY"
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "EKPgicPVdFxx8X4ZBsnx7mT387M3VXDeMjSBnmAreUsS"
+      "blueId": "GjxBN2eRsYCbipBAFk2eRneiDSs5rWS7eUzZBpPHz2JH"
     }
   }
 }

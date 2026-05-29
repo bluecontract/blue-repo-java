@@ -1,0 +1,49 @@
+{
+  "name": "cdm/product/common/settlement/PrincipalPayments",
+  "description": "A class defining which principal exchanges occur for the stream.",
+  "finalPayment": {
+    "description": "A true/false flag to indicate whether there is a final exchange of principal on the termination date.",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "initialPayment": {
+    "description": "A true/false flag to indicate whether there is an initial exchange of principal on the effective date.",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "intermediatePayment": {
+    "description": "A true/false flag to indicate whether there are intermediate or interim exchanges of principal during the term of the swap.\n",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "principalPaymentSchedule": {
+    "description": "Describe dates schedules for Principal Exchanges and related role of the parties when known.",
+    "type": {
+      "blueId": "398r2MzqRmgJfsjBR5PBekn73UF8epSDu9w1hnWGfVja"
+    }
+  },
+  "varyingLegNotionalCurrency": {
+    "description": "Indicate the Payout legs which nominal amount may vary in regards of FX Fixing dates as determined in the product terms.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  }
+}

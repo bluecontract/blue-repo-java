@@ -1,0 +1,12 @@
+{
+  "name": "cdm/base/staticdata/asset/common/MoneyMarketTypeEnum",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "CertificateOfDeposit",
+      "CommercialPaper"
+    ]
+  }
+}

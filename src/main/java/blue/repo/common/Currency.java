@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("CBnZ7aaNetj9KEqXpUWj5jvjKbmviLivP98T2EiyxiYc")
+@TypeBlueId("rdiMJ9tNu3geCKLDwXxCCjVQzKvCyaFXHiZTFAkRsCJ")
 public class Currency {
     public static String blueId() {
-        return "CBnZ7aaNetj9KEqXpUWj5jvjKbmviLivP98T2EiyxiYc";
+        return "rdiMJ9tNu3geCKLDwXxCCjVQzKvCyaFXHiZTFAkRsCJ";
     }
 
     public static String packageName() {

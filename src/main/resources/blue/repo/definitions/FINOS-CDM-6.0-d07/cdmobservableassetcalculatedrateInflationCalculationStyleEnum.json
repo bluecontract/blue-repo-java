@@ -1,0 +1,13 @@
+{
+  "name": "cdm/observable/asset/calculatedrate/InflationCalculationStyleEnum",
+  "description": "Indicates the style of how the inflation index calculates the payment (e.g. YearOnYear, ZeroCoupon).",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "YearOnYear",
+      "ZeroCoupon"
+    ]
+  }
+}

@@ -3,13 +3,13 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Event;
+import blue.repo.coordination.Event;
 import java.math.BigInteger;
 
-@TypeBlueId("9CvxqAMJhqcFoLr5nXSEdWDZUMD383xhJtyFwXsCqD9E")
+@TypeBlueId("7WJnGdq3txEhXb6P2vXLAMUhPBCWQzHsz416cDfKGcUm")
 public class SessionEpochAdvanced extends Event {
     public static String blueId() {
-        return "9CvxqAMJhqcFoLr5nXSEdWDZUMD383xhJtyFwXsCqD9E";
+        return "7WJnGdq3txEhXb6P2vXLAMUhPBCWQzHsz416cDfKGcUm";
     }
 
     public static String packageName() {

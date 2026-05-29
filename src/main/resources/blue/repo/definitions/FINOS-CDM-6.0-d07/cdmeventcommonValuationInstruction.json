@@ -1,0 +1,25 @@
+{
+  "name": "cdm/event/common/ValuationInstruction",
+  "description": "Specifies inputs needed to process a valuation.",
+  "replace": {
+    "description": "Specifies whether the previous valuation tracks in the valuation history are removed (True) or kept (False).",
+    "type": {
+      "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "valuation": {
+    "description": "Contains all information related to a valuation.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "DuYQJ7immrjRPWFMqGY9eurJKTuzsqj6rmPjznZMGTTF"
+    },
+    "schema": {
+      "minItems": 1
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "cdm/product/asset/AssetDeliveryProfile",
+  "description": "Defines the delivery profile of the asset, including the load type and the delivery intervals.",
+  "bankHolidaysTreatment": {
+    "description": "Specifies whether the dates defined include holidays or not.",
+    "type": {
+      "blueId": "5bUgMorBVJFwsF3QxYZBayKkdMJSobgTERsX9hs1TeY"
+    }
+  },
+  "block": {
+    "description": "Defines a delivery profile block, including start and end time, days of the week, duration, delivery capacity and price time interval quantity.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "4vuqTuDoEHVYBX71EjmtMarGehySDoBUfYv4DFZxy6cD"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "loadType": {
+    "description": "Identification of the delivery profile.",
+    "type": {
+      "blueId": "3iWfWEciUkaMhte4q42oyM9QLM6DA8jZCxcJBvkAdF8d"
+    }
+  }
+}

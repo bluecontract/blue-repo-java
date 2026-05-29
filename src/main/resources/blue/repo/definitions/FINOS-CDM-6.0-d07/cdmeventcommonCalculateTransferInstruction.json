@@ -1,0 +1,47 @@
+{
+  "name": "cdm/event/common/CalculateTransferInstruction",
+  "description": "Defines the tradeState or payout on which to create a Transfer along with all necessary resets.",
+  "date": {
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "payerReceiver": {
+    "type": {
+      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+    }
+  },
+  "payout": {
+    "type": {
+      "blueId": "B5Jakr9Bd7eaMZzThRtLAaP1ZnjC3yngwZjL4GXVZW7P"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "quantity": {
+    "description": "Specifies quantity amount returned if not the full amount from the TradeState, e.g. partial return",
+    "type": {
+      "blueId": "BADvBimj9VPGxtVkguZSpocTXA84MV8LnKjm4ocmButh"
+    }
+  },
+  "resets": {
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "HFVsjPq4dbaRXVa8vrWUTPdSo8R4CoRFz275RuCiohR7"
+    },
+    "schema": {
+      "minItems": 0
+    }
+  },
+  "tradeState": {
+    "type": {
+      "blueId": "CDyBiQbV2TyvZHNvg93KDfamiVgaGbkLkf3GUNmeyRcm"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

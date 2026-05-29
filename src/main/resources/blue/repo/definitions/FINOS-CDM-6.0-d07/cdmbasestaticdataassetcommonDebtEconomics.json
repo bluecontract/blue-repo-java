@@ -1,0 +1,22 @@
+{
+  "name": "cdm/base/staticdata/asset/common/DebtEconomics",
+  "description": "Specifies selected economics of a debt instrument.",
+  "debtInterest": {
+    "description": "Specifies the general rule for periodic interest rate payment.",
+    "type": {
+      "blueId": "BFBLHFjNh7Fow9vX7vRdiBrz6zE75EERT4D4nvV8atnB"
+    }
+  },
+  "debtPrincipal": {
+    "description": "Specifies the general rule for repayment of principal.",
+    "type": {
+      "blueId": "5iuhAog8cC4wdLzoyk6b7MsN5neJFct1aKazrQy6jhVh"
+    }
+  },
+  "debtSeniority": {
+    "description": "Specifies the order of repayment in the event of a sale or bankruptcy of the issuer or a related party (eg guarantor).\n",
+    "type": {
+      "blueId": "7gR4CiNxRgjDnj1gJBEoWAvVSrDnKuyUfAbfz4sKdFN"
+    }
+  }
+}

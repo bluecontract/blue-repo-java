@@ -1,0 +1,10 @@
+{
+  "name": "cdm/product/common/settlement/SettlementProvision",
+  "description": "Defines parameters that regulate a settlement, for instance whether this settlement should be netted with other ones or broken-down into smaller amounts.\n",
+  "shapingProvisions": {
+    "description": "Defines the parameters that are necessary to 'shape' a settlement, i.e. break it down into smaller amounts.",
+    "type": {
+      "blueId": "AfrWwmNcruweRhizeK8snayCmtH1PEXLFinSber5QgY5"
+    }
+  }
+}

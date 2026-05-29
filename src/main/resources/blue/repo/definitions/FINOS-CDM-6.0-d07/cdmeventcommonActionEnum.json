@@ -1,0 +1,14 @@
+{
+  "name": "cdm/event/common/ActionEnum",
+  "description": "The enumeration values to specify the actions associated with transactions.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "Cancel",
+      "Correct",
+      "New"
+    ]
+  }
+}

@@ -3,12 +3,12 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Request;
+import blue.repo.coordination.Request;
 
-@TypeBlueId("98JmkF189jZpQRyzaiQxLbc2rRUqnRy2o6bH2qCRaBg3")
+@TypeBlueId("BmERQxQSUDw8vTBAR32U9XBcFGjdVfUfpfUhCm1xsxVV")
 public class AddingParticipantRequested extends Request {
     public static String blueId() {
-        return "98JmkF189jZpQRyzaiQxLbc2rRUqnRy2o6bH2qCRaBg3";
+        return "BmERQxQSUDw8vTBAR32U9XBcFGjdVfUfpfUhCm1xsxVV";
     }
 
     public static String packageName() {

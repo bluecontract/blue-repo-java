@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/asset/IndexAnnexSourceEnum",
+  "description": "The enumerated values to specify the CDX index annex source.",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "MasterConfirmation",
+      "Publisher"
+    ]
+  }
+}

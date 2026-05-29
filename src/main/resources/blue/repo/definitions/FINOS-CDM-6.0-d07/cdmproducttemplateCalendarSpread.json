@@ -1,0 +1,12 @@
+{
+  "name": "cdm/product/template/CalendarSpread",
+  "description": "A type for defining a calendar spread feature.",
+  "expirationDateTwo": {
+    "type": {
+      "blueId": "2gu7bBDYJXEVsffNg2iAYXou31qtdeR4oiwZHL2kaEgQ"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

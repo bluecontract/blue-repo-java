@@ -1,0 +1,13 @@
+{
+  "name": "cdm/product/collateral/DeliveryAmountElectionEnum",
+  "description": "The enumerated values to specify the application of Interest Amount with respect to the Delivery Amount through standard language.\n",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "LastAndAnyLocalBusinessDay",
+      "LastLocalBusinessDay"
+    ]
+  }
+}

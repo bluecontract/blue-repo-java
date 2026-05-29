@@ -2,11 +2,11 @@
   "name": "Transaction Details Update Unlock Requested",
   "description": "Request that the Guarantor allow subsequent transaction-details updates for the governed transaction.\n",
   "type": {
-    "blueId": "8f9UhHMbRe62sFgzQVheToaJPYi7t7HPNVvpQTbqfL5n"
+    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
   },
   "reason": {
     "type": {
-      "blueId": "DLRQwz7MQeCrzjy9bohPNwtCxKEBbKaMK65KBrwjfG6K"
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     }
   }
 }

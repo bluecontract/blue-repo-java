@@ -3,14 +3,14 @@ package blue.repo.paynote;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.conversation.Event;
+import blue.repo.coordination.Event;
 import java.math.BigInteger;
 import java.util.List;
 
-@TypeBlueId("BYdTyyLphWQNKo1GBcnE1jQuaPyXexNnfzkXhMiRqmUr")
+@TypeBlueId("45LGaTEkpqKVCXfgjbdq4kEeQ64qV5TsgYVCiQev9J9n")
 public class CardTransactionMonitoringStopped extends Event {
     public static String blueId() {
-        return "BYdTyyLphWQNKo1GBcnE1jQuaPyXexNnfzkXhMiRqmUr";
+        return "45LGaTEkpqKVCXfgjbdq4kEeQ64qV5TsgYVCiQev9J9n";
     }
 
     public static String packageName() {

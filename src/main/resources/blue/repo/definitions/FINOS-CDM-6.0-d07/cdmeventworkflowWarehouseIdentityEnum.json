@@ -1,0 +1,11 @@
+{
+  "name": "cdm/event/workflow/WarehouseIdentityEnum",
+  "type": {
+    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+  },
+  "schema": {
+    "enum": [
+      "DTCC_TIW_Gold"
+    ]
+  }
+}
