@@ -264,11 +264,11 @@ ChatMessage message = new ChatMessage()
 Node messageNode = blue.objectToNode(message);
 
 Operation operation = new Operation()
-        .channel("ownerChannel")
         .request(new Node().type("Integer"));
+operation.channel("ownerChannel");
 
-SequentialWorkflowOperation implementation = new SequentialWorkflowOperation()
-        .operation("increment");
+SequentialWorkflowOperation implementation = new SequentialWorkflowOperation();
+implementation.channel("ownerChannel");
 ```
 
 Every generated class has:
