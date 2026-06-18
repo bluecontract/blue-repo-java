@@ -1,7 +1,7 @@
 {
   "name": "Single Document Permission Grant To Document",
   "type": {
-    "blueId": "FMWYekdjwkDnoM2YfHmwuUATHZovSgmDEvSVTmyVmbHc"
+    "blueId": "62Sxtmk1cwndFHJVax9Z6G6LBPnB2CeqaXMa6uvKvdKg"
   },
   "contracts": {
     "granterChannel": {
@@ -23,7 +23,7 @@
     "revoke": {
       "description": "Granter requests revocation on the grant document. Grantee-document self-revoke uses the existing revoke-request event with grantDocumentId emitted from the grantee document itself.",
       "type": {
-        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+        "blueId": "C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG"
       },
       "channel": {
         "type": {
@@ -40,7 +40,7 @@
     },
     "revokeImplGranter": {
       "type": {
-        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+        "blueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J"
       },
       "operation": {
         "type": {

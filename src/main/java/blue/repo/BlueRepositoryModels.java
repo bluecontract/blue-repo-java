@@ -33,9 +33,11 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.coordination.Actor.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.ActorPolicy.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.AgentActor.class);
+        resolver.registerAnnotatedClass(blue.repo.coordination.AllTimelinesChannel.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.APICall.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.BrowserSession.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.ChatMessage.class);
+        resolver.registerAnnotatedClass(blue.repo.coordination.ChatWorkflowOperation.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.CompositeTimelineChannel.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.Compute.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.ComputeDefinition.class);

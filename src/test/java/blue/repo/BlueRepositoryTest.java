@@ -6,7 +6,6 @@ import blue.language.model.TypeBlueId;
 import blue.language.model.Node;
 import blue.language.processor.model.ChannelContract;
 import blue.language.processor.model.HandlerContract;
-import blue.language.processor.model.MarkerContract;
 import blue.language.utils.BlueIdResolver;
 import blue.language.utils.BlueIdCalculator;
 import blue.language.utils.TypeClassResolver;
@@ -132,18 +131,21 @@ class BlueRepositoryTest {
         assertEquals(CoordinationTypes.OPERATION.blueId(), BlueIdResolver.resolveBlueId(Operation.class));
         assertEquals(CoordinationTypes.SEQUENTIAL_WORKFLOW_OPERATION.blueId(),
                 BlueIdResolver.resolveBlueId(SequentialWorkflowOperation.class));
-        assertTrue(SequentialWorkflow.class.isAssignableFrom(SequentialWorkflowOperation.class));
+        assertTrue(Operation.class.isAssignableFrom(SequentialWorkflowOperation.class));
         assertTrue(new SequentialWorkflow() instanceof HandlerContract);
         assertTrue(new SequentialWorkflowOperation() instanceof HandlerContract);
         assertTrue(new TimelineChannel() instanceof ChannelContract);
-        assertTrue(new Operation() instanceof MarkerContract);
+        assertTrue(new Operation() instanceof HandlerContract);
 
-        Operation operation = new Operation().channel("operations").request(new Node().name("Request"));
+        Operation operation = new Operation().request(new Node().name("Request"));
+        operation.channel("operations");
         assertEquals("operations", operation.getChannel());
         assertEquals("Request", operation.getRequest().getName());
 
-        SequentialWorkflowOperation implementation = new SequentialWorkflowOperation().operation("approve");
-        assertEquals("approve", implementation.getOperation());
+        SequentialWorkflowOperation implementation = new SequentialWorkflowOperation()
+                .steps(Collections.emptyList());
+        implementation.channel("operations");
+        assertEquals("operations", implementation.getChannel());
     }
 
     @Test
@@ -365,7 +367,6 @@ class BlueRepositoryTest {
         assertTrue(mapped instanceof SequentialWorkflowOperation);
         SequentialWorkflowOperation operation = (SequentialWorkflowOperation) mapped;
         assertEquals("timeline", operation.getChannel());
-        assertEquals("increment", operation.getOperation());
         assertEquals(1, operation.getSteps().size());
         assertTrue(operation.getSteps().get(0) instanceof UpdateDocument);
 
@@ -658,7 +659,6 @@ class BlueRepositoryTest {
                 + "  incrementImpl:\n"
                 + "    type: Coordination/Sequential Workflow Operation\n"
                 + "    channel: timeline\n"
-                + "    operation: increment\n"
                 + "    steps:\n"
                 + "      - type: Coordination/Update Document\n"
                 + "        changeset:\n"

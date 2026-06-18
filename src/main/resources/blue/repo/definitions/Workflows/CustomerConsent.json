@@ -100,7 +100,7 @@
     "revokeConsent": {
       "description": "Customer revokes the consent.",
       "type": {
-        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+        "blueId": "C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG"
       },
       "channel": {
         "type": {
@@ -123,7 +123,7 @@
     },
     "revokeConsentImpl": {
       "type": {
-        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+        "blueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J"
       },
       "operation": {
         "type": {

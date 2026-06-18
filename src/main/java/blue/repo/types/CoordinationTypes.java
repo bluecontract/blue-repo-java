@@ -5,9 +5,11 @@ import blue.repo.RepositoryType;
 import blue.repo.coordination.Actor;
 import blue.repo.coordination.ActorPolicy;
 import blue.repo.coordination.AgentActor;
+import blue.repo.coordination.AllTimelinesChannel;
 import blue.repo.coordination.APICall;
 import blue.repo.coordination.BrowserSession;
 import blue.repo.coordination.ChatMessage;
+import blue.repo.coordination.ChatWorkflowOperation;
 import blue.repo.coordination.CompositeTimelineChannel;
 import blue.repo.coordination.Compute;
 import blue.repo.coordination.ComputeDefinition;
@@ -50,11 +52,15 @@ public final class CoordinationTypes {
 
     public static final RepositoryType AGENT_ACTOR = AgentActor.repositoryType();
 
+    public static final RepositoryType ALL_TIMELINES_CHANNEL = AllTimelinesChannel.repositoryType();
+
     public static final RepositoryType API_CALL = APICall.repositoryType();
 
     public static final RepositoryType BROWSER_SESSION = BrowserSession.repositoryType();
 
     public static final RepositoryType CHAT_MESSAGE = ChatMessage.repositoryType();
+
+    public static final RepositoryType CHAT_WORKFLOW_OPERATION = ChatWorkflowOperation.repositoryType();
 
     public static final RepositoryType COMPOSITE_TIMELINE_CHANNEL = CompositeTimelineChannel.repositoryType();
 

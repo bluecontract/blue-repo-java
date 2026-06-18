@@ -1,29 +1,29 @@
-package blue.repo.paynote;
+package blue.repo.coordination;
 
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("DdvN6Zz2diGBsJoNBWT6BNcWKvxagiSbqw7CC9BXLUmK")
-public class MerchantToCustomerPayNote extends PayNote {
+@TypeBlueId("AwomMHqfREQrDWk9K2yqKz9XPMUR6FyCJgwjabEy44gT")
+public class ChatWorkflowOperation extends SequentialWorkflowOperation {
     public static String blueId() {
-        return "DdvN6Zz2diGBsJoNBWT6BNcWKvxagiSbqw7CC9BXLUmK";
+        return "AwomMHqfREQrDWk9K2yqKz9XPMUR6FyCJgwjabEy44gT";
     }
 
     public static String packageName() {
-        return "PayNote";
+        return "Coordination";
     }
 
     public static String typeName() {
-        return "Merchant To Customer PayNote";
+        return "Chat Workflow Operation";
     }
 
     public static String qualifiedName() {
-        return "PayNote/Merchant To Customer PayNote";
+        return "Coordination/Chat Workflow Operation";
     }
 
     public static String resourcePath() {
-        return "blue/repo/definitions/PayNote/MerchantToCustomerPayNote.json";
+        return "blue/repo/definitions/Coordination/ChatWorkflowOperation.json";
     }
 
     public static RepositoryType repositoryType() {

@@ -72,7 +72,7 @@
     "authorizeSpend": {
       "description": "Validate a charge attempt against mandate policy and reserve capacity.",
       "type": {
-        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+        "blueId": "C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG"
       },
       "channel": {
         "type": {
@@ -88,7 +88,7 @@
     },
     "authorizeSpendImpl": {
       "type": {
-        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+        "blueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J"
       },
       "operation": {
         "type": {
@@ -1975,7 +1975,7 @@
     "settleSpend": {
       "description": "Apply final reserve/capture deltas for a previously authorized charge attempt.",
       "type": {
-        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+        "blueId": "C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG"
       },
       "channel": {
         "type": {
@@ -1991,7 +1991,7 @@
     },
     "settleSpendImpl": {
       "type": {
-        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+        "blueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J"
       },
       "operation": {
         "type": {

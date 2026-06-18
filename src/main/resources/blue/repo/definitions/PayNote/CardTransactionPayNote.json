@@ -2,7 +2,7 @@
   "name": "Card Transaction PayNote",
   "description": "PayNote tied to a specific card transaction via ISO scheme identifiers.",
   "type": {
-    "blueId": "6S6GNBUumRoRS4YWJxiiKeiyZ2dYH2nhcSpzGYvBJAha"
+    "blueId": "7Jr5Riqhpi58RF9WHekGJLZz1i5dorpcPt2ACZhJNczw"
   },
   "cardTransactionDetails": {
     "type": {

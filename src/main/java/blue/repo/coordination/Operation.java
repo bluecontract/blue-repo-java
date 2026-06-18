@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66")
-public class Operation extends blue.language.processor.model.MarkerContract {
+@TypeBlueId("C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG")
+public class Operation extends blue.language.processor.model.HandlerContract {
     public static String blueId() {
-        return "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66";
+        return "C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG";
     }
 
     public static String packageName() {
@@ -37,23 +37,12 @@ public class Operation extends blue.language.processor.model.MarkerContract {
 
     private Node request;
 
-    private String channel;
-
     public Node getRequest() {
         return request;
     }
 
     public Operation request(Node request) {
         this.request = request;
-        return this;
-    }
-
-    public String getChannel() {
-        return channel;
-    }
-
-    public Operation channel(String channel) {
-        this.channel = channel;
         return this;
     }
 

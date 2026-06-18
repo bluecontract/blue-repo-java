@@ -1,7 +1,7 @@
 {
   "name": "Linked Documents Permission Grant To Account",
   "type": {
-    "blueId": "FMWYekdjwkDnoM2YfHmwuUATHZovSgmDEvSVTmyVmbHc"
+    "blueId": "62Sxtmk1cwndFHJVax9Z6G6LBPnB2CeqaXMa6uvKvdKg"
   },
   "contracts": {
     "granterChannel": {
@@ -51,7 +51,7 @@
     "revoke": {
       "description": "Granter or grantee indicates the grant should be revoked (MyOS Admin will handle).",
       "type": {
-        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+        "blueId": "C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG"
       },
       "channel": {
         "type": {
@@ -68,7 +68,7 @@
     },
     "revokeImpl": {
       "type": {
-        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+        "blueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J"
       },
       "operation": {
         "type": {
@@ -425,46 +425,6 @@
                   "items": [
                     {
                       "$let": {
-                        "order": {
-                          "items": [
-                            {
-                              "type": {
-                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                              },
-                              "value": "issues"
-                            },
-                            {
-                              "type": {
-                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                              },
-                              "value": "target"
-                            },
-                            {
-                              "type": {
-                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                              },
-                              "value": "granterId"
-                            },
-                            {
-                              "type": {
-                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                              },
-                              "value": "granteeId"
-                            },
-                            {
-                              "type": {
-                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                              },
-                              "value": "links"
-                            },
-                            {
-                              "type": {
-                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                              },
-                              "value": "anchorCount"
-                            }
-                          ]
-                        },
                         "vars": {
                           "issues": {
                             "items": []
