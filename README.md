@@ -397,7 +397,7 @@ Publish to local Maven:
 ./gradlew publishToMavenLocal
 ```
 
-The project targets Java 8 bytecode.
+The project targets Java 8-compatible bytecode and builds with JDK 25.
 
 ## Release Setup
 
