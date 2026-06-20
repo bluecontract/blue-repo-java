@@ -381,6 +381,10 @@ If `js-yaml` is not installed locally, the generator expects it under
 
 ## Build And Test
 
+Gradle runs on JDK 25 and uses a Java 8 toolchain for tests. If Java 8 is not
+installed locally, Gradle can provision it through the configured Foojay
+toolchain resolver.
+
 ```bash
 ./gradlew test
 ```
@@ -397,7 +401,8 @@ Publish to local Maven:
 ./gradlew publishToMavenLocal
 ```
 
-The project targets Java 8 bytecode.
+The project targets Java 8-compatible bytecode, builds with JDK 25, and runs
+tests on Java 8.
 
 ## Release Setup
 
