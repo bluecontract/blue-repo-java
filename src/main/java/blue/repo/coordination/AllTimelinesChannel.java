@@ -1,29 +1,29 @@
-package blue.repo.paynote;
+package blue.repo.coordination;
 
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("DdvN6Zz2diGBsJoNBWT6BNcWKvxagiSbqw7CC9BXLUmK")
-public class MerchantToCustomerPayNote extends PayNote {
+@TypeBlueId("G8nAyzhkoFiXhXUV4Jv4hwsivv4x8ACpJX7JNbK9idgg")
+public class AllTimelinesChannel extends blue.language.processor.model.ChannelContract {
     public static String blueId() {
-        return "DdvN6Zz2diGBsJoNBWT6BNcWKvxagiSbqw7CC9BXLUmK";
+        return "G8nAyzhkoFiXhXUV4Jv4hwsivv4x8ACpJX7JNbK9idgg";
     }
 
     public static String packageName() {
-        return "PayNote";
+        return "Coordination";
     }
 
     public static String typeName() {
-        return "Merchant To Customer PayNote";
+        return "All Timelines Channel";
     }
 
     public static String qualifiedName() {
-        return "PayNote/Merchant To Customer PayNote";
+        return "Coordination/All Timelines Channel";
     }
 
     public static String resourcePath() {
-        return "blue/repo/definitions/PayNote/MerchantToCustomerPayNote.json";
+        return "blue/repo/definitions/Coordination/AllTimelinesChannel.json";
     }
 
     public static RepositoryType repositoryType() {

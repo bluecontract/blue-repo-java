@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("Biu1tXvUm4CpghgorjFVaqYAkSfkP1cKKenHuuFCTNhv")
+@TypeBlueId("HiRJStGowSKQoCAHQo2DUeFuu9Qe2V8fvAiyTdZQz1sH")
 public class WorkerAgencyPermissionGrant extends MyOSAdminBase {
     public static String blueId() {
-        return "Biu1tXvUm4CpghgorjFVaqYAkSfkP1cKKenHuuFCTNhv";
+        return "HiRJStGowSKQoCAHQo2DUeFuu9Qe2V8fvAiyTdZQz1sH";
     }
 
     public static String packageName() {

@@ -9,5 +9,11 @@
     "type": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     }
+  },
+  "replyTo": {
+    "description": "Optional timeline entry this chat message replies to or comments on. In concrete documents this may be represented\nby the full Timeline Entry object or by a BlueId reference to that entry.\n",
+    "type": {
+      "blueId": "HtPs8QJAUfc25fKanzLFjAqjbbhyFjDErYxjKdTCwARV"
+    }
   }
 }

@@ -2,7 +2,7 @@
   "name": "Document Session Bootstrap",
   "description": "MyOS-specific document for bootstrapping document sessions and tracking bootstrap progress",
   "type": {
-    "blueId": "FMWYekdjwkDnoM2YfHmwuUATHZovSgmDEvSVTmyVmbHc"
+    "blueId": "62Sxtmk1cwndFHJVax9Z6G6LBPnB2CeqaXMa6uvKvdKg"
   },
   "contracts": {
     "triggeredEventsChannel": {
@@ -92,19 +92,12 @@
                   "$if": {
                     "cond": {
                       "$not": {
-                        "$is": {
-                          "node": {
-                            "$event": {
-                              "type": {
-                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                              },
-                              "value": "/"
-                            }
-                          },
-                          "pattern": {
+                        "$exists": {
+                          "$event": {
                             "type": {
-                              "blueId": "BswjhjkdTDksVCcc8ijoU2RWcPam7Rphcecc67HJjZRi"
-                            }
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "/channelName"
                           }
                         }
                       }
@@ -267,19 +260,12 @@
                   "$if": {
                     "cond": {
                       "$not": {
-                        "$is": {
-                          "node": {
-                            "$event": {
-                              "type": {
-                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                              },
-                              "value": "/"
-                            }
-                          },
-                          "pattern": {
+                        "$exists": {
+                          "$event": {
                             "type": {
-                              "blueId": "4RvVyoEwATa2dtpRRoXbnRLbizq2vqeeMQVmqUrCd8JN"
-                            }
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "/initiatorSessionIds"
                           }
                         }
                       }
@@ -396,19 +382,12 @@
                   "$if": {
                     "cond": {
                       "$not": {
-                        "$is": {
-                          "node": {
-                            "$event": {
-                              "type": {
-                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                              },
-                              "value": "/"
-                            }
-                          },
-                          "pattern": {
+                        "$exists": {
+                          "$event": {
                             "type": {
-                              "blueId": "FaZorE1FNvj9ar6rxL8jHRNYQ6WYo4hERoE35v7A5DnL"
-                            }
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": "/reason"
                           }
                         }
                       }
@@ -535,7 +514,12 @@
                     "value": "/bootstrapStatus"
                   },
                   "val": {
-                    "$event": "/status"
+                    "$event": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/status"
+                    }
                   }
                 }
               ]

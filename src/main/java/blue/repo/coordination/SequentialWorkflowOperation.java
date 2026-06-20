@@ -3,11 +3,12 @@ package blue.repo.coordination;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
+import java.util.List;
 
-@TypeBlueId("AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz")
-public class SequentialWorkflowOperation extends SequentialWorkflow {
+@TypeBlueId("J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J")
+public class SequentialWorkflowOperation extends Operation {
     public static String blueId() {
-        return "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz";
+        return "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J";
     }
 
     public static String packageName() {
@@ -35,14 +36,14 @@ public class SequentialWorkflowOperation extends SequentialWorkflow {
                 resourcePath());
     }
 
-    private String operation;
+    private List<SequentialWorkflowStep> steps;
 
-    public String getOperation() {
-        return operation;
+    public List<SequentialWorkflowStep> getSteps() {
+        return steps;
     }
 
-    public SequentialWorkflowOperation operation(String operation) {
-        this.operation = operation;
+    public SequentialWorkflowOperation steps(List<SequentialWorkflowStep> steps) {
+        this.steps = steps;
         return this;
     }
 

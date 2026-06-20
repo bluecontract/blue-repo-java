@@ -1,13 +1,13 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "6JLeCP9KMiKUAM6iqsUNWRTYoJzmh6gbD4P8xBTeRBfz",
+  "repositoryVersionBlueId": "BKBNLCRcVgNDZ8GCJ39BnboTtaVtxTzYZReb24sStCVW",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
       "index": 0,
       "version": "1.3.0",
-      "repositoryBlueId": "6JLeCP9KMiKUAM6iqsUNWRTYoJzmh6gbD4P8xBTeRBfz"
+      "repositoryBlueId": "BKBNLCRcVgNDZ8GCJ39BnboTtaVtxTzYZReb24sStCVW"
     }
   ],
   "packageNames": [
@@ -361,6 +361,23 @@
     },
     {
       "packageName": "Coordination",
+      "name": "All Timelines Channel",
+      "qualifiedName": "Coordination/All Timelines Channel",
+      "blueId": "G8nAyzhkoFiXhXUV4Jv4hwsivv4x8ACpJX7JNbK9idgg",
+      "resourcePath": "blue/repo/definitions/Coordination/AllTimelinesChannel.json",
+      "status": "stable",
+      "repositoryVersionIndex": 0,
+      "versions": [
+        {
+          "repositoryVersionIndex": 0,
+          "typeBlueId": "G8nAyzhkoFiXhXUV4Jv4hwsivv4x8ACpJX7JNbK9idgg",
+          "attributesAdded": [],
+          "compatibleWithCurrent": true
+        }
+      ]
+    },
+    {
+      "packageName": "Coordination",
       "name": "API Call",
       "qualifiedName": "Coordination/API Call",
       "blueId": "5tLUE25DSPGgtQtYVTYYskg3Ppz1DQwLqXqyedHebWvT",
@@ -397,14 +414,31 @@
       "packageName": "Coordination",
       "name": "Chat Message",
       "qualifiedName": "Coordination/Chat Message",
-      "blueId": "EhWWtyoGRsxWp6Ur63ijxxjsjYcshexSqTmedCaiptA2",
+      "blueId": "3GFJTYsNFHWqoWaMoXbmuNkNFwso6R1aPhN8f98yYaGR",
       "resourcePath": "blue/repo/definitions/Coordination/ChatMessage.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "EhWWtyoGRsxWp6Ur63ijxxjsjYcshexSqTmedCaiptA2",
+          "typeBlueId": "3GFJTYsNFHWqoWaMoXbmuNkNFwso6R1aPhN8f98yYaGR",
+          "attributesAdded": [],
+          "compatibleWithCurrent": true
+        }
+      ]
+    },
+    {
+      "packageName": "Coordination",
+      "name": "Chat Workflow Operation",
+      "qualifiedName": "Coordination/Chat Workflow Operation",
+      "blueId": "AwomMHqfREQrDWk9K2yqKz9XPMUR6FyCJgwjabEy44gT",
+      "resourcePath": "blue/repo/definitions/Coordination/ChatWorkflowOperation.json",
+      "status": "stable",
+      "repositoryVersionIndex": 0,
+      "versions": [
+        {
+          "repositoryVersionIndex": 0,
+          "typeBlueId": "AwomMHqfREQrDWk9K2yqKz9XPMUR6FyCJgwjabEy44gT",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -669,14 +703,14 @@
       "packageName": "Coordination",
       "name": "Operation",
       "qualifiedName": "Coordination/Operation",
-      "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66",
+      "blueId": "C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG",
       "resourcePath": "blue/repo/definitions/Coordination/Operation.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66",
+          "typeBlueId": "C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -771,14 +805,14 @@
       "packageName": "Coordination",
       "name": "Sequential Workflow Operation",
       "qualifiedName": "Coordination/Sequential Workflow Operation",
-      "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz",
+      "blueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J",
       "resourcePath": "blue/repo/definitions/Coordination/SequentialWorkflowOperation.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz",
+          "typeBlueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -15544,14 +15578,14 @@
       "packageName": "MyOS",
       "name": "Chat GPT Connector Agent",
       "qualifiedName": "MyOS/Chat GPT Connector Agent",
-      "blueId": "9jVnm8QTU2vXFaozdAwXe5y66wfab3xxkXtynUf4PwVn",
+      "blueId": "DVrikgcCrsXBjbimKMNWeeSbgqEzMhvWGsRhH6P6eZsC",
       "resourcePath": "blue/repo/definitions/MyOS/ChatGPTConnectorAgent.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "9jVnm8QTU2vXFaozdAwXe5y66wfab3xxkXtynUf4PwVn",
+          "typeBlueId": "DVrikgcCrsXBjbimKMNWeeSbgqEzMhvWGsRhH6P6eZsC",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -15680,14 +15714,14 @@
       "packageName": "MyOS",
       "name": "Document Session Bootstrap",
       "qualifiedName": "MyOS/Document Session Bootstrap",
-      "blueId": "H61Vdu2AMWzF3ZFLWFQrYws565TrsvVg7S5CcFFx3EbP",
+      "blueId": "23sYRn6e9gDxAb4bkkhJbuyvRkavzPehkTj1UoZL31rx",
       "resourcePath": "blue/repo/definitions/MyOS/DocumentSessionBootstrap.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "H61Vdu2AMWzF3ZFLWFQrYws565TrsvVg7S5CcFFx3EbP",
+          "typeBlueId": "23sYRn6e9gDxAb4bkkhJbuyvRkavzPehkTj1UoZL31rx",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -15765,14 +15799,14 @@
       "packageName": "MyOS",
       "name": "Linked Documents Permission Grant To Account",
       "qualifiedName": "MyOS/Linked Documents Permission Grant To Account",
-      "blueId": "9xWDERguu2qHQbNsnp3oqVos9otazHfd51DXLnLsDU3D",
+      "blueId": "B4XqXXKa7sx4Pzeg6Lm5B4ErzH8epePSyjc8jE916kZD",
       "resourcePath": "blue/repo/definitions/MyOS/LinkedDocumentsPermissionGrantToAccount.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "9xWDERguu2qHQbNsnp3oqVos9otazHfd51DXLnLsDU3D",
+          "typeBlueId": "B4XqXXKa7sx4Pzeg6Lm5B4ErzH8epePSyjc8jE916kZD",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -15782,14 +15816,14 @@
       "packageName": "MyOS",
       "name": "Linked Documents Permission Grant To Document",
       "qualifiedName": "MyOS/Linked Documents Permission Grant To Document",
-      "blueId": "5oupQbnbuoBTUDvTSy58EKZkra3cBjvAcdiZSLchcwiv",
+      "blueId": "8rtpXbRiozmeNyzCqc1Rv2Y6gUJp4zifJ6kVZ1SquCNk",
       "resourcePath": "blue/repo/definitions/MyOS/LinkedDocumentsPermissionGrantToDocument.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "5oupQbnbuoBTUDvTSy58EKZkra3cBjvAcdiZSLchcwiv",
+          "typeBlueId": "8rtpXbRiozmeNyzCqc1Rv2Y6gUJp4zifJ6kVZ1SquCNk",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -15969,14 +16003,14 @@
       "packageName": "MyOS",
       "name": "MyOS Admin Base",
       "qualifiedName": "MyOS/MyOS Admin Base",
-      "blueId": "FMWYekdjwkDnoM2YfHmwuUATHZovSgmDEvSVTmyVmbHc",
+      "blueId": "62Sxtmk1cwndFHJVax9Z6G6LBPnB2CeqaXMa6uvKvdKg",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSAdminBase.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "FMWYekdjwkDnoM2YfHmwuUATHZovSgmDEvSVTmyVmbHc",
+          "typeBlueId": "62Sxtmk1cwndFHJVax9Z6G6LBPnB2CeqaXMa6uvKvdKg",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -16564,14 +16598,14 @@
       "packageName": "MyOS",
       "name": "Single Document Permission Grant To Account",
       "qualifiedName": "MyOS/Single Document Permission Grant To Account",
-      "blueId": "FxpvkuGSyrxhhvn8uToqkS33oiprrbTLBWLn2bWg8TqP",
+      "blueId": "G7DMmTesNMns3KZjohtgFQonTUsshUDJx1G7Xp9Gc2AE",
       "resourcePath": "blue/repo/definitions/MyOS/SingleDocumentPermissionGrantToAccount.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "FxpvkuGSyrxhhvn8uToqkS33oiprrbTLBWLn2bWg8TqP",
+          "typeBlueId": "G7DMmTesNMns3KZjohtgFQonTUsshUDJx1G7Xp9Gc2AE",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -16581,14 +16615,14 @@
       "packageName": "MyOS",
       "name": "Single Document Permission Grant To Document",
       "qualifiedName": "MyOS/Single Document Permission Grant To Document",
-      "blueId": "5VgEnZgpBjkyNiRjwdgjR6fvAWY4DnuSEWfT5dH5ZWPZ",
+      "blueId": "6uXr8yWNxPdxqhXuj8GyiDBPLEBgBqbdVAtSVUzJvSud",
       "resourcePath": "blue/repo/definitions/MyOS/SingleDocumentPermissionGrantToDocument.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "5VgEnZgpBjkyNiRjwdgjR6fvAWY4DnuSEWfT5dH5ZWPZ",
+          "typeBlueId": "6uXr8yWNxPdxqhXuj8GyiDBPLEBgBqbdVAtSVUzJvSud",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -16887,14 +16921,14 @@
       "packageName": "MyOS",
       "name": "Worker Agency Permission Grant",
       "qualifiedName": "MyOS/Worker Agency Permission Grant",
-      "blueId": "Biu1tXvUm4CpghgorjFVaqYAkSfkP1cKKenHuuFCTNhv",
+      "blueId": "HiRJStGowSKQoCAHQo2DUeFuu9Qe2V8fvAiyTdZQz1sH",
       "resourcePath": "blue/repo/definitions/MyOS/WorkerAgencyPermissionGrant.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "Biu1tXvUm4CpghgorjFVaqYAkSfkP1cKKenHuuFCTNhv",
+          "typeBlueId": "HiRJStGowSKQoCAHQo2DUeFuu9Qe2V8fvAiyTdZQz1sH",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -17329,14 +17363,14 @@
       "packageName": "PayNote",
       "name": "Card Transaction PayNote",
       "qualifiedName": "PayNote/Card Transaction PayNote",
-      "blueId": "4DtgmX6imV6fjynHqtBB7dzMGa6i87MEYHK2LCVFXofz",
+      "blueId": "NR2wzb11pfvgGmxF6RzeZcojakrFHhxZwkBJstzD997",
       "resourcePath": "blue/repo/definitions/PayNote/CardTransactionPayNote.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "4DtgmX6imV6fjynHqtBB7dzMGa6i87MEYHK2LCVFXofz",
+          "typeBlueId": "NR2wzb11pfvgGmxF6RzeZcojakrFHhxZwkBJstzD997",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -17652,14 +17686,14 @@
       "packageName": "PayNote",
       "name": "Merchant To Customer PayNote",
       "qualifiedName": "PayNote/Merchant To Customer PayNote",
-      "blueId": "DiVEksJgyjHdvyAjLBqAdcsoJptYqRfE3kvRne3AV4Vw",
+      "blueId": "DdvN6Zz2diGBsJoNBWT6BNcWKvxagiSbqw7CC9BXLUmK",
       "resourcePath": "blue/repo/definitions/PayNote/MerchantToCustomerPayNote.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "DiVEksJgyjHdvyAjLBqAdcsoJptYqRfE3kvRne3AV4Vw",
+          "typeBlueId": "DdvN6Zz2diGBsJoNBWT6BNcWKvxagiSbqw7CC9BXLUmK",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -17907,14 +17941,14 @@
       "packageName": "PayNote",
       "name": "Payment Mandate",
       "qualifiedName": "PayNote/Payment Mandate",
-      "blueId": "GEPKwP2gi9PW5dvK92etfK89S4NZtwoUBd6arwrjMs2c",
+      "blueId": "DxfEc9sUVj89aBqAB1c2DDPBxQg4xV9HziKvzk28cnAF",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentMandate.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "GEPKwP2gi9PW5dvK92etfK89S4NZtwoUBd6arwrjMs2c",
+          "typeBlueId": "DxfEc9sUVj89aBqAB1c2DDPBxQg4xV9HziKvzk28cnAF",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -18162,14 +18196,14 @@
       "packageName": "PayNote",
       "name": "PayNote",
       "qualifiedName": "PayNote/PayNote",
-      "blueId": "6S6GNBUumRoRS4YWJxiiKeiyZ2dYH2nhcSpzGYvBJAha",
+      "blueId": "7Jr5Riqhpi58RF9WHekGJLZz1i5dorpcPt2ACZhJNczw",
       "resourcePath": "blue/repo/definitions/PayNote/PayNote.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "6S6GNBUumRoRS4YWJxiiKeiyZ2dYH2nhcSpzGYvBJAha",
+          "typeBlueId": "7Jr5Riqhpi58RF9WHekGJLZz1i5dorpcPt2ACZhJNczw",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -18315,14 +18349,14 @@
       "packageName": "PayNote",
       "name": "PayNote Delivery",
       "qualifiedName": "PayNote/PayNote Delivery",
-      "blueId": "8qyV7LVoZPHGuMfoK89S2Km3ChruvvCNknwXAuf3VQeN",
+      "blueId": "3sL5BXFtsPGc1UGi2SK9DskQnEhTBxihDHcHzAaz8Y3X",
       "resourcePath": "blue/repo/definitions/PayNote/PayNoteDelivery.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "8qyV7LVoZPHGuMfoK89S2Km3ChruvvCNknwXAuf3VQeN",
+          "typeBlueId": "3sL5BXFtsPGc1UGi2SK9DskQnEhTBxihDHcHzAaz8Y3X",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -18842,14 +18876,14 @@
       "packageName": "Workflows",
       "name": "Accept Change Operation",
       "qualifiedName": "Workflows/Accept Change Operation",
-      "blueId": "1z2ACPaKnxqsMGMtYW54y17uSrutGg5Sbum9RcPtxrb",
+      "blueId": "HmsdHzw9pSoxAK4oX9dTxqRwLLgEPY8nQHpXVy8YcWd4",
       "resourcePath": "blue/repo/definitions/Workflows/AcceptChangeOperation.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "1z2ACPaKnxqsMGMtYW54y17uSrutGg5Sbum9RcPtxrb",
+          "typeBlueId": "HmsdHzw9pSoxAK4oX9dTxqRwLLgEPY8nQHpXVy8YcWd4",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -18859,14 +18893,14 @@
       "packageName": "Workflows",
       "name": "Accept Change Workflow",
       "qualifiedName": "Workflows/Accept Change Workflow",
-      "blueId": "9yxb9JxmGa7e9AswuZ6WJVFYYygxDY9u1cA8oMTF2BFJ",
+      "blueId": "72S8pnuUiaTtNAJczeSRRMqXqmtzsKWpuvpSBEHywSmB",
       "resourcePath": "blue/repo/definitions/Workflows/AcceptChangeWorkflow.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "9yxb9JxmGa7e9AswuZ6WJVFYYygxDY9u1cA8oMTF2BFJ",
+          "typeBlueId": "72S8pnuUiaTtNAJczeSRRMqXqmtzsKWpuvpSBEHywSmB",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -18876,14 +18910,14 @@
       "packageName": "Workflows",
       "name": "Change Operation",
       "qualifiedName": "Workflows/Change Operation",
-      "blueId": "DL6JGSVSnCRpTnqyuontEw58KJFCZXQxFxn9jaQdP5FN",
+      "blueId": "HSSVZzrDxPE8wRvcnjKjXFC7wuyR7BEYgYgDAg5Fd3J8",
       "resourcePath": "blue/repo/definitions/Workflows/ChangeOperation.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "DL6JGSVSnCRpTnqyuontEw58KJFCZXQxFxn9jaQdP5FN",
+          "typeBlueId": "HSSVZzrDxPE8wRvcnjKjXFC7wuyR7BEYgYgDAg5Fd3J8",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -18910,14 +18944,14 @@
       "packageName": "Workflows",
       "name": "Change Workflow",
       "qualifiedName": "Workflows/Change Workflow",
-      "blueId": "GqKFq9apKg63tJmc6ThUdURwy8eqf8LGhphpkrBt71n6",
+      "blueId": "8cz8PxWbDzMmfLSLp47dT7HwWwHLGCDs7pC7QrzDRceP",
       "resourcePath": "blue/repo/definitions/Workflows/ChangeWorkflow.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "GqKFq9apKg63tJmc6ThUdURwy8eqf8LGhphpkrBt71n6",
+          "typeBlueId": "8cz8PxWbDzMmfLSLp47dT7HwWwHLGCDs7pC7QrzDRceP",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -18944,14 +18978,14 @@
       "packageName": "Workflows",
       "name": "Customer Consent",
       "qualifiedName": "Workflows/Customer Consent",
-      "blueId": "A84YJAESBS9YNfAypruePcLGnuRRoN2G599PJYQyDEGv",
+      "blueId": "88n32WWoSpmAW8FZgt5CSRtZfgLvwEd4CE4f53veB3ak",
       "resourcePath": "blue/repo/definitions/Workflows/CustomerConsent.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "A84YJAESBS9YNfAypruePcLGnuRRoN2G599PJYQyDEGv",
+          "typeBlueId": "88n32WWoSpmAW8FZgt5CSRtZfgLvwEd4CE4f53veB3ak",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -19012,14 +19046,14 @@
       "packageName": "Workflows",
       "name": "Propose Change Operation",
       "qualifiedName": "Workflows/Propose Change Operation",
-      "blueId": "Bfa8rBxGS5auYWAWQ5nGKftm1q3dGD2ge2jwmjP2Atx5",
+      "blueId": "98VFsUDGgsQeKK18rBiD927m6jk4o6HNcqbqjnpHt2hC",
       "resourcePath": "blue/repo/definitions/Workflows/ProposeChangeOperation.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "Bfa8rBxGS5auYWAWQ5nGKftm1q3dGD2ge2jwmjP2Atx5",
+          "typeBlueId": "98VFsUDGgsQeKK18rBiD927m6jk4o6HNcqbqjnpHt2hC",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -19029,14 +19063,14 @@
       "packageName": "Workflows",
       "name": "Propose Change Workflow",
       "qualifiedName": "Workflows/Propose Change Workflow",
-      "blueId": "3p9WMmXyfy3DJVctukesfdw6Gj4SK6QdsYebRSHJaH6c",
+      "blueId": "5sgkKk3nHD5AfjFgtZjA9wS2u7TDDCmxdRQ5bRAZz3hL",
       "resourcePath": "blue/repo/definitions/Workflows/ProposeChangeWorkflow.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "3p9WMmXyfy3DJVctukesfdw6Gj4SK6QdsYebRSHJaH6c",
+          "typeBlueId": "5sgkKk3nHD5AfjFgtZjA9wS2u7TDDCmxdRQ5bRAZz3hL",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -19063,14 +19097,14 @@
       "packageName": "Workflows",
       "name": "Reject Change Operation",
       "qualifiedName": "Workflows/Reject Change Operation",
-      "blueId": "4DhBZNTeYw3vym9Z2ArJPo8CTSvhQy3eMnjoauEFnYRt",
+      "blueId": "HsokWCoePp2Sg4TbR1bAS9AczMfHbJ7651cCKu8nNDp4",
       "resourcePath": "blue/repo/definitions/Workflows/RejectChangeOperation.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "4DhBZNTeYw3vym9Z2ArJPo8CTSvhQy3eMnjoauEFnYRt",
+          "typeBlueId": "HsokWCoePp2Sg4TbR1bAS9AczMfHbJ7651cCKu8nNDp4",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }
@@ -19080,14 +19114,14 @@
       "packageName": "Workflows",
       "name": "Reject Change Workflow",
       "qualifiedName": "Workflows/Reject Change Workflow",
-      "blueId": "33PFufGhLW51jVunAcpxYPj4tj4TwqXEinLnnqJNjTJm",
+      "blueId": "4B37jnHqB8NaUiTxWEeyzSDV7UfAHrwpTwjPpPmJiiRV",
       "resourcePath": "blue/repo/definitions/Workflows/RejectChangeWorkflow.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "33PFufGhLW51jVunAcpxYPj4tj4TwqXEinLnnqJNjTJm",
+          "typeBlueId": "4B37jnHqB8NaUiTxWEeyzSDV7UfAHrwpTwjPpPmJiiRV",
           "attributesAdded": [],
           "compatibleWithCurrent": true
         }

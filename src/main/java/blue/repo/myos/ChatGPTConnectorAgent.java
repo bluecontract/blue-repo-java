@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("9jVnm8QTU2vXFaozdAwXe5y66wfab3xxkXtynUf4PwVn")
+@TypeBlueId("DVrikgcCrsXBjbimKMNWeeSbgqEzMhvWGsRhH6P6eZsC")
 public class ChatGPTConnectorAgent extends Agent {
     public static String blueId() {
-        return "9jVnm8QTU2vXFaozdAwXe5y66wfab3xxkXtynUf4PwVn";
+        return "DVrikgcCrsXBjbimKMNWeeSbgqEzMhvWGsRhH6P6eZsC";
     }
 
     public static String packageName() {

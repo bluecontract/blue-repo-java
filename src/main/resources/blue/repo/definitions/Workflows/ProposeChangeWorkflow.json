@@ -2,7 +2,7 @@
   "name": "Propose Change Workflow",
   "description": "Stores a proposed change under /proposedChange{postfix}.",
   "type": {
-    "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+    "blueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J"
   },
   "request": {
     "description": "Expected request payload for this workflow.",

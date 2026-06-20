@@ -130,7 +130,7 @@
     },
     "updateTransactionIdentificationStatus": {
       "type": {
-        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+        "blueId": "C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG"
       },
       "channel": {
         "type": {
@@ -147,7 +147,7 @@
     },
     "updateTransactionIdentificationStatusImpl": {
       "type": {
-        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+        "blueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J"
       },
       "operation": {
         "type": {
@@ -607,7 +607,7 @@
     },
     "acceptPayNote": {
       "type": {
-        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+        "blueId": "C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG"
       },
       "channel": {
         "type": {
@@ -626,7 +626,7 @@
     },
     "acceptPayNoteImpl": {
       "type": {
-        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+        "blueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J"
       },
       "operation": {
         "type": {
@@ -1380,7 +1380,7 @@
     },
     "rejectPayNote": {
       "type": {
-        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+        "blueId": "C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG"
       },
       "channel": {
         "type": {
@@ -1405,7 +1405,7 @@
     },
     "rejectPayNoteImpl": {
       "type": {
-        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+        "blueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J"
       },
       "operation": {
         "type": {
@@ -2229,7 +2229,7 @@
     },
     "reportDeliveryError": {
       "type": {
-        "blueId": "316voisXnp8BqLs7BNjjypfn3UG2FSpgFxS6pFqHbf66"
+        "blueId": "C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG"
       },
       "channel": {
         "type": {
@@ -2246,7 +2246,7 @@
     },
     "reportDeliveryErrorImpl": {
       "type": {
-        "blueId": "AWnvWVtp3g7B67iM6ZFETo1zri5yVikh8i53Q6PAPkqz"
+        "blueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J"
       },
       "operation": {
         "type": {
@@ -2404,7 +2404,7 @@
     },
     "document": {
       "type": {
-        "blueId": "6S6GNBUumRoRS4YWJxiiKeiyZ2dYH2nhcSpzGYvBJAha"
+        "blueId": "7Jr5Riqhpi58RF9WHekGJLZz1i5dorpcPt2ACZhJNczw"
       }
     }
   },
@@ -2415,7 +2415,7 @@
     },
     "document": {
       "type": {
-        "blueId": "GEPKwP2gi9PW5dvK92etfK89S4NZtwoUBd6arwrjMs2c"
+        "blueId": "DxfEc9sUVj89aBqAB1c2DDPBxQg4xV9HziKvzk28cnAF"
       }
     }
   },
