@@ -4,7 +4,7 @@
   "sourcePage": {
     "description": "A specific page for the source for obtaining a market data point. In FpML, this is specified as a scheme, rateSourcePageScheme, for which no coding Scheme or URI is specified.\n",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     }
   },
   "sourcePageHeading": {
@@ -16,7 +16,7 @@
   "sourceProvider": {
     "description": "An information source for obtaining a market data point. For example Bloomberg, Reuters, Telerate, etc.",
     "type": {
-      "blueId": "F146JGqnWZ5sfLAxTTdw6wibcDWTqzmMxom6z62GKkRB"
+      "blueId": "JMdjF7BkL7hgbzHsPDqk4D7tgaZ98wirqwFPWCQBuvs"
     },
     "schema": {
       "required": true

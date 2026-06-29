@@ -4,7 +4,7 @@
   "earlyCallDate": {
     "description": "Date prior to which the option buyer will have to pay a Make Whole Amount to the option seller if he/she exercises the option.\n",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     },
     "schema": {
       "required": true
@@ -12,25 +12,25 @@
   },
   "floatingRateIndex": {
     "type": {
-      "blueId": "94ZSjm1tubYgDRVxoNemu9wBkqkuU4YE5cvNxw8BSwek"
+      "blueId": "Ffp3NGGHva1Wh7c62eqGBrQTxEzCeASMFJ6PAmoSuCXF"
     }
   },
   "indexTenor": {
     "description": "The ISDA Designated Maturity, i.e. the tenor of the floating rate.",
     "type": {
-      "blueId": "D2zD5eW4h5CVwkas6bYant1Kmgdg4zt95zb3kYgR87RE"
+      "blueId": "G5BwzTWEaA14NoPKn8iSwCnmwnWuQegPHZwrpgagS6kY"
     }
   },
   "interpolationMethod": {
     "description": "The type of interpolation method that the calculation agent reserves the right to use.",
     "type": {
-      "blueId": "E7cjhfunV73pRwireCDdsqgxtYY2bEGL3C846tFqicT8"
+      "blueId": "69SohrhYgsRTiHcPmh9GwadYoxt1kJgmJ3e2nrCajFHt"
     }
   },
   "side": {
     "description": "The side (bid/mid/ask) of the measure.",
     "type": {
-      "blueId": "4WfiUQKptdNU9isJ62AxGcFmEepUWyeS9JofCKZ8Ke3q"
+      "blueId": "AH1BY9EazwZmuZ6LcxCKPZSzsejRaRpRinAqLmVsFTgc"
     }
   },
   "spread": {

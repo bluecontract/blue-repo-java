@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("H4ara2sfDMhDa8AtzR421pjXqxhvK3yvSCjBXsaD7G6g")
+@TypeBlueId("3r42QBCBADZWzkxMBCQkvH3c6M3c1raWTFgLjoCsjZoe")
 public class CdmObservableAssetForeignExchangeRateIndex {
     public static String blueId() {
-        return "H4ara2sfDMhDa8AtzR421pjXqxhvK3yvSCjBXsaD7G6g";
+        return "3r42QBCBADZWzkxMBCQkvH3c6M3c1raWTFgLjoCsjZoe";
     }
 
     public static String packageName() {

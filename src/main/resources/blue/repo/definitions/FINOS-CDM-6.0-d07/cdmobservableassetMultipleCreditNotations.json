@@ -4,7 +4,7 @@
   "condition": {
     "description": "An enumerated element, to qualify whether All or Any credit notation applies.",
     "type": {
-      "blueId": "E6D3rJPkCD3TTUB7RHMfgLuhDU9ajFgT85hyMcJkagsH"
+      "blueId": "5AmXPpNccrpoL5H4BBSk9y2QfnizHY6JKgXqaHJTHgvy"
     },
     "schema": {
       "required": true
@@ -16,7 +16,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "J9Pxr5r3aXac8695zdk4ZHX7ZTpzYtpJRUFtEa5paeA1"
+      "blueId": "3a31df2HdfB7EqRbM2D5wwBaTaVC1tUemQ66F91P16xS"
     },
     "schema": {
       "minItems": 2
@@ -24,12 +24,12 @@
   },
   "mismatchResolution": {
     "type": {
-      "blueId": "9oe4gPYKe4ctpZwSdP3YSVnweREZzsq9SJfff8y3RmAE"
+      "blueId": "DRzBA7DNKGx3x57DdS7v8C2BBHL55ia9a7Sqzx7r5Qr7"
     }
   },
   "referenceAgency": {
     "type": {
-      "blueId": "4cXm34z6DXgmjwV5da5VyP8ugnbd319u4ZyJ25GU13PG"
+      "blueId": "D1H3C3xAMJv2XQNBYfethSUKDH7kngUkefwbzLwVLW1i"
     }
   }
 }

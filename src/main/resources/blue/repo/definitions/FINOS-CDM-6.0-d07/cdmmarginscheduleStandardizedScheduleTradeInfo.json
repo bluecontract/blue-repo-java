@@ -2,22 +2,22 @@
   "name": "cdm/margin/schedule/StandardizedScheduleTradeInfo",
   "assetClass": {
     "type": {
-      "blueId": "HXVDHCRqbEvzCXv8LwaeEzMy47NG3ogpguy7Gqu2K4Fh"
+      "blueId": "CDbwJvzYyrQ7afEJRFR8x1ii8sk11Es3z1e62dbNj2rU"
     }
   },
   "grossInitialMargin": {
     "type": {
-      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+      "blueId": "7eyr2kXubNSHtLXpHJ9G8NqtmDXLfmDmHQZSkLa9qkyy"
     }
   },
   "markToMarketValue": {
     "type": {
-      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+      "blueId": "7eyr2kXubNSHtLXpHJ9G8NqtmDXLfmDmHQZSkLa9qkyy"
     }
   },
   "productClass": {
     "type": {
-      "blueId": "HcbAjsykfijmo2YKjhqTPZuhRKVjh1MvNA2ZnQSoAZsG"
+      "blueId": "BwbqfunwwJxSMfQD4CEUJ2Ab4AqzjMTjpeSCF3E1NLYx"
     }
   }
 }

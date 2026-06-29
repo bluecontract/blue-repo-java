@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R")
+@TypeBlueId("HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg")
 public class ComRosettaModelFieldWithMetaString {
     public static String blueId() {
-        return "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R";
+        return "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg";
     }
 
     public static String packageName() {

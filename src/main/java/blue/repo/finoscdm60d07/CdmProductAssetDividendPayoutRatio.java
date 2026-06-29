@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("8s4tpuu4oGPZmBzhToqTQoVaESXwgLUVywAUzRoTtpcJ")
+@TypeBlueId("CXNX5xUoDwJxfTwLJdwkuXkNThirm3BpXK2QCH6kBkeu")
 public class CdmProductAssetDividendPayoutRatio {
     public static String blueId() {
-        return "8s4tpuu4oGPZmBzhToqTQoVaESXwgLUVywAUzRoTtpcJ";
+        return "CXNX5xUoDwJxfTwLJdwkuXkNThirm3BpXK2QCH6kBkeu";
     }
 
     public static String packageName() {

@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("G8UTNxqtBocLoZ1NzAcdw5xJipG4hD6iijvufXfiGsqZ")
+@TypeBlueId("9aWzcazT96cuBgu8aeqXmWbGmtbVKjeBYG4ZKYcd3zCS")
 public class CdmRegulationInvstmtDcsnPrsn {
     public static String blueId() {
-        return "G8UTNxqtBocLoZ1NzAcdw5xJipG4hD6iijvufXfiGsqZ";
+        return "9aWzcazT96cuBgu8aeqXmWbGmtbVKjeBYG4ZKYcd3zCS";
     }
 
     public static String packageName() {

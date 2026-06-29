@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "Maximum",
-      "Minimum"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Maximum"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Minimum"
+      }
     ]
   }
 }

@@ -4,13 +4,13 @@
   "feeAmountSchedule": {
     "description": "The exercise fee amount schedule. The fees are expressed as currency amounts. The currency of the fee is assumed to be that of the notional schedule referenced.\n",
     "type": {
-      "blueId": "2H4ME4VqajUcnKpoYFTCpgzcfyMSjQh5Go1cQ37DfPEF"
+      "blueId": "J4wqPRqUgot11KtycNoGqM9u43KZrNSvWHAbzBSR4WNS"
     }
   },
   "feePaymentDate": {
     "description": "The date on which exercise fee(s) will be paid. It is specified as a relative date.",
     "type": {
-      "blueId": "7QxGhWQtmouskKThF8wotN1SAyBt25xWupZQKMHgcTYw"
+      "blueId": "4JvKSv6NGWh8hqfN6miPYiWwfE3g61v9yBhQuXc8tB8z"
     },
     "schema": {
       "required": true
@@ -19,7 +19,7 @@
   "feeRateSchedule": {
     "description": "The exercise free rate schedule. The fees are expressed as percentage rates of the notional being exercised. The currency of the fee is assumed to be that of the notional schedule referenced.\n",
     "type": {
-      "blueId": "6QJPBRQ2jy9t4PXjUJ2Z8HB4HNtXM4iwKtw1V5xgtsii"
+      "blueId": "FYo7TjN1ZyQhoK2ypBWjmiE2Q6gyQ13fpHnTWBZdEdi2"
     }
   },
   "notionalReference": {
@@ -34,13 +34,13 @@
   "payer": {
     "description": "Specifies the counterparty responsible for making the payments defined by this structure.  The party is one of the two principal parties to the transaction.\n",
     "type": {
-      "blueId": "ANd6oSrWArfUtpgKvesbXu9YiaQ3XLSYDxhgbBotJcUy"
+      "blueId": "6RRexSdxduLUUJjoAGhNuhXszw24mwyTFrHtwAqU2SDG"
     }
   },
   "receiver": {
     "description": "Specifies the party that receives the payments corresponding to this structure.  The party is one of the two counterparties to the transaction.\n",
     "type": {
-      "blueId": "ANd6oSrWArfUtpgKvesbXu9YiaQ3XLSYDxhgbBotJcUy"
+      "blueId": "6RRexSdxduLUUJjoAGhNuhXszw24mwyTFrHtwAqU2SDG"
     }
   }
 }

@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "FML93S7fZhhrLNMnJap6eeEJPrYEZQMXbK744iSL65Gx"
+      "blueId": "EEF9WbKw9D9wtisDhW8324FJ2E947ssWHTCgh83EtSwA"
     },
     "schema": {
       "minItems": 0
@@ -16,7 +16,7 @@
   "corporateActionIntent": {
     "description": "The intent of a corporate action on the position.",
     "type": {
-      "blueId": "4UEoeZWF5eyedQHWfs5Bckogecv82AECMRXiRHuB7sVp"
+      "blueId": "GFvEqH3FNnzTFFJAqMgygUiVX9vA45GDjiV95ZqP4qAR"
     }
   },
   "effectiveDate": {
@@ -34,7 +34,7 @@
   "intent": {
     "description": "The intent attribute is meant to be specified when the event qualification cannot be programmatically inferred from the event features. As a result it is only associated with those primitives that can give way to such ambiguity, the quantityChange being one of those.\n",
     "type": {
-      "blueId": "AHXwaC5Grx1KBJX7FXsT856LGGqh29Dd9euVuY11khi5"
+      "blueId": "FurdrKKKE4EKbMMyMvsWgSGLYyqPxhjTKSZcJDKD777K"
     },
     "schema": {
       "required": true
@@ -43,7 +43,7 @@
   "packageInformation": {
     "description": "Specifies the package information in case the business event represents several trades executed as a package (hence this attribute is optional). The package information is only instantiated once at the business event level to preserve referential integrity, whereas individual trades make reference to it to identify that they are part of a package.\n",
     "type": {
-      "blueId": "AbV2aBGu9sz4TqGaWrnYqEhAyYUbGm94B28cfiZe4tA5"
+      "blueId": "Dq7xVZaLz1ofmKsUodtSSbe6YGxaRdCtP5HM1pKU8RHF"
     }
   }
 }

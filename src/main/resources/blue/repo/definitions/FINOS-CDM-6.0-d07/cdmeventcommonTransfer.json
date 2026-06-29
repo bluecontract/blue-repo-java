@@ -4,7 +4,7 @@
   "asset": {
     "description": "Represents the object that is subject to the transfer, it could be an asset or a reference.",
     "type": {
-      "blueId": "9EcbYfwS6ejjhaqz7ve1AjBtuKDZ7o9VVsPpEN5tQdJ9"
+      "blueId": "5UGws2rghMXJPsBC2YMTqJQgztQ8nTZm1XTaGkvxheXo"
     }
   },
   "identifier": {
@@ -13,7 +13,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "CEQu3EzZpdpovFNqHBXsSJ1md21921ewNRp4NtASqW9T"
+      "blueId": "4PPUed4wa5yh6Po87HFZQNZmaedjsuVfFRs2XCHbzciY"
     },
     "schema": {
       "minItems": 0
@@ -22,7 +22,7 @@
   "payerReceiver": {
     "description": "Represents the parties to the transfer and their role.",
     "type": {
-      "blueId": "7eRUbcyv8yFT4EXTPWSQnHYKdrgzkQVJ2K2p7R9xF7BJ"
+      "blueId": "2LmejohDGLXaXF2jDmkccaa7GSQbnbp8iBMKmrxifhWs"
     },
     "schema": {
       "required": true
@@ -31,19 +31,19 @@
   "quantity": {
     "description": "Represents the amount of the asset to be transferred. The cashflow amount is always a positive number, as the cashflow direction is implied by the payer/receiver attribute.\n",
     "type": {
-      "blueId": "FrmpqNJPnR6deFCfrx5PCjxXkRTEHfDQrfnv67NeRDqy"
+      "blueId": "BoLMyAuLAegX9RWR7trQbdmp7pB2tAfkPhDoTzbu8acd"
     }
   },
   "resetOrigin": {
     "description": "Represents the reset and observation values that were used to determine the transfer amount.",
     "type": {
-      "blueId": "HFVsjPq4dbaRXVa8vrWUTPdSo8R4CoRFz275RuCiohR7"
+      "blueId": "C2cq6aR7yoFg7jn9vV3wrTukUrevaRzkBo4PeSWP5die"
     }
   },
   "settlementDate": {
     "description": "Represents the date on which the transfer to due.",
     "type": {
-      "blueId": "Cnr9GX4zVqDdTu9BuWJej49kDymJFygBdiFa7TH563Vu"
+      "blueId": "8VijgDyT9t9CiNbNQYVbdE1whbL9Q9DTRMZpCocVhSxF"
     }
   },
   "settlementOrigin": {
@@ -55,7 +55,7 @@
   "transferExpression": {
     "description": "Specifies a transfer expression (cash price, performance amount, scheduled payment amount, etc.) to define the nature of the transfer amount and its source.\n",
     "type": {
-      "blueId": "6bA8mEoxUfi9pjmkAjEYSxd8UqXycViwJALfrorL3U4K"
+      "blueId": "28K8jWekKx6AFsw5haFZg81uADTmzkkgCKQErSng8jXd"
     },
     "schema": {
       "required": true

@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "Confirmed",
-      "Unconfirmed"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Confirmed"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Unconfirmed"
+      }
     ]
   }
 }

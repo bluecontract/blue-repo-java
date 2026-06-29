@@ -4,13 +4,13 @@
   "priceSourceDisruption": {
     "description": "An attribute defining the parameters to get a new quote when a settlement rate option is disrupted.",
     "type": {
-      "blueId": "T1PcoKuCw9V4QBzrSLDHPHGXfswvbw8m9j78jcf91g7"
+      "blueId": "7B7UekmPAs7VxgX8jAooMTn1cRUmS94ja5eiFSvuGp8L"
     }
   },
   "settlementRateOption": {
     "description": "The rate source for the conversion to the settlement currency. This source is specified through a scheme that reflects the terms of the Annex A to the 1998 FX and Currency Option Definitions.\n",
     "type": {
-      "blueId": "21coEyT7ssdAjeceX6KNSWdCFQhFKv1xukphm8Kb7GA4"
+      "blueId": "8iH51R45gmWCtNjqrR63GErLSs4TeUXk51R7D4ky3NDz"
     },
     "schema": {
       "required": true

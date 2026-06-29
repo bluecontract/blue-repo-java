@@ -4,12 +4,12 @@
   "ancillaryParty": {
     "description": "Identifies a party via its ancillary role on a transaction (e.g. CCP or DCO through which the trade should be cleared.)\n",
     "type": {
-      "blueId": "2YmGLtgJ5as5H64M8bRYDDRaGWwqzAGqrQSSzEm1Jvjm"
+      "blueId": "C2Ec7JF7c6QV6kD3Wb7Mtfg9NJ7aemu5KqHaafpZuEvN"
     }
   },
   "legalEntity": {
     "type": {
-      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
     }
   }
 }

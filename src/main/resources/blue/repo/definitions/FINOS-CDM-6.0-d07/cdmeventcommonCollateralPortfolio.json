@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "J3fEqj9oTvSRB56tSsiVxJJNHPVH8HGUpVpHa2D1bwr"
+      "blueId": "8nANyRzbRdjuTq7qNZchzDJ4XYqZ8HWYinBX4dWM6NAV"
     },
     "schema": {
       "minItems": 0
@@ -19,7 +19,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "CdGh67FpM7EuwY9DiNzkNvxn9zmpEPUE2dbCxLwEspEW"
+      "blueId": "9Pn2rDgMph8R9xESVmd1HEN7zV1kPPCcUAMomnz2RDAT"
     },
     "schema": {
       "minItems": 0
@@ -34,7 +34,7 @@
   "portfolioIdentifier": {
     "description": "Specifies a unique identifier for a set of collateral positions in a portfolio.",
     "type": {
-      "blueId": "DtCdHJZeccxHZbwaJQZhJKaibyxKYwbj9hKw2ZsK5K4r"
+      "blueId": "9tpFoqFu1yX5LZEATGF8CYsE5VSXhkQua9LMXwLEX2Pv"
     }
   }
 }

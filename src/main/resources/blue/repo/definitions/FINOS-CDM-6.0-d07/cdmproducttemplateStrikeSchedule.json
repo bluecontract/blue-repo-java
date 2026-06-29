@@ -4,7 +4,7 @@
   "buyer": {
     "description": "The buyer of the option.",
     "type": {
-      "blueId": "J4GUBPRsWPE3Q5Kr25vSJJKPRNK2AbKhoGTj49buTitc"
+      "blueId": "AYi3oguzR4Utfj7hc4duXgvb2M7SapBbYpq8SyJbHghs"
     }
   },
   "price": {
@@ -16,7 +16,7 @@
   "seller": {
     "description": "The party that has sold.",
     "type": {
-      "blueId": "J4GUBPRsWPE3Q5Kr25vSJJKPRNK2AbKhoGTj49buTitc"
+      "blueId": "AYi3oguzR4Utfj7hc4duXgvb2M7SapBbYpq8SyJbHghs"
     }
   }
 }

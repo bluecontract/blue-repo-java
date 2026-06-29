@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     },
     "schema": {
       "minItems": 0
@@ -16,7 +16,7 @@
   "dateAdjustments": {
     "description": "The business day convention and financial business centers used for adjusting the date if it would otherwise fall on a day that is not a business date in the specified business centers.\n",
     "type": {
-      "blueId": "5aQGMvRRbnA89dRVLVFr9uxQHNZp95ceK8mHHwAdWat"
+      "blueId": "8ZhZC2EwhTqHnDvvcr2ZW4iwCBJM57NcLAqPCd8shypq"
     }
   },
   "unadjustedDate": {

@@ -13,7 +13,7 @@
   "payerReceiver": {
     "description": "This attribute doesn't exists in the FpML construct, which makes use of the PayerReceiver.model group.",
     "type": {
-      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+      "blueId": "3xPof2WJyFXisFtvaxpSGddTxHyGioazbsMJjuUucbzT"
     },
     "schema": {
       "required": true

@@ -4,25 +4,25 @@
   "dividendAmountType": {
     "description": "Specifies whether the dividend is paid with respect to the Dividend Period.",
     "type": {
-      "blueId": "7xHeGPadGt2VZSERySAPfuAQjtqYkGoAgnwLSGCwQqHM"
+      "blueId": "EPZXT4tSSu6F1Bgi8FKpq43oaSVqFr8Um1HXaoK25VVE"
     }
   },
   "dividendComposition": {
     "description": "Specifies how the composition of Dividends is to be determined.",
     "type": {
-      "blueId": "8rSKp1LzVhsbCzetYS3euhNy3Q7boeiAmxTFfXeBERz9"
+      "blueId": "HN4sqTAXi2pGFVHbV6MLLdW3RgQ9Qq4thhJ9rWVsexks"
     }
   },
   "dividendCurrency": {
     "description": "Specifies the currency in which the dividend will be denominated, e.g. the dividend currency, or a specified currency. This class is not specified as such in FpML, which makes use of the CurrencyAndDeterminationMethod.model to specify such terms.\n",
     "type": {
-      "blueId": "4gPA4TtCTkNSjhhBS3R28A659MEkv5p7W9fZUumrMyLd"
+      "blueId": "6YjggFTd8yUypLgjeUwSiJGZvfraozN2PjZBK4Q8KLQ6"
     }
   },
   "dividendEntitlement": {
     "description": "Defines the date on which the receiver of the equity return is entitled to the dividend.",
     "type": {
-      "blueId": "G3BKTS1eRAojgA7wPVuMNozjWCqJSoYHasAuyT9X1WeS"
+      "blueId": "5A3hCLVC8huTr312Z9ddi2snvyWozZsHadHLetvYe31g"
     }
   },
   "dividendPayoutRatio": {
@@ -31,7 +31,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "8s4tpuu4oGPZmBzhToqTQoVaESXwgLUVywAUzRoTtpcJ"
+      "blueId": "CXNX5xUoDwJxfTwLJdwkuXkNThirm3BpXK2QCH6kBkeu"
     },
     "schema": {
       "minItems": 0
@@ -43,7 +43,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "9Uz1AKVVvyVLE7pD92gmLKPsawMxcLM1aTZ9fy6KYzpE"
+      "blueId": "EQ1DnA2mvWsTZJUqo9NJBj9AF7uJYZXPRwQw2ZUqpqQC"
     },
     "schema": {
       "minItems": 0
@@ -58,19 +58,19 @@
   "excessDividendAmount": {
     "description": "Determination of Gross Cash Dividend per Share.",
     "type": {
-      "blueId": "7xHeGPadGt2VZSERySAPfuAQjtqYkGoAgnwLSGCwQqHM"
+      "blueId": "EPZXT4tSSu6F1Bgi8FKpq43oaSVqFr8Um1HXaoK25VVE"
     }
   },
   "extraordinaryDividendsParty": {
     "description": "Specifies the party which determines if dividends are extraordinary in relation to normal levels.",
     "type": {
-      "blueId": "2YmGLtgJ5as5H64M8bRYDDRaGWwqzAGqrQSSzEm1Jvjm"
+      "blueId": "C2Ec7JF7c6QV6kD3Wb7Mtfg9NJ7aemu5KqHaafpZuEvN"
     }
   },
   "firstOrSecondPeriod": {
     "description": "2002 ISDA Equity Derivatives Definitions: Dividend Period as either the First Period or the Second Period. |\n",
     "type": {
-      "blueId": "DBDNTxefAwN5dTmnvMPkKEXnQNZ9wS7XJJ3HKXPjwy5k"
+      "blueId": "4Dvzid1TBuLFxwiAp8Wd2pdhRLvMpCoGBe9D6fba8eVg"
     }
   },
   "materialDividend": {
@@ -82,7 +82,7 @@
   "nonCashDividendTreatment": {
     "description": "Specifies the treatment of Non-Cash Dividends.",
     "type": {
-      "blueId": "9rHef5DE4ZxzKcMorfEknEKxAT5sa3J8v6MqzBpJDWQD"
+      "blueId": "7X5DcG9JMYrcW7XQWvsmFc2zX3uk1rsikycU2gBnKSyV"
     }
   },
   "performance": {

@@ -4,7 +4,7 @@
   "averagingMethod": {
     "description": "Specifies enumerations for the type of averaging calculation.",
     "type": {
-      "blueId": "BfP14BhNSGgCtaihCTUKBZUmocYb1YMoa8xwWZ25aGqL"
+      "blueId": "2EzRuguKzzQR2u8dtQqTXe7ATvUruro1jyD4Hc8MHaJk"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "precision": {
     "description": "Rounding applied to the average calculation.",
     "type": {
-      "blueId": "DnXzzassZD8x4ZyWkS46bBpvzPMBW4txNdG32xcULQhy"
+      "blueId": "BYetgNwutc7xjHHx9g7ZhsdKgyGYMd1UR4jDoHHafJHj"
     },
     "schema": {
       "required": true

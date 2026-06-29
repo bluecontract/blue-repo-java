@@ -6,11 +6,36 @@
   },
   "schema": {
     "enum": [
-      "AsSpecifiedInMasterAgreement",
-      "AsSpecifiedInStandardTermsSupplement",
-      "Both",
-      "ExercisingParty",
-      "NonExercisingParty"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "AsSpecifiedInMasterAgreement"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "AsSpecifiedInStandardTermsSupplement"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Both"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ExercisingParty"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "NonExercisingParty"
+      }
     ]
   }
 }

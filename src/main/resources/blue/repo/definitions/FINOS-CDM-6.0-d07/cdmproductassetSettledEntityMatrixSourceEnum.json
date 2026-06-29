@@ -6,9 +6,24 @@
   },
   "schema": {
     "enum": [
-      "ConfirmationAnnex",
-      "NotApplicable",
-      "Publisher"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ConfirmationAnnex"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "NotApplicable"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Publisher"
+      }
     ]
   }
 }

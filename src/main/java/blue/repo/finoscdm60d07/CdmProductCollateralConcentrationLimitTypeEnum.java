@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("7NU27Rw9Fpmshp58cpLR3GB8QRc21PsWjsSoekYpyhpT")
+@TypeBlueId("97mmS2fJNEvvd9MB3p3a9VwsSgF8QN5MXMCg3hQhQ9EG")
 public class CdmProductCollateralConcentrationLimitTypeEnum {
     public static String blueId() {
-        return "7NU27Rw9Fpmshp58cpLR3GB8QRc21PsWjsSoekYpyhpT";
+        return "97mmS2fJNEvvd9MB3p3a9VwsSgF8QN5MXMCg3hQhQ9EG";
     }
 
     public static String packageName() {

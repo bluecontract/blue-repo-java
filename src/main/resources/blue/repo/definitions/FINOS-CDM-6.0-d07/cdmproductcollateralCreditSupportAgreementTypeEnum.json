@@ -6,9 +6,24 @@
   },
   "schema": {
     "enum": [
-      "CollateralTransferAgreement",
-      "CreditSupportAnnex",
-      "CreditSupportDeed"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CollateralTransferAgreement"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CreditSupportAnnex"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CreditSupportDeed"
+      }
     ]
   }
 }

@@ -4,7 +4,7 @@
   "businessDayConvention": {
     "description": "Override business date convention. This takes precedence over leg level information.",
     "type": {
-      "blueId": "74NpTvEaEEzgK6JYLfjq7ACR6d83uPFmACNmKfDZQ1hA"
+      "blueId": "UEYhmdmBmLhrdtL1ThGtACP6Ljtvao5EVBeQdbiB2XJ"
     },
     "schema": {
       "required": true

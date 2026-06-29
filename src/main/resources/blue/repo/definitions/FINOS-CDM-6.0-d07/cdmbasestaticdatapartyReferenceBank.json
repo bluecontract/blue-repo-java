@@ -4,7 +4,7 @@
   "referenceBankId": {
     "description": "An institution (party) identifier, e.g. a bank identifier code (BIC). FpML specifies a referenceBankIdScheme.",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     },
     "schema": {
       "required": true

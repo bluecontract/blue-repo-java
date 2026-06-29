@@ -3,7 +3,7 @@
   "description": "As per ISDA 2002 Definitions.",
   "averagingInOut": {
     "type": {
-      "blueId": "APmRwdptBxmVfgZptczwdHn8ZSrZoTRLvcWTEU7FYVBC"
+      "blueId": "Bp5wh9hxR98RaErYfLT3GHtCA5Z4HjFmNg4EABQ26PAc"
     },
     "schema": {
       "required": true
@@ -12,13 +12,13 @@
   "averagingPeriodIn": {
     "description": "The averaging in period.",
     "type": {
-      "blueId": "G4QH9eBf6seqbHqMK1aKvxG7LfDwzyiS1ywSE5cmzJUi"
+      "blueId": "GenPv6W1wQRbNKoBmS1tAQnF6TyrsyYYmxJJ2sufNNJ9"
     }
   },
   "averagingPeriodOut": {
     "description": "The averaging out period.",
     "type": {
-      "blueId": "G4QH9eBf6seqbHqMK1aKvxG7LfDwzyiS1ywSE5cmzJUi"
+      "blueId": "GenPv6W1wQRbNKoBmS1tAQnF6TyrsyYYmxJJ2sufNNJ9"
     }
   },
   "strikeFactor": {

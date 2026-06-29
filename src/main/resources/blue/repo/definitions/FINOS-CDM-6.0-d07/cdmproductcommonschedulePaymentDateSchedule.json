@@ -4,7 +4,7 @@
   "finalPaymentDate": {
     "description": "The last payment when specified as an adjustable or relative date, as in the FpML total return construct.",
     "type": {
-      "blueId": "2gu7bBDYJXEVsffNg2iAYXou31qtdeR4oiwZHL2kaEgQ"
+      "blueId": "2Dr79mc7tDo84pCgLDhmSAuay1naC42UUovCTcaMjY5R"
     }
   },
   "interimPaymentDates": {
@@ -12,7 +12,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "GqMDcJT2X4pbkcA4TWqyfyLp2xKadMY8F8DW2abYfujx"
+      "blueId": "4EkR94oSN87arjWhzEQUZELGM8at9SvDoSZ3LKbE12sg"
     },
     "schema": {
       "minItems": 0

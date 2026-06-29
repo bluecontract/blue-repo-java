@@ -4,7 +4,7 @@
   "exerciseDate": {
     "description": "Specifies the date on which an option contained within the financial product would be exercised. The date may be omitted if the contractual product allows for only a single date of exercise (European exercise).\n",
     "type": {
-      "blueId": "BBAVDUrM5cNHg3smnVaPuKgDAYDE74qgwS7DzDDcrvHs"
+      "blueId": "CdgiECBjpwU7k35HhiQi9JBRDcAEBJDGnCGvMjE3KMxX"
     }
   },
   "exerciseOption": {
@@ -25,7 +25,7 @@
   "exerciseTime": {
     "description": "Specifies the time at which an option contained within the financial product woulld be exercised. The time may be omitted if the contractual product allows for only a single time of exercise (European exercise).\n",
     "type": {
-      "blueId": "DJHcCUvgkjrpH1UjAWPG6z2avBDGcvFeWgf2oWZMM7ef"
+      "blueId": "4Mi73c2rJbGTBeaTVi4xUgW33QBxsUyxSSV6ELoqnP4j"
     }
   },
   "replacementTradeIdentifier": {
@@ -34,7 +34,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "61T88AjWwvbxc7kozKt8kg9syaAo43s8CfQtNmM2hGQa"
+      "blueId": "6zgzXM8ryqdp6CFr8BH4PKyJcHZsjXogtRiA2DcyKgBU"
     },
     "schema": {
       "minItems": 0

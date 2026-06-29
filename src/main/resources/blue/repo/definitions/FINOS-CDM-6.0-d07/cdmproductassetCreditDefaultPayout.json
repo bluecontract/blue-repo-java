@@ -4,7 +4,7 @@
   "generalTerms": {
     "description": "The specification of the non-monetary terms for the Credit Derivative Transaction, including the buyer and seller and selected items from the ISDA 2014 Credit Definition article II, such as the reference obligation and related terms.\n",
     "type": {
-      "blueId": "C7GBqLBRyCKfTtj9ihUbBy2SjPEAn3Y4vEwNxsFgX62k"
+      "blueId": "3DSVTtZYj7KKPwr2oTs7ERknxwH4pXMvk9G1H7LkPkyr"
     },
     "schema": {
       "required": true
@@ -13,19 +13,19 @@
   "payerReceiver": {
     "description": "Canonical representation of the payer and receiver parties applicable to each payout leg.",
     "type": {
-      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+      "blueId": "3xPof2WJyFXisFtvaxpSGddTxHyGioazbsMJjuUucbzT"
     }
   },
   "priceQuantity": {
     "description": "Each payout leg must implement the quantity concept as a 'resolvable' type, which allows for different payout legs to be linked to each other (e.g. in the case of cross-curreny products).\n",
     "type": {
-      "blueId": "DmcMrxC2wq7pSMrRaCK5QHkx54U9EtEgZqojTkmfedRF"
+      "blueId": "7nSxNdghnPkGBbyqzqUELC5UcBMNfLdrCr4oXbav2d3J"
     }
   },
   "principalPayment": {
     "description": "The specification of the principal exchange. Optional as only applicable in the case of cross-currency or zero-coupon swaps with a final payment.\n",
     "type": {
-      "blueId": "Hxc4Dbr7nrj5XkPBBiJGhPhQVnfNHWHn21HViV1FpBGM"
+      "blueId": "8VsQE5PSzyWWApw5Ykfum97vLPNoa36BemLUMHimzMb5"
     }
   },
   "protectionTerms": {
@@ -34,7 +34,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "7txErgdQycZvodfEV5dd6UhpNESp5eKR8kWy2BYtJYja"
+      "blueId": "6p917qiqhcPsLDv4c6fcokZDb38SkP1i69kThgdzHgBY"
     },
     "schema": {
       "minItems": 0
@@ -43,13 +43,13 @@
   "settlementTerms": {
     "description": "Each payout leg must specifies its settlement terms, including the delivery type (i.e. cash vs physical, and their respective terms), the transfer type (DvP etc.) and settlement date, if any.\n",
     "type": {
-      "blueId": "EPxCD8mPcZ6C9kuDs2tinVLVsqMQscWZPLMhYaQ4n9co"
+      "blueId": "2qfdfn8VYJmiXxmTj9Vwfu1pB3jFJQK9WAShnf8n1r1m"
     }
   },
   "transactedPrice": {
     "description": "The qualification of the price at which the contract has been transacted, in terms of market fixed rate, initial points, market price and/or quotation style. In FpML, those attributes are positioned as part of the fee leg.\n",
     "type": {
-      "blueId": "FC5qtLcq8fhQandN4L4LHMUUK5cqeFtGFj8D3JnRYd9Z"
+      "blueId": "2VoGuVXkABhTyi7xKubFr6JzJfGRVE4L71H1o3KouEtk"
     }
   }
 }

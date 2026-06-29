@@ -4,43 +4,43 @@
   "averagingFeature": {
     "description": "Indicates if the averaging calculation, when applicable, is weighted or unweighted.",
     "type": {
-      "blueId": "8c8jodXTXZTXGtEBBCLNdZGym3ZQYVbB5FZcWZCRXJ8i"
+      "blueId": "G81eqYsDuMYSpYk1hESW7JLhMtsEbDs8dVTux7zmXLUZ"
     }
   },
   "calculationPeriodDates": {
     "description": "Defines the calculation period dates schedule.",
     "type": {
-      "blueId": "GspR7mKpmQb8fd9qDWmUZgupMnwzzd77ERPzdYLb2X5h"
+      "blueId": "7dK86pbyNfhuuigQR5bQueaqH68Sqze66Qwad2m64rxg"
     }
   },
   "commodityPriceReturnTerms": {
     "description": "Defines parameters in which the commodity price is assessed.",
     "type": {
-      "blueId": "7TtU1hUAjvsacfDaexUF7KT2eUEoXBSdb42ndSSufh5a"
+      "blueId": "14FV7tMj4HrFn5mGMxp1ip6AhhhvTsLR6FH1eXyL6Ts9"
     }
   },
   "delivery": {
     "description": "Contains the information relative to the delivery of the asset.",
     "type": {
-      "blueId": "Fnt7VAuUDjTmnYtzK4X7xHxWYA18N1XsK32d9sV2dugm"
+      "blueId": "78abSDet2v5nbbeXAmoFZG2ZcMhk4674b2vrAKGT3yiu"
     }
   },
   "fxFeature": {
     "description": "Defines quanto or composite FX features that are included in the swap leg.",
     "type": {
-      "blueId": "2tVrnHV4rwPAivz8J6tdUF2i9wMRGNsWuP2JFQuM68TW"
+      "blueId": "HPRsaReKQuhsZQyFweRGJshuiWo9hd1r6CsmkM6iPQnN"
     }
   },
   "payerReceiver": {
     "description": "Canonical representation of the payer and receiver parties applicable to each payout leg.",
     "type": {
-      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+      "blueId": "3xPof2WJyFXisFtvaxpSGddTxHyGioazbsMJjuUucbzT"
     }
   },
   "paymentDates": {
     "description": "Defines the payment date schedule, as defined by the parameters that are needed to specify it, either in a parametric way or by reference to another schedule of dates (e.g. the valuation dates).\n",
     "type": {
-      "blueId": "CBUr6dnp1h3kfpUoLrpBXZBcvBQ9hmDnKezhtmhxPgi9"
+      "blueId": "23fb9HBYcZQ8enTm83iVQjixyTrHqNc5G1ANtAbB1ixz"
     },
     "schema": {
       "required": true
@@ -49,13 +49,13 @@
   "priceQuantity": {
     "description": "Each payout leg must implement the quantity concept as a 'resolvable' type, which allows for different payout legs to be linked to each other (e.g. in the case of cross-curreny products).\n",
     "type": {
-      "blueId": "DmcMrxC2wq7pSMrRaCK5QHkx54U9EtEgZqojTkmfedRF"
+      "blueId": "7nSxNdghnPkGBbyqzqUELC5UcBMNfLdrCr4oXbav2d3J"
     }
   },
   "pricingDates": {
     "description": "Specifies specific dates or parametric rules for the dates on which the price will be determined.",
     "type": {
-      "blueId": "H8eHAeKLc9qFxkC2223mjTBSdXp7ipHmZx3tTndiJS4R"
+      "blueId": "2MAF9GVz5RtZKjkk4so3hxRXrU2WZSs92BQ1bUeT9CDa"
     },
     "schema": {
       "required": true
@@ -64,19 +64,19 @@
   "principalPayment": {
     "description": "The specification of the principal exchange. Optional as only applicable in the case of cross-currency or zero-coupon swaps with a final payment.\n",
     "type": {
-      "blueId": "Hxc4Dbr7nrj5XkPBBiJGhPhQVnfNHWHn21HViV1FpBGM"
+      "blueId": "8VsQE5PSzyWWApw5Ykfum97vLPNoa36BemLUMHimzMb5"
     }
   },
   "schedule": {
     "description": "Allows the full representation of a payout by defining a set of schedule periods. It supports standard schedule customization by expressing all the dates, quantities, and pricing data in a non-parametric way.\n",
     "type": {
-      "blueId": "ArKxUfT7icBqdZQkhyPcZmMW5oqfaGEvnvM2i8dwWnEv"
+      "blueId": "GbAmo8bxznHkBwFWFP6JMXCQEsWMyu9iKFV2KtBqH1rP"
     }
   },
   "settlementTerms": {
     "description": "Each payout leg must specifies its settlement terms, including the delivery type (i.e. cash vs physical, and their respective terms), the transfer type (DvP etc.) and settlement date, if any.\n",
     "type": {
-      "blueId": "EPxCD8mPcZ6C9kuDs2tinVLVsqMQscWZPLMhYaQ4n9co"
+      "blueId": "2qfdfn8VYJmiXxmTj9Vwfu1pB3jFJQK9WAShnf8n1r1m"
     }
   },
   "underlier": {

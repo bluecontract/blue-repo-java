@@ -4,7 +4,7 @@
   "summaryAmountType": {
     "description": "The account level for the billing summary.",
     "type": {
-      "blueId": "ARDsZpRxQicigT4PhYAFVVd59csit2WJn69UmEjvD83e"
+      "blueId": "AnFR5nwdiQukWW9YeZRmgTparyPvgRKghypvgvUWqU1c"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "summaryTransfer": {
     "description": "The settlement terms for the billing summary",
     "type": {
-      "blueId": "4ULkob7geaFi4FNFPUCGaZCPoXvyGtqo3MQvvnJjoxSA"
+      "blueId": "Huf4W2NzpakJVTTdkhKJriEVabT1NBezmnyTJB9Wt2Vs"
     }
   }
 }

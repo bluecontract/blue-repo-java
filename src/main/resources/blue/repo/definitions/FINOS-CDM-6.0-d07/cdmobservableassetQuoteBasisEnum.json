@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "Currency1PerCurrency2",
-      "Currency2PerCurrency1"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Currency1PerCurrency2"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Currency2PerCurrency1"
+      }
     ]
   }
 }

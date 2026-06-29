@@ -4,7 +4,7 @@
   "businessCenter": {
     "description": "Specifies the location where the exercise must be reported, e.g. where the exercise notice receiver is based.",
     "type": {
-      "blueId": "FCTe9fTVPMRvH2mPZc7gj1HSgSdKhN3zdDDLsdkB8Z6i"
+      "blueId": "EtUp3RuaDWzJnGNfgdjWD82gBrcgUyd6KM7cMfBajMzy"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "exerciseNoticeGiver": {
     "description": "Specifies the principal party of the trade that has the right to exercise.",
     "type": {
-      "blueId": "Fnq1YRNBw57BWFN5jyVPmsR9SWXSmfNxqoSRzSNmrJV9"
+      "blueId": "B1vhPUsx48HVhqzgCrbzrCdTrzUxEiaHYjyp5gsErLd9"
     },
     "schema": {
       "required": true
@@ -22,7 +22,7 @@
   "exerciseNoticeReceiver": {
     "description": "Specifies the party to which notice of exercise should be given, e.g. by the buyer of the option. Although in many cases it is the buyer of the option who sends the exercise notice to the seller of the option, this component is reused, e.g. in case of OptionEarlyTermination, either or both parties have the right to exercise.\n",
     "type": {
-      "blueId": "2YmGLtgJ5as5H64M8bRYDDRaGWwqzAGqrQSSzEm1Jvjm"
+      "blueId": "C2Ec7JF7c6QV6kD3Wb7Mtfg9NJ7aemu5KqHaafpZuEvN"
     }
   }
 }

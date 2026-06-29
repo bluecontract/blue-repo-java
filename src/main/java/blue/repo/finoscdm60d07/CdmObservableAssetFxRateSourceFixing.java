@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("FEzEFfFzmydR9J3cyigytBFoQ83cLsEBGvct5TUndnwX")
+@TypeBlueId("59cfrRQLPJncH1tkA8gcjLTVBbBRu2ex63nqTvfmmwoz")
 public class CdmObservableAssetFxRateSourceFixing {
     public static String blueId() {
-        return "FEzEFfFzmydR9J3cyigytBFoQ83cLsEBGvct5TUndnwX";
+        return "59cfrRQLPJncH1tkA8gcjLTVBbBRu2ex63nqTvfmmwoz";
     }
 
     public static String packageName() {

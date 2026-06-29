@@ -5,8 +5,18 @@
   },
   "schema": {
     "enum": [
-      "CertificateOfDeposit",
-      "CommercialPaper"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CertificateOfDeposit"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CommercialPaper"
+      }
     ]
   }
 }

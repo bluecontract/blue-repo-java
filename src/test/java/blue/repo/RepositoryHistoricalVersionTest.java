@@ -2,7 +2,6 @@ package blue.repo;
 
 import blue.language.Blue;
 import blue.language.dictionary.ExportContext;
-import blue.language.dictionary.TypeDictionary;
 import blue.language.model.Node;
 import blue.language.utils.UncheckedObjectMapper;
 import blue.repo.provider.RepositoryNodeProvider;
@@ -26,7 +25,7 @@ class RepositoryHistoricalVersionTest {
     private static final String TEXT_BLUE_ID = "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC";
 
     @Test
-    void manifestMapsHistoricalTypeVersions() {
+    void manifestKeepsCanonicalTypeVersionsWithoutCompatibilityAliases() {
         RepositoryManifest manifest = syntheticManifest();
 
         assertEquals(3, manifest.repositoryVersions().size());
@@ -39,11 +38,11 @@ class RepositoryHistoricalVersionTest {
 
         RepositoryDefinition operation = manifest.definitionByAnyBlueId("op-v1").orElseThrow(AssertionError::new);
         assertEquals("op-v3", operation.blueId());
-        assertEquals("op-v3", manifest.currentBlueIdFor("op-v1").orElse(null));
-        assertEquals("op-v3", manifest.currentBlueIdFor("op-v2").orElse(null));
+        assertFalse(manifest.currentBlueIdFor("op-v1").isPresent());
+        assertFalse(manifest.currentBlueIdFor("op-v2").isPresent());
         assertEquals("op-v3", manifest.currentBlueIdFor("op-v3").orElse(null));
-        assertEquals("op-v1", manifest.blueIdFor("op-v3", "repo-v1").orElse(null));
-        assertEquals("op-v2", manifest.blueIdFor("op-v3", "repo-v2").orElse(null));
+        assertFalse(manifest.blueIdFor("op-v3", "repo-v1").isPresent());
+        assertFalse(manifest.blueIdFor("op-v3", "repo-v2").isPresent());
         assertEquals("op-v3", manifest.blueIdFor("op-v3", "repo-v3").orElse(null));
         assertEquals("incompatible-v3", manifest.currentBlueIdFor("incompatible-v3").orElse(null));
         assertFalse(manifest.currentBlueIdFor("incompatible-v1").isPresent());
@@ -56,16 +55,16 @@ class RepositoryHistoricalVersionTest {
     }
 
     @Test
-    void dictionaryUsesHistoricalRepositoryVersions() {
+    void dictionaryUsesCurrentCanonicalTypeIdsOnly() {
         RepositoryTypeDictionary dictionary = syntheticDictionary();
 
         assertTrue(dictionary.dictionaryBlueIds().containsAll(Arrays.asList("repo-v1", "repo-v2", "repo-v3")));
-        assertEquals("op-v3", dictionary.currentBlueId("op-v1").orElse(null));
-        assertEquals("op-v3", dictionary.currentBlueId("op-v2").orElse(null));
+        assertFalse(dictionary.currentBlueId("op-v1").isPresent());
+        assertFalse(dictionary.currentBlueId("op-v2").isPresent());
         assertEquals("op-v3", dictionary.currentBlueId("op-v3").orElse(null));
         assertFalse(dictionary.currentBlueId("incompatible-v1").isPresent());
-        assertEquals("op-v1", dictionary.typeBlueIdFor("op-v3", "repo-v1").orElse(null));
-        assertEquals("op-v2", dictionary.typeBlueIdFor("op-v3", "repo-v2").orElse(null));
+        assertFalse(dictionary.typeBlueIdFor("op-v3", "repo-v1").isPresent());
+        assertFalse(dictionary.typeBlueIdFor("op-v3", "repo-v2").isPresent());
         assertEquals("op-v3", dictionary.typeBlueIdFor("op-v3", "repo-v3").orElse(null));
         assertFalse(dictionary.typeBlueIdFor("incompatible-v3", "repo-v1").isPresent());
         assertFalse(dictionary.typeBlueIdFor("new-v3", "repo-v2").isPresent());
@@ -83,11 +82,11 @@ class RepositoryHistoricalVersionTest {
         assertEquals("Operation", current.getName());
         assertNull(provider.fetchFirstByBlueId("op-v1"));
         assertFalse(provider.definitionByBlueId("op-v1").isPresent());
-        assertEquals("op-v3", manifest.currentBlueIdFor("op-v1").orElse(null));
+        assertFalse(manifest.currentBlueIdFor("op-v1").isPresent());
     }
 
     @Test
-    void exportWithOlderDictionaryContextUsesOlderTypeBlueId() {
+    void exportWithOlderDictionaryContextInlinesChangedHistoricalType() {
         Blue blue = new Blue().registerTypeDictionary(syntheticDictionary());
         ExportContext context = ExportContext.builder()
                 .dictionary(BlueRepository.DICTIONARY_NAME, "repo-v1")
@@ -96,8 +95,9 @@ class RepositoryHistoricalVersionTest {
         Node exported = blue.exportNode(new Node().type(new Node().blueId("op-v3")), context);
 
         assertNotNull(exported.getType());
-        assertTrue(exported.getType().isReferenceOnly());
-        assertEquals("op-v1", exported.getType().getBlueId());
+        assertNull(exported.getType().getBlueId());
+        assertEquals("Operation", exported.getType().getName());
+        assertNotNull(exported.getType().getProperties().get("extra"));
     }
 
     @Test
@@ -155,12 +155,15 @@ class RepositoryHistoricalVersionTest {
     }
 
     @Test
-    void generatorEmitsOnlyShapeCompatibleHistoricalTypeBlueIds() throws Exception {
+    void generatorCopiesCanonicalBundleAndUsesCurrentCanonicalTypeBlueIdOnly() throws Exception {
         Path temp = Files.createTempDirectory("blue-repository-generator-test");
         Path source = temp.resolve("BlueRepository.blue");
-        Files.write(source, syntheticBlueRepositorySource().getBytes(StandardCharsets.UTF_8));
+        String sourceContent = syntheticBlueRepositorySource();
+        Files.write(source, sourceContent.getBytes(StandardCharsets.UTF_8));
 
         runGenerator(temp, source);
+
+        assertEquals(sourceContent, read(temp.resolve("resources/blue/repo/vtest/BlueRepository.blue")));
 
         RepositoryManifest generatedManifest = RepositoryManifest.fromMap(
                 UncheckedObjectMapper.JSON_MAPPER.readValue(
@@ -169,19 +172,20 @@ class RepositoryHistoricalVersionTest {
         String generatedOperationBlueId = generatedManifest.definitionByQualifiedName("Conversation/Operation")
                 .orElseThrow(AssertionError::new)
                 .blueId();
-        String generatedIncompatibleBlueId = generatedManifest.definitionByQualifiedName("Conversation/Incompatible History")
-                .orElseThrow(AssertionError::new)
-                .blueId();
+        assertEquals("op-v3", generatedOperationBlueId);
 
         String operation = read(temp.resolve("java/blue/repo/vtest/conversation/Operation.java"));
-        assertTrue(operation.contains("@TypeBlueId({"));
-        assertTrue(operation.contains("\"" + generatedOperationBlueId + "\""));
-        assertTrue(operation.contains("\"op-v2\""));
-        assertTrue(operation.contains("\"op-v1\""));
+        assertTrue(operation.contains("@TypeBlueId(\"op-v3\")"));
+        assertFalse(operation.contains("@TypeBlueId({"));
+        assertFalse(operation.contains("op-v2"));
+        assertFalse(operation.contains("op-v1"));
 
         String incompatible = read(temp.resolve("java/blue/repo/vtest/conversation/IncompatibleHistory.java"));
-        assertTrue(incompatible.contains("@TypeBlueId(\"" + generatedIncompatibleBlueId + "\")"));
+        assertTrue(incompatible.contains("@TypeBlueId(\"incompatible-v3\")"));
         assertFalse(incompatible.contains("incompatible-v1"));
+
+        String manifest = read(temp.resolve("resources/blue/repo/vtest/manifest.json"));
+        assertFalse(manifest.contains("compatible" + "WithCurrent"));
     }
 
     private static RepositoryTypeDictionary syntheticDictionary() {
@@ -211,11 +215,11 @@ class RepositoryHistoricalVersionTest {
                                 "repositoryVersionIndex", 2,
                                 "versions", Arrays.asList(
                                         map("repositoryVersionIndex", 0, "typeBlueId", "op-v1",
-                                                "attributesAdded", Collections.emptyList(), "compatibleWithCurrent", true),
+                                                "attributesAdded", Collections.emptyList()),
                                         map("repositoryVersionIndex", 1, "typeBlueId", "op-v2",
-                                                "attributesAdded", Collections.singletonList("/extra"), "compatibleWithCurrent", true),
+                                                "attributesAdded", Collections.singletonList("/extra")),
                                         map("repositoryVersionIndex", 2, "typeBlueId", "op-v3",
-                                                "attributesAdded", Collections.emptyList(), "compatibleWithCurrent", true)
+                                                "attributesAdded", Collections.emptyList())
                                 )
                         ),
                         map(
@@ -228,7 +232,7 @@ class RepositoryHistoricalVersionTest {
                                 "repositoryVersionIndex", 2,
                                 "versions", Collections.singletonList(
                                         map("repositoryVersionIndex", 2, "typeBlueId", "new-v3",
-                                                "attributesAdded", Collections.emptyList(), "compatibleWithCurrent", true)
+                                                "attributesAdded", Collections.emptyList())
                                 )
                         ),
                         map(
@@ -241,10 +245,9 @@ class RepositoryHistoricalVersionTest {
                                 "repositoryVersionIndex", 2,
                                 "versions", Arrays.asList(
                                         map("repositoryVersionIndex", 0, "typeBlueId", "incompatible-v1",
-                                                "attributesAdded", Collections.singletonList("/removedField"),
-                                                "compatibleWithCurrent", false),
+                                                "attributesAdded", Collections.singletonList("/removedField")),
                                         map("repositoryVersionIndex", 2, "typeBlueId", "incompatible-v3",
-                                                "attributesAdded", Collections.emptyList(), "compatibleWithCurrent", true)
+                                                "attributesAdded", Collections.emptyList())
                                 )
                         )
                 )
@@ -274,12 +277,10 @@ class RepositoryHistoricalVersionTest {
                 + "          - repositoryVersionIndex: 0\n"
                 + "            typeBlueId: op-v1\n"
                 + "            attributesAdded: []\n"
-                + "            compatibleWithCurrent: true\n"
                 + "          - repositoryVersionIndex: 1\n"
                 + "            typeBlueId: op-v2\n"
                 + "            attributesAdded:\n"
                 + "              - /extra\n"
-                + "            compatibleWithCurrent: true\n"
                 + "          - repositoryVersionIndex: 2\n"
                 + "            typeBlueId: op-v3\n"
                 + "            attributesAdded: []\n"
@@ -291,7 +292,6 @@ class RepositoryHistoricalVersionTest {
                 + "            typeBlueId: incompatible-v1\n"
                 + "            attributesAdded:\n"
                 + "              - /removedField\n"
-                + "            compatibleWithCurrent: false\n"
                 + "          - repositoryVersionIndex: 2\n"
                 + "            typeBlueId: incompatible-v3\n"
                 + "            attributesAdded: []\n"

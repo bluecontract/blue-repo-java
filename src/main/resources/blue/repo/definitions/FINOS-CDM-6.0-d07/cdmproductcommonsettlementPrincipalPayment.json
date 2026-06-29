@@ -10,25 +10,25 @@
   "payerReceiver": {
     "description": "Specifies the parties responsible for making and receiving payments defined by this structure.",
     "type": {
-      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+      "blueId": "3xPof2WJyFXisFtvaxpSGddTxHyGioazbsMJjuUucbzT"
     }
   },
   "presentValuePrincipalAmount": {
     "description": "The amount representing the present value of the principal payment.",
     "type": {
-      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+      "blueId": "7eyr2kXubNSHtLXpHJ9G8NqtmDXLfmDmHQZSkLa9qkyy"
     }
   },
   "principalAmount": {
     "description": "When known at the time the transaction is made, the cash amount to be paid.",
     "type": {
-      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+      "blueId": "7eyr2kXubNSHtLXpHJ9G8NqtmDXLfmDmHQZSkLa9qkyy"
     }
   },
   "principalPaymentDate": {
     "description": "The date where the PrincipalPayment shall be settled.",
     "type": {
-      "blueId": "vprnR4tQHf4wLZ7dp16UNnvc9DvyZpCLAWTNXcH1vQH"
+      "blueId": "GKy9ctegTJLwNAwxTMo1WX9xQCvWbzwntin4VStfEfDi"
     }
   }
 }

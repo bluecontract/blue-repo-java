@@ -4,13 +4,13 @@
   "correlationReturnTerms": {
     "description": "Return terms based upon the observed correlation between the components of the underlying basket.",
     "type": {
-      "blueId": "CvssjVgch1so8V8JYuFKEaj2QvTbjKmpVK1t775XNXnT"
+      "blueId": "EwvxCeweE6NzDi8idFivNwZ9joYB35RKBbzvwypsqnAR"
     }
   },
   "dividendReturnTerms": {
     "description": "Return terms based upon dividend payments associated to the underlier.",
     "type": {
-      "blueId": "2CHEapm6xLHpsPWkBsoiBWggdLnwY1nwkXUCdtwXBUCG"
+      "blueId": "J8EZbmYAMd5iEdiJDjh3B8Pk6R4eAXrQdryNuThytk1B"
     }
   },
   "finalValuationPrice": {
@@ -52,7 +52,7 @@
   "payerReceiver": {
     "description": "Canonical representation of the payer and receiver parties applicable to each individual return leg.",
     "type": {
-      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+      "blueId": "3xPof2WJyFXisFtvaxpSGddTxHyGioazbsMJjuUucbzT"
     },
     "schema": {
       "required": true
@@ -61,7 +61,7 @@
   "priceReturnTerms": {
     "description": "Return terms based upon the underlier's observed price.",
     "type": {
-      "blueId": "2ZFGdsnpngfaZgwXf8UoFcEbgom8Q9pJG8aRS9JWFGsi"
+      "blueId": "JAFJ1wyCKHfmK69wvo8tXGepwZYTJ4o37xsdPgsDstzv"
     }
   },
   "quantity": {
@@ -82,13 +82,13 @@
   "varianceReturnTerms": {
     "description": "Return terms based upon the observed variance of the underlier's price.",
     "type": {
-      "blueId": "DPJFmC7X7Caf3hiNzMyRFk7wsjNXsQBvhTxu3cB7cuiU"
+      "blueId": "7mdyTJMV5CfZFGwVGuYsu7jWpiqsAjBJWPPuvhpsR7Lu"
     }
   },
   "volatilityReturnTerms": {
     "description": "Return terms based upon the observed volatility of the underlier's price.",
     "type": {
-      "blueId": "7fKwqT861aADrPe1YbmaU9d3Vc76AwfZKE17YydZoAw5"
+      "blueId": "3BXRxsxyT6CgqYyNVM6wZNBwCaCAARu7VCvmQoCkn18s"
     }
   }
 }

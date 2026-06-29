@@ -20,9 +20,24 @@
         },
         "schema": {
           "enum": [
-            "principal",
-            "agent",
-            "any"
+            {
+              "type": {
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+              },
+              "value": "principal"
+            },
+            {
+              "type": {
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+              },
+              "value": "agent"
+            },
+            {
+              "type": {
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+              },
+              "value": "any"
+            }
           ]
         }
       },
@@ -33,9 +48,24 @@
         },
         "schema": {
           "enum": [
-            "browserSession",
-            "apiCall",
-            "documentRequest"
+            {
+              "type": {
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+              },
+              "value": "browserSession"
+            },
+            {
+              "type": {
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+              },
+              "value": "apiCall"
+            },
+            {
+              "type": {
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+              },
+              "value": "documentRequest"
+            }
           ]
         }
       },
@@ -46,9 +76,24 @@
         },
         "schema": {
           "enum": [
-            "browserSession",
-            "apiCall",
-            "documentRequest"
+            {
+              "type": {
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+              },
+              "value": "browserSession"
+            },
+            {
+              "type": {
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+              },
+              "value": "apiCall"
+            },
+            {
+              "type": {
+                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+              },
+              "value": "documentRequest"
+            }
           ]
         }
       }

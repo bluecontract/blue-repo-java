@@ -928,7 +928,6 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.myos.CallOperationFailed.class);
         resolver.registerAnnotatedClass(blue.repo.myos.CallOperationRequested.class);
         resolver.registerAnnotatedClass(blue.repo.myos.CallOperationResponded.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.ChatGPTConnectorAgent.class);
         resolver.registerAnnotatedClass(blue.repo.myos.DocumentAnchor.class);
         resolver.registerAnnotatedClass(blue.repo.myos.DocumentAnchors.class);
         resolver.registerAnnotatedClass(blue.repo.myos.DocumentInitialSnapshotRequested.class);

@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "CalculationPeriodEndDate",
-      "CalculationPeriodStartDate"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CalculationPeriodEndDate"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CalculationPeriodStartDate"
+      }
     ]
   }
 }

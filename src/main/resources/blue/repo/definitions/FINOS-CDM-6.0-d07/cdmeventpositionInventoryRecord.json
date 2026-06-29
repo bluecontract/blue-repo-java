@@ -4,7 +4,7 @@
   "identifer": {
     "description": "Unique identifier for this record. This can be used to uniquely identify a specific piece of inventory.",
     "type": {
-      "blueId": "6vYEknGbjoCarWNmjmqcTdYJ81Z265Kigep3twUZrjnt"
+      "blueId": "HUSEHXgSpK91Brg3mku9fHTV4D8bnuM9D7uwKV2HynTU"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "security": {
     "description": "The security details.",
     "type": {
-      "blueId": "EqW2CBgcur4w9MgDu3cEAjCKESsF2Jhsjs2gHobFQZBA"
+      "blueId": "5R9o4hMGFG6JsprSkPFoQuMmr2FvfKQchfGbxtSgy2JY"
     },
     "schema": {
       "required": true

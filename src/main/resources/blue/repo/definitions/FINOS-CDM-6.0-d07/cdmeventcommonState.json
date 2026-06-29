@@ -4,13 +4,13 @@
   "closedState": {
     "description": "Represents the qualification of what led to the trade's closure alongside the dates on which this closure took effect.\n",
     "type": {
-      "blueId": "8dyPbuKgNLYiqqf4ruP89bunfFdgzbDhbnoiP1MJBEX9"
+      "blueId": "HFnvdnbcm5FbHRjXNW9KZ6x5LzJhCDhTuXtU3tDamXrQ"
     }
   },
   "positionState": {
     "description": "Identifies the state of the position, to distinguish if just executed, formed, already settled, closed, etc.",
     "type": {
-      "blueId": "Hjv5ZV6rWqMpMXguagZogWFoFn6pJLRB3L7AZDENVefw"
+      "blueId": "CtjNKoKQ8S3xNPyMY6GXJKQAAfjxpTQmdDgLUNE3iAJM"
     }
   }
 }

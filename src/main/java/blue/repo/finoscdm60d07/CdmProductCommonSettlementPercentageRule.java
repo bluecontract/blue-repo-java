@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("4m3JWwHVodQL1fBTZs8YFfdkm7aNsbrLVoCYg3E77aT7")
+@TypeBlueId("GqKSKHCa6D8xbrMJnRibPtb1dXGasKD1awv2Ubini8GT")
 public class CdmProductCommonSettlementPercentageRule {
     public static String blueId() {
-        return "4m3JWwHVodQL1fBTZs8YFfdkm7aNsbrLVoCYg3E77aT7";
+        return "GqKSKHCa6D8xbrMJnRibPtb1dXGasKD1awv2Ubini8GT";
     }
 
     public static String packageName() {

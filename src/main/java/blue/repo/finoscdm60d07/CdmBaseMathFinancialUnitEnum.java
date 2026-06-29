@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("9WZ98d8ou6kcEKR3m6kC1QVEDKhvDcusTiqz1Qy1LafT")
+@TypeBlueId("G6nxZBJqZZ3cY44FGfFfpKCDEC1JqqauJ8rcR7H1niTr")
 public class CdmBaseMathFinancialUnitEnum {
     public static String blueId() {
-        return "9WZ98d8ou6kcEKR3m6kC1QVEDKhvDcusTiqz1Qy1LafT";
+        return "G6nxZBJqZZ3cY44FGfFfpKCDEC1JqqauJ8rcR7H1niTr";
     }
 
     public static String packageName() {

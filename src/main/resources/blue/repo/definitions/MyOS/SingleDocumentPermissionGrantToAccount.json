@@ -1,7 +1,7 @@
 {
   "name": "Single Document Permission Grant To Account",
   "type": {
-    "blueId": "62Sxtmk1cwndFHJVax9Z6G6LBPnB2CeqaXMa6uvKvdKg"
+    "blueId": "cjPVQ6sifei7ryEsdwVhsYgHRXiAWMvaoQvrRo6LYRY"
   },
   "contracts": {
     "granterChannel": {
@@ -51,7 +51,7 @@
     "revoke": {
       "description": "Granter or grantee indicates the grant should be revoked (MyOS Admin will handle).",
       "type": {
-        "blueId": "C6pXAJMfAwdobNijF6SqWvK32PSQ9Z1wy8vh3fx2yWtG"
+        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
       },
       "channel": {
         "type": {
@@ -68,7 +68,7 @@
     },
     "revokeImpl": {
       "type": {
-        "blueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J"
+        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
       },
       "operation": {
         "type": {

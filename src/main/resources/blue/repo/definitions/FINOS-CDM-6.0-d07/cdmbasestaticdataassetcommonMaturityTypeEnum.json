@@ -6,9 +6,24 @@
   },
   "schema": {
     "enum": [
-      "FromIssuance",
-      "OriginalMaturity",
-      "RemainingMaturity"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "FromIssuance"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "OriginalMaturity"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "RemainingMaturity"
+      }
     ]
   }
 }

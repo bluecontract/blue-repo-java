@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "F3qrYgNjUqzocxRTWvh6j8ZjXhYFFfn9fJtn4EPTHqzU#0"
+      "blueId": "Hn9xYtxdTe696TXzE5ge1KF3B3Ao26Z2er28HygKAoWi#0"
     },
     "schema": {
       "minItems": 0
@@ -16,7 +16,7 @@
   "additionalDisruptionEvents": {
     "description": "Per the 2002 ISDA Equity Derivatives Definitions | 2018 ISDA CDM Equity Confirmation for Security Equity Swaps",
     "type": {
-      "blueId": "HnQ1RkQaAwAFk4x15odpEXsW6cTKxVzfWFZrKFnbjU3E"
+      "blueId": "9k6rT7iiYXbFohPsdojsVuAV5SSxQxhoLfFzFwh9CtQy"
     }
   },
   "compositionOfCombinedConsideration": {
@@ -28,7 +28,7 @@
   "delisting": {
     "description": "Per the 2002 ISDA Equity Derivatives Definitions | 2018 ISDA CDM Equity Confirmation for Security Equity Swap:",
     "type": {
-      "blueId": "3zS4cQ8h1ZYKXdGdXTcYPdamvvEJzWyB9PCSTE73NLd9"
+      "blueId": "9yFNw68PR5uL5JLChMJozdWh7m979eeJVgEptMKh9oVq"
     }
   },
   "failureToDeliver": {
@@ -52,7 +52,7 @@
   "nationalizationOrInsolvency": {
     "description": "Per the 2002 ISDA Equity Derivatives Definitions | 2018 ISDA CDM Equity Confirmation for Security Equity Swap",
     "type": {
-      "blueId": "3zS4cQ8h1ZYKXdGdXTcYPdamvvEJzWyB9PCSTE73NLd9"
+      "blueId": "9yFNw68PR5uL5JLChMJozdWh7m979eeJVgEptMKh9oVq"
     }
   },
   "representations": {

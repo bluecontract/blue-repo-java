@@ -4,7 +4,7 @@
   "cashPriceType": {
     "description": "Specifies the type of Cash Price.",
     "type": {
-      "blueId": "9dUrzD1y7GL9TdKFceXPYzF4LkjJbsTTRtWN9aaKMyW7"
+      "blueId": "8AJje6F3LQBvFYx4iuQMLA7qkEW1m2oeGabyMjZSLuFU"
     },
     "schema": {
       "required": true
@@ -13,13 +13,13 @@
   "feeType": {
     "description": "Specifies the event type associated with a fee.",
     "type": {
-      "blueId": "4GqDqHjWQFyqR2KmPsKUPRiPtFGkKgdCjAUHQCgAVHzW"
+      "blueId": "2GtrN4UDxwH4P5TqQ8bNcVwjwcdDhjkNovEAYuhpAhJQ"
     }
   },
   "premiumExpression": {
     "description": "Specifies a premium when expressed in a way other than an amount, and any required forward starting price definition.\n",
     "type": {
-      "blueId": "C3b31ujUecjD3uHficrorQPDZh2w4VibSWay98MhDZYs"
+      "blueId": "BnX8YWGNQEemBPGhMwg9Dn7EZKXy7TKV3Pdoa8bijM8K"
     }
   }
 }

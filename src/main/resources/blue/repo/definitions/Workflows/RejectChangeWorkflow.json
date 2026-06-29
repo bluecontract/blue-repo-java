@@ -2,7 +2,7 @@
   "name": "Reject Change Workflow",
   "description": "Discards a previously proposed change by removing its proposal state.",
   "type": {
-    "blueId": "J1U1pzPn6QEhrWbLEM5wYwgAqaVRcJu4QKXozc1rWR3J"
+    "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
   },
   "postfix": {
     "description": "Optional postfix used while building proposed change state key.",

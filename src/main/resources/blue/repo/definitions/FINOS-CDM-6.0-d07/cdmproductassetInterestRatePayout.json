@@ -4,37 +4,37 @@
   "bondReference": {
     "description": "Reference to a bond underlier to represent an asset swap or Condition Precedent Bond.",
     "type": {
-      "blueId": "DSngPck9gYKRNiz91VcyQmKNxhpp8nPfowH2u4LqkBhQ"
+      "blueId": "5UTtrYJXRQ91C3zHV1ASggKdKMGxrvDbyUoqY7HwknPB"
     }
   },
   "calculationPeriodDates": {
     "description": "The parameters used to generate the calculation period dates schedule, including the specification of any initial or final stub calculation periods.\n",
     "type": {
-      "blueId": "GspR7mKpmQb8fd9qDWmUZgupMnwzzd77ERPzdYLb2X5h"
+      "blueId": "7dK86pbyNfhuuigQR5bQueaqH68Sqze66Qwad2m64rxg"
     }
   },
   "cashflowRepresentation": {
     "description": "The cashflow representation of the swap stream.",
     "type": {
-      "blueId": "5cYegMzKDPr1Lx9yyj1nBayXcFwvrZcn6XMHc1rseREG"
+      "blueId": "DTtWhJnXuoKubPMxQyji2Nw7Ci2mGd6RoJWN5EbzReoR"
     }
   },
   "compoundingMethod": {
     "description": "If one or more calculation period contributes to a single payment amount this element specifies whether compounding is applicable and, if so, what compounding method is to be used. This element must only be included when more than one calculation period contributes to a single payment amount.\n",
     "type": {
-      "blueId": "AWVebn7MyUTUQ8s4XsktNJFjJtYdMM9EixRFbR9yKvQb"
+      "blueId": "HzNNten2ctS1XjUDRet8Qr7Nq3sh6vfsJBS3d1gH1JVH"
     }
   },
   "dayCountFraction": {
     "description": "The day count fraction. The cardinality has been relaxed when compared with the FpML interest rate swap for the purpose of accommodating standardized credit default swaps which DCF is not explicitly stated as part of the economic terms. The data rule InterestRatePayout_dayCountFraction requires that the DCF be stated for interest rate products.\n",
     "type": {
-      "blueId": "9v4VL4LSrHGS141ZWuH5qB3H57Zqh5GFUPHVdkiJTdPv"
+      "blueId": "587iDHMkRt71kZVCzE5o3zXzWprHzypcRd91TYbQnSpE"
     }
   },
   "discountingMethod": {
     "description": "The parameters specifying any discounting conventions that may apply. This element must only be included if discounting applies.\n",
     "type": {
-      "blueId": "BX5b9AB5M4g9uMQ3a5Z8BiwGsj5kAR8MnxrhJG9xNap6"
+      "blueId": "Cr2qn4kdXt3AhEMg3m3yXpBXDDPzHwdy72ZZKWK8a1y7"
     }
   },
   "fixedAmount": {
@@ -52,19 +52,19 @@
   "payerReceiver": {
     "description": "Canonical representation of the payer and receiver parties applicable to each payout leg.",
     "type": {
-      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+      "blueId": "3xPof2WJyFXisFtvaxpSGddTxHyGioazbsMJjuUucbzT"
     }
   },
   "paymentDate": {
     "description": "The payment date, where only one date is specified, as for the FRA product.",
     "type": {
-      "blueId": "vprnR4tQHf4wLZ7dp16UNnvc9DvyZpCLAWTNXcH1vQH"
+      "blueId": "GKy9ctegTJLwNAwxTMo1WX9xQCvWbzwntin4VStfEfDi"
     }
   },
   "paymentDates": {
     "description": "The payment date schedule, as defined by the parameters that are needed to specify it, either in a parametric way or by reference to another schedule of dates (e.g. the reset dates).\n",
     "type": {
-      "blueId": "CBUr6dnp1h3kfpUoLrpBXZBcvBQ9hmDnKezhtmhxPgi9"
+      "blueId": "23fb9HBYcZQ8enTm83iVQjixyTrHqNc5G1ANtAbB1ixz"
     }
   },
   "paymentDelay": {
@@ -76,43 +76,43 @@
   "priceQuantity": {
     "description": "Each payout leg must implement the quantity concept as a 'resolvable' type, which allows for different payout legs to be linked to each other (e.g. in the case of cross-curreny products).\n",
     "type": {
-      "blueId": "DmcMrxC2wq7pSMrRaCK5QHkx54U9EtEgZqojTkmfedRF"
+      "blueId": "7nSxNdghnPkGBbyqzqUELC5UcBMNfLdrCr4oXbav2d3J"
     }
   },
   "principalPayment": {
     "description": "The specification of the principal exchange. Optional as only applicable in the case of cross-currency or zero-coupon swaps with a final payment.\n",
     "type": {
-      "blueId": "Hxc4Dbr7nrj5XkPBBiJGhPhQVnfNHWHn21HViV1FpBGM"
+      "blueId": "8VsQE5PSzyWWApw5Ykfum97vLPNoa36BemLUMHimzMb5"
     }
   },
   "rateSpecification": {
     "description": "The specification of the rate value(s) applicable to the contract using either a floating rate calculation, a single fixed rate, a fixed rate schedule, or an inflation rate calculation.\n",
     "type": {
-      "blueId": "6ndydyZELvBE66EQWERzbdZt3iKDvehSQz1me6ttmLEB"
+      "blueId": "6sGfKpzEcNGWsWw9v54bkUTJDbBHqbhEeJFCsf6tUhXf"
     }
   },
   "resetDates": {
     "description": "The reset dates schedule, i.e. the dates on which the new observed index value is applied for each period and the interest rate hence begins to accrue.\n",
     "type": {
-      "blueId": "3vhZkBtf89QeyenxmdafyXvgfNendpuEbpzGhbGtJrhB"
+      "blueId": "2smAatQQw7CLfmf1HYvJs7niaBG5fYmRvaYQFZzbxFyF"
     }
   },
   "settlementTerms": {
     "description": "Each payout leg must specifies its settlement terms, including the delivery type (i.e. cash vs physical, and their respective terms), the transfer type (DvP etc.) and settlement date, if any.\n",
     "type": {
-      "blueId": "EPxCD8mPcZ6C9kuDs2tinVLVsqMQscWZPLMhYaQ4n9co"
+      "blueId": "2qfdfn8VYJmiXxmTj9Vwfu1pB3jFJQK9WAShnf8n1r1m"
     }
   },
   "spreadCalculationMethod": {
     "description": "Method by which spread is calculated. For example on an asset swap: 'ParPar' or 'Proceeds' may be the method indicated.\n",
     "type": {
-      "blueId": "2eTRAJZGqSmFXhqPT1JMUeJEHEtrja1DH2WpNiMpQfSU"
+      "blueId": "5PZmtNnUvmoYu5wdHEd1a3Ng2sZcZ76qmfmNG6hoFS61"
     }
   },
   "stubPeriod": {
     "description": "The stub calculation period amount parameters. This element must only be included if there is an initial or final stub calculation period. Even then, it must only be included if either the stub references a different floating rate tenor to the regular calculation periods, or if the stub is calculated as a linear interpolation of two different floating rate tenors, or if a specific stub rate or stub amount has been negotiated.\n",
     "type": {
-      "blueId": "DxpX92swuu38cjYqwbPRLNJqVQiBx5mJzm2XMmzGzRod"
+      "blueId": "GDsReUUBoQqUk4nzm4MUFgBzwihcp99Xt2hYSukxTdPp"
     }
   }
 }

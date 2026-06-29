@@ -2,7 +2,7 @@
   "name": "cdm/regulation/New",
   "addtlAttrbts": {
     "type": {
-      "blueId": "6qmEG5FJ4nrH9k5cxhbxKt3J1QtRLfuLTNXs7oAK1cf7"
+      "blueId": "Avs2j3Cu7pPm5XZLVwYQ6SAEzUqvm8fnxQ3NWGaneps6"
     },
     "schema": {
       "required": true
@@ -10,7 +10,7 @@
   },
   "buyr": {
     "type": {
-      "blueId": "EJVgGHK414LeuM1X5W76WpRvs3cXU5HXu7XWGAdUhGwk"
+      "blueId": "D47eyKS7yewPVC5jUEbouYutWpSrDF1kdJ1AVrcHsRd4"
     },
     "schema": {
       "required": true
@@ -18,7 +18,7 @@
   },
   "exctgPrsn": {
     "type": {
-      "blueId": "EU7X8JgcsAwwcy8JVXbQoPnMtoY3ovRLivAiQvVrM8qC"
+      "blueId": "Tu5nRRqGCYvPv1JfDkUiceaDiRxNSCT7gT7SQx2GA5Z"
     },
     "schema": {
       "required": true
@@ -34,7 +34,7 @@
   },
   "finInstrm": {
     "type": {
-      "blueId": "E8cPvyNX1Zp6oFia9mMRATWBv5waaB7hQe55CMzA7YQX"
+      "blueId": "HvRvtYT6FnHr42G7nsiDHeXpPGgvFLtoazqsLEYL5gNa"
     },
     "schema": {
       "required": true
@@ -42,7 +42,7 @@
   },
   "invstmtDcsnPrsn": {
     "type": {
-      "blueId": "G8UTNxqtBocLoZ1NzAcdw5xJipG4hD6iijvufXfiGsqZ"
+      "blueId": "9aWzcazT96cuBgu8aeqXmWbGmtbVKjeBYG4ZKYcd3zCS"
     },
     "schema": {
       "required": true
@@ -58,7 +58,7 @@
   },
   "ordrTrnsmssn": {
     "type": {
-      "blueId": "8ekyjZUiehC6furDhhx5mPDgvPdsY9Tx18sBP3Ede3YP"
+      "blueId": "ih2SVSx6Uk2K2w79prjoTJxTTBVLXjU1jfZWiKtWVz4"
     },
     "schema": {
       "required": true
@@ -66,7 +66,7 @@
   },
   "sellr": {
     "type": {
-      "blueId": "JByVeRQuwGo1r31f79PCJ4eGzRKDqQhXVhKm9t5FXtS6"
+      "blueId": "BYr7BukA73s6xgYtaFZi9nyu9YegpSmpt2B825iLKpBm"
     },
     "schema": {
       "required": true

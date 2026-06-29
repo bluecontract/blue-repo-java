@@ -4,7 +4,7 @@
   "earliestExerciseDateTenor": {
     "description": "The time interval to the first (and possibly only) exercise date in the exercise period.",
     "type": {
-      "blueId": "D2zD5eW4h5CVwkas6bYant1Kmgdg4zt95zb3kYgR87RE"
+      "blueId": "G5BwzTWEaA14NoPKn8iSwCnmwnWuQegPHZwrpgagS6kY"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "exerciseFrequency": {
     "description": "The frequency of subsequent exercise dates in the exercise period following the earliest exercise date. An interval of 1 day should be used to indicate an American style exercise period.\n",
     "type": {
-      "blueId": "D2zD5eW4h5CVwkas6bYant1Kmgdg4zt95zb3kYgR87RE"
+      "blueId": "G5BwzTWEaA14NoPKn8iSwCnmwnWuQegPHZwrpgagS6kY"
     }
   }
 }

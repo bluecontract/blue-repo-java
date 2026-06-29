@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("2aEhSjjMBd4tA2GTLahhEEQdY17ub2jHNyP3rdCKNo9E")
+@TypeBlueId("GtGzeeGr59oZMBK4qT628HxyPEj3ux2JxtFjbU8GTbuN")
 public class CdmProductAssetInterestShortfallCapEnum {
     public static String blueId() {
-        return "2aEhSjjMBd4tA2GTLahhEEQdY17ub2jHNyP3rdCKNo9E";
+        return "GtGzeeGr59oZMBK4qT628HxyPEj3ux2JxtFjbU8GTbuN";
     }
 
     public static String packageName() {

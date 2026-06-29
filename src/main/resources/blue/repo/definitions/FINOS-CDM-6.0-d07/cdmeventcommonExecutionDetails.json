@@ -4,7 +4,7 @@
   "executionType": {
     "description": "Identifies the type of execution, e.g. via voice, electronically...",
     "type": {
-      "blueId": "EgWLfqeCMLfrkZGVBfRCn2rCwqqVCYrrdk4J6QwPjLJY"
+      "blueId": "82AwW4L6L3Hb2HAxzeRUzisvXkEvVu1AaKYAjJ657nnt"
     },
     "schema": {
       "required": true
@@ -13,13 +13,13 @@
   "executionVenue": {
     "description": "Represents the venue on which a trade was executed.",
     "type": {
-      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
     }
   },
   "packageReference": {
     "description": "A reference to the package linking the trade with other trades, in case the trade was executed as part of a package (hence this attribute is optional).\n",
     "type": {
-      "blueId": "AbV2aBGu9sz4TqGaWrnYqEhAyYUbGm94B28cfiZe4tA5"
+      "blueId": "Dq7xVZaLz1ofmKsUodtSSbe6YGxaRdCtP5HM1pKU8RHF"
     }
   }
 }

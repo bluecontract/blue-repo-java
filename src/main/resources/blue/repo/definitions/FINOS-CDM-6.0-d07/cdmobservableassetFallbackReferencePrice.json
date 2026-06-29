@@ -4,7 +4,7 @@
   "calculationAgentDetermination": {
     "description": "The calculation agent will decide the rate.",
     "type": {
-      "blueId": "83ZskooQhyiWk16zpdvkhMh9qwBm9bHyByQH4RxkYEyR"
+      "blueId": "FANsoqTgc5XxJH7orWbzRADwZ6drQjPzAbPN6YqvcYau"
     }
   },
   "fallBackSettlementRateOption": {
@@ -13,7 +13,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "21coEyT7ssdAjeceX6KNSWdCFQhFKv1xukphm8Kb7GA4"
+      "blueId": "8iH51R45gmWCtNjqrR63GErLSs4TeUXk51R7D4ky3NDz"
     },
     "schema": {
       "minItems": 0
@@ -28,7 +28,7 @@
   "valuationPostponement": {
     "description": "Specifies how long to wait to get a quote from a settlement rate option upon a price source disruption.",
     "type": {
-      "blueId": "3kT8om5teSJVU4BuEG6MNfGJSMe31DGUrn3EiaobN6B8"
+      "blueId": "FSNs7wPUozqjz5B6qRf7FwdstVC9R3vaMucjkk4PqKXW"
     }
   }
 }

@@ -4,7 +4,7 @@
   "summaryAmountType": {
     "description": "The account level for the billing summary.",
     "type": {
-      "blueId": "ARDsZpRxQicigT4PhYAFVVd59csit2WJn69UmEjvD83e"
+      "blueId": "AnFR5nwdiQukWW9YeZRmgTparyPvgRKghypvgvUWqU1c"
     },
     "schema": {
       "required": true

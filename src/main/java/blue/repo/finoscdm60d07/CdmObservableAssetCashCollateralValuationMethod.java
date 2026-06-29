@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("Cq9ndZ4ufDhM2WThU5PSGLNhTPfBGtkwqLUCDX7fPkWh")
+@TypeBlueId("6C5T6HNc1xggFbuGGNXtXJ2qeiBiqRvHGvNJdJA3sW6q")
 public class CdmObservableAssetCashCollateralValuationMethod {
     public static String blueId() {
-        return "Cq9ndZ4ufDhM2WThU5PSGLNhTPfBGtkwqLUCDX7fPkWh";
+        return "6C5T6HNc1xggFbuGGNXtXJ2qeiBiqRvHGvNJdJA3sW6q";
     }
 
     public static String packageName() {

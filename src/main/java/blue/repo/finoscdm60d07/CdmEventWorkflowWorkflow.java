@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("681xnLQwZ6ZGZaVDXza9mSVtfcXAN6mFE7D9jNufQirn")
+@TypeBlueId("69BAj8p5rA9BuAUmQM81t6H6n2keSWdJxMXhZQqzaotS")
 public class CdmEventWorkflowWorkflow {
     public static String blueId() {
-        return "681xnLQwZ6ZGZaVDXza9mSVtfcXAN6mFE7D9jNufQirn";
+        return "69BAj8p5rA9BuAUmQM81t6H6n2keSWdJxMXhZQqzaotS";
     }
 
     public static String packageName() {

@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "InternationalOrganisation",
-      "MultilateralBank"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "InternationalOrganisation"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "MultilateralBank"
+      }
     ]
   }
 }

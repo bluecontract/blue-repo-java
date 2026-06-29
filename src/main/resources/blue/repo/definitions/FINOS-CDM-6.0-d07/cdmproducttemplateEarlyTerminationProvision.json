@@ -4,25 +4,25 @@
   "mandatoryEarlyTermination": {
     "description": "A mandatory early termination provision to terminate the swap at fair value.",
     "type": {
-      "blueId": "5tjWhqsZVUeZaraK4vLWm7YUe1Zy6yaTaZMD1QEU4hXJ"
+      "blueId": "C6BHM5uzagsmiKxWqshqYj8ZhE13jTZuXKcAaJG5Lbsh"
     }
   },
   "mandatoryEarlyTerminationDateTenor": {
     "description": "Period after trade date of the mandatory early termination date.",
     "type": {
-      "blueId": "D2zD5eW4h5CVwkas6bYant1Kmgdg4zt95zb3kYgR87RE"
+      "blueId": "G5BwzTWEaA14NoPKn8iSwCnmwnWuQegPHZwrpgagS6kY"
     }
   },
   "optionalEarlyTermination": {
     "description": "An option for either or both parties to terminate the swap at fair value.",
     "type": {
-      "blueId": "BLZRwYLwJwyifFcxGPYh8VWsdWjMN1TQktKjRaeU557v"
+      "blueId": "9qZESRoTw3JVrvChnNta2oj5TcTb7RV9ijcSRtnuCQvs"
     }
   },
   "optionalEarlyTerminationParameters": {
     "description": "Definition of the first early termination date and the frequency of the termination dates subsequent to that. American exercise is defined by having a frequency of one day.\n",
     "type": {
-      "blueId": "EmwZhjddftGhjHyN21m8sf4f2DU47bmm4Sr9CRk5yM8b"
+      "blueId": "HUVjH3KGpFwoVaPyrgN35iMi95ckgPM1rjoMfUvcfmNe"
     }
   }
 }

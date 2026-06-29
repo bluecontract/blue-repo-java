@@ -5,6 +5,7 @@ import blue.language.dictionary.TypeDictionary;
 import blue.language.model.Node;
 import blue.language.provider.BootstrapProvider;
 import blue.language.utils.TypeClassResolver;
+import blue.language.utils.NodeProviderWrapper;
 import blue.repo.provider.RepositoryNodeProvider;
 
 import java.util.LinkedHashMap;
@@ -95,7 +96,9 @@ public final class BlueRepository {
         if (blue == null) {
             throw new IllegalArgumentException("blue must not be null");
         }
-        return blue.typeClassResolver(typeClassResolver());
+        return blue
+                .nodeProvider(NodeProviderWrapper.unverified(nodeProvider))
+                .typeClassResolver(typeClassResolver());
     }
 
     public TypeDictionary typeDictionary() {

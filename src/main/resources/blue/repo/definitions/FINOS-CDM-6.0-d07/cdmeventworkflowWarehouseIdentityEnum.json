@@ -5,7 +5,12 @@
   },
   "schema": {
     "enum": [
-      "DTCC_TIW_Gold"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "DTCC_TIW_Gold"
+      }
     ]
   }
 }

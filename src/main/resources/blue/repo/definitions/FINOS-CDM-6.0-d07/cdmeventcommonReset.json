@@ -4,7 +4,7 @@
   "averagingMethodology": {
     "description": "Identifies the aggregation method to use in the case where multiple observations are used to compute the reset value and the method is not defined in a payout.\n",
     "type": {
-      "blueId": "8c8jodXTXZTXGtEBBCLNdZGym3ZQYVbB5FZcWZCRXJ8i"
+      "blueId": "G81eqYsDuMYSpYk1hESW7JLhMtsEbDs8dVTux7zmXLUZ"
     }
   },
   "observations": {
@@ -37,7 +37,7 @@
   "resetValue": {
     "description": "Specifies the reset or fixing value. The fixing value could be a cash price, interest rate, or other value.",
     "type": {
-      "blueId": "BD3VPcMR7j62CWudW3xXH1Aropvfs515RCLZFP4cZY4P"
+      "blueId": "GLmQaa2vVZKjaht1sNMcUL55xfAgWQxpj5ENxwvVRvsm"
     },
     "schema": {
       "required": true

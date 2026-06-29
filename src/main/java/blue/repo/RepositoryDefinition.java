@@ -39,7 +39,7 @@ public final class RepositoryDefinition {
             normalized.addAll(versions);
         }
         if (normalized.isEmpty()) {
-            normalized.add(new RepositoryTypeVersion(repositoryVersionIndex, blueId, Collections.<String>emptyList(), true));
+            normalized.add(new RepositoryTypeVersion(repositoryVersionIndex, blueId, Collections.<String>emptyList()));
         }
         normalized.sort(Comparator.comparingInt(RepositoryTypeVersion::repositoryVersionIndex));
         this.versions = Collections.unmodifiableList(normalized);

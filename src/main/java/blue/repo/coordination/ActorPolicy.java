@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.Map;
 
-@TypeBlueId("7B4y7U78MmzM6rXR72n9XHLMDXP6PcvDcHLAKP45tyAs")
+@TypeBlueId("JCidqCzkd1o5aWkkDTzj6niugkn7oWxFUnSHaya4GbEj")
 public class ActorPolicy extends blue.language.processor.model.MarkerContract {
     public static String blueId() {
-        return "7B4y7U78MmzM6rXR72n9XHLMDXP6PcvDcHLAKP45tyAs";
+        return "JCidqCzkd1o5aWkkDTzj6niugkn7oWxFUnSHaya4GbEj";
     }
 
     public static String packageName() {

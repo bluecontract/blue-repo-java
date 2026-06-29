@@ -3,7 +3,7 @@
   "assetCountryOfOrigin": {
     "description": "Represents a filter on the asset country of origin based on the ISO Standard 3166.",
     "type": {
-      "blueId": "845nMVYB54BfARn15dRu8SXv1PR2j5FyZagnkbQVX5in"
+      "blueId": "9ppB13T87oA9HL9NWZr6pkLmcjb1HmUAgzVGS7yDyttw"
     },
     "schema": {
       "required": true

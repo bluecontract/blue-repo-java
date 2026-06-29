@@ -4,7 +4,7 @@
   "discountingType": {
     "description": "The discounting method that is applicable.",
     "type": {
-      "blueId": "BdsSFR9oMnc5Cn5NQPmwQ2MtZgbpeMZhbC5wfUkEnYrT"
+      "blueId": "EbjHFpZTcuFSaUzQnoeLBnQ5parZksPwCnkTUkahrgmy"
     },
     "schema": {
       "required": true
@@ -19,7 +19,7 @@
   "discountRateDayCountFraction": {
     "description": "A discount day count fraction to be used in the calculation of a discounted amount.",
     "type": {
-      "blueId": "9v4VL4LSrHGS141ZWuH5qB3H57Zqh5GFUPHVdkiJTdPv"
+      "blueId": "587iDHMkRt71kZVCzE5o3zXzWprHzypcRd91TYbQnSpE"
     }
   }
 }

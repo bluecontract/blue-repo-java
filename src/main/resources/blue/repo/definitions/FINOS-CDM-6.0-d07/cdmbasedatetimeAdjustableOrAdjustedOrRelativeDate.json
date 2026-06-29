@@ -4,19 +4,19 @@
   "adjustedDate": {
     "description": "The date once the adjustment has been performed. (Note that this date may change if the business center holidays change).\n",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     }
   },
   "dateAdjustments": {
     "description": "The business day convention and financial business centers used for adjusting the date if it would otherwise fall on a day that is not a business date in the specified business centers.\n",
     "type": {
-      "blueId": "5aQGMvRRbnA89dRVLVFr9uxQHNZp95ceK8mHHwAdWat"
+      "blueId": "8ZhZC2EwhTqHnDvvcr2ZW4iwCBJM57NcLAqPCd8shypq"
     }
   },
   "relativeDate": {
     "description": "A date specified as some offset to another date (the anchor date).",
     "type": {
-      "blueId": "7QxGhWQtmouskKThF8wotN1SAyBt25xWupZQKMHgcTYw"
+      "blueId": "4JvKSv6NGWh8hqfN6miPYiWwfE3g61v9yBhQuXc8tB8z"
     }
   },
   "unadjustedDate": {

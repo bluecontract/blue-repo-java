@@ -13,7 +13,6 @@ import blue.repo.myos.CallOperationAccepted;
 import blue.repo.myos.CallOperationFailed;
 import blue.repo.myos.CallOperationRequested;
 import blue.repo.myos.CallOperationResponded;
-import blue.repo.myos.ChatGPTConnectorAgent;
 import blue.repo.myos.DocumentAnchor;
 import blue.repo.myos.DocumentAnchors;
 import blue.repo.myos.DocumentInitialSnapshotRequested;
@@ -126,8 +125,6 @@ public final class MyOSTypes {
     public static final RepositoryType CALL_OPERATION_REQUESTED = CallOperationRequested.repositoryType();
 
     public static final RepositoryType CALL_OPERATION_RESPONDED = CallOperationResponded.repositoryType();
-
-    public static final RepositoryType CHAT_GPT_CONNECTOR_AGENT = ChatGPTConnectorAgent.repositoryType();
 
     public static final RepositoryType DOCUMENT_ANCHOR = DocumentAnchor.repositoryType();
 

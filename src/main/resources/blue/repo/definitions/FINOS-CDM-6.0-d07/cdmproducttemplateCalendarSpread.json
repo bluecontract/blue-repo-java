@@ -3,7 +3,7 @@
   "description": "A type for defining a calendar spread feature.",
   "expirationDateTwo": {
     "type": {
-      "blueId": "2gu7bBDYJXEVsffNg2iAYXou31qtdeR4oiwZHL2kaEgQ"
+      "blueId": "2Dr79mc7tDo84pCgLDhmSAuay1naC42UUovCTcaMjY5R"
     },
     "schema": {
       "required": true

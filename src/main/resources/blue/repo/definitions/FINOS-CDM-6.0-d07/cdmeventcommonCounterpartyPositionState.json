@@ -4,7 +4,7 @@
   "counterpartyPosition": {
     "description": "Represents the Position that has been effected by a business or life-cycle event.",
     "type": {
-      "blueId": "Hn6w21tS9k9kDCw9ST7gQk8qVRsRsevccA4tm7FpaDxk"
+      "blueId": "DhpZ3SZe34Pz3xJLcAS74rHhgZSez7ZvQx3yqmXcYA8r"
     },
     "schema": {
       "required": true
@@ -16,7 +16,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "AUKaDi8wBrSCiamYGMSXg4NnBaVJ6RqTbEPJLPGJvogZ"
+      "blueId": "7UyroNcHi5ggaDeDqgACDvjixoTVqZyHPUiNuGcK3gXq"
     },
     "schema": {
       "minItems": 0
@@ -25,7 +25,7 @@
   "state": {
     "description": "Represents the State of the Position through its life-cycle.",
     "type": {
-      "blueId": "DDF17JAmF3yHugfuGeT3uuLfcet6BCAWJq9J8ooP4haZ"
+      "blueId": "HcvuPprC3CbAxkBiEwkiWsJzW5pVqZ7occ8cncqAtQR"
     }
   },
   "valuationHistory": {
@@ -33,7 +33,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "DuYQJ7immrjRPWFMqGY9eurJKTuzsqj6rmPjznZMGTTF"
+      "blueId": "35r3StzAH6Qus8FCSpiCqqUrKHx9d4SYBCL2gEecgCJq"
     },
     "schema": {
       "minItems": 0

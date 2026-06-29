@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("TGLgD6JzxBwGgg73wJHhpG8Pk91o3ZvWGrPwgLjR8Rm")
+@TypeBlueId("4buYFvhK8MygP1T8vKFuNofU4rApmaG5WxpnBQWE5LXs")
 public class CdmProductAssetFieldWithMetaSpreadScheduleTypeEnum {
     public static String blueId() {
-        return "TGLgD6JzxBwGgg73wJHhpG8Pk91o3ZvWGrPwgLjR8Rm";
+        return "4buYFvhK8MygP1T8vKFuNofU4rApmaG5WxpnBQWE5LXs";
     }
 
     public static String packageName() {

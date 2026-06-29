@@ -4,18 +4,18 @@
   "cashflowType": {
     "description": "Type of cashflow corresponding to a scheduled event.",
     "type": {
-      "blueId": "7QVESfxVDZXRwinJhzgNgBJUPcHq4D8bda2RZ11TD5nb"
+      "blueId": "9k43VLjjoSJbXKM7aCSjBTinwWFf8sRDogVJbsM2JjjR"
     }
   },
   "cashPrice": {
     "description": "Type of cashflow corresponding to a non-scheduled event, where a price must be agreed between the parties.",
     "type": {
-      "blueId": "8L7NvZ5bV3sdArpiATFbRPj9CK9nDEwWfRob47g9i9iq"
+      "blueId": "EdLKjCfief3mhGVbVnHDpyHDKbTXHYqXoaTKtcn9EjDL"
     }
   },
   "priceExpression": {
     "type": {
-      "blueId": "BnAG4RP2obdcr7RWMq3ZjCqF1qqaR9bNygoiLRRB5mxQ"
+      "blueId": "DGw3j3EkTUgoJb9WQD39BfVPHsqnL4bXU5uXCMnmCe3v"
     }
   }
 }

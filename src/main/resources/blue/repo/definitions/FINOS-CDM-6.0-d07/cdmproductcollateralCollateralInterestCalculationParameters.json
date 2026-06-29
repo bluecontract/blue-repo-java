@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "5b7tz2hPJ3dwwRSghTiFtwhoDJrB6oMLyV5ssbsSiZkL"
+      "blueId": "Ftpos6LCMk31PB3e4E1siiMshU1M88BMeTNK4yRypXyL"
     },
     "schema": {
       "minItems": 0
@@ -16,13 +16,13 @@
   "compoundingType": {
     "description": "Specifies the type of compounding to be applied (None, Business, Calendar).",
     "type": {
-      "blueId": "N2yDh1aUmejh3WDVGnvBYY2BaV9B6VHrmpgt3zuBmhF"
+      "blueId": "GvNXAYyGbJwhZ1D7jxhPLtLsKVTeAZor6SgFatG9UvMa"
     }
   },
   "dayCountFraction": {
     "description": "Specifies the day count fraction to use for that currency.",
     "type": {
-      "blueId": "5GLpcsNAL73F1CNS5Qbg2LX25pGwoC2sVruAPL18DLcU"
+      "blueId": "G5reDMTj2A64oDwXZBaNeRgFEhAtZMkWvkJcte51qHiJ"
     },
     "schema": {
       "required": true
@@ -37,7 +37,7 @@
   "floatingRate": {
     "description": "Specifies the floating interest rate to be used.",
     "type": {
-      "blueId": "817ccL7zmPpuQgVm2pSBEjp1qpEwsdSJNWq7FzyxL7Q5"
+      "blueId": "9je4gdfYWh5s9PxZCf36xymmiBGd59PHPrBapq7pnGVf"
     }
   },
   "inBaseCurrency": {
@@ -52,13 +52,13 @@
   "rounding": {
     "description": "Specifies the rounding rules for settling in that currency.",
     "type": {
-      "blueId": "DnXzzassZD8x4ZyWkS46bBpvzPMBW4txNdG32xcULQhy"
+      "blueId": "BYetgNwutc7xjHHx9g7ZhsdKgyGYMd1UR4jDoHHafJHj"
     }
   },
   "roundingFrequency": {
     "description": "Specifies when/how often is rounding applied?",
     "type": {
-      "blueId": "DTLWxzvo1pJxwoEniV1Y6SRR2DF42rdJML8n5m7LUE2"
+      "blueId": "Fw3wLbrcadtqbe88BTTnN3TZSgcXPzyHjjPvsic6NY2P"
     }
   },
   "withholdingTaxRate": {

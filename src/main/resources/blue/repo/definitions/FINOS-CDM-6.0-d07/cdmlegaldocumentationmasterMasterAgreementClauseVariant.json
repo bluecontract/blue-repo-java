@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "ANd6oSrWArfUtpgKvesbXu9YiaQ3XLSYDxhgbBotJcUy"
+      "blueId": "6RRexSdxduLUUJjoAGhNuhXszw24mwyTFrHtwAqU2SDG"
     },
     "schema": {
       "minItems": 0,
@@ -17,7 +17,7 @@
   "identifier": {
     "description": "Unique identifier for this variant",
     "type": {
-      "blueId": "4bpqTzAszzpvcDwHXgfdNDjg2Q89yuK1w2nreBdu3hbc"
+      "blueId": "FrXtTcZdci7tGHhDi1HXMnBCW5ZREz3QTn3enyNDgvxE"
     },
     "schema": {
       "required": true
@@ -29,7 +29,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "6UMNEgMf7MoM2raYDinEQ6ARUqrkL4BfKePrPf4YZPTq"
+      "blueId": "H6gWEiw9pVTmNQVvvZzt7KcBJ1Ub6wMyaVh3zbM7qCkM"
     },
     "schema": {
       "minItems": 0
@@ -41,7 +41,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "9afZipQ8gy2eWFkpZxZvWSZjQD57W7UGTrwELvXRoF9m#0"
+      "blueId": "7x2TozKfF6tLZmiLa8mcLTM76BnCwyDrjFPBihcxGx5K#0"
     },
     "schema": {
       "minItems": 0

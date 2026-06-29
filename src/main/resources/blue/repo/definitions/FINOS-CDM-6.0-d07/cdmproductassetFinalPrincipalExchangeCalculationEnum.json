@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "Floored",
-      "NonFloored"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Floored"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "NonFloored"
+      }
     ]
   }
 }

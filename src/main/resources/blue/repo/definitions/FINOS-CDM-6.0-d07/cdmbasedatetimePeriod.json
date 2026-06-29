@@ -4,7 +4,7 @@
   "period": {
     "description": "A time period, e.g. a day, week, month or year of the stream. If the periodMultiplier value is 0 (zero) then period must contain the value D (day).\n",
     "type": {
-      "blueId": "HJhuMqXaKVRwSp7zmj1gVvuBDqsMSBeKwK7TwwXrvVxf"
+      "blueId": "DLZBHc2QwPj4my2QeZffRBsJxbqMSJzN3PScqxr9C1Yj"
     },
     "schema": {
       "required": true

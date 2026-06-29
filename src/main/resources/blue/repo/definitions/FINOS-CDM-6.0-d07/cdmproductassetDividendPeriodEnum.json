@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "FirstPeriod",
-      "SecondPeriod"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "FirstPeriod"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "SecondPeriod"
+      }
     ]
   }
 }

@@ -16,7 +16,7 @@
   "alternativeToInterestAmount": {
     "description": "Specifies the alternative to interest amounts.",
     "type": {
-      "blueId": "5Rudkhq6UXYQMAJLTdTXSnbPWLcEWbe6RQDuHYd8WWRT"
+      "blueId": "DpVYkkJKuVne3rcRtkfcsA1c5rBQibEFY4ujWCibD9jS"
     }
   },
   "cutoffTime": {
@@ -37,13 +37,13 @@
   "interestAmountApplication": {
     "description": "The application of Interest Amount with respect to the Delivery Amount and the Return Amount.",
     "type": {
-      "blueId": "81aJu8JHgmmUfT1p9JLEVyGLYcCYMeyMvs8CPKybuFjq"
+      "blueId": "7kes2FB65JuXjGdz6Lp6zhm95qL5DTCjDxCKwSm8USPV"
     }
   },
   "interestPaymentHandling": {
     "description": "Specifies how the collateral interest is to be handled.",
     "type": {
-      "blueId": "DQR6ZzokW9aqMSv3RLhkPGa6KB1h8SspQvUUH8rqCCoF"
+      "blueId": "sKqpZrkqt2VYmFSkbB7RRDetUKe7PJhYfsksQL6utY4"
     },
     "schema": {
       "required": true
@@ -52,7 +52,7 @@
   "interestRolloverLimit": {
     "description": "Specifies the level below which the interest will be rolled over.",
     "type": {
-      "blueId": "CwWx8XsxrUYgak8RN53tW3tLepuFKA8mhVaMtFE9tbbB"
+      "blueId": "CV1DAoEgGqnEeJtvUszvVHPatrrZQE6M5vVad2MX3ssq"
     }
   },
   "netInterestWithMarginCalls": {
@@ -76,7 +76,7 @@
   "notification": {
     "description": "Specifies the terms describing notification requirements.",
     "type": {
-      "blueId": "asEPKqKW6qKmwA9ywrWgbePzSEnqJfpu7GUm8sg6mZc"
+      "blueId": "AYFPdhUATGeD5Kaw7pwDQbqnwnGZ2DyM7rk1rVn4M1uM"
     }
   },
   "onFullReturn": {
@@ -103,7 +103,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "5b7tz2hPJ3dwwRSghTiFtwhoDJrB6oMLyV5ssbsSiZkL"
+      "blueId": "Ftpos6LCMk31PB3e4E1siiMshU1M88BMeTNK4yRypXyL"
     },
     "schema": {
       "minItems": 0
@@ -112,7 +112,7 @@
   "writeoffLimit": {
     "description": "Specifies the level below which the interest will be written off; if omitted write-off is not applicable.",
     "type": {
-      "blueId": "CwWx8XsxrUYgak8RN53tW3tLepuFKA8mhVaMtFE9tbbB"
+      "blueId": "CV1DAoEgGqnEeJtvUszvVHPatrrZQE6M5vVad2MX3ssq"
     }
   }
 }

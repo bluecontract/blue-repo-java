@@ -10,7 +10,7 @@
   "agreementTerms": {
     "description": "Specification of the content of the legal agreement.",
     "type": {
-      "blueId": "9NsSVkNdVJw7t1RdMVyB9ZmHJzYwgzEEdXUc11K2ic5i"
+      "blueId": "4KjkUNqNW52EyuCcnzPCbMA8tfR6qRi9jXUsZ3s5vFTv"
     }
   },
   "attachment": {
@@ -19,7 +19,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "C2wMvRSYQpEwYdiQ2gBF1mcfAe8Lz35NGMPze9RFpaKa"
+      "blueId": "4anwVBorXr81GoC4Wkf4trYWror3mSXbzukXdYgwmG7N"
     },
     "schema": {
       "minItems": 0
@@ -50,7 +50,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "DtCdHJZeccxHZbwaJQZhJKaibyxKYwbj9hKw2ZsK5K4r"
+      "blueId": "9tpFoqFu1yX5LZEATGF8CYsE5VSXhkQua9LMXwLEX2Pv"
     },
     "schema": {
       "minItems": 0
@@ -59,7 +59,7 @@
   "legalAgreementIdentification": {
     "description": "The type of legal agreement, identified via a set of composable attributes: agreementName, publisher, governing law and version, e.g. ISDA 2013 Standard Credit Support Annex English Law.\n",
     "type": {
-      "blueId": "FqQXQEJvCb7kuzUDtY9N5gNGasRXEA7suL1s5v2CAses"
+      "blueId": "7p7rsMrLJRwnskaTsetTmKypk1jyyLVvR6JTdJNYeFNf"
     }
   },
   "otherParty": {
@@ -68,7 +68,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "7N6isgUMMMsMJoxpjNRRfdVHiWizDFmyABkC7s3LeRZ6"
+      "blueId": "Hrt2EoYJokASG9J62NMKWt8UZbQN6BwtESp7hVDVQYvm"
     },
     "schema": {
       "minItems": 0
@@ -89,7 +89,7 @@
   "umbrellaAgreement": {
     "description": "The determination of whether Umbrella Agreement terms are applicable (True) or Not Applicable (False).",
     "type": {
-      "blueId": "26XeFmKKkFUstTDauZTYKy8ZLeqSmoXgBeaXFcfU1PHb"
+      "blueId": "34yZnruVzk2TWwJj25VXtQ6vJsyoHWmMQdFWUBQGYp1x"
     }
   }
 }

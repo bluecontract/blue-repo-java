@@ -4,7 +4,7 @@
   "onBehalfOf": {
     "description": "Optionally specifies the counterparty that the ancillary party is acting on behalf of.",
     "type": {
-      "blueId": "ANd6oSrWArfUtpgKvesbXu9YiaQ3XLSYDxhgbBotJcUy"
+      "blueId": "6RRexSdxduLUUJjoAGhNuhXszw24mwyTFrHtwAqU2SDG"
     }
   },
   "partyReference": {
@@ -22,7 +22,7 @@
   "role": {
     "description": "Specifies the AncillaryRoleEnum that is associated to the party reference. An ancillary party is any involved party that is not one of the two principal parties to the transaction.\n",
     "type": {
-      "blueId": "2YmGLtgJ5as5H64M8bRYDDRaGWwqzAGqrQSSzEm1Jvjm"
+      "blueId": "C2Ec7JF7c6QV6kD3Wb7Mtfg9NJ7aemu5KqHaafpZuEvN"
     },
     "schema": {
       "required": true

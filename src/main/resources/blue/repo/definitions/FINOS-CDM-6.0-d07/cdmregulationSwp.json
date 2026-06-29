@@ -2,7 +2,7 @@
   "name": "cdm/regulation/Swp",
   "swpIn": {
     "type": {
-      "blueId": "HQjrDN5yinN1LgwNgkzW9pLtWVtutNzMayxjjPkcUCt6"
+      "blueId": "8wDzaj8nhdMn9sTJMrWq1siNiVWLq5NQ6cURKPYNN86F"
     },
     "schema": {
       "required": true
@@ -10,7 +10,7 @@
   },
   "swpOut": {
     "type": {
-      "blueId": "2RoWhn142Vg6owzojCoYuHek5Q5yLzM4UCxxbF7hfqn8"
+      "blueId": "Du8Dj1mUc32NnorgGE844tyffuiu6gfALcLKPPS9mZKL"
     },
     "schema": {
       "required": true

@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "6Vbn1a7hkPz7Zf7wVzNq7o5zvB8p8jMU3Kz6djiVfCur"
+      "blueId": "HCfJUUx9k8N8QqUgtRQZDaSkcsnmcWrN6CsVeT5ViMfM"
     },
     "schema": {
       "minItems": 0
@@ -16,7 +16,7 @@
   "adjustment": {
     "description": "Specifies the conditions that govern the adjustment to the quantity of a product being traded: e.g. execution, portfolio rebalancing etc. It is typically used in the context of Equity Swaps.\n",
     "type": {
-      "blueId": "48JDEpkM8WR1yds2w2SWP5KCjtrwqaKCSP2cmxPxjgxY"
+      "blueId": "Fu36EUGcA7u8BqhZftYyUEUqgrd4mi4LXffiZx7DXTvo"
     }
   },
   "ancillaryParty": {
@@ -25,7 +25,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "BEZVkHKyDMsBjAmDVvYY7wpeyTRwsqcq12e6SpKHUxm6"
+      "blueId": "3FLaoJ8BXZUb3VpFoXQ7ACwUhTaDAZgwztubj17GegH4"
     },
     "schema": {
       "minItems": 0
@@ -40,13 +40,13 @@
   "collateral": {
     "description": "Represents the collateral obligations of a party.",
     "type": {
-      "blueId": "HzXrPyEGXqGMoxvXogbtZd53VtnjXhLo5cm3UjYYi7wT"
+      "blueId": "6jhHzxNcd11YEG9a9f1yBWhmm5qpzmbZ6E7JEqHpPj7r"
     }
   },
   "contractDetails": {
     "description": "Represents information specific to trades involving contractual products.",
     "type": {
-      "blueId": "CWgftPdUzHsGXXpLwZthiPGoGYovD8LLDVdvfdr1P357"
+      "blueId": "G6a8EHMCBFTctoKK7wpHrSKyqmnPqZLuyEMGhXiaHYzB"
     }
   },
   "counterparty": {
@@ -55,7 +55,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "E1uMUhyFkX83bxaZhuKemTmb5S99vPebKwnFVHu6KQTn"
+      "blueId": "58TeStN7sJrzoG3o1U7FZq3fFkxbCXkvdWPYYZkf1r3x"
     },
     "schema": {
       "minItems": 2,
@@ -65,7 +65,7 @@
   "executionDetails": {
     "description": "Represents information specific to trades that arose from executions.",
     "type": {
-      "blueId": "FxcbepmTyVj6YwY1cP6e2JUaGXyrZVXoZj5jygBc8JMA"
+      "blueId": "34vDDjWK88raLcbwzsk1RG6XiYVNqS2twvW2mBVySxxe"
     }
   },
   "party": {
@@ -74,7 +74,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "AhMzsyCZTs6HTjAUKURsN7RTVyw8rXkq1JPPNPUdYnBq"
+      "blueId": "3skPfLDtYJ59SZAAdcu2JDHySdtCEVu8FzTnUX8D5mfy"
     },
     "schema": {
       "minItems": 0
@@ -86,7 +86,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "7N6isgUMMMsMJoxpjNRRfdVHiWizDFmyABkC7s3LeRZ6"
+      "blueId": "Hrt2EoYJokASG9J62NMKWt8UZbQN6BwtESp7hVDVQYvm"
     },
     "schema": {
       "minItems": 0
@@ -95,13 +95,13 @@
   "product": {
     "description": "The underlying product to be included in a contract or execution.",
     "type": {
-      "blueId": "9qWGsXauVnxS5oNKRAwfaMctCyeviwAypHKtHdS4HXZd#4"
+      "blueId": "8uQuzNQKBLC5kpFy4UH3BU7PPtpbRZEfLQ2ftrsgLHbm#4"
     }
   },
   "tradeDate": {
     "description": "Specifies the date which the trade was agreed.",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     },
     "schema": {
       "required": true
@@ -113,7 +113,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "61T88AjWwvbxc7kozKt8kg9syaAo43s8CfQtNmM2hGQa"
+      "blueId": "6zgzXM8ryqdp6CFr8BH4PKyJcHZsjXogtRiA2DcyKgBU"
     },
     "schema": {
       "minItems": 1
@@ -125,7 +125,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "GEGgo47DtFUkNrdXx9Ha4jHLwmRe6bWZfKc5VRochWNX"
+      "blueId": "BmdnVkDXfdg2N2r7qgbCGTcmvRVJJCeGYWgqPEVPtqns"
     },
     "schema": {
       "minItems": 1
@@ -134,7 +134,7 @@
   "tradeTime": {
     "description": "Denotes the trade time and timezone as agreed by the parties to the trade.",
     "type": {
-      "blueId": "7sjnXydinsXJiMPF3qozryqySqRSdrcVBusJrFdTVJJz"
+      "blueId": "DuGS3hb9QASiMfVarVtXqrw8YdvHS99bzooo3dinungf"
     }
   }
 }

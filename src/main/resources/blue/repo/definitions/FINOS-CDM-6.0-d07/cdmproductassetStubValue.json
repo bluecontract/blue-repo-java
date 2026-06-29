@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "7NCM12EzsfLo3bgF3nbe2sjF8SDeAX2zy7HLiJmmSX9Z"
+      "blueId": "822rbnqRheYsGdSxwqfBNQRrUQGbug5bDb8Kdoz9UbSH"
     },
     "schema": {
       "minItems": 0,
@@ -17,7 +17,7 @@
   "stubAmount": {
     "description": "An actual amount to apply for the initial or final stub period may have been agreed between the two parties. If an actual stub amount has been agreed then it would be included in this component.\n",
     "type": {
-      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+      "blueId": "7eyr2kXubNSHtLXpHJ9G8NqtmDXLfmDmHQZSkLa9qkyy"
     }
   },
   "stubRate": {

@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("6uXr8yWNxPdxqhXuj8GyiDBPLEBgBqbdVAtSVUzJvSud")
+@TypeBlueId("DuS8JXr8UZwXXkZwCk1eRS1d9UZyC5e8KXQNiv8h4vHd")
 public class SingleDocumentPermissionGrantToDocument extends MyOSAdminBase {
     public static String blueId() {
-        return "6uXr8yWNxPdxqhXuj8GyiDBPLEBgBqbdVAtSVUzJvSud";
+        return "DuS8JXr8UZwXXkZwCk1eRS1d9UZyC5e8KXQNiv8h4vHd";
     }
 
     public static String packageName() {

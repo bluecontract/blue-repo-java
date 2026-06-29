@@ -4,13 +4,13 @@
   "averagingMethod": {
     "description": "Specifies enumerations for the type of averaging calculation.",
     "type": {
-      "blueId": "6WbM3vJuFcsppFLtLXftF91dWRsbhz9KDaK4U67o8tQe"
+      "blueId": "D8BAM3Ef8YgktLMNJZg82NyQjEWkwYXQ2pZYpzsXPtnQ"
     }
   },
   "determinationMethod": {
     "description": "Represents a more granular dimention of observation. Typically relevent for resolving a unique equity price, which can be expressed as trade-weighted or volume-weighted averages.\n",
     "type": {
-      "blueId": "FTE7qqGQusB8UEjsRpipyFrw42V2W8VA1TNPNLGTJwKU"
+      "blueId": "F2XKDuytcyrcyYVFazD7Tuqtk1J9p5rtwDxh9Y9PUUWH"
     }
   }
 }

@@ -4,7 +4,7 @@
   "agencyRating": {
     "description": "The agency rating based on default risk and creditors claim in event of default associated with specific instrument.\n",
     "type": {
-      "blueId": "H5d8SCeSAPow9BSQ9yQxQpEBETpJvMhAZfaDPQtsKHSx"
+      "blueId": "HWoMhvUF5jLNHYsFt98RcicKv9j3hQxYEeWQkzZHHMBU"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "assetCountryOfOrigin": {
     "description": "The asset country of origin.",
     "type": {
-      "blueId": "845nMVYB54BfARn15dRu8SXv1PR2j5FyZagnkbQVX5in"
+      "blueId": "9ppB13T87oA9HL9NWZr6pkLmcjb1HmUAgzVGS7yDyttw"
     },
     "schema": {
       "required": true
@@ -22,7 +22,7 @@
   "collateralAssetType": {
     "description": "The asset product type.",
     "type": {
-      "blueId": "BLZTp7a5CtMHrTzCq445GpujBm3ymVzCSadXjNvKVxCH"
+      "blueId": "AjHv57wVryq4YK8oodLNAT95JAYhuGRRiKk7hhX93LLi"
     },
     "schema": {
       "required": true
@@ -31,7 +31,7 @@
   "denominatedCurrency": {
     "description": "The underlying asset denominated currency.",
     "type": {
-      "blueId": "Gtqxd5G7jocpQHSsEiQ53Nwe1hN6hBmF525c6ebfSZfA"
+      "blueId": "Gb5ryH6JKgjNLySafKo7tXkb9PRgaQkWHcSibFZ96AbP"
     },
     "schema": {
       "required": true
@@ -40,7 +40,7 @@
   "issuerName": {
     "description": "Specifies the issuing entity name or LEI.",
     "type": {
-      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
     },
     "schema": {
       "required": true
@@ -49,7 +49,7 @@
   "issuerType": {
     "description": "Represents a filter based on the type of entity issuing the asset.",
     "type": {
-      "blueId": "H6PykJfXM1yFBz8mSRdqtcp1ATz1YwBbyjFBTGXM4Uvp"
+      "blueId": "GL9FygufGouoWPdbzaZ4SKyuRahWMAUxZ5q3bFMSWnRj"
     },
     "schema": {
       "required": true

@@ -4,7 +4,7 @@
   "payer": {
     "description": "Specifies the counterparty responsible for making the payments defined by this structure.  The party is one of the two principal parties to the transaction.\n",
     "type": {
-      "blueId": "ANd6oSrWArfUtpgKvesbXu9YiaQ3XLSYDxhgbBotJcUy"
+      "blueId": "6RRexSdxduLUUJjoAGhNuhXszw24mwyTFrHtwAqU2SDG"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "receiver": {
     "description": "Specifies the party that receives the payments corresponding to this structure.  The party is one of the two counterparties to the transaction.\n",
     "type": {
-      "blueId": "ANd6oSrWArfUtpgKvesbXu9YiaQ3XLSYDxhgbBotJcUy"
+      "blueId": "6RRexSdxduLUUJjoAGhNuhXszw24mwyTFrHtwAqU2SDG"
     },
     "schema": {
       "required": true

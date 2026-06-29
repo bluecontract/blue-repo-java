@@ -6,102 +6,582 @@
   },
   "schema": {
     "enum": [
-      "ARS.BNAR/ARS01",
-      "ARS.EMTA.INDICATIVE.SURVEY.RATE/ARS04",
-      "ARS.EMTA.INDUSTRY.SURVEY.RATE/ARS03",
-      "ARS.MAE/ARS05",
-      "ARS.OFFICIAL.RATE/ARS02",
-      "BRL.BRBY/BRL01",
-      "BRL.EMTA.INDICATIVE.SURVEY.RATE/BRL13",
-      "BRL.EMTA.INDUSTRY.SURVEY.RATE/BRL12",
-      "BRL.OFFICIAL.RATE/BRL02",
-      "BRL.PCOT-COMMERCIAL/BRL03",
-      "BRL.PCOT-FLOATING/BRL04",
-      "BRL.PTAX/BRL09",
-      "BRL.PTAX-COMMERCIAL.BRFR/BRL06",
-      "BRL.PTAX-COMMERCIAL/BRL05",
-      "BRL.PTAX-FLOATING.BRFR/BRL08",
-      "BRL.PTAX-FLOATING/BRL07",
-      "CLP.BCCH/CLP01",
-      "CLP.CHILD-INFORMAL/CLP02",
-      "CLP.CHILD-INTERBANK/CLP03",
-      "CLP.CHILD-OBSERVADO/CLP04",
-      "CLP.CHILG-INFORMAL/CLP05",
-      "CLP.CHILG-INTERBANK/CLP06",
-      "CLP.CHILG-OBSERVADO/CLP07",
-      "CLP.DOLAR.OBS/CLP10",
-      "CLP.EMTA.INDICATIVE.SURVEY.RATE/CLP11",
-      "CLP.OFFICIAL.RATE/CLP08",
-      "CLP.TELERATE.38942/CLP09",
-      "CNY.SAEC/CNY01",
-      "CNY.SFEMC.INDICATIVE.SURVEY.RATE/CNY02",
-      "COP.CO/COL03/COP01",
-      "COP.EMTA.INDICATIVE.SURVEY.RATE/COP03",
-      "COP.TRM/COP02",
-      "CURRENCY-IMPLIED.RATE.(ADR)/CURA1",
-      "CURRENCY-IMPLIED.RATE.(LOCAL.ASSET)/CURA2",
-      "CURRENCY-MUTUAL.AGREEMENT/CURA3",
-      "CURRENCY-REFERENCE.DEALERS/CURA4",
-      "CURRENCY-WHOLESALE.MARKET/CURA5",
-      "ECS.DNRP/ECS01",
-      "IDR.ABS/IDR01",
-      "IDR.JISDOR/IDR04",
-      "IDR.SFEMC.INDICATIVE.SURVEY.RATE/IDR02",
-      "IDR.VWAP/IDR03",
-      "ILS.BOIJ/ILS01",
-      "ILS.FXIL/ILS02",
-      "INR.FBIL/INR01",
-      "INR.RBIB/INR01",
-      "INR.SFEMC.INDICATIVE.SURVEY.RATE/INR02",
-      "KRW.KEBEY/KRW01",
-      "KRW.KFTC18/KRW02",
-      "KRW.SFEMC.INDICATIVE.SURVEY.RATE/KRW04",
-      "KRW.TELERATE.45644/KRW03",
-      "KZT.EMTA.INDICATIVE.SURVEY.RATE/KZT02",
-      "KZT.KASE/KZT01",
-      "LBP.BDLX/LBP01",
-      "MAD.OFFICIAL.RATE/MAD01",
-      "MXP.BNMX/MXP01",
-      "MXP.FIXING.RATE/MXP02",
-      "MXP.MEX01/MXP03",
-      "MXP.PUBLISHED/MXP04",
-      "MYR.ABS/MYR01",
-      "MYR.KL.REF/MYR04",
-      "MYR.PPKM/MYR03",
-      "MYR.SFEMC.INDICATIVE.SURVEY.RATE/MYR02",
-      "PEN.EMTA.INDICATIVE.SURVEY.RATE/PEN04",
-      "PEN.INTERBANK.AVE/PEN05",
-      "PEN.PDSB/PEN01",
-      "PEN.WT.AVE/PEN03",
-      "PHP.BAPPESO/PHP06",
-      "PHP.PDSPESO/PHP06",
-      "PHP.PHPESO/PHP01",
-      "PHP.SFEMC.INDICATIVE.SURVEY.RATE/PHP05",
-      "PHP.TELERATE.15439/PHP03",
-      "PHP.TELERATE.2920/PHP02",
-      "PKR.SBPK/PKR01",
-      "PKR.SFEMC.INDICATIVE.SURVEY.RATE/PKR02",
-      "PLZ.NBPQ/PLZ01",
-      "PLZ.NBPR/PLZ02",
-      "RUB.CME-EMTA/RUB03",
-      "RUB.EMTA.INDICATIVE.SURVEY.RATE/RUB04",
-      "RUB.MICEXFRX/RUB01",
-      "RUB.MMVB/RUB02",
-      "SGD.VWAP/SGD3",
-      "SKK.NBSB/SKK01",
-      "THB.ABS/THB01",
-      "THB.VWAP/THB01",
-      "TWD.SFEMC.INDICATIVE.SURVEY.RATE/TWD04",
-      "TWD.TAIFX1/TWD03",
-      "TWD.TELERATE.6161/TWD01",
-      "TWD.TFEMA/TWD02",
-      "UAH.EMTA.INDICATIVE.SURVEY.RATE/UAH03",
-      "UAH.EMTA.INDUSTRY.SURVEY.RATE/UAH02",
-      "UAH.GFI/UAH01",
-      "VEF.FIX/VEF01",
-      "VND.ABS/VND01",
-      "VND.FX/VND02",
-      "VND.SFEMC.INDICATIVE.SURVEY.RATE/VND03"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ARS.BNAR/ARS01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ARS.EMTA.INDICATIVE.SURVEY.RATE/ARS04"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ARS.EMTA.INDUSTRY.SURVEY.RATE/ARS03"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ARS.MAE/ARS05"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ARS.OFFICIAL.RATE/ARS02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "BRL.BRBY/BRL01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "BRL.EMTA.INDICATIVE.SURVEY.RATE/BRL13"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "BRL.EMTA.INDUSTRY.SURVEY.RATE/BRL12"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "BRL.OFFICIAL.RATE/BRL02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "BRL.PCOT-COMMERCIAL/BRL03"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "BRL.PCOT-FLOATING/BRL04"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "BRL.PTAX/BRL09"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "BRL.PTAX-COMMERCIAL.BRFR/BRL06"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "BRL.PTAX-COMMERCIAL/BRL05"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "BRL.PTAX-FLOATING.BRFR/BRL08"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "BRL.PTAX-FLOATING/BRL07"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CLP.BCCH/CLP01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CLP.CHILD-INFORMAL/CLP02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CLP.CHILD-INTERBANK/CLP03"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CLP.CHILD-OBSERVADO/CLP04"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CLP.CHILG-INFORMAL/CLP05"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CLP.CHILG-INTERBANK/CLP06"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CLP.CHILG-OBSERVADO/CLP07"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CLP.DOLAR.OBS/CLP10"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CLP.EMTA.INDICATIVE.SURVEY.RATE/CLP11"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CLP.OFFICIAL.RATE/CLP08"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CLP.TELERATE.38942/CLP09"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CNY.SAEC/CNY01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CNY.SFEMC.INDICATIVE.SURVEY.RATE/CNY02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "COP.CO/COL03/COP01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "COP.EMTA.INDICATIVE.SURVEY.RATE/COP03"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "COP.TRM/COP02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CURRENCY-IMPLIED.RATE.(ADR)/CURA1"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CURRENCY-IMPLIED.RATE.(LOCAL.ASSET)/CURA2"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CURRENCY-MUTUAL.AGREEMENT/CURA3"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CURRENCY-REFERENCE.DEALERS/CURA4"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CURRENCY-WHOLESALE.MARKET/CURA5"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ECS.DNRP/ECS01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "IDR.ABS/IDR01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "IDR.JISDOR/IDR04"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "IDR.SFEMC.INDICATIVE.SURVEY.RATE/IDR02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "IDR.VWAP/IDR03"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ILS.BOIJ/ILS01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ILS.FXIL/ILS02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "INR.FBIL/INR01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "INR.RBIB/INR01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "INR.SFEMC.INDICATIVE.SURVEY.RATE/INR02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "KRW.KEBEY/KRW01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "KRW.KFTC18/KRW02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "KRW.SFEMC.INDICATIVE.SURVEY.RATE/KRW04"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "KRW.TELERATE.45644/KRW03"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "KZT.EMTA.INDICATIVE.SURVEY.RATE/KZT02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "KZT.KASE/KZT01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "LBP.BDLX/LBP01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "MAD.OFFICIAL.RATE/MAD01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "MXP.BNMX/MXP01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "MXP.FIXING.RATE/MXP02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "MXP.MEX01/MXP03"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "MXP.PUBLISHED/MXP04"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "MYR.ABS/MYR01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "MYR.KL.REF/MYR04"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "MYR.PPKM/MYR03"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "MYR.SFEMC.INDICATIVE.SURVEY.RATE/MYR02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PEN.EMTA.INDICATIVE.SURVEY.RATE/PEN04"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PEN.INTERBANK.AVE/PEN05"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PEN.PDSB/PEN01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PEN.WT.AVE/PEN03"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PHP.BAPPESO/PHP06"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PHP.PDSPESO/PHP06"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PHP.PHPESO/PHP01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PHP.SFEMC.INDICATIVE.SURVEY.RATE/PHP05"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PHP.TELERATE.15439/PHP03"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PHP.TELERATE.2920/PHP02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PKR.SBPK/PKR01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PKR.SFEMC.INDICATIVE.SURVEY.RATE/PKR02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PLZ.NBPQ/PLZ01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PLZ.NBPR/PLZ02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "RUB.CME-EMTA/RUB03"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "RUB.EMTA.INDICATIVE.SURVEY.RATE/RUB04"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "RUB.MICEXFRX/RUB01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "RUB.MMVB/RUB02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "SGD.VWAP/SGD3"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "SKK.NBSB/SKK01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "THB.ABS/THB01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "THB.VWAP/THB01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "TWD.SFEMC.INDICATIVE.SURVEY.RATE/TWD04"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "TWD.TAIFX1/TWD03"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "TWD.TELERATE.6161/TWD01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "TWD.TFEMA/TWD02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "UAH.EMTA.INDICATIVE.SURVEY.RATE/UAH03"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "UAH.EMTA.INDUSTRY.SURVEY.RATE/UAH02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "UAH.GFI/UAH01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "VEF.FIX/VEF01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "VND.ABS/VND01"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "VND.FX/VND02"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "VND.SFEMC.INDICATIVE.SURVEY.RATE/VND03"
+      }
     ]
   }
 }

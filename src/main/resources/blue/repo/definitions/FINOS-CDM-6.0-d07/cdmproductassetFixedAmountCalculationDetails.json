@@ -22,7 +22,7 @@
   "calculationPeriodNotionalAmount": {
     "description": "The notional in effect during the calculation period.",
     "type": {
-      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+      "blueId": "7eyr2kXubNSHtLXpHJ9G8NqtmDXLfmDmHQZSkLa9qkyy"
     },
     "schema": {
       "required": true

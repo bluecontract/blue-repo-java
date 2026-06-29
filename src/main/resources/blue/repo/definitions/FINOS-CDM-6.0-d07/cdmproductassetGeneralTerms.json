@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     },
     "schema": {
       "minItems": 0
@@ -16,13 +16,13 @@
   "basketReferenceInformation": {
     "description": "This attribute contains all the terms relevant to defining the Credit Default Swap Basket.",
     "type": {
-      "blueId": "34WKd2d1noR6VuBpVgUWFuSj9Tf6otKoAWTHbR9fvzco"
+      "blueId": "axuXmPNwYdajJqoyfRBqGLYdVR7pu272ceY2KqBq9nB"
     }
   },
   "indexReferenceInformation": {
     "description": "This attribute contains all the terms relevant to the underlying Index.",
     "type": {
-      "blueId": "3GcrvhEmyKDecx15dWYwdQeMyQiGRYMTR8tV2LSPfkE9"
+      "blueId": "EXhnZXqvEcgXZrY2VK9WqgZz87y5NwxZ4axscyrAeSBv"
     }
   },
   "modifiedEquityDelivery": {
@@ -34,7 +34,7 @@
   "referenceInformation": {
     "description": "This attribute contains all the terms relevant to defining the reference entity and reference obligation(s).",
     "type": {
-      "blueId": "21tUiXqcPZ47DD2nEZ5E9SUBV7kj7oUHASqgyyPNCnm7"
+      "blueId": "3eDfhc11LMfKiQsRKqD5mkN3csaNKJ4Yay8qPTE3sM5f"
     }
   },
   "substitution": {

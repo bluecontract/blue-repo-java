@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("EqFtLUWpvw3DLzuAcBrVrto1J9g2RmH7gHRUakSBSnpr")
+@TypeBlueId("A5epowY7nXCnh1AWLF3H4Zv7YyXwwAFethePAEeyAQ92")
 public class CdmBaseDatetimeTimeZone {
     public static String blueId() {
-        return "EqFtLUWpvw3DLzuAcBrVrto1J9g2RmH7gHRUakSBSnpr";
+        return "A5epowY7nXCnh1AWLF3H4Zv7YyXwwAFethePAEeyAQ92";
     }
 
     public static String packageName() {

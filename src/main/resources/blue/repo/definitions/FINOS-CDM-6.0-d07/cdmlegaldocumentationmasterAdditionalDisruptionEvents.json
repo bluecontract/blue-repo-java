@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "F3qrYgNjUqzocxRTWvh6j8ZjXhYFFfn9fJtn4EPTHqzU#0"
+      "blueId": "Hn9xYtxdTe696TXzE5ge1KF3B3Ao26Z2er28HygKAoWi#0"
     },
     "schema": {
       "minItems": 0
@@ -22,7 +22,7 @@
   "determiningParty": {
     "description": "Specifies the party which determines additional disruption events.",
     "type": {
-      "blueId": "2YmGLtgJ5as5H64M8bRYDDRaGWwqzAGqrQSSzEm1Jvjm"
+      "blueId": "C2Ec7JF7c6QV6kD3Wb7Mtfg9NJ7aemu5KqHaafpZuEvN"
     }
   },
   "failureToDeliver": {

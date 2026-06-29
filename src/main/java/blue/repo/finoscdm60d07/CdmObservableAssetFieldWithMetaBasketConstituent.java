@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("2QU2EhagNf4ag1KKuipf54x3ef6zrzHmgfU3Qgb86Dnn#1")
+@TypeBlueId("6PMgqftTq3a4SNfZQb4xXg2MUd6m8xZRWGy9aGWS9W8C#1")
 public class CdmObservableAssetFieldWithMetaBasketConstituent {
     public static String blueId() {
-        return "2QU2EhagNf4ag1KKuipf54x3ef6zrzHmgfU3Qgb86Dnn#1";
+        return "6PMgqftTq3a4SNfZQb4xXg2MUd6m8xZRWGy9aGWS9W8C#1";
     }
 
     public static String packageName() {

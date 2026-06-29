@@ -4,7 +4,7 @@
   "issuerType": {
     "description": "Specifies the origin of entity issuing the collateral.",
     "type": {
-      "blueId": "FBjVxKMCCxFFbBDX9jsbiugNmVFaanySgQWsEbQHavoU"
+      "blueId": "5Vqz5iZWg2FYRz1e6qJVm5q3vRS2ML19JPjvEpZ4bYtu"
     },
     "schema": {
       "required": true
@@ -13,25 +13,25 @@
   "quasiGovernmentType": {
     "description": "Specifies debt issues by institutions or bodies, typically constituted by statute, with a function mandated by the government and subject to government supervision inclusive of profit- and non-profit making bodies. Includes the US Agencies and GSEs and the EU concept of public sector entities. Excluding any entities which are also Regional Government.\n",
     "type": {
-      "blueId": "2hMmN1x9mW8nMyVoJaUKfVqWoQopo1g1F1mvpH4SNp5Y"
+      "blueId": "GKXmRwDfJrtMQq78SdC8CuCaCqc3Fq99jNHShLFH3CFi"
     }
   },
   "regionalGovernmentType": {
     "description": "Specifies Regional government, local authority or municipal.",
     "type": {
-      "blueId": "8k6HepCAMwA7UZ9WZZZQAXphpLPtKbjLzCj9G3Vz4BVb"
+      "blueId": "HLEkFY88ouS3waVvxxHJE5z23k1PYJGizdrHbYYg1rGp"
     }
   },
   "specialPurposeVehicleType": {
     "description": "Specifies a subsidiary company that is formed to undertake a specific business purpose of acquisition and financing of specific assets on a potentially limited recourse basis dependent of how it is designed. E.g. asset backed securities, including securitisations.\n",
     "type": {
-      "blueId": "5gvkTwfCCCgynTvpJWZ3dofF5qTfe3boMNKD9VpUtCy"
+      "blueId": "5qsyiVpwMMJ634uApJQwMnZmrry7x6MHoaMJeGxdb5Bq"
     }
   },
   "supraNationalType": {
     "description": "Specifies debt issued by international organisations and multilateral banks.",
     "type": {
-      "blueId": "5RU7fKpNP65gvYADU2KnYkG21miP3ygrR5GcE1jLipnG"
+      "blueId": "DntsTXHGwUWVz7qTBeVzcb1XUkrUGTNzhHREc9jpBLF7"
     }
   }
 }

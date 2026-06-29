@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "AsWeekday",
-      "AsWeekend"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "AsWeekday"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "AsWeekend"
+      }
     ]
   }
 }

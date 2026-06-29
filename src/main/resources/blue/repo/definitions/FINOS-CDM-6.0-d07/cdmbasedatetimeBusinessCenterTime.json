@@ -4,7 +4,7 @@
   "businessCenter": {
     "description": "A code identifying a business day calendar location. A business day calendar location is drawn from the list identified by the business day calendar location enumeration.\n",
     "type": {
-      "blueId": "FCTe9fTVPMRvH2mPZc7gj1HSgSdKhN3zdDDLsdkB8Z6i"
+      "blueId": "EtUp3RuaDWzJnGNfgdjWD82gBrcgUyd6KM7cMfBajMzy"
     },
     "schema": {
       "required": true

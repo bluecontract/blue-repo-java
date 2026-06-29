@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "AvailableToLend",
-      "RequestToBorrow"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "AvailableToLend"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "RequestToBorrow"
+      }
     ]
   }
 }

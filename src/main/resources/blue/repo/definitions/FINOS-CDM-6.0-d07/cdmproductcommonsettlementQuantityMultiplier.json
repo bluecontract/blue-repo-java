@@ -4,7 +4,7 @@
   "fxLinkedNotionalSchedule": {
     "description": "Multiplier specified as an FX-linked schedule, e.g. for a resetting cross-currency swap..",
     "type": {
-      "blueId": "Byis1Z1jwHPUHe387kM1QLcHg8QrKXEQvc8zAtXqA3ny"
+      "blueId": "BRCQiBi9STYfKiP9KdPDPjoyi46W34fzykNMzGBP1YFT"
     }
   },
   "multiplierValue": {

@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import java.math.BigInteger;
 import java.util.List;
 
-@TypeBlueId("FEFE4qjcqNeq4CYo63jiXhauvoqrBznPeMJYgbGwh7XN")
+@TypeBlueId("EY9iPDd22LwArn4MV9fUHUqkd2gX1guSkAntckHs1xYa")
 public class CdmObservableEventPubliclyAvailableInformation {
     public static String blueId() {
-        return "FEFE4qjcqNeq4CYo63jiXhauvoqrBznPeMJYgbGwh7XN";
+        return "EY9iPDd22LwArn4MV9fUHUqkd2gX1guSkAntckHs1xYa";
     }
 
     public static String packageName() {

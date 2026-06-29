@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("Fj3meSzrVFT3h4kz7H1dk4yNznhXthX2WJNYfktCL71J")
+@TypeBlueId("FSP23sNY1FGeadmmkSZjmqWKdkoLdCoMqZ3eBePPS9N8")
 public class CdmObservableAssetFallbackReferencePrice {
     public static String blueId() {
-        return "Fj3meSzrVFT3h4kz7H1dk4yNznhXthX2WJNYfktCL71J";
+        return "FSP23sNY1FGeadmmkSZjmqWKdkoLdCoMqZ3eBePPS9N8";
     }
 
     public static String packageName() {

@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "8Kw75fnpiVHQevvWVc9xbHLEiK9fBKTFJvMiEQQeX7Xp"
+      "blueId": "6YLNUc4mUyAXJnpaEm2W4KAfb1HUCDcrXqv7KetjrbwH"
     },
     "schema": {
       "minItems": 0
@@ -16,7 +16,7 @@
   "floatingRateIndex": {
     "description": "The floating rate index.",
     "type": {
-      "blueId": "94ZSjm1tubYgDRVxoNemu9wBkqkuU4YE5cvNxw8BSwek"
+      "blueId": "Ffp3NGGHva1Wh7c62eqGBrQTxEzCeASMFJ6PAmoSuCXF"
     },
     "schema": {
       "required": true
@@ -25,7 +25,7 @@
   "floatingRateMultiplierSchedule": {
     "description": "A rate multiplier or multiplier schedule to apply to the floating rate. A multiplier schedule is expressed as explicit multipliers and dates. In the case of a schedule, the step dates may be subject to adjustment in accordance with any adjustments specified in the calculationPeriodDatesAdjustments. The multiplier can be a positive or negative decimal. This element should only be included if the multiplier is not equal to 1 (one) for the term of the stream.\n",
     "type": {
-      "blueId": "6QJPBRQ2jy9t4PXjUJ2Z8HB4HNtXM4iwKtw1V5xgtsii"
+      "blueId": "FYo7TjN1ZyQhoK2ypBWjmiE2Q6gyQ13fpHnTWBZdEdi2"
     }
   },
   "floorRateSchedule": {
@@ -34,7 +34,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "8Kw75fnpiVHQevvWVc9xbHLEiK9fBKTFJvMiEQQeX7Xp"
+      "blueId": "6YLNUc4mUyAXJnpaEm2W4KAfb1HUCDcrXqv7KetjrbwH"
     },
     "schema": {
       "minItems": 0
@@ -43,13 +43,13 @@
   "indexTenor": {
     "description": "The ISDA Designated Maturity, i.e. the tenor of the floating rate.",
     "type": {
-      "blueId": "D2zD5eW4h5CVwkas6bYant1Kmgdg4zt95zb3kYgR87RE"
+      "blueId": "G5BwzTWEaA14NoPKn8iSwCnmwnWuQegPHZwrpgagS6kY"
     }
   },
   "rateTreatment": {
     "description": "The specification of any rate conversion which needs to be applied to the observed rate before being used in any calculations. The two common conversions are for securities quoted on a bank discount basis which will need to be converted to either a Money Market Yield or Bond Equivalent Yield. See the Annex to the 2000 ISDA Definitions, Section 7.3. Certain General Definitions Relating to Floating Rate Options, paragraphs (g) and (h) for definitions of these terms.\n",
     "type": {
-      "blueId": "mvBCUTQVk9D7HJtya2wZLDbfSeAwb1HXhfnPT1TPdts"
+      "blueId": "6vYpwpDGdaR6pbtzmJTTxmLwiWsbwBhhaiecmRbLMtix"
     }
   },
   "spreadSchedule": {
@@ -58,7 +58,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "4ikvU3PRMfzH6Bx7VquDqYDvsS7aUBVbyGwFApC3XhVi"
+      "blueId": "BbmQzuzA7aBEkeWMx9NniHvZEqR3bPsBJzX8iyyokN7A"
     },
     "schema": {
       "minItems": 0

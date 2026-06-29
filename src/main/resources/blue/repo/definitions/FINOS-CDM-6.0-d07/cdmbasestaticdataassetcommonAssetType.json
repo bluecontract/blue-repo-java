@@ -4,7 +4,7 @@
   "assetType": {
     "description": "Represents a filter based on the type of collateral asset.",
     "type": {
-      "blueId": "FKtiGj4wsPtwhJuSPGrnmKPDoDzQ6c7DTL2nZMHidTEZ"
+      "blueId": "7FL7vGvhvZLCWZZPR1Eyoc1iJ69A3jcSF95meBVxT4Qe"
     },
     "schema": {
       "required": true
@@ -13,19 +13,19 @@
   "debtType": {
     "description": "Represents a filter based on the type of bond.",
     "type": {
-      "blueId": "41YkLGeAdcnrX3prFsD6hdXWfWcGNd9TySSQXTS5ggQq"
+      "blueId": "9vqkkCNnmKd3FB5tMAKKYenwq2i3mYyHmgYdPKKqkZ8U"
     }
   },
   "equityType": {
     "description": "Represents a filter based on the type of equity.",
     "type": {
-      "blueId": "Fzf8rSmfe6gydaE8hkBTonY1PoFNkbGYk6XimUXhKPE2"
+      "blueId": "DZstXEXxF1iHJunLqdgbypWWK6H28QwVCtxJRbMUDpza"
     }
   },
   "fundType": {
     "description": "Represents a filter based on the type of fund.",
     "type": {
-      "blueId": "6pAyJZMHbcA7TKD7yDZc1RKPdB4GbJYcFQaKXxaN3q5E"
+      "blueId": "As4LSyzdsEDrcBhhNCQ78eXDcY41rjgBoZJZenTJ2J7F"
     }
   },
   "otherAssetType": {
@@ -43,7 +43,7 @@
   "securityType": {
     "description": "Represents a filter based on the type of security.",
     "type": {
-      "blueId": "7MyPeAN5AJqMsYSWRXLnGyNnf2mXzbAA9n2ub5S3yC5U"
+      "blueId": "EmkPx4XLJeffJqq9EbwZicZCxqAhVBpDz1vu6eP1oTYj"
     }
   }
 }

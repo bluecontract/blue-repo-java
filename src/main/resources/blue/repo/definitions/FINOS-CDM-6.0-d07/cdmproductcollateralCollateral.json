@@ -16,13 +16,13 @@
   "collateralProvisions": {
     "description": "specifies the collateral provisions of the product.",
     "type": {
-      "blueId": "ERwzfUVyHoEXVE9rhTfvQ3nRPiD7c1SgCt8LS9VJZp6E"
+      "blueId": "EE9ddWepUCVpA88PcNq8buPwyuFbJawoqrJwAAwpCjcx"
     }
   },
   "independentAmount": {
     "description": "Independent Amount is an amount that usually less creditworthy counterparties are asked to provide. It can either be a fixed amount or a percentage of the Transaction's value. The Independent Amount can be: (i) transferred before any trading between the parties occurs (as a deposit at a third party's account or with the counterparty) or (ii) callable after trading has occurred (typically because a downgrade has occurred). In situation (i), the Independent Amount is not included in the calculation of Exposure, but in situation (ii), it is included in the calculation of Exposure. Thus, for situation (ii), the Independent Amount may be transferred along with any collateral call. Independent Amount is a defined term in the ISDA Credit Support Annex. ('with respect to a party, the amount specified as such for that party in Paragraph 13; if no amount is specified, zero').\n",
     "type": {
-      "blueId": "6zSV1CsJaUKL3tVtJBPUFLkvWWq5SNP1TLpcQy8kPrzS"
+      "blueId": "Bx6RbJH85Gh7BbnBoSUaTvzqwCNheMpjmwzdouE6UJz"
     }
   },
   "portfolioIdentifier": {
@@ -31,7 +31,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "DtCdHJZeccxHZbwaJQZhJKaibyxKYwbj9hKw2ZsK5K4r"
+      "blueId": "9tpFoqFu1yX5LZEATGF8CYsE5VSXhkQua9LMXwLEX2Pv"
     },
     "schema": {
       "minItems": 0

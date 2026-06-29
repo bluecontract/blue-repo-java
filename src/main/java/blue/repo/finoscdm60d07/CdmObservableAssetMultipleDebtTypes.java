@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("2s8h9Fv4Wcd7om6eW6WCK8MK41XpoAvH1stjRd9Pxw4x")
+@TypeBlueId("ARtKwcQKppAKVf5WDJvuwGatLemZ18RcJsXU23W4RfH8")
 public class CdmObservableAssetMultipleDebtTypes {
     public static String blueId() {
-        return "2s8h9Fv4Wcd7om6eW6WCK8MK41XpoAvH1stjRd9Pxw4x";
+        return "ARtKwcQKppAKVf5WDJvuwGatLemZ18RcJsXU23W4RfH8";
     }
 
     public static String packageName() {

@@ -4,7 +4,7 @@
   "asset": {
     "description": "Represents the object that is subject to the transfer, it could be an asset or a reference.",
     "type": {
-      "blueId": "9EcbYfwS6ejjhaqz7ve1AjBtuKDZ7o9VVsPpEN5tQdJ9"
+      "blueId": "5UGws2rghMXJPsBC2YMTqJQgztQ8nTZm1XTaGkvxheXo"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "quantity": {
     "description": "Represents the amount of the asset to be transferred. The cashflow amount is always a positive number, as the cashflow direction is implied by the payer/receiver attribute.\n",
     "type": {
-      "blueId": "FrmpqNJPnR6deFCfrx5PCjxXkRTEHfDQrfnv67NeRDqy"
+      "blueId": "BoLMyAuLAegX9RWR7trQbdmp7pB2tAfkPhDoTzbu8acd"
     },
     "schema": {
       "required": true
@@ -22,7 +22,7 @@
   "settlementDate": {
     "description": "Represents the date on which the transfer to due.",
     "type": {
-      "blueId": "Cnr9GX4zVqDdTu9BuWJej49kDymJFygBdiFa7TH563Vu"
+      "blueId": "8VijgDyT9t9CiNbNQYVbdE1whbL9Q9DTRMZpCocVhSxF"
     },
     "schema": {
       "required": true

@@ -4,7 +4,7 @@
   "averagingPeriodFrequency": {
     "description": "The frequency at which averaging period occurs with the regular part of the valuation schedule and their roll date convention.\n",
     "type": {
-      "blueId": "HZisEChr3jH3w3sD3cYqmib79M4YmwuJqeeKGGCpCyMz"
+      "blueId": "CkosQzywFhAU6NAYFKUn1Q9gvuL9kvbk3rfWxAdrAsce"
     },
     "schema": {
       "required": true

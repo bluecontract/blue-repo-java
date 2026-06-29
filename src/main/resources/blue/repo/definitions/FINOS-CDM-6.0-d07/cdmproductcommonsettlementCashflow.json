@@ -4,13 +4,13 @@
   "asset": {
     "description": "Represents the object that is subject to the transfer, it could be an asset or a reference.",
     "type": {
-      "blueId": "9EcbYfwS6ejjhaqz7ve1AjBtuKDZ7o9VVsPpEN5tQdJ9"
+      "blueId": "5UGws2rghMXJPsBC2YMTqJQgztQ8nTZm1XTaGkvxheXo"
     }
   },
   "cashflowType": {
     "description": "The qualification of the type of cashflow, e.g. brokerage fee, premium, upfront fee etc. Particularly relevant when it cannot be inferred directly through lineage.\n",
     "type": {
-      "blueId": "2Kh84nL2J6YKBpP7nzYenVswaG7WkvdPKADBLv92reL4"
+      "blueId": "GArm2fDK1vopaSHjgRguRRS1k6GiHBGUifjuhdbJEfg"
     },
     "schema": {
       "required": true
@@ -19,7 +19,7 @@
   "payerReceiver": {
     "description": "Specifies who pays / receives the cashflow, though a normalised Party1 / Party2 enumerator.",
     "type": {
-      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+      "blueId": "3xPof2WJyFXisFtvaxpSGddTxHyGioazbsMJjuUucbzT"
     },
     "schema": {
       "required": true
@@ -28,19 +28,19 @@
   "paymentDiscounting": {
     "description": "FpML specifies the FpML PaymentDiscounting.model group for representing the discounting elements that can be associated with a payment.\n",
     "type": {
-      "blueId": "5B1rpTFnx4nL4AsesTM6c6oCX9eKYXjUhvinHcQj47iA"
+      "blueId": "9dkTzBV6xqQ9LmULZCPBAZi5Afj3tZytwUtqXc1iccwt"
     }
   },
   "quantity": {
     "description": "Represents the amount of the asset to be transferred. The cashflow amount is always a positive number, as the cashflow direction is implied by the payer/receiver attribute.\n",
     "type": {
-      "blueId": "FrmpqNJPnR6deFCfrx5PCjxXkRTEHfDQrfnv67NeRDqy"
+      "blueId": "BoLMyAuLAegX9RWR7trQbdmp7pB2tAfkPhDoTzbu8acd"
     }
   },
   "settlementDate": {
     "description": "Represents the date on which the transfer to due.",
     "type": {
-      "blueId": "Cnr9GX4zVqDdTu9BuWJej49kDymJFygBdiFa7TH563Vu"
+      "blueId": "8VijgDyT9t9CiNbNQYVbdE1whbL9Q9DTRMZpCocVhSxF"
     }
   }
 }

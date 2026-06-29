@@ -3,7 +3,7 @@
   "maturityRange": {
     "description": "Represents a filter based on the underlying asset maturity.",
     "type": {
-      "blueId": "Fr6Vkm8X7LKHtHbm7uq4NKsLwP7k9fm9kDidLaCsUVKt"
+      "blueId": "Gnv2JatHomC6ZL7YnSSsr5b8Qx1hWWGYFQocqArJgJCj"
     },
     "schema": {
       "required": true
@@ -12,7 +12,7 @@
   "maturityType": {
     "description": "Specifies whether the maturity range is the remaining or original maturity.",
     "type": {
-      "blueId": "ACaKBowExZkpr81YYboiHfdG78Z4BoCdMnrdKwJfuujd"
+      "blueId": "4M9RAThHXP4VWteUq2nq2RyirfHaGCinAVabk8gf2AYC"
     },
     "schema": {
       "required": true

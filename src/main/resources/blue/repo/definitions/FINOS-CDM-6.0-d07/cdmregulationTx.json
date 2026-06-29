@@ -18,7 +18,7 @@
   },
   "pric": {
     "type": {
-      "blueId": "4wFEjgDZMbCLTeTfgq8yfWpPVxDT13TGqKJMpUzWYokn#0"
+      "blueId": "AbfDrU3fgSd82Mgi4iEoZ41s3qXFqRnSTETansBbw9HF#0"
     },
     "schema": {
       "required": true
@@ -26,7 +26,7 @@
   },
   "qty": {
     "type": {
-      "blueId": "DkpH2T6cyriTEkT83nmR8ePNeY1eeeGRqnfpNWJTD2BZ"
+      "blueId": "6LfAdgL3H4Evj6cxAmHvohUbKGvi8hMjCW2VA7FCmp2f"
     },
     "schema": {
       "required": true

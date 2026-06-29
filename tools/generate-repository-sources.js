@@ -44,9 +44,14 @@ const resourceBase = option('resource-base', 'blue/repo');
 const javaVersionPackage = option('java-package', 'blue.repo');
 const versionRegistryClassName = option('registry-class', 'BlueRepositoryModels');
 const defaultSourceBundle = path.join(repoRoot, 'src', 'main', 'resources', resourceBase, 'BlueRepository.blue');
-const sourceBundle = option(
-  'source',
-  fs.existsSync(defaultSourceBundle) ? defaultSourceBundle : path.join(sourceRepositoryRoot, 'BlueRepository.blue')
+const canonicalRepositoryBundle = path.join(sourceRepositoryRoot, 'BlueRepository.blue');
+const explicitSourceBundle = option(
+  'repository',
+  option('source', process.env.BLUE_REPOSITORY_BLUE || process.env.BLUE_REPOSITORY_SOURCE || null)
+);
+const sourceBundle = path.resolve(
+  explicitSourceBundle
+    || (fs.existsSync(canonicalRepositoryBundle) ? canonicalRepositoryBundle : defaultSourceBundle)
 );
 const javaOutputRoot = path.resolve(option('java-output-root', path.join(repoRoot, 'src', 'main', 'java')));
 const resourcesOutputRoot = path.resolve(option('resources-output-root', path.join(repoRoot, 'src', 'main', 'resources')));
@@ -118,10 +123,6 @@ const runtimeBlueIds = {
   lifecycleEventChannel: '2DXGQUiQBQ6CT89jwAsTAXaEPhLgiSXhKCGh9Q7Hv3MQ',
   embeddedNodeChannel: 'H6iUJp3GcLypsJDimMSVoxQQdxxuD8j6eqEUWWqCZ6i',
 };
-
-const booleanSchemaKeys = new Set(['required', 'uniqueItems']);
-const integerSchemaKeys = new Set(['minLength', 'maxLength', 'minItems', 'maxItems', 'minFields', 'maxFields']);
-const numericSchemaKeys = new Set(['minimum', 'maximum', 'exclusiveMinimum', 'exclusiveMaximum', 'multipleOf']);
 
 const externalBaseDescriptors = {
   contract: {
@@ -198,6 +199,10 @@ const externalBaseTypesByBlueId = new Map([
 
 function mkdirp(dir) {
   fs.mkdirSync(dir, { recursive: true });
+}
+
+function sha256(bytes) {
+  return crypto.createHash('sha256').update(bytes).digest('hex');
 }
 
 function javaString(value) {
@@ -284,54 +289,11 @@ function latestVersion(versions) {
 function normalizeTypeVersions(type) {
   const versions = Array.isArray(type.versions) ? [...type.versions] : [];
   versions.sort((a, b) => a.repositoryVersionIndex - b.repositoryVersionIndex);
-  const current = latestVersion(versions);
   return versions.map((version) => ({
     repositoryVersionIndex: version.repositoryVersionIndex,
     typeBlueId: version.typeBlueId,
     attributesAdded: Array.isArray(version.attributesAdded) ? version.attributesAdded : [],
-    compatibleWithCurrent: isShapeCompatibleWithCurrent(type, version, current),
   }));
-}
-
-function attributeRoot(attributePath) {
-  const value = `${attributePath || ''}`.trim();
-  if (!value) {
-    return null;
-  }
-  const withoutSlash = value.startsWith('/') ? value.slice(1) : value;
-  const root = withoutSlash.split('/')[0];
-  return root || null;
-}
-
-function currentOwnFieldNames(type) {
-  const content = type.content || {};
-  return new Set(Object.keys(content).filter((key) => !reservedNodeKeys.has(key)));
-}
-
-function isShapeCompatibleWithCurrent(type, historicalVersion, currentVersion) {
-  if (!historicalVersion || !currentVersion) {
-    return false;
-  }
-  if (historicalVersion.typeBlueId === currentVersion.typeBlueId) {
-    return true;
-  }
-  if (historicalVersion.compatibleWithCurrent !== true) {
-    return false;
-  }
-  if (type.status !== 'stable') {
-    return false;
-  }
-
-  const currentFields = currentOwnFieldNames(type);
-  for (const version of type.versions || []) {
-    for (const attribute of version.attributesAdded || []) {
-      const root = attributeRoot(attribute);
-      if (root && !currentFields.has(root)) {
-        return false;
-      }
-    }
-  }
-  return true;
 }
 
 function repositoryVersionName(index, total, currentVersion) {
@@ -371,520 +333,8 @@ function deepClone(value) {
   return value;
 }
 
-function normalizeRepositorySchemas(value) {
-  if (Array.isArray(value)) {
-    return value.map(normalizeRepositorySchemas);
-  }
-  if (!value || typeof value !== 'object') {
-    return value;
-  }
-
-  const normalized = {};
-  for (const [key, child] of Object.entries(value)) {
-    normalized[key] = key === 'schema'
-      ? normalizeSchema(child)
-      : normalizeRepositorySchemas(child);
-  }
-  return normalized;
-}
-
-function normalizeSchema(schema) {
-  if (!schema || typeof schema !== 'object' || Array.isArray(schema)) {
-    return schema;
-  }
-
-  const normalized = {};
-  for (const [key, child] of Object.entries(schema)) {
-    if (key === 'enum') {
-      normalized[key] = normalizeSchemaEnum(child);
-    } else if (booleanSchemaKeys.has(key) || integerSchemaKeys.has(key) || numericSchemaKeys.has(key)) {
-      normalized[key] = normalizeSchemaScalar(child);
-    } else {
-      normalized[key] = normalizeRepositorySchemas(child);
-    }
-  }
-  return normalized;
-}
-
-function normalizeSchemaEnum(value) {
-  if (Array.isArray(value)) {
-    return value.map(normalizeSchemaEnumEntry);
-  }
-  if (value && typeof value === 'object' && Array.isArray(value.items) && Object.keys(value).length === 1) {
-    return value.items.map(normalizeSchemaEnumEntry);
-  }
-  return normalizeSchemaEnumEntry(value);
-}
-
-function normalizeSchemaEnumEntry(value) {
-  return normalizeSchemaScalar(value);
-}
-
-function normalizeSchemaScalar(value) {
-  if (value && typeof value === 'object' && !Array.isArray(value) && Object.prototype.hasOwnProperty.call(value, 'value')) {
-    const keys = Object.keys(value);
-    const typeBlueId = value.type && value.type.blueId;
-    const hasOnlyScalarShape = keys.every((key) => key === 'type' || key === 'value');
-    if (hasOnlyScalarShape && isBasicScalarBlueId(typeBlueId)) {
-      return value.value;
-    }
-  }
-  return normalizeRepositorySchemas(value);
-}
-
-function isBasicScalarBlueId(blueId) {
-  const currentBlueId = currentBasicBlueId(blueId);
-  return currentBlueId === basicBlueIds.text
-    || currentBlueId === basicBlueIds.double
-    || currentBlueId === basicBlueIds.integer
-    || currentBlueId === basicBlueIds.boolean;
-}
-
-function recalculateCurrentTypeBlueIds(definitions) {
-  const definitionsByOldBlueId = new Map(definitions.map((definition) => [definition.blueId, definition]));
-  const groupsByOldBaseBlueId = new Map();
-  for (const definition of definitions) {
-    const parsed = parseFragmentBlueId(definition.blueId);
-    const group = groupsByOldBaseBlueId.get(parsed.baseBlueId) || [];
-    group.push({ definition, index: parsed.index });
-    groupsByOldBaseBlueId.set(parsed.baseBlueId, group);
-  }
-
-  let blueIdMap = new Map();
-  for (const definition of definitions) {
-    blueIdMap.set(definition.blueId, definition.blueId);
-    const parsed = parseFragmentBlueId(definition.blueId);
-    if (parsed.index !== null && !blueIdMap.has(parsed.baseBlueId)) {
-      blueIdMap.set(parsed.baseBlueId, parsed.baseBlueId);
-    }
-  }
-
-  let latestContents = new Map();
-  for (let attempt = 0; attempt < 50; attempt += 1) {
-    const nextBlueIdMap = new Map(blueIdMap);
-    const nextContents = new Map();
-
-    for (const [oldBaseBlueId, group] of groupsByOldBaseBlueId.entries()) {
-      if (group.some((entry) => entry.index !== null)) {
-        const sorted = [...group].sort((a, b) => a.index - b.index);
-        const contents = sorted.map((entry) => rewriteBlueIdReferences(entry.definition.content, blueIdMap));
-        const newBaseBlueId = calculateBlueIdForNodeList(contents);
-        nextBlueIdMap.set(oldBaseBlueId, newBaseBlueId);
-        for (const entry of sorted) {
-          const newBlueId = `${newBaseBlueId}#${entry.index}`;
-          nextBlueIdMap.set(entry.definition.blueId, newBlueId);
-          nextContents.set(entry.definition, contents[entry.index]);
-        }
-      } else {
-        const definition = group[0].definition;
-        const content = rewriteBlueIdReferences(definition.content, blueIdMap);
-        nextBlueIdMap.set(definition.blueId, calculateBlueIdForNode(content));
-        nextContents.set(definition, content);
-      }
-    }
-
-    if (sameMap(blueIdMap, nextBlueIdMap)) {
-      latestContents = nextContents;
-      break;
-    }
-    blueIdMap = nextBlueIdMap;
-    latestContents = nextContents;
-  }
-
-  const unresolved = [];
-  for (const definition of definitions) {
-    const recalculatedBlueId = blueIdMap.get(definition.blueId);
-    if (!recalculatedBlueId) {
-      unresolved.push(definition.qualifiedName);
-      continue;
-    }
-    definition.oldBlueId = definition.blueId;
-    definition.blueId = recalculatedBlueId;
-    definition.content = latestContents.get(definition) || rewriteBlueIdReferences(definition.content, blueIdMap);
-    definition.versions = definition.versions.map((version) => {
-      if (version.repositoryVersionIndex === definition.repositoryVersionIndex) {
-        return {
-          ...version,
-          typeBlueId: recalculatedBlueId,
-          compatibleWithCurrent: true,
-        };
-      }
-      return version;
-    });
-    definition.sourceType.versions = definition.versions.map((version) => ({
-      repositoryVersionIndex: version.repositoryVersionIndex,
-      typeBlueId: version.typeBlueId,
-      attributesAdded: version.attributesAdded,
-      ...(version.compatibleWithCurrent ? { compatibleWithCurrent: true } : {}),
-    }));
-    definition.sourceType.content = deepClone(definition.content);
-  }
-  if (unresolved.length > 0) {
-    throw new Error(`Unable to recalculate BlueIds for definitions: ${unresolved.join(', ')}`);
-  }
-
-  return definitionsByOldBlueId;
-}
-
-function parseFragmentBlueId(blueId) {
-  const separator = blueId.indexOf('#');
-  if (separator < 0) {
-    return { baseBlueId: blueId, index: null };
-  }
-  return {
-    baseBlueId: blueId.slice(0, separator),
-    index: Number.parseInt(blueId.slice(separator + 1), 10),
-  };
-}
-
-function rewriteBlueIdReferences(value, blueIdMap) {
-  if (Array.isArray(value)) {
-    return value.map((item) => rewriteBlueIdReferences(item, blueIdMap));
-  }
-  if (!value || typeof value !== 'object') {
-    return value;
-  }
-  const rewritten = {};
-  for (const [key, child] of Object.entries(value)) {
-    if (key === 'blueId' && typeof child === 'string') {
-      rewritten[key] = rewriteBlueId(child, blueIdMap);
-    } else {
-      rewritten[key] = rewriteBlueIdReferences(child, blueIdMap);
-    }
-  }
-  return rewritten;
-}
-
-function rewriteBlueId(blueId, blueIdMap) {
-  if (blueId === 'this' || blueId.startsWith('this#')) {
-    return blueId;
-  }
-  if (basicBlueIdAliases.has(blueId)) {
-    return basicBlueIdAliases.get(blueId);
-  }
-  if (blueIdMap.has(blueId)) {
-    return blueIdMap.get(blueId);
-  }
-  const parsed = parseFragmentBlueId(blueId);
-  if (parsed.index !== null && blueIdMap.has(parsed.baseBlueId)) {
-    return `${blueIdMap.get(parsed.baseBlueId)}#${parsed.index}`;
-  }
-  return blueId;
-}
-
 function currentBasicBlueId(blueId) {
   return basicBlueIdAliases.get(blueId) || blueId;
-}
-
-function sameMap(left, right) {
-  if (left.size !== right.size) {
-    return false;
-  }
-  for (const [key, value] of left.entries()) {
-    if (right.get(key) !== value) {
-      return false;
-    }
-  }
-  return true;
-}
-
-function calculateBlueIdForNode(node) {
-  return calculateBlueIdFromPrepared(blueIdInput(node));
-}
-
-function calculateBlueIdForNodeList(nodes) {
-  return calculateBlueIdFromPrepared(nodes.map((node) => blueIdInput(node)));
-}
-
-function blueIdInput(node) {
-  if (node == null) {
-    throw new Error('BlueId input must not contain null nodes');
-  }
-  if (Array.isArray(node)) {
-    return node.map((item) => blueIdInput(item));
-  }
-  if (typeof node !== 'object') {
-    return scalarBlueIdInput(node);
-  }
-
-  const keys = Object.keys(node);
-  if (keys.length === 1 && Object.prototype.hasOwnProperty.call(node, 'blueId')) {
-    return { blueId: node.blueId };
-  }
-  if (keys.length === 1 && Object.prototype.hasOwnProperty.call(node, '$previous')) {
-    return { $previous: { blueId: node.$previous.blueId } };
-  }
-
-  const result = {};
-  if (node.name != null) {
-    result.name = node.name;
-  }
-  if (node.description != null) {
-    result.description = node.description;
-  }
-
-  let valueTypeBlueId = null;
-  if (node.value != null && node.type == null) {
-    valueTypeBlueId = inferScalarTypeBlueId(node.value);
-    if (valueTypeBlueId) {
-      result.type = { blueId: valueTypeBlueId };
-    }
-  } else if (node.type != null) {
-    valueTypeBlueId = node.type.blueId || null;
-    result.type = blueIdInput(node.type);
-  }
-
-  if (node.itemType != null) {
-    result.itemType = blueIdInput(node.itemType);
-  }
-  if (node.keyType != null) {
-    result.keyType = blueIdInput(node.keyType);
-  }
-  if (node.valueType != null) {
-    result.valueType = blueIdInput(node.valueType);
-  }
-  if (node.mergePolicy != null) {
-    result.mergePolicy = node.mergePolicy;
-  }
-  if (node.value != null) {
-    result.value = normalizeBlueIdValue(node.value, valueTypeBlueId);
-  }
-  if (node.items != null) {
-    result.items = node.items.map((item) => blueIdInput(item));
-  }
-  if (result.items != null && isPayloadOnlyListNode(node)) {
-    return result.items;
-  }
-  if (node.schema != null) {
-    result.schema = schemaBlueIdInput(node.schema);
-  }
-  if (node.contracts != null) {
-    result.contracts = blueIdInput(node.contracts);
-  }
-
-  for (const [key, value] of Object.entries(node)) {
-    if (!reservedNodeKeys.has(key) && key !== 'contracts') {
-      result[key] = blueIdInput(value);
-    }
-  }
-  return result;
-}
-
-function isPayloadOnlyListNode(node) {
-  return node.items != null
-    && node.name == null
-    && node.description == null
-    && node.type == null
-    && node.itemType == null
-    && node.keyType == null
-    && node.valueType == null
-    && node.value == null
-    && node.schema == null
-    && node.mergePolicy == null
-    && node.blueId == null
-    && node.previousBlueId == null
-    && node.position == null
-    && node.blue == null
-    && node.contracts == null
-    && Object.keys(node).every((key) => reservedNodeKeys.has(key));
-}
-
-function scalarBlueIdInput(value) {
-  const typeBlueId = inferScalarTypeBlueId(value);
-  if (typeBlueId) {
-    return { type: { blueId: typeBlueId }, value: normalizeBlueIdValue(value, typeBlueId) };
-  }
-  return { value };
-}
-
-function schemaBlueIdInput(schema) {
-  const result = {};
-  for (const key of [...booleanSchemaKeys, ...integerSchemaKeys, ...numericSchemaKeys]) {
-    if (schema[key] != null) {
-      result[key] = schema[key] && typeof schema[key] === 'object'
-        ? blueIdInput(schema[key])
-        : schema[key];
-    }
-  }
-  if (Array.isArray(schema.enum)) {
-    result.enum = schema.enum.map((entry) => entry && typeof entry === 'object' ? blueIdInput(entry) : entry);
-  }
-  return result;
-}
-
-function inferScalarTypeBlueId(value) {
-  if (typeof value === 'string') {
-    return basicBlueIds.text;
-  }
-  if (typeof value === 'boolean') {
-    return basicBlueIds.boolean;
-  }
-  if (typeof value === 'number') {
-    return Number.isInteger(value) ? basicBlueIds.integer : basicBlueIds.double;
-  }
-  return null;
-}
-
-function normalizeBlueIdValue(value, typeBlueId) {
-  if (currentBasicBlueId(typeBlueId) === basicBlueIds.double && typeof value === 'number') {
-    return Number.parseFloat(value.toString());
-  }
-  return value;
-}
-
-function calculateBlueIdFromPrepared(value) {
-  return calculateCleanedObject(cleanRoot(value));
-}
-
-function calculateCleanedObject(value) {
-  if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
-    return hashCanonical(value);
-  }
-  if (Array.isArray(value)) {
-    return calculateListBlueId(value);
-  }
-  if (value && typeof value === 'object') {
-    return calculateMapBlueId(value);
-  }
-  throw new Error(`Unsupported BlueId input: ${value}`);
-}
-
-function calculateMapBlueId(map) {
-  const keys = Object.keys(map);
-  if (keys.length === 1 && keys[0] === 'blueId') {
-    return map.blueId;
-  }
-
-  const hashes = {};
-  for (const key of keys.sort()) {
-    if (key === 'name' || key === 'value' || key === 'description') {
-      hashes[key] = map[key];
-    } else {
-      hashes[key] = { blueId: calculateCleanedObject(map[key]) };
-    }
-  }
-  return hashCanonical(hashes);
-}
-
-function calculateListBlueId(list) {
-  let accumulator = hashCanonical({ $list: 'empty' });
-  let start = 0;
-  if (list.length > 0 && isPreviousBlueIdControl(list[0])) {
-    accumulator = list[0].$previous.blueId;
-    start = 1;
-  }
-  for (let index = start; index < list.length; index += 1) {
-    const elementHash = calculateCleanedObject(list[index]);
-    accumulator = hashCanonical({
-      $listCons: {
-        elem: { blueId: elementHash },
-        prev: { blueId: accumulator },
-      },
-    });
-  }
-  return accumulator;
-}
-
-function isPreviousBlueIdControl(value) {
-  return value
-    && typeof value === 'object'
-    && !Array.isArray(value)
-    && Object.keys(value).length === 1
-    && value.$previous
-    && typeof value.$previous === 'object'
-    && Object.keys(value.$previous).length === 1
-    && typeof value.$previous.blueId === 'string';
-}
-
-function cleanRoot(value) {
-  if (Array.isArray(value)) {
-    return value.map(cleanListElement);
-  }
-  if (value && typeof value === 'object') {
-    return cleanMap(value, true);
-  }
-  return value;
-}
-
-function cleanObjectField(value) {
-  if (value == null) {
-    return null;
-  }
-  if (Array.isArray(value)) {
-    return value.map(cleanListElement);
-  }
-  if (value && typeof value === 'object') {
-    const cleaned = cleanMap(value, false);
-    return Object.keys(cleaned).length === 0 ? null : cleaned;
-  }
-  return value;
-}
-
-function cleanListElement(value) {
-  if (value == null) {
-    throw new Error('BlueId list input must not contain null elements');
-  }
-  if (Array.isArray(value)) {
-    return value.map(cleanListElement);
-  }
-  if (value && typeof value === 'object') {
-    return cleanMap(value, false);
-  }
-  return value;
-}
-
-function cleanMap(map) {
-  const cleaned = {};
-  for (const [key, value] of Object.entries(map)) {
-    const child = cleanObjectField(value);
-    if (child != null) {
-      cleaned[key] = child;
-    }
-  }
-  return cleaned;
-}
-
-function hashCanonical(value) {
-  return base58Encode(crypto.createHash('sha256').update(canonicalJson(value)).digest());
-}
-
-function canonicalJson(value) {
-  if (value === null || typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
-    return JSON.stringify(value);
-  }
-  if (Array.isArray(value)) {
-    return `[${value.map(canonicalJson).join(',')}]`;
-  }
-  return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${canonicalJson(value[key])}`).join(',')}}`;
-}
-
-function base58Encode(buffer) {
-  const alphabet = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
-  let digits = [0];
-  for (const byte of buffer) {
-    let carry = byte;
-    for (let index = 0; index < digits.length; index += 1) {
-      carry += digits[index] << 8;
-      digits[index] = carry % 58;
-      carry = Math.floor(carry / 58);
-    }
-    while (carry > 0) {
-      digits.push(carry % 58);
-      carry = Math.floor(carry / 58);
-    }
-  }
-  let result = '';
-  for (const byte of buffer) {
-    if (byte === 0) {
-      result += alphabet[0];
-    } else {
-      break;
-    }
-  }
-  for (let index = digits.length - 1; index >= 0; index -= 1) {
-    result += alphabet[digits[index]];
-  }
-  return result;
 }
 
 function discoverDefinitions(repository) {
@@ -913,8 +363,7 @@ function discoverDefinitions(repository) {
         status: type.status || null,
         repositoryVersionIndex: version.repositoryVersionIndex,
         versions,
-        content: normalizeRepositorySchemas(type.content),
-        sourceType: type,
+        content: deepClone(type.content),
       };
       definitions.push(definition);
       packageDefinitions.push(definition);
@@ -1148,13 +597,7 @@ function writeConstantsClass(packageName, definitions) {
 }
 
 function typeBlueIds(definition) {
-  const result = [definition.blueId];
-  for (const version of [...definition.versions].reverse()) {
-    if (version.typeBlueId !== definition.blueId && version.compatibleWithCurrent) {
-      result.push(version.typeBlueId);
-    }
-  }
-  return result;
+  return [definition.blueId];
 }
 
 function writeTypeBlueIdAnnotation(lines, definition) {
@@ -1313,16 +756,12 @@ function writeVersionRegistry(definitions) {
 }
 
 function main() {
-  const sourceBundleContent = fs.readFileSync(sourceBundle, 'utf8');
-  const repository = normalizeRepositorySchemas(yaml.load(sourceBundleContent));
+  const sourceBundleBytes = fs.readFileSync(sourceBundle);
+  const sourceBundleContent = sourceBundleBytes.toString('utf8');
+  const repository = yaml.load(sourceBundleContent);
   const repositoryVersions = repository.repositoryVersions || [];
   const repositoryVersionBlueId = repositoryVersions[repositoryVersions.length - 1];
   const { definitions, definitionsByPackage, byBlueId } = discoverDefinitions(repository);
-  recalculateCurrentTypeBlueIds(definitions);
-  byBlueId.clear();
-  for (const definition of definitions) {
-    byBlueId.set(definition.blueId, definition);
-  }
 
   fs.rmSync(resourcesRoot, { recursive: true, force: true });
   fs.rmSync(constantsRoot, { recursive: true, force: true });
@@ -1340,7 +779,12 @@ function main() {
   mkdirp(constantsRoot);
   mkdirp(modelsRoot);
   const targetSourceBundle = path.join(resourcesRoot, 'BlueRepository.blue');
-  fs.writeFileSync(targetSourceBundle, yaml.dump(repository, { lineWidth: -1, noRefs: true }));
+  fs.writeFileSync(targetSourceBundle, sourceBundleBytes);
+  const sourceDigest = sha256(sourceBundleBytes);
+  const targetDigest = sha256(fs.readFileSync(targetSourceBundle));
+  if (sourceDigest !== targetDigest) {
+    throw new Error(`Canonical repository copy failed: ${sourceDigest} != ${targetDigest}`);
+  }
 
   for (const [packageName, packageDefinitions] of definitionsByPackage.entries()) {
     mkdirp(path.join(definitionsRoot, packageName));
@@ -1372,7 +816,6 @@ function main() {
         repositoryVersionIndex: version.repositoryVersionIndex,
         typeBlueId: version.typeBlueId,
         attributesAdded: version.attributesAdded,
-        compatibleWithCurrent: version.compatibleWithCurrent,
       })),
     })),
   };

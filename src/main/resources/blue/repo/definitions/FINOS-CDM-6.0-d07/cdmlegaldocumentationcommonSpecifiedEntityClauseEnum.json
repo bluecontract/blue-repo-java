@@ -6,10 +6,30 @@
   },
   "schema": {
     "enum": [
-      "Bankruptcy",
-      "CreditEventUponMerger",
-      "CrossDefault",
-      "DefaultUnderSpecifiedTransaction"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Bankruptcy"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CreditEventUponMerger"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CrossDefault"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "DefaultUnderSpecifiedTransaction"
+      }
     ]
   }
 }

@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("HkPyhSCAYzinCzw5ZpKictQxkPHdRV3hgY3rgJjhSEa5")
+@TypeBlueId("6ddJUitXi5N7MkKNmyabHzuZ6qhZC3kt5EZJoEPpmr2P")
 public class CdmProductAssetFPVFinalPriceElectionFallbackEnum {
     public static String blueId() {
-        return "HkPyhSCAYzinCzw5ZpKictQxkPHdRV3hgY3rgJjhSEa5";
+        return "6ddJUitXi5N7MkKNmyabHzuZ6qhZC3kt5EZJoEPpmr2P";
     }
 
     public static String packageName() {

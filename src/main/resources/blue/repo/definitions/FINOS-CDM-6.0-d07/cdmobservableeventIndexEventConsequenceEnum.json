@@ -6,10 +6,30 @@
   },
   "schema": {
     "enum": [
-      "CalculationAgentAdjustment",
-      "CancellationAndPayment",
-      "NegotiatedCloseOut",
-      "RelatedExchange"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CalculationAgentAdjustment"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CancellationAndPayment"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "NegotiatedCloseOut"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "RelatedExchange"
+      }
     ]
   }
 }

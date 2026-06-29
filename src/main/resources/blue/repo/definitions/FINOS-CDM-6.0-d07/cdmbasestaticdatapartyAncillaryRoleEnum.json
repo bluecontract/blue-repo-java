@@ -6,17 +6,72 @@
   },
   "schema": {
     "enum": [
-      "CalculationAgentFallback",
-      "CalculationAgentIndependent",
-      "CalculationAgentMandatoryEarlyTermination",
-      "CalculationAgentOptionalEarlyTermination",
-      "DisruptionEventsDeterminingParty",
-      "ExerciseNoticeReceiverPartyCancelableProvision",
-      "ExerciseNoticeReceiverPartyExtendibleProvision",
-      "ExerciseNoticeReceiverPartyManual",
-      "ExerciseNoticeReceiverPartyOptionalEarlyTermination",
-      "ExtraordinaryDividendsParty",
-      "PredeterminedClearingOrganizationParty"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CalculationAgentFallback"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CalculationAgentIndependent"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CalculationAgentMandatoryEarlyTermination"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CalculationAgentOptionalEarlyTermination"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "DisruptionEventsDeterminingParty"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ExerciseNoticeReceiverPartyCancelableProvision"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ExerciseNoticeReceiverPartyExtendibleProvision"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ExerciseNoticeReceiverPartyManual"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ExerciseNoticeReceiverPartyOptionalEarlyTermination"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ExtraordinaryDividendsParty"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PredeterminedClearingOrganizationParty"
+      }
     ]
   }
 }

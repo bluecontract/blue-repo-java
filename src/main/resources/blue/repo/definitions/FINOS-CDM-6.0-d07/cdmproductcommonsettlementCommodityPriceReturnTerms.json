@@ -10,19 +10,19 @@
   "rollFeature": {
     "description": "Used in conjunction with an exchange-based pricing source. Identifies a way in which the futures contracts referenced will roll between periods.\n",
     "type": {
-      "blueId": "7JFz2NCgc3MxRByeVMCacEpvzm76zmDksh3T9c9Sf6hM"
+      "blueId": "8egmsgTVVkTcqNTDUm9EaLcKVzmRTw5uiK4S3zrc88BH"
     }
   },
   "rounding": {
     "description": "Defines rounding rules and precision to be used in the rounding of a number.",
     "type": {
-      "blueId": "DnXzzassZD8x4ZyWkS46bBpvzPMBW4txNdG32xcULQhy"
+      "blueId": "BYetgNwutc7xjHHx9g7ZhsdKgyGYMd1UR4jDoHHafJHj"
     }
   },
   "spread": {
     "description": "Defines a spread value for one or more defined dates.",
     "type": {
-      "blueId": "4ikvU3PRMfzH6Bx7VquDqYDvsS7aUBVbyGwFApC3XhVi"
+      "blueId": "BbmQzuzA7aBEkeWMx9NniHvZEqR3bPsBJzX8iyyokN7A"
     }
   }
 }
