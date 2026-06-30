@@ -16,7 +16,7 @@
   "initialRate": {
     "description": "The rate to be applied for the initial period.",
     "type": {
-      "blueId": "BD3VPcMR7j62CWudW3xXH1Aropvfs515RCLZFP4cZY4P"
+      "blueId": "GLmQaa2vVZKjaht1sNMcUL55xfAgWQxpj5ENxwvVRvsm"
     }
   },
   "multiplier": {
@@ -28,13 +28,13 @@
   "negativeTreatment": {
     "description": "How to handle negative interest rates.",
     "type": {
-      "blueId": "EXwPjSissXAhf18rgWNAhF9XWD3q9VM5Xm8Guns2ATKR"
+      "blueId": "BsWNiWBWBcPvxq7gbRKXCVo4xpJ1fYXPvWNafB7Bvxzt"
     }
   },
   "rounding": {
     "description": "THe final rate rounding to be applied.",
     "type": {
-      "blueId": "DnXzzassZD8x4ZyWkS46bBpvzPMBW4txNdG32xcULQhy"
+      "blueId": "BYetgNwutc7xjHHx9g7ZhsdKgyGYMd1UR4jDoHHafJHj"
     }
   },
   "spread": {
@@ -46,7 +46,7 @@
   "treatment": {
     "description": "US rate treatment (Bond Equivalent Yield or Money Market Yield, if applicable.",
     "type": {
-      "blueId": "mvBCUTQVk9D7HJtya2wZLDbfSeAwb1HXhfnPT1TPdts"
+      "blueId": "6vYpwpDGdaR6pbtzmJTTxmLwiWsbwBhhaiecmRbLMtix"
     }
   }
 }

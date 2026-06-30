@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("H8qnVAgPqfKkEBVt1B52tNsJoMevQnmFkF8tof1KyfjU")
+@TypeBlueId("3PW2wc587i1dSwdY8mw99sh8auYBiNqWChG6tCKiMGS6")
 public class CdmObservableAssetInflationIndex {
     public static String blueId() {
-        return "H8qnVAgPqfKkEBVt1B52tNsJoMevQnmFkF8tof1KyfjU";
+        return "3PW2wc587i1dSwdY8mw99sh8auYBiNqWChG6tCKiMGS6";
     }
 
     public static String packageName() {

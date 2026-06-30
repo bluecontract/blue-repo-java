@@ -6,9 +6,24 @@
   },
   "schema": {
     "enum": [
-      "Discount",
-      "Fee",
-      "Premium"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Discount"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Fee"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Premium"
+      }
     ]
   }
 }

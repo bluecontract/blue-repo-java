@@ -6,111 +6,636 @@
   },
   "schema": {
     "enum": [
-      "DJ.CDX.EM",
-      "DJ.CDX.EM.DIV",
-      "DJ.CDX.NA",
-      "DJ.iTraxx.Europe",
-      "EquityAmericas",
-      "EquityAsia",
-      "EquityEuropean",
-      "ISDA1999Credit",
-      "ISDA2003CreditAsia",
-      "ISDA2003CreditAustraliaNewZealand",
-      "ISDA2003CreditEuropean",
-      "ISDA2003CreditJapan",
-      "ISDA2003CreditNorthAmerican",
-      "ISDA2003CreditSingapore",
-      "ISDA2003CreditSovereignAsia",
-      "ISDA2003CreditSovereignCentralAndEasternEurope",
-      "ISDA2003CreditSovereignJapan",
-      "ISDA2003CreditSovereignLatinAmerica",
-      "ISDA2003CreditSovereignMiddleEast",
-      "ISDA2003CreditSovereignWesternEurope",
-      "ISDA2003StandardCreditAsia",
-      "ISDA2003StandardCreditAustraliaNewZealand",
-      "ISDA2003StandardCreditEuropean",
-      "ISDA2003StandardCreditJapan",
-      "ISDA2003StandardCreditNorthAmerican",
-      "ISDA2003StandardCreditSingapore",
-      "ISDA2004CreditSovereignAsia",
-      "ISDA2004CreditSovereignEmergingEuropeanAndMiddleEastern",
-      "ISDA2004CreditSovereignJapan",
-      "ISDA2004CreditSovereignLatinAmerican",
-      "ISDA2004CreditSovereignWesternEuropean",
-      "ISDA2004EquityAmericasInterdealer",
-      "ISDA2004EquityAmericasInterdealerRev1",
-      "ISDA2004StandardCreditSovereignAsia",
-      "ISDA2004StandardCreditSovereignEmergingEuropeanAndMiddleEastern",
-      "ISDA2004StandardCreditSovereignJapan",
-      "ISDA2004StandardCreditSovereignLatinAmerican",
-      "ISDA2004StandardCreditSovereignWesternEuropean",
-      "ISDA2005EquityAsiaExcludingJapanInterdealer",
-      "ISDA2005EquityAsiaExcludingJapanInterdealerRev2",
-      "ISDA2005EquityJapaneseInterdealer",
-      "ISDA2006VarianceSwapJapanese",
-      "ISDA2006VarianceSwapJapaneseInterdealer",
-      "ISDA2007EquityEuropean",
-      "ISDA2007VarianceSwapAmericas",
-      "ISDA2007VarianceSwapAsiaExcludingJapan",
-      "ISDA2007VarianceSwapAsiaExcludingJapanRev1",
-      "ISDA2007VarianceSwapAsiaExcludingJapanRev2",
-      "ISDA2007VarianceSwapEuropean",
-      "ISDA2007VarianceSwapEuropeanRev1",
-      "ISDA2008DividendSwapJapan",
-      "ISDA2008DividendSwapJapaneseRev1",
-      "ISDA2008EquityAmericas",
-      "ISDA2008EquityAsiaExcludingJapan",
-      "ISDA2008EquityAsiaExcludingJapanRev1",
-      "ISDA2008EquityJapan",
-      "ISDA2009EquityAmericas",
-      "ISDA2009EquityEuropeanInterdealer",
-      "ISDA2009EquityPanAsia",
-      "ISDA2010EquityEMEAInterdealer",
-      "ISDA2013VolatilitySwapAmericas",
-      "ISDA2013VolatilitySwapAsiaExcludingJapan",
-      "ISDA2013VolatilitySwapEuropean",
-      "ISDA2013VolatilitySwapJapanese",
-      "2003CreditIndex",
-      "2004EquityEuropeanInterdealer",
-      "2005VarianceSwapEuropeanInterdealer",
-      "2006DividendSwapEuropean",
-      "2006DividendSwapEuropeanInterdealer",
-      "2014CreditAsia",
-      "2014CreditAsiaFinancial",
-      "2014CreditAustraliaNewZealand",
-      "2014CreditAustraliaNewZealandFinancial",
-      "2014CreditEuropean",
-      "2014CreditEuropeanCoCoFinancial",
-      "2014CreditEuropeanFinancial",
-      "2014CreditJapan",
-      "2014CreditJapanFinancial",
-      "2014CreditNorthAmerican",
-      "2014CreditNorthAmericanFinancial",
-      "2014CreditSingapore",
-      "2014CreditSingaporeFinancial",
-      "2014CreditSovereignAsia",
-      "2014CreditSovereignEmergingEuropeanAndMiddleEastern",
-      "2014CreditSovereignJapan",
-      "2014CreditSovereignLatinAmerican",
-      "2014CreditSovereignWesternEuropean",
-      "2014StandardCreditAsia",
-      "2014StandardCreditAsiaFinancial",
-      "2014StandardCreditAustraliaNewZealand",
-      "2014StandardCreditAustraliaNewZealandFinancial",
-      "2014StandardCreditEuropean",
-      "2014StandardCreditEuropeanCoCoFinancial",
-      "2014StandardCreditEuropeanFinancial",
-      "2014StandardCreditJapan",
-      "2014StandardCreditJapanFinancial",
-      "2014StandardCreditNorthAmerican",
-      "2014StandardCreditNorthAmericanFinancial",
-      "2014StandardCreditSingapore",
-      "2014StandardCreditSingaporeFinancial",
-      "2014StandardCreditSovereignAsia",
-      "2014StandardCreditSovereignEmergingEuropeanAndMiddleEastern",
-      "2014StandardCreditSovereignJapan",
-      "2014StandardCreditSovereignLatinAmerican",
-      "2014StandardCreditSovereignWesternEuropean"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "DJ.CDX.EM"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "DJ.CDX.EM.DIV"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "DJ.CDX.NA"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "DJ.iTraxx.Europe"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "EquityAmericas"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "EquityAsia"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "EquityEuropean"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA1999Credit"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003CreditAsia"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003CreditAustraliaNewZealand"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003CreditEuropean"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003CreditJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003CreditNorthAmerican"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003CreditSingapore"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003CreditSovereignAsia"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003CreditSovereignCentralAndEasternEurope"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003CreditSovereignJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003CreditSovereignLatinAmerica"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003CreditSovereignMiddleEast"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003CreditSovereignWesternEurope"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003StandardCreditAsia"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003StandardCreditAustraliaNewZealand"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003StandardCreditEuropean"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003StandardCreditJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003StandardCreditNorthAmerican"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2003StandardCreditSingapore"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2004CreditSovereignAsia"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2004CreditSovereignEmergingEuropeanAndMiddleEastern"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2004CreditSovereignJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2004CreditSovereignLatinAmerican"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2004CreditSovereignWesternEuropean"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2004EquityAmericasInterdealer"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2004EquityAmericasInterdealerRev1"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2004StandardCreditSovereignAsia"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2004StandardCreditSovereignEmergingEuropeanAndMiddleEastern"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2004StandardCreditSovereignJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2004StandardCreditSovereignLatinAmerican"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2004StandardCreditSovereignWesternEuropean"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2005EquityAsiaExcludingJapanInterdealer"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2005EquityAsiaExcludingJapanInterdealerRev2"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2005EquityJapaneseInterdealer"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2006VarianceSwapJapanese"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2006VarianceSwapJapaneseInterdealer"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2007EquityEuropean"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2007VarianceSwapAmericas"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2007VarianceSwapAsiaExcludingJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2007VarianceSwapAsiaExcludingJapanRev1"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2007VarianceSwapAsiaExcludingJapanRev2"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2007VarianceSwapEuropean"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2007VarianceSwapEuropeanRev1"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2008DividendSwapJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2008DividendSwapJapaneseRev1"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2008EquityAmericas"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2008EquityAsiaExcludingJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2008EquityAsiaExcludingJapanRev1"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2008EquityJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2009EquityAmericas"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2009EquityEuropeanInterdealer"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2009EquityPanAsia"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2010EquityEMEAInterdealer"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2013VolatilitySwapAmericas"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2013VolatilitySwapAsiaExcludingJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2013VolatilitySwapEuropean"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ISDA2013VolatilitySwapJapanese"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2003CreditIndex"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2004EquityEuropeanInterdealer"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2005VarianceSwapEuropeanInterdealer"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2006DividendSwapEuropean"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2006DividendSwapEuropeanInterdealer"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditAsia"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditAsiaFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditAustraliaNewZealand"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditAustraliaNewZealandFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditEuropean"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditEuropeanCoCoFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditEuropeanFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditJapanFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditNorthAmerican"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditNorthAmericanFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditSingapore"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditSingaporeFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditSovereignAsia"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditSovereignEmergingEuropeanAndMiddleEastern"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditSovereignJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditSovereignLatinAmerican"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014CreditSovereignWesternEuropean"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditAsia"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditAsiaFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditAustraliaNewZealand"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditAustraliaNewZealandFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditEuropean"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditEuropeanCoCoFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditEuropeanFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditJapanFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditNorthAmerican"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditNorthAmericanFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditSingapore"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditSingaporeFinancial"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditSovereignAsia"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditSovereignEmergingEuropeanAndMiddleEastern"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditSovereignJapan"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditSovereignLatinAmerican"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "2014StandardCreditSovereignWesternEuropean"
+      }
     ]
   }
 }

@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "MarkToMarket",
-      "MarkToModel"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "MarkToMarket"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "MarkToModel"
+      }
     ]
   }
 }

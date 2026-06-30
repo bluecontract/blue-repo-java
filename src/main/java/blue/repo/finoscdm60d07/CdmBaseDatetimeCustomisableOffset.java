@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("4fxH68Qhmcr3PyhEVREnhj2pz86R29rn4bRNE8bG8LUt")
+@TypeBlueId("EaaCUoNmXLQTY4MPLncXFmVQqSS88MhbwvejcfJKUAdS")
 public class CdmBaseDatetimeCustomisableOffset {
     public static String blueId() {
-        return "4fxH68Qhmcr3PyhEVREnhj2pz86R29rn4bRNE8bG8LUt";
+        return "EaaCUoNmXLQTY4MPLncXFmVQqSS88MhbwvejcfJKUAdS";
     }
 
     public static String packageName() {

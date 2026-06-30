@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("5R9ivhYm4erCPRhXa3yvWvysiaUKfjka34k9DaE7YTkj")
+@TypeBlueId("2W3rHTz4L7GBmVkiESoY8puS9uU1rTGL2SfpTGJy2kse")
 public class CdmObservableAssetCalculatedrateObservationPeriodDatesEnum {
     public static String blueId() {
-        return "5R9ivhYm4erCPRhXa3yvWvysiaUKfjka34k9DaE7YTkj";
+        return "2W3rHTz4L7GBmVkiESoY8puS9uU1rTGL2SfpTGJy2kse";
     }
 
     public static String packageName() {

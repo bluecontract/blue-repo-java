@@ -4,7 +4,7 @@
   "percentageRule": {
     "description": "This attribute is not present as part of the FpML construct, as the payment rule is specialised by means of runtime type extension through the xsi:type.\n",
     "type": {
-      "blueId": "4m3JWwHVodQL1fBTZs8YFfdkm7aNsbrLVoCYg3E77aT7"
+      "blueId": "GqKSKHCa6D8xbrMJnRibPtb1dXGasKD1awv2Ubini8GT"
     }
   }
 }

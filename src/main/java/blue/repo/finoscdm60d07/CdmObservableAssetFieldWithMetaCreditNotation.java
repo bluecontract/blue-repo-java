@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("J9Pxr5r3aXac8695zdk4ZHX7ZTpzYtpJRUFtEa5paeA1")
+@TypeBlueId("3a31df2HdfB7EqRbM2D5wwBaTaVC1tUemQ66F91P16xS")
 public class CdmObservableAssetFieldWithMetaCreditNotation {
     public static String blueId() {
-        return "J9Pxr5r3aXac8695zdk4ZHX7ZTpzYtpJRUFtEa5paeA1";
+        return "3a31df2HdfB7EqRbM2D5wwBaTaVC1tUemQ66F91P16xS";
     }
 
     public static String packageName() {

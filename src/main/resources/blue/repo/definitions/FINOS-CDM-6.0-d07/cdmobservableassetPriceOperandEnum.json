@@ -5,9 +5,24 @@
   },
   "schema": {
     "enum": [
-      "AccruedInterest",
-      "Commission",
-      "ForwardPoint"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "AccruedInterest"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Commission"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ForwardPoint"
+      }
     ]
   }
 }

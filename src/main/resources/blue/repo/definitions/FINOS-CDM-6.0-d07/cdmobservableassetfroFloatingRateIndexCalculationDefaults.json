@@ -4,19 +4,19 @@
   "category": {
     "description": "The ISDA FRO category (e.g. screen rate or calculated rate).",
     "type": {
-      "blueId": "4UEkeSsCaS3kNMVQFMrfikxgtZMB5qkPZiLQ3QfGrKRu"
+      "blueId": "uyCbFUtyiur98B8jKgwwDdT7g5AQzSgfK77hjbHKgXm"
     }
   },
   "indexStyle": {
     "description": "The ISDA FRO style (e.g. term rate, swap rate, etc).",
     "type": {
-      "blueId": "7iedAb4nMavjzEgmToXMQKxY8xwczovhrf5rkRgYUQJy"
+      "blueId": "98SyBWL9ENVd5hF1HHdCKz8RG35SmSdrNx9Dh2tPj9AK"
     }
   },
   "method": {
     "description": "The ISDA FRO calculation method (e.g. OIS Compounding).",
     "type": {
-      "blueId": "BLEJu945hNFFkSYFA6FHdarjgJHwgwxuREBt5Tt2B5A3"
+      "blueId": "Ef7JSbybnYTf6DGe3sD3EoBBngjeauFZcUey5CPfgotg"
     }
   }
 }

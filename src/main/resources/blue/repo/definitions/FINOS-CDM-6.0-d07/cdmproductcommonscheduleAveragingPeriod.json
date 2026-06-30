@@ -4,19 +4,19 @@
   "averagingDateTimes": {
     "description": "An unweighted list of averaging observation date and times.",
     "type": {
-      "blueId": "8GwvgXK5zu4RizciBCTxFPkB53t5QxmcJmRPuXj8Yxzi"
+      "blueId": "H5D8BrpdPx4G3A74ypfsUrC27hh6pjWVeJD3s6bkSu7e"
     }
   },
   "averagingObservations": {
     "description": "A weighted list of averaging observation date and times.",
     "type": {
-      "blueId": "BGYW6t3HgtX9Gy86sgNBDJ2RAzTKZGsNRKQV3CDLYNh4"
+      "blueId": "GVFbbaLLLxVnRS8pEFt4Pwr3VMsXjMm2nM6PdGfDenD3"
     }
   },
   "marketDisruption": {
     "description": "The market disruption event as defined by ISDA 2002 Definitions.",
     "type": {
-      "blueId": "FVS7VrRFsXuBC2py4JdjjUo1VMWqh3yWfMns2shTsdv4"
+      "blueId": "FjySLYZUdztPrBskVvWtnCvGs6KZVkZWrLsrrLpotMYG"
     }
   },
   "schedule": {
@@ -25,7 +25,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "FEY2i95RwCX4jab9QimgpbtJ9Et1nTRvX5FUysN2eVx5"
+      "blueId": "CR9L4SVmKAvSmKh2xUfY6RvyAg4XL3BwDYCeqWk8ejn8"
     },
     "schema": {
       "minItems": 0

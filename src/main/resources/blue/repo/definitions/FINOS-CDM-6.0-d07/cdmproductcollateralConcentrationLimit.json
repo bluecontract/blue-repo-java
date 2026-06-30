@@ -4,19 +4,19 @@
   "concentrationLimitCriteria": {
     "description": "Specifies a set of criteria to describe the assets that the concentration limits apply to.",
     "type": {
-      "blueId": "EkADwYRGxyEjw7y7ezqUTqYfki9dYESzagxw46kV7ibo"
+      "blueId": "7YP39rZ8BWEkzLnifnowdqDWusgdTtoaAQADyndrMtvU"
     }
   },
   "percentageLimit": {
     "description": "Specifies the perecentage of collateral limit represented as a decimal number - example 25% is 0.25.",
     "type": {
-      "blueId": "G3Czczjun5KZ7JmhFBTYxJ8kS4DetVPC7VeQenWJ3iAL"
+      "blueId": "6YPBFzb6J5zZWUx1H7SSeJNLQWwAzYsVjRxgdkFZMVrn"
     }
   },
   "valueLimit": {
     "description": "Specifies the value of collateral limit represented as a range.",
     "type": {
-      "blueId": "CT6QHBXGNmWJd4QCwfEpZgEKmj9RwpSeuBKfY1Wiyfow"
+      "blueId": "4NGaBXKBS6QDTeN9ZdQEgWHvYg1Kd3Dqr86Xs9BpVh7A"
     }
   }
 }

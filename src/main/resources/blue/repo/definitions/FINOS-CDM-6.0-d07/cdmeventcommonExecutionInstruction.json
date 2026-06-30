@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "BEZVkHKyDMsBjAmDVvYY7wpeyTRwsqcq12e6SpKHUxm6"
+      "blueId": "3FLaoJ8BXZUb3VpFoXQ7ACwUhTaDAZgwztubj17GegH4"
     },
     "schema": {
       "minItems": 0
@@ -16,7 +16,7 @@
   "collateral": {
     "description": "Detail the collateral requirement anticipated with the transaction.",
     "type": {
-      "blueId": "HzXrPyEGXqGMoxvXogbtZd53VtnjXhLo5cm3UjYYi7wT"
+      "blueId": "6jhHzxNcd11YEG9a9f1yBWhmm5qpzmbZ6E7JEqHpPj7r"
     }
   },
   "counterparty": {
@@ -25,7 +25,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "E1uMUhyFkX83bxaZhuKemTmb5S99vPebKwnFVHu6KQTn"
+      "blueId": "58TeStN7sJrzoG3o1U7FZq3fFkxbCXkvdWPYYZkf1r3x"
     },
     "schema": {
       "minItems": 2,
@@ -35,7 +35,7 @@
   "executionDetails": {
     "description": "Specifies the type and venue of execution, e.g. via voice, or electronically.",
     "type": {
-      "blueId": "FxcbepmTyVj6YwY1cP6e2JUaGXyrZVXoZj5jygBc8JMA"
+      "blueId": "34vDDjWK88raLcbwzsk1RG6XiYVNqS2twvW2mBVySxxe"
     },
     "schema": {
       "required": true
@@ -44,7 +44,7 @@
   "lotIdentifier": {
     "description": "Lot Identifier associated with the transaction.",
     "type": {
-      "blueId": "DtCdHJZeccxHZbwaJQZhJKaibyxKYwbj9hKw2ZsK5K4r"
+      "blueId": "9tpFoqFu1yX5LZEATGF8CYsE5VSXhkQua9LMXwLEX2Pv"
     }
   },
   "parties": {
@@ -53,7 +53,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "AhMzsyCZTs6HTjAUKURsN7RTVyw8rXkq1JPPNPUdYnBq"
+      "blueId": "3skPfLDtYJ59SZAAdcu2JDHySdtCEVu8FzTnUX8D5mfy"
     },
     "schema": {
       "minItems": 2
@@ -65,7 +65,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "7N6isgUMMMsMJoxpjNRRfdVHiWizDFmyABkC7s3LeRZ6"
+      "blueId": "Hrt2EoYJokASG9J62NMKWt8UZbQN6BwtESp7hVDVQYvm"
     },
     "schema": {
       "minItems": 0
@@ -77,7 +77,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "7ZZfSxTMhHstRLpYQMESSSTY9jN668fPJwkSAzcVT7aR"
+      "blueId": "2C9DbWa8E4D3cXHSXuDyYmWwrs1ySFopMnyA3XWWesm8"
     },
     "schema": {
       "minItems": 1
@@ -86,7 +86,7 @@
   "product": {
     "description": "Defines the financial product to be executed and contract formed.",
     "type": {
-      "blueId": "9qWGsXauVnxS5oNKRAwfaMctCyeviwAypHKtHdS4HXZd#4"
+      "blueId": "8uQuzNQKBLC5kpFy4UH3BU7PPtpbRZEfLQ2ftrsgLHbm#4"
     },
     "schema": {
       "required": true
@@ -95,7 +95,7 @@
   "tradeDate": {
     "description": "Denotes the trade/execution date.",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     },
     "schema": {
       "required": true
@@ -107,7 +107,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "61T88AjWwvbxc7kozKt8kg9syaAo43s8CfQtNmM2hGQa"
+      "blueId": "6zgzXM8ryqdp6CFr8BH4PKyJcHZsjXogtRiA2DcyKgBU"
     },
     "schema": {
       "minItems": 1
@@ -116,7 +116,7 @@
   "tradeTime": {
     "description": "Denotes the trade time and timezone as agreed by the parties to the trade.",
     "type": {
-      "blueId": "7sjnXydinsXJiMPF3qozryqySqRSdrcVBusJrFdTVJJz"
+      "blueId": "DuGS3hb9QASiMfVarVtXqrw8YdvHS99bzooo3dinungf"
     }
   }
 }

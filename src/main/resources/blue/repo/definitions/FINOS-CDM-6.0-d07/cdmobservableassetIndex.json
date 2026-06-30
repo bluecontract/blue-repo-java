@@ -4,31 +4,31 @@
   "CreditIndex": {
     "description": "An index based on credit risk, typically composed using corporate debt instruments in a region or industry sector, e.g. the iTraxx indices.\n",
     "type": {
-      "blueId": "3GcrvhEmyKDecx15dWYwdQeMyQiGRYMTR8tV2LSPfkE9"
+      "blueId": "EXhnZXqvEcgXZrY2VK9WqgZz87y5NwxZ4axscyrAeSBv"
     }
   },
   "EquityIndex": {
     "description": "An index based on equity securities, e.g. the S&P 500.",
     "type": {
-      "blueId": "7VBRm1ciertrGX2LQMVUL6aDYMZXanBowxBmSxpFeJix"
+      "blueId": "EArWxvBkePDwUEtKBhh6BFEHXRgqmUAiHbHAVCW9EWu4"
     }
   },
   "ForeignExchangeRateIndex": {
     "description": "A rate based on the exchange of a pair of cash assets in specific currencies, e.g. USD versus GBP.",
     "type": {
-      "blueId": "H4ara2sfDMhDa8AtzR421pjXqxhvK3yvSCjBXsaD7G6g"
+      "blueId": "3r42QBCBADZWzkxMBCQkvH3c6M3c1raWTFgLjoCsjZoe"
     }
   },
   "InterestRateIndex": {
     "description": "An index based in interest rates or inflation rates in a certain market.",
     "type": {
-      "blueId": "4LCDwUXV2A7g1FWDno87qFNGiCZ8poGE2wrAcd3P3jYa"
+      "blueId": "9QkWzeLcgPCCJUappiHJdN2AEyj6ZnCAsxX668fGGgG5"
     }
   },
   "OtherIndex": {
     "description": "An index created by a market participant which doesn't align with the other index types.",
     "type": {
-      "blueId": "CwbzdnBHoe68ZdctDPVq6xDd6vupPAHwhD6TxTvb2Rt2"
+      "blueId": "GXtabg3erarMspr34yVya2Ybpw1LUGLXNHdWCkovVNAA"
     }
   }
 }

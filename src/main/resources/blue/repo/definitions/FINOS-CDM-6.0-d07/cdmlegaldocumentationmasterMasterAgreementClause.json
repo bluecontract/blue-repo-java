@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "ANd6oSrWArfUtpgKvesbXu9YiaQ3XLSYDxhgbBotJcUy"
+      "blueId": "6RRexSdxduLUUJjoAGhNuhXszw24mwyTFrHtwAqU2SDG"
     },
     "schema": {
       "minItems": 0,
@@ -17,7 +17,7 @@
   "identifer": {
     "description": "Unique identifier for the clause",
     "type": {
-      "blueId": "GCcaELKeCRU9fyz43TXFQgfw8JUz5axfcbVGwpkUg3y1"
+      "blueId": "8PqFpFTcFhXD8jv7MGaW7zx9isCBxvU2dYAKLW7yU6tM"
     },
     "schema": {
       "required": true
@@ -29,7 +29,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "6UMNEgMf7MoM2raYDinEQ6ARUqrkL4BfKePrPf4YZPTq"
+      "blueId": "H6gWEiw9pVTmNQVvvZzt7KcBJ1Ub6wMyaVh3zbM7qCkM"
     },
     "schema": {
       "minItems": 0
@@ -41,7 +41,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "AAh5HuGfGwdE4XgPS2zLDA3ZLqDzvcnBAkKRdwUWP5Gr"
+      "blueId": "7wLk2adpUVoD6AqqF85TpGzcSum1hoSQ8TeAhfcmdpmH"
     },
     "schema": {
       "minItems": 1

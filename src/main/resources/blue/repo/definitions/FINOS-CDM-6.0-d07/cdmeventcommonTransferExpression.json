@@ -4,13 +4,13 @@
   "priceTransfer": {
     "description": "Specifies a transfer amount exchanged as a price or fee for entering into a Business Event, e.g. Premium, Termination fee, Novation fee.\n",
     "type": {
-      "blueId": "4GqDqHjWQFyqR2KmPsKUPRiPtFGkKgdCjAUHQCgAVHzW"
+      "blueId": "2GtrN4UDxwH4P5TqQ8bNcVwjwcdDhjkNovEAYuhpAhJQ"
     }
   },
   "scheduledTransfer": {
     "description": "Specifies a transfer created from a scheduled or contingent event on a contract, e.g. Exercise, Performance, Credit Event\n",
     "type": {
-      "blueId": "CzRCDzyp6ApUXeaLuu4BLyTRWrUKFUXzTn9mgpeDpbuL"
+      "blueId": "4L9Uam1XY7h4ygfK9tdFjDPMNsNEn9NAVvoGNsHvGfWD"
     }
   }
 }

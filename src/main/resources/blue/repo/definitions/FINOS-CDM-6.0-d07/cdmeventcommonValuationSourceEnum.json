@@ -6,7 +6,12 @@
   },
   "schema": {
     "enum": [
-      "CentralCounterparty"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CentralCounterparty"
+      }
     ]
   }
 }

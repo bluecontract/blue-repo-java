@@ -140,9 +140,12 @@ def nodeExecutable = {
 
 def repositoryGeneratorArgs = {
     def args = ['tools/generate-repository-sources.js']
-    def explicitSource = project.findProperty('blueRepositorySource') ?: System.getenv('BLUE_REPOSITORY_SOURCE')
+    def explicitSource = project.findProperty('blueRepositoryBlue') ?:
+            project.findProperty('blueRepositorySource') ?:
+            System.getenv('BLUE_REPOSITORY_BLUE') ?:
+            System.getenv('BLUE_REPOSITORY_SOURCE')
     if (explicitSource) {
-        args.add('--source')
+        args.add('--repository')
         args.add(explicitSource.toString())
     }
     return args

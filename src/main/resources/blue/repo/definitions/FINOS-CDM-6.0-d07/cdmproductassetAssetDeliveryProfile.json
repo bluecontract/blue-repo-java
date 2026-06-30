@@ -4,7 +4,7 @@
   "bankHolidaysTreatment": {
     "description": "Specifies whether the dates defined include holidays or not.",
     "type": {
-      "blueId": "5bUgMorBVJFwsF3QxYZBayKkdMJSobgTERsX9hs1TeY"
+      "blueId": "833fsMUyREDfoeWcVvcxsNdLqF3mjxj8sUSJtn7h5aDG"
     }
   },
   "block": {
@@ -13,7 +13,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "4vuqTuDoEHVYBX71EjmtMarGehySDoBUfYv4DFZxy6cD"
+      "blueId": "BE8tk1V1aM9RX2EaQdADCudboiUVLdjeqNbgPXMoWXXt"
     },
     "schema": {
       "minItems": 0
@@ -22,7 +22,7 @@
   "loadType": {
     "description": "Identification of the delivery profile.",
     "type": {
-      "blueId": "3iWfWEciUkaMhte4q42oyM9QLM6DA8jZCxcJBvkAdF8d"
+      "blueId": "3Cw8RykF4cE5soC5fNPE2vRpWQcT4cwXUTQED5ux8xZ6"
     }
   }
 }

@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "6vYEknGbjoCarWNmjmqcTdYJ81Z265Kigep3twUZrjnt"
+      "blueId": "HUSEHXgSpK91Brg3mku9fHTV4D8bnuM9D7uwKV2HynTU"
     },
     "schema": {
       "minItems": 1
@@ -16,13 +16,13 @@
   "identifierType": {
     "description": "The enumerated classification of the identifier. Optional as a position identifier may be party-specific, in which case it may not correspond to any established classification.\n",
     "type": {
-      "blueId": "8wnT4PqCH49orA85hg33BZSMmyjXigK5cvj96vtPb3vt"
+      "blueId": "9YDcX7WZdjBgo7K9Kss1FBKB5BJLedbkwzY5f4DdFZ48"
     }
   },
   "issuer": {
     "description": "The identifier issuer, when specified explicitly alongside the identifier value (instead of being specified by reference to a party).\n",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     }
   },
   "issuerReference": {

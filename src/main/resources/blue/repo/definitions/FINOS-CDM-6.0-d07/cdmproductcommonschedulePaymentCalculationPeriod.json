@@ -13,7 +13,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "EjMum5Kfd32UwoWtiuMpECyLSV32PdKgEuTWZL1bGEzQ"
+      "blueId": "BXpC64gmuFbvh5L5cvC2KjCgBSBYvePrnA5wcL1K4rFT"
     },
     "schema": {
       "minItems": 1
@@ -28,19 +28,19 @@
   "fixedPaymentAmount": {
     "description": "A known fixed payment amount.",
     "type": {
-      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+      "blueId": "7eyr2kXubNSHtLXpHJ9G8NqtmDXLfmDmHQZSkLa9qkyy"
     }
   },
   "forecastPaymentAmount": {
     "description": "A monetary amount representing the forecast of the future value of the payment.",
     "type": {
-      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+      "blueId": "7eyr2kXubNSHtLXpHJ9G8NqtmDXLfmDmHQZSkLa9qkyy"
     }
   },
   "presentValueAmount": {
     "description": "A monetary amount representing the present value of the forecast payment.",
     "type": {
-      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+      "blueId": "7eyr2kXubNSHtLXpHJ9G8NqtmDXLfmDmHQZSkLa9qkyy"
     }
   },
   "unadjustedPaymentDate": {

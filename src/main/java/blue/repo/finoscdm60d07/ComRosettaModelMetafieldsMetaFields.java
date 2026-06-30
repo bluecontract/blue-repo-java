@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("Fsr3CBPzzThx6Pern5QLDS8TKFXzv6W3TzjS6BYSmqCc")
+@TypeBlueId("7r4cq2XeiqEimWoNu6KjYkx2StpkARD8adiXz8dSETZj")
 public class ComRosettaModelMetafieldsMetaFields {
     public static String blueId() {
-        return "Fsr3CBPzzThx6Pern5QLDS8TKFXzv6W3TzjS6BYSmqCc";
+        return "7r4cq2XeiqEimWoNu6KjYkx2StpkARD8adiXz8dSETZj";
     }
 
     public static String packageName() {

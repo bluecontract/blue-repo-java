@@ -4,7 +4,7 @@
   "collateralType": {
     "description": "Enumerates the collateral types which are accepted by the Seller.",
     "type": {
-      "blueId": "DJD5wdiZFqDUJnAwMECUaZ9QWpwJHCiHoyrC5rbESpZu"
+      "blueId": "HNcaEBRQkyoWFVGH1rA32NFXn4vu5wVaftRYmaKr4FMa"
     },
     "schema": {
       "required": true
@@ -16,7 +16,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "JBhQJD9vEAMUPeT6WopuEMTpVwyxLPZwxZa4Djj9Uh4L"
+      "blueId": "3GcdhwSwCmcXjxmxraErSqcv6hktXM5krtm5PeusABq6"
     },
     "schema": {
       "minItems": 0
@@ -25,7 +25,7 @@
   "substitutionProvisions": {
     "description": "The provisions for collateral substitutions such as how many and when they are allowed.",
     "type": {
-      "blueId": "GrbWppFHwEwmWgiadpmBxAWnazXreCZYgh5L7DcyYNp6"
+      "blueId": "G6wTgdqazh3P4ppaphmfLKqmekudYnsS5TDSKnzhiCYi"
     }
   }
 }

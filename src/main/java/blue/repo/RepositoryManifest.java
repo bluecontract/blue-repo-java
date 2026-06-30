@@ -149,16 +149,6 @@ public final class RepositoryManifest {
         if (current.isPresent()) {
             return Optional.of(current.get().blueId());
         }
-
-        Optional<RepositoryDefinition> definition = definitionByAnyBlueId(historicalBlueId);
-        if (!definition.isPresent()) {
-            return Optional.empty();
-        }
-        for (RepositoryTypeVersion version : definition.get().versions()) {
-            if (historicalBlueId.equals(version.typeBlueId()) && version.compatibleWithCurrent()) {
-                return Optional.of(definition.get().blueId());
-            }
-        }
         return Optional.empty();
     }
 
@@ -177,7 +167,7 @@ public final class RepositoryManifest {
             return Optional.empty();
         }
         RepositoryTypeVersion version = targetVersion.get();
-        if (currentBlueId.equals(version.typeBlueId()) || version.compatibleWithCurrent()) {
+        if (currentBlueId.equals(version.typeBlueId())) {
             return Optional.of(version.typeBlueId());
         }
         return Optional.empty();
@@ -251,7 +241,7 @@ public final class RepositoryManifest {
         Object rawVersions = definition.get("versions");
         if (!(rawVersions instanceof List)) {
             return Collections.singletonList(new RepositoryTypeVersion(
-                    currentRepositoryVersionIndex, currentBlueId, Collections.<String>emptyList(), true));
+                    currentRepositoryVersionIndex, currentBlueId, Collections.<String>emptyList()));
         }
         List<RepositoryTypeVersion> versions = new ArrayList<>();
         for (Object item : (List<?>) rawVersions) {
@@ -264,8 +254,7 @@ public final class RepositoryManifest {
             versions.add(new RepositoryTypeVersion(
                     repositoryVersionIndex,
                     typeBlueId,
-                    stringList(raw.get("attributesAdded"), "attributesAdded"),
-                    booleanValue(raw.get("compatibleWithCurrent"), currentBlueId.equals(typeBlueId))
+                    stringList(raw.get("attributesAdded"), "attributesAdded")
             ));
         }
         return versions;
@@ -322,16 +311,6 @@ public final class RepositoryManifest {
             result.add((String) item);
         }
         return result;
-    }
-
-    private static boolean booleanValue(Object value, boolean defaultValue) {
-        if (value == null) {
-            return defaultValue;
-        }
-        if (value instanceof Boolean) {
-            return (Boolean) value;
-        }
-        throw new IllegalArgumentException("Manifest field must be a boolean");
     }
 
     private static ClassLoader classLoader() {

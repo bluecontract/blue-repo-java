@@ -4,7 +4,7 @@
   "corporateActionType": {
     "description": "The type of corporate action taking place.",
     "type": {
-      "blueId": "4UEoeZWF5eyedQHWfs5Bckogecv82AECMRXiRHuB7sVp"
+      "blueId": "GFvEqH3FNnzTFFJAqMgygUiVX9vA45GDjiV95ZqP4qAR"
     },
     "schema": {
       "required": true
@@ -31,7 +31,7 @@
   "underlier": {
     "description": "The underlier impacted by the corporate action.",
     "type": {
-      "blueId": "9qWGsXauVnxS5oNKRAwfaMctCyeviwAypHKtHdS4HXZd#3"
+      "blueId": "8uQuzNQKBLC5kpFy4UH3BU7PPtpbRZEfLQ2ftrsgLHbm#3"
     },
     "schema": {
       "required": true

@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("2wxJKuhkbHJhLkG8QWx1aoGSMb25PwNZXoLdahTJdMAs")
+@TypeBlueId("HN2xCyqgWdVYt6ta4R5o6we7NmT9i49Jn2V5R4V9BoCD")
 public class CdmProductCollateralRatingPriorityResolutionEnum {
     public static String blueId() {
-        return "2wxJKuhkbHJhLkG8QWx1aoGSMb25PwNZXoLdahTJdMAs";
+        return "HN2xCyqgWdVYt6ta4R5o6we7NmT9i49Jn2V5R4V9BoCD";
     }
 
     public static String packageName() {

@@ -4,25 +4,25 @@
   "debtType": {
     "description": "Identifies the type of debt and selected debt economics.",
     "type": {
-      "blueId": "41YkLGeAdcnrX3prFsD6hdXWfWcGNd9TySSQXTS5ggQq"
+      "blueId": "9vqkkCNnmKd3FB5tMAKKYenwq2i3mYyHmgYdPKKqkZ8U"
     }
   },
   "equityType": {
     "description": "Identifies the type of equity.",
     "type": {
-      "blueId": "Fzf8rSmfe6gydaE8hkBTonY1PoFNkbGYk6XimUXhKPE2"
+      "blueId": "DZstXEXxF1iHJunLqdgbypWWK6H28QwVCtxJRbMUDpza"
     }
   },
   "exchange": {
     "description": "If the Asset is listed, defines the public exchange of the listing.",
     "type": {
-      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
     }
   },
   "fundType": {
     "description": "Identifies the type of fund.",
     "type": {
-      "blueId": "6pAyJZMHbcA7TKD7yDZc1RKPdB4GbJYcFQaKXxaN3q5E"
+      "blueId": "As4LSyzdsEDrcBhhNCQ78eXDcY41rjgBoZJZenTJ2J7F"
     }
   },
   "identifier": {
@@ -31,7 +31,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "GUT2oVFRefXcoq5yqjB5Pm8exmKiYH7iksr34CNZ7yjH"
+      "blueId": "B4oXDUH9jELDatvZSw3oWXtJefJ4ixYawEjxBMqSerth"
     },
     "schema": {
       "minItems": 1
@@ -40,7 +40,7 @@
   "instrumentType": {
     "description": "Identifies the type of an instrument using an enumerated list.",
     "type": {
-      "blueId": "7MyPeAN5AJqMsYSWRXLnGyNnf2mXzbAA9n2ub5S3yC5U"
+      "blueId": "EmkPx4XLJeffJqq9EbwZicZCxqAhVBpDz1vu6eP1oTYj"
     }
   },
   "isExchangeListed": {
@@ -55,7 +55,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
     },
     "schema": {
       "minItems": 0
@@ -67,7 +67,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "8EKfmgSdnP6EYVXZagpfvygY1BhsDy43CQgKoKPw4Fio"
+      "blueId": "9MYk7MRYjbMWPHe7v3WexZqePowTL8eRrW8TmNNEtzQJ"
     },
     "schema": {
       "minItems": 0

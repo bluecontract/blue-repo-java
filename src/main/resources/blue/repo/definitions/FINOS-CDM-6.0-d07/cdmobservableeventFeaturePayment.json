@@ -10,7 +10,7 @@
   "currency": {
     "description": "The currency in which an amount is denominated.",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     }
   },
   "levelPercentage": {
@@ -22,7 +22,7 @@
   "payerReceiver": {
     "description": "This attribute doesn't exist as part of the FpML construct, which makes use of the PayerReceiver.model group.",
     "type": {
-      "blueId": "7eRUbcyv8yFT4EXTPWSQnHYKdrgzkQVJ2K2p7R9xF7BJ"
+      "blueId": "2LmejohDGLXaXF2jDmkccaa7GSQbnbp8iBMKmrxifhWs"
     },
     "schema": {
       "required": true
@@ -31,13 +31,13 @@
   "paymentDate": {
     "description": "The feature payment date.",
     "type": {
-      "blueId": "2gu7bBDYJXEVsffNg2iAYXou31qtdeR4oiwZHL2kaEgQ"
+      "blueId": "2Dr79mc7tDo84pCgLDhmSAuay1naC42UUovCTcaMjY5R"
     }
   },
   "time": {
     "description": "The feature payment time.",
     "type": {
-      "blueId": "2xhGBDM2Kt4jeHX2wMnpZymz3UupNVcvkkwM9R3kh5dT"
+      "blueId": "4h5N1XJhikomVgESoUQkDUs2Qfx1RK39JWGgd8HQXgEv"
     }
   }
 }

@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("74k6s48z9t7RguYoPUYhSB5pC7v3N78pRNnLJfHXHkmy")
+@TypeBlueId("EqeLySr1GukguPVVt5XqDUVQFVenWZYySiuo6qQbQ3pT")
 public class CdmProductCollateralEligibilityQuery {
     public static String blueId() {
-        return "74k6s48z9t7RguYoPUYhSB5pC7v3N78pRNnLJfHXHkmy";
+        return "EqeLySr1GukguPVVt5XqDUVQFVenWZYySiuo6qQbQ3pT";
     }
 
     public static String packageName() {

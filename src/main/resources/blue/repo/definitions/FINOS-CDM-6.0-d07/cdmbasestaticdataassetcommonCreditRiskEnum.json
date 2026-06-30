@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "TranchedCreditRisk",
-      "UntranchedCreditRisk"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "TranchedCreditRisk"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "UntranchedCreditRisk"
+      }
     ]
   }
 }

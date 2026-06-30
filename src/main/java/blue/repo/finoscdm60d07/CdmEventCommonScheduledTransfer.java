@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("CzRCDzyp6ApUXeaLuu4BLyTRWrUKFUXzTn9mgpeDpbuL")
+@TypeBlueId("4L9Uam1XY7h4ygfK9tdFjDPMNsNEn9NAVvoGNsHvGfWD")
 public class CdmEventCommonScheduledTransfer {
     public static String blueId() {
-        return "CzRCDzyp6ApUXeaLuu4BLyTRWrUKFUXzTn9mgpeDpbuL";
+        return "4L9Uam1XY7h4ygfK9tdFjDPMNsNEn9NAVvoGNsHvGfWD";
     }
 
     public static String packageName() {

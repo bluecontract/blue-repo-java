@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("Fxnn5aWqQGPjDKxXxgjy5cDtNto3oNx5kS5q2tS6Vx7F")
+@TypeBlueId("9zYcb3FcpfuBbxSMqUwSRoYJ3gPs7Nv1qeZUmFvVniPL")
 public class CdmBaseMathDatedValue {
     public static String blueId() {
-        return "Fxnn5aWqQGPjDKxXxgjy5cDtNto3oNx5kS5q2tS6Vx7F";
+        return "9zYcb3FcpfuBbxSMqUwSRoYJ3gPs7Nv1qeZUmFvVniPL";
     }
 
     public static String packageName() {

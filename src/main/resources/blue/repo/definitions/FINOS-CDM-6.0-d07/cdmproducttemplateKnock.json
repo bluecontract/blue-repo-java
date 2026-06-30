@@ -4,13 +4,13 @@
   "knockIn": {
     "description": "The knock in.",
     "type": {
-      "blueId": "HSFnno4QCgcDGFzXcYnBvMna1XoxVrgArUUwNLATG1Xe"
+      "blueId": "GT5JdpPhpfWRiqpWewnjoM2tbwvGnNZDGUV3MrHoQ3pC"
     }
   },
   "knockOut": {
     "description": "The knock out.",
     "type": {
-      "blueId": "HSFnno4QCgcDGFzXcYnBvMna1XoxVrgArUUwNLATG1Xe"
+      "blueId": "GT5JdpPhpfWRiqpWewnjoM2tbwvGnNZDGUV3MrHoQ3pC"
     }
   }
 }

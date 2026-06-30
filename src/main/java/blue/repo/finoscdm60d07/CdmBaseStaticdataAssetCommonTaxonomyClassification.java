@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.math.BigInteger;
 
-@TypeBlueId("J5ZozieKvZ9oXTCpyUJoDGVueVgaUtswRQ1tmUPxpKSi")
+@TypeBlueId("4yg3H6YAUTCit6hxRnAEyVQGYTMFm4nGL1gMyQpvzmZ5")
 public class CdmBaseStaticdataAssetCommonTaxonomyClassification {
     public static String blueId() {
-        return "J5ZozieKvZ9oXTCpyUJoDGVueVgaUtswRQ1tmUPxpKSi";
+        return "4yg3H6YAUTCit6hxRnAEyVQGYTMFm4nGL1gMyQpvzmZ5";
     }
 
     public static String packageName() {

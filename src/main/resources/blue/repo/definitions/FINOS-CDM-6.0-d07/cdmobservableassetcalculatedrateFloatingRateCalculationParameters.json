@@ -4,13 +4,13 @@
   "applicableBusinessDays": {
     "description": "the business days that are applicable for the calculation.",
     "type": {
-      "blueId": "6H6qhfVQ1CTnjae8L3PvEdBtC4NMwMiaSJWK6kr5tEXf"
+      "blueId": "H53mV1d8rMzhefLZH8WzGchozyQA28cbwNpBHGmVA9ti"
     }
   },
   "calculationMethod": {
     "description": "calculation type (averaging or compounding).",
     "type": {
-      "blueId": "FKWAgioXHQQe5q5qqHq28ZZh5DjpyX34cQhG3Hkv18vS"
+      "blueId": "5noQvmG1G1xXrG8SxnbN37mhXkXDttDg7VNkk4vHoTMt"
     },
     "schema": {
       "required": true
@@ -37,7 +37,7 @@
   "observationShiftCalculation": {
     "description": "any obervation shift parameters if applicable.",
     "type": {
-      "blueId": "HEc8z3edG3DSLZQTC6FRhMSLXYAKX9B1JRJsZvsdAFKh"
+      "blueId": "5qPopZ2RMbhbDtd5XmtdT1QCkFussYRLiFeUPqAWCd9a"
     }
   }
 }

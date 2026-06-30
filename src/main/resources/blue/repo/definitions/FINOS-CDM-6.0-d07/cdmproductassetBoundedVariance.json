@@ -18,7 +18,7 @@
   "realisedVarianceMethod": {
     "description": "The contract specifies which price must satisfy the boundary condition.",
     "type": {
-      "blueId": "ELCSeCxuiquYCUNpHapbt8G7hooxLa3tdJpWwrycHS8N"
+      "blueId": "6bttAkwgoE4wCcbzrxpxn9QC6RyNAX7D58kev7GDsGiS"
     },
     "schema": {
       "required": true

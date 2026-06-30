@@ -6,9 +6,24 @@
   },
   "schema": {
     "enum": [
-      "CreditDerivativesPhysicalSettlementMatrix",
-      "EquityDerivativesMatrix",
-      "SettlementMatrix"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CreditDerivativesPhysicalSettlementMatrix"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "EquityDerivativesMatrix"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "SettlementMatrix"
+      }
     ]
   }
 }

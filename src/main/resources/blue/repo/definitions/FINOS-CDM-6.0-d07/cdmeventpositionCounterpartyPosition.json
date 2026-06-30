@@ -31,7 +31,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "AhMzsyCZTs6HTjAUKURsN7RTVyw8rXkq1JPPNPUdYnBq"
+      "blueId": "3skPfLDtYJ59SZAAdcu2JDHySdtCEVu8FzTnUX8D5mfy"
     },
     "schema": {
       "minItems": 0
@@ -43,7 +43,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "7N6isgUMMMsMJoxpjNRRfdVHiWizDFmyABkC7s3LeRZ6"
+      "blueId": "Hrt2EoYJokASG9J62NMKWt8UZbQN6BwtESp7hVDVQYvm"
     },
     "schema": {
       "minItems": 0
@@ -52,7 +52,7 @@
   "positionBase": {
     "description": "Encapsulates the core constituents that characterize a position.",
     "type": {
-      "blueId": "EkSENpAwscSiBYK9XZGkE1KyRfSRT6ZSxwF7X7PNxcvA"
+      "blueId": "5L5ELtTjqEroydK4qXv9bitzL5wJ8yY6yjAhFum13A7U"
     },
     "schema": {
       "required": true
@@ -64,7 +64,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "ycMy3qXJMa1XB7Pdp2kuzG1VD86CqRNtzoM93v1Ca6W"
+      "blueId": "69nLFfiGcCWNuTn9H9eiEcBwsXuqgNxxqgB7X8X9XaSz"
     },
     "schema": {
       "minItems": 0

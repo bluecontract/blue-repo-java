@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "LastAndAnyLocalBusinessDay",
-      "LastLocalBusinessDay"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "LastAndAnyLocalBusinessDay"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "LastLocalBusinessDay"
+      }
     ]
   }
 }

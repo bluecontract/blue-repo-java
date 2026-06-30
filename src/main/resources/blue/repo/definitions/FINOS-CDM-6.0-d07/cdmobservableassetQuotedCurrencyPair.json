@@ -4,7 +4,7 @@
   "currency1": {
     "description": "The first currency specified when a pair of currencies is to be evaluated.",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "currency2": {
     "description": "The second currency specified when a pair of currencies is to be evaluated.",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     },
     "schema": {
       "required": true
@@ -22,7 +22,7 @@
   "quoteBasis": {
     "description": "The method by which the exchange rate is quoted.",
     "type": {
-      "blueId": "CSwGsKw2Hvna6MQX4BMhjo2Jtc6PPHkZfpZxFqWzjCnU"
+      "blueId": "38MJMyCWnyrfancwTmzba2YAVR4YfwGbKcnfueN32RCR"
     },
     "schema": {
       "required": true

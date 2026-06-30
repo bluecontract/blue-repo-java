@@ -7,10 +7,10 @@ import blue.repo.common.Timestamp;
 import blue.repo.coordination.DocumentBootstrapRequested;
 import blue.repo.coordination.DocumentStatus;
 
-@TypeBlueId("3sL5BXFtsPGc1UGi2SK9DskQnEhTBxihDHcHzAaz8Y3X")
+@TypeBlueId("EBVUtjFi2vMrdLXL3bKET1daRicUEgRXcYRDr8U1mX7T")
 public class PayNoteDelivery {
     public static String blueId() {
-        return "3sL5BXFtsPGc1UGi2SK9DskQnEhTBxihDHcHzAaz8Y3X";
+        return "EBVUtjFi2vMrdLXL3bKET1daRicUEgRXcYRDr8U1mX7T";
     }
 
     public static String packageName() {

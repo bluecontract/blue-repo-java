@@ -4,25 +4,25 @@
   "capacityUnit": {
     "description": "Provides an enumerated value for a capacity unit, generally used in the context of defining quantities for commodities.\n",
     "type": {
-      "blueId": "48GfdtyLdkPg6NeqJWhK1wJWZShT1gyxMLnbGNBHEpBG"
+      "blueId": "g4vkocaqQK6FYK1ys61BBsp11Y2Daj3aPCffWwm5Egq"
     }
   },
   "currency": {
     "description": "Defines the currency to be used as a unit for a price, quantity, or other purpose.",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     }
   },
   "financialUnit": {
     "description": "Provides an enumerated value for financial units, generally used in the context of defining quantities for securities.\n",
     "type": {
-      "blueId": "9WZ98d8ou6kcEKR3m6kC1QVEDKhvDcusTiqz1Qy1LafT"
+      "blueId": "G6nxZBJqZZ3cY44FGfFfpKCDEC1JqqauJ8rcR7H1niTr"
     }
   },
   "weatherUnit": {
     "description": "Provides an enumerated values for a weather unit, generally used in the context of defining quantities for commodities.\n",
     "type": {
-      "blueId": "9fqWoh2dqVPSGfjicGpGg5JQoJ1aN9iwy8pcEf5dKwt2"
+      "blueId": "DePEyNHqpBtxPVrPYXSKuWt1ugb339xn92ZXP2uKKUgY"
     }
   }
 }

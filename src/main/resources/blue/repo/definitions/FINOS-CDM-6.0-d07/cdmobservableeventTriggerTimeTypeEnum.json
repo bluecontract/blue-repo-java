@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "Anytime",
-      "Closing"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Anytime"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Closing"
+      }
     ]
   }
 }

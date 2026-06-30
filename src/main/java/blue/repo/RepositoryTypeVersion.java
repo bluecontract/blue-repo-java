@@ -9,12 +9,10 @@ public final class RepositoryTypeVersion {
     private final int repositoryVersionIndex;
     private final String typeBlueId;
     private final List<String> attributesAdded;
-    private final boolean compatibleWithCurrent;
 
     public RepositoryTypeVersion(int repositoryVersionIndex,
                                  String typeBlueId,
-                                 List<String> attributesAdded,
-                                 boolean compatibleWithCurrent) {
+                                 List<String> attributesAdded) {
         if (repositoryVersionIndex < 0) {
             throw new IllegalArgumentException("repositoryVersionIndex must not be negative");
         }
@@ -23,7 +21,6 @@ public final class RepositoryTypeVersion {
         this.attributesAdded = attributesAdded == null
                 ? Collections.<String>emptyList()
                 : Collections.unmodifiableList(new ArrayList<>(attributesAdded));
-        this.compatibleWithCurrent = compatibleWithCurrent;
     }
 
     public int repositoryVersionIndex() {
@@ -38,10 +35,6 @@ public final class RepositoryTypeVersion {
         return attributesAdded;
     }
 
-    public boolean compatibleWithCurrent() {
-        return compatibleWithCurrent;
-    }
-
     @Override
     public boolean equals(Object other) {
         if (this == other) {
@@ -52,14 +45,13 @@ public final class RepositoryTypeVersion {
         }
         RepositoryTypeVersion that = (RepositoryTypeVersion) other;
         return repositoryVersionIndex == that.repositoryVersionIndex
-                && compatibleWithCurrent == that.compatibleWithCurrent
                 && Objects.equals(typeBlueId, that.typeBlueId)
                 && Objects.equals(attributesAdded, that.attributesAdded);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(repositoryVersionIndex, typeBlueId, attributesAdded, compatibleWithCurrent);
+        return Objects.hash(repositoryVersionIndex, typeBlueId, attributesAdded);
     }
 
     @Override

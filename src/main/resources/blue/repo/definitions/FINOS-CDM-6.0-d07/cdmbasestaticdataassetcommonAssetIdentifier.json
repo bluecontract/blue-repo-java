@@ -4,7 +4,7 @@
   "identifier": {
     "description": "The identifier value.",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "identifierType": {
     "description": "Defines the symbology source of the Asset Identifier, eg CUSIP, ISIN, etc.",
     "type": {
-      "blueId": "7MvZoPQy6WE1716DnEsD2wftRhX2z6osUQYhdPkKSvRN"
+      "blueId": "5mbfUkBFTEYhKyTf1DNksGFTiyJzZooRyUog7hBoYzHC"
     },
     "schema": {
       "required": true

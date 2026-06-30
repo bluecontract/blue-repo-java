@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("62q2jf1UThTg4Tiiha4dGaAXRwgtPtXZVjTKWNYyATKi")
+@TypeBlueId("ADNePctyfUS9D2wfp8ho1wmncZkAMrobNLpZ1gcNK8Wt")
 public class CdmProductCollateralConcentrationLimit {
     public static String blueId() {
-        return "62q2jf1UThTg4Tiiha4dGaAXRwgtPtXZVjTKWNYyATKi";
+        return "ADNePctyfUS9D2wfp8ho1wmncZkAMrobNLpZ1gcNK8Wt";
     }
 
     public static String packageName() {

@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "ERwzfUVyHoEXVE9rhTfvQ3nRPiD7c1SgCt8LS9VJZp6E"
+      "blueId": "EE9ddWepUCVpA88PcNq8buPwyuFbJawoqrJwAAwpCjcx"
     },
     "schema": {
       "minItems": 0
@@ -22,13 +22,13 @@
   "identifer": {
     "description": "Unique identifier for this record. This can be used to uniquely identify a specific piece of inventory.",
     "type": {
-      "blueId": "6vYEknGbjoCarWNmjmqcTdYJ81Z265Kigep3twUZrjnt"
+      "blueId": "HUSEHXgSpK91Brg3mku9fHTV4D8bnuM9D7uwKV2HynTU"
     }
   },
   "interestRate": {
     "description": "An optional element which can be used to hold a rate associated to this piece of availability.",
     "type": {
-      "blueId": "BD3VPcMR7j62CWudW3xXH1Aropvfs515RCLZFP4cZY4P"
+      "blueId": "GLmQaa2vVZKjaht1sNMcUL55xfAgWQxpj5ENxwvVRvsm"
     }
   },
   "partyRole": {
@@ -37,7 +37,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "7N6isgUMMMsMJoxpjNRRfdVHiWizDFmyABkC7s3LeRZ6"
+      "blueId": "Hrt2EoYJokASG9J62NMKWt8UZbQN6BwtESp7hVDVQYvm"
     },
     "schema": {
       "minItems": 0
@@ -46,13 +46,13 @@
   "quantity": {
     "description": "The quantity of the security",
     "type": {
-      "blueId": "BADvBimj9VPGxtVkguZSpocTXA84MV8LnKjm4ocmButh"
+      "blueId": "DGJZYRtm8AD2nG2o56eH5EDc8FujZiiXmBsuHgLf3UCR"
     }
   },
   "security": {
     "description": "The security details.",
     "type": {
-      "blueId": "EqW2CBgcur4w9MgDu3cEAjCKESsF2Jhsjs2gHobFQZBA"
+      "blueId": "5R9o4hMGFG6JsprSkPFoQuMmr2FvfKQchfGbxtSgy2JY"
     }
   }
 }

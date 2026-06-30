@@ -4,13 +4,13 @@
   "contactInformation": {
     "description": "The contact information for such business unit, when different from the contact information associated with the party.\n",
     "type": {
-      "blueId": "tWjzEXNpctUeMnop8Wj6gnxCUqcE9XJnXn31gdiq2xd"
+      "blueId": "2vquTQrHfbG8GVEjvB7SAZfAmxeyh1hxQeEN1wjro58A"
     }
   },
   "identifier": {
     "description": "An identifier used to uniquely identify the organizational unit",
     "type": {
-      "blueId": "DtCdHJZeccxHZbwaJQZhJKaibyxKYwbj9hKw2ZsK5K4r"
+      "blueId": "9tpFoqFu1yX5LZEATGF8CYsE5VSXhkQua9LMXwLEX2Pv"
     }
   }
 }

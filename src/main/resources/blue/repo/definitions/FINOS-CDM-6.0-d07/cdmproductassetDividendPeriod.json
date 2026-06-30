@@ -10,7 +10,7 @@
   "dateAdjustments": {
     "description": "Date adjustments for all unadjusted dates in this dividend period.",
     "type": {
-      "blueId": "5aQGMvRRbnA89dRVLVFr9uxQHNZp95ceK8mHHwAdWat"
+      "blueId": "8ZhZC2EwhTqHnDvvcr2ZW4iwCBJM57NcLAqPCd8shypq"
     },
     "schema": {
       "required": true
@@ -19,7 +19,7 @@
   "dividendPaymentDate": {
     "description": "Specifies when the dividend will be paid to the receiver of the equity return. Has the meaning as defined in the ISDA 2002 Equity Derivatives Definitions. Is not applicable in the case of a dividend reinvestment election.\n",
     "type": {
-      "blueId": "BPzDkboLdBzoFK2Tdpodd4LwFhMVfn1HLjFGBeq6K5vf"
+      "blueId": "555tJWt9LFti4PXtFTEEG8bsobDUDp2ySsgK7sB5kZZ7"
     },
     "schema": {
       "required": true
@@ -28,19 +28,19 @@
   "dividendValuationDate": {
     "description": "Specifies the dividend valuation dates of the swap.",
     "type": {
-      "blueId": "2gu7bBDYJXEVsffNg2iAYXou31qtdeR4oiwZHL2kaEgQ"
+      "blueId": "2Dr79mc7tDo84pCgLDhmSAuay1naC42UUovCTcaMjY5R"
     }
   },
   "endDate": {
     "description": "Dividend period end date.",
     "type": {
-      "blueId": "BPzDkboLdBzoFK2Tdpodd4LwFhMVfn1HLjFGBeq6K5vf"
+      "blueId": "555tJWt9LFti4PXtFTEEG8bsobDUDp2ySsgK7sB5kZZ7"
     }
   },
   "startDate": {
     "description": "Dividend period start date.",
     "type": {
-      "blueId": "BPzDkboLdBzoFK2Tdpodd4LwFhMVfn1HLjFGBeq6K5vf"
+      "blueId": "555tJWt9LFti4PXtFTEEG8bsobDUDp2ySsgK7sB5kZZ7"
     }
   }
 }

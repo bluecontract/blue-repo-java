@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "BondEquivalentYield",
-      "MoneyMarketYield"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "BondEquivalentYield"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "MoneyMarketYield"
+      }
     ]
   }
 }

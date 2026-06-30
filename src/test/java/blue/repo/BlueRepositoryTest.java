@@ -7,7 +7,6 @@ import blue.language.model.Node;
 import blue.language.processor.model.ChannelContract;
 import blue.language.processor.model.HandlerContract;
 import blue.language.utils.BlueIdResolver;
-import blue.language.utils.BlueIdCalculator;
 import blue.language.utils.TypeClassResolver;
 import blue.language.utils.UncheckedObjectMapper;
 import blue.repo.provider.CompositeNodeProvider;
@@ -95,7 +94,7 @@ class BlueRepositoryTest {
     @Test
     void blueCanResolveRepositoryTypeReferencesWithRepositoryProvider() {
         BlueRepository repo = BlueRepository.v1_3_0();
-        Blue blue = new Blue(repo.nodeProvider());
+        Blue blue = repo.configure(new Blue());
 
         Node document = new Node()
                 .name("message")
@@ -113,7 +112,7 @@ class BlueRepositoryTest {
     @Test
     void generatedModelClassesExposeRepositoryTypesForJavaMapping() {
         BlueRepository repo = BlueRepository.v1_3_0();
-        Blue blue = new Blue(repo.nodeProvider()).typeClassResolver(repo.typeClassResolver());
+        Blue blue = repo.configure(new Blue());
 
         ChatMessage message = new ChatMessage().message("hello");
         Node messageNode = blue.objectToNode(message);
@@ -184,42 +183,17 @@ class BlueRepositoryTest {
     }
 
     @Test
-    void everyManifestBlueIdMatchesCalculatedResourceContent() throws Exception {
+    void everyManifestBlueIdComesFromCanonicalRepositoryBundle() throws Exception {
         BlueRepository repo = BlueRepository.v1_3_0();
-        Map<String, List<RepositoryDefinition>> fragmentsByBaseBlueId = new LinkedHashMap<>();
+        Map<String, String> canonicalBlueIds = canonicalCurrentBlueIdsByQualifiedName(repo.sourceResource());
 
         for (RepositoryDefinition definition : repo.manifest().definitions()) {
-            if (definition.blueId().contains("#")) {
-                String baseBlueId = baseBlueId(definition.blueId());
-                List<RepositoryDefinition> fragments = fragmentsByBaseBlueId.get(baseBlueId);
-                if (fragments == null) {
-                    fragments = new ArrayList<>();
-                    fragmentsByBaseBlueId.put(baseBlueId, fragments);
-                }
-                fragments.add(definition);
-                continue;
-            }
-
-            Node resource = readNodeResource(definition.resourcePath());
-            assertEquals(definition.blueId(), BlueIdCalculator.calculateBlueId(resource),
+            assertEquals(canonicalBlueIds.get(definition.qualifiedName()), definition.blueId(),
                     definition.qualifiedName());
         }
-
-        for (Map.Entry<String, List<RepositoryDefinition>> entry : fragmentsByBaseBlueId.entrySet()) {
-            List<RepositoryDefinition> fragments = entry.getValue();
-            fragments.sort((left, right) -> Integer.compare(
-                    fragmentIndex(left.blueId()),
-                    fragmentIndex(right.blueId())));
-            List<Node> resources = new ArrayList<>();
-            for (int index = 0; index < fragments.size(); index++) {
-                RepositoryDefinition fragment = fragments.get(index);
-                assertEquals(index, fragmentIndex(fragment.blueId()), fragment.qualifiedName());
-                resources.add(readNodeResource(fragment.resourcePath()));
-            }
-
-            String calculatedBaseBlueId = BlueIdCalculator.calculateBlueIdAllowingCyclicPlaceholders(resources);
-            assertEquals(entry.getKey(), calculatedBaseBlueId, fragments.get(0).qualifiedName());
-        }
+        assertEquals(repo.manifest().definitions().size(), canonicalBlueIds.size());
+        assertFalse(readResourceAsString(repo.sourceResource()).contains("compatible" + "WithCurrent"));
+        assertFalse(readResourceAsString(BlueRepository.MANIFEST).contains("compatible" + "WithCurrent"));
     }
 
     @Test
@@ -287,7 +261,7 @@ class BlueRepositoryTest {
     @Test
     void generatedIntegerFieldsRoundTripAsBigInteger() throws Exception {
         BlueRepository repo = BlueRepository.v1_3_0();
-        Blue blue = new Blue(repo.nodeProvider()).typeClassResolver(repo.typeClassResolver());
+        Blue blue = repo.configure(new Blue());
         BigInteger largeAmount = new BigInteger("9223372036854775808123456789");
 
         Field amount = CaptureFundsRequested.class.getDeclaredField("amount");
@@ -319,7 +293,7 @@ class BlueRepositoryTest {
     @Test
     void keywordPropertiesRoundTripWhenBlueLanguageMapperSupportsJsonProperty() {
         BlueRepository repo = BlueRepository.v1_3_0();
-        Blue blue = new Blue(repo.nodeProvider()).typeClassResolver(repo.typeClassResolver());
+        Blue blue = repo.configure(new Blue());
 
         InformUserToInstallMyOSPackage command = new InformUserToInstallMyOSPackage()
                 .packageValue(new MyOSPackage().installerChannel("counter"));
@@ -341,7 +315,7 @@ class BlueRepositoryTest {
 
         Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterDocumentYaml(), Node.class)
                 .blue(repo.typeAliasBlue());
-        Node preprocessed = new Blue(repo.nodeProvider()).preprocess(document);
+        Node preprocessed = repo.configure(new Blue()).preprocess(document);
         Map<String, Node> contracts = preprocessed.getContracts().getProperties();
 
         assertEquals(CoordinationTypes.TIMELINE_CHANNEL.blueId(),
@@ -353,7 +327,7 @@ class BlueRepositoryTest {
     @Test
     void counterDocumentMapsNestedRepositoryContractsToGeneratedTypes() throws Exception {
         BlueRepository repo = BlueRepository.v1_3_0();
-        Blue blue = repo.configure(new Blue(repo.nodeProvider()));
+        Blue blue = repo.configure(new Blue());
 
         Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterDocumentYaml(), Node.class)
                 .blue(repo.typeAliasBlue());
@@ -591,6 +565,66 @@ class BlueRepositoryTest {
             assertNotNull(inputStream, resourcePath);
             return UncheckedObjectMapper.JSON_MAPPER.readValue(inputStream, Node.class);
         }
+    }
+
+    private static String readResourceAsString(String resourcePath) throws Exception {
+        try (InputStream inputStream = BlueRepository.class.getClassLoader().getResourceAsStream(resourcePath)) {
+            assertNotNull(inputStream, resourcePath);
+            byte[] buffer = new byte[8192];
+            java.io.ByteArrayOutputStream output = new java.io.ByteArrayOutputStream();
+            int read;
+            while ((read = inputStream.read(buffer)) >= 0) {
+                output.write(buffer, 0, read);
+            }
+            return new String(output.toByteArray(), java.nio.charset.StandardCharsets.UTF_8);
+        }
+    }
+
+    private static Map<String, String> canonicalCurrentBlueIdsByQualifiedName(String resourcePath) throws Exception {
+        try (InputStream inputStream = BlueRepository.class.getClassLoader().getResourceAsStream(resourcePath)) {
+            assertNotNull(inputStream, resourcePath);
+            Map<?, ?> repository = UncheckedObjectMapper.YAML_MAPPER.readValue(inputStream, Map.class);
+            Map<String, String> result = new LinkedHashMap<>();
+            for (Object packageItem : asList(repository.get("packages"))) {
+                Map<?, ?> packageMap = asMap(packageItem);
+                String packageName = (String) packageMap.get("name");
+                for (Object typeItem : asList(packageMap.get("types"))) {
+                    Map<?, ?> type = asMap(typeItem);
+                    Map<?, ?> content = asMap(type.get("content"));
+                    String name = (String) content.get("name");
+                    result.put(packageName + "/" + name, latestTypeBlueId(type));
+                }
+            }
+            return result;
+        }
+    }
+
+    private static String latestTypeBlueId(Map<?, ?> type) {
+        Map<?, ?> latest = null;
+        for (Object versionItem : asList(type.get("versions"))) {
+            Map<?, ?> version = asMap(versionItem);
+            if (latest == null || asInt(version.get("repositoryVersionIndex"))
+                    > asInt(latest.get("repositoryVersionIndex"))) {
+                latest = version;
+            }
+        }
+        assertNotNull(latest);
+        return (String) latest.get("typeBlueId");
+    }
+
+    private static int asInt(Object value) {
+        assertTrue(value instanceof Number, String.valueOf(value));
+        return ((Number) value).intValue();
+    }
+
+    private static List<?> asList(Object value) {
+        assertTrue(value instanceof List, String.valueOf(value));
+        return (List<?>) value;
+    }
+
+    private static Map<?, ?> asMap(Object value) {
+        assertTrue(value instanceof Map, String.valueOf(value));
+        return (Map<?, ?>) value;
     }
 
     private static boolean containsUnresolvedThisFragmentReference(JsonNode node) {

@@ -4,13 +4,13 @@
   "firstObservationDateOffset": {
     "description": "Defines the offset of the series of pricing dates relative to the calculation period.",
     "type": {
-      "blueId": "HtjNf3aJBBJnxx21C9ZjvmgVj3CJyaSF1wwWaT6fJciq"
+      "blueId": "GcgyRFiq68rKDTw1wtJsfsUpu4hBukUsv29vavmPQmrZ"
     }
   },
   "lagDuration": {
     "description": "Defines the offset of the series of pricing dates relative to the calculation period.",
     "type": {
-      "blueId": "HtjNf3aJBBJnxx21C9ZjvmgVj3CJyaSF1wwWaT6fJciq"
+      "blueId": "GcgyRFiq68rKDTw1wtJsfsUpu4hBukUsv29vavmPQmrZ"
     },
     "schema": {
       "required": true

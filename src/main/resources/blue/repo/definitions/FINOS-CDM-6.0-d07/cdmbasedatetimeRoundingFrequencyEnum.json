@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "Daily",
-      "PeriodEnd"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Daily"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PeriodEnd"
+      }
     ]
   }
 }

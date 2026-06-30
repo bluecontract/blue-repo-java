@@ -2,7 +2,7 @@
   "name": "cdm/regulation/Nm",
   "refRate": {
     "type": {
-      "blueId": "FZ7WxoPfFpozcg79A3iH1T6VcWY77nwvVRrc12XRhoHr"
+      "blueId": "3iGK8rtshZDYPEKjPLJb7aYsVc2cBa7Pnkc4Nr1vLoZt"
     },
     "schema": {
       "required": true
@@ -10,7 +10,7 @@
   },
   "term": {
     "type": {
-      "blueId": "GbULufXmoeMFxoHNGtvmQUqPmwnLY7caxb2TY3sKrRAR"
+      "blueId": "BjVwAr1pYp3ZQh3wtJi2zXxjpqqqyBzNjp9m1ZpZVP15"
     },
     "schema": {
       "required": true

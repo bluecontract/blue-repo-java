@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("8PqHPUoGKs3oJ9YT3Kd94U2F8yAHn5uNr8DoNQg3avbg")
+@TypeBlueId("6fscFVW5aHmtMRKjEQ93zMSWd6uq8CvM8i8Zkvtjbm5d")
 public class CdmProductCollateralAverageTradingVolume {
     public static String blueId() {
-        return "8PqHPUoGKs3oJ9YT3Kd94U2F8yAHn5uNr8DoNQg3avbg";
+        return "6fscFVW5aHmtMRKjEQ93zMSWd6uq8CvM8i8Zkvtjbm5d";
     }
 
     public static String packageName() {

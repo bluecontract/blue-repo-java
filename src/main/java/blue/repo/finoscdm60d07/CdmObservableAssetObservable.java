@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@TypeBlueId("54FLifHpXsPqo7RAqsHZ5C4WxvmU2i8aDbM6EMkx64PM")
+@TypeBlueId("xQiQzMuZW6Q8gjgsvtqDYP1yE3C8KQUXtUp3fFAr7HS")
 public class CdmObservableAssetObservable {
     public static String blueId() {
-        return "54FLifHpXsPqo7RAqsHZ5C4WxvmU2i8aDbM6EMkx64PM";
+        return "xQiQzMuZW6Q8gjgsvtqDYP1yE3C8KQUXtUp3fFAr7HS";
     }
 
     public static String packageName() {

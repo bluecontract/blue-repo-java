@@ -5,9 +5,24 @@
   },
   "schema": {
     "enum": [
-      "CalculationPeriod",
-      "NearbyMonth",
-      "NearbyWeek"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CalculationPeriod"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "NearbyMonth"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "NearbyWeek"
+      }
     ]
   }
 }

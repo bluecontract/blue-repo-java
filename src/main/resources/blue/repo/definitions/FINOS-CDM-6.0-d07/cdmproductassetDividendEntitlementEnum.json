@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "ExDate",
-      "RecordDate"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ExDate"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "RecordDate"
+      }
     ]
   }
 }

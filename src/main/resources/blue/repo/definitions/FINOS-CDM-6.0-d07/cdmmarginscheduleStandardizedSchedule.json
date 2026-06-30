@@ -2,7 +2,7 @@
   "name": "cdm/margin/schedule/StandardizedSchedule",
   "assetClass": {
     "type": {
-      "blueId": "HXVDHCRqbEvzCXv8LwaeEzMy47NG3ogpguy7Gqu2K4Fh"
+      "blueId": "CDbwJvzYyrQ7afEJRFR8x1ii8sk11Es3z1e62dbNj2rU"
     },
     "schema": {
       "required": true
@@ -31,7 +31,7 @@
   },
   "productClass": {
     "type": {
-      "blueId": "HcbAjsykfijmo2YKjhqTPZuhRKVjh1MvNA2ZnQSoAZsG"
+      "blueId": "BwbqfunwwJxSMfQD4CEUJ2Ab4AqzjMTjpeSCF3E1NLYx"
     },
     "schema": {
       "required": true

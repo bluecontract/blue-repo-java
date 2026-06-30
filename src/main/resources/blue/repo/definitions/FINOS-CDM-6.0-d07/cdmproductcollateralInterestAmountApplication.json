@@ -4,7 +4,7 @@
   "deliveryAmount": {
     "description": "The application of Interest Amount with respect the Delivery Amount.",
     "type": {
-      "blueId": "4YTA1E4uwjskCqTfuhW2LSGT6LEXwkh3y2Sps8W8XFWs"
+      "blueId": "HKVLiaT4w9torwoHkj96Mx7aKTg2Hav87Wintsd8TvXU"
     },
     "schema": {
       "required": true

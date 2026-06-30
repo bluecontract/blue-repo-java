@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("CVAnm67rjZncV7DTmvouhqTW9Ap3KLpoTUnkV8TuBL2N")
+@TypeBlueId("HNjhMn7WT4JjM4LH3CAB6FzPpLMvur9mQW6knri1HnTg")
 public class CdmBaseDatetimeBusinessDateRange {
     public static String blueId() {
-        return "CVAnm67rjZncV7DTmvouhqTW9Ap3KLpoTUnkV8TuBL2N";
+        return "HNjhMn7WT4JjM4LH3CAB6FzPpLMvur9mQW6knri1HnTg";
     }
 
     public static String packageName() {

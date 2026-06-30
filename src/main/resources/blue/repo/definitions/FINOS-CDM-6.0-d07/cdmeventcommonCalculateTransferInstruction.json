@@ -8,7 +8,7 @@
   },
   "payerReceiver": {
     "type": {
-      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+      "blueId": "3xPof2WJyFXisFtvaxpSGddTxHyGioazbsMJjuUucbzT"
     }
   },
   "payout": {
@@ -22,7 +22,7 @@
   "quantity": {
     "description": "Specifies quantity amount returned if not the full amount from the TradeState, e.g. partial return",
     "type": {
-      "blueId": "BADvBimj9VPGxtVkguZSpocTXA84MV8LnKjm4ocmButh"
+      "blueId": "DGJZYRtm8AD2nG2o56eH5EDc8FujZiiXmBsuHgLf3UCR"
     }
   },
   "resets": {
@@ -30,7 +30,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "HFVsjPq4dbaRXVa8vrWUTPdSo8R4CoRFz275RuCiohR7"
+      "blueId": "C2cq6aR7yoFg7jn9vV3wrTukUrevaRzkBo4PeSWP5die"
     },
     "schema": {
       "minItems": 0
@@ -38,7 +38,7 @@
   },
   "tradeState": {
     "type": {
-      "blueId": "CDyBiQbV2TyvZHNvg93KDfamiVgaGbkLkf3GUNmeyRcm"
+      "blueId": "HxxzM9rdFcBDqPQ5HzDD9UxLqocN3L7WNYNZvEdpnWJd"
     },
     "schema": {
       "required": true

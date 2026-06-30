@@ -3,7 +3,7 @@
   "description": "Trigger point at which feature is effective.",
   "creditEvents": {
     "type": {
-      "blueId": "EpJqsoXTVcp1F9NJqCAR3w9hR9QPLqThmA3cCtazLdXh"
+      "blueId": "3VWXt9VeCTwLSaTRa6KebXPdyz4Gy3Xwf33wBbvgbeqo"
     }
   },
   "creditEventsReference": {
@@ -17,7 +17,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "Gu2s7TriyRGK7DyQz5P5jeE6mWkQBC6ZJYhvceLwhYq6"
+      "blueId": "F7QahhLQE8sqX4t6NBvj5SDbcCWwr9pBdZDMZaqg7mSx"
     },
     "schema": {
       "minItems": 0,
@@ -27,13 +27,13 @@
   "triggerTimeType": {
     "description": "The valuation time type of knock condition.",
     "type": {
-      "blueId": "AP1KsnZALX2AnC7MkkZzNkc16JMP218CyXxg7ZBQfa7N"
+      "blueId": "9VsQvLxQQRJfFp1j9v2evTD4tnmTZzxJFZGRrDLRXRNj"
     }
   },
   "triggerType": {
     "description": "The Triggering condition.",
     "type": {
-      "blueId": "2Q3U8s1q4CetshyF1cYiUuB2PqoQbvX4qgg2CR1ovvHC"
+      "blueId": "Etd1jjtUSJfgtR9oe5rJxj387pjT2ZNMQG9kipLjW5hj"
     }
   }
 }

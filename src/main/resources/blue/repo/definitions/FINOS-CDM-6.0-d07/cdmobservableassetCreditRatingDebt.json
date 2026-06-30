@@ -4,13 +4,13 @@
   "debtType": {
     "description": "Specifies when there is only one debt type. FpML doesn't specify values in relation to the associated scheme, which is hence not specified as an enumeration as part of the CDM.\n",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     }
   },
   "debtTypes": {
     "description": "Specifies if there are several debt types, alongside an 'any' or 'all' or all condition. As an example, Baa1 rating is required for any long term debt and deposit.\n",
     "type": {
-      "blueId": "2s8h9Fv4Wcd7om6eW6WCK8MK41XpoAvH1stjRd9Pxw4x"
+      "blueId": "ARtKwcQKppAKVf5WDJvuwGatLemZ18RcJsXU23W4RfH8"
     }
   }
 }

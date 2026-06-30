@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "Payer",
-      "Receiver"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Payer"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Receiver"
+      }
     ]
   }
 }

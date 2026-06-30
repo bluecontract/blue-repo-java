@@ -13,7 +13,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "C2wMvRSYQpEwYdiQ2gBF1mcfAe8Lz35NGMPze9RFpaKa"
+      "blueId": "4anwVBorXr81GoC4Wkf4trYWror3mSXbzukXdYgwmG7N"
     },
     "schema": {
       "minItems": 0
@@ -44,7 +44,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "DtCdHJZeccxHZbwaJQZhJKaibyxKYwbj9hKw2ZsK5K4r"
+      "blueId": "9tpFoqFu1yX5LZEATGF8CYsE5VSXhkQua9LMXwLEX2Pv"
     },
     "schema": {
       "minItems": 0
@@ -53,7 +53,7 @@
   "legalAgreementIdentification": {
     "description": "The type of legal agreement, identified via a set of composable attributes: agreementName, publisher, governing law and version, e.g. ISDA 2013 Standard Credit Support Annex English Law.\n",
     "type": {
-      "blueId": "FqQXQEJvCb7kuzUDtY9N5gNGasRXEA7suL1s5v2CAses"
+      "blueId": "7p7rsMrLJRwnskaTsetTmKypk1jyyLVvR6JTdJNYeFNf"
     },
     "schema": {
       "required": true
@@ -65,7 +65,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "7N6isgUMMMsMJoxpjNRRfdVHiWizDFmyABkC7s3LeRZ6"
+      "blueId": "Hrt2EoYJokASG9J62NMKWt8UZbQN6BwtESp7hVDVQYvm"
     },
     "schema": {
       "minItems": 0

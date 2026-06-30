@@ -4,7 +4,7 @@
   "arithmeticOperator": {
     "description": "Specifies the arithmetic operator via an enumeration.",
     "type": {
-      "blueId": "2u54oM3XzhREd9bAjgwmiZtCjfRMqRzC7vGQpN2J1C86"
+      "blueId": "8G8JMx9Qw4DFmuzKHtJVfUGbY57zaKc4EsT77wyLek9y"
     },
     "schema": {
       "required": true
@@ -31,7 +31,7 @@
   "operandType": {
     "description": "Optionally qualifies the type of operand: e.g. accrued or forward point.\n",
     "type": {
-      "blueId": "Hnv5h6aVqnM44Lthiosz2StDT6GiE9cvp8VxqehvVTzU"
+      "blueId": "AYFWVGAm6RijsVmJ8UzknPTSr57LT6zv3HLbBwiqWeQn"
     }
   }
 }

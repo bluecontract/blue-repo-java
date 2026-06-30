@@ -4,7 +4,7 @@
   "deliveryCapacity": {
     "description": "The number of units included in the transaction for each delivery interval",
     "type": {
-      "blueId": "BADvBimj9VPGxtVkguZSpocTXA84MV8LnKjm4ocmButh"
+      "blueId": "DGJZYRtm8AD2nG2o56eH5EDc8FujZiiXmBsuHgLf3UCR"
     }
   },
   "endDate": {
@@ -16,7 +16,7 @@
   "priceTimeIntervalQuantity": {
     "description": "Price per quantity per delivery time interval.",
     "type": {
-      "blueId": "BD3VPcMR7j62CWudW3xXH1Aropvfs515RCLZFP4cZY4P"
+      "blueId": "GLmQaa2vVZKjaht1sNMcUL55xfAgWQxpj5ENxwvVRvsm"
     }
   },
   "profile": {
@@ -25,7 +25,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "CYD6nw1hgcwSeunSuqJQfyinq7rnuPXYzsgnq4wBvsin"
+      "blueId": "E8QF9EBMdnTPHUuRgEqvQUvGm75ReZB3zjKJB7BSjt7z"
     },
     "schema": {
       "minItems": 0

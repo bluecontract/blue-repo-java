@@ -4,19 +4,19 @@
   "arithmeticOperator": {
     "description": "(Optionally) When the price is to be understood as an operator to apply to an observable, i.e. a spread, multiplier or min/max.\n",
     "type": {
-      "blueId": "2u54oM3XzhREd9bAjgwmiZtCjfRMqRzC7vGQpN2J1C86"
+      "blueId": "8G8JMx9Qw4DFmuzKHtJVfUGbY57zaKc4EsT77wyLek9y"
     }
   },
   "cashPrice": {
     "description": "(Optionally when the price type is cash) Additional attributes that further define a cash price, e.g. what type of fee it is.\n",
     "type": {
-      "blueId": "8L7NvZ5bV3sdArpiATFbRPj9CK9nDEwWfRob47g9i9iq"
+      "blueId": "EdLKjCfief3mhGVbVnHDpyHDKbTXHYqXoaTKtcn9EjDL"
     }
   },
   "composite": {
     "description": "(Optionally) Specifies the underlying price components if the price can be expressed as a composite: e.g. dirty price = clean price + accrued.\n",
     "type": {
-      "blueId": "92P4LaR64Zfa8TuDjQpyxJSgs7HNZNseg9whUzcnTLLT"
+      "blueId": "EjBpyo5KGACQ7knjNw98Y71wwTCGfQn96DouM8q8m7Gu"
     }
   },
   "datedValue": {
@@ -25,7 +25,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "Fxnn5aWqQGPjDKxXxgjy5cDtNto3oNx5kS5q2tS6Vx7F"
+      "blueId": "9zYcb3FcpfuBbxSMqUwSRoYJ3gPs7Nv1qeZUmFvVniPL"
     },
     "schema": {
       "minItems": 0
@@ -34,19 +34,19 @@
   "perUnitOf": {
     "description": "Provides an attribute to define the unit of the thing being priced. For example, {amount, unitOfAmount, PerUnitOfAmount} = [10, EUR, Shares] = (10.00 EUR/SHARE) * (300,000 SHARES) = EUR 3,000,000.00 (Shares cancel out in the calculation).\n",
     "type": {
-      "blueId": "9UsKi2Yv1HYTh1K6abCSAUtUoo8wGWPjkbsprN5X5mvr"
+      "blueId": "DJ7mNRisRDzwiXVunMHLfDzvMqVHiQo2iHab3fCmxUL7"
     }
   },
   "priceExpression": {
     "description": "(Optionally) Specifies whether the price is expressed in absolute or percentage terms.",
     "type": {
-      "blueId": "BnAG4RP2obdcr7RWMq3ZjCqF1qqaR9bNygoiLRRB5mxQ"
+      "blueId": "DGw3j3EkTUgoJb9WQD39BfVPHsqnL4bXU5uXCMnmCe3v"
     }
   },
   "priceType": {
     "description": "Specifies the price type as an enumeration: interest rate, exchange rate, asset price etc. This attribute is mandatory so that prices can always be clasiffied according to their type. The price type implies some constraints on the price's units.\n",
     "type": {
-      "blueId": "4muzS9Y2JRkyyk3q2LMV26XJypskFBwjBvJevb5nY956"
+      "blueId": "57TNhfCPohyptzE8EPedTDH19ZH7MkzMEo4S8VWeQ9Ck"
     },
     "schema": {
       "required": true
@@ -55,7 +55,7 @@
   "unit": {
     "description": "Qualifies the unit by which the amount is measured. Optional because a measure may be unit-less (e.g. when representing a ratio between amounts in the same unit).\n",
     "type": {
-      "blueId": "9UsKi2Yv1HYTh1K6abCSAUtUoo8wGWPjkbsprN5X5mvr"
+      "blueId": "DJ7mNRisRDzwiXVunMHLfDzvMqVHiQo2iHab3fCmxUL7"
     }
   },
   "val": {

@@ -4,13 +4,13 @@
   "fixingTime": {
     "description": "The time that the fixing will be taken along with a business center to define the time zone.",
     "type": {
-      "blueId": "DJHcCUvgkjrpH1UjAWPG6z2avBDGcvFeWgf2oWZMM7ef"
+      "blueId": "4Mi73c2rJbGTBeaTVi4xUgW33QBxsUyxSSV6ELoqnP4j"
     }
   },
   "sourcePage": {
     "description": "A specific page for the source for obtaining a market data point. In FpML, this is specified as a scheme, rateSourcePageScheme, for which no coding Scheme or URI is specified.\n",
     "type": {
-      "blueId": "41cYcBEAn2p32fgph9hx7Ft9Hb9fBeJqisyDfMubRZ8R"
+      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
     }
   },
   "sourcePageHeading": {
@@ -22,7 +22,7 @@
   "sourceProvider": {
     "description": "An information source for obtaining a market data point. For example Bloomberg, Reuters, Telerate, etc.",
     "type": {
-      "blueId": "F146JGqnWZ5sfLAxTTdw6wibcDWTqzmMxom6z62GKkRB"
+      "blueId": "JMdjF7BkL7hgbzHsPDqk4D7tgaZ98wirqwFPWCQBuvs"
     }
   }
 }

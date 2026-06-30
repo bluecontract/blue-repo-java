@@ -4,13 +4,13 @@
   "ancillaryParty": {
     "description": "Specifies an ancillary party to be added onto the new transaction, e.g. the original executing party in an allocation.\n",
     "type": {
-      "blueId": "BEZVkHKyDMsBjAmDVvYY7wpeyTRwsqcq12e6SpKHUxm6"
+      "blueId": "3FLaoJ8BXZUb3VpFoXQ7ACwUhTaDAZgwztubj17GegH4"
     }
   },
   "counterparty": {
     "description": "The new counterparty who is stepping into the trade. The stepping out counterparty is inferred based on the counterparty role that is being updated.\n",
     "type": {
-      "blueId": "E1uMUhyFkX83bxaZhuKemTmb5S99vPebKwnFVHu6KQTn"
+      "blueId": "58TeStN7sJrzoG3o1U7FZq3fFkxbCXkvdWPYYZkf1r3x"
     },
     "schema": {
       "required": true
@@ -19,7 +19,7 @@
   "partyRole": {
     "description": "Specifies an additional party roles to be added on to the new transaction.",
     "type": {
-      "blueId": "7N6isgUMMMsMJoxpjNRRfdVHiWizDFmyABkC7s3LeRZ6"
+      "blueId": "Hrt2EoYJokASG9J62NMKWt8UZbQN6BwtESp7hVDVQYvm"
     }
   },
   "tradeId": {
@@ -28,7 +28,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "61T88AjWwvbxc7kozKt8kg9syaAo43s8CfQtNmM2hGQa"
+      "blueId": "6zgzXM8ryqdp6CFr8BH4PKyJcHZsjXogtRiA2DcyKgBU"
     },
     "schema": {
       "minItems": 1

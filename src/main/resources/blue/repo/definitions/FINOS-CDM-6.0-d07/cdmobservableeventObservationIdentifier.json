@@ -4,19 +4,19 @@
   "determinationMethodology": {
     "description": "Specifies the method according to which an amount or a date is determined.",
     "type": {
-      "blueId": "FAHuKUTUeHs89cUaSXBHoJwfDkB5aXgT89caEM3A55z"
+      "blueId": "4Gy7A4j9sYhPf8Eqd9dXLdUFBWPHMDXxiV4n5VNAsmQF"
     }
   },
   "informationSource": {
     "description": "Represents where the market data published and should be observed.",
     "type": {
-      "blueId": "GC12RddYoz1a7Q6sFJRGkckLjBH6TTumB7DKHyyBM3FL"
+      "blueId": "5x9dr8ixBaX8QXWdiNGeuyFn1GS9wN5xkpfrxHhKLC2y"
     }
   },
   "observable": {
     "description": "Represents the asset or rate to which the observation relates.",
     "type": {
-      "blueId": "54FLifHpXsPqo7RAqsHZ5C4WxvmU2i8aDbM6EMkx64PM"
+      "blueId": "xQiQzMuZW6Q8gjgsvtqDYP1yE3C8KQUXtUp3fFAr7HS"
     },
     "schema": {
       "required": true
@@ -34,7 +34,7 @@
   "observationTime": {
     "description": "Represents the time and time-zone.",
     "type": {
-      "blueId": "EqFtLUWpvw3DLzuAcBrVrto1J9g2RmH7gHRUakSBSnpr"
+      "blueId": "A5epowY7nXCnh1AWLF3H4Zv7YyXwwAFethePAEeyAQ92"
     }
   }
 }

@@ -4,13 +4,13 @@
   "calculationAgent": {
     "description": "The ISDA Calculation Agent responsible for performing duties associated with an optional early termination.",
     "type": {
-      "blueId": "83ZskooQhyiWk16zpdvkhMh9qwBm9bHyByQH4RxkYEyR"
+      "blueId": "FANsoqTgc5XxJH7orWbzRADwZ6drQjPzAbPN6YqvcYau"
     }
   },
   "cashSettlement": {
     "description": "If specified, this means that cash settlement is applicable to the transaction and defines the parameters associated with the cash settlement procedure. If not specified, then physical settlement is applicable.\n",
     "type": {
-      "blueId": "EPxCD8mPcZ6C9kuDs2tinVLVsqMQscWZPLMhYaQ4n9co"
+      "blueId": "2qfdfn8VYJmiXxmTj9Vwfu1pB3jFJQK9WAShnf8n1r1m"
     }
   },
   "exerciseNotice": {
@@ -19,7 +19,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "F8n3p8PCK7bnKSfrxZvFaQrmN6MMnQDF5pD1pKsUeaNX"
+      "blueId": "JC1AzddnU2E4ioTzwsgW9ohgnrfpQQusp6hRq412YjUZ"
     },
     "schema": {
       "minItems": 0
@@ -28,7 +28,7 @@
   "exerciseTerms": {
     "description": "The exercise terms associated with the optional early termination, including details such as exercise style, exercise fees, and any other relevant conditions or terms.\n",
     "type": {
-      "blueId": "9io8G2vbJGqzR733au9TnujLuDNcokNmiUPRUcsgiY8e"
+      "blueId": "J1G2hQLDGZ1gu2re4Z6NCNRA3Ze9S9LM51pbnxyzozLq"
     },
     "schema": {
       "required": true
@@ -49,13 +49,13 @@
   "optionalEarlyTerminationAdjustedDates": {
     "description": "An early termination provision to terminate the trade at fair value where one or both parties have the right to decide on termination.\n",
     "type": {
-      "blueId": "6zwmdcyZ52LcFVNLaLL72qrCEMZuQYbr5mLYdxQSj8tf"
+      "blueId": "GjM8odwxuvdr9Y58M4jULKzxi93AmZuKSFfkTFsJ7cYx"
     }
   },
   "singlePartyOption": {
     "description": "If optional early termination is not available to both parties then this component specifies the buyer and seller of the option. In FpML, this attribute is of type SinglePsrtyOption, which actually consists of the BuyerSeller.model.\n",
     "type": {
-      "blueId": "DWfkyE22gC9uRXe5WgV2BN3mzS4qUcrvW7BLwqcZfvWJ"
+      "blueId": "HA8fmtXcNJxs3hXa88H9PHchDg6hgAFvto4VVdW1aZmf"
     }
   }
 }

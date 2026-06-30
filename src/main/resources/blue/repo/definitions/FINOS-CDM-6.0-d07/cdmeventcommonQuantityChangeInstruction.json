@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "7ZZfSxTMhHstRLpYQMESSSTY9jN668fPJwkSAzcVT7aR"
+      "blueId": "2C9DbWa8E4D3cXHSXuDyYmWwrs1ySFopMnyA3XWWesm8"
     },
     "schema": {
       "minItems": 1
@@ -16,7 +16,7 @@
   "direction": {
     "description": "Direction of the quantity change specified as either an increase, decrease or replacement.",
     "type": {
-      "blueId": "58eJSHZv9YCzpVas9irmpYDjoWPEWPE8podDrUVHCkpt"
+      "blueId": "3PEKcTxZjwjadkRHkdE5cLAN5jWQkiSt4SmaU1mwZbgZ"
     },
     "schema": {
       "required": true
@@ -28,7 +28,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "DtCdHJZeccxHZbwaJQZhJKaibyxKYwbj9hKw2ZsK5K4r"
+      "blueId": "9tpFoqFu1yX5LZEATGF8CYsE5VSXhkQua9LMXwLEX2Pv"
     },
     "schema": {
       "minItems": 0

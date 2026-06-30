@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.math.BigInteger;
 
-@TypeBlueId("DnXzzassZD8x4ZyWkS46bBpvzPMBW4txNdG32xcULQhy")
+@TypeBlueId("BYetgNwutc7xjHHx9g7ZhsdKgyGYMd1UR4jDoHHafJHj")
 public class CdmBaseMathRounding {
     public static String blueId() {
-        return "DnXzzassZD8x4ZyWkS46bBpvzPMBW4txNdG32xcULQhy";
+        return "BYetgNwutc7xjHHx9g7ZhsdKgyGYMd1UR4jDoHHafJHj";
     }
 
     public static String packageName() {

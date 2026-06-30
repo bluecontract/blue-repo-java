@@ -15,7 +15,7 @@
   "returnType": {
     "description": "The type of return associated with the equity swap.",
     "type": {
-      "blueId": "ATNDWufGC7qTCeS6fMDgq4TLPxxRGSXTd8BA2Sjtbw83"
+      "blueId": "EvqKp8C4TsU58D4ZoFC8ba55Fdq8Qeka9NmEAAuioCk3"
     },
     "schema": {
       "required": true

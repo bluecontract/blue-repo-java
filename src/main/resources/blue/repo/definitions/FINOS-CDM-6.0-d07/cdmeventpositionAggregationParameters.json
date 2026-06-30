@@ -25,7 +25,7 @@
   "positionStatus": {
     "description": "To aggregate based on position status (EXECUTED, SETTLED etc)",
     "type": {
-      "blueId": "Hjv5ZV6rWqMpMXguagZogWFoFn6pJLRB3L7AZDENVefw"
+      "blueId": "CtjNKoKQ8S3xNPyMY6GXJKQAAfjxpTQmdDgLUNE3iAJM"
     }
   },
   "product": {
@@ -34,7 +34,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "9qWGsXauVnxS5oNKRAwfaMctCyeviwAypHKtHdS4HXZd#4"
+      "blueId": "8uQuzNQKBLC5kpFy4UH3BU7PPtpbRZEfLQ2ftrsgLHbm#4"
     },
     "schema": {
       "minItems": 0

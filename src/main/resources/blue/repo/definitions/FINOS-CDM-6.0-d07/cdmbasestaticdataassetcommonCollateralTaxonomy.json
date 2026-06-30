@@ -4,7 +4,7 @@
   "taxonomySource": {
     "description": "Specifies the taxonomy source.",
     "type": {
-      "blueId": "BqVKf5kjSXYKGPcRR5b36H8VLo9HRAiZm3VMuFVHtQpU"
+      "blueId": "CUzMUxNcMqZb1GuDaw2n29RnNcaPce9HrpKAyz8gT2m8"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "taxonomyValue": {
     "description": "Specifies the taxonomy value.",
     "type": {
-      "blueId": "HyXNVDmDxEPeDSSNQXVrStDaEGA3kiQJX6J14kavi83F"
+      "blueId": "46LCCSVXKexPjXtAyPSyNEvZuzGR66uVP8ccRPSrwJhs"
     },
     "schema": {
       "required": true

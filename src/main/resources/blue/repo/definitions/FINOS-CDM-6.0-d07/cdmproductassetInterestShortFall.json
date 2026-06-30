@@ -12,7 +12,7 @@
   "interestShortfallCap": {
     "description": "Specifies the nature of the interest Shortfall cap (i.e. Fixed Cap or Variable Cap) in the case where it is applicable. ISDA 2003 Term: Interest Shortfall Cap.\n",
     "type": {
-      "blueId": "2aEhSjjMBd4tA2GTLahhEEQdY17ub2jHNyP3rdCKNo9E"
+      "blueId": "GtGzeeGr59oZMBK4qT628HxyPEj3ux2JxtFjbU8GTbuN"
     },
     "schema": {
       "required": true
@@ -21,7 +21,7 @@
   "rateSource": {
     "description": "The rate source in the case of a variable cap.",
     "type": {
-      "blueId": "A2cgsy3zeKNALEp5qC2bJ23xbFvEbU55TafCWjuJgigF"
+      "blueId": "2qVsAJiDNKtcYeoPmttQzFLH44MsczpvMvQ9ZQvwUW6Z"
     }
   }
 }

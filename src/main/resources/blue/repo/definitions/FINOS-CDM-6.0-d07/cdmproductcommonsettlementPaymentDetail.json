@@ -3,18 +3,18 @@
   "paymentAmount": {
     "description": "A fixed payment amount.",
     "type": {
-      "blueId": "8cxBikeuHvYYMwhHNctrp8MDJJ7Vce3pohMQx29kCit9"
+      "blueId": "7eyr2kXubNSHtLXpHJ9G8NqtmDXLfmDmHQZSkLa9qkyy"
     }
   },
   "paymentDate": {
     "type": {
-      "blueId": "2gu7bBDYJXEVsffNg2iAYXou31qtdeR4oiwZHL2kaEgQ"
+      "blueId": "2Dr79mc7tDo84pCgLDhmSAuay1naC42UUovCTcaMjY5R"
     }
   },
   "paymentRule": {
     "description": "The calculation rule.",
     "type": {
-      "blueId": "DMDgnRgDHXDgM8qMpbsMeSSLbKoLV6VHGnnXkhMPQtFY"
+      "blueId": "3YeAtbFamK5F5iKzyL3iNd6gFidd9BmNNPL6HqrJVqgu"
     },
     "schema": {
       "required": true

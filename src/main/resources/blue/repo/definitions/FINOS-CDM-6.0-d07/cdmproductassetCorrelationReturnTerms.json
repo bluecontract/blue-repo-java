@@ -9,13 +9,13 @@
   "boundedCorrelation": {
     "description": "Describes correlation bounds, which form a cap and a floor on the realized correlation.",
     "type": {
-      "blueId": "G3Czczjun5KZ7JmhFBTYxJ8kS4DetVPC7VeQenWJ3iAL"
+      "blueId": "6YPBFzb6J5zZWUx1H7SSeJNLQWwAzYsVjRxgdkFZMVrn"
     }
   },
   "correlationStrikePrice": {
     "description": "Correlation Strike Price in accordance with the ISDA 2011 Equity Derivatives Definitions.",
     "type": {
-      "blueId": "BD3VPcMR7j62CWudW3xXH1Aropvfs515RCLZFP4cZY4P"
+      "blueId": "GLmQaa2vVZKjaht1sNMcUL55xfAgWQxpj5ENxwvVRvsm"
     },
     "schema": {
       "required": true
@@ -30,7 +30,7 @@
   "equityUnderlierProvisions": {
     "description": "Contains Equity Underlyer provisions regarding jurisdiction and fallbacks.",
     "type": {
-      "blueId": "BnexbVUY8PKjXNmrcJtfUfLscnoCTTVND3e8f8mbCo9A"
+      "blueId": "G2uPrFU4uNeXsrT1Qauu3GMgFXeHpGU8yyPtUKRD4kr3"
     }
   },
   "expectedN": {
@@ -48,7 +48,7 @@
   "initialLevelSource": {
     "description": "In this context, this is AgreedInitialPrice - a specified Initial Index Level.",
     "type": {
-      "blueId": "FTE7qqGQusB8UEjsRpipyFrw42V2W8VA1TNPNLGTJwKU"
+      "blueId": "F2XKDuytcyrcyYVFazD7Tuqtk1J9p5rtwDxh9Y9PUUWH"
     }
   },
   "meanAdjustment": {
@@ -78,7 +78,7 @@
   "valuationTerms": {
     "description": "Contains all non-date valuation information.",
     "type": {
-      "blueId": "AXzmd3GXp7EWqnDZ7Qr8JCPRhk6iKDEpRKifDPwG2ihj"
+      "blueId": "3RVpuPyLZTsRz9wSfRCjDrY84adxxkZBQaYM8p28MYpK"
     }
   }
 }

@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "CalculationAgentElection",
-      "EquityAmountReceiverElection"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "CalculationAgentElection"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "EquityAmountReceiverElection"
+      }
     ]
   }
 }

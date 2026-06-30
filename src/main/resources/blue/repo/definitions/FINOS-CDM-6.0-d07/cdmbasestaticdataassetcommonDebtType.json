@@ -4,7 +4,7 @@
   "debtClass": {
     "description": "Specifies the characteristics of a debt instrument.",
     "type": {
-      "blueId": "7j5qD4JU5gUCa5ieYio2Cw2ex4ceqo17c2rx7TPN4WKJ"
+      "blueId": "ASAPTC3f63jq934hhnLQ4c9BNLF9RtGVn3iLdv8L37LU"
     }
   },
   "debtEconomics": {
@@ -13,7 +13,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "6pwjGqPGpPkFg14hVjHRwDcai7hz9SBRs7HVJkQs3oZP"
+      "blueId": "7Lf9XXZdBaTwDFPQsXLZfcyiVkKhfJ2GJcKZFMkQ7mNX"
     },
     "schema": {
       "minItems": 0

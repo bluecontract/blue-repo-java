@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "5b7tz2hPJ3dwwRSghTiFtwhoDJrB6oMLyV5ssbsSiZkL"
+      "blueId": "Ftpos6LCMk31PB3e4E1siiMshU1M88BMeTNK4yRypXyL"
     },
     "schema": {
       "minItems": 0
@@ -16,7 +16,7 @@
   "dateLocation": {
     "description": "Specifies where is the time measured.",
     "type": {
-      "blueId": "DJHcCUvgkjrpH1UjAWPG6z2avBDGcvFeWgf2oWZMM7ef"
+      "blueId": "4Mi73c2rJbGTBeaTVi4xUgW33QBxsUyxSSV6ELoqnP4j"
     },
     "schema": {
       "required": true
@@ -31,7 +31,7 @@
   "dayOfWeek": {
     "description": "Specifies the day of the week if used.",
     "type": {
-      "blueId": "3VxAg9cA9onwdJoxhBB5kEdwqKLqxsmhNk3MY7upD6KS"
+      "blueId": "AYNVNBQsDmS46NA7kfw7jh6eh8DBspyMyDd1bzyBmDG5"
     }
   },
   "monthOfYear": {
@@ -52,7 +52,7 @@
   "period": {
     "description": "Specifies the time period at which calculation is performed, e.g. 1 month.",
     "type": {
-      "blueId": "D2zD5eW4h5CVwkas6bYant1Kmgdg4zt95zb3kYgR87RE"
+      "blueId": "G5BwzTWEaA14NoPKn8iSwCnmwnWuQegPHZwrpgagS6kY"
     },
     "schema": {
       "required": true

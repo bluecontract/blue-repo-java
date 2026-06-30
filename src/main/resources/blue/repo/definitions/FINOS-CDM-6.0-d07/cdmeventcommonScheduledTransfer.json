@@ -2,13 +2,13 @@
   "name": "cdm/event/common/ScheduledTransfer",
   "corporateActionTransferType": {
     "type": {
-      "blueId": "4UEoeZWF5eyedQHWfs5Bckogecv82AECMRXiRHuB7sVp"
+      "blueId": "GFvEqH3FNnzTFFJAqMgygUiVX9vA45GDjiV95ZqP4qAR"
     }
   },
   "transferType": {
     "description": "Specifies a transfer created from a scheduled or contingent event on a contract, e.g. Exercise, Performance, Credit Event\n",
     "type": {
-      "blueId": "7QVESfxVDZXRwinJhzgNgBJUPcHq4D8bda2RZ11TD5nb"
+      "blueId": "9k43VLjjoSJbXKM7aCSjBTinwWFf8sRDogVJbsM2JjjR"
     },
     "schema": {
       "required": true

@@ -13,7 +13,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "9kFJKtns9Sjozaqz3KCGTHgoS6kFB5DzZ3qpcGRaMYtz"
+      "blueId": "6L9P51qVV3HH366DyCCXDxSEYLtr6zN1bAMebbiK5iW1"
     },
     "schema": {
       "minItems": 0
@@ -22,7 +22,7 @@
   "contactInformation": {
     "description": "The postal/street address, telephone number, email address and/or web page. If the contact information is specific to the associated business unit(s), it should be associated with those.\n",
     "type": {
-      "blueId": "tWjzEXNpctUeMnop8Wj6gnxCUqcE9XJnXn31gdiq2xd"
+      "blueId": "2vquTQrHfbG8GVEjvB7SAZfAmxeyh1hxQeEN1wjro58A"
     }
   },
   "partyReference": {
@@ -37,7 +37,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "4VLeT4uJM3cRp2H6JSAzzkxWxkFE6dxbawfkxq9Q2Kit"
+      "blueId": "Dz8x4hxN4LrnwACtSYMSryByQKNPMssYkK9899oiNbyh"
     },
     "schema": {
       "minItems": 0

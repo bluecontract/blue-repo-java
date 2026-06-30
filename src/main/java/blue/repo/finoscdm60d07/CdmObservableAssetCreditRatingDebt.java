@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("3Sa9vCGQDydCQHFrJmmRXAexddWAaVev6uns5Sc9gjJw")
+@TypeBlueId("H8A5EpXYgdKnD1FhyTni2vHEnBp15QF3Y1Hk9y72CfzJ")
 public class CdmObservableAssetCreditRatingDebt {
     public static String blueId() {
-        return "3Sa9vCGQDydCQHFrJmmRXAexddWAaVev6uns5Sc9gjJw";
+        return "H8A5EpXYgdKnD1FhyTni2vHEnBp15QF3Y1Hk9y72CfzJ";
     }
 
     public static String packageName() {

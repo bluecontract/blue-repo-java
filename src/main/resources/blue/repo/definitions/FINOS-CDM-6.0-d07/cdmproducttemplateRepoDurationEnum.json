@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "Overnight",
-      "Term"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Overnight"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Term"
+      }
     ]
   }
 }

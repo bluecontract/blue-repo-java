@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("FEY2i95RwCX4jab9QimgpbtJ9Et1nTRvX5FUysN2eVx5")
+@TypeBlueId("CR9L4SVmKAvSmKh2xUfY6RvyAg4XL3BwDYCeqWk8ejn8")
 public class CdmBaseDatetimeAveragingSchedule {
     public static String blueId() {
-        return "FEY2i95RwCX4jab9QimgpbtJ9Et1nTRvX5FUysN2eVx5";
+        return "CR9L4SVmKAvSmKh2xUfY6RvyAg4XL3BwDYCeqWk8ejn8";
     }
 
     public static String packageName() {

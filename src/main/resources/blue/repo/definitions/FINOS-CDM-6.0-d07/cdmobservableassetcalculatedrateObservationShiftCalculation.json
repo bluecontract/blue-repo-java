@@ -4,13 +4,13 @@
   "additionalBusinessDays": {
     "description": "Any additional business days that be applicable.",
     "type": {
-      "blueId": "6H6qhfVQ1CTnjae8L3PvEdBtC4NMwMiaSJWK6kr5tEXf"
+      "blueId": "H53mV1d8rMzhefLZH8WzGchozyQA28cbwNpBHGmVA9ti"
     }
   },
   "calculationBase": {
     "description": "Whether the rate is calculated in advance, in arrears, or relative to a reset date.",
     "type": {
-      "blueId": "5R9ivhYm4erCPRhXa3yvWvysiaUKfjka34k9DaE7YTkj"
+      "blueId": "2W3rHTz4L7GBmVkiESoY8puS9uU1rTGL2SfpTGJy2kse"
     }
   },
   "offsetDays": {

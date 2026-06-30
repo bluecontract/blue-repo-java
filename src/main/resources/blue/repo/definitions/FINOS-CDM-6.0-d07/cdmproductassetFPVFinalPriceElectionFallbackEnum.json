@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "FPVClose",
-      "FPVHedgeExecution"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "FPVClose"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "FPVHedgeExecution"
+      }
     ]
   }
 }

@@ -6,10 +6,30 @@
   },
   "schema": {
     "enum": [
-      "DeliveryVersusDelivery",
-      "DeliveryVersusPayment",
-      "NotCentralSettlement",
-      "PaymentVersusPayment"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "DeliveryVersusDelivery"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "DeliveryVersusPayment"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "NotCentralSettlement"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PaymentVersusPayment"
+      }
     ]
   }
 }

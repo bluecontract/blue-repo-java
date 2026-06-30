@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("3KGMrYxFaQAHq835s34pv8LsXpPK1XMjYRRENVpPMrwE")
+@TypeBlueId("D9YY1v2J14dSGr9FSvTV3S7cVD8933KNkDtMjV3Len2A")
 public class CdmBaseMathRoundingModeEnum {
     public static String blueId() {
-        return "3KGMrYxFaQAHq835s34pv8LsXpPK1XMjYRRENVpPMrwE";
+        return "D9YY1v2J14dSGr9FSvTV3S7cVD8933KNkDtMjV3Len2A";
     }
 
     public static String packageName() {

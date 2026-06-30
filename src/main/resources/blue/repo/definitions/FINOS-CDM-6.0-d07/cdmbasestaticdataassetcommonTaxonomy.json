@@ -4,13 +4,13 @@
   "source": {
     "description": "The source of the taxonomy that defines the rules for classifying the object. The taxonomy source is taken from a enumerated list of taxonomy names. Optional as the taxonomy source may not be provided.\n",
     "type": {
-      "blueId": "BqVKf5kjSXYKGPcRR5b36H8VLo9HRAiZm3VMuFVHtQpU"
+      "blueId": "CUzMUxNcMqZb1GuDaw2n29RnNcaPce9HrpKAyz8gT2m8"
     }
   },
   "val": {
     "description": "The value according to that taxonomy. Optional as it may not be possible to classify the object in that taxonomy.\n",
     "type": {
-      "blueId": "F6mUivEQ8RTovh2EM1RvywChVG83p595wiCfpi8jG8RN"
+      "blueId": "EnoVKrrGFyBuE513RQdZXz4EPFgLMoR13a5djKi32gB9"
     }
   }
 }

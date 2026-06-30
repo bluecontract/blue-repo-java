@@ -16,7 +16,7 @@
   "equityUnderlierProvisions": {
     "description": "Contains Equity Underlyer provisions regarding jurisdiction and fallbacks.",
     "type": {
-      "blueId": "BnexbVUY8PKjXNmrcJtfUfLscnoCTTVND3e8f8mbCo9A"
+      "blueId": "G2uPrFU4uNeXsrT1Qauu3GMgFXeHpGU8yyPtUKRD4kr3"
     }
   },
   "expectedN": {
@@ -37,7 +37,7 @@
   "initialLevelSource": {
     "description": "In this context, this is AgreedInitialPrice - a specified Initial Index Level.",
     "type": {
-      "blueId": "FTE7qqGQusB8UEjsRpipyFrw42V2W8VA1TNPNLGTJwKU"
+      "blueId": "F2XKDuytcyrcyYVFazD7Tuqtk1J9p5rtwDxh9Y9PUUWH"
     }
   },
   "meanAdjustment": {
@@ -61,7 +61,7 @@
   "valuationTerms": {
     "description": "Contains all non-date valuation information.",
     "type": {
-      "blueId": "AXzmd3GXp7EWqnDZ7Qr8JCPRhk6iKDEpRKifDPwG2ihj"
+      "blueId": "3RVpuPyLZTsRz9wSfRCjDrY84adxxkZBQaYM8p28MYpK"
     },
     "schema": {
       "required": true

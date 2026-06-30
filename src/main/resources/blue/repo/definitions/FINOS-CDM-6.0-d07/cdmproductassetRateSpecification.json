@@ -4,19 +4,19 @@
   "FixedRateSpecification": {
     "description": "The fixed rate or fixed rate specification expressed as explicit fixed rates and dates.",
     "type": {
-      "blueId": "AHXNMARRz3QVTp5Judgeafbi4BifDnCnTHh4mdHMiw4C"
+      "blueId": "9svusKr6LvCBhk7gV6JsbPAwwXWASiSTahN4JPrDC5rH"
     }
   },
   "FloatingRateSpecification": {
     "description": "The floating interest rate specification, which includes the definition of the floating rate index. the tenor, the initial value, and, when applicable, the spread, the rounding convention, the averaging method and the negative interest rate treatment.\n",
     "type": {
-      "blueId": "9bWtQze14QMTu3NayzdyybVXUBbSnXVfXBfcDZtmgth8"
+      "blueId": "7Qg4XRChRagWG1WXXQ6SxKQFUAWi38ZztLZRLJigyUr8"
     }
   },
   "InflationRateSpecification": {
     "description": "An inflation rate calculation definition.",
     "type": {
-      "blueId": "HKnvDDEWvf3BT6arKygQsaJfA3ujeE9pxPyDuDKbVA2x"
+      "blueId": "FWV3Br4aKDWruqfn5vhLVt6xEv37srRU5k5YncDQvGnz"
     }
   }
 }

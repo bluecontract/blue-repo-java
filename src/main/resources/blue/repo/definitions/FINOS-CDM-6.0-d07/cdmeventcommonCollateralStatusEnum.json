@@ -6,9 +6,24 @@
   },
   "schema": {
     "enum": [
-      "FullAmount",
-      "InTransitAmount",
-      "SettledAmount"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "FullAmount"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "InTransitAmount"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "SettledAmount"
+      }
     ]
   }
 }

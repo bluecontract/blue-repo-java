@@ -2,7 +2,7 @@
   "name": "cdm/regulation/Othr",
   "derivInstrmAttrbts": {
     "type": {
-      "blueId": "Aj9meS4QsbqRsCEnjHm6eJtvgmCipqQJfPFzGhJo8ujj"
+      "blueId": "H4qXNCgRHrt2vNW5Ck9VynMAfvyCFYzUwMSSZWpuPRyL"
     },
     "schema": {
       "required": true
@@ -10,7 +10,7 @@
   },
   "finInstrmGnlAttrbts": {
     "type": {
-      "blueId": "Hv9KX7MviT5eAPifaFJmzQMie9NGHeG75QHiLdHaP19E"
+      "blueId": "8VKLe5YFMNREPES73PCMyATqUbr8SexStcAoUJHdcGEE"
     },
     "schema": {
       "required": true
@@ -26,7 +26,7 @@
   },
   "schmeNm": {
     "type": {
-      "blueId": "63V4A5fJkqFz1UkwmSLN1dQofTFxqfM8LaEoT2D6kwxi"
+      "blueId": "6sHTanKcHB14wiXCFtoehJEB7HWsy21ExqHEvQYtw7NP"
     },
     "schema": {
       "required": true

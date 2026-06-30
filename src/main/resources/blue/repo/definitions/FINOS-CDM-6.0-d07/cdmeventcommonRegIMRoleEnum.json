@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "Pledgor",
-      "Secured"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Pledgor"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Secured"
+      }
     ]
   }
 }

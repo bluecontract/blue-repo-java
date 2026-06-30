@@ -3,13 +3,13 @@
   "matrixTerm": {
     "description": "Defines any applicable key into the relevant matrix. For example, the Transaction Type would be the single term required for the Credit Derivatives Physical Settlement Matrix. This element should be omitted in the case of the 2000 ISDA Definitions Settlement Matrix for Early Termination and Swaptions.\n",
     "type": {
-      "blueId": "4NN6d8Q5fSbUgfXjWP68uxd6THX4FGkUFrvYKo2zbuKY"
+      "blueId": "Eyc8B8F3y2KnRoznB2hdpowXLuoWSHAkCnr3veTzM2Lc"
     }
   },
   "matrixType": {
     "description": "Identifies the form of applicable matrix.",
     "type": {
-      "blueId": "FYJVFGt7vhpkoVeVEJx4JGHKRqnzkriXgK3S6Z43DFxA"
+      "blueId": "27svQFwe6bB27frVyJ6e6Nx85ok2AeWiaJyYCwEwdVF4"
     },
     "schema": {
       "required": true

@@ -4,19 +4,19 @@
   "finalPrincipalPayment": {
     "description": "Principal Payment at Trade maturity",
     "type": {
-      "blueId": "CzkYzPZygBS1BTrbW8ifgv9kMcZw7AKSUt2PhTYckz9U"
+      "blueId": "9XUMDnSJjmK5Kqp5BL268vZoXGmEQAMCFTKbJVVwuPbB"
     }
   },
   "initialPrincipalPayment": {
     "description": "Principal Payment made at Trade inception.",
     "type": {
-      "blueId": "CzkYzPZygBS1BTrbW8ifgv9kMcZw7AKSUt2PhTYckz9U"
+      "blueId": "9XUMDnSJjmK5Kqp5BL268vZoXGmEQAMCFTKbJVVwuPbB"
     }
   },
   "intermediatePrincipalPayment": {
     "description": "Principal Payment as part of the Trade lifecycle e.g. as part of notional reset adjustements in a Cross Currency Swap with a varying notional leg.\n",
     "type": {
-      "blueId": "GqMDcJT2X4pbkcA4TWqyfyLp2xKadMY8F8DW2abYfujx"
+      "blueId": "4EkR94oSN87arjWhzEQUZELGM8at9SvDoSZ3LKbE12sg"
     }
   }
 }

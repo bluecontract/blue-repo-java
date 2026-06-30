@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "Buy/Sell-Back",
-      "Repo"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Buy/Sell-Back"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Repo"
+      }
     ]
   }
 }

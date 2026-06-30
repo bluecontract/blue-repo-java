@@ -4,13 +4,13 @@
   "calculationPeriodDates": {
     "description": "Defines parameters used to generate the calculation period dates schedule, including the specification of any initial or final stub calculation periods. A calculation period schedule consists of an optional initial stub calculation period, one or more regular calculation periods and an optional final stub calculation period. In the absence of any initial or final stub calculation periods, the regular part of the calculation period schedule is assumed to be between the effective date and the termination date. No implicit stubs are allowed, i.e. stubs must be explicitly specified using an appropriate combination of firstPeriodStartDate, firstRegularPeriodStartDate and lastRegularPeriodEndDate.\n",
     "type": {
-      "blueId": "GspR7mKpmQb8fd9qDWmUZgupMnwzzd77ERPzdYLb2X5h"
+      "blueId": "7dK86pbyNfhuuigQR5bQueaqH68Sqze66Qwad2m64rxg"
     }
   },
   "informationSource": {
     "description": "The information source where a published or displayed market rate will be obtained, e.g. Telerate Page 3750.",
     "type": {
-      "blueId": "Er5xdgizmYHVQiqxbHxo9DYjuP1uTdYqWsrVPJRV2S5P"
+      "blueId": "AxAyn6UgyoJj9YDT4soz7eYpmhL8U6kEzFxGMonZgxcg"
     }
   },
   "numberOfObservationDates": {
@@ -22,7 +22,7 @@
   "observationDates": {
     "description": "Describes date details for a set of observation dates in parametric or non-parametric form.",
     "type": {
-      "blueId": "5xxQgXAhJtfJDRtdnLVWVxyTk8pzt7rvvo41daazReS8"
+      "blueId": "93jNg58r6VkSD6oX2SzTDJrVHFDWVgDA28zPR4rQJS4F"
     },
     "schema": {
       "required": true
@@ -31,19 +31,19 @@
   "observationTime": {
     "description": "Defines time in respect to a business calendar location that the price/benchmark/index is observed",
     "type": {
-      "blueId": "DJHcCUvgkjrpH1UjAWPG6z2avBDGcvFeWgf2oWZMM7ef"
+      "blueId": "4Mi73c2rJbGTBeaTVi4xUgW33QBxsUyxSSV6ELoqnP4j"
     }
   },
   "observationTimeType": {
     "description": "The enumerated values to specify points in the day when option exercise and valuation can occur.",
     "type": {
-      "blueId": "2xhGBDM2Kt4jeHX2wMnpZymz3UupNVcvkkwM9R3kh5dT"
+      "blueId": "4h5N1XJhikomVgESoUQkDUs2Qfx1RK39JWGgd8HQXgEv"
     }
   },
   "precision": {
     "description": "Defines rounding rules and precision to be used in the rounding of observations.",
     "type": {
-      "blueId": "DnXzzassZD8x4ZyWkS46bBpvzPMBW4txNdG32xcULQhy"
+      "blueId": "BYetgNwutc7xjHHx9g7ZhsdKgyGYMd1UR4jDoHHafJHj"
     }
   }
 }

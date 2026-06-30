@@ -4,13 +4,13 @@
   "assetClass": {
     "description": "The Asset Class of the Index.",
     "type": {
-      "blueId": "7SEgYnbcXhWKAHMtc5CwTcvZ8JWeE8F687Hd7328mgJ9"
+      "blueId": "7TQnexn6ZGhptp1EP3RxiJM3434J7VHgDn7cvqXRvfvh"
     }
   },
   "exchange": {
     "description": "If the Asset is listed, defines the public exchange of the listing.",
     "type": {
-      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
     }
   },
   "excludedReferenceEntity": {
@@ -19,7 +19,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "21tUiXqcPZ47DD2nEZ5E9SUBV7kj7oUHASqgyyPNCnm7"
+      "blueId": "3eDfhc11LMfKiQsRKqD5mkN3csaNKJ4Yay8qPTE3sM5f"
     },
     "schema": {
       "minItems": 0
@@ -31,7 +31,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "GUT2oVFRefXcoq5yqjB5Pm8exmKiYH7iksr34CNZ7yjH"
+      "blueId": "B4oXDUH9jELDatvZSw3oWXtJefJ4ixYawEjxBMqSerth"
     },
     "schema": {
       "minItems": 1
@@ -46,7 +46,7 @@
   "indexAnnexSource": {
     "description": "A CDS index series annex source.",
     "type": {
-      "blueId": "4CmhkpynLWSo5owqAWd5TVHw9WP8xz82ZerWeEectzZv"
+      "blueId": "Ertdu3BkSJQ4wFYEPS4YyzEkSnGfu7XaooXCfRXXXENY"
     }
   },
   "indexAnnexVersion": {
@@ -76,7 +76,7 @@
   "provider": {
     "description": "The organisation that creates or maintains the Index.",
     "type": {
-      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
     }
   },
   "relatedExchange": {
@@ -85,7 +85,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "4NTWzTCk5xRuBvsT3TWEidJE9Kg11h8RU1bqZstGi9LS"
+      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
     },
     "schema": {
       "minItems": 0
@@ -94,13 +94,13 @@
   "seniority": {
     "description": "Seniority of debt instruments comprising the index.",
     "type": {
-      "blueId": "EURkUNg3iyiu6Ki46XfSicu1eMX2BbzKJrMJjZ76vdiJ"
+      "blueId": "Hu5VnYpz7ZCRzsMjDtVxSVoN2RK42N3T3a1rvcvnMAyV"
     }
   },
   "settledEntityMatrix": {
     "description": "Used to specify the Relevant Settled Entity Matrix when there are settled entities at the time of the trade.",
     "type": {
-      "blueId": "3XQqU6hjTNehCbVpVy5iZEXrQd9ffNSAAxNXJctsstbK"
+      "blueId": "4A1qUaufcqcuzgYMrhKzobEdbwF774fdj4o1nwgmxUdJ"
     }
   },
   "taxonomy": {
@@ -109,7 +109,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "8EKfmgSdnP6EYVXZagpfvygY1BhsDy43CQgKoKPw4Fio"
+      "blueId": "9MYk7MRYjbMWPHe7v3WexZqePowTL8eRrW8TmNNEtzQJ"
     },
     "schema": {
       "minItems": 0
@@ -118,7 +118,7 @@
   "tranche": {
     "description": "This element contains CDS tranche terms.",
     "type": {
-      "blueId": "aDvCozKvAwWf7xy5gDFQfBZJNDM7KsjHBzsuAhcN817"
+      "blueId": "AhnjPV8YNPhbAjozktmjeX2wDwUvX9j1SLMv3rUYCvk3"
     }
   }
 }

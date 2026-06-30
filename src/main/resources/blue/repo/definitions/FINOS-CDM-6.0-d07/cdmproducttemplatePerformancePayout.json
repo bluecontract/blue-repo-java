@@ -19,7 +19,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "2tVrnHV4rwPAivz8J6tdUF2i9wMRGNsWuP2JFQuM68TW"
+      "blueId": "HPRsaReKQuhsZQyFweRGJshuiWo9hd1r6CsmkM6iPQnN"
     },
     "schema": {
       "minItems": 0
@@ -52,19 +52,19 @@
   "observationTerms": {
     "description": "Defines how and when a performance type option or performance type swap is to be observed.",
     "type": {
-      "blueId": "FNoctYhsKwgCboDSosTkUysvMaBTvwKBpiXagnxJHGcW"
+      "blueId": "9pJEidhmAUQebdR3uTioauH2mNHR8RLS9r7xaB9vxpRd"
     }
   },
   "payerReceiver": {
     "description": "Canonical representation of the payer and receiver parties applicable to each payout leg.",
     "type": {
-      "blueId": "3TpG9LgXLfWvi64ZzRxGU2n5w7ZQAuAWReLvXTTaFgKQ"
+      "blueId": "3xPof2WJyFXisFtvaxpSGddTxHyGioazbsMJjuUucbzT"
     }
   },
   "paymentDates": {
     "description": "Defines the payment date schedule, as defined by the parameters that are needed to specify it, either in a parametric way or by reference to another schedule of dates (e.g. the valuation dates).\n",
     "type": {
-      "blueId": "CBUr6dnp1h3kfpUoLrpBXZBcvBQ9hmDnKezhtmhxPgi9"
+      "blueId": "23fb9HBYcZQ8enTm83iVQjixyTrHqNc5G1ANtAbB1ixz"
     },
     "schema": {
       "required": true
@@ -76,7 +76,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "2Xh7moC2QJbYy2RM9PLCBhn3T1YaL2G4A2xxtH7sqZZR"
+      "blueId": "E51UFE2FEkY3QMB4wW2zNBSjHwzSoUThQsP37iRWRLuD"
     },
     "schema": {
       "minItems": 0
@@ -85,25 +85,25 @@
   "priceQuantity": {
     "description": "Each payout leg must implement the quantity concept as a 'resolvable' type, which allows for different payout legs to be linked to each other (e.g. in the case of cross-curreny products).\n",
     "type": {
-      "blueId": "DmcMrxC2wq7pSMrRaCK5QHkx54U9EtEgZqojTkmfedRF"
+      "blueId": "7nSxNdghnPkGBbyqzqUELC5UcBMNfLdrCr4oXbav2d3J"
     }
   },
   "principalPayment": {
     "description": "The specification of the principal exchange. Optional as only applicable in the case of cross-currency or zero-coupon swaps with a final payment.\n",
     "type": {
-      "blueId": "Hxc4Dbr7nrj5XkPBBiJGhPhQVnfNHWHn21HViV1FpBGM"
+      "blueId": "8VsQE5PSzyWWApw5Ykfum97vLPNoa36BemLUMHimzMb5"
     }
   },
   "returnTerms": {
     "description": "Specifies the type of return of a performance payout.",
     "type": {
-      "blueId": "3omNSBtAn8AEeitT62cedsBDzqzPJSDpHn85P7HyTtoD"
+      "blueId": "3pA66XRhiAooUuGarBuys5JR2iwpE3DN1FJh1ToZzDfu"
     }
   },
   "settlementTerms": {
     "description": "Each payout leg must specifies its settlement terms, including the delivery type (i.e. cash vs physical, and their respective terms), the transfer type (DvP etc.) and settlement date, if any.\n",
     "type": {
-      "blueId": "EPxCD8mPcZ6C9kuDs2tinVLVsqMQscWZPLMhYaQ4n9co"
+      "blueId": "2qfdfn8VYJmiXxmTj9Vwfu1pB3jFJQK9WAShnf8n1r1m"
     }
   },
   "underlier": {
@@ -115,7 +115,7 @@
   "valuationDates": {
     "description": "Defines how and when a performance type option or performance type swap is to be valued, including both interim and final valuation.\n",
     "type": {
-      "blueId": "3cBd99L7MyBiag7p8zzhjJ2u52Nh4xxGjoAn8dH7uy8p"
+      "blueId": "UcvnGWBznJQMKxTqZfWEzoJ4bovdXYkn8PTxfrA9Kxt"
     },
     "schema": {
       "required": true

@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "Fixed",
-      "Variable"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Fixed"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Variable"
+      }
     ]
   }
 }

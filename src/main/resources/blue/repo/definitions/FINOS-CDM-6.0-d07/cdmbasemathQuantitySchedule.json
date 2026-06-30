@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "Fxnn5aWqQGPjDKxXxgjy5cDtNto3oNx5kS5q2tS6Vx7F"
+      "blueId": "9zYcb3FcpfuBbxSMqUwSRoYJ3gPs7Nv1qeZUmFvVniPL"
     },
     "schema": {
       "minItems": 0
@@ -16,19 +16,19 @@
   "frequency": {
     "description": "Defines the frequency to be used when defining a quantity. For example a quantity may be specified as a number of barrels of oil per day, which needs multiplying by the number of days in the relevant period to get the total quantity as a number of barrels.\n",
     "type": {
-      "blueId": "BbS2R4vTAzaWcAjrxZDSKHaoUGPU7Ykd8ZFE833RUgG7"
+      "blueId": "66A3jW7LyiNtMy7z2YQQFpSs2dyBatQtY1MXhCSnvNPC"
     }
   },
   "multiplier": {
     "description": "Defines an optional number that the quantity should be multiplied by to derive a total quantity. This number is associated to a unit. For example in the case of the Coal (API2) CIF ARA (ARGUS-McCloskey) Futures Contract on the CME, where the unit would be contracts, the multiplier value would 1,000 and the mulitiplier unit would be 1,000 MT (Metric Tons).\n",
     "type": {
-      "blueId": "AEQQZFaozyoKC3MBxy64bi4HpEtBak48DE6atPK1bYC1"
+      "blueId": "GdxjH3XMfuhBXiciCVsrgQC7QGBiz2DTWMg4SUHSMJTi"
     }
   },
   "unit": {
     "description": "Qualifies the unit by which the amount is measured. Optional because a measure may be unit-less (e.g. when representing a ratio between amounts in the same unit).\n",
     "type": {
-      "blueId": "9UsKi2Yv1HYTh1K6abCSAUtUoo8wGWPjkbsprN5X5mvr"
+      "blueId": "DJ7mNRisRDzwiXVunMHLfDzvMqVHiQo2iHab3fCmxUL7"
     }
   },
   "val": {

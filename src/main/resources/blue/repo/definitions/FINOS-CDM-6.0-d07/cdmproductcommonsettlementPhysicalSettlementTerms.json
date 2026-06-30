@@ -10,7 +10,7 @@
   "deliverableObligations": {
     "description": "This element contains all the ISDA terms relevant to defining the deliverable obligations.",
     "type": {
-      "blueId": "G69Dg3tENcZEEwGPzHfMCZpeEtdM6ZwpWY3LKxGuV8R1"
+      "blueId": "siew7R9pM49xxdDdrA2tnaBp8jSYtkNG6esorJcxELg"
     }
   },
   "escrow": {
@@ -28,7 +28,7 @@
   "predeterminedClearingOrganizationParty": {
     "description": "Specifies the clearing organization (CCP, DCO) to which the trade should be cleared.",
     "type": {
-      "blueId": "2YmGLtgJ5as5H64M8bRYDDRaGWwqzAGqrQSSzEm1Jvjm"
+      "blueId": "C2Ec7JF7c6QV6kD3Wb7Mtfg9NJ7aemu5KqHaafpZuEvN"
     }
   },
   "sixtyBusinessDaySettlementCap": {

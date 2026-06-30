@@ -3,7 +3,7 @@
   "description": "Specifies instructions for terms change consisting of the new transaction terms, and the renegotiation fee.",
   "adjustment": {
     "type": {
-      "blueId": "48JDEpkM8WR1yds2w2SWP5KCjtrwqaKCSP2cmxPxjgxY"
+      "blueId": "Fu36EUGcA7u8BqhZftYyUEUqgrd4mi4LXffiZx7DXTvo"
     }
   },
   "ancillaryParty": {
@@ -12,7 +12,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "BEZVkHKyDMsBjAmDVvYY7wpeyTRwsqcq12e6SpKHUxm6"
+      "blueId": "3FLaoJ8BXZUb3VpFoXQ7ACwUhTaDAZgwztubj17GegH4"
     },
     "schema": {
       "minItems": 0
@@ -21,7 +21,7 @@
   "product": {
     "description": "product to be changed",
     "type": {
-      "blueId": "9qWGsXauVnxS5oNKRAwfaMctCyeviwAypHKtHdS4HXZd#4"
+      "blueId": "8uQuzNQKBLC5kpFy4UH3BU7PPtpbRZEfLQ2ftrsgLHbm#4"
     }
   }
 }

@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "CdGh67FpM7EuwY9DiNzkNvxn9zmpEPUE2dbCxLwEspEW"
+      "blueId": "9Pn2rDgMph8R9xESVmd1HEN7zV1kPPCcUAMomnz2RDAT"
     },
     "schema": {
       "minItems": 1
@@ -16,7 +16,7 @@
   "marginCallAction": {
     "description": "Specifies the margin call action details, specified as either Delivery or Return.",
     "type": {
-      "blueId": "HLrSvugbtiErSMbzz2PSatSkJG7VWWXeHhF2sxCatuqa"
+      "blueId": "9CwCB3Fnvz24SzGuu8TbsuxrVJz8FFCvQCzGsfUyEjHK"
     },
     "schema": {
       "required": true

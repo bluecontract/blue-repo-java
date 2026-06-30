@@ -4,19 +4,19 @@
   "adjustableDates": {
     "description": "A series of dates that shall be subject to adjustment if they would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.\n",
     "type": {
-      "blueId": "AVEa3cHBFc7jh53rsx2pWGAwUUpJLSHnfwdjU8K2F8Er"
+      "blueId": "5JcKEFUStAenXhdmeTHE6nvpuhEjPvsvuge4TX2AuQrA"
     }
   },
   "periodicDates": {
     "description": "A calculation period schedule.",
     "type": {
-      "blueId": "CpcFaqDdJQ8XYfdxok2ySd75XES3aKvorUgbv25SG1d"
+      "blueId": "JBENwei996PNTBkNZUR1ojomCwz48ULaZEJoeaXxukmT"
     }
   },
   "relativeDates": {
     "description": "A series of dates specified as some offset to another series of dates (the anchor dates).",
     "type": {
-      "blueId": "ffUyEvaaqdBBm2s5LAxjVPYxafcimPQSYdjP5Kst7dK"
+      "blueId": "DXynKUQNFZU7oUmvsh7mUrjs7JL5RKXrrmkH9hZr99CL"
     }
   }
 }

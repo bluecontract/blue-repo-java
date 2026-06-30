@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("2eAfzX1VtdZzL6bM3t9Z3BnTdubwsAn2r2TgoBqnegUe")
+@TypeBlueId("3nrMEw5ojL2L4nx9YC3c3c4ANcs6gAFKkas7RgDE5Ao2")
 public class CdmBaseDatetimeCommodityBusinessCalendarEnum {
     public static String blueId() {
-        return "2eAfzX1VtdZzL6bM3t9Z3BnTdubwsAn2r2TgoBqnegUe";
+        return "3nrMEw5ojL2L4nx9YC3c3c4ANcs6gAFKkas7RgDE5Ao2";
     }
 
     public static String packageName() {

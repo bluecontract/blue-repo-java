@@ -4,7 +4,7 @@
   "calculationAgent": {
     "description": "The ISDA Calculation Agent responsible for performing duties associated with an optional early termination.",
     "type": {
-      "blueId": "83ZskooQhyiWk16zpdvkhMh9qwBm9bHyByQH4RxkYEyR"
+      "blueId": "FANsoqTgc5XxJH7orWbzRADwZ6drQjPzAbPN6YqvcYau"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "cashSettlement": {
     "description": "If specified, this means that cash settlement is applicable to the transaction and defines the parameters associated with the cash settlement procedure. If not specified, then physical settlement is applicable.\n",
     "type": {
-      "blueId": "EPxCD8mPcZ6C9kuDs2tinVLVsqMQscWZPLMhYaQ4n9co"
+      "blueId": "2qfdfn8VYJmiXxmTj9Vwfu1pB3jFJQK9WAShnf8n1r1m"
     },
     "schema": {
       "required": true
@@ -22,13 +22,13 @@
   "mandatoryEarlyTerminationAdjustedDates": {
     "description": "The adjusted dates associated with a mandatory early termination provision. These dates have been adjusted for any applicable business day convention.\n",
     "type": {
-      "blueId": "66XXZrW4apiDFikVhDV39jZpeMTG6oHtiLMpuyJfvJcL"
+      "blueId": "ENSK1BSQZtUz73JC51Ww2axF9BMWqhkBEE9AzutJiqoH"
     }
   },
   "mandatoryEarlyTerminationDate": {
     "description": "The early termination date associated with a mandatory early termination of a swap.",
     "type": {
-      "blueId": "vprnR4tQHf4wLZ7dp16UNnvc9DvyZpCLAWTNXcH1vQH"
+      "blueId": "GKy9ctegTJLwNAwxTMo1WX9xQCvWbzwntin4VStfEfDi"
     },
     "schema": {
       "required": true

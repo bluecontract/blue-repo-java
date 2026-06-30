@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("5aQGMvRRbnA89dRVLVFr9uxQHNZp95ceK8mHHwAdWat")
+@TypeBlueId("8ZhZC2EwhTqHnDvvcr2ZW4iwCBJM57NcLAqPCd8shypq")
 public class CdmBaseDatetimeBusinessDayAdjustments {
     public static String blueId() {
-        return "5aQGMvRRbnA89dRVLVFr9uxQHNZp95ceK8mHHwAdWat";
+        return "8ZhZC2EwhTqHnDvvcr2ZW4iwCBJM57NcLAqPCd8shypq";
     }
 
     public static String packageName() {

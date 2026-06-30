@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "PostHaircut",
-      "PreHaircut"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PostHaircut"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PreHaircut"
+      }
     ]
   }
 }

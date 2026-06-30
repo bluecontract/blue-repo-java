@@ -6,8 +6,18 @@
   },
   "schema": {
     "enum": [
-      "YearOnYear",
-      "ZeroCoupon"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "YearOnYear"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "ZeroCoupon"
+      }
     ]
   }
 }

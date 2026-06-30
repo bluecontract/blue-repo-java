@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "5Vjv2XQNPdtQNKN8mvEx3JGyY4QKNuVtTwTEo1HZ3Gxy"
+      "blueId": "8otMB7Qhn3fyzdqcuRMH14nKuDGiaWnjVXn45TJ7SBLR"
     },
     "schema": {
       "minItems": 0
@@ -16,7 +16,7 @@
   "primaryNotices": {
     "description": "Specification of primary notice details",
     "type": {
-      "blueId": "J722dCWWnZv47rzGnZF3uhEYkSgEZWdQGd9kmgfTMXEK"
+      "blueId": "9TmPYroGmuj6v7x9aMMV97Hqg4a4xhW19VqhcavbmgRL"
     },
     "schema": {
       "required": true

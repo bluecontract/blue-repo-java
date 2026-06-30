@@ -6,9 +6,24 @@
   },
   "schema": {
     "enum": [
-      "Confirmation",
-      "SupplementalMaterialEconomicTerms",
-      "TermSheet"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Confirmation"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "SupplementalMaterialEconomicTerms"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "TermSheet"
+      }
     ]
   }
 }

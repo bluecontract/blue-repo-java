@@ -5,10 +5,30 @@
   },
   "schema": {
     "enum": [
-      "FreelyAvailable",
-      "PaymentsDue",
-      "PaymentsDueAndFreelyAvailable",
-      "Specified"
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "FreelyAvailable"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PaymentsDue"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "PaymentsDueAndFreelyAvailable"
+      },
+      {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "Specified"
+      }
     ]
   }
 }
