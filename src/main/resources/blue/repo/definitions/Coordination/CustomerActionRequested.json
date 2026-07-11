@@ -2,7 +2,7 @@
   "name": "Customer Action Requested",
   "description": "Event requesting that a customer, user, or participant take an explicit action. This is typically emitted when an\nautomated workflow reaches a point that needs human review, consent, selection, confirmation, or additional input.\n\nThe event should describe the requested action in human-readable form and provide a deterministic list of allowed\nactions. The response should be represented by Customer Action Responded or a domain-specific response event.\n",
   "type": {
-    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
+    "blueId": "6XYXgjV6ja1oLqLCs3TWy4RP5UwmpPZKcppBfwwXcckU"
   },
   "title": {
     "description": "Title shown to the user or participant for the pending action.\n",

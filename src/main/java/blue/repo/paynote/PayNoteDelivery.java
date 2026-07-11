@@ -3,14 +3,14 @@ package blue.repo.paynote;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
+import blue.repo.bootstrap.DocumentBootstrapRequested;
 import blue.repo.common.Timestamp;
-import blue.repo.coordination.DocumentBootstrapRequested;
 import blue.repo.coordination.DocumentStatus;
 
-@TypeBlueId("EBVUtjFi2vMrdLXL3bKET1daRicUEgRXcYRDr8U1mX7T")
+@TypeBlueId("GpnyepMZZiMdqvgiCE7A5c52LPCc6e2SJr2CXp2rRNUy")
 public class PayNoteDelivery {
     public static String blueId() {
-        return "EBVUtjFi2vMrdLXL3bKET1daRicUEgRXcYRDr8U1mX7T";
+        return "GpnyepMZZiMdqvgiCE7A5c52LPCc6e2SJr2CXp2rRNUy";
     }
 
     public static String packageName() {

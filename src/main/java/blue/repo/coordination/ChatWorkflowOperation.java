@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("G889Jtx4DZPf5QkaEVNoQVUa4mA6EPzfbpT32ArvRhBv")
+@TypeBlueId("5EA4bKUfcjKdkRdPwfstyeqmZqURUkERARV2ocHDE5xE")
 public class ChatWorkflowOperation extends SequentialWorkflowOperation {
     public static String blueId() {
-        return "G889Jtx4DZPf5QkaEVNoQVUa4mA6EPzfbpT32ArvRhBv";
+        return "5EA4bKUfcjKdkRdPwfstyeqmZqURUkERARV2ocHDE5xE";
     }
 
     public static String packageName() {

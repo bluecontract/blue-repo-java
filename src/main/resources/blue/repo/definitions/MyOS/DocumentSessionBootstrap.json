@@ -2,7 +2,7 @@
   "name": "Document Session Bootstrap",
   "description": "MyOS-specific document for bootstrapping document sessions and tracking bootstrap progress",
   "type": {
-    "blueId": "cjPVQ6sifei7ryEsdwVhsYgHRXiAWMvaoQvrRo6LYRY"
+    "blueId": "7ZnSQEukZaByVG7mKfW86xXZPLfW8uTQgFRAa1PffftY"
   },
   "contracts": {
     "triggeredEventsChannel": {
@@ -54,7 +54,7 @@
                   },
                   "val": {
                     "type": {
-                      "blueId": "5BQB6Hsr3qxMsZikHdqd2LGeKdQafEQ4jo6TBqm9JZuB"
+                      "blueId": "CWnb7ngc7rpPVjn3eM8c6jZ6qQDGJzJcHKyARnXrSHiN"
                     }
                   }
                 }
@@ -313,11 +313,11 @@
                 {
                   "$appendEvent": {
                     "type": {
-                      "blueId": "8crrz93vvovMkh91qyLj6ajwEDAZw1DdTZ3NBjK6jaqV"
+                      "blueId": "B4btahVwY81bXQoXskPHEv3NrRPMYfXcR1fkUV8jcPne"
                     },
                     "status": {
                       "type": {
-                        "blueId": "BEc6aieqN1iaXT2bNQVag1a1cGygZCLCjXf3mvupetNg"
+                        "blueId": "FGhtoNCSpdvMk7ZK6V8g66aeLjSGVE14tjMZoV4xAhWF"
                       },
                       "mode": {
                         "type": {
@@ -435,11 +435,11 @@
                 {
                   "$appendEvent": {
                     "type": {
-                      "blueId": "8crrz93vvovMkh91qyLj6ajwEDAZw1DdTZ3NBjK6jaqV"
+                      "blueId": "B4btahVwY81bXQoXskPHEv3NrRPMYfXcR1fkUV8jcPne"
                     },
                     "status": {
                       "type": {
-                        "blueId": "6tenJidVxJRDqxtYM4xGs6fxD2E7MVvGQwv5rF4HnGsh"
+                        "blueId": "GeZWvUThNX3mSiYHbmQAjoE7tffzYFRiC4dktuRGe1sS"
                       },
                       "mode": {
                         "type": {
@@ -488,7 +488,7 @@
       },
       "event": {
         "type": {
-          "blueId": "8crrz93vvovMkh91qyLj6ajwEDAZw1DdTZ3NBjK6jaqV"
+          "blueId": "B4btahVwY81bXQoXskPHEv3NrRPMYfXcR1fkUV8jcPne"
         }
       },
       "steps": {

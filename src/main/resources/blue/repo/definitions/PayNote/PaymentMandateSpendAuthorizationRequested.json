@@ -2,7 +2,7 @@
   "name": "Payment Mandate Spend Authorization Requested",
   "description": "Bank asks a Payment Mandate document to authorize a single spend before reserve/capture execution.\n",
   "type": {
-    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
+    "blueId": "6XYXgjV6ja1oLqLCs3TWy4RP5UwmpPZKcppBfwwXcckU"
   },
   "authorizationId": {
     "description": "Correlation and idempotency key for a single authorization lifecycle.",

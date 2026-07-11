@@ -2,7 +2,7 @@
   "name": "Linked Card Charge Requested",
   "description": "Request to create a new card charge linked to the root card transaction context.",
   "type": {
-    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
+    "blueId": "6XYXgjV6ja1oLqLCs3TWy4RP5UwmpPZKcppBfwwXcckU"
   },
   "amount": {
     "description": "Charge amount in minor currency units.",

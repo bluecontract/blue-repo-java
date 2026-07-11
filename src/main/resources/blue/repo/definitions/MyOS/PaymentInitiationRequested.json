@@ -2,7 +2,7 @@
   "name": "Payment Initiation Requested",
   "description": "Request emitted from a payment source document when a payment initiation is requested.",
   "type": {
-    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
+    "blueId": "6XYXgjV6ja1oLqLCs3TWy4RP5UwmpPZKcppBfwwXcckU"
   },
   "idempotencyKey": {
     "description": "Caller-supplied key identifying one logical initiation attempt.",

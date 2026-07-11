@@ -2,7 +2,7 @@
   "name": "Subscribe to Session Requested",
   "description": "Document asks MyOS Admin to mediate a subscription to a target session it can READ.",
   "type": {
-    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
+    "blueId": "6XYXgjV6ja1oLqLCs3TWy4RP5UwmpPZKcppBfwwXcckU"
   },
   "targetSessionId": {
     "description": "Session to subscribe to.",

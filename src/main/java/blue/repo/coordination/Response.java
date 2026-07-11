@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk")
-public class Response extends Event {
+@TypeBlueId("4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH")
+public class Response extends Message {
     public static String blueId() {
-        return "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk";
+        return "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH";
     }
 
     public static String packageName() {
@@ -33,17 +33,6 @@ public class Response extends Event {
                 qualifiedName(),
                 blueId(),
                 resourcePath());
-    }
-
-    private Node inResponseTo;
-
-    public Node getInResponseTo() {
-        return inResponseTo;
-    }
-
-    public Response inResponseTo(Node inResponseTo) {
-        this.inResponseTo = inResponseTo;
-        return this;
     }
 
 }

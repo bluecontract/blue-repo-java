@@ -1,0 +1,28 @@
+{
+  "name": "Purpose Statement",
+  "description": "One participant-visible purpose statement. It may describe an authorized representative role, an intended request pattern and response operation, or a simple non-provider role such as observing. Purpose does not grant authority.\n",
+  "onBehalfOf": {
+    "description": "Optional authority explaining whom the participant represents. A mandate-backed purpose uses Mandate/Mandate Authority, which includes the represented actor and mandate.\n",
+    "type": {
+      "blueId": "5BrNKcZDq6q4UY1jQpjyeFjbTV6rxVKM9qNL5xzGMZRW"
+    }
+  },
+  "event": {
+    "description": "Optional request event type or pattern the participant intends to handle."
+  },
+  "respondsWith": {
+    "description": "Optional operation selectors the participant may use in response.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+    }
+  },
+  "summary": {
+    "description": "Optional human-readable explanation of the participant's purpose.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

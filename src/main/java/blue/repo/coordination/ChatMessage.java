@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("3GFJTYsNFHWqoWaMoXbmuNkNFwso6R1aPhN8f98yYaGR")
-public class ChatMessage extends Event {
+@TypeBlueId("FJt9ktsssczQeT3sRjMM83zbxy9jd9ZdS8ogKS8MTqvf")
+public class ChatMessage extends Message {
     public static String blueId() {
-        return "3GFJTYsNFHWqoWaMoXbmuNkNFwso6R1aPhN8f98yYaGR";
+        return "FJt9ktsssczQeT3sRjMM83zbxy9jd9ZdS8ogKS8MTqvf";
     }
 
     public static String packageName() {
@@ -37,23 +37,12 @@ public class ChatMessage extends Event {
 
     private String message;
 
-    private TimelineEntry replyTo;
-
     public String getMessage() {
         return message;
     }
 
     public ChatMessage message(String message) {
         this.message = message;
-        return this;
-    }
-
-    public TimelineEntry getReplyTo() {
-        return replyTo;
-    }
-
-    public ChatMessage replyTo(TimelineEntry replyTo) {
-        this.replyTo = replyTo;
         return this;
     }
 

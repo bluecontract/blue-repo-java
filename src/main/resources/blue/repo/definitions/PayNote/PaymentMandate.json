@@ -5,19 +5,19 @@
     "granterChannel": {
       "description": "Granting party timeline channel.",
       "type": {
-        "blueId": "DwLMXCJcg3AL4GHW1SjraxoNDPpswXH6RHsx4fNDT6rg"
+        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
       }
     },
     "granteeChannel": {
       "description": "Grantee timeline channel (party allowed to use the mandate).",
       "type": {
-        "blueId": "DwLMXCJcg3AL4GHW1SjraxoNDPpswXH6RHsx4fNDT6rg"
+        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
       }
     },
     "guarantorChannel": {
       "description": "Bank/admin channel executing mandate checks and settlement updates.",
       "type": {
-        "blueId": "DwLMXCJcg3AL4GHW1SjraxoNDPpswXH6RHsx4fNDT6rg"
+        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
       }
     },
     "initLifecycleChannel": {
@@ -82,7 +82,7 @@
       },
       "request": {
         "type": {
-          "blueId": "8jsJ7UY8wiQvDtpsjqXvnrQUMhqXZhfF6EKBzhtkUKqo"
+          "blueId": "5c5mfwYpEs3LLawHVLWJVUFTgqdSMGBCHG6iPaTmqefJ"
         }
       }
     },
@@ -1888,7 +1888,7 @@
                 {
                   "$appendEvent": {
                     "type": {
-                      "blueId": "F1JQhT1Fxn5QMcvtTUn95qvi7tTggAhv3nvQmHExUTuH"
+                      "blueId": "Cg8SSdLksJdyWoGcFvq4VvoGwMkcQY88rNdcA9qc734j"
                     },
                     "authorizationId": {
                       "$var": {
@@ -1985,7 +1985,7 @@
       },
       "request": {
         "type": {
-          "blueId": "7MrYz5SYkcN9b479w4R4M3JzsgWYuuJBhSfMLwSPdetk"
+          "blueId": "12zhLzvXiUjVQsbNQGRRZk15M1fc2WcohZ8Nbz7Wmd1m"
         }
       }
     },
@@ -4012,7 +4012,7 @@
                 {
                   "$appendEvent": {
                     "type": {
-                      "blueId": "CNxDfzH62fY9mtj71BTaZZNsyGLpS2RinaB6K34tibbh"
+                      "blueId": "AyxFRqp7CDgStXG1ATYUBmAVD62QAF3S3ZV867Q9iBAk"
                     },
                     "authorizationId": {
                       "$var": {

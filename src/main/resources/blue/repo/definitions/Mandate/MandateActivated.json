@@ -1,0 +1,16 @@
+{
+  "name": "Mandate Activated",
+  "description": "Authoritative Message emitted after the inherited mandate workflow\nsuccessfully changes the mandate from `Mandate/Status Authority Confirmed`\nto `Mandate/Status Active`.\n\nWhen activation follows Mandate Activation Requested, inResponseTo references\nthat exact Message occurrence.\n",
+  "type": {
+    "blueId": "768MxgQEHnLSkedHWHtjj43mAjH361Zf6pKZgVxi5po3"
+  },
+  "timestampUs": {
+    "description": "Effective activation timestamp derived from the root causal Timeline Entry.",
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

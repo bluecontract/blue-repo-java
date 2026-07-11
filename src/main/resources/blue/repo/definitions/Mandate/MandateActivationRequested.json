@@ -1,0 +1,7 @@
+{
+  "name": "Mandate Activation Requested",
+  "description": "Intermediate lifecycle Message requesting activation of a mandate in Mandate/Status Authority Confirmed.\n\nIt does not directly modify mandate state. Only the inherited\napplyMandateActivation workflow may transition the mandate to Mandate/Status Active and emit\nMandate/Mandate Activated.\n\nThe inherited Message correlation fields may be used. No lifecycle timestamp\nis supplied by this Message.\n",
+  "type": {
+    "blueId": "768MxgQEHnLSkedHWHtjj43mAjH361Zf6pKZgVxi5po3"
+  }
+}

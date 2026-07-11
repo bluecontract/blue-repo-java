@@ -2,7 +2,7 @@
   "name": "Start Worker Session Requested",
   "description": "Parent worker requests from MyOS Admin to start a new child session. Parent worker requires to have Worker Agency Permission Grant.",
   "type": {
-    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
+    "blueId": "6XYXgjV6ja1oLqLCs3TWy4RP5UwmpPZKcppBfwwXcckU"
   },
   "onBehalfOf": {
     "type": {
