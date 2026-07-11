@@ -1,0 +1,16 @@
+{
+  "name": "Mandate Authority Confirmed",
+  "description": "Authoritative Message emitted when the inherited mandate workflow\nsuccessfully confirms the declared authority relationship.\n\nConfirmation does not necessarily activate the mandate. When immediate\nactivation is enabled, this Message is followed by Mandate Activation\nRequested and, if accepted, Mandate Activated.\n",
+  "type": {
+    "blueId": "768MxgQEHnLSkedHWHtjj43mAjH361Zf6pKZgVxi5po3"
+  },
+  "timestampUs": {
+    "description": "Authority-confirmation timestamp derived from the root causal Timeline Entry.\n",
+    "type": {
+      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

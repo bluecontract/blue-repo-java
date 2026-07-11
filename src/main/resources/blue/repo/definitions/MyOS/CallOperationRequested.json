@@ -2,7 +2,7 @@
   "name": "Call Operation Requested",
   "description": "Document asks MyOS Admin to invoke an operation on a target session.",
   "type": {
-    "blueId": "67WiBLmgNLGfxz7EcReXicgopEBUqYcX6mFGe6YRXatw"
+    "blueId": "6XYXgjV6ja1oLqLCs3TWy4RP5UwmpPZKcppBfwwXcckU"
   },
   "onBehalfOf": {
     "description": "Channel whose binding provides the requester account.",

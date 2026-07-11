@@ -3,12 +3,13 @@ package blue.repo.coordination;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
+import blue.repo.mandate.MandateAuthority;
 import java.math.BigInteger;
 
-@TypeBlueId("HtPs8QJAUfc25fKanzLFjAqjbbhyFjDErYxjKdTCwARV")
+@TypeBlueId("ApAZHVVEaavMNqzootYiXZVCFUd7ZgLbbbHgTuS6vpkm#0")
 public class TimelineEntry {
     public static String blueId() {
-        return "HtPs8QJAUfc25fKanzLFjAqjbbhyFjDErYxjKdTCwARV";
+        return "ApAZHVVEaavMNqzootYiXZVCFUd7ZgLbbbHgTuS6vpkm#0";
     }
 
     public static String packageName() {
@@ -38,15 +39,17 @@ public class TimelineEntry {
 
     private Timeline timeline;
 
-    private Node prevEntry;
+    private BigInteger sequence;
 
-    private Node message;
+    private TimelineEntry prevEntry;
 
     private BigInteger timestamp;
 
     private Actor actor;
 
-    private Node source;
+    private MandateAuthority onBehalfOf;
+
+    private Node message;
 
     public Timeline getTimeline() {
         return timeline;
@@ -57,21 +60,21 @@ public class TimelineEntry {
         return this;
     }
 
-    public Node getPrevEntry() {
-        return prevEntry;
+    public BigInteger getSequence() {
+        return sequence;
     }
 
-    public TimelineEntry prevEntry(Node prevEntry) {
-        this.prevEntry = prevEntry;
+    public TimelineEntry sequence(BigInteger sequence) {
+        this.sequence = sequence;
         return this;
     }
 
-    public Node getMessage() {
-        return message;
+    public TimelineEntry getPrevEntry() {
+        return prevEntry;
     }
 
-    public TimelineEntry message(Node message) {
-        this.message = message;
+    public TimelineEntry prevEntry(TimelineEntry prevEntry) {
+        this.prevEntry = prevEntry;
         return this;
     }
 
@@ -93,12 +96,21 @@ public class TimelineEntry {
         return this;
     }
 
-    public Node getSource() {
-        return source;
+    public MandateAuthority getOnBehalfOf() {
+        return onBehalfOf;
     }
 
-    public TimelineEntry source(Node source) {
-        this.source = source;
+    public TimelineEntry onBehalfOf(MandateAuthority onBehalfOf) {
+        this.onBehalfOf = onBehalfOf;
+        return this;
+    }
+
+    public Node getMessage() {
+        return message;
+    }
+
+    public TimelineEntry message(Node message) {
+        this.message = message;
         return this;
     }
 

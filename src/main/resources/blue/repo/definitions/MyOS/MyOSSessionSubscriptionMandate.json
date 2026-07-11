@@ -1,0 +1,46 @@
+{
+  "name": "MyOS Session Subscription Mandate",
+  "description": "MyOS-hosted responder mandate allowing sessions of the inherited authorizedInitialDocument to request a provider-mediated subscription to a source logical document. The authority holder must control the source document or the explicitly constrained source session. The canonical subtype constrains the guarantor and authorized-actor roles to MyOS Admin.\n",
+  "type": {
+    "blueId": "9HtAHoZqLJ1EPBi8nPs8Vda89HCsZ85sgwSFdpKbdx22"
+  },
+  "contracts": {
+    "mandateGuarantorChannel": {
+      "actor": {
+        "type": {
+          "blueId": "Cr6tRv7ivrRLo3Gi2cuFJNCXmQHUdagv2AZ9CYqEZZe9"
+        }
+      }
+    },
+    "authorizedActorChannel": {
+      "actor": {
+        "type": {
+          "blueId": "Cr6tRv7ivrRLo3Gi2cuFJNCXmQHUdagv2AZ9CYqEZZe9"
+        }
+      }
+    }
+  },
+  "sourceInitialDocument": {
+    "description": "Initial document whose selected session may be observed.",
+    "schema": {
+      "required": true
+    }
+  },
+  "sourceDocumentSessionId": {
+    "description": "Optional concrete source session. When absent, MyOS Admin chooses an eligible session of sourceInitialDocument.\n",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "linkedDocuments": {
+    "allowedAnchors": {
+      "description": "Optional anchors from which linked-document subscriptions may be requested. More detailed filter restrictions may be expressed through inherited validation.\n",
+      "type": {
+        "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      },
+      "itemType": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
   "name": "Customer Action Responded",
   "description": "Event recording a customer's response to a previously requested action. It captures which action label was selected,\noptional input supplied by the customer, and the response time when available.\n\nThis event is not proof of authorization by itself. Actor and source attribution should come from the enclosing\nTimeline Entry or event source. Workflows should check Actor Policy when the response authorizes sensitive behavior.\n",
   "type": {
-    "blueId": "AQqdPmtKmB5VNH4rEbeKcRxsVStTTbJhS4fVF8wiTZrk"
+    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
   },
   "actionLabel": {
     "description": "Label of the selected action from the corresponding Customer Action Requested event.\n",

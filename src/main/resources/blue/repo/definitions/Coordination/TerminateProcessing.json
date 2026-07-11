@@ -1,0 +1,13 @@
+{
+  "name": "Terminate Processing",
+  "description": "Requests graceful termination of the current processing scope after all preceding workflow changes and emitted events have been applied. The Coordination runtime implements this step through the processor's buffered graceful-termination effect. At the root scope, the processor writes the standard Processing Terminated Marker and ends the processing run.\n",
+  "type": {
+    "blueId": "9oGn8V6FSVcJYhRfuHRShfWjiHBUqzxVi9StGtHZNfev"
+  },
+  "reason": {
+    "description": "Optional reason stored in the processor termination marker and lifecycle event.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

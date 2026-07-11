@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.coordination.Request;
 import java.math.BigInteger;
 
-@TypeBlueId("5EzstBLEcdv1qNVo8JYzxRd7T6P8fyZ5HrgN2fxz6CdX")
+@TypeBlueId("CNeTiNQt2BgJ7GTVjPGrCxmiXLeTGxchmZNb6j4NRbtA")
 public class LinkedCardChargeAndCaptureImmediatelyRequested extends Request {
     public static String blueId() {
-        return "5EzstBLEcdv1qNVo8JYzxRd7T6P8fyZ5HrgN2fxz6CdX";
+        return "CNeTiNQt2BgJ7GTVjPGrCxmiXLeTGxchmZNb6j4NRbtA";
     }
 
     public static String packageName() {

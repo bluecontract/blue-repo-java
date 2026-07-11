@@ -5,13 +5,13 @@
     "payNoteSender": {
       "description": "Participant submitting the PayNote delivery (merchant or processor).",
       "type": {
-        "blueId": "DwLMXCJcg3AL4GHW1SjraxoNDPpswXH6RHsx4fNDT6rg"
+        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
       }
     },
     "payNoteDeliverer": {
       "description": "Participant delivering and reporting status (e.g., bank).",
       "type": {
-        "blueId": "DwLMXCJcg3AL4GHW1SjraxoNDPpswXH6RHsx4fNDT6rg"
+        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
       }
     },
     "initLifecycleChannel": {
@@ -58,7 +58,7 @@
                   },
                   "val": {
                     "type": {
-                      "blueId": "CE3FgdBrYRhs4Vvz93ArW8TvzWgQvouEyuJ72bGiidXS"
+                      "blueId": "FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc"
                     }
                   }
                 },
@@ -349,7 +349,7 @@
                               },
                               "then": {
                                 "type": {
-                                  "blueId": "5BQB6Hsr3qxMsZikHdqd2LGeKdQafEQ4jo6TBqm9JZuB"
+                                  "blueId": "CWnb7ngc7rpPVjn3eM8c6jZ6qQDGJzJcHKyARnXrSHiN"
                                 },
                                 "mode": {
                                   "type": {
@@ -360,7 +360,7 @@
                               },
                               "else": {
                                 "type": {
-                                  "blueId": "6tenJidVxJRDqxtYM4xGs6fxD2E7MVvGQwv5rF4HnGsh"
+                                  "blueId": "GeZWvUThNX3mSiYHbmQAjoE7tffzYFRiC4dktuRGe1sS"
                                 },
                                 "mode": {
                                   "type": {
@@ -384,7 +384,7 @@
                                 },
                                 {
                                   "type": {
-                                    "blueId": "CE3FgdBrYRhs4Vvz93ArW8TvzWgQvouEyuJ72bGiidXS"
+                                    "blueId": "FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc"
                                   },
                                   "mode": {
                                     "type": {
@@ -1103,7 +1103,7 @@
                               },
                               "then": {
                                 "type": {
-                                  "blueId": "BEc6aieqN1iaXT2bNQVag1a1cGygZCLCjXf3mvupetNg"
+                                  "blueId": "FGhtoNCSpdvMk7ZK6V8g66aeLjSGVE14tjMZoV4xAhWF"
                                 },
                                 "mode": {
                                   "type": {
@@ -1125,7 +1125,7 @@
                                     },
                                     {
                                       "type": {
-                                        "blueId": "CE3FgdBrYRhs4Vvz93ArW8TvzWgQvouEyuJ72bGiidXS"
+                                        "blueId": "FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc"
                                       },
                                       "mode": {
                                         "type": {
@@ -1952,7 +1952,7 @@
                               },
                               "then": {
                                 "type": {
-                                  "blueId": "6tenJidVxJRDqxtYM4xGs6fxD2E7MVvGQwv5rF4HnGsh"
+                                  "blueId": "GeZWvUThNX3mSiYHbmQAjoE7tffzYFRiC4dktuRGe1sS"
                                 },
                                 "mode": {
                                   "type": {
@@ -1974,7 +1974,7 @@
                                     },
                                     {
                                       "type": {
-                                        "blueId": "CE3FgdBrYRhs4Vvz93ArW8TvzWgQvouEyuJ72bGiidXS"
+                                        "blueId": "FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc"
                                       },
                                       "mode": {
                                         "type": {
@@ -2335,7 +2335,7 @@
                     },
                     "val": {
                       "type": {
-                        "blueId": "6tenJidVxJRDqxtYM4xGs6fxD2E7MVvGQwv5rF4HnGsh"
+                        "blueId": "GeZWvUThNX3mSiYHbmQAjoE7tffzYFRiC4dktuRGe1sS"
                       },
                       "mode": {
                         "type": {
@@ -2400,22 +2400,22 @@
   "payNoteBootstrapRequest": {
     "description": "PayNote bootstrap request details.",
     "type": {
-      "blueId": "3Uch8WXAZXUnHiWYF1Y2KaDBnfAFyUbZoDkeoPRYHZWC"
+      "blueId": "DGtbvBCuFFKAH3ncDb6LAibSAq8Smr5oChLSdvNvGuZu"
     },
     "document": {
       "type": {
-        "blueId": "BKG9wBym4uT1s1Zd62mhVVNPshWpDf8Dgt6oqgTJMPCV"
+        "blueId": "7k3iQ1VBArSDnj4giRXyGp5nEMP3J6pXd1nRWvXHdf5G"
       }
     }
   },
   "paymentMandateBootstrapRequest": {
     "description": "Optional Payment Mandate bootstrap request details for Delivery flows that require mandate attachment before proposal exposure.",
     "type": {
-      "blueId": "3Uch8WXAZXUnHiWYF1Y2KaDBnfAFyUbZoDkeoPRYHZWC"
+      "blueId": "DGtbvBCuFFKAH3ncDb6LAibSAq8Smr5oChLSdvNvGuZu"
     },
     "document": {
       "type": {
-        "blueId": "CGQTbEzX4HVwRKhD8qc9pSEgmVPJFRf5ermrcasyiu3P"
+        "blueId": "4AT8fhRxHuLYRFrcRrmxJgTxAcv1ucnDfkDSRejJ8hS8"
       }
     }
   },

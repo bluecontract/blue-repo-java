@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.coordination.Request;
 import java.math.BigInteger;
 
-@TypeBlueId("9wv1GB7j71PTZFYmatANzxk34KPaCeouB4yc4AxYirrU")
+@TypeBlueId("3YBnYuYiQh1DtRuci5eZexXuEPuorJar4KefKAJQdPZr")
 public class ReservationReleaseRequested extends Request {
     public static String blueId() {
-        return "9wv1GB7j71PTZFYmatANzxk34KPaCeouB4yc4AxYirrU";
+        return "3YBnYuYiQh1DtRuci5eZexXuEPuorJar4KefKAJQdPZr";
     }
 
     public static String packageName() {

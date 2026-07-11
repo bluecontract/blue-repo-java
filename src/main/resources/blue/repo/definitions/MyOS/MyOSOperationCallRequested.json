@@ -1,0 +1,42 @@
+{
+  "name": "MyOS Operation Call Requested",
+  "description": "Request asking MyOS Admin to write an Operation Request into a target document. The request does not carry a mandate; MyOS Admin finds and verifies an active matching MyOS Document Operation Mandate.\n",
+  "type": {
+    "blueId": "6XYXgjV6ja1oLqLCs3TWy4RP5UwmpPZKcppBfwwXcckU"
+  },
+  "target": {
+    "document": {
+      "description": "Current target document state used as the basis for the call.",
+      "schema": {
+        "required": true
+      }
+    },
+    "channel": {
+      "description": "Effective target channel.",
+      "type": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      },
+      "schema": {
+        "required": true
+      }
+    },
+    "operation": {
+      "description": "Target operation.",
+      "type": {
+        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      },
+      "schema": {
+        "required": true
+      }
+    },
+    "requireExactDocumentVersion": {
+      "description": "Whether the target Operation Request requires exact target-state equality.",
+      "type": {
+        "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+      }
+    }
+  },
+  "request": {
+    "description": "Target operation payload."
+  }
+}

@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.common.Timestamp;
 import blue.repo.coordination.Response;
 
-@TypeBlueId("FKW7FJk8UxqKkYsPfGBwv3sWdBrgiaV1emVVWj1RFTA6")
+@TypeBlueId("43LubJTPxDs9RGM7bcXwZpyczAstFCsjCkFZgk9zvfAc")
 public class CardTransactionCaptureUnlocked extends Response {
     public static String blueId() {
-        return "FKW7FJk8UxqKkYsPfGBwv3sWdBrgiaV1emVVWj1RFTA6";
+        return "43LubJTPxDs9RGM7bcXwZpyczAstFCsjCkFZgk9zvfAc";
     }
 
     public static String packageName() {

@@ -97,16 +97,16 @@ class BlueRepositoryTest {
         Blue blue = repo.configure(new Blue());
 
         Node document = new Node()
-                .name("message")
-                .type(CoordinationTypes.CHAT_MESSAGE.reference())
-                .properties("message", new Node().value("hello"));
+                .name("operation")
+                .type(CoordinationTypes.OPERATION.reference())
+                .properties("channel", new Node().value("timeline"));
 
         Node resolved = blue.resolve(document);
 
         assertNotNull(resolved.getType());
-        assertEquals(CoordinationTypes.CHAT_MESSAGE.blueId(), resolved.getType().getBlueId());
-        assertEquals("Chat Message", resolved.getType().getName());
-        assertNotNull(resolved.getProperties().get("message").getType());
+        assertEquals(CoordinationTypes.OPERATION.blueId(), resolved.getType().getBlueId());
+        assertEquals("Operation", resolved.getType().getName());
+        assertNotNull(resolved.getProperties().get("channel").getType());
     }
 
     @Test
@@ -313,7 +313,7 @@ class BlueRepositoryTest {
         assertEquals(CoordinationTypes.TIMELINE_CHANNEL.blueId(),
                 repo.typeAliases().get("Coordination/Timeline Channel"));
 
-        Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterDocumentYaml(), Node.class)
+        Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterDocumentWithTimelineYaml(), Node.class)
                 .blue(repo.typeAliasBlue());
         Node preprocessed = repo.configure(new Blue()).preprocess(document);
         Map<String, Node> contracts = preprocessed.getContracts().getProperties();
@@ -329,7 +329,7 @@ class BlueRepositoryTest {
         BlueRepository repo = BlueRepository.v1_3_0();
         Blue blue = repo.configure(new Blue());
 
-        Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterDocumentYaml(), Node.class)
+        Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterWorkflowDocumentYaml(), Node.class)
                 .blue(repo.typeAliasBlue());
         Node resolved = blue.resolve(blue.preprocess(document));
         Node incrementImpl = resolved.getContracts()
@@ -683,13 +683,29 @@ class BlueRepositoryTest {
         return () -> iterator;
     }
 
-    private static String counterDocumentYaml() {
+    private static String counterDocumentWithTimelineYaml() {
         return ""
                 + "name: Counter\n"
                 + "contracts:\n"
                 + "  timeline:\n"
                 + "    type: Coordination/Timeline Channel\n"
                 + "    timelineId: counter-events\n"
+                + "  incrementImpl:\n"
+                + "    type: Coordination/Sequential Workflow Operation\n"
+                + "    channel: timeline\n"
+                + "    steps:\n"
+                + "      - type: Coordination/Update Document\n"
+                + "        changeset:\n"
+                + "          - op: replace\n"
+                + "            path: /count\n"
+                + "            val: 1\n"
+                + "count: 0\n";
+    }
+
+    private static String counterWorkflowDocumentYaml() {
+        return ""
+                + "name: Counter\n"
+                + "contracts:\n"
                 + "  incrementImpl:\n"
                 + "    type: Coordination/Sequential Workflow Operation\n"
                 + "    channel: timeline\n"

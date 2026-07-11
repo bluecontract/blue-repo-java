@@ -1,0 +1,23 @@
+{
+  "name": "MyOS Document Bootstrap Mandate",
+  "description": "MyOS-hosted responder mandate allowing sessions of the inherited authorizedInitialDocument to request bootstrap work from MyOS Admin. The canonical subtype constrains the guarantor and authorized-actor roles to MyOS Admin. Allowed document, channel-binding, initial-message, and on-behalf-of constraints are expressed through inherited validation.\n",
+  "type": {
+    "blueId": "9HtAHoZqLJ1EPBi8nPs8Vda89HCsZ85sgwSFdpKbdx22"
+  },
+  "contracts": {
+    "mandateGuarantorChannel": {
+      "actor": {
+        "type": {
+          "blueId": "Cr6tRv7ivrRLo3Gi2cuFJNCXmQHUdagv2AZ9CYqEZZe9"
+        }
+      }
+    },
+    "authorizedActorChannel": {
+      "actor": {
+        "type": {
+          "blueId": "Cr6tRv7ivrRLo3Gi2cuFJNCXmQHUdagv2AZ9CYqEZZe9"
+        }
+      }
+    }
+  }
+}

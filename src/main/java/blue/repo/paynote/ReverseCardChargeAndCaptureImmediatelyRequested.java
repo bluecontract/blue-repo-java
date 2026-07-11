@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.coordination.Request;
 import java.math.BigInteger;
 
-@TypeBlueId("8Yvq4VCuntJBda3PDdVi2GEnCpi1UHVUZhmZBt4599aa")
+@TypeBlueId("4yJfdAuMrzyVQPsopWMfw24CiW2xj31jC4oCwhXmPG8V")
 public class ReverseCardChargeAndCaptureImmediatelyRequested extends Request {
     public static String blueId() {
-        return "8Yvq4VCuntJBda3PDdVi2GEnCpi1UHVUZhmZBt4599aa";
+        return "4yJfdAuMrzyVQPsopWMfw24CiW2xj31jC4oCwhXmPG8V";
     }
 
     public static String packageName() {

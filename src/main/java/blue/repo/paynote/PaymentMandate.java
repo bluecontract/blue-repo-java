@@ -9,10 +9,10 @@ import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
 
-@TypeBlueId("CGQTbEzX4HVwRKhD8qc9pSEgmVPJFRf5ermrcasyiu3P")
+@TypeBlueId("4AT8fhRxHuLYRFrcRrmxJgTxAcv1ucnDfkDSRejJ8hS8")
 public class PaymentMandate {
     public static String blueId() {
-        return "CGQTbEzX4HVwRKhD8qc9pSEgmVPJFRf5ermrcasyiu3P";
+        return "4AT8fhRxHuLYRFrcRrmxJgTxAcv1ucnDfkDSRejJ8hS8";
     }
 
     public static String packageName() {

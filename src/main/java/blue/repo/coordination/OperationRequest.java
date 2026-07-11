@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("4KTmYtrEE7AALwixVdiXnMCq6No9h8cvHyD2a521jgAg")
-public class OperationRequest {
+@TypeBlueId("CGmKUxvZgboHHdQwxR8jmDWJTmZazi9UTLVgArRyqLmt")
+public class OperationRequest extends Request {
     public static String blueId() {
-        return "4KTmYtrEE7AALwixVdiXnMCq6No9h8cvHyD2a521jgAg";
+        return "CGmKUxvZgboHHdQwxR8jmDWJTmZazi9UTLVgArRyqLmt";
     }
 
     public static String packageName() {
@@ -37,11 +37,13 @@ public class OperationRequest {
 
     private String operation;
 
-    private Node request;
+    private String channel;
 
     private Node document;
 
-    private Boolean allowNewerVersion;
+    private Boolean requireExactDocumentVersion;
+
+    private Node request;
 
     public String getOperation() {
         return operation;
@@ -52,12 +54,12 @@ public class OperationRequest {
         return this;
     }
 
-    public Node getRequest() {
-        return request;
+    public String getChannel() {
+        return channel;
     }
 
-    public OperationRequest request(Node request) {
-        this.request = request;
+    public OperationRequest channel(String channel) {
+        this.channel = channel;
         return this;
     }
 
@@ -70,12 +72,21 @@ public class OperationRequest {
         return this;
     }
 
-    public Boolean getAllowNewerVersion() {
-        return allowNewerVersion;
+    public Boolean getRequireExactDocumentVersion() {
+        return requireExactDocumentVersion;
     }
 
-    public OperationRequest allowNewerVersion(Boolean allowNewerVersion) {
-        this.allowNewerVersion = allowNewerVersion;
+    public OperationRequest requireExactDocumentVersion(Boolean requireExactDocumentVersion) {
+        this.requireExactDocumentVersion = requireExactDocumentVersion;
+        return this;
+    }
+
+    public Node getRequest() {
+        return request;
+    }
+
+    public OperationRequest request(Node request) {
+        this.request = request;
         return this;
     }
 

@@ -24,31 +24,29 @@ import blue.repo.myos.DocumentSessionBootstrap;
 import blue.repo.myos.DocumentTypeLink;
 import blue.repo.myos.InformUserToInstallMyOSPackage;
 import blue.repo.myos.Link;
-import blue.repo.myos.LinkedDocumentsPermissionGrantRequested;
-import blue.repo.myos.LinkedDocumentsPermissionGrantToAccount;
-import blue.repo.myos.LinkedDocumentsPermissionGrantToDocument;
-import blue.repo.myos.LinkedDocumentsPermissionGranted;
-import blue.repo.myos.LinkedDocumentsPermissionGrantingInProgress;
-import blue.repo.myos.LinkedDocumentsPermissionInvalid;
-import blue.repo.myos.LinkedDocumentsPermissionRejected;
-import blue.repo.myos.LinkedDocumentsPermissionRevokeRequested;
-import blue.repo.myos.LinkedDocumentsPermissionRevoked;
-import blue.repo.myos.LinkedDocumentsPermissionRevokingInProgress;
-import blue.repo.myos.LinkedDocumentsPermissionSet;
-import blue.repo.myos.LinkedDocumentsPermissionValidated;
 import blue.repo.myos.LLMAgent;
+import blue.repo.myos.MyOSAdminActor;
 import blue.repo.myos.MyOSAdminBase;
 import blue.repo.myos.MyOSAgent;
 import blue.repo.myos.MyOSAgentActor;
 import blue.repo.myos.MyOSAgentChannel;
 import blue.repo.myos.MyOSAgentEvent;
 import blue.repo.myos.MyOSBalanceAccount;
+import blue.repo.myos.MyOSDocumentBootstrapMandate;
+import blue.repo.myos.MyOSDocumentOperationMandate;
 import blue.repo.myos.MyOSDocumentSessionReference;
+import blue.repo.myos.MyOSOperationCallRequested;
 import blue.repo.myos.MyOSPackage;
 import blue.repo.myos.MyOSParticipantsOrchestration;
 import blue.repo.myos.MyOSPrincipalActor;
 import blue.repo.myos.MyOSSessionInteraction;
 import blue.repo.myos.MyOSSessionLink;
+import blue.repo.myos.MyOSSessionSubscriptionEnded;
+import blue.repo.myos.MyOSSessionSubscriptionFilter;
+import blue.repo.myos.MyOSSessionSubscriptionMandate;
+import blue.repo.myos.MyOSSessionSubscriptionRequested;
+import blue.repo.myos.MyOSSessionSubscriptionStarted;
+import blue.repo.myos.MyOSSessionSubscriptionUpdate;
 import blue.repo.myos.MyOSTimeline;
 import blue.repo.myos.MyOSTimelineChannel;
 import blue.repo.myos.MyOSTimelineEntry;
@@ -70,19 +68,6 @@ import blue.repo.myos.RemovingParticipantRequested;
 import blue.repo.myos.RemovingParticipantResponded;
 import blue.repo.myos.SearchContract;
 import blue.repo.myos.SessionEpochAdvanced;
-import blue.repo.myos.SingleDocumentPermissionGrantRequested;
-import blue.repo.myos.SingleDocumentPermissionGrantResponded;
-import blue.repo.myos.SingleDocumentPermissionGrantToAccount;
-import blue.repo.myos.SingleDocumentPermissionGrantToDocument;
-import blue.repo.myos.SingleDocumentPermissionGranted;
-import blue.repo.myos.SingleDocumentPermissionGrantingInProgress;
-import blue.repo.myos.SingleDocumentPermissionInvalid;
-import blue.repo.myos.SingleDocumentPermissionRejected;
-import blue.repo.myos.SingleDocumentPermissionRevokeRequested;
-import blue.repo.myos.SingleDocumentPermissionRevoked;
-import blue.repo.myos.SingleDocumentPermissionRevokingInProgress;
-import blue.repo.myos.SingleDocumentPermissionSet;
-import blue.repo.myos.SingleDocumentPermissionValidated;
 import blue.repo.myos.StartWorkerSessionRequested;
 import blue.repo.myos.SubscribeToSessionRequested;
 import blue.repo.myos.SubscriptionToSessionFailed;
@@ -90,17 +75,6 @@ import blue.repo.myos.SubscriptionToSessionInitiated;
 import blue.repo.myos.SubscriptionToSessionRevoked;
 import blue.repo.myos.SubscriptionUpdate;
 import blue.repo.myos.TargetDocumentSessionStarted;
-import blue.repo.myos.WorkerAgencyPermission;
-import blue.repo.myos.WorkerAgencyPermissionGrant;
-import blue.repo.myos.WorkerAgencyPermissionGrantRequested;
-import blue.repo.myos.WorkerAgencyPermissionGranted;
-import blue.repo.myos.WorkerAgencyPermissionGrantingInProgress;
-import blue.repo.myos.WorkerAgencyPermissionInvalid;
-import blue.repo.myos.WorkerAgencyPermissionRejected;
-import blue.repo.myos.WorkerAgencyPermissionRevokeRequested;
-import blue.repo.myos.WorkerAgencyPermissionRevoked;
-import blue.repo.myos.WorkerAgencyPermissionRevokingInProgress;
-import blue.repo.myos.WorkerAgencyPermissionValidated;
 import blue.repo.myos.WorkerSessionStarting;
 
 public final class MyOSTypes {
@@ -148,31 +122,9 @@ public final class MyOSTypes {
 
     public static final RepositoryType LINK = Link.repositoryType();
 
-    public static final RepositoryType LINKED_DOCUMENTS_PERMISSION_GRANT_REQUESTED = LinkedDocumentsPermissionGrantRequested.repositoryType();
-
-    public static final RepositoryType LINKED_DOCUMENTS_PERMISSION_GRANT_TO_ACCOUNT = LinkedDocumentsPermissionGrantToAccount.repositoryType();
-
-    public static final RepositoryType LINKED_DOCUMENTS_PERMISSION_GRANT_TO_DOCUMENT = LinkedDocumentsPermissionGrantToDocument.repositoryType();
-
-    public static final RepositoryType LINKED_DOCUMENTS_PERMISSION_GRANTED = LinkedDocumentsPermissionGranted.repositoryType();
-
-    public static final RepositoryType LINKED_DOCUMENTS_PERMISSION_GRANTING_IN_PROGRESS = LinkedDocumentsPermissionGrantingInProgress.repositoryType();
-
-    public static final RepositoryType LINKED_DOCUMENTS_PERMISSION_INVALID = LinkedDocumentsPermissionInvalid.repositoryType();
-
-    public static final RepositoryType LINKED_DOCUMENTS_PERMISSION_REJECTED = LinkedDocumentsPermissionRejected.repositoryType();
-
-    public static final RepositoryType LINKED_DOCUMENTS_PERMISSION_REVOKE_REQUESTED = LinkedDocumentsPermissionRevokeRequested.repositoryType();
-
-    public static final RepositoryType LINKED_DOCUMENTS_PERMISSION_REVOKED = LinkedDocumentsPermissionRevoked.repositoryType();
-
-    public static final RepositoryType LINKED_DOCUMENTS_PERMISSION_REVOKING_IN_PROGRESS = LinkedDocumentsPermissionRevokingInProgress.repositoryType();
-
-    public static final RepositoryType LINKED_DOCUMENTS_PERMISSION_SET = LinkedDocumentsPermissionSet.repositoryType();
-
-    public static final RepositoryType LINKED_DOCUMENTS_PERMISSION_VALIDATED = LinkedDocumentsPermissionValidated.repositoryType();
-
     public static final RepositoryType LLM_AGENT = LLMAgent.repositoryType();
+
+    public static final RepositoryType MYOS_ADMIN_ACTOR = MyOSAdminActor.repositoryType();
 
     public static final RepositoryType MYOS_ADMIN_BASE = MyOSAdminBase.repositoryType();
 
@@ -186,7 +138,13 @@ public final class MyOSTypes {
 
     public static final RepositoryType MYOS_BALANCE_ACCOUNT = MyOSBalanceAccount.repositoryType();
 
+    public static final RepositoryType MYOS_DOCUMENT_BOOTSTRAP_MANDATE = MyOSDocumentBootstrapMandate.repositoryType();
+
+    public static final RepositoryType MYOS_DOCUMENT_OPERATION_MANDATE = MyOSDocumentOperationMandate.repositoryType();
+
     public static final RepositoryType MYOS_DOCUMENT_SESSION_REFERENCE = MyOSDocumentSessionReference.repositoryType();
+
+    public static final RepositoryType MYOS_OPERATION_CALL_REQUESTED = MyOSOperationCallRequested.repositoryType();
 
     public static final RepositoryType MYOS_PACKAGE = MyOSPackage.repositoryType();
 
@@ -197,6 +155,18 @@ public final class MyOSTypes {
     public static final RepositoryType MYOS_SESSION_INTERACTION = MyOSSessionInteraction.repositoryType();
 
     public static final RepositoryType MYOS_SESSION_LINK = MyOSSessionLink.repositoryType();
+
+    public static final RepositoryType MYOS_SESSION_SUBSCRIPTION_ENDED = MyOSSessionSubscriptionEnded.repositoryType();
+
+    public static final RepositoryType MYOS_SESSION_SUBSCRIPTION_FILTER = MyOSSessionSubscriptionFilter.repositoryType();
+
+    public static final RepositoryType MYOS_SESSION_SUBSCRIPTION_MANDATE = MyOSSessionSubscriptionMandate.repositoryType();
+
+    public static final RepositoryType MYOS_SESSION_SUBSCRIPTION_REQUESTED = MyOSSessionSubscriptionRequested.repositoryType();
+
+    public static final RepositoryType MYOS_SESSION_SUBSCRIPTION_STARTED = MyOSSessionSubscriptionStarted.repositoryType();
+
+    public static final RepositoryType MYOS_SESSION_SUBSCRIPTION_UPDATE = MyOSSessionSubscriptionUpdate.repositoryType();
 
     public static final RepositoryType MYOS_TIMELINE = MyOSTimeline.repositoryType();
 
@@ -240,32 +210,6 @@ public final class MyOSTypes {
 
     public static final RepositoryType SESSION_EPOCH_ADVANCED = SessionEpochAdvanced.repositoryType();
 
-    public static final RepositoryType SINGLE_DOCUMENT_PERMISSION_GRANT_REQUESTED = SingleDocumentPermissionGrantRequested.repositoryType();
-
-    public static final RepositoryType SINGLE_DOCUMENT_PERMISSION_GRANT_RESPONDED = SingleDocumentPermissionGrantResponded.repositoryType();
-
-    public static final RepositoryType SINGLE_DOCUMENT_PERMISSION_GRANT_TO_ACCOUNT = SingleDocumentPermissionGrantToAccount.repositoryType();
-
-    public static final RepositoryType SINGLE_DOCUMENT_PERMISSION_GRANT_TO_DOCUMENT = SingleDocumentPermissionGrantToDocument.repositoryType();
-
-    public static final RepositoryType SINGLE_DOCUMENT_PERMISSION_GRANTED = SingleDocumentPermissionGranted.repositoryType();
-
-    public static final RepositoryType SINGLE_DOCUMENT_PERMISSION_GRANTING_IN_PROGRESS = SingleDocumentPermissionGrantingInProgress.repositoryType();
-
-    public static final RepositoryType SINGLE_DOCUMENT_PERMISSION_INVALID = SingleDocumentPermissionInvalid.repositoryType();
-
-    public static final RepositoryType SINGLE_DOCUMENT_PERMISSION_REJECTED = SingleDocumentPermissionRejected.repositoryType();
-
-    public static final RepositoryType SINGLE_DOCUMENT_PERMISSION_REVOKE_REQUESTED = SingleDocumentPermissionRevokeRequested.repositoryType();
-
-    public static final RepositoryType SINGLE_DOCUMENT_PERMISSION_REVOKED = SingleDocumentPermissionRevoked.repositoryType();
-
-    public static final RepositoryType SINGLE_DOCUMENT_PERMISSION_REVOKING_IN_PROGRESS = SingleDocumentPermissionRevokingInProgress.repositoryType();
-
-    public static final RepositoryType SINGLE_DOCUMENT_PERMISSION_SET = SingleDocumentPermissionSet.repositoryType();
-
-    public static final RepositoryType SINGLE_DOCUMENT_PERMISSION_VALIDATED = SingleDocumentPermissionValidated.repositoryType();
-
     public static final RepositoryType START_WORKER_SESSION_REQUESTED = StartWorkerSessionRequested.repositoryType();
 
     public static final RepositoryType SUBSCRIBE_TO_SESSION_REQUESTED = SubscribeToSessionRequested.repositoryType();
@@ -279,28 +223,6 @@ public final class MyOSTypes {
     public static final RepositoryType SUBSCRIPTION_UPDATE = SubscriptionUpdate.repositoryType();
 
     public static final RepositoryType TARGET_DOCUMENT_SESSION_STARTED = TargetDocumentSessionStarted.repositoryType();
-
-    public static final RepositoryType WORKER_AGENCY_PERMISSION = WorkerAgencyPermission.repositoryType();
-
-    public static final RepositoryType WORKER_AGENCY_PERMISSION_GRANT = WorkerAgencyPermissionGrant.repositoryType();
-
-    public static final RepositoryType WORKER_AGENCY_PERMISSION_GRANT_REQUESTED = WorkerAgencyPermissionGrantRequested.repositoryType();
-
-    public static final RepositoryType WORKER_AGENCY_PERMISSION_GRANTED = WorkerAgencyPermissionGranted.repositoryType();
-
-    public static final RepositoryType WORKER_AGENCY_PERMISSION_GRANTING_IN_PROGRESS = WorkerAgencyPermissionGrantingInProgress.repositoryType();
-
-    public static final RepositoryType WORKER_AGENCY_PERMISSION_INVALID = WorkerAgencyPermissionInvalid.repositoryType();
-
-    public static final RepositoryType WORKER_AGENCY_PERMISSION_REJECTED = WorkerAgencyPermissionRejected.repositoryType();
-
-    public static final RepositoryType WORKER_AGENCY_PERMISSION_REVOKE_REQUESTED = WorkerAgencyPermissionRevokeRequested.repositoryType();
-
-    public static final RepositoryType WORKER_AGENCY_PERMISSION_REVOKED = WorkerAgencyPermissionRevoked.repositoryType();
-
-    public static final RepositoryType WORKER_AGENCY_PERMISSION_REVOKING_IN_PROGRESS = WorkerAgencyPermissionRevokingInProgress.repositoryType();
-
-    public static final RepositoryType WORKER_AGENCY_PERMISSION_VALIDATED = WorkerAgencyPermissionValidated.repositoryType();
 
     public static final RepositoryType WORKER_SESSION_STARTING = WorkerSessionStarting.repositoryType();
 

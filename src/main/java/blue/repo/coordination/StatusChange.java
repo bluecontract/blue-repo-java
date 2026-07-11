@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("8crrz93vvovMkh91qyLj6ajwEDAZw1DdTZ3NBjK6jaqV")
+@TypeBlueId("B4btahVwY81bXQoXskPHEv3NrRPMYfXcR1fkUV8jcPne")
 public class StatusChange extends Event {
     public static String blueId() {
-        return "8crrz93vvovMkh91qyLj6ajwEDAZw1DdTZ3NBjK6jaqV";
+        return "B4btahVwY81bXQoXskPHEv3NrRPMYfXcR1fkUV8jcPne";
     }
 
     public static String packageName() {
@@ -35,13 +35,13 @@ public class StatusChange extends Event {
                 resourcePath());
     }
 
-    private DocumentStatus status;
+    private Status status;
 
-    public DocumentStatus getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public StatusChange status(DocumentStatus status) {
+    public StatusChange status(Status status) {
         this.status = status;
         return this;
     }

@@ -1,0 +1,25 @@
+{
+  "name": "Participant Purpose",
+  "description": "Participant-visible declaration of why an actor is present in a document and which activities it intends to perform. Purpose is explanatory state, not authority, and must never replace mandate verification.\n",
+  "participant": {
+    "description": "Participant whose purpose is described.",
+    "type": {
+      "blueId": "GnMntk3hLvHEsZTBE8Gk7ytPBexj6jhBJHdaxnJYhEQ7"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "statements": {
+    "description": "Ordered purpose statements declared by the participant.",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "blueId": "5JDK97TQA6nzVYRsoQ7kEeoQEtyXKxwAXQSzFeDKzfCU"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

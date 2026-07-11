@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("AKRPLotcnGLq7gQRj3jHcfAkxkwaJpmxNXpC3G22GQQz")
+@TypeBlueId("7WV5TyMoq5Yomvu7Li8kzWdtNaP4vxJCQirDUhoSZmVu")
 public class TimelineChannel extends blue.language.processor.model.ChannelContract {
     public static String blueId() {
-        return "AKRPLotcnGLq7gQRj3jHcfAkxkwaJpmxNXpC3G22GQQz";
+        return "7WV5TyMoq5Yomvu7Li8kzWdtNaP4vxJCQirDUhoSZmVu";
     }
 
     public static String packageName() {
@@ -35,14 +35,25 @@ public class TimelineChannel extends blue.language.processor.model.ChannelContra
                 resourcePath());
     }
 
-    private String timelineId;
+    private Timeline timeline;
 
-    public String getTimelineId() {
-        return timelineId;
+    private Actor actor;
+
+    public Timeline getTimeline() {
+        return timeline;
     }
 
-    public TimelineChannel timelineId(String timelineId) {
-        this.timelineId = timelineId;
+    public TimelineChannel timeline(Timeline timeline) {
+        this.timeline = timeline;
+        return this;
+    }
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public TimelineChannel actor(Actor actor) {
+        this.actor = actor;
         return this;
     }
 
