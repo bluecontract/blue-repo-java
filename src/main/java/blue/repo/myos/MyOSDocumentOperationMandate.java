@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.mandate.OperationMandate;
 
-@TypeBlueId("3qpPwbE17rcFt1KkFqo6V2Y4PrE9gmnYivdkrzAp3zZL")
+@TypeBlueId("FL7Caksowk6AvTQbLW3cTECTCyhbWKeb3iFbZLPRg5UV")
 public class MyOSDocumentOperationMandate extends OperationMandate {
     public static String blueId() {
-        return "3qpPwbE17rcFt1KkFqo6V2Y4PrE9gmnYivdkrzAp3zZL";
+        return "FL7Caksowk6AvTQbLW3cTECTCyhbWKeb3iFbZLPRg5UV";
     }
 
     public static String packageName() {

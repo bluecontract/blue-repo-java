@@ -7,7 +7,7 @@
   "timeline": {
     "description": "Timeline whose entries may be accepted through this channel.\n",
     "type": {
-      "blueId": "7wUHmjDmM9suCSX1HPL7NZncfwPmMmXq2vfSVBmRLgAu"
+      "blueId": "3jwaTSdUWw47M6rkN85BE6nTemo7eoyN3R6ompsrDfgn"
     },
     "schema": {
       "required": true

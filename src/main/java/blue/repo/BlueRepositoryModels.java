@@ -21,7 +21,6 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.common.DocumentAnchors.class);
         resolver.registerAnnotatedClass(blue.repo.common.NamedEvent.class);
         resolver.registerAnnotatedClass(blue.repo.common.Payment.class);
-        resolver.registerAnnotatedClass(blue.repo.common.PermissionGrant.class);
         resolver.registerAnnotatedClass(blue.repo.common.Profile.class);
         resolver.registerAnnotatedClass(blue.repo.common.Record.class);
         resolver.registerAnnotatedClass(blue.repo.common.Relationship.class);
@@ -938,9 +937,7 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.myos.AddingParticipantRequested.class);
         resolver.registerAnnotatedClass(blue.repo.myos.AddingParticipantResponded.class);
         resolver.registerAnnotatedClass(blue.repo.myos.Agent.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.AgentActor.class);
         resolver.registerAnnotatedClass(blue.repo.myos.AllParticipantsReady.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.AnchorAutomationTemplate.class);
         resolver.registerAnnotatedClass(blue.repo.myos.BootstrapFailed.class);
         resolver.registerAnnotatedClass(blue.repo.myos.CallOperationAccepted.class);
         resolver.registerAnnotatedClass(blue.repo.myos.CallOperationFailed.class);
@@ -955,7 +952,6 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.myos.DocumentLinks.class);
         resolver.registerAnnotatedClass(blue.repo.myos.DocumentSessionBootstrap.class);
         resolver.registerAnnotatedClass(blue.repo.myos.DocumentTypeLink.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.InformUserToInstallMyOSPackage.class);
         resolver.registerAnnotatedClass(blue.repo.myos.Link.class);
         resolver.registerAnnotatedClass(blue.repo.myos.LLMAgent.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSAdminActor.class);
@@ -969,7 +965,6 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSDocumentOperationMandate.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSDocumentSessionReference.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSOperationCallRequested.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.MyOSPackage.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSParticipantsOrchestration.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSPrincipalActor.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSSessionInteraction.class);
@@ -984,7 +979,6 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSTimelineChannel.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSTimelineEntry.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSUser.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.MyOSWorkerAgency.class);
         resolver.registerAnnotatedClass(blue.repo.myos.Participant.class);
         resolver.registerAnnotatedClass(blue.repo.myos.ParticipantActivated.class);
         resolver.registerAnnotatedClass(blue.repo.myos.ParticipantActivationState.class);
@@ -1001,14 +995,12 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.myos.RemovingParticipantResponded.class);
         resolver.registerAnnotatedClass(blue.repo.myos.SearchContract.class);
         resolver.registerAnnotatedClass(blue.repo.myos.SessionEpochAdvanced.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.StartWorkerSessionRequested.class);
         resolver.registerAnnotatedClass(blue.repo.myos.SubscribeToSessionRequested.class);
         resolver.registerAnnotatedClass(blue.repo.myos.SubscriptionToSessionFailed.class);
         resolver.registerAnnotatedClass(blue.repo.myos.SubscriptionToSessionInitiated.class);
         resolver.registerAnnotatedClass(blue.repo.myos.SubscriptionToSessionRevoked.class);
         resolver.registerAnnotatedClass(blue.repo.myos.SubscriptionUpdate.class);
         resolver.registerAnnotatedClass(blue.repo.myos.TargetDocumentSessionStarted.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.WorkerSessionStarting.class);
         resolver.registerAnnotatedClass(blue.repo.paynote.CancelBeforeCompletionRequested.class);
         resolver.registerAnnotatedClass(blue.repo.paynote.CaptureDeclined.class);
         resolver.registerAnnotatedClass(blue.repo.paynote.CaptureFailed.class);

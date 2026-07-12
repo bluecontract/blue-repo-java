@@ -5,19 +5,19 @@
     "granteeChannel": {
       "description": "Grantee (e.g., merchant MyOS timeline).",
       "type": {
-        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
+        "blueId": "HbecELqPUgjEnPDnu9uAVuuFj4DA2H8M9vsVmPXPaUmV"
       }
     },
     "granterChannel": {
       "description": "Granter (customer represented by the bank; customer has no MyOS account).",
       "type": {
-        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
+        "blueId": "HbecELqPUgjEnPDnu9uAVuuFj4DA2H8M9vsVmPXPaUmV"
       }
     },
     "guarantorChannel": {
       "description": "Bank/admin channel.",
       "type": {
-        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
+        "blueId": "HbecELqPUgjEnPDnu9uAVuuFj4DA2H8M9vsVmPXPaUmV"
       }
     },
     "initLifecycleChannel": {
@@ -100,7 +100,7 @@
     "revokeConsent": {
       "description": "Customer revokes the consent.",
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -123,7 +123,7 @@
     },
     "revokeConsentImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {

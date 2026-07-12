@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.mandate.MandateAuthority;
 import java.math.BigInteger;
 
-@TypeBlueId("ApAZHVVEaavMNqzootYiXZVCFUd7ZgLbbbHgTuS6vpkm#0")
+@TypeBlueId("H4cyvQ2SpkZK1BffH15ZGV7X8a99S3kFQJhX3AFgG5va#0")
 public class TimelineEntry {
     public static String blueId() {
-        return "ApAZHVVEaavMNqzootYiXZVCFUd7ZgLbbbHgTuS6vpkm#0";
+        return "H4cyvQ2SpkZK1BffH15ZGV7X8a99S3kFQJhX3AFgG5va#0";
     }
 
     public static String packageName() {
@@ -46,6 +46,8 @@ public class TimelineEntry {
     private BigInteger timestamp;
 
     private Actor actor;
+
+    private Source source;
 
     private MandateAuthority onBehalfOf;
 
@@ -93,6 +95,15 @@ public class TimelineEntry {
 
     public TimelineEntry actor(Actor actor) {
         this.actor = actor;
+        return this;
+    }
+
+    public Source getSource() {
+        return source;
+    }
+
+    public TimelineEntry source(Source source) {
+        this.source = source;
         return this;
     }
 

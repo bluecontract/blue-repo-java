@@ -2,7 +2,7 @@
   "name": "Change Workflow",
   "description": "Applies a requested changeset immediately to the document.",
   "type": {
-    "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+    "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
   },
   "request": {
     "description": "Expected request payload for this workflow.",

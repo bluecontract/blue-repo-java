@@ -26,7 +26,7 @@
     "description": "Optional current target document state on which the invocation is based. The value may be materialized or represented by an equivalent pure BlueId reference.\n"
   },
   "requireExactDocumentVersion": {
-    "description": "When true, the feeder passes the request only if document equals the current target state. When false or absent, a newer state may be accepted according to operation-matching rules.\n",
+    "description": "When true, the feeder passes the request only if document equals the current target state. When false or absent, a newer state may be accepted according to the feeder's document-version eligibility policy.\n",
     "type": {
       "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
     }

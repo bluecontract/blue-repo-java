@@ -5,9 +5,7 @@ import blue.repo.RepositoryType;
 import blue.repo.myos.AddingParticipantRequested;
 import blue.repo.myos.AddingParticipantResponded;
 import blue.repo.myos.Agent;
-import blue.repo.myos.AgentActor;
 import blue.repo.myos.AllParticipantsReady;
-import blue.repo.myos.AnchorAutomationTemplate;
 import blue.repo.myos.BootstrapFailed;
 import blue.repo.myos.CallOperationAccepted;
 import blue.repo.myos.CallOperationFailed;
@@ -22,7 +20,6 @@ import blue.repo.myos.DocumentLink;
 import blue.repo.myos.DocumentLinks;
 import blue.repo.myos.DocumentSessionBootstrap;
 import blue.repo.myos.DocumentTypeLink;
-import blue.repo.myos.InformUserToInstallMyOSPackage;
 import blue.repo.myos.Link;
 import blue.repo.myos.LLMAgent;
 import blue.repo.myos.MyOSAdminActor;
@@ -36,7 +33,6 @@ import blue.repo.myos.MyOSDocumentBootstrapMandate;
 import blue.repo.myos.MyOSDocumentOperationMandate;
 import blue.repo.myos.MyOSDocumentSessionReference;
 import blue.repo.myos.MyOSOperationCallRequested;
-import blue.repo.myos.MyOSPackage;
 import blue.repo.myos.MyOSParticipantsOrchestration;
 import blue.repo.myos.MyOSPrincipalActor;
 import blue.repo.myos.MyOSSessionInteraction;
@@ -51,7 +47,6 @@ import blue.repo.myos.MyOSTimeline;
 import blue.repo.myos.MyOSTimelineChannel;
 import blue.repo.myos.MyOSTimelineEntry;
 import blue.repo.myos.MyOSUser;
-import blue.repo.myos.MyOSWorkerAgency;
 import blue.repo.myos.Participant;
 import blue.repo.myos.ParticipantActivated;
 import blue.repo.myos.ParticipantActivationState;
@@ -68,14 +63,12 @@ import blue.repo.myos.RemovingParticipantRequested;
 import blue.repo.myos.RemovingParticipantResponded;
 import blue.repo.myos.SearchContract;
 import blue.repo.myos.SessionEpochAdvanced;
-import blue.repo.myos.StartWorkerSessionRequested;
 import blue.repo.myos.SubscribeToSessionRequested;
 import blue.repo.myos.SubscriptionToSessionFailed;
 import blue.repo.myos.SubscriptionToSessionInitiated;
 import blue.repo.myos.SubscriptionToSessionRevoked;
 import blue.repo.myos.SubscriptionUpdate;
 import blue.repo.myos.TargetDocumentSessionStarted;
-import blue.repo.myos.WorkerSessionStarting;
 
 public final class MyOSTypes {
     public static final RepositoryType ADDING_PARTICIPANT_REQUESTED = AddingParticipantRequested.repositoryType();
@@ -84,11 +77,7 @@ public final class MyOSTypes {
 
     public static final RepositoryType AGENT = Agent.repositoryType();
 
-    public static final RepositoryType AGENT_ACTOR = AgentActor.repositoryType();
-
     public static final RepositoryType ALL_PARTICIPANTS_READY = AllParticipantsReady.repositoryType();
-
-    public static final RepositoryType ANCHOR_AUTOMATION_TEMPLATE = AnchorAutomationTemplate.repositoryType();
 
     public static final RepositoryType BOOTSTRAP_FAILED = BootstrapFailed.repositoryType();
 
@@ -118,8 +107,6 @@ public final class MyOSTypes {
 
     public static final RepositoryType DOCUMENT_TYPE_LINK = DocumentTypeLink.repositoryType();
 
-    public static final RepositoryType INFORM_USER_TO_INSTALL_MYOS_PACKAGE = InformUserToInstallMyOSPackage.repositoryType();
-
     public static final RepositoryType LINK = Link.repositoryType();
 
     public static final RepositoryType LLM_AGENT = LLMAgent.repositoryType();
@@ -145,8 +132,6 @@ public final class MyOSTypes {
     public static final RepositoryType MYOS_DOCUMENT_SESSION_REFERENCE = MyOSDocumentSessionReference.repositoryType();
 
     public static final RepositoryType MYOS_OPERATION_CALL_REQUESTED = MyOSOperationCallRequested.repositoryType();
-
-    public static final RepositoryType MYOS_PACKAGE = MyOSPackage.repositoryType();
 
     public static final RepositoryType MYOS_PARTICIPANTS_ORCHESTRATION = MyOSParticipantsOrchestration.repositoryType();
 
@@ -175,8 +160,6 @@ public final class MyOSTypes {
     public static final RepositoryType MYOS_TIMELINE_ENTRY = MyOSTimelineEntry.repositoryType();
 
     public static final RepositoryType MYOS_USER = MyOSUser.repositoryType();
-
-    public static final RepositoryType MYOS_WORKER_AGENCY = MyOSWorkerAgency.repositoryType();
 
     public static final RepositoryType PARTICIPANT = Participant.repositoryType();
 
@@ -210,8 +193,6 @@ public final class MyOSTypes {
 
     public static final RepositoryType SESSION_EPOCH_ADVANCED = SessionEpochAdvanced.repositoryType();
 
-    public static final RepositoryType START_WORKER_SESSION_REQUESTED = StartWorkerSessionRequested.repositoryType();
-
     public static final RepositoryType SUBSCRIBE_TO_SESSION_REQUESTED = SubscribeToSessionRequested.repositoryType();
 
     public static final RepositoryType SUBSCRIPTION_TO_SESSION_FAILED = SubscriptionToSessionFailed.repositoryType();
@@ -223,8 +204,6 @@ public final class MyOSTypes {
     public static final RepositoryType SUBSCRIPTION_UPDATE = SubscriptionUpdate.repositoryType();
 
     public static final RepositoryType TARGET_DOCUMENT_SESSION_STARTED = TargetDocumentSessionStarted.repositoryType();
-
-    public static final RepositoryType WORKER_SESSION_STARTING = WorkerSessionStarting.repositoryType();
 
     private MyOSTypes() {
     }

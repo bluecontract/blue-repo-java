@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("4FE7wU8cnFsb7gEcgQk8vTGYZHLqvJH6Yjsv2TXovgr2")
+@TypeBlueId("BTGajXc8tHeprxrQXRBDfkZxA5tmxo9BEkFoDGXds6yp")
 public class CompositeTimelineChannel extends blue.language.processor.model.ChannelContract {
     public static String blueId() {
-        return "4FE7wU8cnFsb7gEcgQk8vTGYZHLqvJH6Yjsv2TXovgr2";
+        return "BTGajXc8tHeprxrQXRBDfkZxA5tmxo9BEkFoDGXds6yp";
     }
 
     public static String packageName() {

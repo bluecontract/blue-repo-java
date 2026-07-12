@@ -1,17 +1,17 @@
 {
   "name": "Timeline Entry",
-  "description": "Immutable entry in an append-only Timeline. The Timeline Provider assigns sequence and timestamp, links the entry to its predecessor, and authenticates actor attribution. A feeder validates, orders, and filters entries before passing eligible events to a processor.\n",
+  "description": "Immutable entry in an append-only Timeline. The Timeline Provider assigns sequence and timestamp, links the entry to its predecessor, and authenticates actor and available source attribution. A feeder validates, orders, and filters entries before passing eligible events to a processor.\n",
   "timeline": {
     "description": "Timeline containing this entry.",
     "type": {
-      "blueId": "7wUHmjDmM9suCSX1HPL7NZncfwPmMmXq2vfSVBmRLgAu"
+      "blueId": "3jwaTSdUWw47M6rkN85BE6nTemo7eoyN3R6ompsrDfgn"
     },
     "schema": {
       "required": true
     }
   },
   "sequence": {
-    "description": "Monotonically increasing position of this entry within its timeline.\n",
+    "description": "Strictly increasing position of this entry within its timeline. Sequence, rather than timestamp, is the authoritative intra-timeline order.\n",
     "type": {
       "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
     },
@@ -26,7 +26,7 @@
     }
   },
   "timestamp": {
-    "description": "Microsecond timestamp assigned by the Timeline Provider. The provider must preserve its timeline and completeness semantics for this value.\n",
+    "description": "Microsecond timestamp assigned by the Timeline Provider for cross-timeline ordering and completeness. Timestamps may repeat within a timeline and do not replace sequence as its authoritative order.\n",
     "type": {
       "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
     },
@@ -43,10 +43,16 @@
       "required": true
     }
   },
+  "source": {
+    "description": "Optional provider-authenticated attribution of how the entry was submitted, such as through a browser session, API call, or document request. Source complements actor attribution and does not grant authority by itself. A policy that requires or excludes a source category must treat an absent source as not satisfying that source constraint.\n",
+    "type": {
+      "blueId": "Qm35f9xFUH84i745uPMj5jjMX1oCCG79aeSfHViipxG"
+    }
+  },
   "onBehalfOf": {
     "description": "Optional mandate-backed authority under which actor claims to act for another actor. A feeder validates this authority before delivery when the requested action is not directly eligible through a source channel.\n",
     "type": {
-      "blueId": "23FicPLnviwjgSK62qSsUJCPpioDbdC8PXm8cc2LGwKZ"
+      "blueId": "J4NZYjNPMRgQq9y56UHUBumg1rATxBPEbp9yiWZtjwfY"
     }
   },
   "message": {

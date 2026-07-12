@@ -9,7 +9,6 @@ import blue.repo.common.DocumentAnchor;
 import blue.repo.common.DocumentAnchors;
 import blue.repo.common.NamedEvent;
 import blue.repo.common.Payment;
-import blue.repo.common.PermissionGrant;
 import blue.repo.common.Profile;
 import blue.repo.common.Record;
 import blue.repo.common.Relationship;
@@ -34,8 +33,6 @@ public final class CommonTypes {
     public static final RepositoryType NAMED_EVENT = NamedEvent.repositoryType();
 
     public static final RepositoryType PAYMENT = Payment.repositoryType();
-
-    public static final RepositoryType PERMISSIONGRANT = PermissionGrant.repositoryType();
 
     public static final RepositoryType PROFILE = Profile.repositoryType();
 

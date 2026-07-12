@@ -5,13 +5,13 @@
     "payNoteSender": {
       "description": "Participant submitting the PayNote delivery (merchant or processor).",
       "type": {
-        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
+        "blueId": "HbecELqPUgjEnPDnu9uAVuuFj4DA2H8M9vsVmPXPaUmV"
       }
     },
     "payNoteDeliverer": {
       "description": "Participant delivering and reporting status (e.g., bank).",
       "type": {
-        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
+        "blueId": "HbecELqPUgjEnPDnu9uAVuuFj4DA2H8M9vsVmPXPaUmV"
       }
     },
     "initLifecycleChannel": {
@@ -130,7 +130,7 @@
     },
     "updateTransactionIdentificationStatus": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -147,7 +147,7 @@
     },
     "updateTransactionIdentificationStatusImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -607,7 +607,7 @@
     },
     "acceptPayNote": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -626,7 +626,7 @@
     },
     "acceptPayNoteImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -1380,7 +1380,7 @@
     },
     "rejectPayNote": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -1405,7 +1405,7 @@
     },
     "rejectPayNoteImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -2229,7 +2229,7 @@
     },
     "reportDeliveryError": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -2246,7 +2246,7 @@
     },
     "reportDeliveryErrorImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -2404,7 +2404,7 @@
     },
     "document": {
       "type": {
-        "blueId": "7k3iQ1VBArSDnj4giRXyGp5nEMP3J6pXd1nRWvXHdf5G"
+        "blueId": "3QhCg6W39VGD66E7by4yNop1UYH198xEbVpqYcjLaatL"
       }
     }
   },
@@ -2415,7 +2415,7 @@
     },
     "document": {
       "type": {
-        "blueId": "4AT8fhRxHuLYRFrcRrmxJgTxAcv1ucnDfkDSRejJ8hS8"
+        "blueId": "ARHztUKsJmj1rEpdi8sv1488QaWRvdsJLcXYchfZXdg7"
       }
     }
   },
