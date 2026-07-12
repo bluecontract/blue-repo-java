@@ -477,7 +477,7 @@
     },
     "acceptPayNote": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -493,7 +493,7 @@
     },
     "acceptPayNoteImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -549,7 +549,7 @@
     },
     "rejectPayNote": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -565,7 +565,7 @@
     },
     "rejectPayNoteImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -691,7 +691,7 @@
     },
     "recordTransactionInitiated": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -707,7 +707,7 @@
     },
     "recordTransactionInitiatedImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -1112,7 +1112,7 @@
     },
     "recordTransactionInitiationFailed": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -1128,7 +1128,7 @@
     },
     "recordTransactionInitiationFailedImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -1222,7 +1222,7 @@
     },
     "confirmPayeeAssignment": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -1238,7 +1238,7 @@
     },
     "confirmPayeeAssignmentImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -1535,7 +1535,7 @@
     },
     "rejectPayeeAssignment": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -1551,7 +1551,7 @@
     },
     "rejectPayeeAssignmentImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -1615,7 +1615,7 @@
     },
     "confirmTransactionDetailsUpdated": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -1631,7 +1631,7 @@
     },
     "confirmTransactionDetailsUpdatedImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -1949,7 +1949,7 @@
     },
     "rejectTransactionDetailsUpdate": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -1965,7 +1965,7 @@
     },
     "rejectTransactionDetailsUpdateImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -2029,7 +2029,7 @@
     },
     "failTransactionDetailsUpdate": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -2045,7 +2045,7 @@
     },
     "failTransactionDetailsUpdateImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -2109,7 +2109,7 @@
     },
     "secureFunds": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -2125,7 +2125,7 @@
     },
     "secureFundsImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -2263,7 +2263,7 @@
     },
     "declineSecureFunds": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -2279,7 +2279,7 @@
     },
     "declineSecureFundsImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -2373,7 +2373,7 @@
     },
     "failSecureFunds": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -2389,7 +2389,7 @@
     },
     "failSecureFundsImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -2483,7 +2483,7 @@
     },
     "completePayment": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -2499,7 +2499,7 @@
     },
     "completePaymentImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -2637,7 +2637,7 @@
     },
     "declineCompletePayment": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -2653,7 +2653,7 @@
     },
     "declineCompletePaymentImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -2747,7 +2747,7 @@
     },
     "failCompletePayment": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -2763,7 +2763,7 @@
     },
     "failCompletePaymentImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -2857,7 +2857,7 @@
     },
     "cancelBeforeCompletion": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -2873,7 +2873,7 @@
     },
     "cancelBeforeCompletionImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -2929,7 +2929,7 @@
     },
     "declineCancelBeforeCompletion": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -2945,7 +2945,7 @@
     },
     "declineCancelBeforeCompletionImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -3039,7 +3039,7 @@
     },
     "failCancelBeforeCompletion": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -3055,7 +3055,7 @@
     },
     "failCancelBeforeCompletionImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -3149,7 +3149,7 @@
     },
     "reverseAfterCompletion": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -3165,7 +3165,7 @@
     },
     "reverseAfterCompletionImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -3303,7 +3303,7 @@
     },
     "declineReverseAfterCompletion": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -3319,7 +3319,7 @@
     },
     "declineReverseAfterCompletionImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -3413,7 +3413,7 @@
     },
     "failReverseAfterCompletion": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -3429,7 +3429,7 @@
     },
     "failReverseAfterCompletionImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -3523,7 +3523,7 @@
     },
     "resolveFinalAmount": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -3539,7 +3539,7 @@
     },
     "resolveFinalAmountImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -3655,7 +3655,7 @@
     },
     "rejectFinalAmountResolution": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -3671,7 +3671,7 @@
     },
     "rejectFinalAmountResolutionImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -3735,7 +3735,7 @@
     },
     "lockPaymentCompletion": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -3751,7 +3751,7 @@
     },
     "lockPaymentCompletionImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -3845,7 +3845,7 @@
     },
     "unlockPaymentCompletion": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -3861,7 +3861,7 @@
     },
     "unlockPaymentCompletionImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -3955,7 +3955,7 @@
     },
     "failPaymentCompletionLockChange": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -3971,7 +3971,7 @@
     },
     "failPaymentCompletionLockChangeImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -4035,7 +4035,7 @@
     },
     "lockPaymentReversal": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -4051,7 +4051,7 @@
     },
     "lockPaymentReversalImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -4145,7 +4145,7 @@
     },
     "unlockPaymentReversal": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -4161,7 +4161,7 @@
     },
     "unlockPaymentReversalImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -4255,7 +4255,7 @@
     },
     "failPaymentReversalLockChange": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -4271,7 +4271,7 @@
     },
     "failPaymentReversalLockChangeImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -4335,7 +4335,7 @@
     },
     "lockTransactionDetailsUpdate": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -4351,7 +4351,7 @@
     },
     "lockTransactionDetailsUpdateImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -4445,7 +4445,7 @@
     },
     "unlockTransactionDetailsUpdate": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -4461,7 +4461,7 @@
     },
     "unlockTransactionDetailsUpdateImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -4555,7 +4555,7 @@
     },
     "failTransactionDetailsUpdateLockChange": {
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -4571,7 +4571,7 @@
     },
     "failTransactionDetailsUpdateLockChangeImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {

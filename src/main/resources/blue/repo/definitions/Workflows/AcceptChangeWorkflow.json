@@ -2,7 +2,7 @@
   "name": "Accept Change Workflow",
   "description": "Applies a previously proposed change and removes its proposal state.",
   "type": {
-    "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+    "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
   },
   "postfix": {
     "description": "Optional postfix used while building proposed change state key.",

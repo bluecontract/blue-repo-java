@@ -5,19 +5,19 @@
     "granterChannel": {
       "description": "Granting party timeline channel.",
       "type": {
-        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
+        "blueId": "HbecELqPUgjEnPDnu9uAVuuFj4DA2H8M9vsVmPXPaUmV"
       }
     },
     "granteeChannel": {
       "description": "Grantee timeline channel (party allowed to use the mandate).",
       "type": {
-        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
+        "blueId": "HbecELqPUgjEnPDnu9uAVuuFj4DA2H8M9vsVmPXPaUmV"
       }
     },
     "guarantorChannel": {
       "description": "Bank/admin channel executing mandate checks and settlement updates.",
       "type": {
-        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
+        "blueId": "HbecELqPUgjEnPDnu9uAVuuFj4DA2H8M9vsVmPXPaUmV"
       }
     },
     "initLifecycleChannel": {
@@ -72,7 +72,7 @@
     "authorizeSpend": {
       "description": "Validate a charge attempt against mandate policy and reserve capacity.",
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -88,7 +88,7 @@
     },
     "authorizeSpendImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {
@@ -1975,7 +1975,7 @@
     "settleSpend": {
       "description": "Apply final reserve/capture deltas for a previously authorized charge attempt.",
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -1991,7 +1991,7 @@
     },
     "settleSpendImpl": {
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {

@@ -5,13 +5,13 @@
     "myOsAdminChannel": {
       "description": "MyOS Admin (accountId=0) — posts operational progress/decisions via myOsAdminUpdate",
       "type": {
-        "blueId": "6NhTXeD6LK3jJb31ZDQH4h1kJ5FAc2r47VfitPrup7bw"
+        "blueId": "HbecELqPUgjEnPDnu9uAVuuFj4DA2H8M9vsVmPXPaUmV"
       }
     },
     "myOsAdminUpdate": {
       "description": "The standard, required operation for MyOS Admin to deliver events.",
       "type": {
-        "blueId": "wGksq5vE8TroTr6StteHDnMx9mJKqT7dHoYT9bEddym"
+        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
       },
       "channel": {
         "type": {
@@ -23,7 +23,7 @@
     "myOsAdminUpdateImpl": {
       "description": "Implementation that re-emits the provided events",
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "operation": {
         "type": {

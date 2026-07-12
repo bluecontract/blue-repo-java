@@ -2,7 +2,7 @@
   "name": "Document Session Bootstrap",
   "description": "MyOS-specific document for bootstrapping document sessions and tracking bootstrap progress",
   "type": {
-    "blueId": "7ZnSQEukZaByVG7mKfW86xXZPLfW8uTQgFRAa1PffftY"
+    "blueId": "CgHxjKAYf2rF5vGpwHiKgfr9jfhTxQVris2nTcuhR6fS"
   },
   "contracts": {
     "triggeredEventsChannel": {
@@ -572,7 +572,7 @@
     }
   },
   "capabilities": {
-    "description": "Optional MyOS Admin capability contracts to attach (participantsOrchestration, sessionInteraction, workerAgency)",
+    "description": "Optional MyOS Admin capability contracts to attach (participantsOrchestration, sessionInteraction)",
     "type": {
       "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
     },

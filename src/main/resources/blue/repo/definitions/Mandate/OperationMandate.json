@@ -2,7 +2,7 @@
   "name": "Operation Mandate",
   "description": "Mandate authorizing the actor bound to authorizedActorChannel to invoke one operation through a different effective channel on one logical target document, on behalf of the actor bound to authorityHolderChannel.\n",
   "type": {
-    "blueId": "F5tjRLuEoBKMPv7RXGQtFCi91ryisSCXqnq99Lg4QxgD"
+    "blueId": "hWzGSMv7WXsYLupLMkSCFVU1mpzqDGduvqXcb3Cf7kw"
   },
   "target": {
     "initialDocument": {

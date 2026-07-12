@@ -28,10 +28,7 @@ import blue.repo.workflows.AcceptChangeWorkflow;
 import blue.repo.finoscdm60d07.CdmLegaldocumentationMasterClause;
 import blue.repo.finoscdm60d07.CdmProductCollateralAllCriteria;
 import blue.repo.finoscdm60d07.CdmProductCollateralCollateralCriteria;
-import blue.repo.myos.InformUserToInstallMyOSPackage;
-import blue.repo.myos.MyOSPackage;
 import blue.repo.paynote.CaptureFundsRequested;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.jupiter.api.Test;
 
@@ -282,32 +279,6 @@ class BlueRepositoryTest {
     }
 
     @Test
-    void generatedKeywordPropertiesPreserveOriginalBluePropertyName() throws Exception {
-        Field field = InformUserToInstallMyOSPackage.class.getDeclaredField("packageValue");
-        JsonProperty jsonProperty = field.getAnnotation(JsonProperty.class);
-
-        assertNotNull(jsonProperty);
-        assertEquals("package", jsonProperty.value());
-    }
-
-    @Test
-    void keywordPropertiesRoundTripWhenBlueLanguageMapperSupportsJsonProperty() {
-        BlueRepository repo = BlueRepository.v1_3_0();
-        Blue blue = repo.configure(new Blue());
-
-        InformUserToInstallMyOSPackage command = new InformUserToInstallMyOSPackage()
-                .packageValue(new MyOSPackage().installerChannel("counter"));
-        Node node = blue.objectToNode(command);
-        assertTrue(node.getProperties().containsKey("package"));
-
-        Object converted = blue.nodeToObject(node, Object.class);
-        assertTrue(converted instanceof InformUserToInstallMyOSPackage);
-        assertEquals("counter", ((InformUserToInstallMyOSPackage) converted)
-                .getPackageValue()
-                .getInstallerChannel());
-    }
-
-    @Test
     void repositoryProvidesQualifiedTypeAliasesForPreprocessing() throws Exception {
         BlueRepository repo = BlueRepository.v1_3_0();
         assertEquals(CoordinationTypes.TIMELINE_CHANNEL.blueId(),
@@ -452,7 +423,7 @@ class BlueRepositoryTest {
     void commonPackageIncludesCurrentRepositoryTypes() {
         BlueRepository repo = BlueRepository.v1_3_0();
 
-        assertEquals(17, repo.manifest().definitions().stream()
+        assertEquals(16, repo.manifest().definitions().stream()
                 .filter(definition -> "Common".equals(definition.packageName()))
                 .count());
         assertTrue(repo.definition("Common/Crypto Ed25519 Verify").isPresent());
@@ -461,7 +432,7 @@ class BlueRepositoryTest {
         assertTrue(repo.definition("Common/Document Anchors").isPresent());
         assertTrue(repo.definition("Common/Named Event").isPresent());
         assertTrue(repo.definition("Common/Payment").isPresent());
-        assertTrue(repo.definition("Common/PermissionGrant").isPresent());
+        assertFalse(repo.definition("Common/PermissionGrant").isPresent());
         assertTrue(repo.definition("Common/Profile").isPresent());
         assertTrue(repo.definition("Common/Record").isPresent());
         assertTrue(repo.definition("Common/Relationship").isPresent());

@@ -5,7 +5,7 @@
     "mandateGuarantorChannel": {
       "description": "Required participant channel whose actor is the mandate guarantor.\n\nThe guarantor confirms that the declared authority relationship is\nlegitimate and may invoke the standard termination operation.\n",
       "type": {
-        "blueId": "7WV5TyMoq5Yomvu7Li8kzWdtNaP4vxJCQirDUhoSZmVu"
+        "blueId": "Ab5kRCjTekQwTpWBgBv2ofJ6kgGbrbqMrdRPPJ4aKX3d"
       },
       "schema": {
         "required": true
@@ -14,7 +14,7 @@
     "authorityHolderChannel": {
       "description": "Required participant channel whose actor controls the authority or\nresource delegated by this mandate. The authority holder may invoke the\nstandard termination operation.\n",
       "type": {
-        "blueId": "7WV5TyMoq5Yomvu7Li8kzWdtNaP4vxJCQirDUhoSZmVu"
+        "blueId": "Ab5kRCjTekQwTpWBgBv2ofJ6kgGbrbqMrdRPPJ4aKX3d"
       },
       "schema": {
         "required": true
@@ -23,7 +23,7 @@
     "authorizedActorChannel": {
       "description": "Required participant channel whose actor receives the delegated\nauthority. Concrete mandate subtypes define the delegated resource,\naction, target, or request semantics.\n",
       "type": {
-        "blueId": "7WV5TyMoq5Yomvu7Li8kzWdtNaP4vxJCQirDUhoSZmVu"
+        "blueId": "Ab5kRCjTekQwTpWBgBv2ofJ6kgGbrbqMrdRPPJ4aKX3d"
       },
       "schema": {
         "required": true
@@ -32,7 +32,7 @@
     "mandateTerminationChannel": {
       "description": "Composite channel through which either the guarantor or authority holder\nmay invoke terminateMandate. When one entry is eligible through both\nmembers, the composite produces one logical delivery.\n",
       "type": {
-        "blueId": "4FE7wU8cnFsb7gEcgQk8vTGYZHLqvJH6Yjsv2TXovgr2"
+        "blueId": "BTGajXc8tHeprxrQXRBDfkZxA5tmxo9BEkFoDGXds6yp"
       },
       "channels": {
         "items": [
@@ -1500,7 +1500,7 @@
     "confirmMandateAuthority": {
       "description": "Inherited operation through which the guarantor confirms that the\ndeclared authority relationship is legitimate.\n\nOn Coordination/Status Pending it changes status to\nMandate/Status Authority Confirmed, records authorityConfirmedAt\nfrom the root causal Timeline Entry, emits Mandate/Mandate Authority\nConfirmed, and, when activateOnAuthorityConfirmation is not false, emits\nMandate/Mandate Activation Requested.\n\nOn Mandate/Status Authority Confirmed, Mandate/Status Active,\nMandate/Status Terminated, or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace authorityConfirmedAt.\n\nA guarantor may choose to use Operation Request.document and\nrequireExactDocumentVersion to pin the reviewed mandate state. This base\noperation does not require or enforce that choice.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype.\n",
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "channel": {
         "type": {
@@ -1573,7 +1573,7 @@
     "terminateMandate": {
       "description": "Standard termination operation available to the guarantor and authority\nholder.\n\nIt does not write lifecycle state directly. It emits or forwards the\nnormalized Mandate/Mandate Termination Requested Message so that\napplyMandateTermination remains the sole authoritative termination\nimplementation.\n\nSpecialized mandate types may add other operations or workflows that emit\nthe same request Message.\n\nConcrete workflow steps are defined in this base type.\n",
       "type": {
-        "blueId": "CXotTNTYxqqSgDBzTGJjbLVvsjrxJMgmJZaC1rA826CF"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "channel": {
         "type": {
@@ -1726,10 +1726,10 @@
     "function": {
       "description": "Optional deterministic BEX validation program represented as a Blue node.\nThe field intentionally has no repository-local nominal type: BEX program\nsyntax and compilation are defined by the BEX specification and runtime.\n\nBy convention, the host passes the candidate input being validated as the\nimmutable BEX binding named request. Concrete mandate types define the\nsemantic meaning of that input.\n\nWhen validation.function.entry is present, initialization verifies that\nvalidation.function.functions declares a local function with that name.\nThe feeder or provider compiles and invokes the selected program when it\nvalidates a request. When absent, custom BEX validation is treated as\npassing.\n",
       "entry": {
+        "description": "Optional name of the local function to invoke. When present, functions\nmust declare a function with exactly this name.\n",
         "type": {
           "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        },
-        "value": "validateMandateRequest"
+        }
       }
     }
   }
