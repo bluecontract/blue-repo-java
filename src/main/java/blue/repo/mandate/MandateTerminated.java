@@ -4,12 +4,11 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.coordination.Message;
-import java.math.BigInteger;
 
-@TypeBlueId("5SR8BVQL9t5UakLBZFfmnFb4hEPrGx8NUcpMT2gncA16")
+@TypeBlueId("C6zMJV5BTUBbzAQ4UJ2jcaNjxhravLVF82euN8hNe5K8")
 public class MandateTerminated extends Message {
     public static String blueId() {
-        return "5SR8BVQL9t5UakLBZFfmnFb4hEPrGx8NUcpMT2gncA16";
+        return "C6zMJV5BTUBbzAQ4UJ2jcaNjxhravLVF82euN8hNe5K8";
     }
 
     public static String packageName() {
@@ -37,18 +36,7 @@ public class MandateTerminated extends Message {
                 resourcePath());
     }
 
-    private BigInteger timestampUs;
-
     private String reason;
-
-    public BigInteger getTimestampUs() {
-        return timestampUs;
-    }
-
-    public MandateTerminated timestampUs(BigInteger timestampUs) {
-        this.timestampUs = timestampUs;
-        return this;
-    }
 
     public String getReason() {
         return reason;

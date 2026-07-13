@@ -1,6 +1,6 @@
 {
   "name": "Mandate",
-  "description": "Base executable document type for guaranteed authority delegation.\n\nThe actor bound to authorityHolderChannel controls the authority or resource\nbeing delegated. The actor bound to authorizedActorChannel receives the\ndelegated authority. The actor bound to mandateGuarantorChannel confirms that\nthe declared authority relationship is legitimate and may terminate the\nmandate.\n\nAuthority confirmation and activation are separate lifecycle facts.\nConfirmation records that the guarantor accepted the authority declaration.\nActivation records the timestamp from which the authorized actor may use the\ndelegated authority.\n\nBy default, successful authority confirmation requests immediate activation.\nA mandate may set activateOnAuthorityConfirmation to false and define\nadditional deterministic workflows that emit Mandate/Mandate Activation\nRequested when a later condition is satisfied.\n\nThe base type defines and implements initialization, authority confirmation,\nactivation, termination, lifecycle event emission, lifecycle transition\nguards, and graceful mandate-document termination. Subtypes inherit these\nlifecycle implementations unchanged. They may add specialized fields,\nvalidation, participants, embedded documents, and workflows that emit the\nstandard activation or termination request Messages.\n",
+  "description": "Base executable document type for guaranteed authority delegation.\n\nThe actor bound to authorityHolderChannel controls the authority or resource\nbeing delegated. The actor bound to authorizedActorChannel receives the\ndelegated authority. The actor bound to mandateGuarantorChannel confirms that\nthe declared authority relationship is legitimate and may terminate the\nmandate.\n\nAuthority confirmation and activation are separate lifecycle facts.\nConfirmation records that the guarantor accepted the authority declaration.\nActivation records the timestamp from which the authorized actor may use the\ndelegated authority.\n\nBy default, successful authority confirmation emits Mandate/Mandate\nActivated for the inherited activation workflow to apply. A mandate may set\nactivateOnAuthorityConfirmation to false and define an additional operation\nthat emits Mandate/Mandate Activated when a later condition is satisfied.\n\nThe base type defines and implements initialization, authority confirmation,\nactivation, termination, lifecycle event emission, lifecycle transition\nguards, and graceful mandate-document termination. Subtypes inherit these\nlifecycle implementations unchanged. They may add specialized fields,\nvalidation, participants, embedded documents, and operations that emit the\nstandard activation or termination Messages.\n",
   "contracts": {
     "mandateGuarantorChannel": {
       "description": "Required participant channel whose actor is the mandate guarantor.\n\nThe guarantor confirms that the declared authority relationship is\nlegitimate and may invoke the standard termination operation.\n",
@@ -57,14 +57,14 @@
         "blueId": "2DXGQUiQBQ6CT89jwAsTAXaEPhLgiSXhKCGh9Q7Hv3MQ"
       }
     },
-    "mandateActivationRequestedChannel": {
-      "description": "Internal triggered-event channel routing Mandate/Mandate Activation\nRequested Messages emitted by confirmation or specialized mandate\nworkflows. External Timeline Entries do not enter this channel directly.\n",
+    "mandateActivatedChannel": {
+      "description": "Internal triggered-event channel routing Mandate/Mandate Activated\nMessages emitted by confirmation or specialized mandate operations.\nExternal Timeline Entries do not enter this channel directly.\n",
       "type": {
         "blueId": "5HwxfbwRBCxG8xYpowWkCPC9akqUSKV7So2M4QHEmLsZ"
       }
     },
-    "mandateTerminationRequestedChannel": {
-      "description": "Internal triggered-event channel routing Mandate/Mandate Termination\nRequested Messages emitted by the standard termination operation or\nspecialized mandate workflows.\n",
+    "mandateTerminatedChannel": {
+      "description": "Internal triggered-event channel routing Mandate/Mandate Terminated\nMessages emitted by the standard termination operation or specialized\nmandate operations.\n",
       "type": {
         "blueId": "5HwxfbwRBCxG8xYpowWkCPC9akqUSKV7So2M4QHEmLsZ"
       }
@@ -74,61 +74,170 @@
       "type": {
         "blueId": "HifMgFGBgsqstDFZ2kXeQ45LVKXQMP52fV8TqeN6Z1j3"
       },
+      "constants": {
+        "statusPendingType": {
+          "type": {
+            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+          },
+          "itemType": {
+            "blueId": "FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc"
+          }
+        },
+        "statusAuthorityConfirmedType": {
+          "type": {
+            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+          },
+          "itemType": {
+            "blueId": "AgwzrsZ7sDFXUryLWQdjG6w8D7SRLMXFWHuVFLa55jcZ"
+          }
+        },
+        "statusActiveType": {
+          "type": {
+            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+          },
+          "itemType": {
+            "blueId": "DnV7ApZKxa9qvJHNrgbxNHz1BPCh2G2SToh1sQAUFemd"
+          }
+        },
+        "statusFailedType": {
+          "type": {
+            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+          },
+          "itemType": {
+            "blueId": "GeZWvUThNX3mSiYHbmQAjoE7tffzYFRiC4dktuRGe1sS"
+          }
+        },
+        "authorityConfirmedMessageType": {
+          "type": {
+            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+          },
+          "itemType": {
+            "blueId": "EbNsQWy645JPPuWhkDw3XcrQk1neH2Z8KBsTvUTCrrmk"
+          }
+        },
+        "activatedMessageType": {
+          "type": {
+            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+          },
+          "itemType": {
+            "blueId": "3HtuEaYgkn8rV9xZf1x5uY2v7S9WXbVkcV3rj3Sy6arJ"
+          }
+        },
+        "terminatedMessageType": {
+          "type": {
+            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+          },
+          "itemType": {
+            "blueId": "C6zMJV5BTUBbzAQ4UJ2jcaNjxhravLVF82euN8hNe5K8"
+          }
+        }
+      },
       "functions": {
         "isStatusPending": {
           "expr": {
-            "$is": {
-              "node": {
-                "$document": {
-                  "type": {
-                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                  },
-                  "value": "/status"
+            "$eq": {
+              "items": [
+                {
+                  "$document": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "/status/type/blueId"
+                  }
+                },
+                {
+                  "$const": {
+                    "name": "statusPendingType",
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/itemType/blueId"
+                    }
+                  }
                 }
-              },
-              "pattern": {
-                "type": {
-                  "blueId": "FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc"
-                }
-              }
+              ]
             }
           }
         },
         "isStatusAuthorityConfirmed": {
           "expr": {
-            "$is": {
-              "node": {
-                "$document": {
-                  "type": {
-                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                  },
-                  "value": "/status"
+            "$eq": {
+              "items": [
+                {
+                  "$document": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "/status/type/blueId"
+                  }
+                },
+                {
+                  "$const": {
+                    "name": "statusAuthorityConfirmedType",
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/itemType/blueId"
+                    }
+                  }
                 }
-              },
-              "pattern": {
-                "type": {
-                  "blueId": "AgwzrsZ7sDFXUryLWQdjG6w8D7SRLMXFWHuVFLa55jcZ"
-                }
-              }
+              ]
             }
           }
         },
         "isStatusActive": {
           "expr": {
-            "$is": {
-              "node": {
-                "$document": {
-                  "type": {
-                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                  },
-                  "value": "/status"
+            "$eq": {
+              "items": [
+                {
+                  "$document": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "/status/type/blueId"
+                  }
+                },
+                {
+                  "$const": {
+                    "name": "statusActiveType",
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/itemType/blueId"
+                    }
+                  }
                 }
-              },
-              "pattern": {
-                "type": {
-                  "blueId": "DnV7ApZKxa9qvJHNrgbxNHz1BPCh2G2SToh1sQAUFemd"
+              ]
+            }
+          }
+        },
+        "isStatusFailed": {
+          "expr": {
+            "$eq": {
+              "items": [
+                {
+                  "$document": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "/status/type/blueId"
+                  }
+                },
+                {
+                  "$const": {
+                    "name": "statusFailedType",
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/itemType/blueId"
+                    }
+                  }
                 }
-              }
+              ]
             }
           }
         },
@@ -302,147 +411,131 @@
             }
           },
           "expr": {
-            "type": {
-              "blueId": "F4AoZc1CD8TWUemaHy8VrNNBgEUM5JwRBHwkr4WtJ8En"
-            },
-            "timestampUs": {
-              "$var": {
+            "$objectSet": {
+              "object": {
+                "timestampUs": {
+                  "$var": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "timestampUs"
+                  }
+                },
+                "inResponseTo": {
+                  "$var": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "inResponseTo"
+                  }
+                }
+              },
+              "key": {
                 "type": {
                   "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                 },
-                "value": "timestampUs"
-              }
-            },
-            "inResponseTo": {
-              "$var": {
-                "type": {
-                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                },
-                "value": "inResponseTo"
-              }
-            }
-          }
-        },
-        "activationRequestedMessage": {
-          "args": {
-            "inResponseTo": {
-              "description": "Exact Message that caused the activation request."
-            }
-          },
-          "expr": {
-            "type": {
-              "blueId": "JA8tkhbAgaZ4T3wc8JXzTN3Swsaw1MpfNAPqTizdCSh1"
-            },
-            "inResponseTo": {
-              "$var": {
-                "type": {
-                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                },
-                "value": "inResponseTo"
+                "value": "type"
+              },
+              "val": {
+                "$const": {
+                  "name": "authorityConfirmedMessageType",
+                  "path": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "/itemType"
+                  }
+                }
               }
             }
           }
         },
         "activatedMessage": {
           "args": {
-            "timestampUs": {
-              "description": "Root Timeline Entry timestamp."
-            },
             "inResponseTo": {
-              "description": "Accepted activation request."
+              "description": "Exact Message that caused activation."
             }
           },
           "expr": {
-            "type": {
-              "blueId": "4kYaMvec6yt4xdXwoHaPDH1gXamJY11txz7cBeFuJYD5"
-            },
-            "timestampUs": {
-              "$var": {
+            "$objectSet": {
+              "object": {
+                "inResponseTo": {
+                  "$var": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "inResponseTo"
+                  }
+                }
+              },
+              "key": {
                 "type": {
                   "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                 },
-                "value": "timestampUs"
-              }
-            },
-            "inResponseTo": {
-              "$var": {
-                "type": {
-                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                },
-                "value": "inResponseTo"
-              }
-            }
-          }
-        },
-        "terminationRequestedMessage": {
-          "args": {
-            "reason": {
-              "description": "Optional termination reason."
-            },
-            "inResponseTo": {
-              "description": "Exact Message that caused the termination request."
-            }
-          },
-          "expr": {
-            "type": {
-              "blueId": "8azbFfadtUzwW6iD96ajqrrW4szxitBLSGjLhKtj3HTc"
-            },
-            "reason": {
-              "$var": {
-                "type": {
-                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                },
-                "value": "reason"
-              }
-            },
-            "inResponseTo": {
-              "$var": {
-                "type": {
-                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                },
-                "value": "inResponseTo"
+                "value": "type"
+              },
+              "val": {
+                "$const": {
+                  "name": "activatedMessageType",
+                  "path": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "/itemType"
+                  }
+                }
               }
             }
           }
         },
         "terminatedMessage": {
           "args": {
-            "timestampUs": {
-              "description": "Root Timeline Entry timestamp."
-            },
-            "reason": {
-              "description": "Optional termination reason."
+            "request": {
+              "description": "Operation request payload, including any optional reason."
             },
             "inResponseTo": {
-              "description": "Accepted termination request."
+              "description": "Exact Message that invoked termination."
             }
           },
           "expr": {
-            "type": {
-              "blueId": "5SR8BVQL9t5UakLBZFfmnFb4hEPrGx8NUcpMT2gncA16"
-            },
-            "timestampUs": {
-              "$var": {
+            "$objectSet": {
+              "object": {
+                "reason": {
+                  "$var": {
+                    "name": "request",
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/reason"
+                    }
+                  }
+                },
+                "inResponseTo": {
+                  "$var": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "inResponseTo"
+                  }
+                }
+              },
+              "key": {
                 "type": {
                   "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                 },
-                "value": "timestampUs"
-              }
-            },
-            "reason": {
-              "$var": {
-                "type": {
-                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                },
-                "value": "reason"
-              }
-            },
-            "inResponseTo": {
-              "$var": {
-                "type": {
-                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                },
-                "value": "inResponseTo"
+                "value": "type"
+              },
+              "val": {
+                "$const": {
+                  "name": "terminatedMessageType",
+                  "path": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "/itemType"
+                  }
+                }
               }
             }
           }
@@ -856,7 +949,7 @@
                                       "type": {
                                         "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                                       },
-                                      "value": "activationRequestedMessage"
+                                      "value": "activatedMessage"
                                     },
                                     "args": {
                                       "inResponseTo": {
@@ -914,12 +1007,6 @@
                           "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                         },
                         "value": "timestampUs"
-                      },
-                      {
-                        "type": {
-                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                        },
-                        "value": "activationRequest"
                       }
                     ]
                   },
@@ -932,14 +1019,6 @@
                           },
                           "value": "processingEventTimestamp"
                         }
-                      }
-                    },
-                    "activationRequest": {
-                      "$event": {
-                        "type": {
-                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                        },
-                        "value": "/"
                       }
                     }
                   }
@@ -1027,36 +1106,6 @@
                             }
                           }
                         }
-                      },
-                      {
-                        "$appendEvent": {
-                          "$call": {
-                            "function": {
-                              "type": {
-                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                              },
-                              "value": "activatedMessage"
-                            },
-                            "args": {
-                              "timestampUs": {
-                                "$var": {
-                                  "type": {
-                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                                  },
-                                  "value": "timestampUs"
-                                }
-                              },
-                              "inResponseTo": {
-                                "$var": {
-                                  "type": {
-                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                                  },
-                                  "value": "activationRequest"
-                                }
-                              }
-                            }
-                          }
-                        }
                       }
                     ]
                   }
@@ -1085,7 +1134,7 @@
             ]
           }
         },
-        "requestMandateTermination": {
+        "emitMandateTermination": {
           "do": {
             "items": [
               {
@@ -1102,7 +1151,13 @@
                         "type": {
                           "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                         },
-                        "value": "reason"
+                        "value": "terminationRequest"
+                      },
+                      {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "terminable"
                       }
                     ]
                   },
@@ -1117,7 +1172,7 @@
                         }
                       }
                     },
-                    "reason": {
+                    "terminationRequest": {
                       "$choose": {
                         "cond": {
                           "$isKind": {
@@ -1126,14 +1181,14 @@
                                 "type": {
                                   "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                                 },
-                                "value": "/message/request/reason"
+                                "value": "/message/request"
                               }
                             },
                             "kind": {
                               "type": {
                                 "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                               },
-                              "value": "text"
+                              "value": "object"
                             }
                           }
                         },
@@ -1142,49 +1197,141 @@
                             "type": {
                               "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                             },
-                            "value": "/message/request/reason"
+                            "value": "/message/request"
                           }
                         },
                         "else": {
-                          "$event": {
-                            "type": {
-                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          "$choose": {
+                            "cond": {
+                              "$isKind": {
+                                "val": {
+                                  "$event": {
+                                    "type": {
+                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                    },
+                                    "value": "/request"
+                                  }
+                                },
+                                "kind": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "object"
+                                }
+                              }
                             },
-                            "value": "/reason"
+                            "then": {
+                              "$event": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "/request"
+                              }
+                            },
+                            "else": {
+                              "$event": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "/"
+                              }
+                            }
                           }
                         }
+                      }
+                    },
+                    "terminable": {
+                      "$or": {
+                        "items": [
+                          {
+                            "$call": {
+                              "function": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "isStatusPending"
+                              }
+                            }
+                          },
+                          {
+                            "$call": {
+                              "function": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "isStatusAuthorityConfirmed"
+                              }
+                            }
+                          },
+                          {
+                            "$call": {
+                              "function": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "isStatusActive"
+                              }
+                            }
+                          },
+                          {
+                            "$call": {
+                              "function": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "isStatusFailed"
+                              }
+                            }
+                          }
+                        ]
                       }
                     }
                   }
                 }
               },
               {
-                "$appendEvent": {
-                  "$call": {
-                    "function": {
+                "$if": {
+                  "cond": {
+                    "$var": {
                       "type": {
                         "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                       },
-                      "value": "terminationRequestedMessage"
-                    },
-                    "args": {
-                      "reason": {
-                        "$var": {
-                          "type": {
-                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                          },
-                          "value": "reason"
-                        }
-                      },
-                      "inResponseTo": {
-                        "$var": {
-                          "type": {
-                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                          },
-                          "value": "sourceMessage"
+                      "value": "terminable"
+                    }
+                  },
+                  "then": {
+                    "items": [
+                      {
+                        "$appendEvent": {
+                          "$call": {
+                            "function": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "terminatedMessage"
+                            },
+                            "args": {
+                              "request": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "terminationRequest"
+                                }
+                              },
+                              "inResponseTo": {
+                                "$var": {
+                                  "type": {
+                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                  },
+                                  "value": "sourceMessage"
+                                }
+                              }
+                            }
+                          }
                         }
                       }
-                    }
+                    ]
                   }
                 }
               },
@@ -1228,18 +1375,6 @@
                         "type": {
                           "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                         },
-                        "value": "terminationRequest"
-                      },
-                      {
-                        "type": {
-                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                        },
-                        "value": "reason"
-                      },
-                      {
-                        "type": {
-                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                        },
                         "value": "terminable"
                       }
                     ]
@@ -1253,22 +1388,6 @@
                           },
                           "value": "processingEventTimestamp"
                         }
-                      }
-                    },
-                    "terminationRequest": {
-                      "$event": {
-                        "type": {
-                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                        },
-                        "value": "/"
-                      }
-                    },
-                    "reason": {
-                      "$event": {
-                        "type": {
-                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                        },
-                        "value": "/reason"
                       }
                     },
                     "terminable": {
@@ -1390,44 +1509,6 @@
                             }
                           }
                         }
-                      },
-                      {
-                        "$appendEvent": {
-                          "$call": {
-                            "function": {
-                              "type": {
-                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                              },
-                              "value": "terminatedMessage"
-                            },
-                            "args": {
-                              "timestampUs": {
-                                "$var": {
-                                  "type": {
-                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                                  },
-                                  "value": "timestampUs"
-                                }
-                              },
-                              "reason": {
-                                "$var": {
-                                  "type": {
-                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                                  },
-                                  "value": "reason"
-                                }
-                              },
-                              "inResponseTo": {
-                                "$var": {
-                                  "type": {
-                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                                  },
-                                  "value": "terminationRequest"
-                                }
-                              }
-                            }
-                          }
-                        }
                       }
                     ]
                   }
@@ -1459,7 +1540,7 @@
       }
     },
     "initializeMandate": {
-      "description": "Inherited initialization implementation.\n\nNormal Blue type resolution and bootstrap validate required role-channel\nbindings and lifecycle configuration. When validation.function.entry is\npresent, this workflow verifies that validation.function.functions\ndeclares the selected local function.\n\nOn success it materializes activateOnAuthorityConfirmation as true when\nabsent, sets status to Coordination/Status Pending, and leaves\nlifecycle timestamps absent.\n\nOn failure it sets status to Coordination/Status Failed, stores the\nfirst deterministic failure in initializationError, and leaves lifecycle\ntimestamps absent.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype.\n",
+      "description": "Inherited initialization implementation.\n\nNormal Blue type resolution and bootstrap validate required role-channel\nbindings and lifecycle configuration. When validation.function.entry is\npresent, this workflow verifies that validation.function.functions\ndeclares the selected local function.\n\nOn success it materializes activateOnAuthorityConfirmation as true when\nabsent and sets status to Coordination/Status Pending.\n\nOn failure it sets status to Coordination/Status Failed, stores the\nfirst deterministic failure in initializationError.\n\nInitialization does not write, clear, or normalize lifecycle timestamps.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype.\n",
       "type": {
         "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
       },
@@ -1498,7 +1579,7 @@
       }
     },
     "confirmMandateAuthority": {
-      "description": "Inherited operation through which the guarantor confirms that the\ndeclared authority relationship is legitimate.\n\nOn Coordination/Status Pending it changes status to\nMandate/Status Authority Confirmed, records authorityConfirmedAt\nfrom the root causal Timeline Entry, emits Mandate/Mandate Authority\nConfirmed, and, when activateOnAuthorityConfirmation is not false, emits\nMandate/Mandate Activation Requested.\n\nOn Mandate/Status Authority Confirmed, Mandate/Status Active,\nMandate/Status Terminated, or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace authorityConfirmedAt.\n\nA guarantor may choose to use Operation Request.document and\nrequireExactDocumentVersion to pin the reviewed mandate state. This base\noperation does not require or enforce that choice.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype.\n",
+      "description": "Inherited operation through which the guarantor confirms that the\ndeclared authority relationship is legitimate.\n\nOn Coordination/Status Pending it changes status to\nMandate/Status Authority Confirmed, records authorityConfirmedAt\nfrom the root causal Timeline Entry, emits Mandate/Mandate Authority\nConfirmed, and, when activateOnAuthorityConfirmation is not false, emits\nMandate/Mandate Activated for the inherited activation workflow.\n\nOn Mandate/Status Authority Confirmed, Mandate/Status Active,\nMandate/Status Terminated, or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace authorityConfirmedAt.\n\nA guarantor may choose to use Operation Request.document and\nrequireExactDocumentVersion to pin the reviewed mandate state. This base\noperation does not require or enforce that choice.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype.\n",
       "type": {
         "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
@@ -1532,7 +1613,7 @@
       }
     },
     "applyMandateActivation": {
-      "description": "Sole authoritative mandate-activation implementation.\n\nOn Mandate/Status Authority Confirmed it changes status to\nMandate/Status Active, records activatedAt from the root causal Timeline\nEntry, and emits Mandate/Mandate Activated with\ninResponseTo referencing the accepted activation request when available.\n\nOn Coordination/Status Pending, Mandate/Status Active,\nMandate/Status Terminated, or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace activatedAt.\n\nA request without a root causal Timeline Entry cannot establish an\nactivation timestamp and must not activate the mandate.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype.\n",
+      "description": "Sole authoritative mandate-activation implementation.\n\nIt accepts Mandate/Mandate Activated emitted by an operation. On\nMandate/Status Authority Confirmed it changes status to Mandate/Status\nActive and records activatedAt from the root causal Timeline Entry. The\nMessage itself does not supply the timestamp and is not emitted again.\n\nOn Coordination/Status Pending, Mandate/Status Active,\nMandate/Status Terminated, or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace activatedAt.\n\nA Message without a root causal Timeline Entry cannot establish an\nactivation timestamp and must not activate the mandate.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype.\n",
       "type": {
         "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
       },
@@ -1540,11 +1621,11 @@
         "type": {
           "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
-        "value": "mandateActivationRequestedChannel"
+        "value": "mandateActivatedChannel"
       },
       "event": {
         "type": {
-          "blueId": "JA8tkhbAgaZ4T3wc8JXzTN3Swsaw1MpfNAPqTizdCSh1"
+          "blueId": "3HtuEaYgkn8rV9xZf1x5uY2v7S9WXbVkcV3rj3Sy6arJ"
         }
       },
       "steps": {
@@ -1571,7 +1652,7 @@
       }
     },
     "terminateMandate": {
-      "description": "Standard termination operation available to the guarantor and authority\nholder.\n\nIt does not write lifecycle state directly. It emits or forwards the\nnormalized Mandate/Mandate Termination Requested Message so that\napplyMandateTermination remains the sole authoritative termination\nimplementation.\n\nSpecialized mandate types may add other operations or workflows that emit\nthe same request Message.\n\nConcrete workflow steps are defined in this base type.\n",
+      "description": "Standard termination operation available to the guarantor and authority\nholder.\n\nUnless the mandate is already Mandate/Status Terminated, it emits\nMandate/Mandate Terminated with the optional request reason and\ncorrelation to the invoking Message. This includes a failed mandate,\nallowing the guarantor or authority holder to stop its processing. The\noperation does not write lifecycle state directly;\napplyMandateTermination remains the sole authoritative termination\nimplementation.\n\nOn Mandate/Status Terminated it emits no lifecycle Message. Specialized\nmandate types may add other operations that emit Mandate/Mandate\nTerminated.\n\nConcrete workflow steps are defined in this base type.\n",
       "type": {
         "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
@@ -1582,14 +1663,17 @@
         "value": "mandateTerminationChannel"
       },
       "request": {
-        "type": {
-          "blueId": "8azbFfadtUzwW6iD96ajqrrW4szxitBLSGjLhKtj3HTc"
+        "reason": {
+          "description": "Optional human-readable or machine-generated termination reason.",
+          "type": {
+            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+          }
         }
       },
       "steps": {
         "items": [
           {
-            "name": "Request Mandate Termination",
+            "name": "Emit Mandate Terminated",
             "type": {
               "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
             },
@@ -1603,14 +1687,14 @@
               "type": {
                 "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
               },
-              "value": "requestMandateTermination"
+              "value": "emitMandateTermination"
             }
           }
         ]
       }
     },
     "applyMandateTermination": {
-      "description": "Sole authoritative mandate-termination implementation.\n\nOn Coordination/Status Pending, Mandate/Status Authority Confirmed, or\nMandate/Status Active it changes status to Mandate/Status Terminated,\nrecords terminatedAt from the root causal Timeline Entry, and emits\nMandate/Mandate Terminated, copies the accepted reason, sets\ninResponseTo to the accepted termination request when available, and\nrequests graceful termination of the root processing scope after state\nupdates and emitted Messages are applied.\n\nOn Mandate/Status Terminated or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace terminatedAt.\n\nA request without a root causal Timeline Entry cannot establish a\ntermination timestamp and must not terminate the mandate.\n\nConcrete workflow steps, BEX implementation, and the\nCoordination/Terminate Processing step are defined in this base type.\n",
+      "description": "Sole authoritative mandate-termination implementation.\n\nIt accepts Mandate/Mandate Terminated emitted by an operation. On\nCoordination/Status Pending, Mandate/Status Authority Confirmed, or\nMandate/Status Active it changes status to Mandate/Status Terminated and\nrecords terminatedAt from the root causal Timeline Entry. The Message\nitself carries any reason and correlation, does not supply the timestamp,\nand is not emitted again.\n\nAfter the state update, the workflow requests graceful termination of the\nroot processing scope.\n\nOn Mandate/Status Terminated or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace terminatedAt. Receipt of the\ntermination Message still requests graceful processing termination, so a\nfailed mandate can be stopped without replacing its failure state.\n\nConcrete workflow steps, BEX implementation, and the\nCoordination/Terminate Processing step are defined in this base type.\n",
       "type": {
         "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
       },
@@ -1618,11 +1702,11 @@
         "type": {
           "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
-        "value": "mandateTerminationRequestedChannel"
+        "value": "mandateTerminatedChannel"
       },
       "event": {
         "type": {
-          "blueId": "8azbFfadtUzwW6iD96ajqrrW4szxitBLSGjLhKtj3HTc"
+          "blueId": "C6zMJV5BTUBbzAQ4UJ2jcaNjxhravLVF82euN8hNe5K8"
         }
       },
       "steps": {
@@ -1644,28 +1728,7 @@
               },
               "value": "applyMandateTermination"
             }
-          }
-        ]
-      }
-    },
-    "finalizeMandateTermination": {
-      "description": "Inherited terminal workflow. It runs only for the authoritative Mandate\nTerminated Message emitted after applyMandateTermination has committed the\nterminal state and lifecycle evidence, then requests graceful termination\nof the mandate processing scope.\n",
-      "type": {
-        "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
-      },
-      "channel": {
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        },
-        "value": "mandateTerminationRequestedChannel"
-      },
-      "event": {
-        "type": {
-          "blueId": "5SR8BVQL9t5UakLBZFfmnFb4hEPrGx8NUcpMT2gncA16"
-        }
-      },
-      "steps": {
-        "items": [
+          },
           {
             "name": "Gracefully Terminate Mandate Processing",
             "type": {
@@ -1689,48 +1752,39 @@
     }
   },
   "initializationError": {
-    "description": "First deterministic initialization error when status is\nCoordination/Status Failed.\n\nThis field is absent when initialization succeeds. Initialization stops at\nthe first material error rather than accumulating an error list.\n",
+    "description": "First deterministic initialization error when status is\nCoordination/Status Failed.\n\nInitialization writes this field only when initialization fails and stops\nat the first material error rather than accumulating an error list. A\nsuccessful initialization does not write, clear, or normalize a value\nalready present in an authored document.\n",
     "type": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     }
   },
   "activateOnAuthorityConfirmation": {
-    "description": "Controls whether successful authority confirmation also requests mandate\nactivation.\n\nWhen true, successful confirmation emits Mandate/Mandate Activation\nRequested, which is handled by the inherited activation workflow.\n\nWhen false, successful confirmation leaves the mandate in\nMandate/Status Authority Confirmed. A specialized workflow must later emit\nMandate/Mandate Activation Requested.\n\nWhen absent before initialization, the initialization workflow materializes\ntrue. The field is not a fixed inherited value, so a concrete mandate may\nexplicitly set it to false.\n",
+    "description": "Controls whether successful authority confirmation also emits the mandate\nactivation Message.\n\nWhen true, successful confirmation emits Mandate/Mandate Activated, which\nis handled by the inherited activation workflow.\n\nWhen false, successful confirmation leaves the mandate in\nMandate/Status Authority Confirmed. A specialized operation must later emit\nMandate/Mandate Activated.\n\nWhen absent before initialization, the initialization workflow materializes\ntrue. The field is not a fixed inherited value, so a concrete mandate may\nexplicitly set it to false.\n",
     "type": {
       "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
     }
   },
   "authorityConfirmedAt": {
-    "description": "Microsecond timestamp of the root causal Coordination/Timeline Entry that\nsuccessfully changed the mandate from Coordination/Status Pending to\nMandate/Status Authority Confirmed.\n\nThe value is derived by the inherited authority-confirmation workflow. It\nis never supplied by the operation request and is never replaced.\n",
+    "description": "Microsecond timestamp of the root causal Coordination/Timeline Entry that\nsuccessfully changed the mandate from Coordination/Status Pending to\nMandate/Status Authority Confirmed.\n\nThe value is derived by the inherited authority-confirmation workflow. It\nis never supplied by the operation request. After authority confirmation\nsucceeds, inherited lifecycle workflows do not replace it.\n",
     "type": {
       "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
     }
   },
   "activatedAt": {
-    "description": "Microsecond timestamp from which the mandate entered Mandate/Status Active.\n\nThe value is derived by the inherited activation workflow from the root\ncausal Coordination/Timeline Entry that led to the accepted\nMandate/Mandate Activation Requested Message. It is never supplied by\nthe activation request and is never replaced.\n",
+    "description": "Microsecond timestamp from which the mandate entered Mandate/Status Active.\n\nThe value is derived by the inherited activation workflow from the root\ncausal Coordination/Timeline Entry that led to the accepted\nMandate/Mandate Activated Message. It is not supplied by that Message.\nAfter activation succeeds, inherited lifecycle workflows do not replace\nit.\n",
     "type": {
       "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
     }
   },
   "terminatedAt": {
-    "description": "Microsecond timestamp from which the mandate entered Mandate/Status Terminated.\n\nThe value is derived by the inherited termination workflow from the root\ncausal Coordination/Timeline Entry that led to the accepted\nMandate/Mandate Termination Requested Message. It is never supplied by\nthe termination request and is never replaced.\n",
+    "description": "Microsecond timestamp from which the mandate entered Mandate/Status Terminated.\n\nThe value is derived by the inherited termination workflow from the root\ncausal Coordination/Timeline Entry that led to the accepted\nMandate/Mandate Terminated Message. It is not supplied by that Message.\nAfter termination succeeds, inherited lifecycle workflows do not replace\nit.\n",
     "type": {
       "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
     }
   },
   "validation": {
     "description": "Optional request-validation convention inherited by mandate subtypes.\n\nA concrete mandate type defines which request or event is matched by\nvalidation.request and which runtime component performs the validation.\nMandate/Operation Mandate matches the Operation Request payload.\nDocument-responder and MyOS mandate types may validate an entire request\nMessage.\n",
-    "request": {
-      "description": "Optional static Blue pattern matched against the input defined by the\nconcrete mandate type. When absent, static request-shape matching imposes\nno additional restriction.\n\nThe same candidate input is passed to validation.function as the\nimmutable BEX binding named request.\n"
-    },
-    "function": {
-      "description": "Optional deterministic BEX validation program represented as a Blue node.\nThe field intentionally has no repository-local nominal type: BEX program\nsyntax and compilation are defined by the BEX specification and runtime.\n\nBy convention, the host passes the candidate input being validated as the\nimmutable BEX binding named request. Concrete mandate types define the\nsemantic meaning of that input.\n\nWhen validation.function.entry is present, initialization verifies that\nvalidation.function.functions declares a local function with that name.\nThe feeder or provider compiles and invokes the selected program when it\nvalidates a request. When absent, custom BEX validation is treated as\npassing.\n",
-      "entry": {
-        "description": "Optional name of the local function to invoke. When present, functions\nmust declare a function with exactly this name.\n",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      }
+    "type": {
+      "blueId": "333eCC8uWcMWgw8Ev2FfvZgJMUK9pw8LGUa1D1cYTSsQ"
     }
   }
 }

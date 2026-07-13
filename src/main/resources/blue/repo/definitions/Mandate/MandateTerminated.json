@@ -1,20 +1,11 @@
 {
   "name": "Mandate Terminated",
-  "description": "Authoritative Message emitted after the inherited mandate workflow changes\nthe mandate to Mandate/Status Terminated and before graceful processing termination is\napplied.\n\nWhen termination follows Mandate Termination Requested, inResponseTo\nreferences that exact Message occurrence.\n",
+  "description": "Lifecycle Message emitted by the standard termination operation or another\nauthorized mandate operation.\n\nThe inherited termination workflow applies the terminal lifecycle transition\nwhen the current status permits it, derives terminatedAt from the root causal\nTimeline Entry, and requests graceful processing termination. A failed\nmandate may therefore stop processing without replacing its failure state.\nThis Message does not supply the effective timestamp and is not re-emitted by\nthe accepting workflow. The inherited inResponseTo field may identify the\nMessage that invoked termination.\n",
   "type": {
     "blueId": "768MxgQEHnLSkedHWHtjj43mAjH361Zf6pKZgVxi5po3"
   },
-  "timestampUs": {
-    "description": "Effective termination timestamp derived from the root causal Timeline Entry.",
-    "type": {
-      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
-    },
-    "schema": {
-      "required": true
-    }
-  },
   "reason": {
-    "description": "Optional reason copied from the accepted termination request.",
+    "description": "Optional human-readable or machine-generated termination reason.",
     "type": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     }

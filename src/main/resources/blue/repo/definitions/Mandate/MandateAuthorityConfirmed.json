@@ -1,6 +1,6 @@
 {
   "name": "Mandate Authority Confirmed",
-  "description": "Authoritative Message emitted when the inherited mandate workflow\nsuccessfully confirms the declared authority relationship.\n\nConfirmation does not necessarily activate the mandate. When immediate\nactivation is enabled, this Message is followed by Mandate Activation\nRequested and, if accepted, Mandate Activated.\n",
+  "description": "Authoritative Message emitted when the inherited mandate workflow\nsuccessfully confirms the declared authority relationship.\n\nConfirmation does not necessarily activate the mandate. When immediate\nactivation is enabled, the same operation also emits Mandate Activated for\nthe inherited activation workflow to apply.\n",
   "type": {
     "blueId": "768MxgQEHnLSkedHWHtjj43mAjH361Zf6pKZgVxi5po3"
   },

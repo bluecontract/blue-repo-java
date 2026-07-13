@@ -1,13 +1,13 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "DuEAmqH8j5rFSC5rnjzKqe7gT8t6mRvpg6aV5eawCSuq",
+  "repositoryVersionBlueId": "J66DFgpHSJrq3peC7k1wnXtqNqbEdX9MrCn4GRaeTcCE",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
       "index": 0,
       "version": "1.3.0",
-      "repositoryBlueId": "DuEAmqH8j5rFSC5rnjzKqe7gT8t6mRvpg6aV5eawCSuq"
+      "repositoryBlueId": "J66DFgpHSJrq3peC7k1wnXtqNqbEdX9MrCn4GRaeTcCE"
     }
   ],
   "packageNames": [
@@ -1001,14 +1001,14 @@
       "packageName": "Coordination",
       "name": "Timeline Entry",
       "qualifiedName": "Coordination/Timeline Entry",
-      "blueId": "H4cyvQ2SpkZK1BffH15ZGV7X8a99S3kFQJhX3AFgG5va#0",
+      "blueId": "6RcBVMHDvhHZ3doMB3qMU6Yj1KKsiPp8anFm46Y4CBWr#0",
       "resourcePath": "blue/repo/definitions/Coordination/TimelineEntry.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "H4cyvQ2SpkZK1BffH15ZGV7X8a99S3kFQJhX3AFgG5va#0",
+          "typeBlueId": "6RcBVMHDvhHZ3doMB3qMU6Yj1KKsiPp8anFm46Y4CBWr#0",
           "attributesAdded": []
         }
       ]
@@ -14569,14 +14569,14 @@
       "packageName": "Mandate",
       "name": "Document Responder Mandate",
       "qualifiedName": "Mandate/Document Responder Mandate",
-      "blueId": "4GceQTHVxT6Hn6ycYu6jynN1Nno7sq9fDs2LeCFKWRK9",
+      "blueId": "EWu5YYJiwvaaCrP8MeSGHQHzKmz5RDS8dYPERAKXxcgq",
       "resourcePath": "blue/repo/definitions/Mandate/DocumentResponderMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "4GceQTHVxT6Hn6ycYu6jynN1Nno7sq9fDs2LeCFKWRK9",
+          "typeBlueId": "EWu5YYJiwvaaCrP8MeSGHQHzKmz5RDS8dYPERAKXxcgq",
           "attributesAdded": []
         }
       ]
@@ -14585,14 +14585,14 @@
       "packageName": "Mandate",
       "name": "Mandate",
       "qualifiedName": "Mandate/Mandate",
-      "blueId": "hWzGSMv7WXsYLupLMkSCFVU1mpzqDGduvqXcb3Cf7kw",
+      "blueId": "HP2QzwJvrCBddtzJ3FZk3eSkEiE9k7ZcMVA9NDV26jma",
       "resourcePath": "blue/repo/definitions/Mandate/Mandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "hWzGSMv7WXsYLupLMkSCFVU1mpzqDGduvqXcb3Cf7kw",
+          "typeBlueId": "HP2QzwJvrCBddtzJ3FZk3eSkEiE9k7ZcMVA9NDV26jma",
           "attributesAdded": []
         }
       ]
@@ -14601,30 +14601,14 @@
       "packageName": "Mandate",
       "name": "Mandate Activated",
       "qualifiedName": "Mandate/Mandate Activated",
-      "blueId": "4kYaMvec6yt4xdXwoHaPDH1gXamJY11txz7cBeFuJYD5",
+      "blueId": "3HtuEaYgkn8rV9xZf1x5uY2v7S9WXbVkcV3rj3Sy6arJ",
       "resourcePath": "blue/repo/definitions/Mandate/MandateActivated.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "4kYaMvec6yt4xdXwoHaPDH1gXamJY11txz7cBeFuJYD5",
-          "attributesAdded": []
-        }
-      ]
-    },
-    {
-      "packageName": "Mandate",
-      "name": "Mandate Activation Requested",
-      "qualifiedName": "Mandate/Mandate Activation Requested",
-      "blueId": "JA8tkhbAgaZ4T3wc8JXzTN3Swsaw1MpfNAPqTizdCSh1",
-      "resourcePath": "blue/repo/definitions/Mandate/MandateActivationRequested.json",
-      "status": "stable",
-      "repositoryVersionIndex": 0,
-      "versions": [
-        {
-          "repositoryVersionIndex": 0,
-          "typeBlueId": "JA8tkhbAgaZ4T3wc8JXzTN3Swsaw1MpfNAPqTizdCSh1",
+          "typeBlueId": "3HtuEaYgkn8rV9xZf1x5uY2v7S9WXbVkcV3rj3Sy6arJ",
           "attributesAdded": []
         }
       ]
@@ -14633,14 +14617,14 @@
       "packageName": "Mandate",
       "name": "Mandate Authority",
       "qualifiedName": "Mandate/Mandate Authority",
-      "blueId": "J4NZYjNPMRgQq9y56UHUBumg1rATxBPEbp9yiWZtjwfY",
+      "blueId": "2AMMqD252NjcjZAHoCVitWx14XFT6rFuwjA3tZss5diu",
       "resourcePath": "blue/repo/definitions/Mandate/MandateAuthority.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "J4NZYjNPMRgQq9y56UHUBumg1rATxBPEbp9yiWZtjwfY",
+          "typeBlueId": "2AMMqD252NjcjZAHoCVitWx14XFT6rFuwjA3tZss5diu",
           "attributesAdded": []
         }
       ]
@@ -14649,14 +14633,14 @@
       "packageName": "Mandate",
       "name": "Mandate Authority Confirmed",
       "qualifiedName": "Mandate/Mandate Authority Confirmed",
-      "blueId": "F4AoZc1CD8TWUemaHy8VrNNBgEUM5JwRBHwkr4WtJ8En",
+      "blueId": "EbNsQWy645JPPuWhkDw3XcrQk1neH2Z8KBsTvUTCrrmk",
       "resourcePath": "blue/repo/definitions/Mandate/MandateAuthorityConfirmed.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "F4AoZc1CD8TWUemaHy8VrNNBgEUM5JwRBHwkr4WtJ8En",
+          "typeBlueId": "EbNsQWy645JPPuWhkDw3XcrQk1neH2Z8KBsTvUTCrrmk",
           "attributesAdded": []
         }
       ]
@@ -14665,30 +14649,30 @@
       "packageName": "Mandate",
       "name": "Mandate Terminated",
       "qualifiedName": "Mandate/Mandate Terminated",
-      "blueId": "5SR8BVQL9t5UakLBZFfmnFb4hEPrGx8NUcpMT2gncA16",
+      "blueId": "C6zMJV5BTUBbzAQ4UJ2jcaNjxhravLVF82euN8hNe5K8",
       "resourcePath": "blue/repo/definitions/Mandate/MandateTerminated.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "5SR8BVQL9t5UakLBZFfmnFb4hEPrGx8NUcpMT2gncA16",
+          "typeBlueId": "C6zMJV5BTUBbzAQ4UJ2jcaNjxhravLVF82euN8hNe5K8",
           "attributesAdded": []
         }
       ]
     },
     {
       "packageName": "Mandate",
-      "name": "Mandate Termination Requested",
-      "qualifiedName": "Mandate/Mandate Termination Requested",
-      "blueId": "8azbFfadtUzwW6iD96ajqrrW4szxitBLSGjLhKtj3HTc",
-      "resourcePath": "blue/repo/definitions/Mandate/MandateTerminationRequested.json",
+      "name": "Mandate Validation",
+      "qualifiedName": "Mandate/Mandate Validation",
+      "blueId": "333eCC8uWcMWgw8Ev2FfvZgJMUK9pw8LGUa1D1cYTSsQ",
+      "resourcePath": "blue/repo/definitions/Mandate/MandateValidation.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "8azbFfadtUzwW6iD96ajqrrW4szxitBLSGjLhKtj3HTc",
+          "typeBlueId": "333eCC8uWcMWgw8Ev2FfvZgJMUK9pw8LGUa1D1cYTSsQ",
           "attributesAdded": []
         }
       ]
@@ -14697,14 +14681,14 @@
       "packageName": "Mandate",
       "name": "Operation Mandate",
       "qualifiedName": "Mandate/Operation Mandate",
-      "blueId": "9vxhKfACpWiwry8SHnfRxi43NuWYHmUwvwwZW2TKeKk3",
+      "blueId": "H7r8qr4yEQKDZ6zDyCJyxaWNxtAZoXNBui3FwhTowvxP",
       "resourcePath": "blue/repo/definitions/Mandate/OperationMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "9vxhKfACpWiwry8SHnfRxi43NuWYHmUwvwwZW2TKeKk3",
+          "typeBlueId": "H7r8qr4yEQKDZ6zDyCJyxaWNxtAZoXNBui3FwhTowvxP",
           "attributesAdded": []
         }
       ]
@@ -15193,14 +15177,14 @@
       "packageName": "MyOS",
       "name": "MyOS Document Bootstrap Mandate",
       "qualifiedName": "MyOS/MyOS Document Bootstrap Mandate",
-      "blueId": "8hJjvdfqBx5GNVorWQHXaqA4VPzaauAJtxdj5AVFw93N",
+      "blueId": "7meyNi9rt1Pbr5PC6JqGT6B3YfQnQ3T81JeUNDw44HrT",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSDocumentBootstrapMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "8hJjvdfqBx5GNVorWQHXaqA4VPzaauAJtxdj5AVFw93N",
+          "typeBlueId": "7meyNi9rt1Pbr5PC6JqGT6B3YfQnQ3T81JeUNDw44HrT",
           "attributesAdded": []
         }
       ]
@@ -15209,14 +15193,14 @@
       "packageName": "MyOS",
       "name": "MyOS Document Operation Mandate",
       "qualifiedName": "MyOS/MyOS Document Operation Mandate",
-      "blueId": "FL7Caksowk6AvTQbLW3cTECTCyhbWKeb3iFbZLPRg5UV",
+      "blueId": "2t2emCycVDM2cZ9p8ih4VuAZPCPY1WqNgxs1oS6C29WL",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSDocumentOperationMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "FL7Caksowk6AvTQbLW3cTECTCyhbWKeb3iFbZLPRg5UV",
+          "typeBlueId": "2t2emCycVDM2cZ9p8ih4VuAZPCPY1WqNgxs1oS6C29WL",
           "attributesAdded": []
         }
       ]
@@ -15353,14 +15337,14 @@
       "packageName": "MyOS",
       "name": "MyOS Session Subscription Mandate",
       "qualifiedName": "MyOS/MyOS Session Subscription Mandate",
-      "blueId": "J7NZXKP2EC6Fu8oijfkW3oQ8qSwbKFLxUvsmNJZZszv4",
+      "blueId": "2iWKqHGA6EZiG15KcRmkkESbewVBAPG5JEEruJbrE44t",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSSessionSubscriptionMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "J7NZXKP2EC6Fu8oijfkW3oQ8qSwbKFLxUvsmNJZZszv4",
+          "typeBlueId": "2iWKqHGA6EZiG15KcRmkkESbewVBAPG5JEEruJbrE44t",
           "attributesAdded": []
         }
       ]
@@ -15449,14 +15433,14 @@
       "packageName": "MyOS",
       "name": "MyOS Timeline Entry",
       "qualifiedName": "MyOS/MyOS Timeline Entry",
-      "blueId": "7riEBA1ark9wV7HSGANRczHtUWZKg63Wkxn83NoCWjGV",
+      "blueId": "nRpkCUL8G7qSkdDUpWZxirCfS6k4BJGZVrmm5efJWCY",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSTimelineEntry.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "7riEBA1ark9wV7HSGANRczHtUWZKg63Wkxn83NoCWjGV",
+          "typeBlueId": "nRpkCUL8G7qSkdDUpWZxirCfS6k4BJGZVrmm5efJWCY",
           "attributesAdded": []
         }
       ]

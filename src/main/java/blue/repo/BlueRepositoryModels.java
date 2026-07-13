@@ -925,11 +925,10 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.mandate.DocumentResponderMandate.class);
         resolver.registerAnnotatedClass(blue.repo.mandate.Mandate.class);
         resolver.registerAnnotatedClass(blue.repo.mandate.MandateActivated.class);
-        resolver.registerAnnotatedClass(blue.repo.mandate.MandateActivationRequested.class);
         resolver.registerAnnotatedClass(blue.repo.mandate.MandateAuthority.class);
         resolver.registerAnnotatedClass(blue.repo.mandate.MandateAuthorityConfirmed.class);
         resolver.registerAnnotatedClass(blue.repo.mandate.MandateTerminated.class);
-        resolver.registerAnnotatedClass(blue.repo.mandate.MandateTerminationRequested.class);
+        resolver.registerAnnotatedClass(blue.repo.mandate.MandateValidation.class);
         resolver.registerAnnotatedClass(blue.repo.mandate.OperationMandate.class);
         resolver.registerAnnotatedClass(blue.repo.mandate.StatusActive.class);
         resolver.registerAnnotatedClass(blue.repo.mandate.StatusAuthorityConfirmed.class);

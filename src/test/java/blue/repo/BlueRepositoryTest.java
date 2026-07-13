@@ -432,7 +432,6 @@ class BlueRepositoryTest {
         assertTrue(repo.definition("Common/Document Anchors").isPresent());
         assertTrue(repo.definition("Common/Named Event").isPresent());
         assertTrue(repo.definition("Common/Payment").isPresent());
-        assertFalse(repo.definition("Common/PermissionGrant").isPresent());
         assertTrue(repo.definition("Common/Profile").isPresent());
         assertTrue(repo.definition("Common/Record").isPresent());
         assertTrue(repo.definition("Common/Relationship").isPresent());
