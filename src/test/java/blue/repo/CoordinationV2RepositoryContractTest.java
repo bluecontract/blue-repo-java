@@ -144,7 +144,7 @@ class CoordinationV2RepositoryContractTest {
         JsonNode mandate = definition(MandateTypes.MANDATE);
         JsonNode entry = mandate.at("/validation/function/entry");
 
-        assertEquals(TEXT_BLUE_ID, entry.at("/type/blueId").asText());
+        assertEquals(MandateTypes.MANDATE_VALIDATION.blueId(), mandate.at("/validation/type/blueId").asText());
         assertFalse(entry.has("value"), "the base mandate must not select a concrete validation entry");
 
         JsonNode guard = mandate.at(
@@ -183,52 +183,51 @@ class CoordinationV2RepositoryContractTest {
                 "isStatusPending",
                 "isStatusAuthorityConfirmed",
                 "isStatusActive",
+                "isStatusFailed",
                 "hasDeclaredValidationEntry",
                 "processingEventTimestamp",
                 "sourceMessage",
                 "authorityConfirmedMessage",
-                "activationRequestedMessage",
                 "activatedMessage",
-                "terminationRequestedMessage",
                 "terminatedMessage",
                 "initializeMandate",
                 "confirmMandateAuthority",
                 "applyMandateActivation",
-                "requestMandateTermination",
+                "emitMandateTermination",
                 "applyMandateTermination"
         )), fieldNames(functions));
 
         assertComputeWorkflow(contracts, "initializeMandate", "initializeMandate");
         assertComputeWorkflow(contracts, "confirmMandateAuthority", "confirmMandateAuthority");
         assertComputeWorkflow(contracts, "applyMandateActivation", "applyMandateActivation");
-        assertComputeWorkflow(contracts, "terminateMandate", "requestMandateTermination");
-        assertComputeWorkflow(contracts, "applyMandateTermination", "applyMandateTermination");
+        assertComputeWorkflow(contracts, "terminateMandate", "emitMandateTermination");
+        assertComputeStep(contracts, "applyMandateTermination", 0, "applyMandateTermination");
 
-        assertEquals(MandateTypes.MANDATE_ACTIVATION_REQUESTED.blueId(),
+        assertEquals(MandateTypes.MANDATE_ACTIVATED.blueId(),
                 contracts.at("/applyMandateActivation/event/type/blueId").asText());
-        assertEquals(MandateTypes.MANDATE_TERMINATION_REQUESTED.blueId(),
-                contracts.at("/applyMandateTermination/event/type/blueId").asText());
         assertEquals(MandateTypes.MANDATE_TERMINATED.blueId(),
-                contracts.at("/finalizeMandateTermination/event/type/blueId").asText());
+                contracts.at("/applyMandateTermination/event/type/blueId").asText());
 
-        JsonNode finalSteps = contracts.at("/finalizeMandateTermination/steps/items");
-        assertEquals(1, finalSteps.size());
-        assertEquals(CoordinationTypes.TERMINATE_PROCESSING.blueId(), finalSteps.at("/0/type/blueId").asText());
-        assertEquals("Mandate terminated", scalarValue(finalSteps.at("/0/reason")));
+        JsonNode terminationSteps = contracts.at("/applyMandateTermination/steps/items");
+        assertEquals(2, terminationSteps.size());
+        assertEquals(CoordinationTypes.TERMINATE_PROCESSING.blueId(), terminationSteps.at("/1/type/blueId").asText());
+        assertEquals("Mandate terminated", scalarValue(terminationSteps.at("/1/reason")));
 
         assertEffectOrder(functions.path("confirmMandateAuthority"),
                 "/status", "/authorityConfirmedAt", "confirmationMessage", "$if");
         assertEffectOrder(functions.path("applyMandateActivation"),
-                "/status", "/activatedAt", "activatedMessage");
+                "/status", "/activatedAt");
         assertEffectOrder(functions.path("applyMandateTermination"),
-                "/status", "/terminatedAt", "terminatedMessage");
+                "/status", "/terminatedAt");
+        assertEffectOrder(functions.path("emitMandateTermination"),
+                "terminatedMessage");
 
         assertEquals("inResponseTo", scalarValue(functions.at(
-                "/authorityConfirmedMessage/expr/inResponseTo/$var")));
+                "/authorityConfirmedMessage/expr/$objectSet/object/inResponseTo/$var")));
         assertEquals("inResponseTo", scalarValue(functions.at(
-                "/activatedMessage/expr/inResponseTo/$var")));
+                "/activatedMessage/expr/$objectSet/object/inResponseTo/$var")));
         assertEquals("inResponseTo", scalarValue(functions.at(
-                "/terminatedMessage/expr/inResponseTo/$var")));
+                "/terminatedMessage/expr/$objectSet/object/inResponseTo/$var")));
     }
 
     @Test
@@ -269,9 +268,15 @@ class CoordinationV2RepositoryContractTest {
     private void assertComputeWorkflow(JsonNode contracts, String contractName, String entry) {
         JsonNode steps = contracts.path(contractName).path("steps").path("items");
         assertEquals(1, steps.size(), contractName);
-        assertEquals(CoordinationTypes.COMPUTE.blueId(), steps.at("/0/type/blueId").asText(), contractName);
-        assertEquals("mandateLifecycleDefinition", scalarValue(steps.at("/0/definition")), contractName);
-        assertEquals(entry, scalarValue(steps.at("/0/entry")), contractName);
+        assertComputeStep(contracts, contractName, 0, entry);
+    }
+
+    private void assertComputeStep(JsonNode contracts, String contractName, int index, String entry) {
+        JsonNode steps = contracts.path(contractName).path("steps").path("items");
+        assertEquals(CoordinationTypes.COMPUTE.blueId(),
+                steps.at("/" + index + "/type/blueId").asText(), contractName);
+        assertEquals("mandateLifecycleDefinition", scalarValue(steps.at("/" + index + "/definition")), contractName);
+        assertEquals(entry, scalarValue(steps.at("/" + index + "/entry")), contractName);
     }
 
     private static void assertEffectOrder(JsonNode function, String... expected) {

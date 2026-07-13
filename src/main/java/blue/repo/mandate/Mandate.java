@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.coordination.Status;
 import java.math.BigInteger;
 
-@TypeBlueId("hWzGSMv7WXsYLupLMkSCFVU1mpzqDGduvqXcb3Cf7kw")
+@TypeBlueId("HP2QzwJvrCBddtzJ3FZk3eSkEiE9k7ZcMVA9NDV26jma")
 public class Mandate {
     public static String blueId() {
-        return "hWzGSMv7WXsYLupLMkSCFVU1mpzqDGduvqXcb3Cf7kw";
+        return "HP2QzwJvrCBddtzJ3FZk3eSkEiE9k7ZcMVA9NDV26jma";
     }
 
     public static String packageName() {
@@ -51,7 +51,7 @@ public class Mandate {
 
     private BigInteger terminatedAt;
 
-    private Node validation;
+    private MandateValidation validation;
 
     public Node getContracts() {
         return contracts;
@@ -116,11 +116,11 @@ public class Mandate {
         return this;
     }
 
-    public Node getValidation() {
+    public MandateValidation getValidation() {
         return validation;
     }
 
-    public Mandate validation(Node validation) {
+    public Mandate validation(MandateValidation validation) {
         this.validation = validation;
         return this;
     }

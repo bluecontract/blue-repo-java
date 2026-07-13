@@ -2,7 +2,7 @@
   "name": "MyOS Session Subscription Mandate",
   "description": "MyOS-hosted responder mandate allowing sessions of the inherited authorizedInitialDocument to request a provider-mediated subscription to a source logical document. The authority holder must control the source document or the explicitly constrained source session. The canonical subtype constrains the guarantor and authorized-actor roles to MyOS Admin.\n",
   "type": {
-    "blueId": "4GceQTHVxT6Hn6ycYu6jynN1Nno7sq9fDs2LeCFKWRK9"
+    "blueId": "EWu5YYJiwvaaCrP8MeSGHQHzKmz5RDS8dYPERAKXxcgq"
   },
   "contracts": {
     "mandateGuarantorChannel": {

@@ -52,7 +52,7 @@
   "onBehalfOf": {
     "description": "Optional mandate-backed authority under which actor claims to act for another actor. A feeder validates this authority before delivery when the requested action is not directly eligible through a source channel.\n",
     "type": {
-      "blueId": "J4NZYjNPMRgQq9y56UHUBumg1rATxBPEbp9yiWZtjwfY"
+      "blueId": "2AMMqD252NjcjZAHoCVitWx14XFT6rFuwjA3tZss5diu"
     }
   },
   "message": {

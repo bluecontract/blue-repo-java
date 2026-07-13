@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.mandate.MandateAuthority;
 import java.math.BigInteger;
 
-@TypeBlueId("H4cyvQ2SpkZK1BffH15ZGV7X8a99S3kFQJhX3AFgG5va#0")
+@TypeBlueId("6RcBVMHDvhHZ3doMB3qMU6Yj1KKsiPp8anFm46Y4CBWr#0")
 public class TimelineEntry {
     public static String blueId() {
-        return "H4cyvQ2SpkZK1BffH15ZGV7X8a99S3kFQJhX3AFgG5va#0";
+        return "6RcBVMHDvhHZ3doMB3qMU6Yj1KKsiPp8anFm46Y4CBWr#0";
     }
 
     public static String packageName() {
