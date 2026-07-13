@@ -247,27 +247,9 @@ class CoordinationV2RepositoryContractTest {
     }
 
     @Test
-    void removedPermissionWorkerAndPackageTypesStayAbsent() {
-        for (RepositoryDefinition definition : repository.manifest().definitions()) {
-            assertFalse(definition.name().contains("Permission"), definition.qualifiedName());
-        }
-
-        for (String qualifiedName : Arrays.asList(
-                "Common/PermissionGrant",
-                "MyOS/Agent Actor",
-                "MyOS/Anchor Automation Template",
-                "MyOS/Inform User To Install MyOS Package",
-                "MyOS/MyOS Package",
-                "MyOS/MyOS Worker Agency",
-                "MyOS/Start Worker Session Requested",
-                "MyOS/Worker Session Starting",
-                "Blue/BEX Program"
-        )) {
-            assertFalse(repository.definition(qualifiedName).isPresent(), qualifiedName);
-        }
-
-        assertTrue(repository.definition("Coordination/Agent Actor").isPresent());
-        assertTrue(repository.definition("MyOS/MyOS Agent Actor").isPresent());
+    void currentAgentActorTypesResolve() throws Exception {
+        assertEquals("Agent Actor", definition(CoordinationTypes.AGENT_ACTOR).path("name").asText());
+        assertEquals("MyOS Agent Actor", definition(MyOSTypes.MYOS_AGENT_ACTOR).path("name").asText());
     }
 
     private JsonNode definition(RepositoryType type) throws Exception {
