@@ -1531,6 +1531,14 @@
                       },
                       "value": true
                     }
+                  },
+                  "termination": {
+                    "reason": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "Mandate terminated"
+                    }
                   }
                 }
               }
@@ -1694,7 +1702,7 @@
       }
     },
     "applyMandateTermination": {
-      "description": "Sole authoritative mandate-termination implementation.\n\nIt accepts Mandate/Mandate Terminated emitted by an operation. On\nCoordination/Status Pending, Mandate/Status Authority Confirmed, or\nMandate/Status Active it changes status to Mandate/Status Terminated and\nrecords terminatedAt from the root causal Timeline Entry. The Message\nitself carries any reason and correlation, does not supply the timestamp,\nand is not emitted again.\n\nAfter the state update, the workflow requests graceful termination of the\nroot processing scope.\n\nOn Mandate/Status Terminated or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace terminatedAt. Receipt of the\ntermination Message still requests graceful processing termination, so a\nfailed mandate can be stopped without replacing its failure state.\n\nConcrete workflow steps, BEX implementation, and the\nCoordination/Terminate Processing step are defined in this base type.\n",
+      "description": "Sole authoritative mandate-termination implementation.\n\nIt accepts Mandate/Mandate Terminated emitted by an operation. On\nCoordination/Status Pending, Mandate/Status Authority Confirmed, or\nMandate/Status Active it changes status to Mandate/Status Terminated and\nrecords terminatedAt from the root causal Timeline Entry. The Message\nitself carries any reason and correlation, does not supply the timestamp,\nand is not emitted again.\n\nThe Compute result requests graceful termination after its state changes\nand emitted events have been buffered. Coordination validates the complete\nresult before applying effects, then applies changes, emits events, and\nrequests graceful termination in that order.\n\nOn Mandate/Status Terminated or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace terminatedAt. Receipt of the\ntermination Message still requests graceful processing termination, so a\nfailed mandate can be stopped without replacing its failure state.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype. No dedicated termination workflow-step type is required.\n",
       "type": {
         "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
       },
@@ -1727,18 +1735,6 @@
                 "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
               },
               "value": "applyMandateTermination"
-            }
-          },
-          {
-            "name": "Gracefully Terminate Mandate Processing",
-            "type": {
-              "blueId": "GWdZwV4wh4D6d8knKC2ULofFTEZmtVE31Cm6pGtMiKxh"
-            },
-            "reason": {
-              "type": {
-                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-              },
-              "value": "Mandate terminated"
             }
           }
         ]

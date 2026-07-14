@@ -8,9 +8,7 @@ import blue.repo.coordination.Message;
 import blue.repo.coordination.Operation;
 import blue.repo.coordination.OperationRequest;
 import blue.repo.coordination.Response;
-import blue.repo.coordination.SequentialWorkflowStep;
 import blue.repo.coordination.Source;
-import blue.repo.coordination.TerminateProcessing;
 import blue.repo.coordination.Timeline;
 import blue.repo.coordination.TimelineChannel;
 import blue.repo.coordination.TimelineEntry;
@@ -37,8 +35,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CoordinationV2RepositoryContractTest {
-    private static final String TEXT_BLUE_ID = "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC";
-
     private final BlueRepository repository = BlueRepository.latest();
 
     @Test
@@ -129,17 +125,6 @@ class CoordinationV2RepositoryContractTest {
     }
 
     @Test
-    void terminateProcessingModelResolvesAsAnOptionalReasonStep() throws Exception {
-        assertTrue(SequentialWorkflowStep.class.isAssignableFrom(TerminateProcessing.class));
-        assertFieldType(TerminateProcessing.class, "reason", String.class);
-
-        JsonNode definition = definition(CoordinationTypes.TERMINATE_PROCESSING);
-        assertEquals(CoordinationTypes.SEQUENTIAL_WORKFLOW_STEP.blueId(), definition.at("/type/blueId").asText());
-        assertType(definition, "reason", TEXT_BLUE_ID);
-        assertOptional(definition, "reason");
-    }
-
-    @Test
     void mandateValidationEntryIsOptionalAndCheckedAgainstLocalFunctions() throws Exception {
         JsonNode mandate = definition(MandateTypes.MANDATE);
         JsonNode entry = mandate.at("/validation/function/entry");
@@ -201,17 +186,12 @@ class CoordinationV2RepositoryContractTest {
         assertComputeWorkflow(contracts, "confirmMandateAuthority", "confirmMandateAuthority");
         assertComputeWorkflow(contracts, "applyMandateActivation", "applyMandateActivation");
         assertComputeWorkflow(contracts, "terminateMandate", "emitMandateTermination");
-        assertComputeStep(contracts, "applyMandateTermination", 0, "applyMandateTermination");
+        assertComputeWorkflow(contracts, "applyMandateTermination", "applyMandateTermination");
 
         assertEquals(MandateTypes.MANDATE_ACTIVATED.blueId(),
                 contracts.at("/applyMandateActivation/event/type/blueId").asText());
         assertEquals(MandateTypes.MANDATE_TERMINATED.blueId(),
                 contracts.at("/applyMandateTermination/event/type/blueId").asText());
-
-        JsonNode terminationSteps = contracts.at("/applyMandateTermination/steps/items");
-        assertEquals(2, terminationSteps.size());
-        assertEquals(CoordinationTypes.TERMINATE_PROCESSING.blueId(), terminationSteps.at("/1/type/blueId").asText());
-        assertEquals("Mandate terminated", scalarValue(terminationSteps.at("/1/reason")));
 
         assertEffectOrder(functions.path("confirmMandateAuthority"),
                 "/status", "/authorityConfirmedAt", "confirmationMessage", "$if");
