@@ -3,13 +3,12 @@ package blue.repo.coordination;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.mandate.MandateAuthority;
 import java.math.BigInteger;
 
-@TypeBlueId("Gq6qF5F8hGGS7qUL1scaTXwRhh3x9xyakRZjqErYKALo#0")
+@TypeBlueId("487Ff42PK8ofcE1QPNMeRgKM7Qvz9G413j71ouptUGqe#0")
 public class TimelineEntry {
     public static String blueId() {
-        return "Gq6qF5F8hGGS7qUL1scaTXwRhh3x9xyakRZjqErYKALo#0";
+        return "487Ff42PK8ofcE1QPNMeRgKM7Qvz9G413j71ouptUGqe#0";
     }
 
     public static String packageName() {
@@ -49,7 +48,7 @@ public class TimelineEntry {
 
     private Source source;
 
-    private MandateAuthority onBehalfOf;
+    private Authority onBehalfOf;
 
     private Node message;
 
@@ -107,11 +106,11 @@ public class TimelineEntry {
         return this;
     }
 
-    public MandateAuthority getOnBehalfOf() {
+    public Authority getOnBehalfOf() {
         return onBehalfOf;
     }
 
-    public TimelineEntry onBehalfOf(MandateAuthority onBehalfOf) {
+    public TimelineEntry onBehalfOf(Authority onBehalfOf) {
         this.onBehalfOf = onBehalfOf;
         return this;
     }
