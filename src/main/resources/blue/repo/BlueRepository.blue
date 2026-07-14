@@ -1541,16 +1541,16 @@ packages:
               blueId: Qm35f9xFUH84i745uPMj5jjMX1oCCG79aeSfHViipxG
           onBehalfOf:
             description: |
-              Optional mandate-backed authority under which actor claims to act for another actor. A feeder validates this authority before delivery when the requested action is not directly eligible through a source channel.
+              Optional authority under which actor claims to act for another actor. A feeder validates the concrete authority before delivery when the requested action is not directly eligible through a source channel. Mandate-backed authority uses Mandate/Mandate Authority.
             type:
-              blueId: 7PQhFPiE1EQENXgjeYLXrAMjrhjmUz9UAYDEP56UqomR
+              blueId: 5BrNKcZDq6q4UY1jQpjyeFjbTV6rxVKM9qNL5xzGMZRW
           message:
             description: Message or event recorded by the entry.
             schema:
               required: true
         versions:
           - repositoryVersionIndex: 0
-            typeBlueId: Gq6qF5F8hGGS7qUL1scaTXwRhh3x9xyakRZjqErYKALo#0
+            typeBlueId: 487Ff42PK8ofcE1QPNMeRgKM7Qvz9G413j71ouptUGqe#0
             attributesAdded: []
       - status: stable
         content:
@@ -35928,13 +35928,13 @@ packages:
           name: MyOS Timeline Entry
           description: MyOS-specific timeline entry with account and email information
           type:
-            blueId: Gq6qF5F8hGGS7qUL1scaTXwRhh3x9xyakRZjqErYKALo#0
+            blueId: 487Ff42PK8ofcE1QPNMeRgKM7Qvz9G413j71ouptUGqe#0
           timeline:
             type:
               blueId: FxJvs5C7UPo2gK1jU4d3R1fGC8HUHNC26erWf86z7EFg
         versions:
           - repositoryVersionIndex: 0
-            typeBlueId: J9SbmPwha2NvFzJMBmuLVtMDbPRCVXnizYvBsfa1EYi5
+            typeBlueId: EPNozkoqskCrCM9Ronw4j4PNZerpJxJRMMgcxuf4rgrn
             attributesAdded: []
       - status: dev
         content:
@@ -49353,4 +49353,4 @@ packages:
             typeBlueId: 9pyaCAF3GguLmRNGwhVLhXNqpvPsTtLpSdEuZCPpvRoT
             attributesAdded: []
 repositoryVersions:
-  - FXxSCeS3qTPnStrpuDahR2g63mZLZkbL3qUjBCHrKQHK
+  - 6nA3djNMuGgjyin3PyLQqVAKU75DwHHx19egEaifMKWP

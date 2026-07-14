@@ -3,6 +3,7 @@ package blue.repo;
 import blue.language.model.Node;
 import blue.repo.coordination.Actor;
 import blue.repo.coordination.AllTimelinesChannel;
+import blue.repo.coordination.Authority;
 import blue.repo.coordination.CompositeTimelineChannel;
 import blue.repo.coordination.Message;
 import blue.repo.coordination.Operation;
@@ -12,7 +13,6 @@ import blue.repo.coordination.Source;
 import blue.repo.coordination.Timeline;
 import blue.repo.coordination.TimelineChannel;
 import blue.repo.coordination.TimelineEntry;
-import blue.repo.mandate.MandateAuthority;
 import blue.repo.types.CoordinationTypes;
 import blue.repo.types.MandateTypes;
 import blue.repo.types.MyOSTypes;
@@ -45,7 +45,7 @@ class CoordinationV2RepositoryContractTest {
         assertFieldType(TimelineEntry.class, "timestamp", BigInteger.class);
         assertFieldType(TimelineEntry.class, "actor", Actor.class);
         assertFieldType(TimelineEntry.class, "source", Source.class);
-        assertFieldType(TimelineEntry.class, "onBehalfOf", MandateAuthority.class);
+        assertFieldType(TimelineEntry.class, "onBehalfOf", Authority.class);
         assertFieldType(TimelineEntry.class, "message", Node.class);
         assertNoField(TimelineEntry.class, "timelineId");
 
@@ -55,7 +55,7 @@ class CoordinationV2RepositoryContractTest {
         assertType(definition, "timeline", CoordinationTypes.TIMELINE.blueId());
         assertType(definition, "actor", CoordinationTypes.ACTOR.blueId());
         assertType(definition, "source", CoordinationTypes.SOURCE.blueId());
-        assertType(definition, "onBehalfOf", MandateTypes.MANDATE_AUTHORITY.blueId());
+        assertType(definition, "onBehalfOf", CoordinationTypes.AUTHORITY.blueId());
         assertFalse(definition.path("message").has("type"));
 
         assertTrue(definition.at("/sequence/description").asText().contains("authoritative intra-timeline order"));
