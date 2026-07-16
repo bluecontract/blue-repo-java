@@ -13,6 +13,11 @@ public final class BlueRepositoryModels {
         if (resolver == null) {
             throw new IllegalArgumentException("resolver must not be null");
         }
+        resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrap.class);
+        resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrapCompleted.class);
+        resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrapDeclined.class);
+        resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrapFailed.class);
+        resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrapInProgress.class);
         resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrapRequested.class);
         resolver.registerAnnotatedClass(blue.repo.common.CryptoEd25519Verify.class);
         resolver.registerAnnotatedClass(blue.repo.common.Currency.class);

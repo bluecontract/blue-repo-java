@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.coordination.Response;
 
-@TypeBlueId("29BnKeGGy1Z4ZQZk9tXccEtkjjjARP3xEw2sbxajtcn4")
+@TypeBlueId("Feo1czy1aQYvo4d21ZFuFApZb13vqCBkzt4W3nrZoeRH")
 public class PayNoteCancelled extends Response {
     public static String blueId() {
-        return "29BnKeGGy1Z4ZQZk9tXccEtkjjjARP3xEw2sbxajtcn4";
+        return "Feo1czy1aQYvo4d21ZFuFApZb13vqCBkzt4W3nrZoeRH";
     }
 
     public static String packageName() {

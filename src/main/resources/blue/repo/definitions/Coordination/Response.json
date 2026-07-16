@@ -5,9 +5,16 @@
     "blueId": "768MxgQEHnLSkedHWHtjj43mAjH361Zf6pKZgVxi5po3"
   },
   "inResponseTo": {
-    "description": "Required reference to the exact Coordination/Request occurrence answered by this Response.\n",
+    "description": "Required correlation to the exact Coordination/Request occurrence answered by this Response.\n",
     "type": {
-      "blueId": "6XYXgjV6ja1oLqLCs3TWy4RP5UwmpPZKcppBfwwXcckU"
+      "name": "Response Correlation",
+      "description": "Correlation from a Response to the Request occurrence it answers.",
+      "incomingEvent": {
+        "description": "Pure { blueId: ... } reference to the exact Request occurrence. The Request payload is not embedded in the correlation object.\n",
+        "schema": {
+          "required": true
+        }
+      }
     },
     "schema": {
       "required": true

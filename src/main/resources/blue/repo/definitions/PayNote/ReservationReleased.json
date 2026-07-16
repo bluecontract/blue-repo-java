@@ -2,7 +2,7 @@
   "name": "Reservation Released",
   "description": "The Guarantor confirms that previously reserved funds have been released.",
   "type": {
-    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
+    "blueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV"
   },
   "amountReleased": {
     "type": {

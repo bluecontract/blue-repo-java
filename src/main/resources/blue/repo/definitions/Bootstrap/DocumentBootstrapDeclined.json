@@ -1,0 +1,13 @@
+{
+  "name": "Document Bootstrap Declined",
+  "description": "Bootstrap provider response declining the requested bootstrap.",
+  "type": {
+    "blueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV"
+  },
+  "reason": {
+    "description": "Explanation for declining the request.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

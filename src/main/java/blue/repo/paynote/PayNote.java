@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.common.Currency;
 
-@TypeBlueId("3QhCg6W39VGD66E7by4yNop1UYH198xEbVpqYcjLaatL")
+@TypeBlueId("EnU4iQTNuABWxFAV7DwcK3NAaU9nxrVHdP1RpjUtZpLw")
 public class PayNote {
     public static String blueId() {
-        return "3QhCg6W39VGD66E7by4yNop1UYH198xEbVpqYcjLaatL";
+        return "EnU4iQTNuABWxFAV7DwcK3NAaU9nxrVHdP1RpjUtZpLw";
     }
 
     public static String packageName() {

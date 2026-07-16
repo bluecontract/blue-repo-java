@@ -2,7 +2,7 @@
   "name": "Call Operation Accepted",
   "description": "MyOS Admin accepted the call and submitted the operation request.",
   "type": {
-    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
+    "blueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV"
   },
   "targetSessionId": {
     "description": "Target document session that received the request.",

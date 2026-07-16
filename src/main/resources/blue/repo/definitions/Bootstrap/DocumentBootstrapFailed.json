@@ -1,0 +1,16 @@
+{
+  "name": "Document Bootstrap Failed",
+  "description": "Bootstrap provider response reporting that started bootstrap work failed.",
+  "type": {
+    "blueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV"
+  },
+  "error": {
+    "description": "Explanation of the bootstrap failure.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}

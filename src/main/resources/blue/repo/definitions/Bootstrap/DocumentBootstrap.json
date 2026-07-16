@@ -1,0 +1,451 @@
+{
+  "name": "Document Bootstrap",
+  "description": "Generic document for requesting and tracking bootstrap of another Blue document. It defines the provider response operations but deliberately does not define how or when bootstrapRequest is emitted. A concrete platform or document may add its own initialization or request workflow.\n",
+  "contracts": {
+    "bootstrapProviderChannel": {
+      "description": "Participant channel for the bootstrap provider.",
+      "type": {
+        "blueId": "BDP5DqtmUNtG2FE1hLe5n2n5h4JMJayXixeGzfM5uzrq"
+      },
+      "schema": {
+        "required": true
+      }
+    },
+    "declineBootstrap": {
+      "type": {
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
+      },
+      "channel": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "bootstrapProviderChannel"
+      },
+      "request": {
+        "type": {
+          "blueId": "Eefj81vPFkfRLajbo4kJ3ovsNkRXdNvceB2hxE4FGRcu"
+        }
+      },
+      "steps": {
+        "items": [
+          {
+            "name": "Record Bootstrap Declined",
+            "type": {
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+            },
+            "do": {
+              "items": [
+                {
+                  "$appendEvent": {
+                    "$event": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/message/request"
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
+                    },
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/status"
+                    },
+                    "val": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "Declined"
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
+                    },
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/error"
+                    },
+                    "val": {
+                      "$default": {
+                        "items": [
+                          {
+                            "$event": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/message/request/reason"
+                            }
+                          },
+                          {
+                            "type": {
+                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                            },
+                            "value": ""
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "changeset": {
+                      "$changeset": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    },
+                    "events": {
+                      "$events": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "startBootstrap": {
+      "type": {
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
+      },
+      "channel": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "bootstrapProviderChannel"
+      },
+      "request": {
+        "type": {
+          "blueId": "DTuSuuJbcoFMafrdhVkgt1eAkdC54rqw2KLZF8CPAJtp"
+        }
+      },
+      "steps": {
+        "items": [
+          {
+            "name": "Record Bootstrap In Progress",
+            "type": {
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+            },
+            "do": {
+              "items": [
+                {
+                  "$appendEvent": {
+                    "$event": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/message/request"
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
+                    },
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/status"
+                    },
+                    "val": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "In Progress"
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "changeset": {
+                      "$changeset": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    },
+                    "events": {
+                      "$events": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "completeBootstrap": {
+      "type": {
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
+      },
+      "channel": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "bootstrapProviderChannel"
+      },
+      "request": {
+        "type": {
+          "blueId": "ANZLbrLasT8rEzgXijJayrAXsohv5RCzPweSZc9DmWgm"
+        }
+      },
+      "steps": {
+        "items": [
+          {
+            "name": "Record Bootstrap Completed",
+            "type": {
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+            },
+            "do": {
+              "items": [
+                {
+                  "$appendEvent": {
+                    "$event": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/message/request"
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
+                    },
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/status"
+                    },
+                    "val": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "Completed"
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
+                    },
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/result"
+                    },
+                    "val": {
+                      "$event": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "/message/request/result"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "changeset": {
+                      "$changeset": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    },
+                    "events": {
+                      "$events": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "failBootstrap": {
+      "type": {
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
+      },
+      "channel": {
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "value": "bootstrapProviderChannel"
+      },
+      "request": {
+        "type": {
+          "blueId": "CoanvUioSeBPRS6TCq4xfbLQbBMa7ebd1Jh7jSUAu9c8"
+        }
+      },
+      "steps": {
+        "items": [
+          {
+            "name": "Record Bootstrap Failed",
+            "type": {
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+            },
+            "do": {
+              "items": [
+                {
+                  "$appendEvent": {
+                    "$event": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/message/request"
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
+                    },
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/status"
+                    },
+                    "val": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "Failed"
+                    }
+                  }
+                },
+                {
+                  "$appendChange": {
+                    "op": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "replace"
+                    },
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/error"
+                    },
+                    "val": {
+                      "$event": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "/message/request/error"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "changeset": {
+                      "$changeset": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    },
+                    "events": {
+                      "$events": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "bootstrapRequest": {
+    "description": "Request describing the target document bootstrap.",
+    "type": {
+      "blueId": "5NNr8LzdC3Cw4Kfp34PPvqMSKCSt7yrKUZ7NwrmMU4qq"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "status": {
+    "description": "Current bootstrap lifecycle state.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  },
+  "result": {
+    "description": "Provider-neutral bootstrap result after successful completion."
+  },
+  "error": {
+    "description": "Decline or failure explanation when bootstrap does not complete.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    }
+  }
+}

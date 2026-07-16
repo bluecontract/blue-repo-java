@@ -2,7 +2,7 @@
   "name": "Payment Reversal Declined",
   "description": "The Guarantor declined the request to reverse after completion.",
   "type": {
-    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
+    "blueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV"
   },
   "reason": {
     "type": {

@@ -2400,22 +2400,22 @@
   "payNoteBootstrapRequest": {
     "description": "PayNote bootstrap request details.",
     "type": {
-      "blueId": "DGtbvBCuFFKAH3ncDb6LAibSAq8Smr5oChLSdvNvGuZu"
+      "blueId": "5NNr8LzdC3Cw4Kfp34PPvqMSKCSt7yrKUZ7NwrmMU4qq"
     },
     "document": {
       "type": {
-        "blueId": "3QhCg6W39VGD66E7by4yNop1UYH198xEbVpqYcjLaatL"
+        "blueId": "EnU4iQTNuABWxFAV7DwcK3NAaU9nxrVHdP1RpjUtZpLw"
       }
     }
   },
   "paymentMandateBootstrapRequest": {
     "description": "Optional Payment Mandate bootstrap request details for Delivery flows that require mandate attachment before proposal exposure.",
     "type": {
-      "blueId": "DGtbvBCuFFKAH3ncDb6LAibSAq8Smr5oChLSdvNvGuZu"
+      "blueId": "5NNr8LzdC3Cw4Kfp34PPvqMSKCSt7yrKUZ7NwrmMU4qq"
     },
     "document": {
       "type": {
-        "blueId": "DBrjV3fVNnCUv6bSjd1nZG2LhuUxyJnkw1CcXQkpir1W"
+        "blueId": "3C1kgodeWjvHL6Kdawo89GhEaPtkrNKGqaSWCDHWRgJH"
       }
     }
   },

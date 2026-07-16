@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.coordination.Response;
 import java.util.List;
 
-@TypeBlueId("EkNokZ4svfJ4Xhza5qNxm285pcRHXhZvA97KZKYf8cyb")
+@TypeBlueId("HJ5J4tXLaNzA5p2rQ5qEmrk6hnZCfXQobtefsANu5x1S")
 public class MyOSSessionSubscriptionUpdate extends Response {
     public static String blueId() {
-        return "EkNokZ4svfJ4Xhza5qNxm285pcRHXhZvA97KZKYf8cyb";
+        return "HJ5J4tXLaNzA5p2rQ5qEmrk6hnZCfXQobtefsANu5x1S";
     }
 
     public static String packageName() {

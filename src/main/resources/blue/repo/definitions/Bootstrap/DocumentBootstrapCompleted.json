@@ -1,0 +1,13 @@
+{
+  "name": "Document Bootstrap Completed",
+  "description": "Bootstrap provider response reporting successful completion.",
+  "type": {
+    "blueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV"
+  },
+  "result": {
+    "description": "Provider-neutral result of the completed bootstrap.",
+    "schema": {
+      "required": true
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "Document Bootstrap Requested",
-  "description": "Request asking the participant addressed by recipientChannel to bootstrap the supplied initial document with the requested channel bindings and optional initial Messages. This type defines bootstrap request data; mandate authority is resolved independently by the recipient/platform.\n",
+  "description": "Request asking the participant addressed by recipientChannel to bootstrap the supplied initial document with the requested channel bindings and optional initial Messages. The document that emits this request decides how and when to emit it.\n",
   "type": {
     "blueId": "6XYXgjV6ja1oLqLCs3TWy4RP5UwmpPZKcppBfwwXcckU"
   },
@@ -20,12 +20,6 @@
     "description": "Optional standard bootstrap initial Messages.",
     "type": {
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
-    }
-  },
-  "onBehalfOf": {
-    "description": "Optional principal actor on whose behalf bootstrap is requested.",
-    "type": {
-      "blueId": "23cWKG6LF47H1G3EfhV5dmEYtxkNaqLWgFDxEurdc6Ef"
     }
   }
 }

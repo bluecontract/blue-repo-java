@@ -162,7 +162,7 @@ class CoordinationV2RepositoryContractTest {
     }
 
     @Test
-    void responseNarrowsTheTemporaryMessageCorrelationField() throws Exception {
+    void responseRequiresNestedIncomingEventCorrelation() throws Exception {
         assertTrue(Message.class.isAssignableFrom(Response.class));
         assertEquals(Node.class, Message.class.getMethod("getInResponseTo").getReturnType());
 
@@ -173,8 +173,14 @@ class CoordinationV2RepositoryContractTest {
 
         JsonNode response = definition(CoordinationTypes.RESPONSE);
         assertEquals(CoordinationTypes.MESSAGE.blueId(), response.at("/type/blueId").asText());
-        assertType(response, "inResponseTo", CoordinationTypes.REQUEST.blueId());
         assertRequired(response, "inResponseTo");
+
+        JsonNode correlation = response.at("/inResponseTo/type");
+        assertEquals("Response Correlation", correlation.path("name").asText());
+        assertTrue(correlation.at("/incomingEvent/schema/required").asBoolean());
+        assertFalse(correlation.path("incomingEvent").has("type"));
+        assertFalse(correlation.has("requestId"));
+        assertTrue(correlation.at("/incomingEvent/description").asText().contains("Pure { blueId: ... } reference"));
     }
 
     @Test

@@ -3,14 +3,13 @@ package blue.repo.bootstrap;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.coordination.PrincipalActor;
 import blue.repo.coordination.Request;
 import java.util.List;
 
-@TypeBlueId("DGtbvBCuFFKAH3ncDb6LAibSAq8Smr5oChLSdvNvGuZu")
+@TypeBlueId("5NNr8LzdC3Cw4Kfp34PPvqMSKCSt7yrKUZ7NwrmMU4qq")
 public class DocumentBootstrapRequested extends Request {
     public static String blueId() {
-        return "DGtbvBCuFFKAH3ncDb6LAibSAq8Smr5oChLSdvNvGuZu";
+        return "5NNr8LzdC3Cw4Kfp34PPvqMSKCSt7yrKUZ7NwrmMU4qq";
     }
 
     public static String packageName() {
@@ -44,8 +43,6 @@ public class DocumentBootstrapRequested extends Request {
 
     private List<Node> initialMessages;
 
-    private PrincipalActor onBehalfOf;
-
     public Node getDocument() {
         return document;
     }
@@ -70,15 +67,6 @@ public class DocumentBootstrapRequested extends Request {
 
     public DocumentBootstrapRequested initialMessages(List<Node> initialMessages) {
         this.initialMessages = initialMessages;
-        return this;
-    }
-
-    public PrincipalActor getOnBehalfOf() {
-        return onBehalfOf;
-    }
-
-    public DocumentBootstrapRequested onBehalfOf(PrincipalActor onBehalfOf) {
-        this.onBehalfOf = onBehalfOf;
         return this;
     }
 
