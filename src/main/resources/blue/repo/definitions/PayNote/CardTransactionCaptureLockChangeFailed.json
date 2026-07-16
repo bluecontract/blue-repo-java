@@ -2,7 +2,7 @@
   "name": "Card Transaction Capture Lock Change Failed",
   "description": "Card transaction capture lock change failed.",
   "type": {
-    "blueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV"
+    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
   },
   "reason": {
     "description": "Failure reason.",

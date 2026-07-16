@@ -2,7 +2,7 @@
   "name": "Linked PayNote Start Failed",
   "description": "Linked PayNote startup failed after charge processing.",
   "type": {
-    "blueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV"
+    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
   },
   "reason": {
     "description": "Failure reason.",

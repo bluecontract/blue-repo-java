@@ -2,7 +2,7 @@
   "name": "Card Transaction Monitoring Request Rejected",
   "description": "Notification that card transaction monitoring was rejected.",
   "type": {
-    "blueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV"
+    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
   },
   "targetMerchantId": {
     "description": "External merchant identifier requested for monitoring.",

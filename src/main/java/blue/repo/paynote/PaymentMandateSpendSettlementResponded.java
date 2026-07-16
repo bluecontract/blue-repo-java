@@ -7,10 +7,10 @@ import blue.repo.common.Timestamp;
 import blue.repo.coordination.Response;
 import java.math.BigInteger;
 
-@TypeBlueId("6KwRany8GD8Bh1ahj1EiL3vzwXNZgKevyqEZvTg27zN7")
+@TypeBlueId("AyxFRqp7CDgStXG1ATYUBmAVD62QAF3S3ZV867Q9iBAk")
 public class PaymentMandateSpendSettlementResponded extends Response {
     public static String blueId() {
-        return "6KwRany8GD8Bh1ahj1EiL3vzwXNZgKevyqEZvTg27zN7";
+        return "AyxFRqp7CDgStXG1ATYUBmAVD62QAF3S3ZV867Q9iBAk";
     }
 
     public static String packageName() {

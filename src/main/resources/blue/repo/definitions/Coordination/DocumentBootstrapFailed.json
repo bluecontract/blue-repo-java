@@ -2,7 +2,7 @@
   "name": "Document Bootstrap Failed",
   "description": "Lifecycle/coordination event indicating that a document bootstrap request failed. The `reason` field should explain\nthe deterministic failure cause or provider-specific rejection reason.\n",
   "type": {
-    "blueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV"
+    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
   },
   "reason": {
     "description": "Human-readable or structured failure reason.\n",

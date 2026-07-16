@@ -1,13 +1,13 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "v2PYDvCa6WY3nVYe3dvxKiT9yZYHjKH4XtwAEtYh6BV",
+  "repositoryVersionBlueId": "BjtFwNvLZhWNDjc72WNxPQvtSZDkbdKXiyutfSgNYeN3",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
       "index": 0,
       "version": "1.3.0",
-      "repositoryBlueId": "v2PYDvCa6WY3nVYe3dvxKiT9yZYHjKH4XtwAEtYh6BV"
+      "repositoryBlueId": "BjtFwNvLZhWNDjc72WNxPQvtSZDkbdKXiyutfSgNYeN3"
     }
   ],
   "packageNames": [
@@ -25,14 +25,14 @@
       "packageName": "Bootstrap",
       "name": "Document Bootstrap",
       "qualifiedName": "Bootstrap/Document Bootstrap",
-      "blueId": "CQ5gfWhEDopNpKDS7aBkvAoefwG8y26eLajDe2a9eLq4",
+      "blueId": "E3M6aABVRmZiYTGfcXaE1FXjn8x2QHVPreiiWyGM1EEL",
       "resourcePath": "blue/repo/definitions/Bootstrap/DocumentBootstrap.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "CQ5gfWhEDopNpKDS7aBkvAoefwG8y26eLajDe2a9eLq4",
+          "typeBlueId": "E3M6aABVRmZiYTGfcXaE1FXjn8x2QHVPreiiWyGM1EEL",
           "attributesAdded": []
         }
       ]
@@ -41,14 +41,14 @@
       "packageName": "Bootstrap",
       "name": "Document Bootstrap Completed",
       "qualifiedName": "Bootstrap/Document Bootstrap Completed",
-      "blueId": "ANZLbrLasT8rEzgXijJayrAXsohv5RCzPweSZc9DmWgm",
+      "blueId": "3XoEgcEdCpeoxBf7uNsHTtp1FpN6HG3YqawRYUXYuee1",
       "resourcePath": "blue/repo/definitions/Bootstrap/DocumentBootstrapCompleted.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "ANZLbrLasT8rEzgXijJayrAXsohv5RCzPweSZc9DmWgm",
+          "typeBlueId": "3XoEgcEdCpeoxBf7uNsHTtp1FpN6HG3YqawRYUXYuee1",
           "attributesAdded": []
         }
       ]
@@ -57,14 +57,14 @@
       "packageName": "Bootstrap",
       "name": "Document Bootstrap Declined",
       "qualifiedName": "Bootstrap/Document Bootstrap Declined",
-      "blueId": "Eefj81vPFkfRLajbo4kJ3ovsNkRXdNvceB2hxE4FGRcu",
+      "blueId": "4ngRGoQZeSJNt8miE6CBaqYuevDrVwfAuwJMt4mRyeqb",
       "resourcePath": "blue/repo/definitions/Bootstrap/DocumentBootstrapDeclined.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "Eefj81vPFkfRLajbo4kJ3ovsNkRXdNvceB2hxE4FGRcu",
+          "typeBlueId": "4ngRGoQZeSJNt8miE6CBaqYuevDrVwfAuwJMt4mRyeqb",
           "attributesAdded": []
         }
       ]
@@ -73,14 +73,14 @@
       "packageName": "Bootstrap",
       "name": "Document Bootstrap Failed",
       "qualifiedName": "Bootstrap/Document Bootstrap Failed",
-      "blueId": "CoanvUioSeBPRS6TCq4xfbLQbBMa7ebd1Jh7jSUAu9c8",
+      "blueId": "BY9yFcgUUykE7E4wyV6iaxREGhN2pCHNgA49uSqTHgg9",
       "resourcePath": "blue/repo/definitions/Bootstrap/DocumentBootstrapFailed.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "CoanvUioSeBPRS6TCq4xfbLQbBMa7ebd1Jh7jSUAu9c8",
+          "typeBlueId": "BY9yFcgUUykE7E4wyV6iaxREGhN2pCHNgA49uSqTHgg9",
           "attributesAdded": []
         }
       ]
@@ -89,14 +89,14 @@
       "packageName": "Bootstrap",
       "name": "Document Bootstrap In Progress",
       "qualifiedName": "Bootstrap/Document Bootstrap In Progress",
-      "blueId": "DTuSuuJbcoFMafrdhVkgt1eAkdC54rqw2KLZF8CPAJtp",
+      "blueId": "CrfGW2YKFpPD1VNeUS4biWbaGxsudFnzd482N1Bd9oqN",
       "resourcePath": "blue/repo/definitions/Bootstrap/DocumentBootstrapInProgress.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "DTuSuuJbcoFMafrdhVkgt1eAkdC54rqw2KLZF8CPAJtp",
+          "typeBlueId": "CrfGW2YKFpPD1VNeUS4biWbaGxsudFnzd482N1Bd9oqN",
           "attributesAdded": []
         }
       ]
@@ -585,14 +585,14 @@
       "packageName": "Coordination",
       "name": "Customer Action Responded",
       "qualifiedName": "Coordination/Customer Action Responded",
-      "blueId": "H4Vxp9tPXuHZPQifppw4thwdgFV4HnzViURUiLZttNcE",
+      "blueId": "6C9hES9r92QmbLEgtk4yrgz54abzs7B8jqEaMgSVJv7m",
       "resourcePath": "blue/repo/definitions/Coordination/CustomerActionResponded.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "H4Vxp9tPXuHZPQifppw4thwdgFV4HnzViURUiLZttNcE",
+          "typeBlueId": "6C9hES9r92QmbLEgtk4yrgz54abzs7B8jqEaMgSVJv7m",
           "attributesAdded": []
         }
       ]
@@ -617,14 +617,14 @@
       "packageName": "Coordination",
       "name": "Document Bootstrap Completed",
       "qualifiedName": "Coordination/Document Bootstrap Completed",
-      "blueId": "7rfzResVWD7U3BTtwvNhZLtLfw8xwTW9iwJTcacpWHo2",
+      "blueId": "7caaA9fZUxooF7LW4drW97DuoJpu5fyEZKyrQttLaBmQ",
       "resourcePath": "blue/repo/definitions/Coordination/DocumentBootstrapCompleted.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "7rfzResVWD7U3BTtwvNhZLtLfw8xwTW9iwJTcacpWHo2",
+          "typeBlueId": "7caaA9fZUxooF7LW4drW97DuoJpu5fyEZKyrQttLaBmQ",
           "attributesAdded": []
         }
       ]
@@ -633,14 +633,14 @@
       "packageName": "Coordination",
       "name": "Document Bootstrap Failed",
       "qualifiedName": "Coordination/Document Bootstrap Failed",
-      "blueId": "6BnPuHWBuiAWb5o9xFoJtsQiRU6NTNDtCbAjpqCLiN9U",
+      "blueId": "2D7DDoEJge1j3G4oXGhGzTQ9CxePKxxxTYhdtee5r7SV",
       "resourcePath": "blue/repo/definitions/Coordination/DocumentBootstrapFailed.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "6BnPuHWBuiAWb5o9xFoJtsQiRU6NTNDtCbAjpqCLiN9U",
+          "typeBlueId": "2D7DDoEJge1j3G4oXGhGzTQ9CxePKxxxTYhdtee5r7SV",
           "attributesAdded": []
         }
       ]
@@ -649,14 +649,14 @@
       "packageName": "Coordination",
       "name": "Document Bootstrap Responded",
       "qualifiedName": "Coordination/Document Bootstrap Responded",
-      "blueId": "Fjg6Ft5LBthiCCunjZfeBZCJeMwP5xMwARFza25aMuVA",
+      "blueId": "8HdfdnkeL2v31q56qsN6bAwUHtBYK5VseaMQ3owdWtuF",
       "resourcePath": "blue/repo/definitions/Coordination/DocumentBootstrapResponded.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "Fjg6Ft5LBthiCCunjZfeBZCJeMwP5xMwARFza25aMuVA",
+          "typeBlueId": "8HdfdnkeL2v31q56qsN6bAwUHtBYK5VseaMQ3owdWtuF",
           "attributesAdded": []
         }
       ]
@@ -857,14 +857,14 @@
       "packageName": "Coordination",
       "name": "Response",
       "qualifiedName": "Coordination/Response",
-      "blueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV",
+      "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH",
       "resourcePath": "blue/repo/definitions/Coordination/Response.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV",
+          "typeBlueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH",
           "attributesAdded": []
         }
       ]
@@ -14841,14 +14841,14 @@
       "packageName": "MyOS",
       "name": "Adding Participant Responded",
       "qualifiedName": "MyOS/Adding Participant Responded",
-      "blueId": "5dn8zzefpCa8hamHXyoDaw7qZabq8Wdt9nsnm5HbWNVZ",
+      "blueId": "FoJDXJsUjhiDU8pVxF7TzxE3qh1EvLKyoHQG41WaTTGB",
       "resourcePath": "blue/repo/definitions/MyOS/AddingParticipantResponded.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "5dn8zzefpCa8hamHXyoDaw7qZabq8Wdt9nsnm5HbWNVZ",
+          "typeBlueId": "FoJDXJsUjhiDU8pVxF7TzxE3qh1EvLKyoHQG41WaTTGB",
           "attributesAdded": []
         }
       ]
@@ -14905,14 +14905,14 @@
       "packageName": "MyOS",
       "name": "Call Operation Accepted",
       "qualifiedName": "MyOS/Call Operation Accepted",
-      "blueId": "GqVRP4zQZYvcNM64CVoxbQRMNZkcwBokiq914KJHE8DX",
+      "blueId": "GacCAN4FEa7u3e7Qmm9997PYHwHmkGDCnSdYEfAVcZxh",
       "resourcePath": "blue/repo/definitions/MyOS/CallOperationAccepted.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "GqVRP4zQZYvcNM64CVoxbQRMNZkcwBokiq914KJHE8DX",
+          "typeBlueId": "GacCAN4FEa7u3e7Qmm9997PYHwHmkGDCnSdYEfAVcZxh",
           "attributesAdded": []
         }
       ]
@@ -14921,14 +14921,14 @@
       "packageName": "MyOS",
       "name": "Call Operation Failed",
       "qualifiedName": "MyOS/Call Operation Failed",
-      "blueId": "3Xiqhesc1E2zuomHb6ZuHcLwMH9AX8k3e9Zjk5PExnVA",
+      "blueId": "FFXVAea2mRHoJq3PRdmz5cXG8eETqx4yr5KCbeTxhEqB",
       "resourcePath": "blue/repo/definitions/MyOS/CallOperationFailed.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "3Xiqhesc1E2zuomHb6ZuHcLwMH9AX8k3e9Zjk5PExnVA",
+          "typeBlueId": "FFXVAea2mRHoJq3PRdmz5cXG8eETqx4yr5KCbeTxhEqB",
           "attributesAdded": []
         }
       ]
@@ -14953,14 +14953,14 @@
       "packageName": "MyOS",
       "name": "Call Operation Responded",
       "qualifiedName": "MyOS/Call Operation Responded",
-      "blueId": "72S2g3xuDYEY7Rqm5ZcmJmHKBv1SVmuCbwxyEJuaWcnd",
+      "blueId": "AnkvQ2ms9RnPXMfQUP37VP8Gs8MZsSiM72yjWv2DU38c",
       "resourcePath": "blue/repo/definitions/MyOS/CallOperationResponded.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "72S2g3xuDYEY7Rqm5ZcmJmHKBv1SVmuCbwxyEJuaWcnd",
+          "typeBlueId": "AnkvQ2ms9RnPXMfQUP37VP8Gs8MZsSiM72yjWv2DU38c",
           "attributesAdded": []
         }
       ]
@@ -15017,14 +15017,14 @@
       "packageName": "MyOS",
       "name": "Document Initial Snapshot Resolved",
       "qualifiedName": "MyOS/Document Initial Snapshot Resolved",
-      "blueId": "6AUEZnmUpwJJNyLcciddK92WQVG51KDreBHtzfy62hSP",
+      "blueId": "3bWvNkMNpan2ofiptgtBQidFtwhUAjdZUx9Eo1Hns3u2",
       "resourcePath": "blue/repo/definitions/MyOS/DocumentInitialSnapshotResolved.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "6AUEZnmUpwJJNyLcciddK92WQVG51KDreBHtzfy62hSP",
+          "typeBlueId": "3bWvNkMNpan2ofiptgtBQidFtwhUAjdZUx9Eo1Hns3u2",
           "attributesAdded": []
         }
       ]
@@ -15033,14 +15033,14 @@
       "packageName": "MyOS",
       "name": "Document Initial Snapshot Unresolved",
       "qualifiedName": "MyOS/Document Initial Snapshot Unresolved",
-      "blueId": "25Vy5JGqixjNxv6G3PCNoWSwwj71n78CCm4YMdBFguXH",
+      "blueId": "2oWDimMA574XdPA5QFDSPETcU8HzpycEKRseE6CUhred",
       "resourcePath": "blue/repo/definitions/MyOS/DocumentInitialSnapshotUnresolved.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "25Vy5JGqixjNxv6G3PCNoWSwwj71n78CCm4YMdBFguXH",
+          "typeBlueId": "2oWDimMA574XdPA5QFDSPETcU8HzpycEKRseE6CUhred",
           "attributesAdded": []
         }
       ]
@@ -15385,14 +15385,14 @@
       "packageName": "MyOS",
       "name": "MyOS Session Subscription Ended",
       "qualifiedName": "MyOS/MyOS Session Subscription Ended",
-      "blueId": "FKBh7gZ3TMcDoJBoMxue76dffftEinitTdffxx8PPJo8",
+      "blueId": "V7YKW41NsJsw4oKxGvwzdkJXZg2wDjsKTFnF6L6GmEp",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSSessionSubscriptionEnded.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "FKBh7gZ3TMcDoJBoMxue76dffftEinitTdffxx8PPJo8",
+          "typeBlueId": "V7YKW41NsJsw4oKxGvwzdkJXZg2wDjsKTFnF6L6GmEp",
           "attributesAdded": []
         }
       ]
@@ -15449,14 +15449,14 @@
       "packageName": "MyOS",
       "name": "MyOS Session Subscription Started",
       "qualifiedName": "MyOS/MyOS Session Subscription Started",
-      "blueId": "2rGqiUa5Kf7yVvR5fBKieFH4YhF8Lu2qUyhQFcwJ68kE",
+      "blueId": "BGhd3kZMEMd8Yv8nqnqfLngaUEAn5WkbPjPsS6o3U7mg",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSSessionSubscriptionStarted.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "2rGqiUa5Kf7yVvR5fBKieFH4YhF8Lu2qUyhQFcwJ68kE",
+          "typeBlueId": "BGhd3kZMEMd8Yv8nqnqfLngaUEAn5WkbPjPsS6o3U7mg",
           "attributesAdded": []
         }
       ]
@@ -15465,14 +15465,14 @@
       "packageName": "MyOS",
       "name": "MyOS Session Subscription Update",
       "qualifiedName": "MyOS/MyOS Session Subscription Update",
-      "blueId": "HJ5J4tXLaNzA5p2rQ5qEmrk6hnZCfXQobtefsANu5x1S",
+      "blueId": "EkNokZ4svfJ4Xhza5qNxm285pcRHXhZvA97KZKYf8cyb",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSSessionSubscriptionUpdate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "HJ5J4tXLaNzA5p2rQ5qEmrk6hnZCfXQobtefsANu5x1S",
+          "typeBlueId": "EkNokZ4svfJ4Xhza5qNxm285pcRHXhZvA97KZKYf8cyb",
           "attributesAdded": []
         }
       ]
@@ -15609,14 +15609,14 @@
       "packageName": "MyOS",
       "name": "Payment Initiated",
       "qualifiedName": "MyOS/Payment Initiated",
-      "blueId": "G7SGNNoeARSQgANmH4BkkxoN87Vg2RWV3CfkbNbksa1B",
+      "blueId": "2B5GfyYAMpB2qa9AebDQCyorMi311v8bZLjXn6fsDPPw",
       "resourcePath": "blue/repo/definitions/MyOS/PaymentInitiated.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "G7SGNNoeARSQgANmH4BkkxoN87Vg2RWV3CfkbNbksa1B",
+          "typeBlueId": "2B5GfyYAMpB2qa9AebDQCyorMi311v8bZLjXn6fsDPPw",
           "attributesAdded": []
         }
       ]
@@ -15625,14 +15625,14 @@
       "packageName": "MyOS",
       "name": "Payment Initiation Accepted",
       "qualifiedName": "MyOS/Payment Initiation Accepted",
-      "blueId": "5JCKvTv8Xq3LfK1LN9NTFxaHGnaSRnmbL8LPTRJedB7r",
+      "blueId": "GLKfKi29WiEb2Hq87Zj6hfJXXV6TpDXtGprdpNbk2dxq",
       "resourcePath": "blue/repo/definitions/MyOS/PaymentInitiationAccepted.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "5JCKvTv8Xq3LfK1LN9NTFxaHGnaSRnmbL8LPTRJedB7r",
+          "typeBlueId": "GLKfKi29WiEb2Hq87Zj6hfJXXV6TpDXtGprdpNbk2dxq",
           "attributesAdded": []
         }
       ]
@@ -15641,14 +15641,14 @@
       "packageName": "MyOS",
       "name": "Payment Initiation Rejected",
       "qualifiedName": "MyOS/Payment Initiation Rejected",
-      "blueId": "DjUnzCzxCTLf8jf7kfGjx2esCxuoYei5NYYwucAwe6vV",
+      "blueId": "FLozmcCXEUsKNT86fixLbrdy9Dy4yn7jn6eftQuHpK8B",
       "resourcePath": "blue/repo/definitions/MyOS/PaymentInitiationRejected.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "DjUnzCzxCTLf8jf7kfGjx2esCxuoYei5NYYwucAwe6vV",
+          "typeBlueId": "FLozmcCXEUsKNT86fixLbrdy9Dy4yn7jn6eftQuHpK8B",
           "attributesAdded": []
         }
       ]
@@ -15673,14 +15673,14 @@
       "packageName": "MyOS",
       "name": "Payment Target Preparation Failed",
       "qualifiedName": "MyOS/Payment Target Preparation Failed",
-      "blueId": "FNk94sjfEeHTw1ZbXE9U57TgrSdqQXxVwWVDw3E7D8Jj",
+      "blueId": "HKvJdxfZDY7agMAH8Z5pjhd4iB8mrTNRRhG1QEnEFRgd",
       "resourcePath": "blue/repo/definitions/MyOS/PaymentTargetPreparationFailed.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "FNk94sjfEeHTw1ZbXE9U57TgrSdqQXxVwWVDw3E7D8Jj",
+          "typeBlueId": "HKvJdxfZDY7agMAH8Z5pjhd4iB8mrTNRRhG1QEnEFRgd",
           "attributesAdded": []
         }
       ]
@@ -15705,14 +15705,14 @@
       "packageName": "MyOS",
       "name": "Payment Target Prepared",
       "qualifiedName": "MyOS/Payment Target Prepared",
-      "blueId": "CpN9cPkBhwzFRLWFrXUu5L8vcBgG2q4UuoWrWfjcowwD",
+      "blueId": "EZQPqDj5iDyHzM6DQE11Z2NwcPNSPx34v9SMyXsrwe6h",
       "resourcePath": "blue/repo/definitions/MyOS/PaymentTargetPrepared.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "CpN9cPkBhwzFRLWFrXUu5L8vcBgG2q4UuoWrWfjcowwD",
+          "typeBlueId": "EZQPqDj5iDyHzM6DQE11Z2NwcPNSPx34v9SMyXsrwe6h",
           "attributesAdded": []
         }
       ]
@@ -15753,14 +15753,14 @@
       "packageName": "MyOS",
       "name": "Removing Participant Responded",
       "qualifiedName": "MyOS/Removing Participant Responded",
-      "blueId": "2uDmwWVxXhiGT93piY1WFCdWqUnWa7Nn2oCwUCMXj4pK",
+      "blueId": "HV36fBXcdWce4WhfG6dxSZmtRMQoNaNLNpHgxc2PakuN",
       "resourcePath": "blue/repo/definitions/MyOS/RemovingParticipantResponded.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "2uDmwWVxXhiGT93piY1WFCdWqUnWa7Nn2oCwUCMXj4pK",
+          "typeBlueId": "HV36fBXcdWce4WhfG6dxSZmtRMQoNaNLNpHgxc2PakuN",
           "attributesAdded": []
         }
       ]
@@ -15817,14 +15817,14 @@
       "packageName": "MyOS",
       "name": "Subscription to Session Failed",
       "qualifiedName": "MyOS/Subscription to Session Failed",
-      "blueId": "HENftmjAVprZgEquUmgSyL8GNTAjpNrLgS9iMdb3LCgR",
+      "blueId": "FqL1t69VjbKdAmffjxV5o1dAJooKyQ6vxdpsmbavFFia",
       "resourcePath": "blue/repo/definitions/MyOS/SubscriptiontoSessionFailed.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "HENftmjAVprZgEquUmgSyL8GNTAjpNrLgS9iMdb3LCgR",
+          "typeBlueId": "FqL1t69VjbKdAmffjxV5o1dAJooKyQ6vxdpsmbavFFia",
           "attributesAdded": []
         }
       ]
@@ -15833,14 +15833,14 @@
       "packageName": "MyOS",
       "name": "Subscription to Session Initiated",
       "qualifiedName": "MyOS/Subscription to Session Initiated",
-      "blueId": "8LuVvRbnG7Ccdx9ZVTZY8gyeZavxhr1Xx8JCeM5DgNs9",
+      "blueId": "FdzN1H5Qe7CRbcXVeqD7PfJJ5TH6cxgHd3FRcNjvRJzk",
       "resourcePath": "blue/repo/definitions/MyOS/SubscriptiontoSessionInitiated.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "8LuVvRbnG7Ccdx9ZVTZY8gyeZavxhr1Xx8JCeM5DgNs9",
+          "typeBlueId": "FdzN1H5Qe7CRbcXVeqD7PfJJ5TH6cxgHd3FRcNjvRJzk",
           "attributesAdded": []
         }
       ]
@@ -15849,14 +15849,14 @@
       "packageName": "MyOS",
       "name": "Subscription to Session Revoked",
       "qualifiedName": "MyOS/Subscription to Session Revoked",
-      "blueId": "CQzQg5ZGd2zketQupLKGZCsSBABHzJVMVWY6HpkZpN98",
+      "blueId": "BzThvgTJD2zLX2wLFToLFRgs5KUvw7x3shCsmyxJ54pP",
       "resourcePath": "blue/repo/definitions/MyOS/SubscriptiontoSessionRevoked.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "CQzQg5ZGd2zketQupLKGZCsSBABHzJVMVWY6HpkZpN98",
+          "typeBlueId": "BzThvgTJD2zLX2wLFToLFRgs5KUvw7x3shCsmyxJ54pP",
           "attributesAdded": []
         }
       ]
@@ -15913,14 +15913,14 @@
       "packageName": "PayNote",
       "name": "Capture Declined",
       "qualifiedName": "PayNote/Capture Declined",
-      "blueId": "FJwimLSvqcQkLzLmkefi8qTr1A1m267CaBXEdBKCiqBs",
+      "blueId": "FKmgCVJYnpqy9KJ2fNhEsiPUQHRyoG9oUunkdrwhG65t",
       "resourcePath": "blue/repo/definitions/PayNote/CaptureDeclined.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "FJwimLSvqcQkLzLmkefi8qTr1A1m267CaBXEdBKCiqBs",
+          "typeBlueId": "FKmgCVJYnpqy9KJ2fNhEsiPUQHRyoG9oUunkdrwhG65t",
           "attributesAdded": []
         }
       ]
@@ -15929,14 +15929,14 @@
       "packageName": "PayNote",
       "name": "Capture Failed",
       "qualifiedName": "PayNote/Capture Failed",
-      "blueId": "4gBMJ7sMez4Z6rHdKHsnUvGQwbEM6Xds7mHctQwvpDAJ",
+      "blueId": "5KLJjeRj56sm2a1dj6guTWGKw533bwqNsiioSmntdSjg",
       "resourcePath": "blue/repo/definitions/PayNote/CaptureFailed.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "4gBMJ7sMez4Z6rHdKHsnUvGQwbEM6Xds7mHctQwvpDAJ",
+          "typeBlueId": "5KLJjeRj56sm2a1dj6guTWGKw533bwqNsiioSmntdSjg",
           "attributesAdded": []
         }
       ]
@@ -15961,14 +15961,14 @@
       "packageName": "PayNote",
       "name": "Card Charge Completed",
       "qualifiedName": "PayNote/Card Charge Completed",
-      "blueId": "HYu1rTtEYqX1Fm6RbEDWGphyu6Z2Cpp2ao5Ecq3QSRzf",
+      "blueId": "Dcw8D1XUmNrMBX2uHgJgJ3836Ued7vCy8oEP4aXekYPx",
       "resourcePath": "blue/repo/definitions/PayNote/CardChargeCompleted.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "HYu1rTtEYqX1Fm6RbEDWGphyu6Z2Cpp2ao5Ecq3QSRzf",
+          "typeBlueId": "Dcw8D1XUmNrMBX2uHgJgJ3836Ued7vCy8oEP4aXekYPx",
           "attributesAdded": []
         }
       ]
@@ -15977,14 +15977,14 @@
       "packageName": "PayNote",
       "name": "Card Charge Responded",
       "qualifiedName": "PayNote/Card Charge Responded",
-      "blueId": "7x2Zk1SgBEUrZXn5weEmzjdyMXB8yBn4UWtY759aS8yG",
+      "blueId": "3ku2VCNwWmypxQWFi6bU595iVPXTsCjgbotAi5y4peEq",
       "resourcePath": "blue/repo/definitions/PayNote/CardChargeResponded.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "7x2Zk1SgBEUrZXn5weEmzjdyMXB8yBn4UWtY759aS8yG",
+          "typeBlueId": "3ku2VCNwWmypxQWFi6bU595iVPXTsCjgbotAi5y4peEq",
           "attributesAdded": []
         }
       ]
@@ -15993,14 +15993,14 @@
       "packageName": "PayNote",
       "name": "Card Transaction Capture Lock Change Failed",
       "qualifiedName": "PayNote/Card Transaction Capture Lock Change Failed",
-      "blueId": "DMH5P9UvTUEiKwFBiaN7p44MrkDmhdRmxRmH8GdqMYVa",
+      "blueId": "DSszDxYtNpdSpnf56vs1oQ4bwbweRowhCLbkT7tvDQiV",
       "resourcePath": "blue/repo/definitions/PayNote/CardTransactionCaptureLockChangeFailed.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "DMH5P9UvTUEiKwFBiaN7p44MrkDmhdRmxRmH8GdqMYVa",
+          "typeBlueId": "DSszDxYtNpdSpnf56vs1oQ4bwbweRowhCLbkT7tvDQiV",
           "attributesAdded": []
         }
       ]
@@ -16025,14 +16025,14 @@
       "packageName": "PayNote",
       "name": "Card Transaction Capture Locked",
       "qualifiedName": "PayNote/Card Transaction Capture Locked",
-      "blueId": "DYZJRUa78J19mgGVVxddD5Dw1ETE2tuwdk7gWv3262QL",
+      "blueId": "5ZefGb29XU9takV1ftp6aYkrrHs8q8AAfNJBW7Uy3ZyE",
       "resourcePath": "blue/repo/definitions/PayNote/CardTransactionCaptureLocked.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "DYZJRUa78J19mgGVVxddD5Dw1ETE2tuwdk7gWv3262QL",
+          "typeBlueId": "5ZefGb29XU9takV1ftp6aYkrrHs8q8AAfNJBW7Uy3ZyE",
           "attributesAdded": []
         }
       ]
@@ -16057,14 +16057,14 @@
       "packageName": "PayNote",
       "name": "Card Transaction Capture Unlocked",
       "qualifiedName": "PayNote/Card Transaction Capture Unlocked",
-      "blueId": "GDRN75qJS8fEwRZCxuKWWsJCNvQP65txXjGoSzZDeTxL",
+      "blueId": "43LubJTPxDs9RGM7bcXwZpyczAstFCsjCkFZgk9zvfAc",
       "resourcePath": "blue/repo/definitions/PayNote/CardTransactionCaptureUnlocked.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "GDRN75qJS8fEwRZCxuKWWsJCNvQP65txXjGoSzZDeTxL",
+          "typeBlueId": "43LubJTPxDs9RGM7bcXwZpyczAstFCsjCkFZgk9zvfAc",
           "attributesAdded": []
         }
       ]
@@ -16089,14 +16089,14 @@
       "packageName": "PayNote",
       "name": "Card Transaction Monitoring Request Rejected",
       "qualifiedName": "PayNote/Card Transaction Monitoring Request Rejected",
-      "blueId": "FypECZPtPprxLwgcBJhitfoVYyciXojfNmpTBm1UXsaw",
+      "blueId": "ChTzNgt57FAEoZKk7oo1kFSkP6paXTideC3woe52BgPU",
       "resourcePath": "blue/repo/definitions/PayNote/CardTransactionMonitoringRequestRejected.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "FypECZPtPprxLwgcBJhitfoVYyciXojfNmpTBm1UXsaw",
+          "typeBlueId": "ChTzNgt57FAEoZKk7oo1kFSkP6paXTideC3woe52BgPU",
           "attributesAdded": []
         }
       ]
@@ -16105,14 +16105,14 @@
       "packageName": "PayNote",
       "name": "Card Transaction Monitoring Started",
       "qualifiedName": "PayNote/Card Transaction Monitoring Started",
-      "blueId": "5W4EyRMbrynmMmqwxiBNuyCE95UPuaPCKwFCqy3w3dPy",
+      "blueId": "GgzocgK2E91GPBsNsyJsAx2v1DsiQfFazpZqAYGuATv7",
       "resourcePath": "blue/repo/definitions/PayNote/CardTransactionMonitoringStarted.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "5W4EyRMbrynmMmqwxiBNuyCE95UPuaPCKwFCqy3w3dPy",
+          "typeBlueId": "GgzocgK2E91GPBsNsyJsAx2v1DsiQfFazpZqAYGuATv7",
           "attributesAdded": []
         }
       ]
@@ -16137,14 +16137,14 @@
       "packageName": "PayNote",
       "name": "Card Transaction PayNote",
       "qualifiedName": "PayNote/Card Transaction PayNote",
-      "blueId": "F3wmxrcgoZZ1bbaPTBhiGawWg6DW3v39HLxVbZ8ZxUM4",
+      "blueId": "9Brtfgkzcbe9YP99asHvi7UHoHr3r3bgMn1vUHMZi8Pv",
       "resourcePath": "blue/repo/definitions/PayNote/CardTransactionPayNote.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "F3wmxrcgoZZ1bbaPTBhiGawWg6DW3v39HLxVbZ8ZxUM4",
+          "typeBlueId": "9Brtfgkzcbe9YP99asHvi7UHoHr3r3bgMn1vUHMZi8Pv",
           "attributesAdded": []
         }
       ]
@@ -16169,14 +16169,14 @@
       "packageName": "PayNote",
       "name": "Child PayNote Issuance Declined",
       "qualifiedName": "PayNote/Child PayNote Issuance Declined",
-      "blueId": "CugQrayD5dAMwjygpGiXsfaK8AQPFV5tBQn7FAD6sDEX",
+      "blueId": "5fW8b3vqSFGwaEvycu7CprBpmGEjW7QqT4vhmN6zX3sc",
       "resourcePath": "blue/repo/definitions/PayNote/ChildPayNoteIssuanceDeclined.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "CugQrayD5dAMwjygpGiXsfaK8AQPFV5tBQn7FAD6sDEX",
+          "typeBlueId": "5fW8b3vqSFGwaEvycu7CprBpmGEjW7QqT4vhmN6zX3sc",
           "attributesAdded": []
         }
       ]
@@ -16185,14 +16185,14 @@
       "packageName": "PayNote",
       "name": "Child PayNote Issued",
       "qualifiedName": "PayNote/Child PayNote Issued",
-      "blueId": "CBabY7LLk5G2dGhTECsptoHXWsxMrhdDmwcjWGKHQWYk",
+      "blueId": "DB6iVUgsWh96zaypurZR5jT6EGdwELEteNPomRqo4ZY7",
       "resourcePath": "blue/repo/definitions/PayNote/ChildPayNoteIssued.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "CBabY7LLk5G2dGhTECsptoHXWsxMrhdDmwcjWGKHQWYk",
+          "typeBlueId": "DB6iVUgsWh96zaypurZR5jT6EGdwELEteNPomRqo4ZY7",
           "attributesAdded": []
         }
       ]
@@ -16217,14 +16217,14 @@
       "packageName": "PayNote",
       "name": "Final Amount Resolution Rejected",
       "qualifiedName": "PayNote/Final Amount Resolution Rejected",
-      "blueId": "5oeXGJiovX5tm5tACCW459cB5FsvzjrVgWZmC1D2Jz6B",
+      "blueId": "4rw9kwJRP7P5opfxz1AFAX3mp1wmPNf3qKBz1om9gr8A",
       "resourcePath": "blue/repo/definitions/PayNote/FinalAmountResolutionRejected.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "5oeXGJiovX5tm5tACCW459cB5FsvzjrVgWZmC1D2Jz6B",
+          "typeBlueId": "4rw9kwJRP7P5opfxz1AFAX3mp1wmPNf3qKBz1om9gr8A",
           "attributesAdded": []
         }
       ]
@@ -16249,14 +16249,14 @@
       "packageName": "PayNote",
       "name": "Final Amount Resolved",
       "qualifiedName": "PayNote/Final Amount Resolved",
-      "blueId": "5vVmWFzgXHrrs8P212Rdm1pNv6WbCTq994RUPx8UM2Fw",
+      "blueId": "CDwF6APqf9NVAn49dBfJsJVQU1gB4Ah2gbxs3T7DT3Fc",
       "resourcePath": "blue/repo/definitions/PayNote/FinalAmountResolved.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "5vVmWFzgXHrrs8P212Rdm1pNv6WbCTq994RUPx8UM2Fw",
+          "typeBlueId": "CDwF6APqf9NVAn49dBfJsJVQU1gB4Ah2gbxs3T7DT3Fc",
           "attributesAdded": []
         }
       ]
@@ -16265,14 +16265,14 @@
       "packageName": "PayNote",
       "name": "Funds Captured",
       "qualifiedName": "PayNote/Funds Captured",
-      "blueId": "FmURzXxf9hDHhAQ97V4KLVJYnp2EZUmSKRcTMHU6LEnC",
+      "blueId": "3j1NrjZiu7mn6pcTtqfFo7N2JEQGNWEh2dcxUDuSSVBS",
       "resourcePath": "blue/repo/definitions/PayNote/FundsCaptured.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "FmURzXxf9hDHhAQ97V4KLVJYnp2EZUmSKRcTMHU6LEnC",
+          "typeBlueId": "3j1NrjZiu7mn6pcTtqfFo7N2JEQGNWEh2dcxUDuSSVBS",
           "attributesAdded": []
         }
       ]
@@ -16281,14 +16281,14 @@
       "packageName": "PayNote",
       "name": "Funds Reserved",
       "qualifiedName": "PayNote/Funds Reserved",
-      "blueId": "2LibDBcYc3nxeagiH1UfEtxu1XmX2hCa5t4WbfbBZUdn",
+      "blueId": "4p216aqzABWnVNxJY1MkkTU8fZ511S93hQYo1wwHYpKi",
       "resourcePath": "blue/repo/definitions/PayNote/FundsReserved.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "2LibDBcYc3nxeagiH1UfEtxu1XmX2hCa5t4WbfbBZUdn",
+          "typeBlueId": "4p216aqzABWnVNxJY1MkkTU8fZ511S93hQYo1wwHYpKi",
           "attributesAdded": []
         }
       ]
@@ -16297,14 +16297,14 @@
       "packageName": "PayNote",
       "name": "Funds Secured",
       "qualifiedName": "PayNote/Funds Secured",
-      "blueId": "5Lm9x6Z9gZst4Jcurq1mEhR8QsXpk2xcqzbfvXNNMFt6",
+      "blueId": "3wSieJf5cYTa6o9CMcYAFNmVRS1mJe9wMeQ8Jmo3Xp3i",
       "resourcePath": "blue/repo/definitions/PayNote/FundsSecured.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "5Lm9x6Z9gZst4Jcurq1mEhR8QsXpk2xcqzbfvXNNMFt6",
+          "typeBlueId": "3wSieJf5cYTa6o9CMcYAFNmVRS1mJe9wMeQ8Jmo3Xp3i",
           "attributesAdded": []
         }
       ]
@@ -16313,14 +16313,14 @@
       "packageName": "PayNote",
       "name": "Funds Securing Declined",
       "qualifiedName": "PayNote/Funds Securing Declined",
-      "blueId": "GYv38Geb2rvUwZGdRFv4xuCfUyfDPznzdg7SC4SLhsHm",
+      "blueId": "8x9kLwfX9bJdvChLgQjwhPBCAMDZrmRJPMdaWsKKkbjN",
       "resourcePath": "blue/repo/definitions/PayNote/FundsSecuringDeclined.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "GYv38Geb2rvUwZGdRFv4xuCfUyfDPznzdg7SC4SLhsHm",
+          "typeBlueId": "8x9kLwfX9bJdvChLgQjwhPBCAMDZrmRJPMdaWsKKkbjN",
           "attributesAdded": []
         }
       ]
@@ -16329,14 +16329,14 @@
       "packageName": "PayNote",
       "name": "Funds Securing Failed",
       "qualifiedName": "PayNote/Funds Securing Failed",
-      "blueId": "DfFDDhJPxVcnJLcHQwQJ6fWTwVRX2uridM45NNuxUJsJ",
+      "blueId": "5X9UpCYn4uR6vidaBwpsng98RsVMXjnweXeVgGPXkzQi",
       "resourcePath": "blue/repo/definitions/PayNote/FundsSecuringFailed.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "DfFDDhJPxVcnJLcHQwQJ6fWTwVRX2uridM45NNuxUJsJ",
+          "typeBlueId": "5X9UpCYn4uR6vidaBwpsng98RsVMXjnweXeVgGPXkzQi",
           "attributesAdded": []
         }
       ]
@@ -16393,14 +16393,14 @@
       "packageName": "PayNote",
       "name": "Linked PayNote Start Failed",
       "qualifiedName": "PayNote/Linked PayNote Start Failed",
-      "blueId": "4EtdcwScXEwVyHM7xb4rrAvpQWiRF5LTCsRVsCXfutS9",
+      "blueId": "DAF5xuT1YvgntUkNuDt4q6ABX5ptgbxf2iJCpvajJbnn",
       "resourcePath": "blue/repo/definitions/PayNote/LinkedPayNoteStartFailed.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "4EtdcwScXEwVyHM7xb4rrAvpQWiRF5LTCsRVsCXfutS9",
+          "typeBlueId": "DAF5xuT1YvgntUkNuDt4q6ABX5ptgbxf2iJCpvajJbnn",
           "attributesAdded": []
         }
       ]
@@ -16409,14 +16409,14 @@
       "packageName": "PayNote",
       "name": "Linked PayNote Start Responded",
       "qualifiedName": "PayNote/Linked PayNote Start Responded",
-      "blueId": "7UQrqwxiBYYGfVEsJEiFzqzDRSqWkAwpCpPQPviFUCo4",
+      "blueId": "9GC9R5HceZYKm9LVaKFXKPC9GDUAffn2R4hHNqhDtUAm",
       "resourcePath": "blue/repo/definitions/PayNote/LinkedPayNoteStartResponded.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "7UQrqwxiBYYGfVEsJEiFzqzDRSqWkAwpCpPQPviFUCo4",
+          "typeBlueId": "9GC9R5HceZYKm9LVaKFXKPC9GDUAffn2R4hHNqhDtUAm",
           "attributesAdded": []
         }
       ]
@@ -16425,14 +16425,14 @@
       "packageName": "PayNote",
       "name": "Linked PayNote Started",
       "qualifiedName": "PayNote/Linked PayNote Started",
-      "blueId": "6uT6fSBgavBDCPna9QfWWTafSK4R2AUyJwuXcxwdN85i",
+      "blueId": "G2MqrvuVTgYpURszmzYEavQC7Ef8cQfjd931pE1gTTp2",
       "resourcePath": "blue/repo/definitions/PayNote/LinkedPayNoteStarted.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "6uT6fSBgavBDCPna9QfWWTafSK4R2AUyJwuXcxwdN85i",
+          "typeBlueId": "G2MqrvuVTgYpURszmzYEavQC7Ef8cQfjd931pE1gTTp2",
           "attributesAdded": []
         }
       ]
@@ -16441,14 +16441,14 @@
       "packageName": "PayNote",
       "name": "Merchant To Customer PayNote",
       "qualifiedName": "PayNote/Merchant To Customer PayNote",
-      "blueId": "9d6inz92H28psPQBMGKvjVGZDMByTLBGhiEGfP6Kk5HM",
+      "blueId": "4QW85PM6t2McK3sxKqCsyhajZJv6WVk1AhBT45PGDLZb",
       "resourcePath": "blue/repo/definitions/PayNote/MerchantToCustomerPayNote.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "9d6inz92H28psPQBMGKvjVGZDMByTLBGhiEGfP6Kk5HM",
+          "typeBlueId": "4QW85PM6t2McK3sxKqCsyhajZJv6WVk1AhBT45PGDLZb",
           "attributesAdded": []
         }
       ]
@@ -16457,14 +16457,14 @@
       "packageName": "PayNote",
       "name": "Payee Assignment Confirmed",
       "qualifiedName": "PayNote/Payee Assignment Confirmed",
-      "blueId": "B6sEmPnGreWh118mQcc7xfBayFYCu2rY5dRpTZLjPJZY",
+      "blueId": "79ZV4j1dHpE5nt9nGN141Pte8hDbKgsxSavm9RV9wu1U",
       "resourcePath": "blue/repo/definitions/PayNote/PayeeAssignmentConfirmed.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "B6sEmPnGreWh118mQcc7xfBayFYCu2rY5dRpTZLjPJZY",
+          "typeBlueId": "79ZV4j1dHpE5nt9nGN141Pte8hDbKgsxSavm9RV9wu1U",
           "attributesAdded": []
         }
       ]
@@ -16473,14 +16473,14 @@
       "packageName": "PayNote",
       "name": "Payee Assignment Rejected",
       "qualifiedName": "PayNote/Payee Assignment Rejected",
-      "blueId": "GuYEq7v2TFSoLSXpkWBXwxe4atqq2PJmGimkgLJxTkSb",
+      "blueId": "EHxam7uVrzwbyKVGmHk4QcnKtcPaeM7JzZiiURXj7M33",
       "resourcePath": "blue/repo/definitions/PayNote/PayeeAssignmentRejected.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "GuYEq7v2TFSoLSXpkWBXwxe4atqq2PJmGimkgLJxTkSb",
+          "typeBlueId": "EHxam7uVrzwbyKVGmHk4QcnKtcPaeM7JzZiiURXj7M33",
           "attributesAdded": []
         }
       ]
@@ -16505,14 +16505,14 @@
       "packageName": "PayNote",
       "name": "Payment Cancellation Declined",
       "qualifiedName": "PayNote/Payment Cancellation Declined",
-      "blueId": "ALApdyNstCjjcwpQmwv4JtuqXsYcqne1dLwn7eUwohHp",
+      "blueId": "AygrNas7s1Gvg5zb7X1dVrufVNrGvUxPU7qgQHJ9QLzQ",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentCancellationDeclined.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "ALApdyNstCjjcwpQmwv4JtuqXsYcqne1dLwn7eUwohHp",
+          "typeBlueId": "AygrNas7s1Gvg5zb7X1dVrufVNrGvUxPU7qgQHJ9QLzQ",
           "attributesAdded": []
         }
       ]
@@ -16521,14 +16521,14 @@
       "packageName": "PayNote",
       "name": "Payment Cancellation Failed",
       "qualifiedName": "PayNote/Payment Cancellation Failed",
-      "blueId": "H2sKDbsPvExGneLhdkGrwAq2pFqYNUn4ySyB3JapgR5D",
+      "blueId": "HpeKXtecYHLk8Mm787Pof8hYgQ92SjRQzTDcUdFwrhZV",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentCancellationFailed.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "H2sKDbsPvExGneLhdkGrwAq2pFqYNUn4ySyB3JapgR5D",
+          "typeBlueId": "HpeKXtecYHLk8Mm787Pof8hYgQ92SjRQzTDcUdFwrhZV",
           "attributesAdded": []
         }
       ]
@@ -16537,14 +16537,14 @@
       "packageName": "PayNote",
       "name": "Payment Cancelled Before Completion",
       "qualifiedName": "PayNote/Payment Cancelled Before Completion",
-      "blueId": "Btq6DZigCnNpAzaWAkSnFDJiusCTPKFztzGs1vreAAa4",
+      "blueId": "BVVMg23GQoEyUwPxQj1uif1cxc1PgMd6reAdfkt1k77",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentCancelledBeforeCompletion.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "Btq6DZigCnNpAzaWAkSnFDJiusCTPKFztzGs1vreAAa4",
+          "typeBlueId": "BVVMg23GQoEyUwPxQj1uif1cxc1PgMd6reAdfkt1k77",
           "attributesAdded": []
         }
       ]
@@ -16553,14 +16553,14 @@
       "packageName": "PayNote",
       "name": "Payment Completed",
       "qualifiedName": "PayNote/Payment Completed",
-      "blueId": "7MJg9P6DL2nTJ7Rqi1QYmb3N1sggredxwTrSdSXSrPw6",
+      "blueId": "HRPugeYyuAMpDR4rKoDeDbJpewtFGgAPpFtwyw1T6Row",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentCompleted.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "7MJg9P6DL2nTJ7Rqi1QYmb3N1sggredxwTrSdSXSrPw6",
+          "typeBlueId": "HRPugeYyuAMpDR4rKoDeDbJpewtFGgAPpFtwyw1T6Row",
           "attributesAdded": []
         }
       ]
@@ -16569,14 +16569,14 @@
       "packageName": "PayNote",
       "name": "Payment Completion Declined",
       "qualifiedName": "PayNote/Payment Completion Declined",
-      "blueId": "9rxbuDg4cwaj2RHxxdfXqc78T3XKw2WLM9FgEgT1ccPj",
+      "blueId": "HV1cMM1SfwUna62hDFcwaHwMgDN3QVVSVWWMqmr3Y4jx",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentCompletionDeclined.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "9rxbuDg4cwaj2RHxxdfXqc78T3XKw2WLM9FgEgT1ccPj",
+          "typeBlueId": "HV1cMM1SfwUna62hDFcwaHwMgDN3QVVSVWWMqmr3Y4jx",
           "attributesAdded": []
         }
       ]
@@ -16585,14 +16585,14 @@
       "packageName": "PayNote",
       "name": "Payment Completion Failed",
       "qualifiedName": "PayNote/Payment Completion Failed",
-      "blueId": "BmUhYkGoV7ij9nGMUTcUKDrDke1GaW8j77oU73Wynesa",
+      "blueId": "7nzmwZ5GYggD81cgK9aTduPVhznB8ay1k128CZA4nvzt",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentCompletionFailed.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "BmUhYkGoV7ij9nGMUTcUKDrDke1GaW8j77oU73Wynesa",
+          "typeBlueId": "7nzmwZ5GYggD81cgK9aTduPVhznB8ay1k128CZA4nvzt",
           "attributesAdded": []
         }
       ]
@@ -16601,14 +16601,14 @@
       "packageName": "PayNote",
       "name": "Payment Completion Lock Change Failed",
       "qualifiedName": "PayNote/Payment Completion Lock Change Failed",
-      "blueId": "2vnoXfeAmpkkCam42SCdMF9jzMJ6hs1bQmwSJfRb1Qk8",
+      "blueId": "7A765v3durX3otiybhEomfPAqtztUSt9Ywqef2dsyvLx",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentCompletionLockChangeFailed.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "2vnoXfeAmpkkCam42SCdMF9jzMJ6hs1bQmwSJfRb1Qk8",
+          "typeBlueId": "7A765v3durX3otiybhEomfPAqtztUSt9Ywqef2dsyvLx",
           "attributesAdded": []
         }
       ]
@@ -16633,14 +16633,14 @@
       "packageName": "PayNote",
       "name": "Payment Completion Locked",
       "qualifiedName": "PayNote/Payment Completion Locked",
-      "blueId": "EAr5MGzN3Y9k1GtS5vqPv2Ye3doadedtfYdUCCNAzSui",
+      "blueId": "GiarUWCiPuTZ2g7YfosXP17bTi1cH1ZqkguGcYKNqUvY",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentCompletionLocked.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "EAr5MGzN3Y9k1GtS5vqPv2Ye3doadedtfYdUCCNAzSui",
+          "typeBlueId": "GiarUWCiPuTZ2g7YfosXP17bTi1cH1ZqkguGcYKNqUvY",
           "attributesAdded": []
         }
       ]
@@ -16665,14 +16665,14 @@
       "packageName": "PayNote",
       "name": "Payment Completion Unlocked",
       "qualifiedName": "PayNote/Payment Completion Unlocked",
-      "blueId": "BmcPEnRdWwrGzMCfbSjZtnTkb27ZHJemNEVNDnS1gC4V",
+      "blueId": "4qyUrMxKg5b3zPiB3kBwwy4Yh9fgD4DSqGeLTXh57b7i",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentCompletionUnlocked.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "BmcPEnRdWwrGzMCfbSjZtnTkb27ZHJemNEVNDnS1gC4V",
+          "typeBlueId": "4qyUrMxKg5b3zPiB3kBwwy4Yh9fgD4DSqGeLTXh57b7i",
           "attributesAdded": []
         }
       ]
@@ -16681,14 +16681,14 @@
       "packageName": "PayNote",
       "name": "Payment Mandate",
       "qualifiedName": "PayNote/Payment Mandate",
-      "blueId": "3C1kgodeWjvHL6Kdawo89GhEaPtkrNKGqaSWCDHWRgJH",
+      "blueId": "DBrjV3fVNnCUv6bSjd1nZG2LhuUxyJnkw1CcXQkpir1W",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentMandate.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "3C1kgodeWjvHL6Kdawo89GhEaPtkrNKGqaSWCDHWRgJH",
+          "typeBlueId": "DBrjV3fVNnCUv6bSjd1nZG2LhuUxyJnkw1CcXQkpir1W",
           "attributesAdded": []
         }
       ]
@@ -16745,14 +16745,14 @@
       "packageName": "PayNote",
       "name": "Payment Mandate Spend Authorization Responded",
       "qualifiedName": "PayNote/Payment Mandate Spend Authorization Responded",
-      "blueId": "AL3ke9emJ2ruatfHdT2uZ6XT6casVo9UgeZyWGWCfHHT",
+      "blueId": "Cg8SSdLksJdyWoGcFvq4VvoGwMkcQY88rNdcA9qc734j",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentMandateSpendAuthorizationResponded.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "AL3ke9emJ2ruatfHdT2uZ6XT6casVo9UgeZyWGWCfHHT",
+          "typeBlueId": "Cg8SSdLksJdyWoGcFvq4VvoGwMkcQY88rNdcA9qc734j",
           "attributesAdded": []
         }
       ]
@@ -16761,14 +16761,14 @@
       "packageName": "PayNote",
       "name": "Payment Mandate Spend Settled",
       "qualifiedName": "PayNote/Payment Mandate Spend Settled",
-      "blueId": "GGPSsZjJkhQ6zGs1ggZY1mxr88rv92eqgGZEST8BWtFp",
+      "blueId": "12zhLzvXiUjVQsbNQGRRZk15M1fc2WcohZ8Nbz7Wmd1m",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentMandateSpendSettled.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "GGPSsZjJkhQ6zGs1ggZY1mxr88rv92eqgGZEST8BWtFp",
+          "typeBlueId": "12zhLzvXiUjVQsbNQGRRZk15M1fc2WcohZ8Nbz7Wmd1m",
           "attributesAdded": []
         }
       ]
@@ -16777,14 +16777,14 @@
       "packageName": "PayNote",
       "name": "Payment Mandate Spend Settlement Responded",
       "qualifiedName": "PayNote/Payment Mandate Spend Settlement Responded",
-      "blueId": "6KwRany8GD8Bh1ahj1EiL3vzwXNZgKevyqEZvTg27zN7",
+      "blueId": "AyxFRqp7CDgStXG1ATYUBmAVD62QAF3S3ZV867Q9iBAk",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentMandateSpendSettlementResponded.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "6KwRany8GD8Bh1ahj1EiL3vzwXNZgKevyqEZvTg27zN7",
+          "typeBlueId": "AyxFRqp7CDgStXG1ATYUBmAVD62QAF3S3ZV867Q9iBAk",
           "attributesAdded": []
         }
       ]
@@ -16793,14 +16793,14 @@
       "packageName": "PayNote",
       "name": "Payment Reversal Declined",
       "qualifiedName": "PayNote/Payment Reversal Declined",
-      "blueId": "DMxGoR2gcwBmVTLMqf4dEMVnzgKix5VUqdna6JPTjK3z",
+      "blueId": "3zqCf4fDYcC5ETzvGZA8Jasf1LXdujZTZyL88zL3EDSF",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentReversalDeclined.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "DMxGoR2gcwBmVTLMqf4dEMVnzgKix5VUqdna6JPTjK3z",
+          "typeBlueId": "3zqCf4fDYcC5ETzvGZA8Jasf1LXdujZTZyL88zL3EDSF",
           "attributesAdded": []
         }
       ]
@@ -16809,14 +16809,14 @@
       "packageName": "PayNote",
       "name": "Payment Reversal Failed",
       "qualifiedName": "PayNote/Payment Reversal Failed",
-      "blueId": "A3Az4YT8fWTkaTYqFssQBwN6Aj3JAjPnG8FHA3zisTfM",
+      "blueId": "HgRjnfFyp9156xXVSeXhzKWuZFQE4jVuL1WYD3Gbm98T",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentReversalFailed.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "A3Az4YT8fWTkaTYqFssQBwN6Aj3JAjPnG8FHA3zisTfM",
+          "typeBlueId": "HgRjnfFyp9156xXVSeXhzKWuZFQE4jVuL1WYD3Gbm98T",
           "attributesAdded": []
         }
       ]
@@ -16825,14 +16825,14 @@
       "packageName": "PayNote",
       "name": "Payment Reversal Lock Change Failed",
       "qualifiedName": "PayNote/Payment Reversal Lock Change Failed",
-      "blueId": "BF1oLjkuyjkAeLWbVoq9BEy7fx4pxExLaJERTUWWk9wC",
+      "blueId": "9wsCVU7Pw5BzQhN8RYZXJhiwJAEfBzCkLEWURkJymKsy",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentReversalLockChangeFailed.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "BF1oLjkuyjkAeLWbVoq9BEy7fx4pxExLaJERTUWWk9wC",
+          "typeBlueId": "9wsCVU7Pw5BzQhN8RYZXJhiwJAEfBzCkLEWURkJymKsy",
           "attributesAdded": []
         }
       ]
@@ -16857,14 +16857,14 @@
       "packageName": "PayNote",
       "name": "Payment Reversal Locked",
       "qualifiedName": "PayNote/Payment Reversal Locked",
-      "blueId": "AwLYrbzX9wYnuoW2GPCnhj6vvWfnU1sktwWU44vJrEKf",
+      "blueId": "6qKyexNfVD2WhQQ5FGuCoPGQF89SAigGgwyzbKXsPMRP",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentReversalLocked.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "AwLYrbzX9wYnuoW2GPCnhj6vvWfnU1sktwWU44vJrEKf",
+          "typeBlueId": "6qKyexNfVD2WhQQ5FGuCoPGQF89SAigGgwyzbKXsPMRP",
           "attributesAdded": []
         }
       ]
@@ -16889,14 +16889,14 @@
       "packageName": "PayNote",
       "name": "Payment Reversal Unlocked",
       "qualifiedName": "PayNote/Payment Reversal Unlocked",
-      "blueId": "AfThwp2g99BAnkGVt4nnjXjJ6Dqqzqbw9qQ9jrHxGaHR",
+      "blueId": "FVjUChq6akLbAux94Gs4Sv2VQ1JtQWqy1WekMUTyNXuv",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentReversalUnlocked.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "AfThwp2g99BAnkGVt4nnjXjJ6Dqqzqbw9qQ9jrHxGaHR",
+          "typeBlueId": "FVjUChq6akLbAux94Gs4Sv2VQ1JtQWqy1WekMUTyNXuv",
           "attributesAdded": []
         }
       ]
@@ -16905,14 +16905,14 @@
       "packageName": "PayNote",
       "name": "Payment Reversed After Completion",
       "qualifiedName": "PayNote/Payment Reversed After Completion",
-      "blueId": "54qKtmY2NwV692RPB6GuQx36TJkSuD2evNZiKTtCKP1",
+      "blueId": "42iMsNHFY4jUTy1yhZeEeZu9XZL4ZJqReRe191f1KHXf",
       "resourcePath": "blue/repo/definitions/PayNote/PaymentReversedAfterCompletion.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "54qKtmY2NwV692RPB6GuQx36TJkSuD2evNZiKTtCKP1",
+          "typeBlueId": "42iMsNHFY4jUTy1yhZeEeZu9XZL4ZJqReRe191f1KHXf",
           "attributesAdded": []
         }
       ]
@@ -16921,14 +16921,14 @@
       "packageName": "PayNote",
       "name": "PayNote",
       "qualifiedName": "PayNote/PayNote",
-      "blueId": "EnU4iQTNuABWxFAV7DwcK3NAaU9nxrVHdP1RpjUtZpLw",
+      "blueId": "3QhCg6W39VGD66E7by4yNop1UYH198xEbVpqYcjLaatL",
       "resourcePath": "blue/repo/definitions/PayNote/PayNote.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "EnU4iQTNuABWxFAV7DwcK3NAaU9nxrVHdP1RpjUtZpLw",
+          "typeBlueId": "3QhCg6W39VGD66E7by4yNop1UYH198xEbVpqYcjLaatL",
           "attributesAdded": []
         }
       ]
@@ -16953,14 +16953,14 @@
       "packageName": "PayNote",
       "name": "PayNote Accepted",
       "qualifiedName": "PayNote/PayNote Accepted",
-      "blueId": "3GXYiv2Nmr9CP9FKFHzbQnez3MPq53dzPfoFwY8Q2xSC",
+      "blueId": "EWJLkS8q4TE5NWDh4qpQZMcbgGWdiePNkbZMCtGYVRAN",
       "resourcePath": "blue/repo/definitions/PayNote/PayNoteAccepted.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "3GXYiv2Nmr9CP9FKFHzbQnez3MPq53dzPfoFwY8Q2xSC",
+          "typeBlueId": "EWJLkS8q4TE5NWDh4qpQZMcbgGWdiePNkbZMCtGYVRAN",
           "attributesAdded": []
         }
       ]
@@ -16985,14 +16985,14 @@
       "packageName": "PayNote",
       "name": "PayNote Approved",
       "qualifiedName": "PayNote/PayNote Approved",
-      "blueId": "29y5ie2hbU5WCK6xBcdsjagYMprwuXxMj19oebPi2sZg",
+      "blueId": "8DVJqK8XnidDVa8ToiHg2C67LzszVMrV57yircF3zzyM",
       "resourcePath": "blue/repo/definitions/PayNote/PayNoteApproved.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "29y5ie2hbU5WCK6xBcdsjagYMprwuXxMj19oebPi2sZg",
+          "typeBlueId": "8DVJqK8XnidDVa8ToiHg2C67LzszVMrV57yircF3zzyM",
           "attributesAdded": []
         }
       ]
@@ -17001,14 +17001,14 @@
       "packageName": "PayNote",
       "name": "PayNote Cancellation Rejected",
       "qualifiedName": "PayNote/PayNote Cancellation Rejected",
-      "blueId": "4W8Rie1GTgUmbWofAhBCrSk1X8n44GyqZyE6DQTgnw9L",
+      "blueId": "AmVVqD9dehBLXhwmyRtfH9XhdMVbc9i9YEqhsMJrPnpN",
       "resourcePath": "blue/repo/definitions/PayNote/PayNoteCancellationRejected.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "4W8Rie1GTgUmbWofAhBCrSk1X8n44GyqZyE6DQTgnw9L",
+          "typeBlueId": "AmVVqD9dehBLXhwmyRtfH9XhdMVbc9i9YEqhsMJrPnpN",
           "attributesAdded": []
         }
       ]
@@ -17033,14 +17033,14 @@
       "packageName": "PayNote",
       "name": "PayNote Cancelled",
       "qualifiedName": "PayNote/PayNote Cancelled",
-      "blueId": "Feo1czy1aQYvo4d21ZFuFApZb13vqCBkzt4W3nrZoeRH",
+      "blueId": "29BnKeGGy1Z4ZQZk9tXccEtkjjjARP3xEw2sbxajtcn4",
       "resourcePath": "blue/repo/definitions/PayNote/PayNoteCancelled.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "Feo1czy1aQYvo4d21ZFuFApZb13vqCBkzt4W3nrZoeRH",
+          "typeBlueId": "29BnKeGGy1Z4ZQZk9tXccEtkjjjARP3xEw2sbxajtcn4",
           "attributesAdded": []
         }
       ]
@@ -17065,14 +17065,14 @@
       "packageName": "PayNote",
       "name": "PayNote Delivery",
       "qualifiedName": "PayNote/PayNote Delivery",
-      "blueId": "HuvrcZoFTgvsFwEb4LNjg57Y768qG8UTPUcgjSFughnv",
+      "blueId": "4ofF3F27Hjgsrm326PWGaWRJHA9rWU9atpnwLSkMADEA",
       "resourcePath": "blue/repo/definitions/PayNote/PayNoteDelivery.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "HuvrcZoFTgvsFwEb4LNjg57Y768qG8UTPUcgjSFughnv",
+          "typeBlueId": "4ofF3F27Hjgsrm326PWGaWRJHA9rWU9atpnwLSkMADEA",
           "attributesAdded": []
         }
       ]
@@ -17097,14 +17097,14 @@
       "packageName": "PayNote",
       "name": "PayNote Rejected",
       "qualifiedName": "PayNote/PayNote Rejected",
-      "blueId": "BwBY7i6JhkwVsRaYMK9NJEzg5Nwa7KyLR1EghVRp75R3",
+      "blueId": "FJqmEa4mSV4FrJkeZn9KLbTZMBeULqaBkzEhceuoaLJG",
       "resourcePath": "blue/repo/definitions/PayNote/PayNoteRejected.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "BwBY7i6JhkwVsRaYMK9NJEzg5Nwa7KyLR1EghVRp75R3",
+          "typeBlueId": "FJqmEa4mSV4FrJkeZn9KLbTZMBeULqaBkzEhceuoaLJG",
           "attributesAdded": []
         }
       ]
@@ -17129,14 +17129,14 @@
       "packageName": "PayNote",
       "name": "Reservation Declined",
       "qualifiedName": "PayNote/Reservation Declined",
-      "blueId": "D2WDvFstYeAKtguHkV35B8a7aP8Rj5vpsqb9xGBnr9V8",
+      "blueId": "DhMGXZUUoZKjNmPbBKyY882k9rAnPK5F6Kup76KPLdKR",
       "resourcePath": "blue/repo/definitions/PayNote/ReservationDeclined.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "D2WDvFstYeAKtguHkV35B8a7aP8Rj5vpsqb9xGBnr9V8",
+          "typeBlueId": "DhMGXZUUoZKjNmPbBKyY882k9rAnPK5F6Kup76KPLdKR",
           "attributesAdded": []
         }
       ]
@@ -17145,14 +17145,14 @@
       "packageName": "PayNote",
       "name": "Reservation Release Declined",
       "qualifiedName": "PayNote/Reservation Release Declined",
-      "blueId": "3nBY7YyzYCLAUprBwNA8wbNs12ELJc5tcREKb74fGigq",
+      "blueId": "2vV995BK1aDswPiZr8bXfwLvRbbprmFnhMa7aJGfg3Df",
       "resourcePath": "blue/repo/definitions/PayNote/ReservationReleaseDeclined.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "3nBY7YyzYCLAUprBwNA8wbNs12ELJc5tcREKb74fGigq",
+          "typeBlueId": "2vV995BK1aDswPiZr8bXfwLvRbbprmFnhMa7aJGfg3Df",
           "attributesAdded": []
         }
       ]
@@ -17177,14 +17177,14 @@
       "packageName": "PayNote",
       "name": "Reservation Released",
       "qualifiedName": "PayNote/Reservation Released",
-      "blueId": "G6TDvitQ2xKgqrabq4SknqaifmDdsmUv59kNMUYzKvLp",
+      "blueId": "36QzhH7XYNZRBqNotXqdoo7VGkgeZBUojDzADhd1e6RB",
       "resourcePath": "blue/repo/definitions/PayNote/ReservationReleased.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "G6TDvitQ2xKgqrabq4SknqaifmDdsmUv59kNMUYzKvLp",
+          "typeBlueId": "36QzhH7XYNZRBqNotXqdoo7VGkgeZBUojDzADhd1e6RB",
           "attributesAdded": []
         }
       ]
@@ -17289,14 +17289,14 @@
       "packageName": "PayNote",
       "name": "Settlement Amount Rejected",
       "qualifiedName": "PayNote/Settlement Amount Rejected",
-      "blueId": "8pZycRVESC1ukhgPvXD3mDARn8oRWkDDDjxAf5jA3WAw",
+      "blueId": "EqtTi4QsxYWoyLu4X2iptWAQTTAVHh77MUgdp8aUjtjC",
       "resourcePath": "blue/repo/definitions/PayNote/SettlementAmountRejected.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "8pZycRVESC1ukhgPvXD3mDARn8oRWkDDDjxAf5jA3WAw",
+          "typeBlueId": "EqtTi4QsxYWoyLu4X2iptWAQTTAVHh77MUgdp8aUjtjC",
           "attributesAdded": []
         }
       ]
@@ -17305,14 +17305,14 @@
       "packageName": "PayNote",
       "name": "Settlement Amount Specified",
       "qualifiedName": "PayNote/Settlement Amount Specified",
-      "blueId": "5mmaYYHspULgg9BwGTMXeYTV7NN8QMAHYEyjd81zM77w",
+      "blueId": "4dHGVnHSgn18Dj6VTYZE2359Ym67DLjfnwgDRcy5tHZH",
       "resourcePath": "blue/repo/definitions/PayNote/SettlementAmountSpecified.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "5mmaYYHspULgg9BwGTMXeYTV7NN8QMAHYEyjd81zM77w",
+          "typeBlueId": "4dHGVnHSgn18Dj6VTYZE2359Ym67DLjfnwgDRcy5tHZH",
           "attributesAdded": []
         }
       ]
@@ -17337,14 +17337,14 @@
       "packageName": "PayNote",
       "name": "Transaction Details Update Failed",
       "qualifiedName": "PayNote/Transaction Details Update Failed",
-      "blueId": "An4HLWaPYmxzxC2R695j31e1CHxGYu2ULPGknmwzss5m",
+      "blueId": "DDuuaogLyNgVHbSoJxxQcX5iZqWy6U9DAxjgtdzWRnWB",
       "resourcePath": "blue/repo/definitions/PayNote/TransactionDetailsUpdateFailed.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "An4HLWaPYmxzxC2R695j31e1CHxGYu2ULPGknmwzss5m",
+          "typeBlueId": "DDuuaogLyNgVHbSoJxxQcX5iZqWy6U9DAxjgtdzWRnWB",
           "attributesAdded": []
         }
       ]
@@ -17353,14 +17353,14 @@
       "packageName": "PayNote",
       "name": "Transaction Details Update Lock Change Failed",
       "qualifiedName": "PayNote/Transaction Details Update Lock Change Failed",
-      "blueId": "7JhfPwWp4Tq1TXDw1GaG1XHBRdF2SL64i3eQE5e2miie",
+      "blueId": "369jQqbKxUNXz4yZHMgeomhtQUbAByuCCXCcXKaUSun9",
       "resourcePath": "blue/repo/definitions/PayNote/TransactionDetailsUpdateLockChangeFailed.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "7JhfPwWp4Tq1TXDw1GaG1XHBRdF2SL64i3eQE5e2miie",
+          "typeBlueId": "369jQqbKxUNXz4yZHMgeomhtQUbAByuCCXCcXKaUSun9",
           "attributesAdded": []
         }
       ]
@@ -17385,14 +17385,14 @@
       "packageName": "PayNote",
       "name": "Transaction Details Update Locked",
       "qualifiedName": "PayNote/Transaction Details Update Locked",
-      "blueId": "6EwsMA57MwN1Wtetc5yaxfeMLNCoF97sf3DKdSA1ZNjN",
+      "blueId": "44MphyKwNYqXzF8aS5WTmXZMQ4x35PViXyoy2Ks14G1Z",
       "resourcePath": "blue/repo/definitions/PayNote/TransactionDetailsUpdateLocked.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "6EwsMA57MwN1Wtetc5yaxfeMLNCoF97sf3DKdSA1ZNjN",
+          "typeBlueId": "44MphyKwNYqXzF8aS5WTmXZMQ4x35PViXyoy2Ks14G1Z",
           "attributesAdded": []
         }
       ]
@@ -17401,14 +17401,14 @@
       "packageName": "PayNote",
       "name": "Transaction Details Update Rejected",
       "qualifiedName": "PayNote/Transaction Details Update Rejected",
-      "blueId": "4YaFyEh1wYWxr9WRiUat842AyckhGNoUTFPowtm4kGu2",
+      "blueId": "3iWy5uSeaCr149THj4x9sAeb2AhTtkHFY9yCuqeV7LCT",
       "resourcePath": "blue/repo/definitions/PayNote/TransactionDetailsUpdateRejected.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "4YaFyEh1wYWxr9WRiUat842AyckhGNoUTFPowtm4kGu2",
+          "typeBlueId": "3iWy5uSeaCr149THj4x9sAeb2AhTtkHFY9yCuqeV7LCT",
           "attributesAdded": []
         }
       ]
@@ -17449,14 +17449,14 @@
       "packageName": "PayNote",
       "name": "Transaction Details Update Unlocked",
       "qualifiedName": "PayNote/Transaction Details Update Unlocked",
-      "blueId": "7m1Q2Dt5P6YbKZ894pWSyBriZjwj7xev2AkVJ2JpFbXr",
+      "blueId": "ASnHnJCtcbdEsWa5wcbRpmoUBnw9yajf9vLpsovXyTXg",
       "resourcePath": "blue/repo/definitions/PayNote/TransactionDetailsUpdateUnlocked.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "7m1Q2Dt5P6YbKZ894pWSyBriZjwj7xev2AkVJ2JpFbXr",
+          "typeBlueId": "ASnHnJCtcbdEsWa5wcbRpmoUBnw9yajf9vLpsovXyTXg",
           "attributesAdded": []
         }
       ]
@@ -17465,14 +17465,14 @@
       "packageName": "PayNote",
       "name": "Transaction Details Updated",
       "qualifiedName": "PayNote/Transaction Details Updated",
-      "blueId": "2TqfkNyR9Y2VSBLrR9m5om8KHAxJiP9mfvK9cqryf8Gp",
+      "blueId": "5B6omzwwUauNNbarndynuCMyMCqZVu6ikTqnLocXZyWA",
       "resourcePath": "blue/repo/definitions/PayNote/TransactionDetailsUpdated.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "2TqfkNyR9Y2VSBLrR9m5om8KHAxJiP9mfvK9cqryf8Gp",
+          "typeBlueId": "5B6omzwwUauNNbarndynuCMyMCqZVu6ikTqnLocXZyWA",
           "attributesAdded": []
         }
       ]
@@ -17513,14 +17513,14 @@
       "packageName": "PayNote",
       "name": "Transaction Initiated",
       "qualifiedName": "PayNote/Transaction Initiated",
-      "blueId": "H1drpTrZV4VPCPeNV7Wsu3PvSLp5kaXSEszrE7ipCxb",
+      "blueId": "7WG5MSrMMCeAEYwavUJ2eZQhYdYn2xZv5T8ZYoFyFA4Z",
       "resourcePath": "blue/repo/definitions/PayNote/TransactionInitiated.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "H1drpTrZV4VPCPeNV7Wsu3PvSLp5kaXSEszrE7ipCxb",
+          "typeBlueId": "7WG5MSrMMCeAEYwavUJ2eZQhYdYn2xZv5T8ZYoFyFA4Z",
           "attributesAdded": []
         }
       ]
@@ -17529,14 +17529,14 @@
       "packageName": "PayNote",
       "name": "Transaction Initiation Failed",
       "qualifiedName": "PayNote/Transaction Initiation Failed",
-      "blueId": "7xv283WsGZMSARHfWsHjqcMFHPJk4czsihtDbb9Hx96T",
+      "blueId": "4RWHs3KE6EL4cyMHvhrxR7pm6wQcgW5wGefM5t7p8jn2",
       "resourcePath": "blue/repo/definitions/PayNote/TransactionInitiationFailed.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "7xv283WsGZMSARHfWsHjqcMFHPJk4czsihtDbb9Hx96T",
+          "typeBlueId": "4RWHs3KE6EL4cyMHvhrxR7pm6wQcgW5wGefM5t7p8jn2",
           "attributesAdded": []
         }
       ]

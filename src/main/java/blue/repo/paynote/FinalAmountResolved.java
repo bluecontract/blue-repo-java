@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.coordination.Response;
 import java.math.BigInteger;
 
-@TypeBlueId("5vVmWFzgXHrrs8P212Rdm1pNv6WbCTq994RUPx8UM2Fw")
+@TypeBlueId("CDwF6APqf9NVAn49dBfJsJVQU1gB4Ah2gbxs3T7DT3Fc")
 public class FinalAmountResolved extends Response {
     public static String blueId() {
-        return "5vVmWFzgXHrrs8P212Rdm1pNv6WbCTq994RUPx8UM2Fw";
+        return "CDwF6APqf9NVAn49dBfJsJVQU1gB4Ah2gbxs3T7DT3Fc";
     }
 
     public static String packageName() {

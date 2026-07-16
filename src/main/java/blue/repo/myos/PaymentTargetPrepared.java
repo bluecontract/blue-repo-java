@@ -7,10 +7,10 @@ import blue.repo.common.Currency;
 import blue.repo.coordination.Response;
 import java.math.BigInteger;
 
-@TypeBlueId("CpN9cPkBhwzFRLWFrXUu5L8vcBgG2q4UuoWrWfjcowwD")
+@TypeBlueId("EZQPqDj5iDyHzM6DQE11Z2NwcPNSPx34v9SMyXsrwe6h")
 public class PaymentTargetPrepared extends Response {
     public static String blueId() {
-        return "CpN9cPkBhwzFRLWFrXUu5L8vcBgG2q4UuoWrWfjcowwD";
+        return "EZQPqDj5iDyHzM6DQE11Z2NwcPNSPx34v9SMyXsrwe6h";
     }
 
     public static String packageName() {

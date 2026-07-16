@@ -2,7 +2,7 @@
   "name": "Payment Reversal Locked",
   "description": "Payment reversal was locked. Subsequent reversal attempts must be rejected until explicitly unlocked.\n",
   "type": {
-    "blueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV"
+    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
   },
   "lockedAt": {
     "type": {

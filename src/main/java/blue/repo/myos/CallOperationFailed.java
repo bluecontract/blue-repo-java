@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.coordination.Response;
 
-@TypeBlueId("3Xiqhesc1E2zuomHb6ZuHcLwMH9AX8k3e9Zjk5PExnVA")
+@TypeBlueId("FFXVAea2mRHoJq3PRdmz5cXG8eETqx4yr5KCbeTxhEqB")
 public class CallOperationFailed extends Response {
     public static String blueId() {
-        return "3Xiqhesc1E2zuomHb6ZuHcLwMH9AX8k3e9Zjk5PExnVA";
+        return "FFXVAea2mRHoJq3PRdmz5cXG8eETqx4yr5KCbeTxhEqB";
     }
 
     public static String packageName() {

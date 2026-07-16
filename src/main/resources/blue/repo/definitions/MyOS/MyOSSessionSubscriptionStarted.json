@@ -2,6 +2,6 @@
   "name": "MyOS Session Subscription Started",
   "description": "First update of a MyOS session subscription. It marks the clear start boundary of the stream and may carry the initial source snapshot when requested by the filter, together with any matching events delivered at that boundary.\n",
   "type": {
-    "blueId": "HJ5J4tXLaNzA5p2rQ5qEmrk6hnZCfXQobtefsANu5x1S"
+    "blueId": "EkNokZ4svfJ4Xhza5qNxm285pcRHXhZvA97KZKYf8cyb"
   }
 }

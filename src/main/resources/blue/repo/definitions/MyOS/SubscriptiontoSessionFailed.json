@@ -2,7 +2,7 @@
   "name": "Subscription to Session Failed",
   "description": "Indicates MyOS Admin rejected the subscription request before activation.",
   "type": {
-    "blueId": "AzASjrTzr6FPoRd6B3yYDv7k43Z8ap8kwhaxYrFaXpzV"
+    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
   },
   "subscriptionId": {
     "description": "The subscription id that failed.",
