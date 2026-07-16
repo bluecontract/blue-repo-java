@@ -1,6 +1,6 @@
 {
   "name": "Mandate Authority",
-  "description": "Authority evidence backed by a Mandate/Mandate document. On a Timeline Entry, the containing actor claims to act on behalf of actor under mandate. The mandate value may be materialized inline or represented as an equivalent pure { blueId: ... } reference.\n",
+  "description": "Authority evidence backed by an initial Mandate/Mandate document. On a Timeline Entry, the containing actor claims to act on behalf of actor under that mandate. The initialMandateDocument value may be materialized inline or represented as an equivalent pure { blueId: ... } reference.\n",
   "type": {
     "blueId": "5BrNKcZDq6q4UY1jQpjyeFjbTV6rxVKM9qNL5xzGMZRW"
   },
@@ -13,7 +13,7 @@
       "required": true
     }
   },
-  "mandate": {
+  "initialMandateDocument": {
     "description": "Initial mandate document authorizing the represented authority relationship. A feeder or provider resolves the exact processed mandate state required for the relevant action timestamp.\n",
     "type": {
       "blueId": "6cS7BANfxw87QmcKvCMUHxAQoqHuBmKMED1vWzk79BxJ"

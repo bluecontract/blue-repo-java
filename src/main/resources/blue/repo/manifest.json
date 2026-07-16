@@ -1,13 +1,13 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "3zLAj8nBBFTYuZiAgjntPsCcmBq9zr7SZKnK7xysDemF",
+  "repositoryVersionBlueId": "7cU4LajZRqn5b6Li1cHpABhCtNRWVVEqASFHi2finahH",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
       "index": 0,
       "version": "1.3.0",
-      "repositoryBlueId": "3zLAj8nBBFTYuZiAgjntPsCcmBq9zr7SZKnK7xysDemF"
+      "repositoryBlueId": "7cU4LajZRqn5b6Li1cHpABhCtNRWVVEqASFHi2finahH"
     }
   ],
   "packageNames": [
@@ -14617,14 +14617,14 @@
       "packageName": "Mandate",
       "name": "Mandate Authority",
       "qualifiedName": "Mandate/Mandate Authority",
-      "blueId": "3oCuMKxneozS3zMfBnnuvPwesUQDgWFwnF76uy2ERuQr",
+      "blueId": "5bFqx3YquAHCFUvVzVEZ1h6aF89yhxfb1c3HnQys2kKz",
       "resourcePath": "blue/repo/definitions/Mandate/MandateAuthority.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "3oCuMKxneozS3zMfBnnuvPwesUQDgWFwnF76uy2ERuQr",
+          "typeBlueId": "5bFqx3YquAHCFUvVzVEZ1h6aF89yhxfb1c3HnQys2kKz",
           "attributesAdded": []
         }
       ]
