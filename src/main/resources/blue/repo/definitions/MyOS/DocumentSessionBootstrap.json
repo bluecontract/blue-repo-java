@@ -2,7 +2,7 @@
   "name": "Document Session Bootstrap",
   "description": "MyOS-specific document for bootstrapping document sessions and tracking bootstrap progress",
   "type": {
-    "blueId": "CgHxjKAYf2rF5vGpwHiKgfr9jfhTxQVris2nTcuhR6fS"
+    "blueId": "9NrQCnrfCPStxHEtqieXNhGsFo3qDoJukzfSTAP22JnL"
   },
   "contracts": {
     "triggeredEventsChannel": {

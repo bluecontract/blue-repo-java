@@ -1,29 +1,29 @@
-package blue.repo.mandate;
+package blue.repo.coordination;
 
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("BNCHNpZueeZEq3SdckkV3Xym5b7mEDWouLxMFkGQ62tG")
-public class OperationMandate extends Mandate {
+@TypeBlueId("DacNQ6C6PgsEiE4QfUHmaWBztpEvo2YyXxUcP86ze77w")
+public class TerminateProcessing extends SequentialWorkflowStep {
     public static String blueId() {
-        return "BNCHNpZueeZEq3SdckkV3Xym5b7mEDWouLxMFkGQ62tG";
+        return "DacNQ6C6PgsEiE4QfUHmaWBztpEvo2YyXxUcP86ze77w";
     }
 
     public static String packageName() {
-        return "Mandate";
+        return "Coordination";
     }
 
     public static String typeName() {
-        return "Operation Mandate";
+        return "Terminate Processing";
     }
 
     public static String qualifiedName() {
-        return "Mandate/Operation Mandate";
+        return "Coordination/Terminate Processing";
     }
 
     public static String resourcePath() {
-        return "blue/repo/definitions/Mandate/OperationMandate.json";
+        return "blue/repo/definitions/Coordination/TerminateProcessing.json";
     }
 
     public static RepositoryType repositoryType() {
@@ -35,14 +35,14 @@ public class OperationMandate extends Mandate {
                 resourcePath());
     }
 
-    private Node target;
+    private String reason;
 
-    public Node getTarget() {
-        return target;
+    public String getReason() {
+        return reason;
     }
 
-    public OperationMandate target(Node target) {
-        this.target = target;
+    public TerminateProcessing reason(String reason) {
+        this.reason = reason;
         return this;
     }
 

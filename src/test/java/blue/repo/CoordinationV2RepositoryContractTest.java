@@ -10,6 +10,8 @@ import blue.repo.coordination.Operation;
 import blue.repo.coordination.OperationRequest;
 import blue.repo.coordination.Response;
 import blue.repo.coordination.Source;
+import blue.repo.coordination.SequentialWorkflowStep;
+import blue.repo.coordination.TerminateProcessing;
 import blue.repo.coordination.Timeline;
 import blue.repo.coordination.TimelineChannel;
 import blue.repo.coordination.TimelineEntry;
@@ -29,6 +31,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import static blue.language.utils.Properties.LIST_TYPE_BLUE_ID;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -109,6 +112,20 @@ class CoordinationV2RepositoryContractTest {
     }
 
     @Test
+    void terminateProcessingExposesTheGracefulCurrentScopeStepContract() throws Exception {
+        assertTrue(SequentialWorkflowStep.class.isAssignableFrom(TerminateProcessing.class));
+        assertFieldType(TerminateProcessing.class, "reason", String.class);
+
+        JsonNode definition = definition(CoordinationTypes.TERMINATE_PROCESSING);
+        assertEquals(CoordinationTypes.SEQUENTIAL_WORKFLOW_STEP.blueId(),
+                definition.at("/type/blueId").asText());
+        assertOptional(definition, "reason");
+        assertTrue(definition.path("description").asText().contains("graceful termination"));
+        assertTrue(definition.path("description").asText().contains("later steps"));
+        assertTrue(definition.path("description").asText().contains("cannot request fatal"));
+    }
+
+    @Test
     void responseNarrowsTheTemporaryMessageCorrelationField() throws Exception {
         assertTrue(Message.class.isAssignableFrom(Response.class));
         assertEquals(Node.class, Message.class.getMethod("getInResponseTo").getReturnType());
@@ -148,14 +165,21 @@ class CoordinationV2RepositoryContractTest {
         JsonNode functions = mandate.at("/contracts/mandateLifecycleDefinition/functions");
         JsonNode timestampFunction = functions.path("processingEventTimestamp");
 
-        assertEquals(new LinkedHashSet<>(Arrays.asList(
-                "processingEvent",
-                "processingEvent/timestamp"
-        )), directiveValues(timestampFunction, "$binding"));
+        assertEquals(Collections.singleton("processingEvent/timestamp"),
+                directiveValues(timestampFunction, "$binding"));
         assertFalse(containsText(functions, "triggeringEntry"));
         assertFalse(containsText(functions, "triggeringEvent"));
         assertFalse(containsText(functions, TimelineEntry.blueId()),
                 "Mandate BEX must not hardcode the Timeline Entry BlueId");
+    }
+
+    @Test
+    void myOsAdminUpdateAcceptsAListOfCoordinationEvents() throws Exception {
+        JsonNode request = definition(MyOSTypes.MYOS_ADMIN_BASE)
+                .at("/contracts/myOsAdminUpdate/request");
+
+        assertEquals(LIST_TYPE_BLUE_ID, request.at("/type/blueId").asText());
+        assertEquals(CoordinationTypes.EVENT.blueId(), request.at("/itemType/blueId").asText());
     }
 
     @Test

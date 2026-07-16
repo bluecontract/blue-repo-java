@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.coordination.Actor;
 import blue.repo.coordination.Authority;
 
-@TypeBlueId("7PQhFPiE1EQENXgjeYLXrAMjrhjmUz9UAYDEP56UqomR")
+@TypeBlueId("3oCuMKxneozS3zMfBnnuvPwesUQDgWFwnF76uy2ERuQr")
 public class MandateAuthority extends Authority {
     public static String blueId() {
-        return "7PQhFPiE1EQENXgjeYLXrAMjrhjmUz9UAYDEP56UqomR";
+        return "3oCuMKxneozS3zMfBnnuvPwesUQDgWFwnF76uy2ERuQr";
     }
 
     public static String packageName() {
