@@ -2,7 +2,7 @@
   "name": "MyOS Timeline",
   "description": "A managed timeline implementation providing convenient email-based authentication and extensive features. MyOS timelines are straightforward to set up and use, offering a balance of convenience and security through hash-chained, authenticated event sequences.",
   "type": {
-    "blueId": "3jwaTSdUWw47M6rkN85BE6nTemo7eoyN3R6ompsrDfgn"
+    "blueId": "HAMjp2wA76Jhz8EGBDbfo9cqVyAq3vwVN4baKJBpj8KF"
   },
   "accountId": {
     "description": "Identifier for the MyOS account associated with this timeline",

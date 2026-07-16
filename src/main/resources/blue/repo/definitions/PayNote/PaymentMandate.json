@@ -5,19 +5,19 @@
     "granterChannel": {
       "description": "Granting party timeline channel.",
       "type": {
-        "blueId": "HbecELqPUgjEnPDnu9uAVuuFj4DA2H8M9vsVmPXPaUmV"
+        "blueId": "6z6yHvTmjhyeNpdmu14bbGtKA2hj3g1UCKbpskTQ4Hky"
       }
     },
     "granteeChannel": {
       "description": "Grantee timeline channel (party allowed to use the mandate).",
       "type": {
-        "blueId": "HbecELqPUgjEnPDnu9uAVuuFj4DA2H8M9vsVmPXPaUmV"
+        "blueId": "6z6yHvTmjhyeNpdmu14bbGtKA2hj3g1UCKbpskTQ4Hky"
       }
     },
     "guarantorChannel": {
       "description": "Bank/admin channel executing mandate checks and settlement updates.",
       "type": {
-        "blueId": "HbecELqPUgjEnPDnu9uAVuuFj4DA2H8M9vsVmPXPaUmV"
+        "blueId": "6z6yHvTmjhyeNpdmu14bbGtKA2hj3g1UCKbpskTQ4Hky"
       }
     },
     "initLifecycleChannel": {
