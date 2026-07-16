@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("Ab5kRCjTekQwTpWBgBv2ofJ6kgGbrbqMrdRPPJ4aKX3d")
+@TypeBlueId("BDP5DqtmUNtG2FE1hLe5n2n5h4JMJayXixeGzfM5uzrq")
 public class TimelineChannel extends blue.language.processor.model.ChannelContract {
     public static String blueId() {
-        return "Ab5kRCjTekQwTpWBgBv2ofJ6kgGbrbqMrdRPPJ4aKX3d";
+        return "BDP5DqtmUNtG2FE1hLe5n2n5h4JMJayXixeGzfM5uzrq";
     }
 
     public static String packageName() {

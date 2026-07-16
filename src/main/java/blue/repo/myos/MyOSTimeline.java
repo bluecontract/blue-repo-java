@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.coordination.Timeline;
 
-@TypeBlueId("FxJvs5C7UPo2gK1jU4d3R1fGC8HUHNC26erWf86z7EFg")
+@TypeBlueId("13LHPnj6jnbyjPPwcN7d5DhLxWjtawiazZ8NvoEHhJjD")
 public class MyOSTimeline extends Timeline {
     public static String blueId() {
-        return "FxJvs5C7UPo2gK1jU4d3R1fGC8HUHNC26erWf86z7EFg";
+        return "13LHPnj6jnbyjPPwcN7d5DhLxWjtawiazZ8NvoEHhJjD";
     }
 
     public static String packageName() {

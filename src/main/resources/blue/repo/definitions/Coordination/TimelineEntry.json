@@ -1,19 +1,10 @@
 {
   "name": "Timeline Entry",
-  "description": "Immutable entry in an append-only Timeline. The Timeline Provider assigns sequence and timestamp, links the entry to its predecessor, and authenticates actor and available source attribution. A feeder validates, orders, and filters entries before passing eligible events to a processor.\n",
+  "description": "Immutable entry in an append-only Timeline. The Timeline Provider assigns a timestamp that is unique and strictly increasing within the timeline, links the entry to its predecessor, and authenticates actor and available source attribution. A feeder validates, orders, and filters entries before passing eligible events to a processor.\n",
   "timeline": {
     "description": "Timeline containing this entry.",
     "type": {
-      "blueId": "3jwaTSdUWw47M6rkN85BE6nTemo7eoyN3R6ompsrDfgn"
-    },
-    "schema": {
-      "required": true
-    }
-  },
-  "sequence": {
-    "description": "Strictly increasing position of this entry within its timeline. Sequence, rather than timestamp, is the authoritative intra-timeline order.\n",
-    "type": {
-      "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
+      "blueId": "HAMjp2wA76Jhz8EGBDbfo9cqVyAq3vwVN4baKJBpj8KF"
     },
     "schema": {
       "required": true
@@ -26,7 +17,7 @@
     }
   },
   "timestamp": {
-    "description": "Microsecond timestamp assigned by the Timeline Provider for cross-timeline ordering and completeness. Timestamps may repeat within a timeline and do not replace sequence as its authoritative order.\n",
+    "description": "Microsecond timestamp assigned by the Timeline Provider. It is unique and strictly increasing within this timeline and is the authoritative intra-timeline ordering value. It also supports cross-timeline ordering and completeness windows under the provider profile.\n",
     "type": {
       "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
     },

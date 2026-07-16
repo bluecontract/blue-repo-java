@@ -5,7 +5,7 @@
     "myOsAdminChannel": {
       "description": "MyOS Admin (accountId=0) — posts operational progress/decisions via myOsAdminUpdate",
       "type": {
-        "blueId": "HbecELqPUgjEnPDnu9uAVuuFj4DA2H8M9vsVmPXPaUmV"
+        "blueId": "6z6yHvTmjhyeNpdmu14bbGtKA2hj3g1UCKbpskTQ4Hky"
       }
     },
     "myOsAdminUpdate": {

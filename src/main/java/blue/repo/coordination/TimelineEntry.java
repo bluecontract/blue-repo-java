@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.math.BigInteger;
 
-@TypeBlueId("487Ff42PK8ofcE1QPNMeRgKM7Qvz9G413j71ouptUGqe#0")
+@TypeBlueId("BipDEsAgTsG3HSm5CL4KAMeAWBkzRetdKdtnixAwJW9y#0")
 public class TimelineEntry {
     public static String blueId() {
-        return "487Ff42PK8ofcE1QPNMeRgKM7Qvz9G413j71ouptUGqe#0";
+        return "BipDEsAgTsG3HSm5CL4KAMeAWBkzRetdKdtnixAwJW9y#0";
     }
 
     public static String packageName() {
@@ -38,8 +38,6 @@ public class TimelineEntry {
 
     private Timeline timeline;
 
-    private BigInteger sequence;
-
     private TimelineEntry prevEntry;
 
     private BigInteger timestamp;
@@ -58,15 +56,6 @@ public class TimelineEntry {
 
     public TimelineEntry timeline(Timeline timeline) {
         this.timeline = timeline;
-        return this;
-    }
-
-    public BigInteger getSequence() {
-        return sequence;
-    }
-
-    public TimelineEntry sequence(BigInteger sequence) {
-        this.sequence = sequence;
         return this;
     }
 
