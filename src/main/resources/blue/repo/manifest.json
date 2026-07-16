@@ -1,13 +1,18 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "6nA3djNMuGgjyin3PyLQqVAKU75DwHHx19egEaifMKWP",
+  "repositoryVersionBlueId": "GTMFwCUR1kdn5UMQ6BUS8LR5wyAjCXZiig4LzQNZABXT",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
       "index": 0,
-      "version": "1.3.0",
+      "version": "repository-1",
       "repositoryBlueId": "6nA3djNMuGgjyin3PyLQqVAKU75DwHHx19egEaifMKWP"
+    },
+    {
+      "index": 1,
+      "version": "1.3.0",
+      "repositoryBlueId": "GTMFwCUR1kdn5UMQ6BUS8LR5wyAjCXZiig4LzQNZABXT"
     }
   ],
   "packageNames": [
@@ -945,6 +950,22 @@
         {
           "repositoryVersionIndex": 0,
           "typeBlueId": "FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc",
+          "attributesAdded": []
+        }
+      ]
+    },
+    {
+      "packageName": "Coordination",
+      "name": "Terminate Processing",
+      "qualifiedName": "Coordination/Terminate Processing",
+      "blueId": "DacNQ6C6PgsEiE4QfUHmaWBztpEvo2YyXxUcP86ze77w",
+      "resourcePath": "blue/repo/definitions/Coordination/TerminateProcessing.json",
+      "status": "stable",
+      "repositoryVersionIndex": 1,
+      "versions": [
+        {
+          "repositoryVersionIndex": 1,
+          "typeBlueId": "DacNQ6C6PgsEiE4QfUHmaWBztpEvo2YyXxUcP86ze77w",
           "attributesAdded": []
         }
       ]

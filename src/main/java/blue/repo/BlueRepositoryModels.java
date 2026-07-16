@@ -71,6 +71,7 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.coordination.StatusFailed.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.StatusInProgress.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.StatusPending.class);
+        resolver.registerAnnotatedClass(blue.repo.coordination.TerminateProcessing.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.Timeline.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.TimelineChannel.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.TimelineEntry.class);

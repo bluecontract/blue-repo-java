@@ -10,6 +10,8 @@ import blue.repo.coordination.Operation;
 import blue.repo.coordination.OperationRequest;
 import blue.repo.coordination.Response;
 import blue.repo.coordination.Source;
+import blue.repo.coordination.SequentialWorkflowStep;
+import blue.repo.coordination.TerminateProcessing;
 import blue.repo.coordination.Timeline;
 import blue.repo.coordination.TimelineChannel;
 import blue.repo.coordination.TimelineEntry;
@@ -106,6 +108,20 @@ class CoordinationV2RepositoryContractTest {
         JsonNode operation = definition(CoordinationTypes.OPERATION);
         assertTrue(operation.at("/channel/description").asText().contains("effective channel"));
         assertTrue(operation.at("/channel/description").asText().contains("different eligible source channel"));
+    }
+
+    @Test
+    void terminateProcessingExposesTheGracefulCurrentScopeStepContract() throws Exception {
+        assertTrue(SequentialWorkflowStep.class.isAssignableFrom(TerminateProcessing.class));
+        assertFieldType(TerminateProcessing.class, "reason", String.class);
+
+        JsonNode definition = definition(CoordinationTypes.TERMINATE_PROCESSING);
+        assertEquals(CoordinationTypes.SEQUENTIAL_WORKFLOW_STEP.blueId(),
+                definition.at("/type/blueId").asText());
+        assertOptional(definition, "reason");
+        assertTrue(definition.path("description").asText().contains("graceful termination"));
+        assertTrue(definition.path("description").asText().contains("later steps"));
+        assertTrue(definition.path("description").asText().contains("cannot request fatal"));
     }
 
     @Test

@@ -43,6 +43,7 @@ import blue.repo.coordination.StatusCompleted;
 import blue.repo.coordination.StatusFailed;
 import blue.repo.coordination.StatusInProgress;
 import blue.repo.coordination.StatusPending;
+import blue.repo.coordination.TerminateProcessing;
 import blue.repo.coordination.Timeline;
 import blue.repo.coordination.TimelineChannel;
 import blue.repo.coordination.TimelineEntry;
@@ -131,6 +132,8 @@ public final class CoordinationTypes {
     public static final RepositoryType STATUS_IN_PROGRESS = StatusInProgress.repositoryType();
 
     public static final RepositoryType STATUS_PENDING = StatusPending.repositoryType();
+
+    public static final RepositoryType TERMINATE_PROCESSING = TerminateProcessing.repositoryType();
 
     public static final RepositoryType TIMELINE = Timeline.repositoryType();
 
