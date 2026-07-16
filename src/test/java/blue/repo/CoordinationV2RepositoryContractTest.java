@@ -1,5 +1,6 @@
 package blue.repo;
 
+import blue.language.Blue;
 import blue.language.model.Node;
 import blue.repo.coordination.Actor;
 import blue.repo.coordination.AllTimelinesChannel;
@@ -43,7 +44,7 @@ class CoordinationV2RepositoryContractTest {
     @Test
     void timelineEntryExposesTheExactV2Model() throws Exception {
         assertFieldType(TimelineEntry.class, "timeline", Timeline.class);
-        assertFieldType(TimelineEntry.class, "sequence", BigInteger.class);
+        assertNoField(TimelineEntry.class, "sequence");
         assertFieldType(TimelineEntry.class, "prevEntry", TimelineEntry.class);
         assertFieldType(TimelineEntry.class, "timestamp", BigInteger.class);
         assertFieldType(TimelineEntry.class, "actor", Actor.class);
@@ -51,19 +52,54 @@ class CoordinationV2RepositoryContractTest {
         assertFieldType(TimelineEntry.class, "onBehalfOf", Authority.class);
         assertFieldType(TimelineEntry.class, "message", Node.class);
         assertNoField(TimelineEntry.class, "timelineId");
+        assertNoMethod(TimelineEntry.class, "getSequence");
+        assertNoMethod(TimelineEntry.class, "sequence", BigInteger.class);
 
         JsonNode definition = definition(CoordinationTypes.TIMELINE_ENTRY);
-        assertRequired(definition, "timeline", "sequence", "timestamp", "actor", "message");
+        assertRequired(definition, "timeline", "timestamp", "actor", "message");
         assertOptional(definition, "prevEntry", "source", "onBehalfOf");
+        assertFalse(definition.has("sequence"));
         assertType(definition, "timeline", CoordinationTypes.TIMELINE.blueId());
         assertType(definition, "actor", CoordinationTypes.ACTOR.blueId());
         assertType(definition, "source", CoordinationTypes.SOURCE.blueId());
         assertType(definition, "onBehalfOf", CoordinationTypes.AUTHORITY.blueId());
         assertFalse(definition.path("message").has("type"));
 
-        assertTrue(definition.at("/sequence/description").asText().contains("authoritative intra-timeline order"));
-        assertTrue(definition.at("/timestamp/description").asText().contains("Timestamps may repeat"));
+        assertTrue(definition.at("/timestamp/description").asText().contains("unique and strictly increasing"));
+        assertTrue(definition.at("/timestamp/description").asText().contains("authoritative intra-timeline ordering"));
         assertTrue(definition.at("/source/description").asText().contains("does not grant authority"));
+    }
+
+    @Test
+    void timelineEntryWithoutSequenceRoundTripsAndPreservesExtensionMetadata() {
+        Blue blue = repository.configure(new Blue());
+        BigInteger timestamp = new BigInteger("9223372036854775808123456789");
+        TimelineEntry entry = new TimelineEntry()
+                .timeline(new Timeline().timelineId("sequence-free"))
+                .timestamp(timestamp)
+                .actor(new Actor())
+                .message(new Node().value("payload"));
+
+        Node authored = blue.objectToNode(entry)
+                .properties("providerSequence", new Node().value(BigInteger.valueOf(17)));
+        Object roundTripped = blue.nodeToObject(authored, Object.class);
+
+        assertTrue(roundTripped instanceof TimelineEntry);
+        assertEquals(timestamp, ((TimelineEntry) roundTripped).getTimestamp());
+        assertEquals(BigInteger.valueOf(17), authored.get("/providerSequence"));
+        assertFalse(authored.getProperties().containsKey("sequence"));
+    }
+
+    @Test
+    void timelineProviderDescriptionDefinesStrictTimestampAuthority() throws Exception {
+        String description = definition(CoordinationTypes.TIMELINE).path("description").asText()
+                .replaceAll("\\s+", " ");
+
+        assertTrue(description.contains("make it strictly greater than the timestamp"));
+        assertTrue(description.contains("Timestamps are unique and establish total order within one timeline"));
+        assertTrue(description.contains("Equal timestamp values may occur in different timelines"));
+        assertFalse(description.contains("Timestamps may repeat"));
+        assertFalse(description.contains("sequence is the authoritative"));
     }
 
     @Test
@@ -312,6 +348,15 @@ class CoordinationV2RepositoryContractTest {
             Field ignored = type.getDeclaredField(name);
             throw new AssertionError("Unexpected field " + type.getSimpleName() + "." + name);
         } catch (NoSuchFieldException expected) {
+            // Expected absence.
+        }
+    }
+
+    private static void assertNoMethod(Class<?> type, String name, Class<?>... parameterTypes) {
+        try {
+            type.getMethod(name, parameterTypes);
+            throw new AssertionError("Unexpected method " + type.getSimpleName() + "." + name);
+        } catch (NoSuchMethodException expected) {
             // Expected absence.
         }
     }
