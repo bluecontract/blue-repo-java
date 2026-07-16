@@ -16,7 +16,7 @@
   "mandate": {
     "description": "Initial mandate document authorizing the represented authority relationship. A feeder or provider resolves the exact processed mandate state required for the relevant action timestamp.\n",
     "type": {
-      "blueId": "42RioU4YgtKX5KQ4xzwiNfRy7JHSkbBFVjm3NCSQ1L5m"
+      "blueId": "6cS7BANfxw87QmcKvCMUHxAQoqHuBmKMED1vWzk79BxJ"
     },
     "schema": {
       "required": true

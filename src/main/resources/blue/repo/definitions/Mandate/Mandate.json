@@ -77,57 +77,36 @@
       "constants": {
         "statusPendingType": {
           "type": {
-            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
-          },
-          "itemType": {
             "blueId": "FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc"
           }
         },
         "statusAuthorityConfirmedType": {
           "type": {
-            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
-          },
-          "itemType": {
             "blueId": "AgwzrsZ7sDFXUryLWQdjG6w8D7SRLMXFWHuVFLa55jcZ"
           }
         },
         "statusActiveType": {
           "type": {
-            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
-          },
-          "itemType": {
             "blueId": "DnV7ApZKxa9qvJHNrgbxNHz1BPCh2G2SToh1sQAUFemd"
           }
         },
         "statusFailedType": {
           "type": {
-            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
-          },
-          "itemType": {
             "blueId": "GeZWvUThNX3mSiYHbmQAjoE7tffzYFRiC4dktuRGe1sS"
           }
         },
         "authorityConfirmedMessageType": {
           "type": {
-            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
-          },
-          "itemType": {
             "blueId": "EbNsQWy645JPPuWhkDw3XcrQk1neH2Z8KBsTvUTCrrmk"
           }
         },
         "activatedMessageType": {
           "type": {
-            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
-          },
-          "itemType": {
             "blueId": "3HtuEaYgkn8rV9xZf1x5uY2v7S9WXbVkcV3rj3Sy6arJ"
           }
         },
         "terminatedMessageType": {
           "type": {
-            "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
-          },
-          "itemType": {
             "blueId": "C6zMJV5BTUBbzAQ4UJ2jcaNjxhravLVF82euN8hNe5K8"
           }
         }
@@ -152,7 +131,7 @@
                       "type": {
                         "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                       },
-                      "value": "/itemType/blueId"
+                      "value": "/type/blueId"
                     }
                   }
                 }
@@ -179,7 +158,7 @@
                       "type": {
                         "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                       },
-                      "value": "/itemType/blueId"
+                      "value": "/type/blueId"
                     }
                   }
                 }
@@ -206,7 +185,7 @@
                       "type": {
                         "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                       },
-                      "value": "/itemType/blueId"
+                      "value": "/type/blueId"
                     }
                   }
                 }
@@ -233,7 +212,7 @@
                       "type": {
                         "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                       },
-                      "value": "/itemType/blueId"
+                      "value": "/type/blueId"
                     }
                   }
                 }
@@ -309,45 +288,21 @@
           "expr": {
             "$choose": {
               "cond": {
-                "$and": {
-                  "items": [
-                    {
-                      "$isKind": {
-                        "val": {
-                          "$binding": {
-                            "type": {
-                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                            },
-                            "value": "processingEvent"
-                          }
-                        },
-                        "kind": {
-                          "type": {
-                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                          },
-                          "value": "object"
-                        }
-                      }
-                    },
-                    {
-                      "$isKind": {
-                        "val": {
-                          "$binding": {
-                            "type": {
-                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                            },
-                            "value": "processingEvent/timestamp"
-                          }
-                        },
-                        "kind": {
-                          "type": {
-                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                          },
-                          "value": "integer"
-                        }
-                      }
+                "$isKind": {
+                  "val": {
+                    "$binding": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "processingEvent/timestamp"
                     }
-                  ]
+                  },
+                  "kind": {
+                    "type": {
+                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                    },
+                    "value": "integer"
+                  }
                 }
               },
               "then": {
@@ -443,7 +398,7 @@
                     "type": {
                       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
-                    "value": "/itemType"
+                    "value": "/type"
                   }
                 }
               }
@@ -481,7 +436,7 @@
                     "type": {
                       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
-                    "value": "/itemType"
+                    "value": "/type"
                   }
                 }
               }
@@ -533,7 +488,7 @@
                     "type": {
                       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
-                    "value": "/itemType"
+                    "value": "/type"
                   }
                 }
               }
@@ -1173,70 +1128,13 @@
                       }
                     },
                     "terminationRequest": {
-                      "$choose": {
-                        "cond": {
-                          "$isKind": {
-                            "val": {
-                              "$event": {
-                                "type": {
-                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                                },
-                                "value": "/message/request"
-                              }
-                            },
-                            "kind": {
-                              "type": {
-                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                              },
-                              "value": "object"
-                            }
-                          }
-                        },
-                        "then": {
-                          "$event": {
-                            "type": {
-                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                            },
-                            "value": "/message/request"
-                          }
-                        },
-                        "else": {
-                          "$choose": {
-                            "cond": {
-                              "$isKind": {
-                                "val": {
-                                  "$event": {
-                                    "type": {
-                                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                                    },
-                                    "value": "/request"
-                                  }
-                                },
-                                "kind": {
-                                  "type": {
-                                    "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                                  },
-                                  "value": "object"
-                                }
-                              }
-                            },
-                            "then": {
-                              "$event": {
-                                "type": {
-                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                                },
-                                "value": "/request"
-                              }
-                            },
-                            "else": {
-                              "$event": {
-                                "type": {
-                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                                },
-                                "value": "/"
-                              }
-                            }
-                          }
+                      "$var": {
+                        "name": "sourceMessage",
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/request"
                         }
                       }
                     },

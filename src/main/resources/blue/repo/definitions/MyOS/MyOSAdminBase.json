@@ -18,6 +18,14 @@
           "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
         },
         "value": "myOsAdminChannel"
+      },
+      "request": {
+        "type": {
+          "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+        },
+        "itemType": {
+          "blueId": "ENRQ621TbJpLg2cGyYkgTmPRLGKZkPqCzkBgm4yEXKF5"
+        }
       }
     },
     "myOsAdminUpdateImpl": {

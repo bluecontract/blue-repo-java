@@ -1,18 +1,13 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "GTMFwCUR1kdn5UMQ6BUS8LR5wyAjCXZiig4LzQNZABXT",
+  "repositoryVersionBlueId": "3zLAj8nBBFTYuZiAgjntPsCcmBq9zr7SZKnK7xysDemF",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
       "index": 0,
-      "version": "repository-1",
-      "repositoryBlueId": "6nA3djNMuGgjyin3PyLQqVAKU75DwHHx19egEaifMKWP"
-    },
-    {
-      "index": 1,
       "version": "1.3.0",
-      "repositoryBlueId": "GTMFwCUR1kdn5UMQ6BUS8LR5wyAjCXZiig4LzQNZABXT"
+      "repositoryBlueId": "3zLAj8nBBFTYuZiAgjntPsCcmBq9zr7SZKnK7xysDemF"
     }
   ],
   "packageNames": [
@@ -961,10 +956,10 @@
       "blueId": "DacNQ6C6PgsEiE4QfUHmaWBztpEvo2YyXxUcP86ze77w",
       "resourcePath": "blue/repo/definitions/Coordination/TerminateProcessing.json",
       "status": "stable",
-      "repositoryVersionIndex": 1,
+      "repositoryVersionIndex": 0,
       "versions": [
         {
-          "repositoryVersionIndex": 1,
+          "repositoryVersionIndex": 0,
           "typeBlueId": "DacNQ6C6PgsEiE4QfUHmaWBztpEvo2YyXxUcP86ze77w",
           "attributesAdded": []
         }
@@ -14574,14 +14569,14 @@
       "packageName": "Mandate",
       "name": "Document Responder Mandate",
       "qualifiedName": "Mandate/Document Responder Mandate",
-      "blueId": "D6LfLWrkMMg84P12LPbXiekYjcuuCdDma4tvArtzBS43",
+      "blueId": "z3ELFQtaTyVQwKLoD3NKVSKKauwG5g648Usr4MExPcH",
       "resourcePath": "blue/repo/definitions/Mandate/DocumentResponderMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "D6LfLWrkMMg84P12LPbXiekYjcuuCdDma4tvArtzBS43",
+          "typeBlueId": "z3ELFQtaTyVQwKLoD3NKVSKKauwG5g648Usr4MExPcH",
           "attributesAdded": []
         }
       ]
@@ -14590,14 +14585,14 @@
       "packageName": "Mandate",
       "name": "Mandate",
       "qualifiedName": "Mandate/Mandate",
-      "blueId": "42RioU4YgtKX5KQ4xzwiNfRy7JHSkbBFVjm3NCSQ1L5m",
+      "blueId": "6cS7BANfxw87QmcKvCMUHxAQoqHuBmKMED1vWzk79BxJ",
       "resourcePath": "blue/repo/definitions/Mandate/Mandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "42RioU4YgtKX5KQ4xzwiNfRy7JHSkbBFVjm3NCSQ1L5m",
+          "typeBlueId": "6cS7BANfxw87QmcKvCMUHxAQoqHuBmKMED1vWzk79BxJ",
           "attributesAdded": []
         }
       ]
@@ -14622,14 +14617,14 @@
       "packageName": "Mandate",
       "name": "Mandate Authority",
       "qualifiedName": "Mandate/Mandate Authority",
-      "blueId": "7PQhFPiE1EQENXgjeYLXrAMjrhjmUz9UAYDEP56UqomR",
+      "blueId": "3oCuMKxneozS3zMfBnnuvPwesUQDgWFwnF76uy2ERuQr",
       "resourcePath": "blue/repo/definitions/Mandate/MandateAuthority.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "7PQhFPiE1EQENXgjeYLXrAMjrhjmUz9UAYDEP56UqomR",
+          "typeBlueId": "3oCuMKxneozS3zMfBnnuvPwesUQDgWFwnF76uy2ERuQr",
           "attributesAdded": []
         }
       ]
@@ -14686,14 +14681,14 @@
       "packageName": "Mandate",
       "name": "Operation Mandate",
       "qualifiedName": "Mandate/Operation Mandate",
-      "blueId": "6hTpL14zWffNvbLKVBRR14MB7zGCUNXfnExdBFghpLMc",
+      "blueId": "BNCHNpZueeZEq3SdckkV3Xym5b7mEDWouLxMFkGQ62tG",
       "resourcePath": "blue/repo/definitions/Mandate/OperationMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "6hTpL14zWffNvbLKVBRR14MB7zGCUNXfnExdBFghpLMc",
+          "typeBlueId": "BNCHNpZueeZEq3SdckkV3Xym5b7mEDWouLxMFkGQ62tG",
           "attributesAdded": []
         }
       ]
@@ -15006,14 +15001,14 @@
       "packageName": "MyOS",
       "name": "Document Session Bootstrap",
       "qualifiedName": "MyOS/Document Session Bootstrap",
-      "blueId": "C7nQJFDtUMCNte6TSiSciWkJbDKrux3AwrhjzMs6psVY",
+      "blueId": "DQpT8yEf24onEmhAPwDCHzEmp2x8qLdagSzxFojgH45u",
       "resourcePath": "blue/repo/definitions/MyOS/DocumentSessionBootstrap.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "C7nQJFDtUMCNte6TSiSciWkJbDKrux3AwrhjzMs6psVY",
+          "typeBlueId": "DQpT8yEf24onEmhAPwDCHzEmp2x8qLdagSzxFojgH45u",
           "attributesAdded": []
         }
       ]
@@ -15086,14 +15081,14 @@
       "packageName": "MyOS",
       "name": "MyOS Admin Base",
       "qualifiedName": "MyOS/MyOS Admin Base",
-      "blueId": "CgHxjKAYf2rF5vGpwHiKgfr9jfhTxQVris2nTcuhR6fS",
+      "blueId": "9NrQCnrfCPStxHEtqieXNhGsFo3qDoJukzfSTAP22JnL",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSAdminBase.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "CgHxjKAYf2rF5vGpwHiKgfr9jfhTxQVris2nTcuhR6fS",
+          "typeBlueId": "9NrQCnrfCPStxHEtqieXNhGsFo3qDoJukzfSTAP22JnL",
           "attributesAdded": []
         }
       ]
@@ -15182,14 +15177,14 @@
       "packageName": "MyOS",
       "name": "MyOS Document Bootstrap Mandate",
       "qualifiedName": "MyOS/MyOS Document Bootstrap Mandate",
-      "blueId": "4L1adEzvQucyg36UwpMtKX4gYWB19dAQJVtvEs5E1gmH",
+      "blueId": "F6Fkn2tTQZbcT68incD2yYZPyax3cUiqcZHQa4zqY61g",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSDocumentBootstrapMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "4L1adEzvQucyg36UwpMtKX4gYWB19dAQJVtvEs5E1gmH",
+          "typeBlueId": "F6Fkn2tTQZbcT68incD2yYZPyax3cUiqcZHQa4zqY61g",
           "attributesAdded": []
         }
       ]
@@ -15198,14 +15193,14 @@
       "packageName": "MyOS",
       "name": "MyOS Document Operation Mandate",
       "qualifiedName": "MyOS/MyOS Document Operation Mandate",
-      "blueId": "AeF3ZEBmh8QovUdKAtwzxFEXShesrwHh2XHbkxHuJcuE",
+      "blueId": "HxZk6Fj3mB4jCGxXWKsVXy5jTxiXgQpguyhiYVcy6R5q",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSDocumentOperationMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "AeF3ZEBmh8QovUdKAtwzxFEXShesrwHh2XHbkxHuJcuE",
+          "typeBlueId": "HxZk6Fj3mB4jCGxXWKsVXy5jTxiXgQpguyhiYVcy6R5q",
           "attributesAdded": []
         }
       ]
@@ -15342,14 +15337,14 @@
       "packageName": "MyOS",
       "name": "MyOS Session Subscription Mandate",
       "qualifiedName": "MyOS/MyOS Session Subscription Mandate",
-      "blueId": "DAGjmKf2xZbQhCab9huPbbqTvD6SdB5BGcBrbHgbRGUa",
+      "blueId": "FeoTUyNLZkrv9Aiw1HXHEhXwiYtM6tVU5JESn2ozABUA",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSSessionSubscriptionMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "DAGjmKf2xZbQhCab9huPbbqTvD6SdB5BGcBrbHgbRGUa",
+          "typeBlueId": "FeoTUyNLZkrv9Aiw1HXHEhXwiYtM6tVU5JESn2ozABUA",
           "attributesAdded": []
         }
       ]

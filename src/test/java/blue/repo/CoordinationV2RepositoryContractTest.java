@@ -31,6 +31,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import static blue.language.utils.Properties.LIST_TYPE_BLUE_ID;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -164,14 +165,21 @@ class CoordinationV2RepositoryContractTest {
         JsonNode functions = mandate.at("/contracts/mandateLifecycleDefinition/functions");
         JsonNode timestampFunction = functions.path("processingEventTimestamp");
 
-        assertEquals(new LinkedHashSet<>(Arrays.asList(
-                "processingEvent",
-                "processingEvent/timestamp"
-        )), directiveValues(timestampFunction, "$binding"));
+        assertEquals(Collections.singleton("processingEvent/timestamp"),
+                directiveValues(timestampFunction, "$binding"));
         assertFalse(containsText(functions, "triggeringEntry"));
         assertFalse(containsText(functions, "triggeringEvent"));
         assertFalse(containsText(functions, TimelineEntry.blueId()),
                 "Mandate BEX must not hardcode the Timeline Entry BlueId");
+    }
+
+    @Test
+    void myOsAdminUpdateAcceptsAListOfCoordinationEvents() throws Exception {
+        JsonNode request = definition(MyOSTypes.MYOS_ADMIN_BASE)
+                .at("/contracts/myOsAdminUpdate/request");
+
+        assertEquals(LIST_TYPE_BLUE_ID, request.at("/type/blueId").asText());
+        assertEquals(CoordinationTypes.EVENT.blueId(), request.at("/itemType/blueId").asText());
     }
 
     @Test
