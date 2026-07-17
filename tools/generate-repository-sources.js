@@ -631,10 +631,13 @@ function writeModelClass(definition, byBlueId) {
   if (externalBase) {
     extendsClause = ` extends ${externalBase.extendsType}`;
   } else if (parent) {
-    if (modelPackage(parent) !== modelPackage(definition)) {
+    const parentIsInAnotherPackage = modelPackage(parent) !== modelPackage(definition);
+    const parentNeedsQualification = parentIsInAnotherPackage
+      && parent.className === definition.className;
+    if (parentIsInAnotherPackage && !parentNeedsQualification) {
       imports.add(modelFqcn(parent));
     }
-    extendsClause = ` extends ${parent.className}`;
+    extendsClause = ` extends ${parentNeedsQualification ? modelFqcn(parent) : parent.className}`;
   }
 
   const inherited = inheritedFieldNames(definition, byBlueId);
