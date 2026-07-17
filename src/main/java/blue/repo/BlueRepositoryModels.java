@@ -970,7 +970,6 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSDocumentSessionReference.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSOperationCallRequested.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSParticipantsOrchestration.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.MyOSPrincipalActor.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSSessionInteraction.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSSessionLink.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSSessionSubscriptionEnded.class);
@@ -980,8 +979,6 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSSessionSubscriptionStarted.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSSessionSubscriptionUpdate.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSTimeline.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.MyOSTimelineChannel.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.MyOSTimelineEntry.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSUser.class);
         resolver.registerAnnotatedClass(blue.repo.myos.Participant.class);
         resolver.registerAnnotatedClass(blue.repo.myos.ParticipantActivated.class);

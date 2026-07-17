@@ -3,9 +3,19 @@
   "description": "Document base for MyOS Admin participant",
   "contracts": {
     "myOsAdminChannel": {
-      "description": "MyOS Admin (accountId=0) — posts operational progress/decisions via myOsAdminUpdate",
+      "description": "MyOS Admin channel for operational progress and decisions delivered through myOsAdminUpdate.",
       "type": {
-        "blueId": "6z6yHvTmjhyeNpdmu14bbGtKA2hj3g1UCKbpskTQ4Hky"
+        "blueId": "2BkkrbUNnyKqQqv83JigG1HvTY3Xa3r39jsuoQpX5Tve"
+      },
+      "timeline": {
+        "type": {
+          "blueId": "81daJe9Ns5yUCEi1aX1gyjoaL3P94CU1wut9zJ4MuXy9"
+        }
+      },
+      "actor": {
+        "type": {
+          "blueId": "4eDC5moi1FwZaHkkdXLF9he1SGz2gWWNJArNKGYreksm"
+        }
       }
     },
     "myOsAdminUpdate": {

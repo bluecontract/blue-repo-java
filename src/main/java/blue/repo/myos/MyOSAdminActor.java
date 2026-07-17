@@ -3,12 +3,11 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.coordination.PrincipalActor;
 
-@TypeBlueId("Cr6tRv7ivrRLo3Gi2cuFJNCXmQHUdagv2AZ9CYqEZZe9")
+@TypeBlueId("4eDC5moi1FwZaHkkdXLF9he1SGz2gWWNJArNKGYreksm")
 public class MyOSAdminActor extends PrincipalActor {
     public static String blueId() {
-        return "Cr6tRv7ivrRLo3Gi2cuFJNCXmQHUdagv2AZ9CYqEZZe9";
+        return "4eDC5moi1FwZaHkkdXLF9he1SGz2gWWNJArNKGYreksm";
     }
 
     public static String packageName() {
@@ -34,17 +33,6 @@ public class MyOSAdminActor extends PrincipalActor {
                 qualifiedName(),
                 blueId(),
                 resourcePath());
-    }
-
-    private String accountId;
-
-    public String getAccountId() {
-        return accountId;
-    }
-
-    public MyOSAdminActor accountId(String accountId) {
-        this.accountId = accountId;
-        return this;
     }
 
 }

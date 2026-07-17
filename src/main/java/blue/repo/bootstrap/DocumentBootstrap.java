@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("E3M6aABVRmZiYTGfcXaE1FXjn8x2QHVPreiiWyGM1EEL")
+@TypeBlueId("GoHfsX6nJsXDLinzEgHus5gqXCwec6avmnoE5yzeXzVi")
 public class DocumentBootstrap {
     public static String blueId() {
-        return "E3M6aABVRmZiYTGfcXaE1FXjn8x2QHVPreiiWyGM1EEL";
+        return "GoHfsX6nJsXDLinzEgHus5gqXCwec6avmnoE5yzeXzVi";
     }
 
     public static String packageName() {

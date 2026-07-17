@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.math.BigInteger;
 
-@TypeBlueId("BipDEsAgTsG3HSm5CL4KAMeAWBkzRetdKdtnixAwJW9y#0")
+@TypeBlueId("JBzgu2CGXf4gFCrTu8geJoxphj8Gc2MTc776qoxh4WPJ#0")
 public class TimelineEntry {
     public static String blueId() {
-        return "BipDEsAgTsG3HSm5CL4KAMeAWBkzRetdKdtnixAwJW9y#0";
+        return "JBzgu2CGXf4gFCrTu8geJoxphj8Gc2MTc776qoxh4WPJ#0";
     }
 
     public static String packageName() {
