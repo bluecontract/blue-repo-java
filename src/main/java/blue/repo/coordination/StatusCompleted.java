@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("FGhtoNCSpdvMk7ZK6V8g66aeLjSGVE14tjMZoV4xAhWF")
+@TypeBlueId("8LNqtg237MFe1zKdG3eWftMXtFTgVtyvrxgZkHcXYkC1")
 public class StatusCompleted extends Status {
     public static String blueId() {
-        return "FGhtoNCSpdvMk7ZK6V8g66aeLjSGVE14tjMZoV4xAhWF";
+        return "8LNqtg237MFe1zKdG3eWftMXtFTgVtyvrxgZkHcXYkC1";
     }
 
     public static String packageName() {

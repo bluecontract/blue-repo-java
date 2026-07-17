@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc")
+@TypeBlueId("DUU68ikPqLZ9NwsUGzkCZ92abAUz51ihcZBTJQEty6E1")
 public class StatusPending extends Status {
     public static String blueId() {
-        return "FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc";
+        return "DUU68ikPqLZ9NwsUGzkCZ92abAUz51ihcZBTJQEty6E1";
     }
 
     public static String packageName() {

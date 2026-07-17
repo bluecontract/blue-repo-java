@@ -2,7 +2,7 @@
   "name": "Document Session Bootstrap",
   "description": "MyOS-specific document for bootstrapping document sessions and tracking bootstrap progress",
   "type": {
-    "blueId": "4dhQGwbNugCqazKrqkAdJ4DSUAYa36W1CMZ9s6ybacuy"
+    "blueId": "GSheFv6JD35HAEZyoXHrjSEnC5baCwfmdy5VvLMtDuRN"
   },
   "contracts": {
     "triggeredEventsChannel": {
@@ -54,7 +54,7 @@
                   },
                   "val": {
                     "type": {
-                      "blueId": "CWnb7ngc7rpPVjn3eM8c6jZ6qQDGJzJcHKyARnXrSHiN"
+                      "blueId": "G5KJnJLaUCSvz4BaZAMNJAgxtfxssb64oWWJXsDW3Uoy"
                     }
                   }
                 }
@@ -313,11 +313,11 @@
                 {
                   "$appendEvent": {
                     "type": {
-                      "blueId": "B4btahVwY81bXQoXskPHEv3NrRPMYfXcR1fkUV8jcPne"
+                      "blueId": "3wCtHNjVZc4JKbbbvfctdMYLB5VjMNEePgWLMLSdFbdv"
                     },
                     "status": {
                       "type": {
-                        "blueId": "FGhtoNCSpdvMk7ZK6V8g66aeLjSGVE14tjMZoV4xAhWF"
+                        "blueId": "8LNqtg237MFe1zKdG3eWftMXtFTgVtyvrxgZkHcXYkC1"
                       },
                       "mode": {
                         "type": {
@@ -435,11 +435,11 @@
                 {
                   "$appendEvent": {
                     "type": {
-                      "blueId": "B4btahVwY81bXQoXskPHEv3NrRPMYfXcR1fkUV8jcPne"
+                      "blueId": "3wCtHNjVZc4JKbbbvfctdMYLB5VjMNEePgWLMLSdFbdv"
                     },
                     "status": {
                       "type": {
-                        "blueId": "GeZWvUThNX3mSiYHbmQAjoE7tffzYFRiC4dktuRGe1sS"
+                        "blueId": "3kguQFJvHMnCfrg4Bmqt81EZg6qeht8Cs6tEjNDxTkyB"
                       },
                       "mode": {
                         "type": {
@@ -488,7 +488,7 @@
       },
       "event": {
         "type": {
-          "blueId": "B4btahVwY81bXQoXskPHEv3NrRPMYfXcR1fkUV8jcPne"
+          "blueId": "3wCtHNjVZc4JKbbbvfctdMYLB5VjMNEePgWLMLSdFbdv"
         }
       },
       "steps": {
@@ -586,7 +586,7 @@
   "bootstrapStatus": {
     "description": "Overall bootstrap process status",
     "type": {
-      "blueId": "9rzc7B4yEw9gVuuaoFbRUpfajTPuxBLecVWkmHuBSg7z"
+      "blueId": "9Q7nZyiFKJyzxH6c6EWHsHsqQ8arUYtyrAUgwv9paoxe"
     }
   },
   "bootstrapError": {

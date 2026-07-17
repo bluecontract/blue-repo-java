@@ -188,6 +188,20 @@ class RepositoryHistoricalVersionTest {
         assertFalse(manifest.contains("compatible" + "WithCurrent"));
     }
 
+    @Test
+    void generatorQualifiesSameNamedParentFromAnotherPackage() throws Exception {
+        Path temp = Files.createTempDirectory("blue-repository-same-name-parent-test");
+        Path source = temp.resolve("BlueRepository.blue");
+        Files.write(source, sameNamedParentSource().getBytes(StandardCharsets.UTF_8));
+
+        runGenerator(temp, source);
+
+        String child = read(temp.resolve("java/blue/repo/vtest/myos/PrincipalActor.java"));
+        assertTrue(child.contains(
+                "public class PrincipalActor extends blue.repo.vtest.coordination.PrincipalActor"));
+        assertFalse(child.contains("import blue.repo.vtest.coordination.PrincipalActor;"));
+    }
+
     private static RepositoryTypeDictionary syntheticDictionary() {
         RepositoryManifest manifest = syntheticManifest();
         return new RepositoryTypeDictionary(manifest, new RepositoryNodeProvider(manifest, syntheticClassLoader()));
@@ -299,6 +313,33 @@ class RepositoryHistoricalVersionTest {
                 + "  - repo-v1\n"
                 + "  - repo-v2\n"
                 + "  - repo-v3\n";
+    }
+
+    private static String sameNamedParentSource() {
+        return "name: Blue Repository\n"
+                + "packages:\n"
+                + "  - name: Coordination\n"
+                + "    types:\n"
+                + "      - status: stable\n"
+                + "        content:\n"
+                + "          name: Principal Actor\n"
+                + "        versions:\n"
+                + "          - repositoryVersionIndex: 0\n"
+                + "            typeBlueId: coordination-principal\n"
+                + "            attributesAdded: []\n"
+                + "  - name: MyOS\n"
+                + "    types:\n"
+                + "      - status: stable\n"
+                + "        content:\n"
+                + "          name: Principal Actor\n"
+                + "          type:\n"
+                + "            blueId: coordination-principal\n"
+                + "        versions:\n"
+                + "          - repositoryVersionIndex: 0\n"
+                + "            typeBlueId: myos-principal\n"
+                + "            attributesAdded: []\n"
+                + "repositoryVersions:\n"
+                + "  - repository-v1\n";
     }
 
     private static void runGenerator(Path temp, Path source) throws IOException, InterruptedException {

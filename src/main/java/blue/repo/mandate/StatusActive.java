@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.coordination.StatusInProgress;
 
-@TypeBlueId("DnV7ApZKxa9qvJHNrgbxNHz1BPCh2G2SToh1sQAUFemd")
+@TypeBlueId("por6Zfmm5x6kxeeeoARgZRVLWrZaDkTU3Dybc2TncPx")
 public class StatusActive extends StatusInProgress {
     public static String blueId() {
-        return "DnV7ApZKxa9qvJHNrgbxNHz1BPCh2G2SToh1sQAUFemd";
+        return "por6Zfmm5x6kxeeeoARgZRVLWrZaDkTU3Dybc2TncPx";
     }
 
     public static String packageName() {

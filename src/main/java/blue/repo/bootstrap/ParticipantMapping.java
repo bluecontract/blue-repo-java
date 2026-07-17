@@ -1,30 +1,29 @@
-package blue.repo.myos;
+package blue.repo.bootstrap;
 
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.coordination.TimelineChannel;
 
-@TypeBlueId("6z6yHvTmjhyeNpdmu14bbGtKA2hj3g1UCKbpskTQ4Hky")
-public class MyOSTimelineChannel extends TimelineChannel {
+@TypeBlueId("HqeiZDQNRH4YUcB6ZLXUc4jdjEcVURhBAc3CsX5HGB7m")
+public class ParticipantMapping {
     public static String blueId() {
-        return "6z6yHvTmjhyeNpdmu14bbGtKA2hj3g1UCKbpskTQ4Hky";
+        return "HqeiZDQNRH4YUcB6ZLXUc4jdjEcVURhBAc3CsX5HGB7m";
     }
 
     public static String packageName() {
-        return "MyOS";
+        return "Bootstrap";
     }
 
     public static String typeName() {
-        return "MyOS Timeline Channel";
+        return "Participant Mapping";
     }
 
     public static String qualifiedName() {
-        return "MyOS/MyOS Timeline Channel";
+        return "Bootstrap/Participant Mapping";
     }
 
     public static String resourcePath() {
-        return "blue/repo/definitions/MyOS/MyOSTimelineChannel.json";
+        return "blue/repo/definitions/Bootstrap/ParticipantMapping.json";
     }
 
     public static RepositoryType repositoryType() {
@@ -36,15 +35,26 @@ public class MyOSTimelineChannel extends TimelineChannel {
                 resourcePath());
     }
 
+    private String channelName;
+
     private String accountId;
 
     private String email;
+
+    public String getChannelName() {
+        return channelName;
+    }
+
+    public ParticipantMapping channelName(String channelName) {
+        this.channelName = channelName;
+        return this;
+    }
 
     public String getAccountId() {
         return accountId;
     }
 
-    public MyOSTimelineChannel accountId(String accountId) {
+    public ParticipantMapping accountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
@@ -53,7 +63,7 @@ public class MyOSTimelineChannel extends TimelineChannel {
         return email;
     }
 
-    public MyOSTimelineChannel email(String email) {
+    public ParticipantMapping email(String email) {
         this.email = email;
         return this;
     }

@@ -2,7 +2,7 @@
   "name": "MyOS Admin Actor",
   "description": "Fixed principal actor representing MyOS Admin as a participant, mandate guarantor, and platform-service actor in MyOS-hosted documents.\n",
   "type": {
-    "blueId": "23cWKG6LF47H1G3EfhV5dmEYtxkNaqLWgFDxEurdc6Ef"
+    "blueId": "BeUkW9h7yKH5DBgzTjF52u4PwYu9J9EmLZ5WaYZWnZuB"
   },
   "accountId": {
     "type": {

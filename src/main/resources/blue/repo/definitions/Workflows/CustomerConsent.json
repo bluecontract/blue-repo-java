@@ -5,19 +5,19 @@
     "granteeChannel": {
       "description": "Grantee (e.g., merchant MyOS timeline).",
       "type": {
-        "blueId": "6z6yHvTmjhyeNpdmu14bbGtKA2hj3g1UCKbpskTQ4Hky"
+        "blueId": "2BkkrbUNnyKqQqv83JigG1HvTY3Xa3r39jsuoQpX5Tve"
       }
     },
     "granterChannel": {
       "description": "Granter (customer represented by the bank; customer has no MyOS account).",
       "type": {
-        "blueId": "6z6yHvTmjhyeNpdmu14bbGtKA2hj3g1UCKbpskTQ4Hky"
+        "blueId": "2BkkrbUNnyKqQqv83JigG1HvTY3Xa3r39jsuoQpX5Tve"
       }
     },
     "guarantorChannel": {
       "description": "Bank/admin channel.",
       "type": {
-        "blueId": "6z6yHvTmjhyeNpdmu14bbGtKA2hj3g1UCKbpskTQ4Hky"
+        "blueId": "2BkkrbUNnyKqQqv83JigG1HvTY3Xa3r39jsuoQpX5Tve"
       }
     },
     "initLifecycleChannel": {

@@ -9,6 +9,7 @@ import blue.repo.coordination.CompositeTimelineChannel;
 import blue.repo.coordination.Message;
 import blue.repo.coordination.Operation;
 import blue.repo.coordination.OperationRequest;
+import blue.repo.coordination.PrincipalActor;
 import blue.repo.coordination.Response;
 import blue.repo.coordination.Source;
 import blue.repo.coordination.SequentialWorkflowStep;
@@ -16,6 +17,8 @@ import blue.repo.coordination.TerminateProcessing;
 import blue.repo.coordination.Timeline;
 import blue.repo.coordination.TimelineChannel;
 import blue.repo.coordination.TimelineEntry;
+import blue.repo.myos.MyOSAdminActor;
+import blue.repo.myos.MyOSTimeline;
 import blue.repo.types.CoordinationTypes;
 import blue.repo.types.MandateTypes;
 import blue.repo.types.MyOSTypes;
@@ -100,6 +103,35 @@ class CoordinationV2RepositoryContractTest {
         assertTrue(description.contains("Equal timestamp values may occur in different timelines"));
         assertFalse(description.contains("Timestamps may repeat"));
         assertFalse(description.contains("sequence is the authoritative"));
+    }
+
+    @Test
+    void timelinesDeclareProviderScopeAndMyOsBindsItsProviderAndPrincipal() throws Exception {
+        assertFieldType(Timeline.class, "providerId", String.class);
+        assertFieldType(Timeline.class, "timelineId", String.class);
+
+        JsonNode timeline = definition(CoordinationTypes.TIMELINE);
+        assertRequired(timeline, "providerId", "timelineId");
+
+        assertTrue(Timeline.class.isAssignableFrom(MyOSTimeline.class));
+        JsonNode myOsTimeline = definition(MyOSTypes.MYOS_TIMELINE);
+        assertEquals("myos", myOsTimeline.at("/providerId/value").asText());
+        assertFalse(myOsTimeline.has("accountId"));
+
+        assertTrue(PrincipalActor.class.isAssignableFrom(blue.repo.myos.PrincipalActor.class));
+        assertFieldType(blue.repo.myos.PrincipalActor.class, "accountId", String.class);
+        JsonNode myOsPrincipal = definition(MyOSTypes.PRINCIPAL_ACTOR);
+        assertEquals(CoordinationTypes.PRINCIPAL_ACTOR.blueId(), myOsPrincipal.at("/type/blueId").asText());
+        assertRequired(myOsPrincipal, "accountId");
+
+        assertTrue(blue.repo.myos.PrincipalActor.class.isAssignableFrom(MyOSAdminActor.class));
+        assertEquals("myos-admin", definition(MyOSTypes.MYOS_ADMIN_ACTOR).at("/accountId/value").asText());
+
+        JsonNode adminChannel = definition(MyOSTypes.MYOS_ADMIN_BASE)
+                .at("/contracts/myOsAdminChannel");
+        assertEquals(CoordinationTypes.TIMELINE_CHANNEL.blueId(), adminChannel.at("/type/blueId").asText());
+        assertEquals(MyOSTypes.MYOS_TIMELINE.blueId(), adminChannel.at("/timeline/type/blueId").asText());
+        assertEquals(MyOSTypes.MYOS_ADMIN_ACTOR.blueId(), adminChannel.at("/actor/type/blueId").asText());
     }
 
     @Test

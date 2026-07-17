@@ -34,7 +34,6 @@ import blue.repo.myos.MyOSDocumentOperationMandate;
 import blue.repo.myos.MyOSDocumentSessionReference;
 import blue.repo.myos.MyOSOperationCallRequested;
 import blue.repo.myos.MyOSParticipantsOrchestration;
-import blue.repo.myos.MyOSPrincipalActor;
 import blue.repo.myos.MyOSSessionInteraction;
 import blue.repo.myos.MyOSSessionLink;
 import blue.repo.myos.MyOSSessionSubscriptionEnded;
@@ -44,8 +43,6 @@ import blue.repo.myos.MyOSSessionSubscriptionRequested;
 import blue.repo.myos.MyOSSessionSubscriptionStarted;
 import blue.repo.myos.MyOSSessionSubscriptionUpdate;
 import blue.repo.myos.MyOSTimeline;
-import blue.repo.myos.MyOSTimelineChannel;
-import blue.repo.myos.MyOSTimelineEntry;
 import blue.repo.myos.MyOSUser;
 import blue.repo.myos.Participant;
 import blue.repo.myos.ParticipantActivated;
@@ -135,8 +132,6 @@ public final class MyOSTypes {
 
     public static final RepositoryType MYOS_PARTICIPANTS_ORCHESTRATION = MyOSParticipantsOrchestration.repositoryType();
 
-    public static final RepositoryType MYOS_PRINCIPAL_ACTOR = MyOSPrincipalActor.repositoryType();
-
     public static final RepositoryType MYOS_SESSION_INTERACTION = MyOSSessionInteraction.repositoryType();
 
     public static final RepositoryType MYOS_SESSION_LINK = MyOSSessionLink.repositoryType();
@@ -154,10 +149,6 @@ public final class MyOSTypes {
     public static final RepositoryType MYOS_SESSION_SUBSCRIPTION_UPDATE = MyOSSessionSubscriptionUpdate.repositoryType();
 
     public static final RepositoryType MYOS_TIMELINE = MyOSTimeline.repositoryType();
-
-    public static final RepositoryType MYOS_TIMELINE_CHANNEL = MyOSTimelineChannel.repositoryType();
-
-    public static final RepositoryType MYOS_TIMELINE_ENTRY = MyOSTimelineEntry.repositoryType();
 
     public static final RepositoryType MYOS_USER = MyOSUser.repositoryType();
 

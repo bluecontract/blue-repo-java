@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.common.Timestamp;
 import java.util.Map;
 
-@TypeBlueId("24EmGfpFQFptWsNkgvu53WuvnfyJW9BtWUtuRLfn9srL")
+@TypeBlueId("BCoY7YXVS4wanw4HeudF91o99BEextZZrzFajYNcvQXp")
 public class CustomerConsent {
     public static String blueId() {
-        return "24EmGfpFQFptWsNkgvu53WuvnfyJW9BtWUtuRLfn9srL";
+        return "BCoY7YXVS4wanw4HeudF91o99BEextZZrzFajYNcvQXp";
     }
 
     public static String packageName() {

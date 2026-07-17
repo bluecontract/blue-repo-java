@@ -1,8 +1,8 @@
 {
   "name": "Status In Progress",
-  "description": "Concrete Document Status meaning work has started and is actively being processed, but no terminal success or failure has been reached. The fixed mode is `inProgress`.\n",
+  "description": "Concrete Document Status meaning work has started and is actively being processed, but no terminal success or failure has been reached. The fixed mode is `active`.\n",
   "type": {
-    "blueId": "jkonpkUSjCXMpHcJ4e1N7bfCgKzwssQuXEEboaqUTsb"
+    "blueId": "6aAJEFVdFAgLVre8azY4YZQnNiv2FkXJpdpGAYSHiNrY"
   },
   "mode": {
     "type": {

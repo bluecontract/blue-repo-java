@@ -1,30 +1,30 @@
-package blue.repo.myos;
+package blue.repo.bootstrap;
 
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.coordination.TimelineEntry;
+import blue.repo.coordination.Response;
 
-@TypeBlueId("61mR33cyeewLm2rboPbGBhH48xhNtuTLu1vbHDWQ2yyf")
-public class MyOSTimelineEntry extends TimelineEntry {
+@TypeBlueId("B6zgAWGB7543y6JcE2jjUKqLrVMEFWfu7NY7sLzfn8aR")
+public class DocumentBootstrapInProgress extends Response {
     public static String blueId() {
-        return "61mR33cyeewLm2rboPbGBhH48xhNtuTLu1vbHDWQ2yyf";
+        return "B6zgAWGB7543y6JcE2jjUKqLrVMEFWfu7NY7sLzfn8aR";
     }
 
     public static String packageName() {
-        return "MyOS";
+        return "Bootstrap";
     }
 
     public static String typeName() {
-        return "MyOS Timeline Entry";
+        return "Document Bootstrap In Progress";
     }
 
     public static String qualifiedName() {
-        return "MyOS/MyOS Timeline Entry";
+        return "Bootstrap/Document Bootstrap In Progress";
     }
 
     public static String resourcePath() {
-        return "blue/repo/definitions/MyOS/MyOSTimelineEntry.json";
+        return "blue/repo/definitions/Bootstrap/DocumentBootstrapInProgress.json";
     }
 
     public static RepositoryType repositoryType() {

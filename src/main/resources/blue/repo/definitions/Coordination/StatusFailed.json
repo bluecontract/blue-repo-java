@@ -1,8 +1,8 @@
 {
   "name": "Status Failed",
-  "description": "Concrete Document Status meaning the relevant workflow, document bootstrap, customer action, or operation failed or was rejected. The fixed mode is `failed`.\n",
+  "description": "Concrete Document Status meaning the relevant workflow, document bootstrap, customer action, or operation failed or was rejected. The fixed mode is `terminated`; the concrete type distinguishes failure.\n",
   "type": {
-    "blueId": "jkonpkUSjCXMpHcJ4e1N7bfCgKzwssQuXEEboaqUTsb"
+    "blueId": "6aAJEFVdFAgLVre8azY4YZQnNiv2FkXJpdpGAYSHiNrY"
   },
   "mode": {
     "type": {

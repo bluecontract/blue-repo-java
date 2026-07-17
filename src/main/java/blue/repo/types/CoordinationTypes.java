@@ -40,6 +40,7 @@ import blue.repo.coordination.Source;
 import blue.repo.coordination.Status;
 import blue.repo.coordination.StatusChange;
 import blue.repo.coordination.StatusCompleted;
+import blue.repo.coordination.StatusDeclined;
 import blue.repo.coordination.StatusFailed;
 import blue.repo.coordination.StatusInProgress;
 import blue.repo.coordination.StatusPending;
@@ -126,6 +127,8 @@ public final class CoordinationTypes {
     public static final RepositoryType STATUS_CHANGE = StatusChange.repositoryType();
 
     public static final RepositoryType STATUS_COMPLETED = StatusCompleted.repositoryType();
+
+    public static final RepositoryType STATUS_DECLINED = StatusDeclined.repositoryType();
 
     public static final RepositoryType STATUS_FAILED = StatusFailed.repositoryType();
 

@@ -3,14 +3,14 @@ package blue.repo.bootstrap;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.coordination.PrincipalActor;
+import blue.repo.coordination.Message;
 import blue.repo.coordination.Request;
 import java.util.List;
 
-@TypeBlueId("DGtbvBCuFFKAH3ncDb6LAibSAq8Smr5oChLSdvNvGuZu")
+@TypeBlueId("2a67bWEnUUaHNFM8MDaAKRCLnKQZKMcuifjT4mxAEnGt")
 public class DocumentBootstrapRequested extends Request {
     public static String blueId() {
-        return "DGtbvBCuFFKAH3ncDb6LAibSAq8Smr5oChLSdvNvGuZu";
+        return "2a67bWEnUUaHNFM8MDaAKRCLnKQZKMcuifjT4mxAEnGt";
     }
 
     public static String packageName() {
@@ -40,11 +40,9 @@ public class DocumentBootstrapRequested extends Request {
 
     private Node document;
 
-    private Node channelBindings;
+    private List<ParticipantMapping> participantMappings;
 
-    private List<Node> initialMessages;
-
-    private PrincipalActor onBehalfOf;
+    private List<Message> initialMessages;
 
     public Node getDocument() {
         return document;
@@ -55,30 +53,21 @@ public class DocumentBootstrapRequested extends Request {
         return this;
     }
 
-    public Node getChannelBindings() {
-        return channelBindings;
+    public List<ParticipantMapping> getParticipantMappings() {
+        return participantMappings;
     }
 
-    public DocumentBootstrapRequested channelBindings(Node channelBindings) {
-        this.channelBindings = channelBindings;
+    public DocumentBootstrapRequested participantMappings(List<ParticipantMapping> participantMappings) {
+        this.participantMappings = participantMappings;
         return this;
     }
 
-    public List<Node> getInitialMessages() {
+    public List<Message> getInitialMessages() {
         return initialMessages;
     }
 
-    public DocumentBootstrapRequested initialMessages(List<Node> initialMessages) {
+    public DocumentBootstrapRequested initialMessages(List<Message> initialMessages) {
         this.initialMessages = initialMessages;
-        return this;
-    }
-
-    public PrincipalActor getOnBehalfOf() {
-        return onBehalfOf;
-    }
-
-    public DocumentBootstrapRequested onBehalfOf(PrincipalActor onBehalfOf) {
-        this.onBehalfOf = onBehalfOf;
         return this;
     }
 

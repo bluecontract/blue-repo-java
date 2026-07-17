@@ -1,30 +1,30 @@
-package blue.repo.myos;
+package blue.repo.bootstrap;
 
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.coordination.PrincipalActor;
+import blue.repo.coordination.Response;
 
-@TypeBlueId("G6EVpoRpQQb6f93eZtJPqDRAK47D1RXvUAmbXvhpsL6Y")
-public class MyOSPrincipalActor extends PrincipalActor {
+@TypeBlueId("9juepYbw4uwHiqDxcnjoJTn1Vv3TsDzPeSchpHUYRS3h")
+public class DocumentBootstrapFailed extends Response {
     public static String blueId() {
-        return "G6EVpoRpQQb6f93eZtJPqDRAK47D1RXvUAmbXvhpsL6Y";
+        return "9juepYbw4uwHiqDxcnjoJTn1Vv3TsDzPeSchpHUYRS3h";
     }
 
     public static String packageName() {
-        return "MyOS";
+        return "Bootstrap";
     }
 
     public static String typeName() {
-        return "MyOS Principal Actor";
+        return "Document Bootstrap Failed";
     }
 
     public static String qualifiedName() {
-        return "MyOS/MyOS Principal Actor";
+        return "Bootstrap/Document Bootstrap Failed";
     }
 
     public static String resourcePath() {
-        return "blue/repo/definitions/MyOS/MyOSPrincipalActor.json";
+        return "blue/repo/definitions/Bootstrap/DocumentBootstrapFailed.json";
     }
 
     public static RepositoryType repositoryType() {
@@ -36,14 +36,14 @@ public class MyOSPrincipalActor extends PrincipalActor {
                 resourcePath());
     }
 
-    private String accountId;
+    private String error;
 
-    public String getAccountId() {
-        return accountId;
+    public String getError() {
+        return error;
     }
 
-    public MyOSPrincipalActor accountId(String accountId) {
-        this.accountId = accountId;
+    public DocumentBootstrapFailed error(String error) {
+        this.error = error;
         return this;
     }
 

@@ -1,8 +1,8 @@
 {
   "name": "Status Completed",
-  "description": "Concrete Document Status meaning the relevant workflow, document bootstrap, customer action, or operation has completed successfully. The fixed mode is `completed`.\n",
+  "description": "Concrete Document Status meaning the relevant workflow, document bootstrap, customer action, or operation completed successfully. The fixed mode is `terminated`; the concrete type distinguishes successful completion.\n",
   "type": {
-    "blueId": "jkonpkUSjCXMpHcJ4e1N7bfCgKzwssQuXEEboaqUTsb"
+    "blueId": "6aAJEFVdFAgLVre8azY4YZQnNiv2FkXJpdpGAYSHiNrY"
   },
   "mode": {
     "type": {

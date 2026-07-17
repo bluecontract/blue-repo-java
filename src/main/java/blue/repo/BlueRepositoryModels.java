@@ -13,7 +13,13 @@ public final class BlueRepositoryModels {
         if (resolver == null) {
             throw new IllegalArgumentException("resolver must not be null");
         }
+        resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrap.class);
+        resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrapCompleted.class);
+        resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrapDeclined.class);
+        resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrapFailed.class);
+        resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrapInProgress.class);
         resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrapRequested.class);
+        resolver.registerAnnotatedClass(blue.repo.bootstrap.ParticipantMapping.class);
         resolver.registerAnnotatedClass(blue.repo.common.CryptoEd25519Verify.class);
         resolver.registerAnnotatedClass(blue.repo.common.Currency.class);
         resolver.registerAnnotatedClass(blue.repo.common.Document.class);
@@ -68,6 +74,7 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.coordination.Status.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.StatusChange.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.StatusCompleted.class);
+        resolver.registerAnnotatedClass(blue.repo.coordination.StatusDeclined.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.StatusFailed.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.StatusInProgress.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.StatusPending.class);
@@ -965,7 +972,6 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSDocumentSessionReference.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSOperationCallRequested.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSParticipantsOrchestration.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.MyOSPrincipalActor.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSSessionInteraction.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSSessionLink.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSSessionSubscriptionEnded.class);
@@ -975,8 +981,6 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSSessionSubscriptionStarted.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSSessionSubscriptionUpdate.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSTimeline.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.MyOSTimelineChannel.class);
-        resolver.registerAnnotatedClass(blue.repo.myos.MyOSTimelineEntry.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSUser.class);
         resolver.registerAnnotatedClass(blue.repo.myos.Participant.class);
         resolver.registerAnnotatedClass(blue.repo.myos.ParticipantActivated.class);
@@ -1104,6 +1108,7 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.paynote.TransactionInitiated.class);
         resolver.registerAnnotatedClass(blue.repo.paynote.TransactionInitiationFailed.class);
         resolver.registerAnnotatedClass(blue.repo.paynote.TransactionStatus.class);
+        resolver.registerAnnotatedClass(blue.repo.sessioninteraction.DocumentSessionReference.class);
         resolver.registerAnnotatedClass(blue.repo.workflows.AcceptChangeOperation.class);
         resolver.registerAnnotatedClass(blue.repo.workflows.AcceptChangeWorkflow.class);
         resolver.registerAnnotatedClass(blue.repo.workflows.ChangeOperation.class);
