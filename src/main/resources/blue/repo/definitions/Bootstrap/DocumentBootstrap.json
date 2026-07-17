@@ -5,7 +5,7 @@
     "bootstrapProviderChannel": {
       "description": "Participant channel for the bootstrap provider.",
       "type": {
-        "blueId": "2BkkrbUNnyKqQqv83JigG1HvTY3Xa3r39jsuoQpX5Tve"
+        "blueId": "BDP5DqtmUNtG2FE1hLe5n2n5h4JMJayXixeGzfM5uzrq"
       },
       "schema": {
         "required": true

@@ -5,13 +5,13 @@
     "payNoteSender": {
       "description": "Participant submitting the PayNote delivery (merchant or processor).",
       "type": {
-        "blueId": "2BkkrbUNnyKqQqv83JigG1HvTY3Xa3r39jsuoQpX5Tve"
+        "blueId": "BDP5DqtmUNtG2FE1hLe5n2n5h4JMJayXixeGzfM5uzrq"
       }
     },
     "payNoteDeliverer": {
       "description": "Participant delivering and reporting status (e.g., bank).",
       "type": {
-        "blueId": "2BkkrbUNnyKqQqv83JigG1HvTY3Xa3r39jsuoQpX5Tve"
+        "blueId": "BDP5DqtmUNtG2FE1hLe5n2n5h4JMJayXixeGzfM5uzrq"
       }
     },
     "initLifecycleChannel": {
@@ -2415,7 +2415,7 @@
     },
     "document": {
       "type": {
-        "blueId": "7SqnbvCPkox8veMRdWGT5nUVGpEM65aT7eFcVwXaFtsB"
+        "blueId": "Zp9XUGFr6S4MPcfMarmfWo3uE8Bsh4UzUsgMNcKbh6V"
       }
     }
   },

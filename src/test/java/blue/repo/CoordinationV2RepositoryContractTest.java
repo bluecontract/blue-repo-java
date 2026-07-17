@@ -106,16 +106,19 @@ class CoordinationV2RepositoryContractTest {
     }
 
     @Test
-    void timelinesDeclareProviderScopeAndMyOsBindsItsProviderAndPrincipal() throws Exception {
-        assertFieldType(Timeline.class, "providerId", String.class);
+    void timelinesOmitProviderIdentityAndMyOsBindsItsPrincipal() throws Exception {
+        assertNoField(Timeline.class, "providerId");
+        assertNoMethod(Timeline.class, "getProviderId");
+        assertNoMethod(Timeline.class, "providerId", String.class);
         assertFieldType(Timeline.class, "timelineId", String.class);
 
         JsonNode timeline = definition(CoordinationTypes.TIMELINE);
-        assertRequired(timeline, "providerId", "timelineId");
+        assertFalse(timeline.has("providerId"));
+        assertRequired(timeline, "timelineId");
 
         assertTrue(Timeline.class.isAssignableFrom(MyOSTimeline.class));
         JsonNode myOsTimeline = definition(MyOSTypes.MYOS_TIMELINE);
-        assertEquals("myos", myOsTimeline.at("/providerId/value").asText());
+        assertFalse(myOsTimeline.has("providerId"));
         assertFalse(myOsTimeline.has("accountId"));
 
         assertTrue(PrincipalActor.class.isAssignableFrom(blue.repo.myos.PrincipalActor.class));
@@ -300,6 +303,20 @@ class CoordinationV2RepositoryContractTest {
                 "/activatedMessage/expr/$objectSet/object/inResponseTo/$var")));
         assertEquals("inResponseTo", scalarValue(functions.at(
                 "/terminatedMessage/expr/$objectSet/object/inResponseTo/$var")));
+
+        assertRequired(contracts.at("/terminateMandate/request"), "reason");
+        assertRequired(definition(MandateTypes.MANDATE_TERMINATED), "reason");
+        assertEquals("request", functions.at(
+                "/terminatedMessage/expr/$objectSet/object/reason/$var/name").asText());
+        assertEquals("/reason", scalarValue(functions.at(
+                "/terminatedMessage/expr/$objectSet/object/reason/$var/path")));
+        assertEquals("sourceMessage", functions.at(
+                "/applyMandateTermination/do/items/0/$let/vars/terminationReason/$var/name").asText());
+        assertEquals("/reason", scalarValue(functions.at(
+                "/applyMandateTermination/do/items/0/$let/vars/terminationReason/$var/path")));
+        assertEquals("terminationReason", scalarValue(functions.at(
+                "/applyMandateTermination/do/items/2/$return/termination/reason/$var")));
+        assertFalse(containsText(functions.path("applyMandateTermination"), "Mandate terminated"));
     }
 
     @Test

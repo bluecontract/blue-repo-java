@@ -7,10 +7,10 @@ import blue.repo.coordination.DocumentStatus;
 import java.util.List;
 import java.util.Map;
 
-@TypeBlueId("3F4dtCNZCSj6ZfVc5TQxmiiuPELFFVaPLe6tytZJ71Jv")
+@TypeBlueId("CWKe3G7uoUtFnH6TzF3vcx8UNMLkqr4D5JpS6zX48UnL")
 public class DocumentSessionBootstrap extends MyOSAdminBase {
     public static String blueId() {
-        return "3F4dtCNZCSj6ZfVc5TQxmiiuPELFFVaPLe6tytZJ71Jv";
+        return "CWKe3G7uoUtFnH6TzF3vcx8UNMLkqr4D5JpS6zX48UnL";
     }
 
     public static String packageName() {
