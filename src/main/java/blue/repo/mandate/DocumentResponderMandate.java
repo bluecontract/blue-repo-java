@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("81DN9jPBdHdA6wdY5fqw64QnrXuwc9f2LxWNTF3q4EQ")
+@TypeBlueId("48DBg1ijT56Jg2ZzxVcWp5CcfiivevM491iNJZMP9EVR")
 public class DocumentResponderMandate extends Mandate {
     public static String blueId() {
-        return "81DN9jPBdHdA6wdY5fqw64QnrXuwc9f2LxWNTF3q4EQ";
+        return "48DBg1ijT56Jg2ZzxVcWp5CcfiivevM491iNJZMP9EVR";
     }
 
     public static String packageName() {

@@ -1,6 +1,6 @@
 {
   "name": "Document Bootstrap",
-  "description": "Generic document for requesting and tracking bootstrap of another Blue document. It defines the provider response operations but deliberately does not define how or when bootstrapRequest is emitted. A concrete platform or document may add its own initialization or request workflow.\n",
+  "description": "Generic coordination document contract for recording a bootstrap provider's response lifecycle. It defines only the provider-facing response operations and the state they materialize. Concrete documents decide how bootstrap is requested and which bootstrap input is supplied.\n",
   "contracts": {
     "bootstrapProviderChannel": {
       "description": "Participant channel for the bootstrap provider.",
@@ -23,7 +23,7 @@
       },
       "request": {
         "type": {
-          "blueId": "4ngRGoQZeSJNt8miE6CBaqYuevDrVwfAuwJMt4mRyeqb"
+          "blueId": "4HrRcHN229bzcHXvGsEnbron77kYiFzTFEEHDWup1xRC"
         }
       },
       "steps": {
@@ -61,45 +61,50 @@
                     },
                     "val": {
                       "type": {
-                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                      },
-                      "value": "Declined"
+                        "blueId": "623skurB6ZSt3jpkdNpuu6fwRG3VdrVgj2FKxfrNnBbH"
+                      }
                     }
                   }
                 },
                 {
-                  "$appendChange": {
-                    "op": {
-                      "type": {
-                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                      },
-                      "value": "replace"
+                  "$if": {
+                    "cond": {
+                      "$exists": {
+                        "$event": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/message/request/reason"
+                        }
+                      }
                     },
-                    "path": {
-                      "type": {
-                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                      },
-                      "value": "/error"
-                    },
-                    "val": {
-                      "$default": {
-                        "items": [
-                          {
-                            "$event": {
+                    "then": {
+                      "items": [
+                        {
+                          "$appendChange": {
+                            "op": {
                               "type": {
                                 "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                               },
-                              "value": "/message/request/reason"
-                            }
-                          },
-                          {
-                            "type": {
-                              "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              "value": "replace"
                             },
-                            "value": ""
+                            "path": {
+                              "type": {
+                                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                              },
+                              "value": "/error"
+                            },
+                            "val": {
+                              "$event": {
+                                "type": {
+                                  "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                                },
+                                "value": "/message/request/reason"
+                              }
+                            }
                           }
-                        ]
-                      }
+                        }
+                      ]
                     }
                   }
                 },
@@ -141,7 +146,7 @@
       },
       "request": {
         "type": {
-          "blueId": "CrfGW2YKFpPD1VNeUS4biWbaGxsudFnzd482N1Bd9oqN"
+          "blueId": "B6zgAWGB7543y6JcE2jjUKqLrVMEFWfu7NY7sLzfn8aR"
         }
       },
       "steps": {
@@ -179,9 +184,8 @@
                     },
                     "val": {
                       "type": {
-                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                      },
-                      "value": "In Progress"
+                        "blueId": "G5KJnJLaUCSvz4BaZAMNJAgxtfxssb64oWWJXsDW3Uoy"
+                      }
                     }
                   }
                 },
@@ -223,7 +227,7 @@
       },
       "request": {
         "type": {
-          "blueId": "3XoEgcEdCpeoxBf7uNsHTtp1FpN6HG3YqawRYUXYuee1"
+          "blueId": "EogcjRxna7zSMip2wSg53fdRtQG8apJL6JqHeh1egh9f"
         }
       },
       "steps": {
@@ -261,9 +265,8 @@
                     },
                     "val": {
                       "type": {
-                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                      },
-                      "value": "Completed"
+                        "blueId": "8LNqtg237MFe1zKdG3eWftMXtFTgVtyvrxgZkHcXYkC1"
+                      }
                     }
                   }
                 },
@@ -279,14 +282,14 @@
                       "type": {
                         "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                       },
-                      "value": "/result"
+                      "value": "/documentSession"
                     },
                     "val": {
                       "$event": {
                         "type": {
                           "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                         },
-                        "value": "/message/request/result"
+                        "value": "/message/request/documentSession"
                       }
                     }
                   }
@@ -329,7 +332,7 @@
       },
       "request": {
         "type": {
-          "blueId": "BY9yFcgUUykE7E4wyV6iaxREGhN2pCHNgA49uSqTHgg9"
+          "blueId": "9juepYbw4uwHiqDxcnjoJTn1Vv3TsDzPeSchpHUYRS3h"
         }
       },
       "steps": {
@@ -367,9 +370,8 @@
                     },
                     "val": {
                       "type": {
-                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                      },
-                      "value": "Failed"
+                        "blueId": "3kguQFJvHMnCfrg4Bmqt81EZg6qeht8Cs6tEjNDxTkyB"
+                      }
                     }
                   }
                 },
@@ -424,26 +426,20 @@
       }
     }
   },
-  "bootstrapRequest": {
-    "description": "Request describing the target document bootstrap.",
-    "type": {
-      "blueId": "5NNr8LzdC3Cw4Kfp34PPvqMSKCSt7yrKUZ7NwrmMU4qq"
-    },
-    "schema": {
-      "required": true
-    }
-  },
   "status": {
-    "description": "Current bootstrap lifecycle state.",
+    "description": "Current bootstrap lifecycle status.",
     "type": {
-      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+      "blueId": "6aAJEFVdFAgLVre8azY4YZQnNiv2FkXJpdpGAYSHiNrY"
     }
   },
-  "result": {
-    "description": "Provider-neutral bootstrap result after successful completion."
+  "documentSession": {
+    "description": "Running document session made available after successful bootstrap.",
+    "type": {
+      "blueId": "FxcZycT49wFfrNAZpzquWVRw43epYQx5SkYXpdwx3c2Z"
+    }
   },
   "error": {
-    "description": "Decline or failure explanation when bootstrap does not complete.",
+    "description": "Optional explanation recorded when bootstrap is declined or fails.",
     "type": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     }

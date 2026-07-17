@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("G5KJnJLaUCSvz4BaZAMNJAgxtfxssb64oWWJXsDW3Uoy")
-public class StatusInProgress extends Status {
+@TypeBlueId("623skurB6ZSt3jpkdNpuu6fwRG3VdrVgj2FKxfrNnBbH")
+public class StatusDeclined extends StatusFailed {
     public static String blueId() {
-        return "G5KJnJLaUCSvz4BaZAMNJAgxtfxssb64oWWJXsDW3Uoy";
+        return "623skurB6ZSt3jpkdNpuu6fwRG3VdrVgj2FKxfrNnBbH";
     }
 
     public static String packageName() {
@@ -15,15 +15,15 @@ public class StatusInProgress extends Status {
     }
 
     public static String typeName() {
-        return "Status In Progress";
+        return "Status Declined";
     }
 
     public static String qualifiedName() {
-        return "Coordination/Status In Progress";
+        return "Coordination/Status Declined";
     }
 
     public static String resourcePath() {
-        return "blue/repo/definitions/Coordination/StatusInProgress.json";
+        return "blue/repo/definitions/Coordination/StatusDeclined.json";
     }
 
     public static RepositoryType repositoryType() {

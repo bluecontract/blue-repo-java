@@ -1,6 +1,6 @@
 {
   "name": "Document Bootstrap In Progress",
-  "description": "Bootstrap provider response confirming that bootstrap work started.",
+  "description": "Response reporting that a bootstrap provider started the requested bootstrap.",
   "type": {
     "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
   }

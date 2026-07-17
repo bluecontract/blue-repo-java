@@ -4,11 +4,12 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.coordination.Response;
+import blue.repo.sessioninteraction.DocumentSessionReference;
 
-@TypeBlueId("3XoEgcEdCpeoxBf7uNsHTtp1FpN6HG3YqawRYUXYuee1")
+@TypeBlueId("EogcjRxna7zSMip2wSg53fdRtQG8apJL6JqHeh1egh9f")
 public class DocumentBootstrapCompleted extends Response {
     public static String blueId() {
-        return "3XoEgcEdCpeoxBf7uNsHTtp1FpN6HG3YqawRYUXYuee1";
+        return "EogcjRxna7zSMip2wSg53fdRtQG8apJL6JqHeh1egh9f";
     }
 
     public static String packageName() {
@@ -36,14 +37,14 @@ public class DocumentBootstrapCompleted extends Response {
                 resourcePath());
     }
 
-    private Node result;
+    private DocumentSessionReference documentSession;
 
-    public Node getResult() {
-        return result;
+    public DocumentSessionReference getDocumentSession() {
+        return documentSession;
     }
 
-    public DocumentBootstrapCompleted result(Node result) {
-        this.result = result;
+    public DocumentBootstrapCompleted documentSession(DocumentSessionReference documentSession) {
+        this.documentSession = documentSession;
         return this;
     }
 

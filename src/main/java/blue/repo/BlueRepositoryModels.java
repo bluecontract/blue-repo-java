@@ -19,6 +19,7 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrapFailed.class);
         resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrapInProgress.class);
         resolver.registerAnnotatedClass(blue.repo.bootstrap.DocumentBootstrapRequested.class);
+        resolver.registerAnnotatedClass(blue.repo.bootstrap.ParticipantMapping.class);
         resolver.registerAnnotatedClass(blue.repo.common.CryptoEd25519Verify.class);
         resolver.registerAnnotatedClass(blue.repo.common.Currency.class);
         resolver.registerAnnotatedClass(blue.repo.common.Document.class);
@@ -73,6 +74,7 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.coordination.Status.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.StatusChange.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.StatusCompleted.class);
+        resolver.registerAnnotatedClass(blue.repo.coordination.StatusDeclined.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.StatusFailed.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.StatusInProgress.class);
         resolver.registerAnnotatedClass(blue.repo.coordination.StatusPending.class);
@@ -1106,6 +1108,7 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.paynote.TransactionInitiated.class);
         resolver.registerAnnotatedClass(blue.repo.paynote.TransactionInitiationFailed.class);
         resolver.registerAnnotatedClass(blue.repo.paynote.TransactionStatus.class);
+        resolver.registerAnnotatedClass(blue.repo.sessioninteraction.DocumentSessionReference.class);
         resolver.registerAnnotatedClass(blue.repo.workflows.AcceptChangeOperation.class);
         resolver.registerAnnotatedClass(blue.repo.workflows.AcceptChangeWorkflow.class);
         resolver.registerAnnotatedClass(blue.repo.workflows.ChangeOperation.class);

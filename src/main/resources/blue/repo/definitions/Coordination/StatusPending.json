@@ -2,7 +2,7 @@
   "name": "Status Pending",
   "description": "Concrete Document Status meaning work has not yet started, is waiting for external input, or is queued for later processing. The fixed mode is `pending`.\n",
   "type": {
-    "blueId": "jkonpkUSjCXMpHcJ4e1N7bfCgKzwssQuXEEboaqUTsb"
+    "blueId": "6aAJEFVdFAgLVre8azY4YZQnNiv2FkXJpdpGAYSHiNrY"
   },
   "mode": {
     "type": {

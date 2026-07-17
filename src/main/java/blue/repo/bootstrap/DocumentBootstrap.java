@@ -3,11 +3,13 @@ package blue.repo.bootstrap;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
+import blue.repo.coordination.Status;
+import blue.repo.sessioninteraction.DocumentSessionReference;
 
-@TypeBlueId("GoHfsX6nJsXDLinzEgHus5gqXCwec6avmnoE5yzeXzVi")
+@TypeBlueId("8AHDwDB5pBrh8VKMKxuzawVLoz7HkjX6t5ys6wWZMjoD")
 public class DocumentBootstrap {
     public static String blueId() {
-        return "GoHfsX6nJsXDLinzEgHus5gqXCwec6avmnoE5yzeXzVi";
+        return "8AHDwDB5pBrh8VKMKxuzawVLoz7HkjX6t5ys6wWZMjoD";
     }
 
     public static String packageName() {
@@ -37,11 +39,9 @@ public class DocumentBootstrap {
 
     private Node contracts;
 
-    private DocumentBootstrapRequested bootstrapRequest;
+    private Status status;
 
-    private String status;
-
-    private Node result;
+    private DocumentSessionReference documentSession;
 
     private String error;
 
@@ -54,30 +54,21 @@ public class DocumentBootstrap {
         return this;
     }
 
-    public DocumentBootstrapRequested getBootstrapRequest() {
-        return bootstrapRequest;
-    }
-
-    public DocumentBootstrap bootstrapRequest(DocumentBootstrapRequested bootstrapRequest) {
-        this.bootstrapRequest = bootstrapRequest;
-        return this;
-    }
-
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public DocumentBootstrap status(String status) {
+    public DocumentBootstrap status(Status status) {
         this.status = status;
         return this;
     }
 
-    public Node getResult() {
-        return result;
+    public DocumentSessionReference getDocumentSession() {
+        return documentSession;
     }
 
-    public DocumentBootstrap result(Node result) {
-        this.result = result;
+    public DocumentBootstrap documentSession(DocumentSessionReference documentSession) {
+        this.documentSession = documentSession;
         return this;
     }
 

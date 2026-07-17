@@ -77,22 +77,22 @@
       "constants": {
         "statusPendingType": {
           "type": {
-            "blueId": "FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc"
+            "blueId": "DUU68ikPqLZ9NwsUGzkCZ92abAUz51ihcZBTJQEty6E1"
           }
         },
         "statusAuthorityConfirmedType": {
           "type": {
-            "blueId": "AgwzrsZ7sDFXUryLWQdjG6w8D7SRLMXFWHuVFLa55jcZ"
+            "blueId": "65Lj5NBD9BaeXbWq1qQYcCyxV3EoH7r3rj877KDzbWCP"
           }
         },
         "statusActiveType": {
           "type": {
-            "blueId": "DnV7ApZKxa9qvJHNrgbxNHz1BPCh2G2SToh1sQAUFemd"
+            "blueId": "por6Zfmm5x6kxeeeoARgZRVLWrZaDkTU3Dybc2TncPx"
           }
         },
         "statusFailedType": {
           "type": {
-            "blueId": "GeZWvUThNX3mSiYHbmQAjoE7tffzYFRiC4dktuRGe1sS"
+            "blueId": "3kguQFJvHMnCfrg4Bmqt81EZg6qeht8Cs6tEjNDxTkyB"
           }
         },
         "authorityConfirmedMessageType": {
@@ -578,7 +578,7 @@
                           },
                           "val": {
                             "type": {
-                              "blueId": "FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc"
+                              "blueId": "DUU68ikPqLZ9NwsUGzkCZ92abAUz51ihcZBTJQEty6E1"
                             }
                           }
                         }
@@ -645,7 +645,7 @@
                           },
                           "val": {
                             "type": {
-                              "blueId": "GeZWvUThNX3mSiYHbmQAjoE7tffzYFRiC4dktuRGe1sS"
+                              "blueId": "3kguQFJvHMnCfrg4Bmqt81EZg6qeht8Cs6tEjNDxTkyB"
                             }
                           }
                         }
@@ -834,7 +834,7 @@
                           },
                           "val": {
                             "type": {
-                              "blueId": "AgwzrsZ7sDFXUryLWQdjG6w8D7SRLMXFWHuVFLa55jcZ"
+                              "blueId": "65Lj5NBD9BaeXbWq1qQYcCyxV3EoH7r3rj877KDzbWCP"
                             }
                           }
                         }
@@ -1033,7 +1033,7 @@
                           },
                           "val": {
                             "type": {
-                              "blueId": "DnV7ApZKxa9qvJHNrgbxNHz1BPCh2G2SToh1sQAUFemd"
+                              "blueId": "por6Zfmm5x6kxeeeoARgZRVLWrZaDkTU3Dybc2TncPx"
                             }
                           }
                         }
@@ -1379,7 +1379,7 @@
                           },
                           "val": {
                             "type": {
-                              "blueId": "DKEgt3kG9dLAf1RoKDcacsVuZrfFY2eVujtYr2YQsQR6"
+                              "blueId": "CMW7kGBbCw1uDmaV5ydLVnzRSo2iaBNDFTspMX9QdvZ2"
                             }
                           }
                         }
@@ -1642,7 +1642,7 @@
   "status": {
     "description": "Current lifecycle status of the mandate.\n\nInitialization sets exactly one initial status:\n\n- Coordination/Status Pending when deterministic initialization succeeds.\n- Coordination/Status Failed when deterministic initialization fails.\n\nSupported transitions are:\n\n- Coordination/Status Pending -> Mandate/Status Authority Confirmed\n- Mandate/Status Authority Confirmed -> Mandate/Status Active\n- Coordination/Status Pending -> Mandate/Status Terminated\n- Mandate/Status Authority Confirmed -> Mandate/Status Terminated\n- Mandate/Status Active -> Mandate/Status Terminated\n\nCoordination/Status Failed and Mandate/Status Terminated are terminal.\nLifecycle workflows do not replace timestamps or statuses after the\ncorresponding transition succeeds.\n",
     "type": {
-      "blueId": "jkonpkUSjCXMpHcJ4e1N7bfCgKzwssQuXEEboaqUTsb"
+      "blueId": "6aAJEFVdFAgLVre8azY4YZQnNiv2FkXJpdpGAYSHiNrY"
     }
   },
   "initializationError": {

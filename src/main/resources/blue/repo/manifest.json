@@ -1,13 +1,13 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "5vH9QdsV5ZBexoBap8wpEuYHYgarsaMX76wwQ84YaCbJ",
+  "repositoryVersionBlueId": "G1DXowcU5SQQw4h1fcyppAoyK8QkyDzTc2dc9W4uQv8H",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
       "index": 0,
       "version": "1.3.0",
-      "repositoryBlueId": "5vH9QdsV5ZBexoBap8wpEuYHYgarsaMX76wwQ84YaCbJ"
+      "repositoryBlueId": "G1DXowcU5SQQw4h1fcyppAoyK8QkyDzTc2dc9W4uQv8H"
     }
   ],
   "packageNames": [
@@ -18,6 +18,7 @@
     "Mandate",
     "MyOS",
     "PayNote",
+    "SessionInteraction",
     "Workflows"
   ],
   "definitions": [
@@ -25,14 +26,14 @@
       "packageName": "Bootstrap",
       "name": "Document Bootstrap",
       "qualifiedName": "Bootstrap/Document Bootstrap",
-      "blueId": "GoHfsX6nJsXDLinzEgHus5gqXCwec6avmnoE5yzeXzVi",
+      "blueId": "8AHDwDB5pBrh8VKMKxuzawVLoz7HkjX6t5ys6wWZMjoD",
       "resourcePath": "blue/repo/definitions/Bootstrap/DocumentBootstrap.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "GoHfsX6nJsXDLinzEgHus5gqXCwec6avmnoE5yzeXzVi",
+          "typeBlueId": "8AHDwDB5pBrh8VKMKxuzawVLoz7HkjX6t5ys6wWZMjoD",
           "attributesAdded": []
         }
       ]
@@ -41,14 +42,14 @@
       "packageName": "Bootstrap",
       "name": "Document Bootstrap Completed",
       "qualifiedName": "Bootstrap/Document Bootstrap Completed",
-      "blueId": "3XoEgcEdCpeoxBf7uNsHTtp1FpN6HG3YqawRYUXYuee1",
+      "blueId": "EogcjRxna7zSMip2wSg53fdRtQG8apJL6JqHeh1egh9f",
       "resourcePath": "blue/repo/definitions/Bootstrap/DocumentBootstrapCompleted.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "3XoEgcEdCpeoxBf7uNsHTtp1FpN6HG3YqawRYUXYuee1",
+          "typeBlueId": "EogcjRxna7zSMip2wSg53fdRtQG8apJL6JqHeh1egh9f",
           "attributesAdded": []
         }
       ]
@@ -57,14 +58,14 @@
       "packageName": "Bootstrap",
       "name": "Document Bootstrap Declined",
       "qualifiedName": "Bootstrap/Document Bootstrap Declined",
-      "blueId": "4ngRGoQZeSJNt8miE6CBaqYuevDrVwfAuwJMt4mRyeqb",
+      "blueId": "4HrRcHN229bzcHXvGsEnbron77kYiFzTFEEHDWup1xRC",
       "resourcePath": "blue/repo/definitions/Bootstrap/DocumentBootstrapDeclined.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "4ngRGoQZeSJNt8miE6CBaqYuevDrVwfAuwJMt4mRyeqb",
+          "typeBlueId": "4HrRcHN229bzcHXvGsEnbron77kYiFzTFEEHDWup1xRC",
           "attributesAdded": []
         }
       ]
@@ -73,14 +74,14 @@
       "packageName": "Bootstrap",
       "name": "Document Bootstrap Failed",
       "qualifiedName": "Bootstrap/Document Bootstrap Failed",
-      "blueId": "BY9yFcgUUykE7E4wyV6iaxREGhN2pCHNgA49uSqTHgg9",
+      "blueId": "9juepYbw4uwHiqDxcnjoJTn1Vv3TsDzPeSchpHUYRS3h",
       "resourcePath": "blue/repo/definitions/Bootstrap/DocumentBootstrapFailed.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "BY9yFcgUUykE7E4wyV6iaxREGhN2pCHNgA49uSqTHgg9",
+          "typeBlueId": "9juepYbw4uwHiqDxcnjoJTn1Vv3TsDzPeSchpHUYRS3h",
           "attributesAdded": []
         }
       ]
@@ -89,14 +90,14 @@
       "packageName": "Bootstrap",
       "name": "Document Bootstrap In Progress",
       "qualifiedName": "Bootstrap/Document Bootstrap In Progress",
-      "blueId": "CrfGW2YKFpPD1VNeUS4biWbaGxsudFnzd482N1Bd9oqN",
+      "blueId": "B6zgAWGB7543y6JcE2jjUKqLrVMEFWfu7NY7sLzfn8aR",
       "resourcePath": "blue/repo/definitions/Bootstrap/DocumentBootstrapInProgress.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "CrfGW2YKFpPD1VNeUS4biWbaGxsudFnzd482N1Bd9oqN",
+          "typeBlueId": "B6zgAWGB7543y6JcE2jjUKqLrVMEFWfu7NY7sLzfn8aR",
           "attributesAdded": []
         }
       ]
@@ -105,14 +106,30 @@
       "packageName": "Bootstrap",
       "name": "Document Bootstrap Requested",
       "qualifiedName": "Bootstrap/Document Bootstrap Requested",
-      "blueId": "5NNr8LzdC3Cw4Kfp34PPvqMSKCSt7yrKUZ7NwrmMU4qq",
+      "blueId": "2a67bWEnUUaHNFM8MDaAKRCLnKQZKMcuifjT4mxAEnGt",
       "resourcePath": "blue/repo/definitions/Bootstrap/DocumentBootstrapRequested.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "5NNr8LzdC3Cw4Kfp34PPvqMSKCSt7yrKUZ7NwrmMU4qq",
+          "typeBlueId": "2a67bWEnUUaHNFM8MDaAKRCLnKQZKMcuifjT4mxAEnGt",
+          "attributesAdded": []
+        }
+      ]
+    },
+    {
+      "packageName": "Bootstrap",
+      "name": "Participant Mapping",
+      "qualifiedName": "Bootstrap/Participant Mapping",
+      "blueId": "HqeiZDQNRH4YUcB6ZLXUc4jdjEcVURhBAc3CsX5HGB7m",
+      "resourcePath": "blue/repo/definitions/Bootstrap/ParticipantMapping.json",
+      "status": "stable",
+      "repositoryVersionIndex": 0,
+      "versions": [
+        {
+          "repositoryVersionIndex": 0,
+          "typeBlueId": "HqeiZDQNRH4YUcB6ZLXUc4jdjEcVURhBAc3CsX5HGB7m",
           "attributesAdded": []
         }
       ]
@@ -681,14 +698,14 @@
       "packageName": "Coordination",
       "name": "Document Status",
       "qualifiedName": "Coordination/Document Status",
-      "blueId": "9rzc7B4yEw9gVuuaoFbRUpfajTPuxBLecVWkmHuBSg7z",
+      "blueId": "9Q7nZyiFKJyzxH6c6EWHsHsqQ8arUYtyrAUgwv9paoxe",
       "resourcePath": "blue/repo/definitions/Coordination/DocumentStatus.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "9rzc7B4yEw9gVuuaoFbRUpfajTPuxBLecVWkmHuBSg7z",
+          "typeBlueId": "9Q7nZyiFKJyzxH6c6EWHsHsqQ8arUYtyrAUgwv9paoxe",
           "attributesAdded": []
         }
       ]
@@ -937,14 +954,14 @@
       "packageName": "Coordination",
       "name": "Status",
       "qualifiedName": "Coordination/Status",
-      "blueId": "jkonpkUSjCXMpHcJ4e1N7bfCgKzwssQuXEEboaqUTsb",
+      "blueId": "6aAJEFVdFAgLVre8azY4YZQnNiv2FkXJpdpGAYSHiNrY",
       "resourcePath": "blue/repo/definitions/Coordination/Status.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "jkonpkUSjCXMpHcJ4e1N7bfCgKzwssQuXEEboaqUTsb",
+          "typeBlueId": "6aAJEFVdFAgLVre8azY4YZQnNiv2FkXJpdpGAYSHiNrY",
           "attributesAdded": []
         }
       ]
@@ -953,14 +970,14 @@
       "packageName": "Coordination",
       "name": "Status Change",
       "qualifiedName": "Coordination/Status Change",
-      "blueId": "B4btahVwY81bXQoXskPHEv3NrRPMYfXcR1fkUV8jcPne",
+      "blueId": "3wCtHNjVZc4JKbbbvfctdMYLB5VjMNEePgWLMLSdFbdv",
       "resourcePath": "blue/repo/definitions/Coordination/StatusChange.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "B4btahVwY81bXQoXskPHEv3NrRPMYfXcR1fkUV8jcPne",
+          "typeBlueId": "3wCtHNjVZc4JKbbbvfctdMYLB5VjMNEePgWLMLSdFbdv",
           "attributesAdded": []
         }
       ]
@@ -969,14 +986,30 @@
       "packageName": "Coordination",
       "name": "Status Completed",
       "qualifiedName": "Coordination/Status Completed",
-      "blueId": "FGhtoNCSpdvMk7ZK6V8g66aeLjSGVE14tjMZoV4xAhWF",
+      "blueId": "8LNqtg237MFe1zKdG3eWftMXtFTgVtyvrxgZkHcXYkC1",
       "resourcePath": "blue/repo/definitions/Coordination/StatusCompleted.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "FGhtoNCSpdvMk7ZK6V8g66aeLjSGVE14tjMZoV4xAhWF",
+          "typeBlueId": "8LNqtg237MFe1zKdG3eWftMXtFTgVtyvrxgZkHcXYkC1",
+          "attributesAdded": []
+        }
+      ]
+    },
+    {
+      "packageName": "Coordination",
+      "name": "Status Declined",
+      "qualifiedName": "Coordination/Status Declined",
+      "blueId": "623skurB6ZSt3jpkdNpuu6fwRG3VdrVgj2FKxfrNnBbH",
+      "resourcePath": "blue/repo/definitions/Coordination/StatusDeclined.json",
+      "status": "stable",
+      "repositoryVersionIndex": 0,
+      "versions": [
+        {
+          "repositoryVersionIndex": 0,
+          "typeBlueId": "623skurB6ZSt3jpkdNpuu6fwRG3VdrVgj2FKxfrNnBbH",
           "attributesAdded": []
         }
       ]
@@ -985,14 +1018,14 @@
       "packageName": "Coordination",
       "name": "Status Failed",
       "qualifiedName": "Coordination/Status Failed",
-      "blueId": "GeZWvUThNX3mSiYHbmQAjoE7tffzYFRiC4dktuRGe1sS",
+      "blueId": "3kguQFJvHMnCfrg4Bmqt81EZg6qeht8Cs6tEjNDxTkyB",
       "resourcePath": "blue/repo/definitions/Coordination/StatusFailed.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "GeZWvUThNX3mSiYHbmQAjoE7tffzYFRiC4dktuRGe1sS",
+          "typeBlueId": "3kguQFJvHMnCfrg4Bmqt81EZg6qeht8Cs6tEjNDxTkyB",
           "attributesAdded": []
         }
       ]
@@ -1001,14 +1034,14 @@
       "packageName": "Coordination",
       "name": "Status In Progress",
       "qualifiedName": "Coordination/Status In Progress",
-      "blueId": "CWnb7ngc7rpPVjn3eM8c6jZ6qQDGJzJcHKyARnXrSHiN",
+      "blueId": "G5KJnJLaUCSvz4BaZAMNJAgxtfxssb64oWWJXsDW3Uoy",
       "resourcePath": "blue/repo/definitions/Coordination/StatusInProgress.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "CWnb7ngc7rpPVjn3eM8c6jZ6qQDGJzJcHKyARnXrSHiN",
+          "typeBlueId": "G5KJnJLaUCSvz4BaZAMNJAgxtfxssb64oWWJXsDW3Uoy",
           "attributesAdded": []
         }
       ]
@@ -1017,14 +1050,14 @@
       "packageName": "Coordination",
       "name": "Status Pending",
       "qualifiedName": "Coordination/Status Pending",
-      "blueId": "FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc",
+      "blueId": "DUU68ikPqLZ9NwsUGzkCZ92abAUz51ihcZBTJQEty6E1",
       "resourcePath": "blue/repo/definitions/Coordination/StatusPending.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "FD2aGQj6GEvKL7SseBdD8XRuXmmgHsZRRgMicJV5nFCc",
+          "typeBlueId": "DUU68ikPqLZ9NwsUGzkCZ92abAUz51ihcZBTJQEty6E1",
           "attributesAdded": []
         }
       ]
@@ -14649,14 +14682,14 @@
       "packageName": "Mandate",
       "name": "Document Responder Mandate",
       "qualifiedName": "Mandate/Document Responder Mandate",
-      "blueId": "81DN9jPBdHdA6wdY5fqw64QnrXuwc9f2LxWNTF3q4EQ",
+      "blueId": "48DBg1ijT56Jg2ZzxVcWp5CcfiivevM491iNJZMP9EVR",
       "resourcePath": "blue/repo/definitions/Mandate/DocumentResponderMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "81DN9jPBdHdA6wdY5fqw64QnrXuwc9f2LxWNTF3q4EQ",
+          "typeBlueId": "48DBg1ijT56Jg2ZzxVcWp5CcfiivevM491iNJZMP9EVR",
           "attributesAdded": []
         }
       ]
@@ -14665,14 +14698,14 @@
       "packageName": "Mandate",
       "name": "Mandate",
       "qualifiedName": "Mandate/Mandate",
-      "blueId": "52NQiDC7e1ZU2NRPnJHMevnpeRtNm677LZEfUAnaACas",
+      "blueId": "2sLn6T8Ch7XarFH38QTHCKzTLr89D5gGgpEvqZHNn5sb",
       "resourcePath": "blue/repo/definitions/Mandate/Mandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "52NQiDC7e1ZU2NRPnJHMevnpeRtNm677LZEfUAnaACas",
+          "typeBlueId": "2sLn6T8Ch7XarFH38QTHCKzTLr89D5gGgpEvqZHNn5sb",
           "attributesAdded": []
         }
       ]
@@ -14697,14 +14730,14 @@
       "packageName": "Mandate",
       "name": "Mandate Authority",
       "qualifiedName": "Mandate/Mandate Authority",
-      "blueId": "4vU2SiCh553d9tGiUot94y3c6jqdQMkhZUYxy88NSLo2",
+      "blueId": "DMf38RnG66cZ4LwsTTfyTbUauPNmKxLVX92zPR8BZtaS",
       "resourcePath": "blue/repo/definitions/Mandate/MandateAuthority.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "4vU2SiCh553d9tGiUot94y3c6jqdQMkhZUYxy88NSLo2",
+          "typeBlueId": "DMf38RnG66cZ4LwsTTfyTbUauPNmKxLVX92zPR8BZtaS",
           "attributesAdded": []
         }
       ]
@@ -14761,14 +14794,14 @@
       "packageName": "Mandate",
       "name": "Operation Mandate",
       "qualifiedName": "Mandate/Operation Mandate",
-      "blueId": "CYULeTe7ZfSmSzZp3KHQ1DTtdGx257tazQjcP1QAzRpN",
+      "blueId": "QFJDDDxx4U3j3wrCzAeT8pwvaQw2BRkAnxuxcpYo39z",
       "resourcePath": "blue/repo/definitions/Mandate/OperationMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "CYULeTe7ZfSmSzZp3KHQ1DTtdGx257tazQjcP1QAzRpN",
+          "typeBlueId": "QFJDDDxx4U3j3wrCzAeT8pwvaQw2BRkAnxuxcpYo39z",
           "attributesAdded": []
         }
       ]
@@ -14777,14 +14810,14 @@
       "packageName": "Mandate",
       "name": "Status Active",
       "qualifiedName": "Mandate/Status Active",
-      "blueId": "DnV7ApZKxa9qvJHNrgbxNHz1BPCh2G2SToh1sQAUFemd",
+      "blueId": "por6Zfmm5x6kxeeeoARgZRVLWrZaDkTU3Dybc2TncPx",
       "resourcePath": "blue/repo/definitions/Mandate/StatusActive.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "DnV7ApZKxa9qvJHNrgbxNHz1BPCh2G2SToh1sQAUFemd",
+          "typeBlueId": "por6Zfmm5x6kxeeeoARgZRVLWrZaDkTU3Dybc2TncPx",
           "attributesAdded": []
         }
       ]
@@ -14793,14 +14826,14 @@
       "packageName": "Mandate",
       "name": "Status Authority Confirmed",
       "qualifiedName": "Mandate/Status Authority Confirmed",
-      "blueId": "AgwzrsZ7sDFXUryLWQdjG6w8D7SRLMXFWHuVFLa55jcZ",
+      "blueId": "65Lj5NBD9BaeXbWq1qQYcCyxV3EoH7r3rj877KDzbWCP",
       "resourcePath": "blue/repo/definitions/Mandate/StatusAuthorityConfirmed.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "AgwzrsZ7sDFXUryLWQdjG6w8D7SRLMXFWHuVFLa55jcZ",
+          "typeBlueId": "65Lj5NBD9BaeXbWq1qQYcCyxV3EoH7r3rj877KDzbWCP",
           "attributesAdded": []
         }
       ]
@@ -14809,14 +14842,14 @@
       "packageName": "Mandate",
       "name": "Status Terminated",
       "qualifiedName": "Mandate/Status Terminated",
-      "blueId": "DKEgt3kG9dLAf1RoKDcacsVuZrfFY2eVujtYr2YQsQR6",
+      "blueId": "CMW7kGBbCw1uDmaV5ydLVnzRSo2iaBNDFTspMX9QdvZ2",
       "resourcePath": "blue/repo/definitions/Mandate/StatusTerminated.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "DKEgt3kG9dLAf1RoKDcacsVuZrfFY2eVujtYr2YQsQR6",
+          "typeBlueId": "CMW7kGBbCw1uDmaV5ydLVnzRSo2iaBNDFTspMX9QdvZ2",
           "attributesAdded": []
         }
       ]
@@ -15081,14 +15114,14 @@
       "packageName": "MyOS",
       "name": "Document Session Bootstrap",
       "qualifiedName": "MyOS/Document Session Bootstrap",
-      "blueId": "DWV6u62ip7oukK5n5F1pRwZK7fKaiJaxCRDTyFcNwYCi",
+      "blueId": "3F4dtCNZCSj6ZfVc5TQxmiiuPELFFVaPLe6tytZJ71Jv",
       "resourcePath": "blue/repo/definitions/MyOS/DocumentSessionBootstrap.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "DWV6u62ip7oukK5n5F1pRwZK7fKaiJaxCRDTyFcNwYCi",
+          "typeBlueId": "3F4dtCNZCSj6ZfVc5TQxmiiuPELFFVaPLe6tytZJ71Jv",
           "attributesAdded": []
         }
       ]
@@ -15257,14 +15290,14 @@
       "packageName": "MyOS",
       "name": "MyOS Document Bootstrap Mandate",
       "qualifiedName": "MyOS/MyOS Document Bootstrap Mandate",
-      "blueId": "GynB48exqLBVW5SKfd7DhjpaNv2efFn6yNt9sHe64rH4",
+      "blueId": "9iFQNEeyQvdfVvEKcWDiHvW1fyq1NzTTxFgxmY1b9Zmu",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSDocumentBootstrapMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "GynB48exqLBVW5SKfd7DhjpaNv2efFn6yNt9sHe64rH4",
+          "typeBlueId": "9iFQNEeyQvdfVvEKcWDiHvW1fyq1NzTTxFgxmY1b9Zmu",
           "attributesAdded": []
         }
       ]
@@ -15273,14 +15306,14 @@
       "packageName": "MyOS",
       "name": "MyOS Document Operation Mandate",
       "qualifiedName": "MyOS/MyOS Document Operation Mandate",
-      "blueId": "9UuJZeNkNovTaJ17Z5j2bwhZDcFdPC78Vp2wujKJZPFW",
+      "blueId": "A8AucrtZ7XQjJKzJBRZC3dWHdaPw8ffPUJKuFmH4pLRn",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSDocumentOperationMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "9UuJZeNkNovTaJ17Z5j2bwhZDcFdPC78Vp2wujKJZPFW",
+          "typeBlueId": "A8AucrtZ7XQjJKzJBRZC3dWHdaPw8ffPUJKuFmH4pLRn",
           "attributesAdded": []
         }
       ]
@@ -15401,14 +15434,14 @@
       "packageName": "MyOS",
       "name": "MyOS Session Subscription Mandate",
       "qualifiedName": "MyOS/MyOS Session Subscription Mandate",
-      "blueId": "HVmVRH2ifFUDfguMDdsZfyNwyXRUa2DmQEM4GGjd4AsM",
+      "blueId": "3YXjgSDbzCTixYcNFdVbdPMaGJESAtbVpZrm3BgTWnWX",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSSessionSubscriptionMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "HVmVRH2ifFUDfguMDdsZfyNwyXRUa2DmQEM4GGjd4AsM",
+          "typeBlueId": "3YXjgSDbzCTixYcNFdVbdPMaGJESAtbVpZrm3BgTWnWX",
           "attributesAdded": []
         }
       ]
@@ -17017,14 +17050,14 @@
       "packageName": "PayNote",
       "name": "PayNote Delivery",
       "qualifiedName": "PayNote/PayNote Delivery",
-      "blueId": "H7gNHMGfpNq7si3vow74N24FyM9DRZ9t6nD3G6UpuaQU",
+      "blueId": "7ieTcJfrepbKwaBNweqLAgxiVDbdjHTUW8UxriXefzNM",
       "resourcePath": "blue/repo/definitions/PayNote/PayNoteDelivery.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "H7gNHMGfpNq7si3vow74N24FyM9DRZ9t6nD3G6UpuaQU",
+          "typeBlueId": "7ieTcJfrepbKwaBNweqLAgxiVDbdjHTUW8UxriXefzNM",
           "attributesAdded": []
         }
       ]
@@ -17505,6 +17538,22 @@
         {
           "repositoryVersionIndex": 0,
           "typeBlueId": "DtMSkzcFRUytFjeQEB5ZSEnu1jewVNMuHbN6sDWKjQ7d",
+          "attributesAdded": []
+        }
+      ]
+    },
+    {
+      "packageName": "SessionInteraction",
+      "name": "Document Session Reference",
+      "qualifiedName": "SessionInteraction/Document Session Reference",
+      "blueId": "FxcZycT49wFfrNAZpzquWVRw43epYQx5SkYXpdwx3c2Z",
+      "resourcePath": "blue/repo/definitions/SessionInteraction/DocumentSessionReference.json",
+      "status": "stable",
+      "repositoryVersionIndex": 0,
+      "versions": [
+        {
+          "repositoryVersionIndex": 0,
+          "typeBlueId": "FxcZycT49wFfrNAZpzquWVRw43epYQx5SkYXpdwx3c2Z",
           "attributesAdded": []
         }
       ]

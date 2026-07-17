@@ -2,7 +2,7 @@
   "name": "Document Responder Mandate",
   "description": "Mandate authorizing the actor bound to authorizedActorChannel to respond to covered requests emitted by sessions of authorizedInitialDocument. The concrete request shape and additional conditions are defined through the inherited validation fields.\n",
   "type": {
-    "blueId": "52NQiDC7e1ZU2NRPnJHMevnpeRtNm677LZEfUAnaACas"
+    "blueId": "2sLn6T8Ch7XarFH38QTHCKzTLr89D5gGgpEvqZHNn5sb"
   },
   "authorizedInitialDocument": {
     "description": "Initial document whose sessions may emit covered requests.",

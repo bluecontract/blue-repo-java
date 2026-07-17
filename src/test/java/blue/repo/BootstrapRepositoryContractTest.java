@@ -7,10 +7,16 @@ import blue.repo.bootstrap.DocumentBootstrapDeclined;
 import blue.repo.bootstrap.DocumentBootstrapFailed;
 import blue.repo.bootstrap.DocumentBootstrapInProgress;
 import blue.repo.bootstrap.DocumentBootstrapRequested;
+import blue.repo.bootstrap.ParticipantMapping;
 import blue.repo.coordination.Request;
 import blue.repo.coordination.Response;
+import blue.repo.coordination.Status;
+import blue.repo.coordination.StatusDeclined;
+import blue.repo.coordination.StatusFailed;
+import blue.repo.sessioninteraction.DocumentSessionReference;
 import blue.repo.types.BootstrapTypes;
 import blue.repo.types.CoordinationTypes;
+import blue.repo.types.SessionInteractionTypes;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
@@ -18,6 +24,7 @@ import org.junit.jupiter.api.Test;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -29,21 +36,34 @@ class BootstrapRepositoryContractTest {
     private final BlueRepository repository = BlueRepository.latest();
 
     @Test
-    void generatedModelsExposeTheStrictBootstrapMvp() throws Exception {
+    void generatedModelsExposeProviderNeutralBootstrapResponses() throws Exception {
         assertTrue(Request.class.isAssignableFrom(DocumentBootstrapRequested.class));
         assertTrue(Response.class.isAssignableFrom(DocumentBootstrapDeclined.class));
         assertTrue(Response.class.isAssignableFrom(DocumentBootstrapInProgress.class));
         assertTrue(Response.class.isAssignableFrom(DocumentBootstrapCompleted.class));
         assertTrue(Response.class.isAssignableFrom(DocumentBootstrapFailed.class));
+        assertTrue(StatusFailed.class.isAssignableFrom(StatusDeclined.class));
 
-        assertEquals(DocumentBootstrapRequested.class,
-                DocumentBootstrap.class.getMethod("getBootstrapRequest").getReturnType());
-        assertEquals(String.class, DocumentBootstrap.class.getMethod("getStatus").getReturnType());
-        assertEquals(Node.class, DocumentBootstrap.class.getMethod("getResult").getReturnType());
+        assertEquals(Status.class, DocumentBootstrap.class.getMethod("getStatus").getReturnType());
+        assertEquals(DocumentSessionReference.class,
+                DocumentBootstrap.class.getMethod("getDocumentSession").getReturnType());
         assertEquals(String.class, DocumentBootstrap.class.getMethod("getError").getReturnType());
         assertEquals(Node.class, DocumentBootstrapRequested.class.getMethod("getDocument").getReturnType());
-        assertEquals(Node.class, DocumentBootstrapRequested.class.getMethod("getChannelBindings").getReturnType());
+        assertEquals(List.class, DocumentBootstrapRequested.class.getMethod("getParticipantMappings").getReturnType());
+        assertEquals(List.class, DocumentBootstrapRequested.class.getMethod("getInitialMessages").getReturnType());
+        assertEquals(DocumentSessionReference.class,
+                DocumentBootstrapCompleted.class.getMethod("getDocumentSession").getReturnType());
 
+        assertEquals(String.class, ParticipantMapping.class.getMethod("getChannelName").getReturnType());
+        assertEquals(String.class, ParticipantMapping.class.getMethod("getAccountId").getReturnType());
+        assertEquals(String.class, ParticipantMapping.class.getMethod("getEmail").getReturnType());
+        assertEquals(String.class, DocumentSessionReference.class.getMethod("getProviderId").getReturnType());
+        assertEquals(String.class, DocumentSessionReference.class.getMethod("getSessionId").getReturnType());
+        assertEquals(Node.class, DocumentSessionReference.class.getMethod("getInitialDocument").getReturnType());
+
+        assertNoMethod(DocumentBootstrap.class, "getBootstrapRequest");
+        assertNoMethod(DocumentBootstrap.class, "getResult");
+        assertNoMethod(DocumentBootstrapRequested.class, "getChannelBindings");
         assertNoMethod(DocumentBootstrapRequested.class, "getOnBehalfOf");
     }
 
@@ -60,9 +80,10 @@ class BootstrapRepositoryContractTest {
                 "failBootstrap"
         )), fieldNames(contracts));
 
-        assertTrue(bootstrap.at("/bootstrapRequest/schema/required").asBoolean());
-        assertEquals(BootstrapTypes.DOCUMENT_BOOTSTRAP_REQUESTED.blueId(),
-                bootstrap.at("/bootstrapRequest/type/blueId").asText());
+        assertFalse(bootstrap.has("bootstrapRequest"));
+        assertEquals(CoordinationTypes.STATUS.blueId(), bootstrap.at("/status/type/blueId").asText());
+        assertEquals(SessionInteractionTypes.DOCUMENT_SESSION_REFERENCE.blueId(),
+                bootstrap.at("/documentSession/type/blueId").asText());
         assertFalse(contracts.has("acceptBootstrap"));
         assertFalse(contracts.has("initializeBootstrap"));
 
@@ -70,6 +91,25 @@ class BootstrapRepositoryContractTest {
         assertOperation(contracts, "startBootstrap", BootstrapTypes.DOCUMENT_BOOTSTRAP_IN_PROGRESS.blueId());
         assertOperation(contracts, "completeBootstrap", BootstrapTypes.DOCUMENT_BOOTSTRAP_COMPLETED.blueId());
         assertOperation(contracts, "failBootstrap", BootstrapTypes.DOCUMENT_BOOTSTRAP_FAILED.blueId());
+
+        JsonNode request = definition(BootstrapTypes.DOCUMENT_BOOTSTRAP_REQUESTED);
+        assertTrue(request.at("/document/schema/required").asBoolean());
+        assertEquals(BootstrapTypes.PARTICIPANT_MAPPING.blueId(),
+                request.at("/participantMappings/itemType/blueId").asText());
+        assertEquals(CoordinationTypes.MESSAGE.blueId(), request.at("/initialMessages/itemType/blueId").asText());
+
+        JsonNode completed = definition(BootstrapTypes.DOCUMENT_BOOTSTRAP_COMPLETED);
+        assertTrue(completed.at("/documentSession/schema/required").asBoolean());
+        assertEquals(SessionInteractionTypes.DOCUMENT_SESSION_REFERENCE.blueId(),
+                completed.at("/documentSession/type/blueId").asText());
+
+        JsonNode session = definition(SessionInteractionTypes.DOCUMENT_SESSION_REFERENCE);
+        assertTrue(session.at("/providerId/schema/required").asBoolean());
+        assertTrue(session.at("/sessionId/schema/required").asBoolean());
+        assertTrue(session.at("/initialDocument/schema/required").asBoolean());
+
+        JsonNode declined = definition(CoordinationTypes.STATUS_DECLINED);
+        assertEquals(CoordinationTypes.STATUS_FAILED.blueId(), declined.at("/type/blueId").asText());
     }
 
     private void assertOperation(JsonNode contracts, String operation, String requestBlueId) {
