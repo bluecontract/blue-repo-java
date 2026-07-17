@@ -5,9 +5,12 @@
     "blueId": "768MxgQEHnLSkedHWHtjj43mAjH361Zf6pKZgVxi5po3"
   },
   "reason": {
-    "description": "Optional human-readable or machine-generated termination reason.",
+    "description": "Required human-readable or machine-generated termination reason. The\ninherited termination workflow propagates this value unchanged to the\ngraceful processor termination request.\n",
     "type": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
     }
   }
 }

@@ -5,7 +5,7 @@
     "mandateGuarantorChannel": {
       "description": "Required participant channel whose actor is the mandate guarantor.\n\nThe guarantor confirms that the declared authority relationship is\nlegitimate and may invoke the standard termination operation.\n",
       "type": {
-        "blueId": "2BkkrbUNnyKqQqv83JigG1HvTY3Xa3r39jsuoQpX5Tve"
+        "blueId": "BDP5DqtmUNtG2FE1hLe5n2n5h4JMJayXixeGzfM5uzrq"
       },
       "schema": {
         "required": true
@@ -14,7 +14,7 @@
     "authorityHolderChannel": {
       "description": "Required participant channel whose actor controls the authority or\nresource delegated by this mandate. The authority holder may invoke the\nstandard termination operation.\n",
       "type": {
-        "blueId": "2BkkrbUNnyKqQqv83JigG1HvTY3Xa3r39jsuoQpX5Tve"
+        "blueId": "BDP5DqtmUNtG2FE1hLe5n2n5h4JMJayXixeGzfM5uzrq"
       },
       "schema": {
         "required": true
@@ -23,7 +23,7 @@
     "authorizedActorChannel": {
       "description": "Required participant channel whose actor receives the delegated\nauthority. Concrete mandate subtypes define the delegated resource,\naction, target, or request semantics.\n",
       "type": {
-        "blueId": "2BkkrbUNnyKqQqv83JigG1HvTY3Xa3r39jsuoQpX5Tve"
+        "blueId": "BDP5DqtmUNtG2FE1hLe5n2n5h4JMJayXixeGzfM5uzrq"
       },
       "schema": {
         "required": true
@@ -107,7 +107,7 @@
         },
         "terminatedMessageType": {
           "type": {
-            "blueId": "C6zMJV5BTUBbzAQ4UJ2jcaNjxhravLVF82euN8hNe5K8"
+            "blueId": "EcXZbNZ5BjMCBEwEaPExWjK6KLLrt3Aoxx5TNQiA5R1A"
           }
         }
       },
@@ -446,7 +446,7 @@
         "terminatedMessage": {
           "args": {
             "request": {
-              "description": "Operation request payload, including any optional reason."
+              "description": "Operation request payload containing the required reason."
             },
             "inResponseTo": {
               "description": "Exact Message that invoked termination."
@@ -1267,6 +1267,18 @@
                         "type": {
                           "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                         },
+                        "value": "sourceMessage"
+                      },
+                      {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "terminationReason"
+                      },
+                      {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
                         "value": "timestampUs"
                       },
                       {
@@ -1278,6 +1290,27 @@
                     ]
                   },
                   "vars": {
+                    "sourceMessage": {
+                      "$call": {
+                        "function": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "sourceMessage"
+                        }
+                      }
+                    },
+                    "terminationReason": {
+                      "$var": {
+                        "name": "sourceMessage",
+                        "path": {
+                          "type": {
+                            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                          },
+                          "value": "/reason"
+                        }
+                      }
+                    },
                     "timestampUs": {
                       "$call": {
                         "function": {
@@ -1432,10 +1465,12 @@
                   },
                   "termination": {
                     "reason": {
-                      "type": {
-                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                      },
-                      "value": "Mandate terminated"
+                      "$var": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "terminationReason"
+                      }
                     }
                   }
                 }
@@ -1558,7 +1593,7 @@
       }
     },
     "terminateMandate": {
-      "description": "Standard termination operation available to the guarantor and authority\nholder.\n\nUnless the mandate is already Mandate/Status Terminated, it emits\nMandate/Mandate Terminated with the optional request reason and\ncorrelation to the invoking Message. This includes a failed mandate,\nallowing the guarantor or authority holder to stop its processing. The\noperation does not write lifecycle state directly;\napplyMandateTermination remains the sole authoritative termination\nimplementation.\n\nOn Mandate/Status Terminated it emits no lifecycle Message. Specialized\nmandate types may add other operations that emit Mandate/Mandate\nTerminated.\n\nConcrete workflow steps are defined in this base type.\n",
+      "description": "Standard termination operation available to the guarantor and authority\nholder.\n\nUnless the mandate is already Mandate/Status Terminated, it emits\nMandate/Mandate Terminated with the required request reason and\ncorrelation to the invoking Message. This includes a failed mandate,\nallowing the guarantor or authority holder to stop its processing. The\noperation does not write lifecycle state directly;\napplyMandateTermination remains the sole authoritative termination\nimplementation.\n\nOn Mandate/Status Terminated it emits no lifecycle Message. Specialized\nmandate types may add other operations that emit Mandate/Mandate\nTerminated.\n\nConcrete workflow steps are defined in this base type.\n",
       "type": {
         "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
@@ -1570,9 +1605,12 @@
       },
       "request": {
         "reason": {
-          "description": "Optional human-readable or machine-generated termination reason.",
+          "description": "Required human-readable or machine-generated termination reason.",
           "type": {
             "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+          },
+          "schema": {
+            "required": true
           }
         }
       },
@@ -1600,7 +1638,7 @@
       }
     },
     "applyMandateTermination": {
-      "description": "Sole authoritative mandate-termination implementation.\n\nIt accepts Mandate/Mandate Terminated emitted by an operation. On\nCoordination/Status Pending, Mandate/Status Authority Confirmed, or\nMandate/Status Active it changes status to Mandate/Status Terminated and\nrecords terminatedAt from the root causal Timeline Entry. The Message\nitself carries any reason and correlation, does not supply the timestamp,\nand is not emitted again.\n\nThe Compute result requests graceful termination after its state changes\nand emitted events have been buffered. Coordination validates the complete\nresult before applying effects, then applies changes, emits events, and\nrequests graceful termination in that order.\n\nOn Mandate/Status Terminated or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace terminatedAt. Receipt of the\ntermination Message still requests graceful processing termination, so a\nfailed mandate can be stopped without replacing its failure state.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype. No dedicated termination workflow-step type is required.\n",
+      "description": "Sole authoritative mandate-termination implementation.\n\nIt accepts Mandate/Mandate Terminated emitted by an operation. On\nCoordination/Status Pending, Mandate/Status Authority Confirmed, or\nMandate/Status Active it changes status to Mandate/Status Terminated and\nrecords terminatedAt from the root causal Timeline Entry. The Message\nitself carries the required reason and correlation, does not supply the\ntimestamp, and is not emitted again. Its reason is propagated unchanged\nto the graceful processor termination request.\n\nThe Compute result requests graceful termination after its state changes\nand emitted events have been buffered. Coordination validates the complete\nresult before applying effects, then applies changes, emits events, and\nrequests graceful termination in that order.\n\nOn Mandate/Status Terminated or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace terminatedAt. Receipt of the\ntermination Message still requests graceful processing termination, so a\nfailed mandate can be stopped without replacing its failure state.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype. No dedicated termination workflow-step type is required.\n",
       "type": {
         "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
       },
@@ -1612,7 +1650,7 @@
       },
       "event": {
         "type": {
-          "blueId": "C6zMJV5BTUBbzAQ4UJ2jcaNjxhravLVF82euN8hNe5K8"
+          "blueId": "EcXZbNZ5BjMCBEwEaPExWjK6KLLrt3Aoxx5TNQiA5R1A"
         }
       },
       "steps": {
