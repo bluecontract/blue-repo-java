@@ -137,7 +137,7 @@ class CoordinationV2RepositoryContractTest {
 
         JsonNode adminChannel = definition(MyOSTypes.MYOS_ADMIN_BASE)
                 .at("/contracts/myOsAdminChannel");
-        assertEquals(CoordinationTypes.TIMELINE_CHANNEL.blueId(), adminChannel.at("/type/blueId").asText());
+        assertEquals(MyOSTypes.MYOS_TIMELINE_CHANNEL.blueId(), adminChannel.at("/type/blueId").asText());
         assertEquals(MyOSTypes.MYOS_TIMELINE.blueId(), adminChannel.at("/timeline/type/blueId").asText());
         assertEquals(MyOSTypes.MYOS_ADMIN_ACTOR.blueId(), adminChannel.at("/actor/type/blueId").asText());
     }

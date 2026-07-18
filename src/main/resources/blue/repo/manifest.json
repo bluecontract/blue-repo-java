@@ -1,23 +1,13 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "93V2Y3A4DkxBavRXdACR8CbRshht1oPUK4Gueb8ZgDQf",
+  "repositoryVersionBlueId": "Bpv45NKfZrnt3ktMEqLjexrhmmBhnS9LhsuPpmFDt5vi",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
       "index": 0,
-      "version": "repository-1",
-      "repositoryBlueId": "DPkjPHvEASr115BcLA4CMXRYKaJRAfmqTyodkndGJ4FY"
-    },
-    {
-      "index": 1,
-      "version": "repository-2",
-      "repositoryBlueId": "5Z2p73GgidEsFJM9hco4ythx8KiBFhefQMQ6U5wkg9KE"
-    },
-    {
-      "index": 2,
       "version": "1.3.0",
-      "repositoryBlueId": "93V2Y3A4DkxBavRXdACR8CbRshht1oPUK4Gueb8ZgDQf"
+      "repositoryBlueId": "Bpv45NKfZrnt3ktMEqLjexrhmmBhnS9LhsuPpmFDt5vi"
     }
   ],
   "packageNames": [
@@ -15124,14 +15114,14 @@
       "packageName": "MyOS",
       "name": "Document Session Bootstrap",
       "qualifiedName": "MyOS/Document Session Bootstrap",
-      "blueId": "CWKe3G7uoUtFnH6TzF3vcx8UNMLkqr4D5JpS6zX48UnL",
+      "blueId": "8YfcW6uNdYnV77ebrrBUNNvZMk9Cmk3hREGuv55aZJDR",
       "resourcePath": "blue/repo/definitions/MyOS/DocumentSessionBootstrap.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "CWKe3G7uoUtFnH6TzF3vcx8UNMLkqr4D5JpS6zX48UnL",
+          "typeBlueId": "8YfcW6uNdYnV77ebrrBUNNvZMk9Cmk3hREGuv55aZJDR",
           "attributesAdded": []
         }
       ]
@@ -15204,14 +15194,14 @@
       "packageName": "MyOS",
       "name": "MyOS Admin Base",
       "qualifiedName": "MyOS/MyOS Admin Base",
-      "blueId": "6VYrH3fhevaCzConTtpcgSKhFxtcXtT6azxELRH73BDa",
+      "blueId": "27qekptarpePgx6NKRfGQAhxzFP1nLnDA2qP9A1BauAy",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSAdminBase.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "6VYrH3fhevaCzConTtpcgSKhFxtcXtT6azxELRH73BDa",
+          "typeBlueId": "27qekptarpePgx6NKRfGQAhxzFP1nLnDA2qP9A1BauAy",
           "attributesAdded": []
         }
       ]
@@ -15527,19 +15517,12 @@
       "blueId": "FS7n5P3nfsuB2TiKFaYRHPukiHGw1vxTPRwMfPZoNgvH",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSTimelineChannel.json",
       "status": "stable",
-      "repositoryVersionIndex": 2,
+      "repositoryVersionIndex": 0,
       "versions": [
         {
-          "repositoryVersionIndex": 1,
-          "typeBlueId": "6z6yHvTmjhyeNpdmu14bbGtKA2hj3g1UCKbpskTQ4Hky",
-          "attributesAdded": []
-        },
-        {
-          "repositoryVersionIndex": 2,
+          "repositoryVersionIndex": 0,
           "typeBlueId": "FS7n5P3nfsuB2TiKFaYRHPukiHGw1vxTPRwMfPZoNgvH",
-          "attributesAdded": [
-            "/timeline"
-          ]
+          "attributesAdded": []
         }
       ]
     },
