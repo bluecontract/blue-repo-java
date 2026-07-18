@@ -19,6 +19,7 @@ import blue.repo.coordination.TimelineChannel;
 import blue.repo.coordination.TimelineEntry;
 import blue.repo.myos.MyOSAdminActor;
 import blue.repo.myos.MyOSTimeline;
+import blue.repo.myos.MyOSTimelineChannel;
 import blue.repo.types.CoordinationTypes;
 import blue.repo.types.MandateTypes;
 import blue.repo.types.MyOSTypes;
@@ -120,6 +121,10 @@ class CoordinationV2RepositoryContractTest {
         JsonNode myOsTimeline = definition(MyOSTypes.MYOS_TIMELINE);
         assertFalse(myOsTimeline.has("providerId"));
         assertFalse(myOsTimeline.has("accountId"));
+
+        assertTrue(TimelineChannel.class.isAssignableFrom(MyOSTimelineChannel.class));
+        JsonNode myOsTimelineChannel = definition(MyOSTypes.MYOS_TIMELINE_CHANNEL);
+        assertType(myOsTimelineChannel, "timeline", MyOSTypes.MYOS_TIMELINE.blueId());
 
         assertTrue(PrincipalActor.class.isAssignableFrom(blue.repo.myos.PrincipalActor.class));
         assertFieldType(blue.repo.myos.PrincipalActor.class, "accountId", String.class);
