@@ -981,6 +981,7 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSSessionSubscriptionStarted.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSSessionSubscriptionUpdate.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSTimeline.class);
+        resolver.registerAnnotatedClass(blue.repo.myos.MyOSTimelineChannel.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSUser.class);
         resolver.registerAnnotatedClass(blue.repo.myos.Participant.class);
         resolver.registerAnnotatedClass(blue.repo.myos.ParticipantActivated.class);
