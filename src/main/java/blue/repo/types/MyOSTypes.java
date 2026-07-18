@@ -43,6 +43,7 @@ import blue.repo.myos.MyOSSessionSubscriptionRequested;
 import blue.repo.myos.MyOSSessionSubscriptionStarted;
 import blue.repo.myos.MyOSSessionSubscriptionUpdate;
 import blue.repo.myos.MyOSTimeline;
+import blue.repo.myos.MyOSTimelineChannel;
 import blue.repo.myos.MyOSUser;
 import blue.repo.myos.Participant;
 import blue.repo.myos.ParticipantActivated;
@@ -149,6 +150,8 @@ public final class MyOSTypes {
     public static final RepositoryType MYOS_SESSION_SUBSCRIPTION_UPDATE = MyOSSessionSubscriptionUpdate.repositoryType();
 
     public static final RepositoryType MYOS_TIMELINE = MyOSTimeline.repositoryType();
+
+    public static final RepositoryType MYOS_TIMELINE_CHANNEL = MyOSTimelineChannel.repositoryType();
 
     public static final RepositoryType MYOS_USER = MyOSUser.repositoryType();
 
