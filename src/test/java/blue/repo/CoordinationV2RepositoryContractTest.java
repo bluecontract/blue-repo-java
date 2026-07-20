@@ -6,6 +6,7 @@ import blue.repo.coordination.Actor;
 import blue.repo.coordination.AllTimelinesChannel;
 import blue.repo.coordination.Authority;
 import blue.repo.coordination.CompositeTimelineChannel;
+import blue.repo.coordination.Event;
 import blue.repo.coordination.Message;
 import blue.repo.coordination.Operation;
 import blue.repo.coordination.OperationRequest;
@@ -17,9 +18,13 @@ import blue.repo.coordination.TerminateProcessing;
 import blue.repo.coordination.Timeline;
 import blue.repo.coordination.TimelineChannel;
 import blue.repo.coordination.TimelineEntry;
+import blue.repo.myos.AllParticipantsReady;
+import blue.repo.myos.BootstrapFailed;
 import blue.repo.myos.MyOSAdminActor;
 import blue.repo.myos.MyOSTimeline;
 import blue.repo.myos.MyOSTimelineChannel;
+import blue.repo.myos.ParticipantResolved;
+import blue.repo.myos.TargetDocumentSessionStarted;
 import blue.repo.types.CoordinationTypes;
 import blue.repo.types.MandateTypes;
 import blue.repo.types.MyOSTypes;
@@ -253,12 +258,38 @@ class CoordinationV2RepositoryContractTest {
     }
 
     @Test
-    void myOsAdminUpdateAcceptsAListOfCoordinationEvents() throws Exception {
-        JsonNode request = definition(MyOSTypes.MYOS_ADMIN_BASE)
-                .at("/contracts/myOsAdminUpdate/request");
+    void myOsAdminUpdateIsTheExecutableEventBatchOperation() throws Exception {
+        JsonNode contracts = definition(MyOSTypes.MYOS_ADMIN_BASE).path("contracts");
+        JsonNode operation = contracts.path("myOsAdminUpdate");
+        JsonNode request = operation.path("request");
 
+        assertEquals(CoordinationTypes.SEQUENTIAL_WORKFLOW_OPERATION.blueId(),
+                operation.at("/type/blueId").asText());
+        assertEquals("myOsAdminChannel", operation.at("/channel/value").asText());
         assertEquals(LIST_TYPE_BLUE_ID, request.at("/type/blueId").asText());
         assertEquals(CoordinationTypes.EVENT.blueId(), request.at("/itemType/blueId").asText());
+        assertEquals("/message/request",
+                operation.at("/steps/items/0/do/items/0/$return/events/$event/value").asText());
+        assertFalse(contracts.has("myOsAdminUpdateImpl"));
+    }
+
+    @Test
+    void myOsAdminProgressPayloadsAreCoordinationEvents() throws Exception {
+        assertTrue(Event.class.isAssignableFrom(ParticipantResolved.class));
+        assertTrue(Event.class.isAssignableFrom(AllParticipantsReady.class));
+        assertTrue(Event.class.isAssignableFrom(TargetDocumentSessionStarted.class));
+        assertTrue(Event.class.isAssignableFrom(BootstrapFailed.class));
+
+        for (RepositoryType eventType : Arrays.asList(
+                MyOSTypes.PARTICIPANT_RESOLVED,
+                MyOSTypes.ALL_PARTICIPANTS_READY,
+                MyOSTypes.TARGET_DOCUMENT_SESSION_STARTED,
+                MyOSTypes.BOOTSTRAP_FAILED
+        )) {
+            assertEquals(CoordinationTypes.EVENT.blueId(),
+                    definition(eventType).at("/type/blueId").asText(),
+                    eventType.qualifiedName());
+        }
     }
 
     @Test

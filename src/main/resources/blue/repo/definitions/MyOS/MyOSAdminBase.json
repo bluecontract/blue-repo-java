@@ -21,7 +21,7 @@
     "myOsAdminUpdate": {
       "description": "The standard, required operation for MyOS Admin to deliver events.",
       "type": {
-        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
+        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
       },
       "channel": {
         "type": {
@@ -36,18 +36,6 @@
         "itemType": {
           "blueId": "ENRQ621TbJpLg2cGyYkgTmPRLGKZkPqCzkBgm4yEXKF5"
         }
-      }
-    },
-    "myOsAdminUpdateImpl": {
-      "description": "Implementation that re-emits the provided events",
-      "type": {
-        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
-      },
-      "operation": {
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        },
-        "value": "myOsAdminUpdate"
       },
       "steps": {
         "items": [
