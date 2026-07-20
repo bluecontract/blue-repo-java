@@ -49,7 +49,7 @@ class CoordinationV2RepositoryContractTest {
     void timelineEntryExposesTheExactV2Model() throws Exception {
         assertFieldType(TimelineEntry.class, "timeline", Timeline.class);
         assertNoField(TimelineEntry.class, "sequence");
-        assertFieldType(TimelineEntry.class, "prevEntry", TimelineEntry.class);
+        assertFieldType(TimelineEntry.class, "prevEntry", Node.class);
         assertFieldType(TimelineEntry.class, "timestamp", BigInteger.class);
         assertFieldType(TimelineEntry.class, "actor", Actor.class);
         assertFieldType(TimelineEntry.class, "source", Source.class);
@@ -67,9 +67,12 @@ class CoordinationV2RepositoryContractTest {
         assertType(definition, "actor", CoordinationTypes.ACTOR.blueId());
         assertType(definition, "source", CoordinationTypes.SOURCE.blueId());
         assertType(definition, "onBehalfOf", CoordinationTypes.AUTHORITY.blueId());
+        assertFalse(definition.path("prevEntry").has("type"));
         assertFalse(definition.path("message").has("type"));
 
         assertTrue(definition.at("/timestamp/description").asText().contains("unique and strictly increasing"));
+        assertTrue(definition.at("/prevEntry/description").asText().contains("intentionally untyped"));
+        assertTrue(definition.at("/prevEntry/description").asText().contains("opaque audit evidence"));
         assertTrue(definition.at("/timestamp/description").asText().contains("authoritative intra-timeline ordering"));
         assertTrue(definition.at("/source/description").asText().contains("does not grant authority"));
     }
