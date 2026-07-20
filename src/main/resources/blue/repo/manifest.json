@@ -1,13 +1,13 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "Bpv45NKfZrnt3ktMEqLjexrhmmBhnS9LhsuPpmFDt5vi",
+  "repositoryVersionBlueId": "8QdBsgsosjEx6kV8EwugHtTUk663ZPRQRKqwm55wDjxb",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
       "index": 0,
       "version": "1.3.0",
-      "repositoryBlueId": "Bpv45NKfZrnt3ktMEqLjexrhmmBhnS9LhsuPpmFDt5vi"
+      "repositoryBlueId": "8QdBsgsosjEx6kV8EwugHtTUk663ZPRQRKqwm55wDjxb"
     }
   ],
   "packageNames": [
@@ -1114,14 +1114,14 @@
       "packageName": "Coordination",
       "name": "Timeline Entry",
       "qualifiedName": "Coordination/Timeline Entry",
-      "blueId": "BipDEsAgTsG3HSm5CL4KAMeAWBkzRetdKdtnixAwJW9y#0",
+      "blueId": "DNLLsGGrhPaJWHUepnChX5WA68DKzRvQdL1a7RbmLrhS",
       "resourcePath": "blue/repo/definitions/Coordination/TimelineEntry.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "BipDEsAgTsG3HSm5CL4KAMeAWBkzRetdKdtnixAwJW9y#0",
+          "typeBlueId": "DNLLsGGrhPaJWHUepnChX5WA68DKzRvQdL1a7RbmLrhS",
           "attributesAdded": []
         }
       ]
