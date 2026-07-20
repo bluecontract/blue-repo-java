@@ -3,12 +3,13 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
+import blue.repo.coordination.Event;
 import java.util.List;
 
-@TypeBlueId("4RvVyoEwATa2dtpRRoXbnRLbizq2vqeeMQVmqUrCd8JN")
-public class TargetDocumentSessionStarted {
+@TypeBlueId("J9a8qD8javfYK6nRDq9YZRA8LDuzZzq7QS7DB73Pm4Lv")
+public class TargetDocumentSessionStarted extends Event {
     public static String blueId() {
-        return "4RvVyoEwATa2dtpRRoXbnRLbizq2vqeeMQVmqUrCd8JN";
+        return "J9a8qD8javfYK6nRDq9YZRA8LDuzZzq7QS7DB73Pm4Lv";
     }
 
     public static String packageName() {

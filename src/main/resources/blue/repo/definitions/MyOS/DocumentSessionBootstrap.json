@@ -2,7 +2,7 @@
   "name": "Document Session Bootstrap",
   "description": "MyOS-specific document for bootstrapping document sessions and tracking bootstrap progress",
   "type": {
-    "blueId": "27qekptarpePgx6NKRfGQAhxzFP1nLnDA2qP9A1BauAy"
+    "blueId": "8ggQTWRSXKFTH3H8iqp4ff7NTFvFJn5ZNDWCHcxaxpbq"
   },
   "contracts": {
     "triggeredEventsChannel": {
@@ -76,7 +76,7 @@
       },
       "event": {
         "type": {
-          "blueId": "BswjhjkdTDksVCcc8ijoU2RWcPam7Rphcecc67HJjZRi"
+          "blueId": "3cujh2pNfS1bvc1L5eWhLaaeBepXjByWZ75XF5erArKU"
         }
       },
       "steps": {
@@ -244,7 +244,7 @@
       },
       "event": {
         "type": {
-          "blueId": "4RvVyoEwATa2dtpRRoXbnRLbizq2vqeeMQVmqUrCd8JN"
+          "blueId": "J9a8qD8javfYK6nRDq9YZRA8LDuzZzq7QS7DB73Pm4Lv"
         }
       },
       "steps": {
@@ -366,7 +366,7 @@
       },
       "event": {
         "type": {
-          "blueId": "FaZorE1FNvj9ar6rxL8jHRNYQ6WYo4hERoE35v7A5DnL"
+          "blueId": "GiwuMm3gtbi79CVSUtHGZmpUnQma7EK6A17G9PRmh6jK"
         }
       },
       "steps": {
@@ -496,29 +496,43 @@
           {
             "name": "Update Bootstrap Status",
             "type": {
-              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
+              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
             },
-            "changeset": {
+            "do": {
               "items": [
                 {
-                  "op": {
-                    "type": {
-                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                    },
-                    "value": "replace"
-                  },
-                  "path": {
-                    "type": {
-                      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-                    },
-                    "value": "/bootstrapStatus"
-                  },
-                  "val": {
-                    "$event": {
+                  "$appendChange": {
+                    "op": {
                       "type": {
                         "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                       },
-                      "value": "/status"
+                      "value": "replace"
+                    },
+                    "path": {
+                      "type": {
+                        "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                      },
+                      "value": "/bootstrapStatus"
+                    },
+                    "val": {
+                      "$event": {
+                        "type": {
+                          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+                        },
+                        "value": "/status"
+                      }
+                    }
+                  }
+                },
+                {
+                  "$return": {
+                    "changeset": {
+                      "$changeset": {
+                        "type": {
+                          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
+                        },
+                        "value": true
+                      }
                     }
                   }
                 }
