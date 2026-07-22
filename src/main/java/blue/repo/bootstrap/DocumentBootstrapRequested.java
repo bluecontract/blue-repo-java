@@ -7,10 +7,10 @@ import blue.repo.coordination.Message;
 import blue.repo.coordination.Request;
 import java.util.List;
 
-@TypeBlueId("2a67bWEnUUaHNFM8MDaAKRCLnKQZKMcuifjT4mxAEnGt")
+@TypeBlueId("GtkzouXkHv2NByNsd8ciAGSpgaMcwr2LwL9Px7JLdrBJ")
 public class DocumentBootstrapRequested extends Request {
     public static String blueId() {
-        return "2a67bWEnUUaHNFM8MDaAKRCLnKQZKMcuifjT4mxAEnGt";
+        return "GtkzouXkHv2NByNsd8ciAGSpgaMcwr2LwL9Px7JLdrBJ";
     }
 
     public static String packageName() {
@@ -38,11 +38,22 @@ public class DocumentBootstrapRequested extends Request {
                 resourcePath());
     }
 
+    private String requesterChannel;
+
     private Node document;
 
     private List<ParticipantMapping> participantMappings;
 
     private List<Message> initialMessages;
+
+    public String getRequesterChannel() {
+        return requesterChannel;
+    }
+
+    public DocumentBootstrapRequested requesterChannel(String requesterChannel) {
+        this.requesterChannel = requesterChannel;
+        return this;
+    }
 
     public Node getDocument() {
         return document;

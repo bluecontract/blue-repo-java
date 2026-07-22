@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.coordination.Actor;
 import blue.repo.coordination.Authority;
 
-@TypeBlueId("Hus6vL2AqKcuG8YakBCoFknLig3Bbxgauir7wgKTrjzb")
+@TypeBlueId("AFmG8N66vjJCjfjpuvvowYeTpreb1GrdM8uHzEiDuWto")
 public class MandateAuthority extends Authority {
     public static String blueId() {
-        return "Hus6vL2AqKcuG8YakBCoFknLig3Bbxgauir7wgKTrjzb";
+        return "AFmG8N66vjJCjfjpuvvowYeTpreb1GrdM8uHzEiDuWto";
     }
 
     public static String packageName() {
@@ -39,7 +39,7 @@ public class MandateAuthority extends Authority {
 
     private Actor actor;
 
-    private Mandate initialMandateDocument;
+    private Node initialMandateDocument;
 
     public Actor getActor() {
         return actor;
@@ -50,11 +50,11 @@ public class MandateAuthority extends Authority {
         return this;
     }
 
-    public Mandate getInitialMandateDocument() {
+    public Node getInitialMandateDocument() {
         return initialMandateDocument;
     }
 
-    public MandateAuthority initialMandateDocument(Mandate initialMandateDocument) {
+    public MandateAuthority initialMandateDocument(Node initialMandateDocument) {
         this.initialMandateDocument = initialMandateDocument;
         return this;
     }

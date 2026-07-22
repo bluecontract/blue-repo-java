@@ -1,13 +1,13 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "3iPVYhS7LbupV6295uDTMCkiLDEy2smZaJcFxS5vUXZT",
+  "repositoryVersionBlueId": "6AA5VQDuC2EyvztDsto8hwmKqbhCkBGqDvDed6Avura8",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
       "index": 0,
       "version": "1.3.0",
-      "repositoryBlueId": "3iPVYhS7LbupV6295uDTMCkiLDEy2smZaJcFxS5vUXZT"
+      "repositoryBlueId": "6AA5VQDuC2EyvztDsto8hwmKqbhCkBGqDvDed6Avura8"
     }
   ],
   "packageNames": [
@@ -106,14 +106,14 @@
       "packageName": "Bootstrap",
       "name": "Document Bootstrap Requested",
       "qualifiedName": "Bootstrap/Document Bootstrap Requested",
-      "blueId": "2a67bWEnUUaHNFM8MDaAKRCLnKQZKMcuifjT4mxAEnGt",
+      "blueId": "GtkzouXkHv2NByNsd8ciAGSpgaMcwr2LwL9Px7JLdrBJ",
       "resourcePath": "blue/repo/definitions/Bootstrap/DocumentBootstrapRequested.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "2a67bWEnUUaHNFM8MDaAKRCLnKQZKMcuifjT4mxAEnGt",
+          "typeBlueId": "GtkzouXkHv2NByNsd8ciAGSpgaMcwr2LwL9Px7JLdrBJ",
           "attributesAdded": []
         }
       ]
@@ -14730,14 +14730,14 @@
       "packageName": "Mandate",
       "name": "Mandate Authority",
       "qualifiedName": "Mandate/Mandate Authority",
-      "blueId": "Hus6vL2AqKcuG8YakBCoFknLig3Bbxgauir7wgKTrjzb",
+      "blueId": "AFmG8N66vjJCjfjpuvvowYeTpreb1GrdM8uHzEiDuWto",
       "resourcePath": "blue/repo/definitions/Mandate/MandateAuthority.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "Hus6vL2AqKcuG8YakBCoFknLig3Bbxgauir7wgKTrjzb",
+          "typeBlueId": "AFmG8N66vjJCjfjpuvvowYeTpreb1GrdM8uHzEiDuWto",
           "attributesAdded": []
         }
       ]
@@ -17066,14 +17066,14 @@
       "packageName": "PayNote",
       "name": "PayNote Delivery",
       "qualifiedName": "PayNote/PayNote Delivery",
-      "blueId": "DT1xSSmLNv2iJSYAUYSaLumD2JJH27WjWF6KRxa9zRW5",
+      "blueId": "9RAY5TFPvDLAei11QWyzSMGkp9HZtAjWVi3r2D7ocfrJ",
       "resourcePath": "blue/repo/definitions/PayNote/PayNoteDelivery.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "DT1xSSmLNv2iJSYAUYSaLumD2JJH27WjWF6KRxa9zRW5",
+          "typeBlueId": "9RAY5TFPvDLAei11QWyzSMGkp9HZtAjWVi3r2D7ocfrJ",
           "attributesAdded": []
         }
       ]

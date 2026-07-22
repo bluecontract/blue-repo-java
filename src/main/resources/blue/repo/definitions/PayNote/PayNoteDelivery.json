@@ -2400,7 +2400,7 @@
   "payNoteBootstrapRequest": {
     "description": "PayNote bootstrap request details.",
     "type": {
-      "blueId": "2a67bWEnUUaHNFM8MDaAKRCLnKQZKMcuifjT4mxAEnGt"
+      "blueId": "GtkzouXkHv2NByNsd8ciAGSpgaMcwr2LwL9Px7JLdrBJ"
     },
     "document": {
       "type": {
@@ -2411,7 +2411,7 @@
   "paymentMandateBootstrapRequest": {
     "description": "Optional Payment Mandate bootstrap request details for Delivery flows that require mandate attachment before proposal exposure.",
     "type": {
-      "blueId": "2a67bWEnUUaHNFM8MDaAKRCLnKQZKMcuifjT4mxAEnGt"
+      "blueId": "GtkzouXkHv2NByNsd8ciAGSpgaMcwr2LwL9Px7JLdrBJ"
     },
     "document": {
       "type": {
