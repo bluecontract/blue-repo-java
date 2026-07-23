@@ -5,8 +5,6 @@ import blue.repo.RepositoryType;
 import blue.repo.common.CryptoEd25519Verify;
 import blue.repo.common.Currency;
 import blue.repo.common.Document;
-import blue.repo.common.DocumentAnchor;
-import blue.repo.common.DocumentAnchors;
 import blue.repo.common.NamedEvent;
 import blue.repo.common.Payment;
 import blue.repo.common.Profile;
@@ -25,10 +23,6 @@ public final class CommonTypes {
     public static final RepositoryType CURRENCY = Currency.repositoryType();
 
     public static final RepositoryType DOCUMENT = Document.repositoryType();
-
-    public static final RepositoryType DOCUMENT_ANCHOR = DocumentAnchor.repositoryType();
-
-    public static final RepositoryType DOCUMENT_ANCHORS = DocumentAnchors.repositoryType();
 
     public static final RepositoryType NAMED_EVENT = NamedEvent.repositoryType();
 

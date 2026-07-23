@@ -423,13 +423,13 @@ class BlueRepositoryTest {
     void commonPackageIncludesCurrentRepositoryTypes() {
         BlueRepository repo = BlueRepository.v1_3_0();
 
-        assertEquals(16, repo.manifest().definitions().stream()
+        assertEquals(14, repo.manifest().definitions().stream()
                 .filter(definition -> "Common".equals(definition.packageName()))
                 .count());
         assertTrue(repo.definition("Common/Crypto Ed25519 Verify").isPresent());
         assertTrue(repo.definition("Common/Document").isPresent());
-        assertTrue(repo.definition("Common/Document Anchor").isPresent());
-        assertTrue(repo.definition("Common/Document Anchors").isPresent());
+        assertFalse(repo.definition("Common/Document Anchor").isPresent());
+        assertFalse(repo.definition("Common/Document Anchors").isPresent());
         assertTrue(repo.definition("Common/Named Event").isPresent());
         assertTrue(repo.definition("Common/Payment").isPresent());
         assertTrue(repo.definition("Common/Profile").isPresent());

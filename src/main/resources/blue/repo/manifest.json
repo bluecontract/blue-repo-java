@@ -1,13 +1,13 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "6AA5VQDuC2EyvztDsto8hwmKqbhCkBGqDvDed6Avura8",
+  "repositoryVersionBlueId": "FG4LidzBiMCyVt53aP8kJXjcZXZ97mVfnv7N92zueGzr",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
       "index": 0,
       "version": "1.3.0",
-      "repositoryBlueId": "6AA5VQDuC2EyvztDsto8hwmKqbhCkBGqDvDed6Avura8"
+      "repositoryBlueId": "FG4LidzBiMCyVt53aP8kJXjcZXZ97mVfnv7N92zueGzr"
     }
   ],
   "packageNames": [
@@ -184,38 +184,6 @@
     },
     {
       "packageName": "Common",
-      "name": "Document Anchor",
-      "qualifiedName": "Common/Document Anchor",
-      "blueId": "Bu4KzxxpJuHvET1RTBzioDXpWcqmvYzmqGRiDKmktHUo",
-      "resourcePath": "blue/repo/definitions/Common/DocumentAnchor.json",
-      "status": "dev",
-      "repositoryVersionIndex": 0,
-      "versions": [
-        {
-          "repositoryVersionIndex": 0,
-          "typeBlueId": "Bu4KzxxpJuHvET1RTBzioDXpWcqmvYzmqGRiDKmktHUo",
-          "attributesAdded": []
-        }
-      ]
-    },
-    {
-      "packageName": "Common",
-      "name": "Document Anchors",
-      "qualifiedName": "Common/Document Anchors",
-      "blueId": "5UhQNW5kxq9QrAkjnajrGV7B4nN5Cun6puDNkqUyxF4e",
-      "resourcePath": "blue/repo/definitions/Common/DocumentAnchors.json",
-      "status": "dev",
-      "repositoryVersionIndex": 0,
-      "versions": [
-        {
-          "repositoryVersionIndex": 0,
-          "typeBlueId": "5UhQNW5kxq9QrAkjnajrGV7B4nN5Cun6puDNkqUyxF4e",
-          "attributesAdded": []
-        }
-      ]
-    },
-    {
-      "packageName": "Common",
       "name": "Named Event",
       "qualifiedName": "Common/Named Event",
       "blueId": "AJXU1CbY6HmjCknkWm1ng2pGvStRPzhs3jq4WWLVwWLK",
@@ -346,14 +314,14 @@
       "packageName": "Common",
       "name": "Space",
       "qualifiedName": "Common/Space",
-      "blueId": "9NWJbMy2sRh6KdLQGhQqFx6Ta8LZen5NMcdg2vqeG9yC",
+      "blueId": "BFrCmuWJzm3RYrg3AD9L1YYKV3oun4MA9gL74mDQKF1j",
       "resourcePath": "blue/repo/definitions/Common/Space.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "9NWJbMy2sRh6KdLQGhQqFx6Ta8LZen5NMcdg2vqeG9yC",
+          "typeBlueId": "BFrCmuWJzm3RYrg3AD9L1YYKV3oun4MA9gL74mDQKF1j",
           "attributesAdded": []
         }
       ]
@@ -632,6 +600,38 @@
     },
     {
       "packageName": "Coordination",
+      "name": "Document Anchor",
+      "qualifiedName": "Coordination/Document Anchor",
+      "blueId": "7PxEJAVDRqGFU2t6TFeqimEKfddFVGN1mAWTAsWmXix",
+      "resourcePath": "blue/repo/definitions/Coordination/DocumentAnchor.json",
+      "status": "stable",
+      "repositoryVersionIndex": 0,
+      "versions": [
+        {
+          "repositoryVersionIndex": 0,
+          "typeBlueId": "7PxEJAVDRqGFU2t6TFeqimEKfddFVGN1mAWTAsWmXix",
+          "attributesAdded": []
+        }
+      ]
+    },
+    {
+      "packageName": "Coordination",
+      "name": "Document Anchors",
+      "qualifiedName": "Coordination/Document Anchors",
+      "blueId": "HhGmdUeYu4H3B4pfgTNkwweuUqQ1bJ4YPNdcjC42K6bw",
+      "resourcePath": "blue/repo/definitions/Coordination/DocumentAnchors.json",
+      "status": "stable",
+      "repositoryVersionIndex": 0,
+      "versions": [
+        {
+          "repositoryVersionIndex": 0,
+          "typeBlueId": "HhGmdUeYu4H3B4pfgTNkwweuUqQ1bJ4YPNdcjC42K6bw",
+          "attributesAdded": []
+        }
+      ]
+    },
+    {
+      "packageName": "Coordination",
       "name": "Document Bootstrap Completed",
       "qualifiedName": "Coordination/Document Bootstrap Completed",
       "blueId": "7caaA9fZUxooF7LW4drW97DuoJpu5fyEZKyrQttLaBmQ",
@@ -674,6 +674,38 @@
         {
           "repositoryVersionIndex": 0,
           "typeBlueId": "8HdfdnkeL2v31q56qsN6bAwUHtBYK5VseaMQ3owdWtuF",
+          "attributesAdded": []
+        }
+      ]
+    },
+    {
+      "packageName": "Coordination",
+      "name": "Document Link",
+      "qualifiedName": "Coordination/Document Link",
+      "blueId": "4QgVHSQv1pyJAmEQBpuXFSVN7qdavdMDmdZXpkboNsc5",
+      "resourcePath": "blue/repo/definitions/Coordination/DocumentLink.json",
+      "status": "stable",
+      "repositoryVersionIndex": 0,
+      "versions": [
+        {
+          "repositoryVersionIndex": 0,
+          "typeBlueId": "4QgVHSQv1pyJAmEQBpuXFSVN7qdavdMDmdZXpkboNsc5",
+          "attributesAdded": []
+        }
+      ]
+    },
+    {
+      "packageName": "Coordination",
+      "name": "Document Links",
+      "qualifiedName": "Coordination/Document Links",
+      "blueId": "8cREvDqGAGADf9NkWvwhENWnTf5qRAGasS5ihktdXiNX",
+      "resourcePath": "blue/repo/definitions/Coordination/DocumentLinks.json",
+      "status": "stable",
+      "repositoryVersionIndex": 0,
+      "versions": [
+        {
+          "repositoryVersionIndex": 0,
+          "typeBlueId": "8cREvDqGAGADf9NkWvwhENWnTf5qRAGasS5ihktdXiNX",
           "attributesAdded": []
         }
       ]
@@ -15000,38 +15032,6 @@
     },
     {
       "packageName": "MyOS",
-      "name": "Document Anchor",
-      "qualifiedName": "MyOS/Document Anchor",
-      "blueId": "HS9yo34TGEAM2LGcNbLh7XPN4goPRhqdGZQkiyh473Wb",
-      "resourcePath": "blue/repo/definitions/MyOS/DocumentAnchor.json",
-      "status": "stable",
-      "repositoryVersionIndex": 0,
-      "versions": [
-        {
-          "repositoryVersionIndex": 0,
-          "typeBlueId": "HS9yo34TGEAM2LGcNbLh7XPN4goPRhqdGZQkiyh473Wb",
-          "attributesAdded": []
-        }
-      ]
-    },
-    {
-      "packageName": "MyOS",
-      "name": "Document Anchors",
-      "qualifiedName": "MyOS/Document Anchors",
-      "blueId": "6LzxLRpgV6a2HEZ98LXXF55BsfsTE8ChXghCZGBSJYSF",
-      "resourcePath": "blue/repo/definitions/MyOS/DocumentAnchors.json",
-      "status": "stable",
-      "repositoryVersionIndex": 0,
-      "versions": [
-        {
-          "repositoryVersionIndex": 0,
-          "typeBlueId": "6LzxLRpgV6a2HEZ98LXXF55BsfsTE8ChXghCZGBSJYSF",
-          "attributesAdded": []
-        }
-      ]
-    },
-    {
-      "packageName": "MyOS",
       "name": "Document Initial Snapshot Requested",
       "qualifiedName": "MyOS/Document Initial Snapshot Requested",
       "blueId": "8mzqf9vHdE91umxWwnGEdrPwCQ7Swb1RW2M6Ja3AFJoi",
@@ -15080,38 +15080,6 @@
     },
     {
       "packageName": "MyOS",
-      "name": "Document Link",
-      "qualifiedName": "MyOS/Document Link",
-      "blueId": "CfdjCV1cjPJCd5sBHLMzNUx3EtkgrmBekLxB5c9Qw1Qh",
-      "resourcePath": "blue/repo/definitions/MyOS/DocumentLink.json",
-      "status": "stable",
-      "repositoryVersionIndex": 0,
-      "versions": [
-        {
-          "repositoryVersionIndex": 0,
-          "typeBlueId": "CfdjCV1cjPJCd5sBHLMzNUx3EtkgrmBekLxB5c9Qw1Qh",
-          "attributesAdded": []
-        }
-      ]
-    },
-    {
-      "packageName": "MyOS",
-      "name": "Document Links",
-      "qualifiedName": "MyOS/Document Links",
-      "blueId": "HrFwCVPZz2sNinVETY4mk2sLLziGQWejTU2eWjxcUuuX",
-      "resourcePath": "blue/repo/definitions/MyOS/DocumentLinks.json",
-      "status": "stable",
-      "repositoryVersionIndex": 0,
-      "versions": [
-        {
-          "repositoryVersionIndex": 0,
-          "typeBlueId": "HrFwCVPZz2sNinVETY4mk2sLLziGQWejTU2eWjxcUuuX",
-          "attributesAdded": []
-        }
-      ]
-    },
-    {
-      "packageName": "MyOS",
       "name": "Document Session Bootstrap",
       "qualifiedName": "MyOS/Document Session Bootstrap",
       "blueId": "5ZaWtZY29h6mm6KGKJsxcfDLF3TMS3XgFVJ7nxwZgDLB",
@@ -15122,38 +15090,6 @@
         {
           "repositoryVersionIndex": 0,
           "typeBlueId": "5ZaWtZY29h6mm6KGKJsxcfDLF3TMS3XgFVJ7nxwZgDLB",
-          "attributesAdded": []
-        }
-      ]
-    },
-    {
-      "packageName": "MyOS",
-      "name": "Document Type Link",
-      "qualifiedName": "MyOS/Document Type Link",
-      "blueId": "5z86Uk79T94VasXdy6RSWjZqVUmiEfwGVWrkGc9ZooLm",
-      "resourcePath": "blue/repo/definitions/MyOS/DocumentTypeLink.json",
-      "status": "stable",
-      "repositoryVersionIndex": 0,
-      "versions": [
-        {
-          "repositoryVersionIndex": 0,
-          "typeBlueId": "5z86Uk79T94VasXdy6RSWjZqVUmiEfwGVWrkGc9ZooLm",
-          "attributesAdded": []
-        }
-      ]
-    },
-    {
-      "packageName": "MyOS",
-      "name": "Link",
-      "qualifiedName": "MyOS/Link",
-      "blueId": "6EvULvymCkDo8S9SjWgvzB24sbqZotJo5opNqH7dNThP",
-      "resourcePath": "blue/repo/definitions/MyOS/Link.json",
-      "status": "stable",
-      "repositoryVersionIndex": 0,
-      "versions": [
-        {
-          "repositoryVersionIndex": 0,
-          "typeBlueId": "6EvULvymCkDo8S9SjWgvzB24sbqZotJo5opNqH7dNThP",
           "attributesAdded": []
         }
       ]
@@ -15378,22 +15314,6 @@
         {
           "repositoryVersionIndex": 0,
           "typeBlueId": "CeWyRmXAMZqvWBvby2KbRUZWcS7Pdxs42vnMXgn9gg6H",
-          "attributesAdded": []
-        }
-      ]
-    },
-    {
-      "packageName": "MyOS",
-      "name": "MyOS Session Link",
-      "qualifiedName": "MyOS/MyOS Session Link",
-      "blueId": "8WDRmnnsa796qcz2VcYNiua5xdH8BFXbKq94NxUYviyE",
-      "resourcePath": "blue/repo/definitions/MyOS/MyOSSessionLink.json",
-      "status": "stable",
-      "repositoryVersionIndex": 0,
-      "versions": [
-        {
-          "repositoryVersionIndex": 0,
-          "typeBlueId": "8WDRmnnsa796qcz2VcYNiua5xdH8BFXbKq94NxUYviyE",
           "attributesAdded": []
         }
       ]

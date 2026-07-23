@@ -1,29 +1,29 @@
-package blue.repo.myos;
+package blue.repo.coordination;
 
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("6EvULvymCkDo8S9SjWgvzB24sbqZotJo5opNqH7dNThP")
-public class Link {
+@TypeBlueId("4QgVHSQv1pyJAmEQBpuXFSVN7qdavdMDmdZXpkboNsc5")
+public class DocumentLink {
     public static String blueId() {
-        return "6EvULvymCkDo8S9SjWgvzB24sbqZotJo5opNqH7dNThP";
+        return "4QgVHSQv1pyJAmEQBpuXFSVN7qdavdMDmdZXpkboNsc5";
     }
 
     public static String packageName() {
-        return "MyOS";
+        return "Coordination";
     }
 
     public static String typeName() {
-        return "Link";
+        return "Document Link";
     }
 
     public static String qualifiedName() {
-        return "MyOS/Link";
+        return "Coordination/Document Link";
     }
 
     public static String resourcePath() {
-        return "blue/repo/definitions/MyOS/Link.json";
+        return "blue/repo/definitions/Coordination/DocumentLink.json";
     }
 
     public static RepositoryType repositoryType() {
@@ -35,13 +35,24 @@ public class Link {
                 resourcePath());
     }
 
+    private Node initialDocument;
+
     private String anchor;
+
+    public Node getInitialDocument() {
+        return initialDocument;
+    }
+
+    public DocumentLink initialDocument(Node initialDocument) {
+        this.initialDocument = initialDocument;
+        return this;
+    }
 
     public String getAnchor() {
         return anchor;
     }
 
-    public Link anchor(String anchor) {
+    public DocumentLink anchor(String anchor) {
         this.anchor = anchor;
         return this;
     }

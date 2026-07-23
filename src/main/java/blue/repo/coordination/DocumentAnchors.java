@@ -1,29 +1,29 @@
-package blue.repo.common;
+package blue.repo.coordination;
 
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("Bu4KzxxpJuHvET1RTBzioDXpWcqmvYzmqGRiDKmktHUo")
-public class DocumentAnchor {
+@TypeBlueId("HhGmdUeYu4H3B4pfgTNkwweuUqQ1bJ4YPNdcjC42K6bw")
+public class DocumentAnchors extends blue.language.processor.model.MarkerContract {
     public static String blueId() {
-        return "Bu4KzxxpJuHvET1RTBzioDXpWcqmvYzmqGRiDKmktHUo";
+        return "HhGmdUeYu4H3B4pfgTNkwweuUqQ1bJ4YPNdcjC42K6bw";
     }
 
     public static String packageName() {
-        return "Common";
+        return "Coordination";
     }
 
     public static String typeName() {
-        return "Document Anchor";
+        return "Document Anchors";
     }
 
     public static String qualifiedName() {
-        return "Common/Document Anchor";
+        return "Coordination/Document Anchors";
     }
 
     public static String resourcePath() {
-        return "blue/repo/definitions/Common/DocumentAnchor.json";
+        return "blue/repo/definitions/Coordination/DocumentAnchors.json";
     }
 
     public static RepositoryType repositoryType() {
@@ -33,17 +33,6 @@ public class DocumentAnchor {
                 qualifiedName(),
                 blueId(),
                 resourcePath());
-    }
-
-    private Node template;
-
-    public Node getTemplate() {
-        return template;
-    }
-
-    public DocumentAnchor template(Node template) {
-        this.template = template;
-        return this;
     }
 
 }

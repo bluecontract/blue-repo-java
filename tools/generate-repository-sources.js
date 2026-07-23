@@ -176,6 +176,10 @@ const externalBaseTypes = new Map([
   ['Core/Handler', externalBaseDescriptors.handler],
   ['Core/Channel', externalBaseDescriptors.channel],
   ['Core/Marker', externalBaseDescriptors.marker],
+  // Passive dictionary declarations retain their repository schemas while
+  // loading through ContractLoader's marker path.
+  ['Coordination/Document Anchors', externalBaseDescriptors.marker],
+  ['Coordination/Document Links', externalBaseDescriptors.marker],
   ['Core/Document Update Channel', externalBaseDescriptors.documentUpdateChannel],
   ['Core/Triggered Event Channel', externalBaseDescriptors.triggeredEventChannel],
   ['Core/Lifecycle Event Channel', externalBaseDescriptors.lifecycleEventChannel],

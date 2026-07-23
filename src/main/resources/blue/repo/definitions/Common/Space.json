@@ -9,11 +9,5 @@
     "type": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     }
-  },
-  "anchors": {
-    "description": "Optional named connection points where matching documents can link in.",
-    "type": {
-      "blueId": "5UhQNW5kxq9QrAkjnajrGV7B4nN5Cun6puDNkqUyxF4e"
-    }
   }
 }
