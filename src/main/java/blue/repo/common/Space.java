@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("9NWJbMy2sRh6KdLQGhQqFx6Ta8LZen5NMcdg2vqeG9yC")
+@TypeBlueId("BFrCmuWJzm3RYrg3AD9L1YYKV3oun4MA9gL74mDQKF1j")
 public class Space extends Document {
     public static String blueId() {
-        return "9NWJbMy2sRh6KdLQGhQqFx6Ta8LZen5NMcdg2vqeG9yC";
+        return "BFrCmuWJzm3RYrg3AD9L1YYKV3oun4MA9gL74mDQKF1j";
     }
 
     public static String packageName() {
@@ -37,23 +37,12 @@ public class Space extends Document {
 
     private String website;
 
-    private DocumentAnchors anchors;
-
     public String getWebsite() {
         return website;
     }
 
     public Space website(String website) {
         this.website = website;
-        return this;
-    }
-
-    public DocumentAnchors getAnchors() {
-        return anchors;
-    }
-
-    public Space anchors(DocumentAnchors anchors) {
-        this.anchors = anchors;
         return this;
     }
 

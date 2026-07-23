@@ -11,16 +11,10 @@ import blue.repo.myos.CallOperationAccepted;
 import blue.repo.myos.CallOperationFailed;
 import blue.repo.myos.CallOperationRequested;
 import blue.repo.myos.CallOperationResponded;
-import blue.repo.myos.DocumentAnchor;
-import blue.repo.myos.DocumentAnchors;
 import blue.repo.myos.DocumentInitialSnapshotRequested;
 import blue.repo.myos.DocumentInitialSnapshotResolved;
 import blue.repo.myos.DocumentInitialSnapshotUnresolved;
-import blue.repo.myos.DocumentLink;
-import blue.repo.myos.DocumentLinks;
 import blue.repo.myos.DocumentSessionBootstrap;
-import blue.repo.myos.DocumentTypeLink;
-import blue.repo.myos.Link;
 import blue.repo.myos.LLMAgent;
 import blue.repo.myos.MyOSAdminActor;
 import blue.repo.myos.MyOSAdminBase;
@@ -35,7 +29,6 @@ import blue.repo.myos.MyOSDocumentSessionReference;
 import blue.repo.myos.MyOSOperationCallRequested;
 import blue.repo.myos.MyOSParticipantsOrchestration;
 import blue.repo.myos.MyOSSessionInteraction;
-import blue.repo.myos.MyOSSessionLink;
 import blue.repo.myos.MyOSSessionSubscriptionEnded;
 import blue.repo.myos.MyOSSessionSubscriptionFilter;
 import blue.repo.myos.MyOSSessionSubscriptionMandate;
@@ -87,25 +80,13 @@ public final class MyOSTypes {
 
     public static final RepositoryType CALL_OPERATION_RESPONDED = CallOperationResponded.repositoryType();
 
-    public static final RepositoryType DOCUMENT_ANCHOR = DocumentAnchor.repositoryType();
-
-    public static final RepositoryType DOCUMENT_ANCHORS = DocumentAnchors.repositoryType();
-
     public static final RepositoryType DOCUMENT_INITIAL_SNAPSHOT_REQUESTED = DocumentInitialSnapshotRequested.repositoryType();
 
     public static final RepositoryType DOCUMENT_INITIAL_SNAPSHOT_RESOLVED = DocumentInitialSnapshotResolved.repositoryType();
 
     public static final RepositoryType DOCUMENT_INITIAL_SNAPSHOT_UNRESOLVED = DocumentInitialSnapshotUnresolved.repositoryType();
 
-    public static final RepositoryType DOCUMENT_LINK = DocumentLink.repositoryType();
-
-    public static final RepositoryType DOCUMENT_LINKS = DocumentLinks.repositoryType();
-
     public static final RepositoryType DOCUMENT_SESSION_BOOTSTRAP = DocumentSessionBootstrap.repositoryType();
-
-    public static final RepositoryType DOCUMENT_TYPE_LINK = DocumentTypeLink.repositoryType();
-
-    public static final RepositoryType LINK = Link.repositoryType();
 
     public static final RepositoryType LLM_AGENT = LLMAgent.repositoryType();
 
@@ -134,8 +115,6 @@ public final class MyOSTypes {
     public static final RepositoryType MYOS_PARTICIPANTS_ORCHESTRATION = MyOSParticipantsOrchestration.repositoryType();
 
     public static final RepositoryType MYOS_SESSION_INTERACTION = MyOSSessionInteraction.repositoryType();
-
-    public static final RepositoryType MYOS_SESSION_LINK = MyOSSessionLink.repositoryType();
 
     public static final RepositoryType MYOS_SESSION_SUBSCRIPTION_ENDED = MyOSSessionSubscriptionEnded.repositoryType();
 

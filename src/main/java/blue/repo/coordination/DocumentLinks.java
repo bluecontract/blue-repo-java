@@ -1,29 +1,29 @@
-package blue.repo.myos;
+package blue.repo.coordination;
 
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("8WDRmnnsa796qcz2VcYNiua5xdH8BFXbKq94NxUYviyE")
-public class MyOSSessionLink extends Link {
+@TypeBlueId("8cREvDqGAGADf9NkWvwhENWnTf5qRAGasS5ihktdXiNX")
+public class DocumentLinks extends blue.language.processor.model.MarkerContract {
     public static String blueId() {
-        return "8WDRmnnsa796qcz2VcYNiua5xdH8BFXbKq94NxUYviyE";
+        return "8cREvDqGAGADf9NkWvwhENWnTf5qRAGasS5ihktdXiNX";
     }
 
     public static String packageName() {
-        return "MyOS";
+        return "Coordination";
     }
 
     public static String typeName() {
-        return "MyOS Session Link";
+        return "Document Links";
     }
 
     public static String qualifiedName() {
-        return "MyOS/MyOS Session Link";
+        return "Coordination/Document Links";
     }
 
     public static String resourcePath() {
-        return "blue/repo/definitions/MyOS/MyOSSessionLink.json";
+        return "blue/repo/definitions/Coordination/DocumentLinks.json";
     }
 
     public static RepositoryType repositoryType() {
@@ -33,17 +33,6 @@ public class MyOSSessionLink extends Link {
                 qualifiedName(),
                 blueId(),
                 resourcePath());
-    }
-
-    private String sessionId;
-
-    public String getSessionId() {
-        return sessionId;
-    }
-
-    public MyOSSessionLink sessionId(String sessionId) {
-        this.sessionId = sessionId;
-        return this;
     }
 
 }

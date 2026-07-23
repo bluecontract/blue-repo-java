@@ -17,9 +17,13 @@ import blue.repo.coordination.ComputeDefinition;
 import blue.repo.coordination.CustomerActionRequested;
 import blue.repo.coordination.CustomerActionResponded;
 import blue.repo.coordination.CustomerConsentRevoked;
+import blue.repo.coordination.DocumentAnchor;
+import blue.repo.coordination.DocumentAnchors;
 import blue.repo.coordination.DocumentBootstrapCompleted;
 import blue.repo.coordination.DocumentBootstrapFailed;
 import blue.repo.coordination.DocumentBootstrapResponded;
+import blue.repo.coordination.DocumentLink;
+import blue.repo.coordination.DocumentLinks;
 import blue.repo.coordination.DocumentRequest;
 import blue.repo.coordination.DocumentStatus;
 import blue.repo.coordination.Event;
@@ -82,11 +86,19 @@ public final class CoordinationTypes {
 
     public static final RepositoryType CUSTOMER_CONSENT_REVOKED = CustomerConsentRevoked.repositoryType();
 
+    public static final RepositoryType DOCUMENT_ANCHOR = DocumentAnchor.repositoryType();
+
+    public static final RepositoryType DOCUMENT_ANCHORS = DocumentAnchors.repositoryType();
+
     public static final RepositoryType DOCUMENT_BOOTSTRAP_COMPLETED = DocumentBootstrapCompleted.repositoryType();
 
     public static final RepositoryType DOCUMENT_BOOTSTRAP_FAILED = DocumentBootstrapFailed.repositoryType();
 
     public static final RepositoryType DOCUMENT_BOOTSTRAP_RESPONDED = DocumentBootstrapResponded.repositoryType();
+
+    public static final RepositoryType DOCUMENT_LINK = DocumentLink.repositoryType();
+
+    public static final RepositoryType DOCUMENT_LINKS = DocumentLinks.repositoryType();
 
     public static final RepositoryType DOCUMENT_REQUEST = DocumentRequest.repositoryType();
 

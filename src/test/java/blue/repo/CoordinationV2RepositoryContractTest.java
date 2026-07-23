@@ -2,10 +2,15 @@ package blue.repo;
 
 import blue.language.Blue;
 import blue.language.model.Node;
+import blue.language.processor.model.MarkerContract;
 import blue.repo.coordination.Actor;
 import blue.repo.coordination.AllTimelinesChannel;
 import blue.repo.coordination.Authority;
 import blue.repo.coordination.CompositeTimelineChannel;
+import blue.repo.coordination.DocumentAnchor;
+import blue.repo.coordination.DocumentAnchors;
+import blue.repo.coordination.DocumentLink;
+import blue.repo.coordination.DocumentLinks;
 import blue.repo.coordination.Event;
 import blue.repo.coordination.Message;
 import blue.repo.coordination.Operation;
@@ -41,7 +46,9 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import static blue.language.utils.Properties.DICTIONARY_TYPE_BLUE_ID;
 import static blue.language.utils.Properties.LIST_TYPE_BLUE_ID;
+import static blue.language.utils.Properties.TEXT_TYPE_BLUE_ID;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -49,6 +56,45 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CoordinationV2RepositoryContractTest {
     private final BlueRepository repository = BlueRepository.latest();
+
+    @Test
+    void documentLinkContainersKeepDictionarySchemasAndLoadAsPassiveMarkers() throws Exception {
+        assertTrue(MarkerContract.class.isAssignableFrom(DocumentLinks.class));
+        assertTrue(MarkerContract.class.isAssignableFrom(DocumentAnchors.class));
+        assertFalse(MarkerContract.class.isAssignableFrom(DocumentLink.class));
+        assertFalse(MarkerContract.class.isAssignableFrom(DocumentAnchor.class));
+
+        assertDictionaryDefinition(
+                definition(CoordinationTypes.DOCUMENT_LINKS),
+                CoordinationTypes.DOCUMENT_LINK.blueId());
+        assertDictionaryDefinition(
+                definition(CoordinationTypes.DOCUMENT_ANCHORS),
+                CoordinationTypes.DOCUMENT_ANCHOR.blueId());
+
+        JsonNode link = definition(CoordinationTypes.DOCUMENT_LINK);
+        assertRequired(link, "initialDocument");
+        assertOptional(link, "anchor");
+        assertFalse(link.path("initialDocument").has("type"));
+        assertType(link, "anchor", TEXT_TYPE_BLUE_ID);
+
+        JsonNode anchor = definition(CoordinationTypes.DOCUMENT_ANCHOR);
+        assertOptional(anchor, "template");
+        assertFalse(anchor.path("template").has("type"));
+
+        Blue blue = repository.configure(new Blue());
+        Node authoredLinks = new Node()
+                .type(CoordinationTypes.DOCUMENT_LINKS.reference())
+                .properties("orders", new Node()
+                        .type(CoordinationTypes.DOCUMENT_LINK.reference())
+                        .properties("initialDocument", new Node().blueId("target-initial-blue-id")));
+
+        Object converted = blue.nodeToObject(authoredLinks, Object.class);
+        assertTrue(converted instanceof DocumentLinks);
+        assertEquals(DocumentLinks.class,
+                repository.typeClassResolver().resolveClass(CoordinationTypes.DOCUMENT_LINKS.blueId()));
+        assertEquals(DocumentAnchors.class,
+                repository.typeClassResolver().resolveClass(CoordinationTypes.DOCUMENT_ANCHORS.blueId()));
+    }
 
     @Test
     void timelineEntryExposesTheExactV2Model() throws Exception {
@@ -471,6 +517,12 @@ class CoordinationV2RepositoryContractTest {
 
     private static void assertType(JsonNode definition, String field, String expectedBlueId) {
         assertEquals(expectedBlueId, definition.path(field).at("/type/blueId").asText(), field);
+    }
+
+    private static void assertDictionaryDefinition(JsonNode definition, String expectedValueTypeBlueId) {
+        assertEquals(DICTIONARY_TYPE_BLUE_ID, definition.at("/type/blueId").asText());
+        assertEquals(TEXT_TYPE_BLUE_ID, definition.at("/keyType/blueId").asText());
+        assertEquals(expectedValueTypeBlueId, definition.at("/valueType/blueId").asText());
     }
 
     private static Set<String> fieldNames(JsonNode object) {
