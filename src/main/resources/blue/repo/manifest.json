@@ -1,13 +1,13 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "FG4LidzBiMCyVt53aP8kJXjcZXZ97mVfnv7N92zueGzr",
+  "repositoryVersionBlueId": "B7FsL4XT21LCCbhkrygytr2rKYTabHQYtC5SVArcVm5X",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
       "index": 0,
       "version": "1.3.0",
-      "repositoryBlueId": "FG4LidzBiMCyVt53aP8kJXjcZXZ97mVfnv7N92zueGzr"
+      "repositoryBlueId": "B7FsL4XT21LCCbhkrygytr2rKYTabHQYtC5SVArcVm5X"
     }
   ],
   "packageNames": [
@@ -14826,14 +14826,14 @@
       "packageName": "Mandate",
       "name": "Operation Mandate",
       "qualifiedName": "Mandate/Operation Mandate",
-      "blueId": "7i8qhMJFPdWvw8h71W8PztE6PNC1TDc1xUD8yvYGcp4R",
+      "blueId": "CnTmdtUu3ZAkaTn7TwvkvXJPsZQVFsGCn1NsRpP854wv",
       "resourcePath": "blue/repo/definitions/Mandate/OperationMandate.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "7i8qhMJFPdWvw8h71W8PztE6PNC1TDc1xUD8yvYGcp4R",
+          "typeBlueId": "CnTmdtUu3ZAkaTn7TwvkvXJPsZQVFsGCn1NsRpP854wv",
           "attributesAdded": []
         }
       ]
@@ -15208,6 +15208,22 @@
     },
     {
       "packageName": "MyOS",
+      "name": "MyOS Agent Operation Mandate",
+      "qualifiedName": "MyOS/MyOS Agent Operation Mandate",
+      "blueId": "F21DrLDLAG3VWeZntTQEWvaAVpWfsyP5Q6FUiTqM7bBw",
+      "resourcePath": "blue/repo/definitions/MyOS/MyOSAgentOperationMandate.json",
+      "status": "dev",
+      "repositoryVersionIndex": 0,
+      "versions": [
+        {
+          "repositoryVersionIndex": 0,
+          "typeBlueId": "F21DrLDLAG3VWeZntTQEWvaAVpWfsyP5Q6FUiTqM7bBw",
+          "attributesAdded": []
+        }
+      ]
+    },
+    {
+      "packageName": "MyOS",
       "name": "MyOS Balance Account",
       "qualifiedName": "MyOS/MyOS Balance Account",
       "blueId": "9aVaJJvfRrGjLZ55HbKbrd4AUgA9RmjEUCxtfCtqodM9",
@@ -15240,22 +15256,6 @@
     },
     {
       "packageName": "MyOS",
-      "name": "MyOS Document Operation Mandate",
-      "qualifiedName": "MyOS/MyOS Document Operation Mandate",
-      "blueId": "C7dtw8ZHpD93BBpL528WPq8W4xWvjnUisH9Ew8SQQ6fW",
-      "resourcePath": "blue/repo/definitions/MyOS/MyOSDocumentOperationMandate.json",
-      "status": "stable",
-      "repositoryVersionIndex": 0,
-      "versions": [
-        {
-          "repositoryVersionIndex": 0,
-          "typeBlueId": "C7dtw8ZHpD93BBpL528WPq8W4xWvjnUisH9Ew8SQQ6fW",
-          "attributesAdded": []
-        }
-      ]
-    },
-    {
-      "packageName": "MyOS",
       "name": "MyOS Document Session Reference",
       "qualifiedName": "MyOS/MyOS Document Session Reference",
       "blueId": "3FcyLzeWjTqmYYg1Tmqu2en4SKfYbCFn8Shf3gDxo9xK",
@@ -15274,14 +15274,14 @@
       "packageName": "MyOS",
       "name": "MyOS Operation Call Requested",
       "qualifiedName": "MyOS/MyOS Operation Call Requested",
-      "blueId": "8fSvEL47NFBSYEFSRNfDpx6qWXHr1T6bNfimrcZ1JR9w",
+      "blueId": "8NsDycgrB1yKaNxNkqMWhMmV8Lw81ARRc1LNry6KNUoC",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSOperationCallRequested.json",
       "status": "stable",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "8fSvEL47NFBSYEFSRNfDpx6qWXHr1T6bNfimrcZ1JR9w",
+          "typeBlueId": "8NsDycgrB1yKaNxNkqMWhMmV8Lw81ARRc1LNry6KNUoC",
           "attributesAdded": []
         }
       ]

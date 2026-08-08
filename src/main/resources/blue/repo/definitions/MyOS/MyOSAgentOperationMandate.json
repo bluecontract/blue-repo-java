@@ -1,0 +1,56 @@
+{
+  "name": "MyOS Agent Operation Mandate",
+  "description": "Reusable Operation Mandate allowing one MyOS Agent Actor to invoke the\ninherited operation for matching target documents on behalf of one MyOS\nPrincipal Actor.\n\nThe optional ordered rules list contains owner-readable instructions for a\nconstrained MyOS intelligent evaluator. The inherited request and target\ndocument validation may deterministically constrain the operation, while\nrules may provide an additional or sole target-eligibility gate. The feeder\nnever interprets rule text or invokes a model.\n",
+  "type": {
+    "blueId": "CnTmdtUu3ZAkaTn7TwvkvXJPsZQVFsGCn1NsRpP854wv"
+  },
+  "contracts": {
+    "mandateGuarantorChannel": {
+      "actor": {
+        "type": {
+          "blueId": "4eDC5moi1FwZaHkkdXLF9he1SGz2gWWNJArNKGYreksm"
+        }
+      }
+    },
+    "authorityHolderChannel": {
+      "actor": {
+        "type": {
+          "blueId": "BeUkW9h7yKH5DBgzTjF52u4PwYu9J9EmLZ5WaYZWnZuB"
+        }
+      }
+    },
+    "authorizedActorChannel": {
+      "actor": {
+        "type": {
+          "blueId": "C2Fyt8obT6QR8WWFCPF5G36VXZLwzaM1SLtMKKAp4pwd"
+        }
+      }
+    }
+  },
+  "rules": {
+    "description": "Optional ordered immutable rules. An absent or empty list means that no\nintelligent evaluation is required. Rule IDs must be non-blank and unique\nwithin the exact mandate state; the MyOS host enforces those constraints.\n",
+    "type": {
+      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+    },
+    "itemType": {
+      "id": {
+        "description": "Stable unique rule identifier within this exact mandate state.",
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "schema": {
+          "required": true
+        }
+      },
+      "text": {
+        "description": "Owner-readable instruction evaluated for each candidate action.",
+        "type": {
+          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+        },
+        "schema": {
+          "required": true
+        }
+      }
+    }
+  }
+}
