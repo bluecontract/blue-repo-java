@@ -4,11 +4,12 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.mandate.OperationMandate;
+import java.util.List;
 
-@TypeBlueId("C7dtw8ZHpD93BBpL528WPq8W4xWvjnUisH9Ew8SQQ6fW")
-public class MyOSDocumentOperationMandate extends OperationMandate {
+@TypeBlueId("6Q3h32SQfHnNM3xDSFD4R8zLGVxBY3zVcaUgbBghVwya")
+public class MyOSAgentOperationMandate extends OperationMandate {
     public static String blueId() {
-        return "C7dtw8ZHpD93BBpL528WPq8W4xWvjnUisH9Ew8SQQ6fW";
+        return "6Q3h32SQfHnNM3xDSFD4R8zLGVxBY3zVcaUgbBghVwya";
     }
 
     public static String packageName() {
@@ -16,15 +17,15 @@ public class MyOSDocumentOperationMandate extends OperationMandate {
     }
 
     public static String typeName() {
-        return "MyOS Document Operation Mandate";
+        return "MyOS Agent Operation Mandate";
     }
 
     public static String qualifiedName() {
-        return "MyOS/MyOS Document Operation Mandate";
+        return "MyOS/MyOS Agent Operation Mandate";
     }
 
     public static String resourcePath() {
-        return "blue/repo/definitions/MyOS/MyOSDocumentOperationMandate.json";
+        return "blue/repo/definitions/MyOS/MyOSAgentOperationMandate.json";
     }
 
     public static RepositoryType repositoryType() {
@@ -36,14 +37,14 @@ public class MyOSDocumentOperationMandate extends OperationMandate {
                 resourcePath());
     }
 
-    private Node authorizedInitialDocument;
+    private List<Node> rules;
 
-    public Node getAuthorizedInitialDocument() {
-        return authorizedInitialDocument;
+    public List<Node> getRules() {
+        return rules;
     }
 
-    public MyOSDocumentOperationMandate authorizedInitialDocument(Node authorizedInitialDocument) {
-        this.authorizedInitialDocument = authorizedInitialDocument;
+    public MyOSAgentOperationMandate rules(List<Node> rules) {
+        this.rules = rules;
         return this;
     }
 

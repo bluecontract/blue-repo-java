@@ -22,9 +22,9 @@ import blue.repo.myos.MyOSAgent;
 import blue.repo.myos.MyOSAgentActor;
 import blue.repo.myos.MyOSAgentChannel;
 import blue.repo.myos.MyOSAgentEvent;
+import blue.repo.myos.MyOSAgentOperationMandate;
 import blue.repo.myos.MyOSBalanceAccount;
 import blue.repo.myos.MyOSDocumentBootstrapMandate;
-import blue.repo.myos.MyOSDocumentOperationMandate;
 import blue.repo.myos.MyOSDocumentSessionReference;
 import blue.repo.myos.MyOSOperationCallRequested;
 import blue.repo.myos.MyOSParticipantsOrchestration;
@@ -102,11 +102,11 @@ public final class MyOSTypes {
 
     public static final RepositoryType MYOS_AGENT_EVENT = MyOSAgentEvent.repositoryType();
 
+    public static final RepositoryType MYOS_AGENT_OPERATION_MANDATE = MyOSAgentOperationMandate.repositoryType();
+
     public static final RepositoryType MYOS_BALANCE_ACCOUNT = MyOSBalanceAccount.repositoryType();
 
     public static final RepositoryType MYOS_DOCUMENT_BOOTSTRAP_MANDATE = MyOSDocumentBootstrapMandate.repositoryType();
-
-    public static final RepositoryType MYOS_DOCUMENT_OPERATION_MANDATE = MyOSDocumentOperationMandate.repositoryType();
 
     public static final RepositoryType MYOS_DOCUMENT_SESSION_REFERENCE = MyOSDocumentSessionReference.repositoryType();
 

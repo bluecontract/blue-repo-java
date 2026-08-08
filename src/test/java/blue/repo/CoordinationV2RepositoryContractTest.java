@@ -23,9 +23,11 @@ import blue.repo.coordination.TerminateProcessing;
 import blue.repo.coordination.Timeline;
 import blue.repo.coordination.TimelineChannel;
 import blue.repo.coordination.TimelineEntry;
+import blue.repo.mandate.OperationMandate;
 import blue.repo.myos.AllParticipantsReady;
 import blue.repo.myos.BootstrapFailed;
 import blue.repo.myos.MyOSAdminActor;
+import blue.repo.myos.MyOSAgentOperationMandate;
 import blue.repo.myos.MyOSTimeline;
 import blue.repo.myos.MyOSTimelineChannel;
 import blue.repo.myos.ParticipantResolved;
@@ -405,10 +407,26 @@ class CoordinationV2RepositoryContractTest {
     }
 
     @Test
-    void myosMandatesConstrainBothAdminActorRoles() throws Exception {
+    void operationMandateDefinesReusableOptionalDocumentScope() throws Exception {
+        JsonNode definition = definition(MandateTypes.OPERATION_MANDATE);
+
+        assertRequired(definition, "target");
+
+        JsonNode target = definition.path("target");
+        assertRequired(target, "channel", "operation");
+        assertOptional(target, "documentValidation");
+        assertFalse(target.has("initialDocument"));
+
+        JsonNode documentValidation = target.path("documentValidation");
+        assertOptional(documentValidation, "document", "function");
+        assertFalse(documentValidation.path("document").has("type"));
+        assertFalse(documentValidation.path("function").has("type"));
+    }
+
+    @Test
+    void platformMandatesConstrainBothAdminActorRoles() throws Exception {
         for (RepositoryType mandateType : Arrays.asList(
                 MyOSTypes.MYOS_DOCUMENT_BOOTSTRAP_MANDATE,
-                MyOSTypes.MYOS_DOCUMENT_OPERATION_MANDATE,
                 MyOSTypes.MYOS_SESSION_SUBSCRIPTION_MANDATE
         )) {
             JsonNode definition = definition(mandateType);
@@ -417,6 +435,31 @@ class CoordinationV2RepositoryContractTest {
             assertEquals(MyOSTypes.MYOS_ADMIN_ACTOR.blueId(), definition.at(
                     "/contracts/authorizedActorChannel/actor/type/blueId").asText(), mandateType.qualifiedName());
         }
+    }
+
+    @Test
+    void agentOperationMandateRequiresDocumentScopeAndAgentRoleBindings() throws Exception {
+        assertTrue(OperationMandate.class.isAssignableFrom(MyOSAgentOperationMandate.class));
+
+        JsonNode definition = definition(MyOSTypes.MYOS_AGENT_OPERATION_MANDATE);
+        assertEquals(MandateTypes.OPERATION_MANDATE.blueId(), definition.at("/type/blueId").asText());
+
+        assertRequired(definition.path("target"), "documentValidation");
+        assertRequired(definition.at("/target/documentValidation"), "document");
+        assertOptional(definition, "rules");
+        assertEquals(LIST_TYPE_BLUE_ID, definition.at("/rules/type/blueId").asText());
+        assertRequired(definition.at("/rules/itemType"), "id", "text");
+
+        assertEquals(MyOSTypes.MYOS_ADMIN_ACTOR.blueId(), definition.at(
+                "/contracts/mandateGuarantorChannel/actor/type/blueId").asText());
+        assertEquals(MyOSTypes.PRINCIPAL_ACTOR.blueId(), definition.at(
+                "/contracts/authorityHolderChannel/actor/type/blueId").asText());
+        assertEquals(MyOSTypes.MYOS_AGENT_ACTOR.blueId(), definition.at(
+                "/contracts/authorizedActorChannel/actor/type/blueId").asText());
+        assertRequired(definition.at("/contracts/authorizedActorChannel/actor"),
+                "agentId", "accountId", "onBehalfOf");
+        assertEquals(MyOSTypes.PRINCIPAL_ACTOR.blueId(), definition.at(
+                "/contracts/authorizedActorChannel/actor/onBehalfOf/type/blueId").asText());
     }
 
     @Test
