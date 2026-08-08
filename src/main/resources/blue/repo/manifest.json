@@ -1,13 +1,13 @@
 {
   "repositoryName": "Blue Repository",
   "repositoryVersion": "1.3.0",
-  "repositoryVersionBlueId": "6RmYfs98FL7rcNwfRbfxt8bP2Viptz4gjAMnpPD43peL",
+  "repositoryVersionBlueId": "A1tM6ns5WLk6dbhyoc8NP3N52PZ54heq4FZ7nDrwijR",
   "sourceResource": "blue/repo/BlueRepository.blue",
   "repositoryVersions": [
     {
       "index": 0,
       "version": "1.3.0",
-      "repositoryBlueId": "6RmYfs98FL7rcNwfRbfxt8bP2Viptz4gjAMnpPD43peL"
+      "repositoryBlueId": "A1tM6ns5WLk6dbhyoc8NP3N52PZ54heq4FZ7nDrwijR"
     }
   ],
   "packageNames": [
@@ -15210,14 +15210,14 @@
       "packageName": "MyOS",
       "name": "MyOS Agent Operation Mandate",
       "qualifiedName": "MyOS/MyOS Agent Operation Mandate",
-      "blueId": "6Q3h32SQfHnNM3xDSFD4R8zLGVxBY3zVcaUgbBghVwya",
+      "blueId": "ET8jdkAHvYmggWFSMbxsHN3YquaKg3gtFrwnmCCbFazi",
       "resourcePath": "blue/repo/definitions/MyOS/MyOSAgentOperationMandate.json",
       "status": "dev",
       "repositoryVersionIndex": 0,
       "versions": [
         {
           "repositoryVersionIndex": 0,
-          "typeBlueId": "6Q3h32SQfHnNM3xDSFD4R8zLGVxBY3zVcaUgbBghVwya",
+          "typeBlueId": "ET8jdkAHvYmggWFSMbxsHN3YquaKg3gtFrwnmCCbFazi",
           "attributesAdded": []
         }
       ]

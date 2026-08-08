@@ -438,7 +438,7 @@ class CoordinationV2RepositoryContractTest {
     }
 
     @Test
-    void agentOperationMandateRequiresDocumentScopeAndAgentRoleBindings() throws Exception {
+    void agentOperationMandateRequiresDocumentScopeAndAgentActorType() throws Exception {
         assertTrue(OperationMandate.class.isAssignableFrom(MyOSAgentOperationMandate.class));
 
         JsonNode definition = definition(MyOSTypes.MYOS_AGENT_OPERATION_MANDATE);
@@ -454,18 +454,21 @@ class CoordinationV2RepositoryContractTest {
                 "/contracts/mandateGuarantorChannel/actor/type/blueId").asText());
         assertEquals(MyOSTypes.PRINCIPAL_ACTOR.blueId(), definition.at(
                 "/contracts/authorityHolderChannel/actor/type/blueId").asText());
-        assertEquals(MyOSTypes.MYOS_AGENT_ACTOR.blueId(), definition.at(
-                "/contracts/authorizedActorChannel/actor/type/blueId").asText());
-        assertRequired(definition.at("/contracts/authorizedActorChannel/actor"),
-                "agentId", "accountId", "onBehalfOf");
-        assertEquals(MyOSTypes.PRINCIPAL_ACTOR.blueId(), definition.at(
-                "/contracts/authorizedActorChannel/actor/onBehalfOf/type/blueId").asText());
+
+        JsonNode authorizedActor = definition.at("/contracts/authorizedActorChannel/actor");
+        assertEquals(Collections.singleton("type"), fieldNames(authorizedActor));
+        assertEquals(MyOSTypes.MYOS_AGENT_ACTOR.blueId(), authorizedActor.at("/type/blueId").asText());
     }
 
     @Test
     void currentAgentActorTypesResolve() throws Exception {
-        assertEquals("Agent Actor", definition(CoordinationTypes.AGENT_ACTOR).path("name").asText());
-        assertEquals("MyOS Agent Actor", definition(MyOSTypes.MYOS_AGENT_ACTOR).path("name").asText());
+        JsonNode agentActor = definition(CoordinationTypes.AGENT_ACTOR);
+        assertEquals("Agent Actor", agentActor.path("name").asText());
+        assertOptional(agentActor, "onBehalfOf");
+
+        JsonNode myOsAgentActor = definition(MyOSTypes.MYOS_AGENT_ACTOR);
+        assertEquals("MyOS Agent Actor", myOsAgentActor.path("name").asText());
+        assertEquals(CoordinationTypes.AGENT_ACTOR.blueId(), myOsAgentActor.at("/type/blueId").asText());
     }
 
     private JsonNode definition(RepositoryType type) throws Exception {

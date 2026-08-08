@@ -23,33 +23,6 @@
       "actor": {
         "type": {
           "blueId": "C2Fyt8obT6QR8WWFCPF5G36VXZLwzaM1SLtMKKAp4pwd"
-        },
-        "agentId": {
-          "description": "Stable MyOS identity of the acting specialist Agent.",
-          "type": {
-            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-          },
-          "schema": {
-            "required": true
-          }
-        },
-        "accountId": {
-          "description": "Account whose Principal is represented by this Agent.",
-          "type": {
-            "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-          },
-          "schema": {
-            "required": true
-          }
-        },
-        "onBehalfOf": {
-          "description": "Exact authority-holder Principal represented by the Agent.",
-          "type": {
-            "blueId": "BeUkW9h7yKH5DBgzTjF52u4PwYu9J9EmLZ5WaYZWnZuB"
-          },
-          "schema": {
-            "required": true
-          }
         }
       }
     }

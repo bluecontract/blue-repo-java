@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.mandate.OperationMandate;
 import java.util.List;
 
-@TypeBlueId("6Q3h32SQfHnNM3xDSFD4R8zLGVxBY3zVcaUgbBghVwya")
+@TypeBlueId("ET8jdkAHvYmggWFSMbxsHN3YquaKg3gtFrwnmCCbFazi")
 public class MyOSAgentOperationMandate extends OperationMandate {
     public static String blueId() {
-        return "6Q3h32SQfHnNM3xDSFD4R8zLGVxBY3zVcaUgbBghVwya";
+        return "ET8jdkAHvYmggWFSMbxsHN3YquaKg3gtFrwnmCCbFazi";
     }
 
     public static String packageName() {
