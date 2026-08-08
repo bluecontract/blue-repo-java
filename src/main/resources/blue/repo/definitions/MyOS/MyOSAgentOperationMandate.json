@@ -1,6 +1,6 @@
 {
   "name": "MyOS Agent Operation Mandate",
-  "description": "Reusable Operation Mandate allowing one MyOS Agent Actor to invoke the\ninherited operation for matching target documents on behalf of one MyOS\nPrincipal Actor. Version 1 requires deterministic static document scope.\n\nThe optional ordered rules list contains owner-readable instructions for a\nconstrained MyOS intelligent evaluator. Rules may only narrow the\ndeterministic document and request scope. The feeder never interprets rule\ntext or invokes a model.\n",
+  "description": "Reusable Operation Mandate allowing one MyOS Agent Actor to invoke the\ninherited operation for matching target documents on behalf of one MyOS\nPrincipal Actor.\n\nThe optional ordered rules list contains owner-readable instructions for a\nconstrained MyOS intelligent evaluator. The inherited request and target\ndocument validation may deterministically constrain the operation, while\nrules may provide an additional or sole target-eligibility gate. The feeder\nnever interprets rule text or invokes a model.\n",
   "type": {
     "blueId": "CnTmdtUu3ZAkaTn7TwvkvXJPsZQVFsGCn1NsRpP854wv"
   },
@@ -23,18 +23,6 @@
       "actor": {
         "type": {
           "blueId": "C2Fyt8obT6QR8WWFCPF5G36VXZLwzaM1SLtMKKAp4pwd"
-        }
-      }
-    }
-  },
-  "target": {
-    "documentValidation": {
-      "schema": {
-        "required": true
-      },
-      "document": {
-        "schema": {
-          "required": true
         }
       }
     }

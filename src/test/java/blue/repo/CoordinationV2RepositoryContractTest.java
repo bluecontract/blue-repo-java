@@ -438,14 +438,13 @@ class CoordinationV2RepositoryContractTest {
     }
 
     @Test
-    void agentOperationMandateRequiresDocumentScopeAndAgentActorType() throws Exception {
+    void agentOperationMandateInheritsOptionalDocumentScopeAndRequiresAgentActorType() throws Exception {
         assertTrue(OperationMandate.class.isAssignableFrom(MyOSAgentOperationMandate.class));
 
         JsonNode definition = definition(MyOSTypes.MYOS_AGENT_OPERATION_MANDATE);
         assertEquals(MandateTypes.OPERATION_MANDATE.blueId(), definition.at("/type/blueId").asText());
 
-        assertRequired(definition.path("target"), "documentValidation");
-        assertRequired(definition.at("/target/documentValidation"), "document");
+        assertFalse(definition.has("target"));
         assertOptional(definition, "rules");
         assertEquals(LIST_TYPE_BLUE_ID, definition.at("/rules/type/blueId").asText());
         assertRequired(definition.at("/rules/itemType"), "id", "text");
