@@ -963,6 +963,7 @@ public final class BlueRepositoryModels {
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSAgentChannel.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSAgentEvent.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSAgentOperationMandate.class);
+        resolver.registerAnnotatedClass(blue.repo.myos.MyOSAgentOperationRule.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSBalanceAccount.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSDocumentBootstrapMandate.class);
         resolver.registerAnnotatedClass(blue.repo.myos.MyOSDocumentSessionReference.class);

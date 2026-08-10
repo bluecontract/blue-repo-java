@@ -28,6 +28,7 @@ import blue.repo.myos.AllParticipantsReady;
 import blue.repo.myos.BootstrapFailed;
 import blue.repo.myos.MyOSAdminActor;
 import blue.repo.myos.MyOSAgentOperationMandate;
+import blue.repo.myos.MyOSAgentOperationRule;
 import blue.repo.myos.MyOSTimeline;
 import blue.repo.myos.MyOSTimelineChannel;
 import blue.repo.myos.ParticipantResolved;
@@ -41,6 +42,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.InputStream;
 import java.lang.reflect.Field;
+import java.lang.reflect.ParameterizedType;
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collections;
@@ -447,7 +449,18 @@ class CoordinationV2RepositoryContractTest {
         assertFalse(definition.has("target"));
         assertOptional(definition, "rules");
         assertEquals(LIST_TYPE_BLUE_ID, definition.at("/rules/type/blueId").asText());
-        assertRequired(definition.at("/rules/itemType"), "id", "text");
+        assertEquals(MyOSTypes.MYOS_AGENT_OPERATION_RULE.blueId(),
+                definition.at("/rules/itemType/blueId").asText());
+
+        ParameterizedType rulesType = (ParameterizedType) MyOSAgentOperationMandate.class
+                .getDeclaredField("rules")
+                .getGenericType();
+        assertEquals(MyOSAgentOperationRule.class, rulesType.getActualTypeArguments()[0]);
+
+        JsonNode rule = definition(MyOSTypes.MYOS_AGENT_OPERATION_RULE);
+        assertRequired(rule, "id", "text");
+        assertFieldType(MyOSAgentOperationRule.class, "id", String.class);
+        assertFieldType(MyOSAgentOperationRule.class, "text", String.class);
 
         assertEquals(MyOSTypes.MYOS_ADMIN_ACTOR.blueId(), definition.at(
                 "/contracts/mandateGuarantorChannel/actor/type/blueId").asText());
