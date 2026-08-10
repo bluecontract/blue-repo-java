@@ -3,13 +3,11 @@ package blue.repo.myos;
 import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
-import blue.repo.mandate.OperationMandate;
-import java.util.List;
 
-@TypeBlueId("GiN8yWYYXuQgMCSUBNhgnbVpmDePwNxMrTvLhUgzadNU")
-public class MyOSAgentOperationMandate extends OperationMandate {
+@TypeBlueId("73jmPJ7x1sgA5yLjv74ZrRGHpUXgUYfQHyAp6SArKwWW")
+public class MyOSAgentOperationRule {
     public static String blueId() {
-        return "GiN8yWYYXuQgMCSUBNhgnbVpmDePwNxMrTvLhUgzadNU";
+        return "73jmPJ7x1sgA5yLjv74ZrRGHpUXgUYfQHyAp6SArKwWW";
     }
 
     public static String packageName() {
@@ -17,15 +15,15 @@ public class MyOSAgentOperationMandate extends OperationMandate {
     }
 
     public static String typeName() {
-        return "MyOS Agent Operation Mandate";
+        return "MyOS Agent Operation Rule";
     }
 
     public static String qualifiedName() {
-        return "MyOS/MyOS Agent Operation Mandate";
+        return "MyOS/MyOS Agent Operation Rule";
     }
 
     public static String resourcePath() {
-        return "blue/repo/definitions/MyOS/MyOSAgentOperationMandate.json";
+        return "blue/repo/definitions/MyOS/MyOSAgentOperationRule.json";
     }
 
     public static RepositoryType repositoryType() {
@@ -37,14 +35,25 @@ public class MyOSAgentOperationMandate extends OperationMandate {
                 resourcePath());
     }
 
-    private List<MyOSAgentOperationRule> rules;
+    private String id;
 
-    public List<MyOSAgentOperationRule> getRules() {
-        return rules;
+    private String text;
+
+    public String getId() {
+        return id;
     }
 
-    public MyOSAgentOperationMandate rules(List<MyOSAgentOperationRule> rules) {
-        this.rules = rules;
+    public MyOSAgentOperationRule id(String id) {
+        this.id = id;
+        return this;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public MyOSAgentOperationRule text(String text) {
+        this.text = text;
         return this;
     }
 

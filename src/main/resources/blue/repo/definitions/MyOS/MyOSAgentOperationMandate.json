@@ -33,24 +33,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "id": {
-        "description": "Stable unique rule identifier within this exact mandate state.",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        },
-        "schema": {
-          "required": true
-        }
-      },
-      "text": {
-        "description": "Owner-readable instruction evaluated for each candidate action.",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        },
-        "schema": {
-          "required": true
-        }
-      }
+      "blueId": "73jmPJ7x1sgA5yLjv74ZrRGHpUXgUYfQHyAp6SArKwWW"
     }
   }
 }

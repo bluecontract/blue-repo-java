@@ -1,0 +1,22 @@
+{
+  "name": "MyOS Agent Operation Rule",
+  "description": "Owner-readable instruction used by the constrained MyOS intelligent evaluator for one candidate action.",
+  "id": {
+    "description": "Stable unique rule identifier within this exact mandate state.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  },
+  "text": {
+    "description": "Owner-readable instruction evaluated for each candidate action.",
+    "type": {
+      "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
+    },
+    "schema": {
+      "required": true
+    }
+  }
+}
