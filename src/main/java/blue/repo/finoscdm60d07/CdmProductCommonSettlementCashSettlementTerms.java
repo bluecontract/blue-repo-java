@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("Fffk6F9WofKSKmkg6i3ft1dNq2tPApbqbMZjguK1xFX8")
+@TypeBlueId("B8JUPo67P3HKCJkXYshgHzHpFcYXmZfFH56cPhdGtqBG")
 public class CdmProductCommonSettlementCashSettlementTerms {
     public static String blueId() {
-        return "Fffk6F9WofKSKmkg6i3ft1dNq2tPApbqbMZjguK1xFX8";
+        return "B8JUPo67P3HKCJkXYshgHzHpFcYXmZfFH56cPhdGtqBG";
     }
 
     public static String packageName() {

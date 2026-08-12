@@ -4,7 +4,7 @@
   "calculationMethod": {
     "description": "Identifies which of the Pythagorean means is being used to compute an average value.",
     "type": {
-      "blueId": "D8BAM3Ef8YgktLMNJZg82NyQjEWkwYXQ2pZYpzsXPtnQ"
+      "blueId": "518mz1k7ayS8Y3S4y9HauLqAQMigdB4Vf2r7XcVSwyuJ"
     },
     "schema": {
       "required": true

@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("4h5N1XJhikomVgESoUQkDUs2Qfx1RK39JWGgd8HQXgEv")
+@TypeBlueId("CPirifxyoZ3EheLcX6KW9muSEUsxpDaj7mJXu5zW6jsJ")
 public class CdmObservableCommonTimeTypeEnum {
     public static String blueId() {
-        return "4h5N1XJhikomVgESoUQkDUs2Qfx1RK39JWGgd8HQXgEv";
+        return "CPirifxyoZ3EheLcX6KW9muSEUsxpDaj7mJXu5zW6jsJ";
     }
 
     public static String packageName() {

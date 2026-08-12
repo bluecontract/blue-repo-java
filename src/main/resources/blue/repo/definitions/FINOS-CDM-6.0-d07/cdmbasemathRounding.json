@@ -10,7 +10,7 @@
   "roundingDirection": {
     "description": "Specifies the rounding rounding rule as up, down, or nearest.",
     "type": {
-      "blueId": "53mxbAPQ46Wh3prwQvdFjRpUKwN5aa2yN3YLYMRZotEK"
+      "blueId": "H4FAiqzdtZUhJfTdaLDLQxZR4hvCAduUrJec1nziCJCX"
     },
     "schema": {
       "required": true

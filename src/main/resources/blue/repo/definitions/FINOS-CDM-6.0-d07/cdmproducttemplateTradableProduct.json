@@ -4,7 +4,7 @@
   "adjustment": {
     "description": "Specifies the conditions that govern the adjustment to the quantity of a product being traded: e.g. execution, portfolio rebalancing etc. It is typically used in the context of Equity Swaps.\n",
     "type": {
-      "blueId": "Fu36EUGcA7u8BqhZftYyUEUqgrd4mi4LXffiZx7DXTvo"
+      "blueId": "JDTKqVSFgAW8D49b5dnvsCk1uam8HJqLTHTDgrFTMBA5"
     }
   },
   "ancillaryParty": {
@@ -13,7 +13,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "3FLaoJ8BXZUb3VpFoXQ7ACwUhTaDAZgwztubj17GegH4"
+      "blueId": "4iPHY4aygMFyDNb5teEsJeb7EyeK3CitfuP7DqfgnT1w"
     },
     "schema": {
       "minItems": 0
@@ -25,7 +25,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "58TeStN7sJrzoG3o1U7FZq3fFkxbCXkvdWPYYZkf1r3x"
+      "blueId": "57Lwnif22McYRjgDzSyRZTsqY1Ac9LMSJcJ9KRXKiE6w"
     },
     "schema": {
       "minItems": 2,
@@ -35,7 +35,7 @@
   "product": {
     "description": "The underlying product to be included in a contract or execution.",
     "type": {
-      "blueId": "8uQuzNQKBLC5kpFy4UH3BU7PPtpbRZEfLQ2ftrsgLHbm#4"
+      "blueId": "52zbUBnH8375AE19gNSXRU7GgGs5tcoUhR84LVdMrBWi#5"
     },
     "schema": {
       "required": true
@@ -47,7 +47,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "BmdnVkDXfdg2N2r7qgbCGTcmvRVJJCeGYWgqPEVPtqns"
+      "blueId": "HwkEbgYkrYCDgT4YrxJHmaJVigftQBmkyttz9NLVtre6"
     },
     "schema": {
       "minItems": 1

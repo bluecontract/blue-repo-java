@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("BwbqfunwwJxSMfQD4CEUJ2Ab4AqzjMTjpeSCF3E1NLYx")
+@TypeBlueId("35Mio6Cn5LCV87BMNgBeT2ES36yc1gKxP2eUzWb8mNzP")
 public class CdmMarginScheduleStandardizedScheduleProductClassEnum {
     public static String blueId() {
-        return "BwbqfunwwJxSMfQD4CEUJ2Ab4AqzjMTjpeSCF3E1NLYx";
+        return "35Mio6Cn5LCV87BMNgBeT2ES36yc1gKxP2eUzWb8mNzP";
     }
 
     public static String packageName() {

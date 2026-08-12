@@ -4,7 +4,7 @@
   "identifier": {
     "description": "Provides an identifier associated with a party. The identifier is unique within the public source specified in the source attribute.\n",
     "type": {
-      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
+      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "identifierType": {
     "description": "Defines the source of the identifier.",
     "type": {
-      "blueId": "JCXuAtNHkVPfjzG8gXbgiwoAYAmMiB2EfaSy8qU3iqtz"
+      "blueId": "HF2iBeqVB9K52LiqMfKwUtdriqmD7BQiewBjXBWpF763"
     }
   }
 }

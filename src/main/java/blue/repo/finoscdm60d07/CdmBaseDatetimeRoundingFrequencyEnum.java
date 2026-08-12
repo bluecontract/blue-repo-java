@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("Fw3wLbrcadtqbe88BTTnN3TZSgcXPzyHjjPvsic6NY2P")
+@TypeBlueId("5uKXCGmozs8beHQLK5giHsJTcGD627CoqZ66K9g4ovMs")
 public class CdmBaseDatetimeRoundingFrequencyEnum {
     public static String blueId() {
-        return "Fw3wLbrcadtqbe88BTTnN3TZSgcXPzyHjjPvsic6NY2P";
+        return "5uKXCGmozs8beHQLK5giHsJTcGD627CoqZ66K9g4ovMs";
     }
 
     public static String packageName() {

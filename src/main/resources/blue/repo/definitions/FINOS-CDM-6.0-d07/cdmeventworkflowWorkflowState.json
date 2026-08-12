@@ -13,7 +13,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "HL2ZcMwczuHgPoUL75nm9XG9rZy6XeFMmzGuuWfqxkya"
+      "blueId": "CwZCsRkBByBtLTC63kaBcjcNDQKK1hV2Mnh42XUhafmm"
     },
     "schema": {
       "minItems": 0
@@ -22,13 +22,13 @@
   "warehouseIdentity": {
     "description": "The identity of the warehouse, if any, that is executing that workflow step.",
     "type": {
-      "blueId": "6exizYh6WdJdboTXU5vG7ZycT7oysGTNWCBaBzuWkBBs"
+      "blueId": "A1oVS1sh8n5WgZyH6sTQy19sNHZuLmWHHBGQLvN4s1Xq"
     }
   },
   "workflowStatus": {
     "description": "The workflow status indicator, e.g. Accepted, Rejected, ...",
     "type": {
-      "blueId": "BvJRype2zWVijuwSinejW5FK4QMppv6EphZ6CPresR4s"
+      "blueId": "5dZPU8bHyFfAju8bde9s3C64P7cYcu2c4awm2CKzJfmY"
     },
     "schema": {
       "required": true

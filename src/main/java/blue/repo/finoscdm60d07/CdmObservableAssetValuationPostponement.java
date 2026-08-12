@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.math.BigInteger;
 
-@TypeBlueId("FSNs7wPUozqjz5B6qRf7FwdstVC9R3vaMucjkk4PqKXW")
+@TypeBlueId("BbM2nqKiVihnZtKM1sJKM3HK23io3UM784GeaXFmEKiY")
 public class CdmObservableAssetValuationPostponement {
     public static String blueId() {
-        return "FSNs7wPUozqjz5B6qRf7FwdstVC9R3vaMucjkk4PqKXW";
+        return "BbM2nqKiVihnZtKM1sJKM3HK23io3UM784GeaXFmEKiY";
     }
 
     public static String packageName() {

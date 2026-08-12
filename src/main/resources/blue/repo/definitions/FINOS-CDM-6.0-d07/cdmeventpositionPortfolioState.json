@@ -4,7 +4,7 @@
   "lineage": {
     "description": "Pointer to the previous PortfolioState and new Event(s) leading to the current (new) state. Previous PortfolioState in the Lineage can be Null in case this is the start of the chain of Events.\n",
     "type": {
-      "blueId": "AU5SZ3DHqRdpqT1JPJ9S96fTUWv7kU2ofDC4zNRK6quM"
+      "blueId": "8F2a2dkMM98d7KGUagPkBdhXVErYpJBwveTH1UGZo57N"
     },
     "schema": {
       "required": true
@@ -16,7 +16,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "22Lbahf1cGvTSTcW83aFHjBwGYU4D8XJ4Nmupa8TNRJH"
+      "blueId": "Fp7ngXaKudMmdfVjxEwdxVawRRc2E8bXhucLMMuNQyKs"
     },
     "schema": {
       "minItems": 0

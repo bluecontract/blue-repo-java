@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.coordination.Operation;
 
-@TypeBlueId("J3eHxcp4f3sKC2zohWMWLo5AvWAi2DJiNBPkExd1EhvU")
+@TypeBlueId("9dhHG1LpwkNSRrds8zMZquTEy4DV8UFkRVJRF5H15QYV")
 public class RejectChangeOperation extends Operation {
     public static String blueId() {
-        return "J3eHxcp4f3sKC2zohWMWLo5AvWAi2DJiNBPkExd1EhvU";
+        return "9dhHG1LpwkNSRrds8zMZquTEy4DV8UFkRVJRF5H15QYV";
     }
 
     public static String packageName() {

@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.coordination.Message;
 
-@TypeBlueId("EcXZbNZ5BjMCBEwEaPExWjK6KLLrt3Aoxx5TNQiA5R1A")
+@TypeBlueId("C3Y1zAyhCiu9wJ23gYg6vqFnVQyXKZeiHow9CzJ4W9t7")
 public class MandateTerminated extends Message {
     public static String blueId() {
-        return "EcXZbNZ5BjMCBEwEaPExWjK6KLLrt3Aoxx5TNQiA5R1A";
+        return "C3Y1zAyhCiu9wJ23gYg6vqFnVQyXKZeiHow9CzJ4W9t7";
     }
 
     public static String packageName() {

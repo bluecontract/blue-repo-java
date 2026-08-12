@@ -4,7 +4,7 @@
   "agreement": {
     "description": "Specification of the standard set of terms that define a legal agreement.",
     "type": {
-      "blueId": "24XR8iGVZsSMcRtHNgWSpYEEza3KosniTayAxz2hnncm"
+      "blueId": "DTCMrR8qY9BpbXqsCRwfEYiDY2fo4LEFLGBGTPQSA38A"
     },
     "schema": {
       "required": true
@@ -22,7 +22,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "58TeStN7sJrzoG3o1U7FZq3fFkxbCXkvdWPYYZkf1r3x"
+      "blueId": "57Lwnif22McYRjgDzSyRZTsqY1Ac9LMSJcJ9KRXKiE6w"
     },
     "schema": {
       "minItems": 2,

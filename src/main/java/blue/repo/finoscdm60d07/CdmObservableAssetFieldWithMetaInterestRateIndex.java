@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("9QkWzeLcgPCCJUappiHJdN2AEyj6ZnCAsxX668fGGgG5")
+@TypeBlueId("BsnCbY3QHNpAikpriPmsdfVAKjXaEUdXGrL1jr9zybeu")
 public class CdmObservableAssetFieldWithMetaInterestRateIndex {
     public static String blueId() {
-        return "9QkWzeLcgPCCJUappiHJdN2AEyj6ZnCAsxX668fGGgG5";
+        return "BsnCbY3QHNpAikpriPmsdfVAKjXaEUdXGrL1jr9zybeu";
     }
 
     public static String packageName() {

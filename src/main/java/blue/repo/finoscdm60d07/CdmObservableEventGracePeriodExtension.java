@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("BTysZP1WpL4z9tsQazV1uF7AmmG5ZiX4Q8ABMpMSnfCW")
+@TypeBlueId("DWdjsHAuRVoiRCLvLpuzVLV1CMvzVLhNktBkLdXcEPPB")
 public class CdmObservableEventGracePeriodExtension {
     public static String blueId() {
-        return "BTysZP1WpL4z9tsQazV1uF7AmmG5ZiX4Q8ABMpMSnfCW";
+        return "DWdjsHAuRVoiRCLvLpuzVLV1CMvzVLhNktBkLdXcEPPB";
     }
 
     public static String packageName() {

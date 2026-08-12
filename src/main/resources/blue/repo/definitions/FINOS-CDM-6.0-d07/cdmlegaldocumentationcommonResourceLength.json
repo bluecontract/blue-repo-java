@@ -4,7 +4,7 @@
   "lengthUnit": {
     "description": "The length unit of the resource. For example, pages (pdf, text documents) or time (audio, video files).",
     "type": {
-      "blueId": "55gwzrtwt8NQXzuzesGej1NAFoZdqtmqMGguHuuJAZJN"
+      "blueId": "6vcZYhvuXcMx67xRb2WKynrAR7WjtonaLWjGiAZbPD3D"
     },
     "schema": {
       "required": true

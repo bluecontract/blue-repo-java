@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("4eDC5moi1FwZaHkkdXLF9he1SGz2gWWNJArNKGYreksm")
+@TypeBlueId("1ev2FjQCVqxyynB7o27PJmQo8bQmf9ECvvF2z5ekV1L")
 public class MyOSAdminActor extends PrincipalActor {
     public static String blueId() {
-        return "4eDC5moi1FwZaHkkdXLF9he1SGz2gWWNJArNKGYreksm";
+        return "1ev2FjQCVqxyynB7o27PJmQo8bQmf9ECvvF2z5ekV1L";
     }
 
     public static String packageName() {

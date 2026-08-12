@@ -1,8 +1,9 @@
 package blue.repo;
 
-import blue.language.Blue;
+import blue.language.BlueRuntime;
 import blue.language.model.Node;
 import blue.language.processor.model.MarkerContract;
+import blue.language.registry.BlueCoreTypeRegistry;
 import blue.repo.coordination.Actor;
 import blue.repo.coordination.AllTimelinesChannel;
 import blue.repo.coordination.Authority;
@@ -37,10 +38,8 @@ import blue.repo.types.CoordinationTypes;
 import blue.repo.types.MandateTypes;
 import blue.repo.types.MyOSTypes;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 
-import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.math.BigInteger;
@@ -50,15 +49,15 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import static blue.language.utils.Properties.DICTIONARY_TYPE_BLUE_ID;
-import static blue.language.utils.Properties.LIST_TYPE_BLUE_ID;
-import static blue.language.utils.Properties.TEXT_TYPE_BLUE_ID;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CoordinationV2RepositoryContractTest {
+    private static final String DICTIONARY_TYPE_BLUE_ID = BlueCoreTypeRegistry.INSTANCE.blueId("Dictionary");
+    private static final String LIST_TYPE_BLUE_ID = BlueCoreTypeRegistry.INSTANCE.blueId("List");
+    private static final String TEXT_TYPE_BLUE_ID = BlueCoreTypeRegistry.INSTANCE.blueId("Text");
+
     private final BlueRepository repository = BlueRepository.latest();
 
     @Test
@@ -85,14 +84,14 @@ class CoordinationV2RepositoryContractTest {
         assertOptional(anchor, "template");
         assertFalse(anchor.path("template").has("type"));
 
-        Blue blue = repository.configure(new Blue());
+        BlueRuntime runtime = repository.runtime();
         Node authoredLinks = new Node()
                 .type(CoordinationTypes.DOCUMENT_LINKS.reference())
                 .properties("orders", new Node()
                         .type(CoordinationTypes.DOCUMENT_LINK.reference())
                         .properties("initialDocument", new Node().blueId("target-initial-blue-id")));
 
-        Object converted = blue.nodeToObject(authoredLinks, Object.class);
+        Object converted = runtime.mapping().fromNode(authoredLinks, Object.class);
         assertTrue(converted instanceof DocumentLinks);
         assertEquals(DocumentLinks.class,
                 repository.typeClassResolver().resolveClass(CoordinationTypes.DOCUMENT_LINKS.blueId()));
@@ -134,7 +133,7 @@ class CoordinationV2RepositoryContractTest {
 
     @Test
     void timelineEntryWithoutSequenceRoundTripsAndPreservesExtensionMetadata() {
-        Blue blue = repository.configure(new Blue());
+        BlueRuntime runtime = repository.runtime();
         BigInteger timestamp = new BigInteger("9223372036854775808123456789");
         TimelineEntry entry = new TimelineEntry()
                 .timeline(new Timeline().timelineId("sequence-free"))
@@ -142,9 +141,9 @@ class CoordinationV2RepositoryContractTest {
                 .actor(new Actor())
                 .message(new Node().value("payload"));
 
-        Node authored = blue.objectToNode(entry)
+        Node authored = runtime.mapping().toNode(entry)
                 .properties("providerSequence", new Node().value(BigInteger.valueOf(17)));
-        Object roundTripped = blue.nodeToObject(authored, Object.class);
+        Object roundTripped = runtime.mapping().fromNode(authored, Object.class);
 
         assertTrue(roundTripped instanceof TimelineEntry);
         assertEquals(timestamp, ((TimelineEntry) roundTripped).getTimestamp());
@@ -488,13 +487,8 @@ class CoordinationV2RepositoryContractTest {
     }
 
     private JsonNode definition(String qualifiedName) throws Exception {
-        RepositoryDefinition definition = repository.definition(qualifiedName)
-                .orElseThrow(() -> new AssertionError("Missing repository definition: " + qualifiedName));
-        try (InputStream input = CoordinationV2RepositoryContractTest.class.getClassLoader()
-                .getResourceAsStream(definition.resourcePath())) {
-            assertNotNull(input, definition.resourcePath());
-            return new ObjectMapper().readTree(input);
-        }
+        return RepositorySourceDefinitions.definition(
+                repository, qualifiedName);
     }
 
     private void assertComputeWorkflow(JsonNode contracts, String contractName, String entry) {

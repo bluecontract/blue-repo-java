@@ -13,7 +13,7 @@
   "role": {
     "description": "Specifies the CounterpartyEnum, e.g. either Party1 or Party2, that is associated to the partyReference.",
     "type": {
-      "blueId": "6RRexSdxduLUUJjoAGhNuhXszw24mwyTFrHtwAqU2SDG"
+      "blueId": "7qRfgFBAefYQ37ztmK2dW9i4twZzBjKcQiHPeHrcRtYw"
     },
     "schema": {
       "required": true

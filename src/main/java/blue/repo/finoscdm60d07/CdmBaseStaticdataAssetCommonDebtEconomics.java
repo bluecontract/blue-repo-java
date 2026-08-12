@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("7Lf9XXZdBaTwDFPQsXLZfcyiVkKhfJ2GJcKZFMkQ7mNX")
+@TypeBlueId("7zaJEZ9NefFZk4CeyVPKCqRnx3UJruPMysi4hejrpUit")
 public class CdmBaseStaticdataAssetCommonDebtEconomics {
     public static String blueId() {
-        return "7Lf9XXZdBaTwDFPQsXLZfcyiVkKhfJ2GJcKZFMkQ7mNX";
+        return "7zaJEZ9NefFZk4CeyVPKCqRnx3UJruPMysi4hejrpUit";
     }
 
     public static String packageName() {

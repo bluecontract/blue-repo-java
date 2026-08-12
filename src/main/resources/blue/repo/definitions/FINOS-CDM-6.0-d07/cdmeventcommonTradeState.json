@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "7UyroNcHi5ggaDeDqgACDvjixoTVqZyHPUiNuGcK3gXq"
+      "blueId": "3WyHtwLZQPjVJB4zC26ena33X6r2fxTfkWVEiZi6eH1Q"
     },
     "schema": {
       "minItems": 0
@@ -19,7 +19,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "C2cq6aR7yoFg7jn9vV3wrTukUrevaRzkBo4PeSWP5die"
+      "blueId": "7vPrkkWh58nfDDkqkzYizHoGeQi5BC57ZpmFndxmft9R"
     },
     "schema": {
       "minItems": 0
@@ -28,13 +28,13 @@
   "state": {
     "description": "Represents the State of the Trade through its life-cycle.",
     "type": {
-      "blueId": "HcvuPprC3CbAxkBiEwkiWsJzW5pVqZ7occ8cncqAtQR"
+      "blueId": "C63rgYVcyFKqAfdZwjLkhMUDs7CMMKgc5Zg92LyjVGu9"
     }
   },
   "trade": {
     "description": "Represents the Trade that has been effected by a business or life-cycle event.",
     "type": {
-      "blueId": "GHKfcNGEW4jfWBhqCesd1ZbQ2ZJvDnS1YMm2UZ2ZZNZG"
+      "blueId": "Gm86NetLQn7WB75RP28UxDg7WZvhyUm1usBgfAPjFkdM"
     },
     "schema": {
       "required": true
@@ -46,7 +46,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "9HPCH457X3P45F4b4BRLZZYtzUtV2TFY3DmCKNCJL7DZ"
+      "blueId": "5DE1nk33eUe1qZRRMM5fGCsyGFrVj8JswsEvwtwzL2K9"
     },
     "schema": {
       "minItems": 0
@@ -57,7 +57,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "35r3StzAH6Qus8FCSpiCqqUrKHx9d4SYBCL2gEecgCJq"
+      "blueId": "7fUqjcMznRtsQXbh382nhVNPoG8pPi1kH6C6QRJ1NXii"
     },
     "schema": {
       "minItems": 0

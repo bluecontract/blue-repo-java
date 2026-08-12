@@ -4,7 +4,7 @@
   "businessCenters": {
     "description": "The enumerated values to specify the business centers.",
     "type": {
-      "blueId": "H53mV1d8rMzhefLZH8WzGchozyQA28cbwNpBHGmVA9ti"
+      "blueId": "Ds5a9bChKossVgHEM7Z2TQTCxDXdB2SZhtM9v9Y3mYmM"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "dayDistribution": {
     "description": "Denotes the method by which the pricing days are distributed across the pricing period.",
     "type": {
-      "blueId": "7aBrcowDER57iJ1dKZQ3YqngDZfz6eNHJExw8Egww997"
+      "blueId": "hQr5MwUS6CucReoCUdM1bToeUnZNuEiqWL4aadinx9h"
     }
   },
   "dayFrequency": {
@@ -28,7 +28,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "AYNVNBQsDmS46NA7kfw7jh6eh8DBspyMyDd1bzyBmDG5"
+      "blueId": "DmhfCUUAaa5kZ8Qsom8VwEsMN3qmGWaJX1pGtUCfbqRQ"
     },
     "schema": {
       "minItems": 0,
@@ -38,7 +38,7 @@
   "dayType": {
     "description": "Denotes the enumerated values to specify the day type classification used in counting the number of days between two dates.\n",
     "type": {
-      "blueId": "EPBWZ9jBx984Q99bnqB2NAqBTKrAr4mJWCYnwcFgnivq"
+      "blueId": "7SsDfFvRbfxrm8vS98NZ5Vq9nqD3CFNGWsLr6dc738LJ"
     },
     "schema": {
       "required": true
@@ -47,7 +47,7 @@
   "lag": {
     "description": "The pricing period per calculation period if the pricing days do not wholly fall within the respective calculation period.\n",
     "type": {
-      "blueId": "H52wAsRZktjp4tpCZgu6wnQMFaksvVT2T9gxSHdZjSbg"
+      "blueId": "9dUxAKwefutKuBfGuYNrjooNVQNxzQHdyCXdCzhcU2fe"
     }
   }
 }

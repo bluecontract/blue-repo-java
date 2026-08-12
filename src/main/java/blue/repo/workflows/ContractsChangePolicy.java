@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("CECcZ2xesYWUD4qZNFzDWYjWoMU6W55jEEoJHK8MWZct")
+@TypeBlueId("F2z5kuhjRCwngkuZAxfWyYrZNMM9PeumHLmPqT222RKa")
 public class ContractsChangePolicy extends blue.language.processor.model.MarkerContract {
     public static String blueId() {
-        return "CECcZ2xesYWUD4qZNFzDWYjWoMU6W55jEEoJHK8MWZct";
+        return "F2z5kuhjRCwngkuZAxfWyYrZNMM9PeumHLmPqT222RKa";
     }
 
     public static String packageName() {

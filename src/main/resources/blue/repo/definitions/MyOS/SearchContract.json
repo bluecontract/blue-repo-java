@@ -2,7 +2,7 @@
   "name": "Search Contract",
   "description": "Marker contract that describes how a document should project search fields\nfor indexing (`q`, `kv`, `geo`). Paths must follow BlueNode.get(path)\nsemantics and be absolute.\n",
   "type": {
-    "blueId": "6zqbYGDGrMv5ReuEsjyzyyjjuqVnqDZxtY7RsPXdBTNy"
+    "blueId": "8nWeksYEXxp5TBnRcYF5u3VsFHvMfxo4zjAFT6MLW8ZD"
   },
   "q": {
     "description": "Absolute paths whose extracted values should be appended to the indexed `q` text.",

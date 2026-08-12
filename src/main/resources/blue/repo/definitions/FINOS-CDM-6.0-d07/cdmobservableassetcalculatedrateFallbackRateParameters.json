@@ -4,7 +4,7 @@
   "calculationParameters": {
     "description": "Support for modular calculated rates, such such as lockout compound calculations.",
     "type": {
-      "blueId": "BzAmRPH81HKGy6cSBQMksdVVxBpKtdVhJKSbFqKiErQP"
+      "blueId": "3uTDiwVssb1uKdurixoF5csTPYjeU3mp49GD4wEFQudb"
     }
   },
   "effectiveDate": {
@@ -16,7 +16,7 @@
   "floatingRateIndex": {
     "description": "The floating rate index that is used as the basis of the fallback rate.",
     "type": {
-      "blueId": "Ffp3NGGHva1Wh7c62eqGBrQTxEzCeASMFJ6PAmoSuCXF"
+      "blueId": "vMjyu6sbtgT7FA6GScxrp32Njg3k9oW6KxuXLU9RYHx"
     },
     "schema": {
       "required": true

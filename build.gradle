@@ -25,6 +25,19 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    blueLanguageRegistry {
+        canBeConsumed = false
+        canBeResolved = true
+        transitive = false
+    }
+    blueContractsRegistry {
+        canBeConsumed = false
+        canBeResolved = true
+        transitive = false
+    }
+}
+
 java {
     withJavadocJar()
     withSourcesJar()
@@ -38,8 +51,11 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 dependencies {
-    api 'blue.language:blue-language-java:3.0.0'
+    api 'blue.language:blue-language-java:3.1.0-rc.20'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+
+    blueLanguageRegistry 'blue.language:blue-language-core:3.1.0-rc.20'
+    blueContractsRegistry 'blue.language:blue-contracts-core:3.1.0-rc.20'
 
     testImplementation platform('org.junit:junit-bom:5.10.2')
     testImplementation 'org.junit.jupiter:junit-jupiter'
@@ -82,15 +98,36 @@ sourceSets.main.output.dir genResourcesDir, builtBy: generateBuildProperties
 
 def generatedRepositorySourcePaths = [
         'src/main/java/blue/repo/BlueRepositoryModels.java',
+        'src/main/java/blue/repo/bootstrap',
         'src/main/java/blue/repo/common',
         'src/main/java/blue/repo/coordination',
         'src/main/java/blue/repo/finoscdm60d07',
+        'src/main/java/blue/repo/mandate',
         'src/main/java/blue/repo/myos',
         'src/main/java/blue/repo/paynote',
+        'src/main/java/blue/repo/sessioninteraction',
         'src/main/java/blue/repo/types',
         'src/main/java/blue/repo/workflows',
         'src/main/resources/blue/repo'
 ]
+
+def registryInputsRoot = layout.buildDirectory.dir('registry-inputs')
+
+tasks.register('extractRegistryInputs', Sync) {
+    group = 'blue repository'
+    description = 'Extracts the exact Language 1.0 and Contracts 1.0 registry inputs used by source generation.'
+    into registryInputsRoot
+    from({ configurations.blueLanguageRegistry.collect { zipTree(it) } }) {
+        include 'registry/blue-language-1.0/**'
+    }
+    from({ configurations.blueContractsRegistry.collect { zipTree(it) } }) {
+        include 'registry/blue-contracts-1.0/**'
+    }
+}
+
+tasks.named('test') {
+    dependsOn tasks.named('extractRegistryInputs')
+}
 
 def snapshotGeneratedRepositoryFiles = {
     def snapshot = new TreeMap<String, String>()
@@ -148,18 +185,30 @@ def repositoryGeneratorArgs = {
         args.add('--repository')
         args.add(explicitSource.toString())
     }
+    def explicitProviderBundle = project.findProperty('blueRepositoryProviderBundle') ?:
+            System.getenv('BLUE_REPOSITORY_PROVIDER_BUNDLE')
+    if (explicitProviderBundle) {
+        args.add('--provider-bundle')
+        args.add(explicitProviderBundle.toString())
+    }
+    args.add('--language-registry')
+    args.add(registryInputsRoot.get().file('registry/blue-language-1.0').asFile.absolutePath)
+    args.add('--contracts-registry')
+    args.add(registryInputsRoot.get().file('registry/blue-contracts-1.0').asFile.absolutePath)
     return args
 }
 
 tasks.register('generateRepositorySources', Exec) {
     group = 'blue repository'
     description = 'Generates stable-package Java sources, constants, resources, and manifest from BlueRepository.blue.'
+    dependsOn tasks.named('extractRegistryInputs')
     commandLine([nodeExecutable()] + repositoryGeneratorArgs())
 }
 
 tasks.register('verifyGeneratedSources') {
     group = 'verification'
     description = 'Regenerates repository sources and fails if checked-in generated output is stale.'
+    dependsOn tasks.named('extractRegistryInputs')
     outputs.upToDateWhen { false }
 
     doLast {

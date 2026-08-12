@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("8STyBvSNBUVRcziJ5ApHvpPRYRvyJTGTsrM6RAFpGJE")
+@TypeBlueId("FLbsfWVvon28TN6JNLV3VmaXBVpm92Ar9W9hNpmPsFn7")
 public class CdmObservableAssetCreditRatingOutlookEnum {
     public static String blueId() {
-        return "8STyBvSNBUVRcziJ5ApHvpPRYRvyJTGTsrM6RAFpGJE";
+        return "FLbsfWVvon28TN6JNLV3VmaXBVpm92Ar9W9hNpmPsFn7";
     }
 
     public static String packageName() {

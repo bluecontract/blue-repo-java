@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("68KbNxL8Zk6injt7KEzchnGU1s7jEBrrdNTEayuTNdzA")
+@TypeBlueId("6semmaRGbbwZi3WuvBjGtUDnUF52hRjzYmrBnaSzyuBQ")
 public class CdmBaseMathNonNegativeStep {
     public static String blueId() {
-        return "68KbNxL8Zk6injt7KEzchnGU1s7jEBrrdNTEayuTNdzA";
+        return "6semmaRGbbwZi3WuvBjGtUDnUF52hRjzYmrBnaSzyuBQ";
     }
 
     public static String packageName() {

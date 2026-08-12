@@ -4,7 +4,7 @@
   "agreementType": {
     "description": "Specification of the legal agreement type.",
     "type": {
-      "blueId": "1xkXx62AuJPeBWbqXe9my7R6wp5KHPpRYMPgfh4Md8s"
+      "blueId": "G98oMcFFcwapftpN3NbSePJTeafVqJgbP2ZJKGAWijZE"
     },
     "schema": {
       "required": true
@@ -16,7 +16,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "CZWJZLLr3HQs8VCBUxDWXabvSf6Q3319JdxR7Apv4ijg"
+      "blueId": "CftZdiJyxaHVcunERbr8EtHErVHhgbCsTvUQH5YbLAXL"
     },
     "schema": {
       "minItems": 0
@@ -28,7 +28,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "6jcZ9zLDpCUUHnubcVFKvtCrbSEVir51vkUuHYoQEtTv"
+      "blueId": "CEyrkJUT8HLojysAQjUReMYLQCgHmBX4VUxU91TJu8uA"
     },
     "schema": {
       "minItems": 0
@@ -40,7 +40,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "3USYNWwBjwfneMFPfLEAygbecRdE9pmiE6VzumZMpdRQ"
+      "blueId": "GPjWcB5kAK6o6LyYVxoBgAHdEXtqLx1cmJPtvswu4BU9"
     },
     "schema": {
       "minItems": 0
@@ -49,31 +49,31 @@
   "creditSupportAgreementMarginType": {
     "description": "specifies the type of margin for which a legal agreement is named.",
     "type": {
-      "blueId": "9z1L9Ava1wYq6jxK5Q25w3DTwEhKhZHbY9XE9NZCutvJ"
+      "blueId": "Ce3ciQcLKDEJNBNLKJ7ZQ1woFjqogy7nsbLP99TxETXf"
     }
   },
   "creditSupportAgreementType": {
     "description": "Specification of the credit support agreement type.",
     "type": {
-      "blueId": "73DfnZhYH3dTmicn8zMHsthj9qQ6K9XEB5KLdtiJSK7u"
+      "blueId": "4meuCktw1FU4RPxCQDZJiER7pwjt3F4qWFP4AeaGwPM2"
     }
   },
   "masterAgreementType": {
     "description": "Specification of the master agreement type.",
     "type": {
-      "blueId": "DkpHjXSPYeeAymNJRnod9AFWqxCfj21de5396nJX3jb5"
+      "blueId": "AMab7AVqN4nc3s5D6FBKRbSLj8EYaF9ppAqRbTodszbt"
     }
   },
   "masterConfirmationAnnexType": {
     "description": "The type of master confirmation annex executed between the parties.",
     "type": {
-      "blueId": "Et7RmFhXC1S5FYbAYAkgpkUfwspKqhDrsG1K89ev7DVu"
+      "blueId": "BpZYvuC7zpYyf3krdVjDee54WGnxCiGoGoGutTcy8rUj"
     }
   },
   "masterConfirmationType": {
     "description": "The type of master confirmation executed between the parties.",
     "type": {
-      "blueId": "HaEz2HuxrPwUkAPyfLmet7k7WuJfH6KjErdWuSXuJE71"
+      "blueId": "EMyh5oCQ6YLTistdrYkpVkvDXxrQh4ahrj3UkbNde95t"
     }
   },
   "otherAgreement": {

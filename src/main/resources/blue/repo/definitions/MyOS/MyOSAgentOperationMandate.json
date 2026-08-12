@@ -2,20 +2,20 @@
   "name": "MyOS Agent Operation Mandate",
   "description": "Reusable Operation Mandate allowing one MyOS Agent Actor to invoke the\ninherited operation for matching target documents on behalf of one MyOS\nPrincipal Actor.\n\nThe optional ordered rules list contains owner-readable instructions for a\nconstrained MyOS intelligent evaluator. The inherited request and target\ndocument validation may deterministically constrain the operation, while\nrules may provide an additional or sole target-eligibility gate. The feeder\nnever interprets rule text or invokes a model.\n",
   "type": {
-    "blueId": "CnTmdtUu3ZAkaTn7TwvkvXJPsZQVFsGCn1NsRpP854wv"
+    "blueId": "2KjGsrrDZStp598xhisMdNskb6wdehS173WvZN3vhHAV"
   },
   "contracts": {
     "mandateGuarantorChannel": {
       "actor": {
         "type": {
-          "blueId": "4eDC5moi1FwZaHkkdXLF9he1SGz2gWWNJArNKGYreksm"
+          "blueId": "1ev2FjQCVqxyynB7o27PJmQo8bQmf9ECvvF2z5ekV1L"
         }
       }
     },
     "authorityHolderChannel": {
       "actor": {
         "type": {
-          "blueId": "BeUkW9h7yKH5DBgzTjF52u4PwYu9J9EmLZ5WaYZWnZuB"
+          "blueId": "CtsH9hhbLAYcQYv5jYnNhaviKxkEdrwAg8b4KoxEU5Lw"
         }
       }
     },
@@ -33,7 +33,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "73jmPJ7x1sgA5yLjv74ZrRGHpUXgUYfQHyAp6SArKwWW"
+      "blueId": "4GVCha7E7MKvusWcZ7K1K5yv8G4jdfE8eoD3nQ7FVuP8"
     }
   }
 }

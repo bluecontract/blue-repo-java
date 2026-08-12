@@ -4,7 +4,7 @@
   "economicTerms": {
     "description": "The price forming features, including payouts and provisions.",
     "type": {
-      "blueId": "this#6"
+      "blueId": "this#9"
     },
     "schema": {
       "required": true
@@ -16,7 +16,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "GFVh22HvpZREhKsn8HDuBiUrwRScVzwx6ZnNNmZrisx9"
+      "blueId": "FnPPihH443SKbNrwapeK3w4TS3YG23ns1dkQMnVkD5fp"
     },
     "schema": {
       "minItems": 0
@@ -28,7 +28,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "4Yp9gtVpX1NNhVLvRCpFGS3MvbUnmDXUmuAKSDYaTNWN"
+      "blueId": "zhu6Vg1U6muAYReiYsG2Xh1wrN4VDaeeREHBY7A8wtc"
     },
     "schema": {
       "minItems": 0

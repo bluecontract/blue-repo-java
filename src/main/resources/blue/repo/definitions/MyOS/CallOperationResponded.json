@@ -2,7 +2,7 @@
   "name": "Call Operation Responded",
   "description": "MyOS Admin forwards operation Response events to the requesting session",
   "type": {
-    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
+    "blueId": "283zu1pu97gXBs4mquE3MSjwRYTzZSXZhnRSemCH8mZr"
   },
   "events": {
     "description": "Operation Response events",
@@ -10,7 +10,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
+      "blueId": "283zu1pu97gXBs4mquE3MSjwRYTzZSXZhnRSemCH8mZr"
     }
   }
 }

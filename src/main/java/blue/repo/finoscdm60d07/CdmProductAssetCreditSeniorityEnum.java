@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("Hu5VnYpz7ZCRzsMjDtVxSVoN2RK42N3T3a1rvcvnMAyV")
+@TypeBlueId("FHNjuCAWRmsyRgbGQq5VFBDJvVVW4DCZs384cMHvtLKw")
 public class CdmProductAssetCreditSeniorityEnum {
     public static String blueId() {
-        return "Hu5VnYpz7ZCRzsMjDtVxSVoN2RK42N3T3a1rvcvnMAyV";
+        return "FHNjuCAWRmsyRgbGQq5VFBDJvVVW4DCZs384cMHvtLKw";
     }
 
     public static String packageName() {

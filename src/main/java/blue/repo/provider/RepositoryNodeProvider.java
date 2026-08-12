@@ -1,9 +1,12 @@
 package blue.repo.provider;
 
 import blue.language.model.Node;
+import blue.language.codec.jackson.UncheckedObjectMapper;
+import blue.language.provider.CyclicAwareNodeProvider;
+import blue.language.provider.CyclicSetProof;
+import blue.language.provider.CyclicSetProofResult;
 import blue.language.provider.NodeContentHandler;
 import blue.language.provider.PreloadedNodeProvider;
-import blue.language.utils.UncheckedObjectMapper;
 import blue.repo.RepositoryDefinition;
 import blue.repo.RepositoryManifest;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -20,7 +23,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public final class RepositoryNodeProvider extends PreloadedNodeProvider {
+public final class RepositoryNodeProvider extends PreloadedNodeProvider implements CyclicAwareNodeProvider {
     private final RepositoryManifest manifest;
     private final ClassLoader classLoader;
     private final Map<String, RepositoryDefinition> definitionsByBlueId = new LinkedHashMap<>();
@@ -103,6 +106,35 @@ public final class RepositoryNodeProvider extends PreloadedNodeProvider {
 
         Node node = UncheckedObjectMapper.JSON_MAPPER.convertValue(resolvedContent, Node.class);
         return Collections.singletonList(node.blueId(baseBlueId));
+    }
+
+    @Override
+    public CyclicSetProofResult cyclicSetProofFor(String blueId) {
+        if (blueId == null || !definitionsByBlueId.containsKey(blueId)) {
+            return CyclicSetProofResult.notFound();
+        }
+        int fragmentSeparator = blueId.indexOf('#');
+        if (fragmentSeparator < 0) {
+            return CyclicSetProofResult.notFound();
+        }
+        String baseBlueId = blueId.substring(0, fragmentSeparator);
+        Map<Integer, RepositoryDefinition> fragments = fragmentDefinitionsByBaseBlueId.get(baseBlueId);
+        if (fragments == null) {
+            return CyclicSetProofResult.notFound();
+        }
+
+        try {
+            JsonNode content = readFragmentedDefinitions(baseBlueId, fragments);
+            List<Node> declaredPlaceholderSet = IntStream.range(0, content.size())
+                    .mapToObj(index -> UncheckedObjectMapper.JSON_MAPPER.convertValue(content.get(index), Node.class))
+                    .collect(Collectors.toList());
+            return CyclicSetProofResult.found(
+                    CyclicSetProof.fromDeclaredPlaceholderSet(declaredPlaceholderSet));
+        } catch (RuntimeException invalidEvidence) {
+            return CyclicSetProofResult.invalidEvidence(
+                    "Invalid repository cyclic-set evidence for " + blueId + ": "
+                            + invalidEvidence.getMessage());
+        }
     }
 
     public String getBlueIdByQualifiedName(String qualifiedName) {

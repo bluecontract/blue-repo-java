@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("6KNQgESYt6L53eckR5BrECbH1phWdXFMzZATcAzK9NLy")
+@TypeBlueId("AfsZ9qKh4Qtrp72TzbuRFu1ZJNgDu14DGPa2Pyu7Twrn")
 public class CdmObservableAssetCalculatedrateFallbackRateParameters {
     public static String blueId() {
-        return "6KNQgESYt6L53eckR5BrECbH1phWdXFMzZATcAzK9NLy";
+        return "AfsZ9qKh4Qtrp72TzbuRFu1ZJNgDu14DGPa2Pyu7Twrn";
     }
 
     public static String packageName() {

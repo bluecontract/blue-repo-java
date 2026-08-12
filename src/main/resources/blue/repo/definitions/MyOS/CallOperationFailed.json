@@ -2,7 +2,7 @@
   "name": "Call Operation Failed",
   "description": "MyOS Admin could not invoke the requested operation.",
   "type": {
-    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
+    "blueId": "283zu1pu97gXBs4mquE3MSjwRYTzZSXZhnRSemCH8mZr"
   },
   "targetSessionId": {
     "description": "Target document session that was attempted.",

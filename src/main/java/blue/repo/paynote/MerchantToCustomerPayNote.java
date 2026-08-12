@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("4QW85PM6t2McK3sxKqCsyhajZJv6WVk1AhBT45PGDLZb")
+@TypeBlueId("FCNBRG6pXurxfM9qaBYEQGBLYZEq8iLBf7qpmjf5nrHT")
 public class MerchantToCustomerPayNote extends PayNote {
     public static String blueId() {
-        return "4QW85PM6t2McK3sxKqCsyhajZJv6WVk1AhBT45PGDLZb";
+        return "FCNBRG6pXurxfM9qaBYEQGBLYZEq8iLBf7qpmjf5nrHT";
     }
 
     public static String packageName() {

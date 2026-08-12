@@ -1,6 +1,6 @@
 package blue.repo;
 
-import blue.language.utils.UncheckedObjectMapper;
+import blue.language.codec.jackson.UncheckedObjectMapper;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,7 +17,11 @@ public final class RepositoryManifest {
     private final String repositoryName;
     private final String repositoryVersion;
     private final String repositoryVersionBlueId;
+    private final Map<String, String> registryPackageIdentities;
     private final String sourceResource;
+    private final String providerBundleIdentity;
+    private final String providerSourceResource;
+    private final String providerSourceSha256;
     private final List<RepositoryVersion> repositoryVersions;
     private final List<RepositoryDefinition> definitions;
     private final Map<String, RepositoryVersion> repositoryVersionsByBlueId;
@@ -30,13 +34,32 @@ public final class RepositoryManifest {
     private RepositoryManifest(String repositoryName,
                                String repositoryVersion,
                                String repositoryVersionBlueId,
+                               Map<String, String> registryPackageIdentities,
                                String sourceResource,
+                               String providerBundleIdentity,
+                               String providerSourceResource,
+                               String providerSourceSha256,
                                List<RepositoryVersion> repositoryVersions,
                                List<RepositoryDefinition> definitions) {
         this.repositoryName = require(repositoryName, "repositoryName");
         this.repositoryVersion = require(repositoryVersion, "repositoryVersion");
         this.repositoryVersionBlueId = require(repositoryVersionBlueId, "repositoryVersionBlueId");
+        this.registryPackageIdentities = Collections.unmodifiableMap(
+                new LinkedHashMap<>(registryPackageIdentities));
         this.sourceResource = require(sourceResource, "sourceResource");
+        this.providerBundleIdentity = nullableNonEmpty(
+                providerBundleIdentity, "providerBundleIdentity");
+        this.providerSourceResource = nullableNonEmpty(
+                providerSourceResource, "providerSourceResource");
+        this.providerSourceSha256 = nullableNonEmpty(
+                providerSourceSha256, "providerSourceSha256");
+        int providerFieldCount = (this.providerBundleIdentity == null ? 0 : 1)
+                + (this.providerSourceResource == null ? 0 : 1)
+                + (this.providerSourceSha256 == null ? 0 : 1);
+        if (providerFieldCount != 0 && providerFieldCount != 3) {
+            throw new IllegalArgumentException(
+                    "Provider bundle provenance fields must be supplied together");
+        }
         this.repositoryVersions = Collections.unmodifiableList(new ArrayList<>(normalizeRepositoryVersions(
                 repositoryVersions, repositoryVersion, repositoryVersionBlueId)));
         this.definitions = Collections.unmodifiableList(new ArrayList<>(definitions));
@@ -100,8 +123,24 @@ public final class RepositoryManifest {
         return repositoryVersionBlueId;
     }
 
+    public Map<String, String> registryPackageIdentities() {
+        return registryPackageIdentities;
+    }
+
     public String sourceResource() {
         return sourceResource;
+    }
+
+    public Optional<String> providerBundleIdentity() {
+        return Optional.ofNullable(providerBundleIdentity);
+    }
+
+    public Optional<String> providerSourceResource() {
+        return Optional.ofNullable(providerSourceResource);
+    }
+
+    public Optional<String> providerSourceSha256() {
+        return Optional.ofNullable(providerSourceSha256);
     }
 
     public List<RepositoryVersion> repositoryVersions() {
@@ -209,7 +248,11 @@ public final class RepositoryManifest {
                 asString(root, "repositoryName"),
                 asString(root, "repositoryVersion"),
                 asString(root, "repositoryVersionBlueId"),
+                stringMap(root.get("registryPackageIdentities"), "registryPackageIdentities"),
                 asString(root, "sourceResource"),
+                nullableString(root, "providerBundleIdentity"),
+                nullableString(root, "providerSourceResource"),
+                nullableString(root, "providerSourceSha256"),
                 parseRepositoryVersions(root),
                 definitions
         );
@@ -313,6 +356,26 @@ public final class RepositoryManifest {
         return result;
     }
 
+    private static Map<String, String> stringMap(Object value, String field) {
+        if (value == null) {
+            return Collections.emptyMap();
+        }
+        if (!(value instanceof Map)) {
+            throw new IllegalArgumentException("Manifest field must be an object: " + field);
+        }
+        Map<String, String> result = new LinkedHashMap<>();
+        for (Map.Entry<?, ?> entry : ((Map<?, ?>) value).entrySet()) {
+            if (!(entry.getKey() instanceof String)
+                    || !(entry.getValue() instanceof String)
+                    || ((String) entry.getValue()).isEmpty()) {
+                throw new IllegalArgumentException(
+                        "Manifest object field must contain non-empty string values: " + field);
+            }
+            result.put((String) entry.getKey(), (String) entry.getValue());
+        }
+        return result;
+    }
+
     private static ClassLoader classLoader() {
         ClassLoader contextClassLoader = Thread.currentThread().getContextClassLoader();
         return contextClassLoader != null ? contextClassLoader : RepositoryManifest.class.getClassLoader();
@@ -320,6 +383,13 @@ public final class RepositoryManifest {
 
     private static String require(String value, String field) {
         if (value == null || value.isEmpty()) {
+            throw new IllegalArgumentException(field + " must not be empty");
+        }
+        return value;
+    }
+
+    private static String nullableNonEmpty(String value, String field) {
+        if (value != null && value.isEmpty()) {
             throw new IllegalArgumentException(field + " must not be empty");
         }
         return value;

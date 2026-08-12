@@ -2,7 +2,7 @@
   "name": "Payment Mandate Spend Settlement Responded",
   "description": "Validation result emitted by Payment Mandate after processing a settlement update.",
   "type": {
-    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
+    "blueId": "283zu1pu97gXBs4mquE3MSjwRYTzZSXZhnRSemCH8mZr"
   },
   "authorizationId": {
     "description": "Correlation key copied from Payment Mandate Spend Settled.",

@@ -2,7 +2,7 @@
   "name": "Payment Reversed After Completion",
   "description": "The Guarantor confirms that value was reversed after completion.",
   "type": {
-    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
+    "blueId": "283zu1pu97gXBs4mquE3MSjwRYTzZSXZhnRSemCH8mZr"
   },
   "amountReversed": {
     "type": {

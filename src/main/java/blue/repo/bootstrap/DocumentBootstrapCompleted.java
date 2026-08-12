@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.coordination.Response;
 import blue.repo.sessioninteraction.DocumentSessionReference;
 
-@TypeBlueId("EogcjRxna7zSMip2wSg53fdRtQG8apJL6JqHeh1egh9f")
+@TypeBlueId("7hkTA9xEpQixBzjN2M2Uei8K1h2MvmpVLqhau53Cksg5")
 public class DocumentBootstrapCompleted extends Response {
     public static String blueId() {
-        return "EogcjRxna7zSMip2wSg53fdRtQG8apJL6JqHeh1egh9f";
+        return "7hkTA9xEpQixBzjN2M2Uei8K1h2MvmpVLqhau53Cksg5";
     }
 
     public static String packageName() {

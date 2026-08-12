@@ -4,7 +4,7 @@
   "period": {
     "description": "A time period, e.g. a day, week, month, year or term of the stream.",
     "type": {
-      "blueId": "BLwQ9sW7unThpYZC3TVs8YtMmiAoZ4NVGjVRppu4gm7x"
+      "blueId": "8g5Z7Xf3wFDD2QY1rGqmTjeY7EvWWEsxUiKyX6UbH8kp"
     },
     "schema": {
       "required": true

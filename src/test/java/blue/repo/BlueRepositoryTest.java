@@ -1,14 +1,16 @@
 package blue.repo;
 
-import blue.language.Blue;
-import blue.language.NodeProvider;
+import blue.language.BlueRuntime;
+import blue.language.codec.jackson.UncheckedObjectMapper;
+import blue.language.mapping.TypeClassResolver;
 import blue.language.model.TypeBlueId;
 import blue.language.model.Node;
 import blue.language.processor.model.ChannelContract;
 import blue.language.processor.model.HandlerContract;
-import blue.language.utils.BlueIdResolver;
-import blue.language.utils.TypeClassResolver;
-import blue.language.utils.UncheckedObjectMapper;
+import blue.language.processor.registry.RuntimeBlueIds;
+import blue.language.provider.NodeProvider;
+import blue.language.provider.VerifyingNodeProvider;
+import blue.language.registry.BlueCoreTypeRegistry;
 import blue.repo.provider.CompositeNodeProvider;
 import blue.repo.provider.RepositoryNodeProvider;
 import blue.repo.types.CommonTypes;
@@ -38,6 +40,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.math.BigInteger;
+import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -91,14 +94,14 @@ class BlueRepositoryTest {
     @Test
     void blueCanResolveRepositoryTypeReferencesWithRepositoryProvider() {
         BlueRepository repo = BlueRepository.v1_3_0();
-        Blue blue = repo.configure(new Blue());
+        BlueRuntime runtime = repo.runtime();
 
         Node document = new Node()
                 .name("operation")
                 .type(CoordinationTypes.OPERATION.reference())
                 .properties("channel", new Node().value("timeline"));
 
-        Node resolved = blue.resolve(document);
+        Node resolved = runtime.language().resolution().resolve(document);
 
         assertNotNull(resolved.getType());
         assertEquals(CoordinationTypes.OPERATION.blueId(), resolved.getType().getBlueId());
@@ -109,24 +112,24 @@ class BlueRepositoryTest {
     @Test
     void generatedModelClassesExposeRepositoryTypesForJavaMapping() {
         BlueRepository repo = BlueRepository.v1_3_0();
-        Blue blue = repo.configure(new Blue());
+        BlueRuntime runtime = repo.runtime();
 
         ChatMessage message = new ChatMessage().message("hello");
-        Node messageNode = blue.objectToNode(message);
+        Node messageNode = runtime.mapping().toNode(message);
 
         assertEquals(CoordinationTypes.CHAT_MESSAGE.blueId(), messageNode.getType().getBlueId());
         assertEquals("hello", messageNode.getProperties().get("message").getValue());
 
-        Object converted = blue.nodeToObject(messageNode, Object.class);
+        Object converted = runtime.mapping().fromNode(messageNode, Object.class);
         assertTrue(converted instanceof ChatMessage);
         assertEquals("hello", ((ChatMessage) converted).getMessage());
     }
 
     @Test
     void generatedModelClassesUseActualBlueIdsAndInheritance() {
-        assertEquals(CoordinationTypes.OPERATION.blueId(), BlueIdResolver.resolveBlueId(Operation.class));
+        assertEquals(CoordinationTypes.OPERATION.blueId(), Operation.blueId());
         assertEquals(CoordinationTypes.SEQUENTIAL_WORKFLOW_OPERATION.blueId(),
-                BlueIdResolver.resolveBlueId(SequentialWorkflowOperation.class));
+                SequentialWorkflowOperation.blueId());
         assertTrue(Operation.class.isAssignableFrom(SequentialWorkflowOperation.class));
         assertTrue(new SequentialWorkflow() instanceof HandlerContract);
         assertTrue(new SequentialWorkflowOperation() instanceof HandlerContract);
@@ -177,6 +180,60 @@ class BlueRepositoryTest {
             assertNotNull(node, definition.qualifiedName());
             assertEquals(definition.name(), node.getName(), definition.qualifiedName());
         }
+    }
+
+    @Test
+    void everyManifestBlueIdPassesExactProviderVerification() {
+        BlueRepository repo = BlueRepository.v1_3_0();
+        NodeProvider verifiedProvider = new VerifyingNodeProvider(
+                repo.nodeProvider());
+        List<String> failures = new ArrayList<>();
+
+        for (RepositoryDefinition definition : repo.manifest().definitions()) {
+            try {
+                Node node = verifiedProvider.fetchFirstByBlueId(
+                        definition.blueId());
+                assertNotNull(node, definition.qualifiedName());
+                assertEquals(definition.blueId(), node.getBlueId(),
+                        definition.qualifiedName());
+            } catch (RuntimeException | AssertionError exception) {
+                failures.add(definition.qualifiedName() + ": "
+                        + exception.getMessage());
+            }
+        }
+
+        assertTrue(failures.isEmpty(), String.join("\n", failures));
+    }
+
+    @Test
+    void manifestPinsRegistryAndProviderBundleProvenance() throws Exception {
+        BlueRepository repo = BlueRepository.v1_3_0();
+        RepositoryManifest manifest = repo.manifest();
+
+        assertEquals(BlueCoreTypeRegistry.INSTANCE.packageIdentity(),
+                manifest.registryPackageIdentities().get("language"));
+        assertEquals(RuntimeBlueIds.REGISTRY_PACKAGE_IDENTITY,
+                manifest.registryPackageIdentities().get("contracts"));
+
+        String providerResource = manifest.providerSourceResource()
+                .orElseThrow(AssertionError::new);
+        JsonNode providerBundle = readJsonResource(providerResource);
+        assertEquals(manifest.repositoryVersionBlueId(),
+                providerBundle.path("repositoryBlueId").asText());
+        assertEquals(manifest.providerBundleIdentity()
+                        .orElseThrow(AssertionError::new),
+                providerBundle.path("providerBundleIdentity").asText());
+        assertEquals(manifest.registryPackageIdentities().get("language"),
+                providerBundle.path("registryPackageIdentities")
+                        .path("language").asText());
+        assertEquals(manifest.registryPackageIdentities().get("contracts"),
+                providerBundle.path("registryPackageIdentities")
+                        .path("contracts").asText());
+        assertEquals(manifest.definitions().size(),
+                providerBundle.path("entries").size());
+        assertEquals(manifest.providerSourceSha256()
+                        .orElseThrow(AssertionError::new),
+                sha256(readResourceBytes(providerResource)));
     }
 
     @Test
@@ -258,7 +315,7 @@ class BlueRepositoryTest {
     @Test
     void generatedIntegerFieldsRoundTripAsBigInteger() throws Exception {
         BlueRepository repo = BlueRepository.v1_3_0();
-        Blue blue = repo.configure(new Blue());
+        BlueRuntime runtime = repo.runtime();
         BigInteger largeAmount = new BigInteger("9223372036854775808123456789");
 
         Field amount = CaptureFundsRequested.class.getDeclaredField("amount");
@@ -269,12 +326,12 @@ class BlueRepositoryTest {
                 .properties("amount", new Node()
                         .type(new Node().blueId("E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"))
                         .value(largeAmount));
-        Object converted = blue.nodeToObject(node, Object.class);
+        Object converted = runtime.mapping().fromNode(node, Object.class);
         assertTrue(converted instanceof CaptureFundsRequested);
         assertEquals(largeAmount, ((CaptureFundsRequested) converted).getAmount());
 
-        Node roundTripped = blue.objectToNode(converted);
-        Object convertedAgain = blue.nodeToObject(roundTripped, Object.class);
+        Node roundTripped = runtime.mapping().toNode(converted);
+        Object convertedAgain = runtime.mapping().fromNode(roundTripped, Object.class);
         assertEquals(largeAmount, ((CaptureFundsRequested) convertedAgain).getAmount());
     }
 
@@ -286,7 +343,7 @@ class BlueRepositoryTest {
 
         Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterDocumentWithTimelineYaml(), Node.class)
                 .blue(repo.typeAliasBlue());
-        Node preprocessed = repo.configure(new Blue()).preprocess(document);
+        Node preprocessed = repo.runtime().language().preprocessing().preprocess(document);
         Map<String, Node> contracts = preprocessed.getContracts().getProperties();
 
         assertEquals(CoordinationTypes.TIMELINE_CHANNEL.blueId(),
@@ -298,16 +355,17 @@ class BlueRepositoryTest {
     @Test
     void counterDocumentMapsNestedRepositoryContractsToGeneratedTypes() throws Exception {
         BlueRepository repo = BlueRepository.v1_3_0();
-        Blue blue = repo.configure(new Blue());
+        BlueRuntime runtime = repo.runtime();
 
         Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterWorkflowDocumentYaml(), Node.class)
                 .blue(repo.typeAliasBlue());
-        Node resolved = blue.resolve(blue.preprocess(document));
+        Node resolved = runtime.language().resolution().resolve(
+                runtime.language().preprocessing().preprocess(document));
         Node incrementImpl = resolved.getContracts()
                 .getProperties()
                 .get("incrementImpl");
 
-        Object mapped = blue.nodeToObject(incrementImpl, Object.class);
+        Object mapped = runtime.mapping().fromNode(incrementImpl, Object.class);
 
         assertTrue(mapped instanceof SequentialWorkflowOperation);
         SequentialWorkflowOperation operation = (SequentialWorkflowOperation) mapped;
@@ -538,6 +596,11 @@ class BlueRepositoryTest {
     }
 
     private static String readResourceAsString(String resourcePath) throws Exception {
+        return new String(readResourceBytes(resourcePath),
+                java.nio.charset.StandardCharsets.UTF_8);
+    }
+
+    private static byte[] readResourceBytes(String resourcePath) throws Exception {
         try (InputStream inputStream = BlueRepository.class.getClassLoader().getResourceAsStream(resourcePath)) {
             assertNotNull(inputStream, resourcePath);
             byte[] buffer = new byte[8192];
@@ -546,8 +609,17 @@ class BlueRepositoryTest {
             while ((read = inputStream.read(buffer)) >= 0) {
                 output.write(buffer, 0, read);
             }
-            return new String(output.toByteArray(), java.nio.charset.StandardCharsets.UTF_8);
+            return output.toByteArray();
         }
+    }
+
+    private static String sha256(byte[] bytes) throws Exception {
+        byte[] digest = MessageDigest.getInstance("SHA-256").digest(bytes);
+        StringBuilder result = new StringBuilder(digest.length * 2);
+        for (byte value : digest) {
+            result.append(String.format("%02x", value & 0xff));
+        }
+        return result.toString();
     }
 
     private static Map<String, String> canonicalCurrentBlueIdsByQualifiedName(String resourcePath) throws Exception {

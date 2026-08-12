@@ -2,7 +2,7 @@
   "name": "Operation Mandate",
   "description": "Mandate authorizing the actor bound to authorizedActorChannel to invoke one\nnamed operation through one exact effective channel, on behalf of the actor\nbound to authorityHolderChannel.\n\nIt may be used on any target where the authority-holder actor participates in\nthe declared effective channel and all inherited lifecycle, actor, channel,\noperation, document-version, and optional validation checks pass.\n\nThe inherited validation field examines the nested Operation Request.request\npayload through its immutable request binding. It does not examine the target\ndocument or Operation Request envelope.\n\nOptional target.documentValidation examines only the frozen resolved target\nroot immediately before the candidate Timeline Entry. Its absence imposes no\ntarget-document identity, type, or content restriction.\n",
   "type": {
-    "blueId": "47V2fyZMejS7LMCqJ66MvJ6v7VcmLL1zyxGQM44svV4H"
+    "blueId": "G1G5Rp4bmcmvDrnM53JjXF3YXLwdBFqpqVZtXynrjZPC"
   },
   "target": {
     "schema": {

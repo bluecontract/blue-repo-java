@@ -2,7 +2,7 @@
   "name": "MyOS Session Subscription Ended",
   "description": "Response indicating that a root or linked-document subscription stream has ended. No further updates for this sourceInitialDocument are delivered under the identified subscription unless a future reinitiation protocol creates a new active stream.\n",
   "type": {
-    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
+    "blueId": "283zu1pu97gXBs4mquE3MSjwRYTzZSXZhnRSemCH8mZr"
   },
   "subscriptionId": {
     "description": "Subscription stream that ended.",
