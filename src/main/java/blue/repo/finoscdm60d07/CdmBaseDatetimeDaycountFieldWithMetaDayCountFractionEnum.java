@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("587iDHMkRt71kZVCzE5o3zXzWprHzypcRd91TYbQnSpE")
+@TypeBlueId("HQvDRU2HRkECU2uHD3Ej7VhhyWVYzBxPs79CZfFYccWc")
 public class CdmBaseDatetimeDaycountFieldWithMetaDayCountFractionEnum {
     public static String blueId() {
-        return "587iDHMkRt71kZVCzE5o3zXzWprHzypcRd91TYbQnSpE";
+        return "HQvDRU2HRkECU2uHD3Ej7VhhyWVYzBxPs79CZfFYccWc";
     }
 
     public static String packageName() {

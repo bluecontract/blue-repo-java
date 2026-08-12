@@ -4,7 +4,7 @@
   "cashTransfer": {
     "description": "Specifies the cash transfer that can optionally be tied to an index transition event.",
     "type": {
-      "blueId": "Huf4W2NzpakJVTTdkhKJriEVabT1NBezmnyTJB9Wt2Vs"
+      "blueId": "D5TDQT9MAD6sFuVDC3EEoupfJghS4ZKw8J27kLnBJM3e"
     }
   },
   "effectiveDate": {
@@ -22,7 +22,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "2C9DbWa8E4D3cXHSXuDyYmWwrs1ySFopMnyA3XWWesm8"
+      "blueId": "4XEYGgCSfXx2tFwmQjMsXhuwaCjsNZ42jtKAcr8itiqe"
     },
     "schema": {
       "minItems": 1

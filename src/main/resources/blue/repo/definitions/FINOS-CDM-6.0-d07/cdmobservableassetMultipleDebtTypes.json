@@ -4,7 +4,7 @@
   "condition": {
     "description": "An enumerated attribute, to qualify whether All or Any debt type applies.",
     "type": {
-      "blueId": "5AmXPpNccrpoL5H4BBSk9y2QfnizHY6JKgXqaHJTHgvy"
+      "blueId": "9rM943Zxj8XaBwwWtrihnmzqSxuoYsj5tqms4JHHt3AG"
     },
     "schema": {
       "required": true
@@ -16,7 +16,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
+      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
     },
     "schema": {
       "minItems": 2

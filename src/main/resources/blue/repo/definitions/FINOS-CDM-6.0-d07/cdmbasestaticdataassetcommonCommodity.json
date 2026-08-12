@@ -4,19 +4,19 @@
   "commodityProductDefinition": {
     "description": "Specifies the commodity underlier in the event that no ISDA Commodity Reference Benchmark exists.",
     "type": {
-      "blueId": "42E8LjfyrvfiY3rzFn9ktgxtEHdG6eXmK5CyYGHUkotU"
+      "blueId": "8wK6VDkJie5sBU85QpSedgsbetMvF1i1mUeEonKTT3Ur"
     }
   },
   "deliveryDateReference": {
     "description": "Specifies the parameters for identifying the relevant contract date when the commodity reference price is a futures contract.\n",
     "type": {
-      "blueId": "4ZskTzTzcVURodZiz2Xe1cU3ryAzGu9uwsf7Nc5DU4tA"
+      "blueId": "EsztH2tDcpvYsxVwxWNZw6yfk9urbBinY5wg1uQidSwa"
     }
   },
   "exchange": {
     "description": "If the Asset is listed, defines the public exchange of the listing.",
     "type": {
-      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
+      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
     }
   },
   "identifier": {
@@ -25,7 +25,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "B4oXDUH9jELDatvZSw3oWXtJefJ4ixYawEjxBMqSerth"
+      "blueId": "4oFH9vehkWBHWWKWKPEPwytqoRKUA6mcVgrG7P1XtKRy"
     },
     "schema": {
       "minItems": 1
@@ -40,7 +40,7 @@
   "priceQuoteType": {
     "description": "Describes the required quote type of the underlying price that will be observed. Example values include 'Bid, 'Ask', 'Settlement' (for a futures contract) and 'WeightedAverage' (for some published prices and indices).\n",
     "type": {
-      "blueId": "AH1BY9EazwZmuZ6LcxCKPZSzsejRaRpRinAqLmVsFTgc"
+      "blueId": "3dNvpLuUvkiJo6AQdCKYx1WFEVMKmojVB5NmUQQQmyDq"
     },
     "schema": {
       "required": true
@@ -52,7 +52,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
+      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
     },
     "schema": {
       "minItems": 0
@@ -64,7 +64,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "9MYk7MRYjbMWPHe7v3WexZqePowTL8eRrW8TmNNEtzQJ"
+      "blueId": "GXDxn2HwbWwWg9AFSHwfSi4zZ32a3uVojNQmBN96DUvU"
     },
     "schema": {
       "minItems": 0

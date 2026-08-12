@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("4u9YFPkqCriFw9Nz1fytvh7d9BRSRKqqQKDjqfPsqaD5")
+@TypeBlueId("FCaGFiACv9gh7BbLiPZYLCDttHSuo2J6u9uyRkQbxeSw")
 public class CdmBaseMathFieldWithMetaNonNegativeQuantitySchedule {
     public static String blueId() {
-        return "4u9YFPkqCriFw9Nz1fytvh7d9BRSRKqqQKDjqfPsqaD5";
+        return "FCaGFiACv9gh7BbLiPZYLCDttHSuo2J6u9uyRkQbxeSw";
     }
 
     public static String packageName() {

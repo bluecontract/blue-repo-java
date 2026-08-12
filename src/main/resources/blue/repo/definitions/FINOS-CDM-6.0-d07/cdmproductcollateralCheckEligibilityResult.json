@@ -4,7 +4,7 @@
   "eligibilityQuery": {
     "description": "a copy of the input query that was checked against the eligible collateral specification",
     "type": {
-      "blueId": "EqeLySr1GukguPVVt5XqDUVQFVenWZYySiuo6qQbQ3pT"
+      "blueId": "9RU1DVTrXXNj5z35ccGRApiUJ1pdKay2RnssWqbsa5qP"
     },
     "schema": {
       "required": true
@@ -25,7 +25,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "3GcdhwSwCmcXjxmxraErSqcv6hktXM5krtm5PeusABq6"
+      "blueId": "Dd4QK5kmBzsGcmhcqxkLLPiH2fBmE3acTHCBGWUW5Buq"
     },
     "schema": {
       "minItems": 0
@@ -34,7 +34,7 @@
   "specification": {
     "description": "a copy of the input EligbilityCollateralSpecification that was checked against the query",
     "type": {
-      "blueId": "95Kqzip4NxUfKxtGutCfDtBUDLMZhWmnm6jhQZJtfzXj"
+      "blueId": "9fzErabMt8BTfWNrPwtuqQc2qNEWrLTRkNcRRhaQKdfL"
     },
     "schema": {
       "required": true

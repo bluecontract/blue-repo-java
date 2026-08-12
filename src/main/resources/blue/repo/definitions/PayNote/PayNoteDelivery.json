@@ -5,28 +5,28 @@
     "payNoteSender": {
       "description": "Participant submitting the PayNote delivery (merchant or processor).",
       "type": {
-        "blueId": "BDP5DqtmUNtG2FE1hLe5n2n5h4JMJayXixeGzfM5uzrq"
+        "blueId": "8aohWT7jcoaC1j2siQzBxoKM8HhQ4HF13BkZDNnq5UHf"
       }
     },
     "payNoteDeliverer": {
       "description": "Participant delivering and reporting status (e.g., bank).",
       "type": {
-        "blueId": "BDP5DqtmUNtG2FE1hLe5n2n5h4JMJayXixeGzfM5uzrq"
+        "blueId": "8aohWT7jcoaC1j2siQzBxoKM8HhQ4HF13BkZDNnq5UHf"
       }
     },
     "initLifecycleChannel": {
       "type": {
-        "blueId": "2DXGQUiQBQ6CT89jwAsTAXaEPhLgiSXhKCGh9Q7Hv3MQ"
+        "blueId": "2ukJitzzDKQWHJ5EVUtn3t4FXieGmNA1NdwFSqG8qcfo"
       },
       "event": {
         "type": {
-          "blueId": "Ht1o66MTLKf7JmnEiR27rRLSwdz8FUTgf2mGPNuLSDUL"
+          "blueId": "Gck5z8qnbcUvJNkawzKPghj14dJBw8GxkC9mh6cL5e5C"
         }
       }
     },
     "initialize": {
       "type": {
-        "blueId": "MyaXwTXty7ZujV89fT5STJvXpEr1W59puqdK2XM9ALv"
+        "blueId": "HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX"
       },
       "channel": {
         "type": {
@@ -39,7 +39,7 @@
           {
             "name": "Initialize Delivery State",
             "type": {
-              "blueId": "6bU2jWm3F6GaCXSLpdxiNjRbf9XcQDzH1NUsroHz4x8U"
+              "blueId": "8FyswTq5moAS2hexCNqdEVSfPbuwesexqrck7Up5gtxp"
             },
             "changeset": {
               "items": [
@@ -130,7 +130,7 @@
     },
     "updateTransactionIdentificationStatus": {
       "type": {
-        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
+        "blueId": "7pZPbabkYt8GUuY8JnALqhJ7gqoChfZoE5tKmU3gBpFv"
       },
       "channel": {
         "type": {
@@ -147,7 +147,7 @@
     },
     "updateTransactionIdentificationStatusImpl": {
       "type": {
-        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
+        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
       },
       "operation": {
         "type": {
@@ -607,7 +607,7 @@
     },
     "acceptPayNote": {
       "type": {
-        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
+        "blueId": "7pZPbabkYt8GUuY8JnALqhJ7gqoChfZoE5tKmU3gBpFv"
       },
       "channel": {
         "type": {
@@ -626,7 +626,7 @@
     },
     "acceptPayNoteImpl": {
       "type": {
-        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
+        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
       },
       "operation": {
         "type": {
@@ -1380,7 +1380,7 @@
     },
     "rejectPayNote": {
       "type": {
-        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
+        "blueId": "7pZPbabkYt8GUuY8JnALqhJ7gqoChfZoE5tKmU3gBpFv"
       },
       "channel": {
         "type": {
@@ -1405,7 +1405,7 @@
     },
     "rejectPayNoteImpl": {
       "type": {
-        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
+        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
       },
       "operation": {
         "type": {
@@ -2229,7 +2229,7 @@
     },
     "reportDeliveryError": {
       "type": {
-        "blueId": "Be766kx7kqFYGf96VtAc8Weofb3xkCRUTxSDVd317S2G"
+        "blueId": "7pZPbabkYt8GUuY8JnALqhJ7gqoChfZoE5tKmU3gBpFv"
       },
       "channel": {
         "type": {
@@ -2246,7 +2246,7 @@
     },
     "reportDeliveryErrorImpl": {
       "type": {
-        "blueId": "B5eQ8GaYwECKEtduoWEv8Ri1FvWznuvb3ZXGKqeYUuy"
+        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
       },
       "operation": {
         "type": {
@@ -2400,22 +2400,22 @@
   "payNoteBootstrapRequest": {
     "description": "PayNote bootstrap request details.",
     "type": {
-      "blueId": "GtkzouXkHv2NByNsd8ciAGSpgaMcwr2LwL9Px7JLdrBJ"
+      "blueId": "GT7kXB7fBv9bKxn8ZM99E4XUaHecnGpMGZ5NMsB4ekDq"
     },
     "document": {
       "type": {
-        "blueId": "3QhCg6W39VGD66E7by4yNop1UYH198xEbVpqYcjLaatL"
+        "blueId": "DivLdwvVivwHNakzhjFjoG8bpwZLcyxFMinziyEkpWc8"
       }
     }
   },
   "paymentMandateBootstrapRequest": {
     "description": "Optional Payment Mandate bootstrap request details for Delivery flows that require mandate attachment before proposal exposure.",
     "type": {
-      "blueId": "GtkzouXkHv2NByNsd8ciAGSpgaMcwr2LwL9Px7JLdrBJ"
+      "blueId": "GT7kXB7fBv9bKxn8ZM99E4XUaHecnGpMGZ5NMsB4ekDq"
     },
     "document": {
       "type": {
-        "blueId": "Zp9XUGFr6S4MPcfMarmfWo3uE8Bsh4UzUsgMNcKbh6V"
+        "blueId": "25WNYVoRMxNwVV1gBiMnBNgT1nQBpkC8wbqCTeR8SfLm"
       }
     }
   },

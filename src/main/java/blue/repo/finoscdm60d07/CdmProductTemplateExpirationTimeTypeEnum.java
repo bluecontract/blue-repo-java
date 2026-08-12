@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("2LeVjwPpBKrVtg3zHwoBYJoNvx1Hset4WEYcxiPcPMxA")
+@TypeBlueId("6P2aTAXovARh1GhiM9Rj7rxmM3Wgom1Ur3VaTGQ2yYs2")
 public class CdmProductTemplateExpirationTimeTypeEnum {
     public static String blueId() {
-        return "2LeVjwPpBKrVtg3zHwoBYJoNvx1Hset4WEYcxiPcPMxA";
+        return "6P2aTAXovARh1GhiM9Rj7rxmM3Wgom1Ur3VaTGQ2yYs2";
     }
 
     public static String packageName() {

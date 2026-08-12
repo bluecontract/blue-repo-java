@@ -13,13 +13,13 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "61W96XosAp3DrEC7PuqLYtmF2A6ETpqH6qF2DgYwDq4c"
+      "blueId": "5UihWoxkyiUbv9TZk7HcHsa82sz2R3ex1WifQQpKtHpP"
     }
   },
   "sectionChanges": {
     "description": "Section-based /contracts mutations (required when Contracts Change Policy is enabled).",
     "type": {
-      "blueId": "8FdfJApa4H55iYGnn2BVZcAq7tKYB6GrtkcftMgo6fjc"
+      "blueId": "9MfTNhMnFbd6VkhaLLLEyv1SxwBzj9iJjfUNQV2toU9S"
     }
   }
 }

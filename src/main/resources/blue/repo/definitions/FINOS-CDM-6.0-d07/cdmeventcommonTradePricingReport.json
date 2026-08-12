@@ -4,13 +4,13 @@
   "discountingIndex": {
     "description": "It specifies the interest payable on collateral delivered under a CSA covering the trade.",
     "type": {
-      "blueId": "Ffp3NGGHva1Wh7c62eqGBrQTxEzCeASMFJ6PAmoSuCXF"
+      "blueId": "vMjyu6sbtgT7FA6GScxrp32Njg3k9oW6KxuXLU9RYHx"
     }
   },
   "pricingTime": {
     "description": "The regional exchange close time for the underlying contract,including time zone, at which the trades should be priced. This provides an indication for which regional snapshot should be used for pricing primarily for Global markets where there are multiple regional close times.\n",
     "type": {
-      "blueId": "A5epowY7nXCnh1AWLF3H4Zv7YyXwwAFethePAEeyAQ92"
+      "blueId": "3jiEy2e5MqwFVX3zkALqRNFaBpD4DawUCg1iYwfFzeca"
     },
     "schema": {
       "required": true
@@ -19,7 +19,7 @@
   "trade": {
     "description": "Represents the cosensus based pricing parameters on a trade basis.",
     "type": {
-      "blueId": "GHKfcNGEW4jfWBhqCesd1ZbQ2ZJvDnS1YMm2UZ2ZZNZG"
+      "blueId": "Gm86NetLQn7WB75RP28UxDg7WZvhyUm1usBgfAPjFkdM"
     },
     "schema": {
       "required": true

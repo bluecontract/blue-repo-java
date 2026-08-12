@@ -1,7 +1,7 @@
 package blue.repo.provider;
 
-import blue.language.NodeProvider;
 import blue.language.model.Node;
+import blue.language.provider.NodeProvider;
 import blue.language.provider.SequentialNodeProvider;
 
 import java.util.Arrays;

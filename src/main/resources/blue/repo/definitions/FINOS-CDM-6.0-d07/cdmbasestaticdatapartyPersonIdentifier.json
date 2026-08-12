@@ -4,13 +4,13 @@
   "country": {
     "description": "The ISO 3166 standard code for the country issuing the identifier.",
     "type": {
-      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
+      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
     }
   },
   "identifier": {
     "description": "Provides an identifier associated with a person. The identifier is unique within the public source specified in the source attribute.\n",
     "type": {
-      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
+      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
     },
     "schema": {
       "required": true
@@ -19,7 +19,7 @@
   "identifierType": {
     "description": "Defines the source of the identifier.",
     "type": {
-      "blueId": "2DvCCVBpSHMw3EiuFp3MYB9YQpwrSYx4jvwkNtoq3jx9"
+      "blueId": "BEj7NeQ1KmrSoRpwdQvBz69ovp9genXGJ6mpLGXYYwHz"
     }
   }
 }

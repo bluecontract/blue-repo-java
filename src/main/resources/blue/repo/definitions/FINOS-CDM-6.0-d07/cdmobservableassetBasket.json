@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "this#1"
+      "blueId": "this#0"
     },
     "schema": {
       "minItems": 1
@@ -16,7 +16,7 @@
   "exchange": {
     "description": "If the Asset is listed, defines the public exchange of the listing.",
     "type": {
-      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
+      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
     }
   },
   "identifier": {
@@ -25,7 +25,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "B4oXDUH9jELDatvZSw3oWXtJefJ4ixYawEjxBMqSerth"
+      "blueId": "4oFH9vehkWBHWWKWKPEPwytqoRKUA6mcVgrG7P1XtKRy"
     },
     "schema": {
       "minItems": 1
@@ -43,7 +43,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
+      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
     },
     "schema": {
       "minItems": 0
@@ -55,7 +55,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "9MYk7MRYjbMWPHe7v3WexZqePowTL8eRrW8TmNNEtzQJ"
+      "blueId": "GXDxn2HwbWwWg9AFSHwfSi4zZ32a3uVojNQmBN96DUvU"
     },
     "schema": {
       "minItems": 0

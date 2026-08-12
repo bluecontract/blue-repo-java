@@ -2,7 +2,7 @@
   "name": "cdm/observable/asset/InterestRateCurve",
   "floatingRateIndex": {
     "type": {
-      "blueId": "2qVsAJiDNKtcYeoPmttQzFLH44MsczpvMvQ9ZQvwUW6Z"
+      "blueId": "9MWTLbKLsUSiaShABSSuHxaeJZ2aErzYPTqc28XefGr3"
     },
     "schema": {
       "required": true
@@ -10,7 +10,7 @@
   },
   "tenor": {
     "type": {
-      "blueId": "G5BwzTWEaA14NoPKn8iSwCnmwnWuQegPHZwrpgagS6kY"
+      "blueId": "2eRPMxKZ8upfUGCDqNY6xXko7GTGvozudp1i9wznQmXL"
     },
     "schema": {
       "required": true

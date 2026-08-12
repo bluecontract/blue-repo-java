@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("2qVsAJiDNKtcYeoPmttQzFLH44MsczpvMvQ9ZQvwUW6Z")
+@TypeBlueId("9MWTLbKLsUSiaShABSSuHxaeJZ2aErzYPTqc28XefGr3")
 public class CdmBaseStaticdataAssetRatesFieldWithMetaFloatingRateIndexEnum {
     public static String blueId() {
-        return "2qVsAJiDNKtcYeoPmttQzFLH44MsczpvMvQ9ZQvwUW6Z";
+        return "9MWTLbKLsUSiaShABSSuHxaeJZ2aErzYPTqc28XefGr3";
     }
 
     public static String packageName() {

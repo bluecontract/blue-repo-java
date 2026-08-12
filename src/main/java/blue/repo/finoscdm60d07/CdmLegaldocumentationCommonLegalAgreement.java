@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("9LAToUm7ugSfrCZWL6KmTwi7jAEoXH8TcNNGxr34YvFc#0")
+@TypeBlueId("A6CipKeMXZr9PY1uT1iihJg8sjvn1z3pHUPLe9c2aP7a#0")
 public class CdmLegaldocumentationCommonLegalAgreement {
     public static String blueId() {
-        return "9LAToUm7ugSfrCZWL6KmTwi7jAEoXH8TcNNGxr34YvFc#0";
+        return "A6CipKeMXZr9PY1uT1iihJg8sjvn1z3pHUPLe9c2aP7a#0";
     }
 
     public static String packageName() {

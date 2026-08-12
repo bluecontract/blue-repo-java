@@ -10,7 +10,7 @@
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     },
     "valueType": {
-      "blueId": "6WrVQoSpKHUUg5HPrwjkVV6pxe4sdkyGnakMs8ayEGeF"
+      "blueId": "4ugZ87HaumAJezmgvi2QoqfEdqfwpviQavmak8C8ewF4"
     }
   },
   "sectionKey": {
@@ -22,7 +22,7 @@
   "section": {
     "description": "Document Section contract node; must include type Workflows/Document Section and relatedContracts should list keys in contracts.",
     "type": {
-      "blueId": "6R6asWqr9V6DAow5X6EjRRaABhM7xeT13UzcTegmhcjy"
+      "blueId": "CJwAFnduHpubiXYhhgnrS272rM8qELbcfutiaAAWmRsa"
     }
   }
 }

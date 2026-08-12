@@ -4,7 +4,7 @@
   "methodology": {
     "description": "Indicates the type of equity average trading volume being stated (single) the highest amount on one exchange, or (consolidated) volumes across multiple exchanges.\n",
     "type": {
-      "blueId": "9ievDTbZij3cJJ9jg1P1QCr6ezKnnV7LPCaYa9ghiPQK"
+      "blueId": "7LAKR8WGxD9yDgWZLh76RT1z1M17gzWirhryZjYVaoMQ"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "period": {
     "description": "Represents the period of the equities average trading volume on the exchange/s.",
     "type": {
-      "blueId": "G5BwzTWEaA14NoPKn8iSwCnmwnWuQegPHZwrpgagS6kY"
+      "blueId": "2eRPMxKZ8upfUGCDqNY6xXko7GTGvozudp1i9wznQmXL"
     },
     "schema": {
       "required": true

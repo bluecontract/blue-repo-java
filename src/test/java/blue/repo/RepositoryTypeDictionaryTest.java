@@ -1,7 +1,5 @@
 package blue.repo;
 
-import blue.language.Blue;
-import blue.language.dictionary.ExportContext;
 import blue.language.dictionary.TypeDictionary;
 import blue.language.model.Node;
 import blue.repo.types.CoordinationTypes;
@@ -10,8 +8,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RepositoryTypeDictionaryTest {
-    private static final String LIST_BLUE_ID = "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF";
-
     @Test
     void dictionaryBlueIdsContainsRepositoryVersionBlueId() {
         BlueRepository repository = BlueRepository.v1_3_0();
@@ -34,15 +30,16 @@ class RepositoryTypeDictionaryTest {
     }
 
     @Test
-    void typeBlueIdForReturnsCurrentTypeIdForSupportedDictionaryVersion() {
+    void typeBlueIdForDoesNotRemapChangedHistoricalIdentity() {
         BlueRepository repository = BlueRepository.v1_3_0();
         TypeDictionary dictionary = repository.typeDictionary();
         String operationBlueId = CoordinationTypes.OPERATION.blueId();
 
         assertEquals(operationBlueId,
                 dictionary.typeBlueIdFor(operationBlueId, repository.repositoryVersionBlueId()).orElse(null));
-        assertEquals(operationBlueId,
-                dictionary.typeBlueIdFor(operationBlueId, repository.manifest().repositoryVersions().get(0).repositoryBlueId()).orElse(null));
+        assertFalse(dictionary.typeBlueIdFor(
+                operationBlueId,
+                repository.manifest().repositoryVersions().get(0).repositoryBlueId()).isPresent());
     }
 
     @Test
@@ -70,80 +67,4 @@ class RepositoryTypeDictionaryTest {
         assertFalse(dictionary.typeBlueIdFor(CoordinationTypes.OPERATION.blueId(), "unknown-dictionary-blue-id").isPresent());
     }
 
-    @Test
-    void supportedDictionaryExportKeepsCompactTypeReference() {
-        BlueRepository repository = BlueRepository.v1_3_0();
-        Blue blue = repository.configureForExport(new Blue());
-        ExportContext context = ExportContext.builder()
-                .dictionary(BlueRepository.DICTIONARY_NAME, repository.repositoryVersionBlueId())
-                .build();
-
-        Node document = new Node()
-                .name("operation")
-                .type(CoordinationTypes.OPERATION.reference());
-
-        Node exported = blue.exportNode(document, context);
-        String yaml = blue.nodeToYaml(document, context);
-
-        assertNotNull(exported.getType());
-        assertTrue(exported.getType().isReferenceOnly());
-        assertEquals(CoordinationTypes.OPERATION.blueId(), exported.getType().getBlueId());
-        assertTrue(yaml.contains("blueId: \"" + CoordinationTypes.OPERATION.blueId() + "\"")
-                || yaml.contains("blueId: " + CoordinationTypes.OPERATION.blueId()));
-    }
-
-    @Test
-    void exportWithoutDictionaryContextInlinesKnownRepositoryType() {
-        BlueRepository repository = BlueRepository.v1_3_0();
-        Blue blue = repository.configureForExport(new Blue());
-
-        Node document = new Node()
-                .name("operation")
-                .type(CoordinationTypes.OPERATION.reference());
-
-        Node exported = blue.exportNode(document, ExportContext.empty());
-
-        assertNotNull(exported.getType());
-        assertNull(exported.getType().getBlueId());
-        assertEquals("Operation", exported.getType().getName());
-        assertNotNull(exported.getType().getProperties().get("channel"));
-    }
-
-    @Test
-    void strictExportWithoutSupportedDictionaryThrows() {
-        BlueRepository repository = BlueRepository.v1_3_0();
-        Blue blue = repository.configureForExport(new Blue());
-        ExportContext strict = ExportContext.builder()
-                .inlineUnsupportedTypes(false)
-                .build();
-
-        Node document = new Node()
-                .name("operation")
-                .type(CoordinationTypes.OPERATION.reference());
-
-        assertThrows(IllegalArgumentException.class, () -> blue.nodeToYaml(document, strict));
-    }
-
-    @Test
-    void recursiveInliningInlinesRepositoryTypesAndKeepsUnknownItemTypesCompact() {
-        BlueRepository repository = BlueRepository.v1_3_0();
-        Blue blue = repository.configureForExport(new Blue());
-
-        Node document = new Node()
-                .name("update")
-                .type(CoordinationTypes.UPDATE_DOCUMENT.reference());
-
-        Node exported = blue.exportNode(document, ExportContext.empty());
-        Node updateDocument = exported.getType();
-        Node changeset = updateDocument.getProperties().get("changeset");
-        Node itemType = changeset.getItemType();
-
-        assertEquals("Update Document", updateDocument.getName());
-        assertNull(updateDocument.getBlueId());
-        assertNull(itemType.getName());
-        assertNotNull(itemType.getBlueId());
-        assertTrue(itemType.isReferenceOnly());
-        assertEquals(LIST_BLUE_ID, changeset.getType().getBlueId());
-        assertTrue(changeset.getType().isReferenceOnly());
-    }
 }

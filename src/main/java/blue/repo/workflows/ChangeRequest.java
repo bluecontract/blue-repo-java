@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("6DTYzUFXoVEV5WjVKmQveSztfXfVN5nr1bso3ygW9ocU")
+@TypeBlueId("AVuAYKsZEMLjY3XwmKMe1LPrVAEo6R6FepDjPqgndF7J")
 public class ChangeRequest {
     public static String blueId() {
-        return "6DTYzUFXoVEV5WjVKmQveSztfXfVN5nr1bso3ygW9ocU";
+        return "AVuAYKsZEMLjY3XwmKMe1LPrVAEo6R6FepDjPqgndF7J";
     }
 
     public static String packageName() {

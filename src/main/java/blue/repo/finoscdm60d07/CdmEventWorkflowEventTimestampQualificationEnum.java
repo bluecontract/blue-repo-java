@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("98uPvPckZ92oJWmjF6PjWKjL2AQpfcZkKBFUSXjnaWdu")
+@TypeBlueId("6c8sFYVqrfeXJRDNBGbeaVtJN5wk6e2cvEc3xKCnPNhr")
 public class CdmEventWorkflowEventTimestampQualificationEnum {
     public static String blueId() {
-        return "98uPvPckZ92oJWmjF6PjWKjL2AQpfcZkKBFUSXjnaWdu";
+        return "6c8sFYVqrfeXJRDNBGbeaVtJN5wk6e2cvEc3xKCnPNhr";
     }
 
     public static String packageName() {

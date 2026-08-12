@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("BRCQiBi9STYfKiP9KdPDPjoyi46W34fzykNMzGBP1YFT")
+@TypeBlueId("C8dYtpaC5sApKFHdfeTUgJGSS65ZpXVFkVQe4mhNjoUi")
 public class CdmProductCommonScheduleFxLinkedNotionalSchedule {
     public static String blueId() {
-        return "BRCQiBi9STYfKiP9KdPDPjoyi46W34fzykNMzGBP1YFT";
+        return "C8dYtpaC5sApKFHdfeTUgJGSS65ZpXVFkVQe4mhNjoUi";
     }
 
     public static String packageName() {

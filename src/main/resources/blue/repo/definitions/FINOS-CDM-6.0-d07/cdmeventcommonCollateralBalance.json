@@ -4,7 +4,7 @@
   "amountBaseCurrency": {
     "description": "Specifies the collateral balance amount in base currency determined within a collateral legal agreement, or defined for reporting purposes.\n",
     "type": {
-      "blueId": "7eyr2kXubNSHtLXpHJ9G8NqtmDXLfmDmHQZSkLa9qkyy"
+      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
     },
     "schema": {
       "required": true
@@ -13,19 +13,19 @@
   "collateralBalanceStatus": {
     "description": "Defines the collateral balance breakdown of settlement status.",
     "type": {
-      "blueId": "ScqKZW3m5Vk4Ht3xpASxxv9euZM32FQPYjE6PbCZEHc"
+      "blueId": "6ctehAVhDiuTwXfG2zzPiqjPq4Chs91k7cZy6gJecUMe"
     }
   },
   "haircutIndicator": {
     "description": "Indicates if the collateral balance amount is based on pre or post haircut, if a haircut is associated with the collateral asset\n",
     "type": {
-      "blueId": "BhcAc9aom3oN5CJ2MVXmyyUEeSBLxX3PgyuKursXD5hQ"
+      "blueId": "7jzEk39QMqbmzpmZF3CL3GVht2Z2MUCgbVA9Xjjcwirk"
     }
   },
   "payerReceiver": {
     "description": "Specifies each of the parties in the collateral balance and its perspective with regards to the direction of the collateral balance, posted or received.\n",
     "type": {
-      "blueId": "2LmejohDGLXaXF2jDmkccaa7GSQbnbp8iBMKmrxifhWs"
+      "blueId": "63Bw1Ena6g9zgLcVwPkkpApxNVecQwz8Ygi9rZZFYMoB"
     },
     "schema": {
       "required": true

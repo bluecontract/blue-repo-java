@@ -4,7 +4,7 @@
   "fallbackReferencePrice": {
     "description": "The method, prioritised by the order it is listed in this element, to get a replacement rate for the disrupted settlement rate option.\n",
     "type": {
-      "blueId": "FSP23sNY1FGeadmmkSZjmqWKdkoLdCoMqZ3eBePPS9N8"
+      "blueId": "PDQLcykvwiGmnD7jw1DPqfEPB4qb9uEDGcwWVZLf7vv"
     },
     "schema": {
       "required": true

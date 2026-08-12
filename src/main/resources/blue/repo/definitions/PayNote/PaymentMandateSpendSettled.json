@@ -2,7 +2,7 @@
   "name": "Payment Mandate Spend Settled",
   "description": "Settlement update sent by bank to Payment Mandate after charge execution, used to apply deterministic reserved/captured deltas in mandate state. For approved authorizations, mandate may already reserve capacity at authorize step. Deltas should express net post-execution adjustment from current mandate state.\n",
   "type": {
-    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
+    "blueId": "283zu1pu97gXBs4mquE3MSjwRYTzZSXZhnRSemCH8mZr"
   },
   "authorizationId": {
     "description": "Correlation key copied from Payment Mandate Spend Authorization Requested.",

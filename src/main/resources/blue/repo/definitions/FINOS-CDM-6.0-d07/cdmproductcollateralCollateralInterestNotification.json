@@ -4,7 +4,7 @@
   "notificationDayType": {
     "description": "The type of days on which notification should occur.",
     "type": {
-      "blueId": "EPBWZ9jBx984Q99bnqB2NAqBTKrAr4mJWCYnwcFgnivq"
+      "blueId": "7SsDfFvRbfxrm8vS98NZ5Vq9nqD3CFNGWsLr6dc738LJ"
     },
     "schema": {
       "required": true

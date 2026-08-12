@@ -7,7 +7,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "2V4dGZWz8cuGsz2de8Z56U5MbYQwAFwUMekoMx6KF9MR"
+      "blueId": "DkA6XvJbeeF79icGcoVeHCpY9rXSKVoMH52bsmP1sFti"
     },
     "schema": {
       "minItems": 0
@@ -16,7 +16,7 @@
   "availableInventoryType": {
     "description": "Defines the purpose of this inventory.",
     "type": {
-      "blueId": "aBFCJu2rgHDvt2e9kS3mCjQEMuVFbBnupxJkHCP32WV"
+      "blueId": "8L2skr8s4BSGZQh2GH8oY8LM7UokYm6kfuxiZy5y3Kdh"
     },
     "schema": {
       "required": true
@@ -25,7 +25,7 @@
   "messageInformation": {
     "description": "Allows details related to the availability messaging use case to be defined",
     "type": {
-      "blueId": "98dPVuFQFzp6TPmhAh6zjz4zFp8sdg597uHrfF3ztLkP"
+      "blueId": "22GjU2seJ6LjqoYyFFC6Wzrh5DA1XxUKBbuqNn2vnR3d"
     }
   },
   "party": {
@@ -34,7 +34,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "3skPfLDtYJ59SZAAdcu2JDHySdtCEVu8FzTnUX8D5mfy"
+      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
     },
     "schema": {
       "minItems": 0
@@ -46,7 +46,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "Hrt2EoYJokASG9J62NMKWt8UZbQN6BwtESp7hVDVQYvm"
+      "blueId": "6DrJREpu1Ms3M4U1q7jqGjM46V1o8vxq4K1i3X4dwMvz"
     },
     "schema": {
       "minItems": 0

@@ -16,7 +16,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "2zMRqKefYonWQ8EuyFg2YU4i4zB7SE1Yph91R4PEy7WW"
+      "blueId": "HC7vpNX6HuCaSUFftb4rqporkfy3yH1WszW793XKYCmB"
     },
     "schema": {
       "minItems": 1
@@ -37,7 +37,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "hDUXATg8yvnWEPHNH63w5HzgAKwLoFeQGGn6JTqWHsw"
+      "blueId": "5JQz9gQGhNz24NGJKaxuHWqf2RvutiRvHzTTKMJC1Apq"
     },
     "schema": {
       "minItems": 1
@@ -46,7 +46,7 @@
   "receivingParty": {
     "description": "The party receiving the invoice",
     "type": {
-      "blueId": "3skPfLDtYJ59SZAAdcu2JDHySdtCEVu8FzTnUX8D5mfy"
+      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
     },
     "schema": {
       "required": true
@@ -55,7 +55,7 @@
   "sendingParty": {
     "description": "The party issuing the invoice",
     "type": {
-      "blueId": "3skPfLDtYJ59SZAAdcu2JDHySdtCEVu8FzTnUX8D5mfy"
+      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
     },
     "schema": {
       "required": true

@@ -4,7 +4,7 @@
   "aggregateValue": {
     "description": "Represents the aggregate value of the portfolio in base currency.",
     "type": {
-      "blueId": "7eyr2kXubNSHtLXpHJ9G8NqtmDXLfmDmHQZSkLa9qkyy"
+      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
     },
     "schema": {
       "required": true

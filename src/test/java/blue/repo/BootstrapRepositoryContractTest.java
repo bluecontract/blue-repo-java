@@ -18,10 +18,8 @@ import blue.repo.types.BootstrapTypes;
 import blue.repo.types.CoordinationTypes;
 import blue.repo.types.SessionInteractionTypes;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 
-import java.io.InputStream;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -29,7 +27,6 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class BootstrapRepositoryContractTest {
@@ -122,13 +119,8 @@ class BootstrapRepositoryContractTest {
     }
 
     private JsonNode definition(RepositoryType type) throws Exception {
-        RepositoryDefinition definition = repository.definition(type.qualifiedName())
-                .orElseThrow(() -> new AssertionError("Missing repository definition: " + type.qualifiedName()));
-        try (InputStream input = BootstrapRepositoryContractTest.class.getClassLoader()
-                .getResourceAsStream(definition.resourcePath())) {
-            assertNotNull(input, definition.resourcePath());
-            return new ObjectMapper().readTree(input);
-        }
+        return RepositorySourceDefinitions.definition(
+                repository, type.qualifiedName());
     }
 
     private static Set<String> fieldNames(JsonNode object) {

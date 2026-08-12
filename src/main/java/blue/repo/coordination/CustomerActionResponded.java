@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.common.Timestamp;
 
-@TypeBlueId("6C9hES9r92QmbLEgtk4yrgz54abzs7B8jqEaMgSVJv7m")
+@TypeBlueId("5A3hFd3Nn6Ybw8Y2tbptSTJmzefxqn6KjddPpz7gaFHP")
 public class CustomerActionResponded extends Response {
     public static String blueId() {
-        return "6C9hES9r92QmbLEgtk4yrgz54abzs7B8jqEaMgSVJv7m";
+        return "5A3hFd3Nn6Ybw8Y2tbptSTJmzefxqn6KjddPpz7gaFHP";
     }
 
     public static String packageName() {

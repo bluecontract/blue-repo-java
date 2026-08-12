@@ -1,9 +1,7 @@
 package blue.repo;
 
-import blue.language.Blue;
-import blue.language.dictionary.ExportContext;
+import blue.language.codec.jackson.UncheckedObjectMapper;
 import blue.language.model.Node;
-import blue.language.utils.UncheckedObjectMapper;
 import blue.repo.provider.RepositoryNodeProvider;
 import org.junit.jupiter.api.Test;
 
@@ -83,75 +81,6 @@ class RepositoryHistoricalVersionTest {
         assertNull(provider.fetchFirstByBlueId("op-v1"));
         assertFalse(provider.definitionByBlueId("op-v1").isPresent());
         assertFalse(manifest.currentBlueIdFor("op-v1").isPresent());
-    }
-
-    @Test
-    void exportWithOlderDictionaryContextInlinesChangedHistoricalType() {
-        Blue blue = new Blue().registerTypeDictionary(syntheticDictionary());
-        ExportContext context = ExportContext.builder()
-                .dictionary(BlueRepository.DICTIONARY_NAME, "repo-v1")
-                .build();
-
-        Node exported = blue.exportNode(new Node().type(new Node().blueId("op-v3")), context);
-
-        assertNotNull(exported.getType());
-        assertNull(exported.getType().getBlueId());
-        assertEquals("Operation", exported.getType().getName());
-        assertNotNull(exported.getType().getProperties().get("extra"));
-    }
-
-    @Test
-    void exportWithOlderDictionaryContextInlinesTypesThatDidNotExistYet() {
-        Blue blue = new Blue().registerTypeDictionary(syntheticDictionary());
-        ExportContext context = ExportContext.builder()
-                .dictionary(BlueRepository.DICTIONARY_NAME, "repo-v2")
-                .build();
-
-        Node exported = blue.exportNode(new Node().type(new Node().blueId("new-v3")), context);
-
-        assertNotNull(exported.getType());
-        assertNull(exported.getType().getBlueId());
-        assertEquals("New Type", exported.getType().getName());
-        assertNotNull(exported.getType().getProperties().get("amount"));
-    }
-
-    @Test
-    void exportWithOlderDictionaryContextInlinesIncompatibleHistoricalType() {
-        Blue blue = new Blue().registerTypeDictionary(syntheticDictionary());
-        ExportContext context = ExportContext.builder()
-                .dictionary(BlueRepository.DICTIONARY_NAME, "repo-v1")
-                .build();
-
-        Node exported = blue.exportNode(new Node().type(new Node().blueId("incompatible-v3")), context);
-
-        assertNotNull(exported.getType());
-        assertNull(exported.getType().getBlueId());
-        assertEquals("Incompatible History", exported.getType().getName());
-        assertNotNull(exported.getType().getProperties().get("currentField"));
-    }
-
-    @Test
-    void strictExportWithOlderDictionaryContextThrowsForTypesThatDidNotExistYet() {
-        Blue blue = new Blue().registerTypeDictionary(syntheticDictionary());
-        ExportContext context = ExportContext.builder()
-                .dictionary(BlueRepository.DICTIONARY_NAME, "repo-v2")
-                .inlineUnsupportedTypes(false)
-                .build();
-
-        assertThrows(IllegalArgumentException.class,
-                () -> blue.exportNode(new Node().type(new Node().blueId("new-v3")), context));
-    }
-
-    @Test
-    void strictExportWithOlderDictionaryContextThrowsForIncompatibleHistoricalType() {
-        Blue blue = new Blue().registerTypeDictionary(syntheticDictionary());
-        ExportContext context = ExportContext.builder()
-                .dictionary(BlueRepository.DICTIONARY_NAME, "repo-v1")
-                .inlineUnsupportedTypes(false)
-                .build();
-
-        assertThrows(IllegalArgumentException.class,
-                () -> blue.exportNode(new Node().type(new Node().blueId("incompatible-v3")), context));
     }
 
     @Test
@@ -352,7 +281,10 @@ class RepositoryHistoricalVersionTest {
                 "--resource-base", "blue/repo/vtest",
                 "--java-package", "blue.repo.vtest",
                 "--java-output-root", temp.resolve("java").toString(),
-                "--resources-output-root", temp.resolve("resources").toString()
+                "--resources-output-root", temp.resolve("resources").toString(),
+                "--language-registry", new File("build/registry-inputs/registry/blue-language-1.0").getAbsolutePath(),
+                "--contracts-registry", new File("build/registry-inputs/registry/blue-contracts-1.0").getAbsolutePath(),
+                "--allow-authored-provider-content"
         )
                 .directory(new File(System.getProperty("user.dir")))
                 .redirectErrorStream(true)

@@ -2,7 +2,7 @@
   "name": "cdm/product/collateral/EligibleCollateralSpecificationInstruction",
   "common": {
     "type": {
-      "blueId": "3GcdhwSwCmcXjxmxraErSqcv6hktXM5krtm5PeusABq6"
+      "blueId": "Dd4QK5kmBzsGcmhcqxkLLPiH2fBmE3acTHCBGWUW5Buq"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "3GcdhwSwCmcXjxmxraErSqcv6hktXM5krtm5PeusABq6"
+      "blueId": "Dd4QK5kmBzsGcmhcqxkLLPiH2fBmE3acTHCBGWUW5Buq"
     },
     "schema": {
       "minItems": 1

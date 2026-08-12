@@ -4,7 +4,7 @@
   "disputingParty": {
     "description": "Where the party who is not granted with the substitution role at least has a right to dispute the determination given by the counterparty with such role. As an example, a given PartyA is the unique Counterparty with the Role of WhoMaySubstitute, yet PartyB could be Disputing Party in regard of such Role.\n",
     "type": {
-      "blueId": "6RRexSdxduLUUJjoAGhNuhXszw24mwyTFrHtwAqU2SDG"
+      "blueId": "7qRfgFBAefYQ37ztmK2dW9i4twZzBjKcQiHPeHrcRtYw"
     }
   },
   "substitutionBeSpokeTerms": {
@@ -13,7 +13,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "Hn9xYtxdTe696TXzE5ge1KF3B3Ao26Z2er28HygKAoWi#0"
+      "blueId": "GuFp1BJy74SUjnjVg7r3RwuRPXYUDKSUyEecdtsJ7QMX#0"
     },
     "schema": {
       "minItems": 0
@@ -25,7 +25,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "5TwYH1UDWUhzBQmxrWFhK5phemNwZXmScWVwCZNB72rU"
+      "blueId": "8WNdwP7MjecdHrT3shTAYGh22xXfqp5tjwBVkVnp6Cef"
     },
     "schema": {
       "minItems": 0
@@ -37,7 +37,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "6RRexSdxduLUUJjoAGhNuhXszw24mwyTFrHtwAqU2SDG"
+      "blueId": "7qRfgFBAefYQ37ztmK2dW9i4twZzBjKcQiHPeHrcRtYw"
     },
     "schema": {
       "minItems": 1,

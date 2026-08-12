@@ -10,7 +10,7 @@
   "period": {
     "description": "A time period, e.g. a day, week, month, year or term of the stream.",
     "type": {
-      "blueId": "BLwQ9sW7unThpYZC3TVs8YtMmiAoZ4NVGjVRppu4gm7x"
+      "blueId": "8g5Z7Xf3wFDD2QY1rGqmTjeY7EvWWEsxUiKyX6UbH8kp"
     }
   },
   "periodMultiplier": {
@@ -22,7 +22,7 @@
   "rollConvention": {
     "description": "The roll convention specifies the period term as part of a periodic schedule, i.e. the calculation period end date within the regular part of the calculation period. The value could be a rule, e.g. IMM Settlement Dates, which is the 3rd Wednesday of the month, or it could be a specific day of the month, such as the first day of the applicable month. It is used in conjunction with a frequency and the regular period start date of a calculation period.\n",
     "type": {
-      "blueId": "5vi7aU3GvfLQ4xDo1Ud6tENVfH6eddFwtnAbqXHuxMfi"
+      "blueId": "GxfgSxqafB73DXXwjJx4sXU3P96NoGFSnDx7p4Z9L14d"
     },
     "schema": {
       "required": true

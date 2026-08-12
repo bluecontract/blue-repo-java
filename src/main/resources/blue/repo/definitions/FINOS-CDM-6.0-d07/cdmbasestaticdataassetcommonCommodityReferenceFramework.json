@@ -4,7 +4,7 @@
   "capacityUnit": {
     "description": "Provides an enumerated value for a capacity unit, generally used in the context of defining quantities for commodities.\n",
     "type": {
-      "blueId": "g4vkocaqQK6FYK1ys61BBsp11Y2Daj3aPCffWwm5Egq"
+      "blueId": "CWSVzp2Q44fquiPqREdwPG58ajzi9BWEUvtYAMNDyDaM"
     }
   },
   "commodityName": {
@@ -19,7 +19,7 @@
   "currency": {
     "description": "Defines the currency in which the commodity is priced.",
     "type": {
-      "blueId": "HTDqFgte5VF88dLHnCZMjvyetfxfTAKxf9r8ciErE7Vg"
+      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
     },
     "schema": {
       "required": true
@@ -28,7 +28,7 @@
   "weatherUnit": {
     "description": "Provides an enumerated values for a weather unit, generally used in the context of defining quantities for commodities.\n",
     "type": {
-      "blueId": "DePEyNHqpBtxPVrPYXSKuWt1ugb339xn92ZXP2uKKUgY"
+      "blueId": "3RrCehQPhj94WCGJynzHZHuGPw5Vr6EeghnSE82NtFS6"
     }
   }
 }

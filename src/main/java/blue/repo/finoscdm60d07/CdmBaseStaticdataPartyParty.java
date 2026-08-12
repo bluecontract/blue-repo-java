@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("3skPfLDtYJ59SZAAdcu2JDHySdtCEVu8FzTnUX8D5mfy")
+@TypeBlueId("DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd")
 public class CdmBaseStaticdataPartyParty {
     public static String blueId() {
-        return "3skPfLDtYJ59SZAAdcu2JDHySdtCEVu8FzTnUX8D5mfy";
+        return "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd";
     }
 
     public static String packageName() {

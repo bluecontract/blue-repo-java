@@ -2,12 +2,12 @@
   "name": "Document Bootstrap Completed",
   "description": "Response reporting that a bootstrap provider successfully started the requested logical document and made a running session of that document available to the requester or to the participant on whose behalf bootstrap was requested.\n",
   "type": {
-    "blueId": "4rExHc9dQ4h6gqTj343qg2teiFr8GDwWv1aDYPdV21QH"
+    "blueId": "283zu1pu97gXBs4mquE3MSjwRYTzZSXZhnRSemCH8mZr"
   },
   "documentSession": {
     "description": "Provider-neutral reference to the running session made available to the requester or to the participant on whose behalf bootstrap was requested. Its initialDocument identifies the requested logical document.\n",
     "type": {
-      "blueId": "FxcZycT49wFfrNAZpzquWVRw43epYQx5SkYXpdwx3c2Z"
+      "blueId": "CitEEsPhrBya9i5PK18kP3V4snE1g79885geLZM2PidU"
     },
     "schema": {
       "required": true

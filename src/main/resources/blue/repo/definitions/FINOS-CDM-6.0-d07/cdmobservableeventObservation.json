@@ -4,7 +4,7 @@
   "observationIdentifier": {
     "description": "Represents the observation was made i.e. how to uniquely identify the observed value among the population of all available market data.\n",
     "type": {
-      "blueId": "HsL4LyTBaWKTLfoBBFsckiquH2hkGP3QRC7x8z6S4s2L"
+      "blueId": "9naeLEXLRWTumCrkSpeU3W9ou5dZxNFfPNSpUrCjWXbE"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "observedValue": {
     "description": "Specifies the observed value as a number.",
     "type": {
-      "blueId": "GLmQaa2vVZKjaht1sNMcUL55xfAgWQxpj5ENxwvVRvsm"
+      "blueId": "D6pT9tDvB6nnaNaPVHodxcm2djqTNykgt6VJoD2uDq4M"
     },
     "schema": {
       "required": true

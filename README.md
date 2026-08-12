@@ -5,18 +5,21 @@ Java companion package for [repo.blue](https://repo.blue).
 This repository packages published Blue repository definitions as Java
 resources and generated Java classes. It lets Java applications resolve
 repo.blue types by qualified name or BlueId, use generated model classes, and
-configure `blue-language-java` with the repository type catalog.
+compose the repository catalog with the immutable `blue-language-java`
+runtime.
 
-It does not execute contracts. Runtime behavior for contracts such as
-Coordination workflows or timeline channels belongs in `blue-contract-java`.
+It does not add executable behavior for repository-defined contracts. The
+generic Contracts 1.0 runtime comes from `blue-language-java`; behavior for
+Coordination workflows or timeline channels belongs in
+`blue-coordination-java`.
 
 ## How This Fits
 
 | Repository | Responsibility |
 | --- | --- |
 | `blue-language-java` | Blue language core: parsing, BlueId, resolution, snapshots, processor foundation. |
-| `blue-repo-java` | Generated Java catalog for repo.blue packages and types. |
-| `blue-contract-java` | Executable processors for selected repository contracts. |
+| `blue-repo-java` | Generated Java catalog and exact-content provider for repo.blue packages and types. |
+| `blue-coordination-java` | Executable processors for selected Coordination repository contracts. |
 
 Use this project when you need Java access to real repo.blue types:
 
@@ -36,10 +39,11 @@ dictionary. It currently includes repository version `1.3.0`.
 It provides:
 
 - classpath resources for the generated Blue type definitions;
-- a repository manifest;
+- a repository manifest with registry and provider-bundle provenance;
 - lookup by qualified name and BlueId;
-- `NodeProvider` integration for Blue reference resolution;
-- `TypeDictionary` integration for compact/portable export;
+- an identity-verifying, cyclic-set-aware `NodeProvider` for exact reference
+  resolution;
+- `TypeDictionary` utilities for repository-version lookup;
 - generated Java classes under `blue.repo`;
 - generated type constants under `blue.repo.types`;
 - a `TypeClassResolver` configured with all generated `@TypeBlueId` classes;
@@ -58,7 +62,7 @@ repositories {
 }
 
 dependencies {
-    implementation "blue.repo:blue-repo-java:2.0.1"
+    implementation "blue.repo:blue-repo-java:<version>"
 }
 ```
 
@@ -66,7 +70,7 @@ dependencies {
 directly, use the published language artifact:
 
 ```groovy
-implementation "blue.language:blue-language-java:3.0.0"
+implementation "blue.language:blue-language-java:3.1.0-rc.20"
 ```
 
 ### Maven
@@ -75,14 +79,13 @@ implementation "blue.language:blue-language-java:3.0.0"
 <dependency>
     <groupId>blue.repo</groupId>
     <artifactId>blue-repo-java</artifactId>
-    <version>2.0.1</version>
+    <version>VERSION</version>
 </dependency>
 ```
 
 ### Local Development
 
-Local builds use the version from `.cz.toml` with `-SNAPSHOT` appended, so this
-checkout builds as `2.0.1-SNAPSHOT` outside CI.
+Local builds use the version from `.cz.toml` with `-SNAPSHOT` appended.
 
 To test this package from another local project before release:
 
@@ -93,7 +96,7 @@ To test this package from another local project before release:
 Then depend on:
 
 ```groovy
-implementation "blue.repo:blue-repo-java:2.0.1-SNAPSHOT"
+implementation "blue.repo:blue-repo-java:<version>-SNAPSHOT"
 ```
 
 Local development uses the published `blue.language:blue-language-java`
@@ -132,80 +135,27 @@ System.out.println(operationType.getBlueId());
 ### Use Repository Definitions As A `NodeProvider`
 
 ```java
-import blue.language.Blue;
+import blue.language.BlueRuntime;
 import blue.language.model.Node;
 import blue.repo.BlueRepository;
 import blue.repo.types.CoordinationTypes;
 
 BlueRepository repo = BlueRepository.latest();
-Blue blue = repo.configure(new Blue(repo.nodeProvider()));
+try (BlueRuntime runtime = repo.runtime()) {
+    Node message = new Node()
+            .type(CoordinationTypes.CHAT_MESSAGE.reference())
+            .properties("message", new Node().value("hello"));
 
-Node message = new Node()
-        .type(CoordinationTypes.CHAT_MESSAGE.reference())
-        .properties("message", new Node().value("hello"));
-
-Node resolved = blue.resolve(message);
-
-System.out.println(resolved.getType().getName()); // Chat Message
+    Node resolved = runtime.language().resolution().resolve(message);
+    System.out.println(resolved.getType().getName()); // Chat Message
+}
 ```
 
-### Export With The Repository Dictionary
-
-Register the repository dictionary when exporting documents that reference
-repo.blue types:
-
-```java
-import blue.language.Blue;
-import blue.language.dictionary.ExportContext;
-import blue.language.model.Node;
-import blue.repo.BlueRepository;
-import blue.repo.types.CoordinationTypes;
-
-BlueRepository repo = BlueRepository.latest();
-Blue blue = repo.configureForExport(new Blue());
-
-Node document = new Node()
-        .type(CoordinationTypes.OPERATION.reference());
-
-ExportContext context = ExportContext.builder()
-        .dictionary(BlueRepository.DICTIONARY_NAME, repo.repositoryVersionBlueId())
-        .build();
-
-String yaml = blue.nodeToYaml(document, context);
-```
-
-`@TypeBlueId` maps repository BlueIds to Java classes. Generated classes may
-contain the current BlueId plus compatible historical BlueIds when the current
-class can safely represent older documents. The repository `TypeDictionary`
-maps current and historical type BlueIds to the current logical type, then
-chooses the type BlueId supported by the receiver's requested repository
-version. The repository `NodeProvider` remains responsible for loading full
-definitions for resolution and for fallback inlining.
-
-When the export context includes the repository dictionary version, supported
-repository types stay compact:
-
-```yaml
-type:
-  blueId: BoAiqVUZv9Fum3wFqaX2JnQMBHJLxJSo2V9U2UBmCfsC
-```
-
-When no supported dictionary is declared, known repository types are inlined by
-default. To fail instead of inline, use strict export:
-
-```java
-ExportContext strict = ExportContext.builder()
-        .inlineUnsupportedTypes(false)
-        .build();
-```
-
-If the export context names an older repository version, supported types are
-exported with that older version's type BlueId. Types that did not exist in the
-requested repository version are inlined by default or rejected in strict mode.
-Current `blue-language-java` does not pass the requested dictionary version into
-the inlined-definition callback, so version-specific field pruning is modeled in
-manifest metadata but requires a follow-up language SPI extension to apply
-during inlining.
+`@TypeBlueId` maps current repository BlueIds to Java classes. The repository
+manifest also retains repository-version metadata used by `TypeDictionary`
+lookup utilities. Exact definitions are supplied by the repository
+`NodeProvider`; every plain definition is re-hashable and cyclic definitions
+carry complete cyclic-set proof content.
 
 ### Use Qualified Names In YAML
 
@@ -221,25 +171,30 @@ contracts:
       type: Integer
 ```
 
-Attach `repo.typeAliasBlue()` before preprocessing so `blue-language-java` can
-replace qualified names with real BlueIds:
+Attach `repo.typeAliasBlue()` before preprocessing. It creates the portable
+`blue.imports` object whose values are exact pure references:
 
 ```java
-import blue.language.Blue;
+import blue.language.BlueRuntime;
+import blue.language.codec.jackson.UncheckedObjectMapper;
 import blue.language.model.Node;
 import blue.repo.BlueRepository;
 
-import static blue.language.utils.UncheckedObjectMapper.YAML_MAPPER;
-
 BlueRepository repo = BlueRepository.latest();
-Blue blue = repo.configure(new Blue(repo.nodeProvider()));
+try (BlueRuntime runtime = repo.runtime()) {
+    Node document = UncheckedObjectMapper.YAML_MAPPER
+            .readValue(yaml, Node.class)
+            .blue(repo.typeAliasBlue());
 
-Node document = YAML_MAPPER.readValue(yaml, Node.class)
-        .blue(repo.typeAliasBlue());
-
-Node preprocessed = blue.preprocess(document);
-Node resolved = blue.resolve(preprocessed);
+    Node preprocessed = runtime.language().preprocessing()
+            .preprocess(document);
+    Node resolved = runtime.language().resolution().resolve(preprocessed);
+}
 ```
+
+Blue Language 1.0 imports accept only plain BlueIds. Repository types that are
+members of a cyclic set must therefore be referenced by their exact BlueId,
+not imported by a qualified-name alias.
 
 ### Use Generated Java Model Classes
 
@@ -248,7 +203,7 @@ repository manifest identify which repo.blue dictionary version is packaged,
 while Java imports remain stable across compatible repository updates:
 
 ```java
-import blue.language.Blue;
+import blue.language.BlueRuntime;
 import blue.language.model.Node;
 import blue.repo.BlueRepository;
 import blue.repo.coordination.ChatMessage;
@@ -256,19 +211,20 @@ import blue.repo.coordination.Operation;
 import blue.repo.coordination.SequentialWorkflowOperation;
 
 BlueRepository repo = BlueRepository.latest();
-Blue blue = repo.configure(new Blue(repo.nodeProvider()));
+try (BlueRuntime runtime = repo.runtime()) {
+    ChatMessage message = new ChatMessage()
+            .message("hello");
 
-ChatMessage message = new ChatMessage()
-        .message("hello");
+    Node messageNode = runtime.mapping().toNode(message);
 
-Node messageNode = blue.objectToNode(message);
+    Operation operation = new Operation()
+            .request(new Node().type("Integer"));
+    operation.channel("ownerChannel");
 
-Operation operation = new Operation()
-        .request(new Node().type("Integer"));
-operation.channel("ownerChannel");
-
-SequentialWorkflowOperation implementation = new SequentialWorkflowOperation();
-implementation.channel("ownerChannel");
+    SequentialWorkflowOperation implementation =
+            new SequentialWorkflowOperation();
+    implementation.channel("ownerChannel");
+}
 ```
 
 Every generated class has:
@@ -295,8 +251,8 @@ If your application has its own Blue documents in addition to repo.blue types,
 compose providers:
 
 ```java
-import blue.language.Blue;
-import blue.language.NodeProvider;
+import blue.language.BlueRuntime;
+import blue.language.provider.NodeProvider;
 import blue.repo.BlueRepository;
 import blue.repo.provider.CompositeNodeProvider;
 
@@ -308,7 +264,12 @@ NodeProvider provider = CompositeNodeProvider.of(
         appProvider
 );
 
-Blue blue = repo.configure(new Blue(provider));
+try (BlueRuntime runtime = BlueRuntime.builder()
+        .nodeProvider(provider)
+        .mapping(repo.mapper())
+        .build()) {
+    // use runtime.language(), runtime.contracts(), and runtime.mapping()
+}
 ```
 
 ## What This Does Not Do
@@ -322,7 +283,8 @@ For example:
   class;
 - `Workflows/Accept Change Workflow` is generated here as a model class;
 - `MyOS/MyOS Timeline Channel` is generated here as a model class;
-- but executing those contracts is `blue-contract-java`'s job.
+- but registering and executing their Coordination-specific behavior is
+  `blue-coordination-java`'s job.
 
 This separation is intentional. The repository package is stable generated
 catalog data; the contract package is executable behavior.
@@ -361,7 +323,8 @@ Regenerate from an explicit upstream checkout or downloaded bundle:
 
 ```bash
 ./gradlew generateRepositorySources \
-  -PblueRepositorySource=/path/to/blue-repository/BlueRepository.blue
+  -PblueRepositorySource=/path/to/blue-repository/BlueRepository.blue \
+  -PblueRepositoryProviderBundle=/path/to/blue-repository/BlueRepository.provider.json
 ```
 
 Verify checked-in output is current:
@@ -372,12 +335,20 @@ Verify checked-in output is current:
 
 `verifyGeneratedSources` is wired into `check`.
 
-The generator uses the checked-in `BlueRepository.blue` for the current
-version when available. For a new repository release, point
-`blueRepositorySource` at the updated upstream `BlueRepository.blue`.
+The generator uses the checked-in `BlueRepository.blue` and
+`BlueRepository.provider.json` for the current version when available. The
+first is repository/version metadata plus authored storage content; the second
+contains the exact canonical provider content whose direct BlueIds are the
+declared type identities. For a new repository release, supply both artifacts
+from the same generator run. The Java generator rejects missing, mixed, or
+tampered provider provenance.
 
-If `js-yaml` is not installed locally, the generator expects it under
-`../blue-repository-js/node_modules/js-yaml`.
+Generation also extracts and verifies the Language 1.0 and Contracts 1.0
+registries from the pinned `blue-language-core` and `blue-contracts-core`
+dependencies. Their package identities and every declared resource digest
+must match the selected registry release before Java sources are written.
+
+Run `npm ci` once to install the generator's pinned `js-yaml` dependency.
 
 ## Build And Test
 
@@ -407,7 +378,7 @@ tests on Java 8.
 ## Release Setup
 
 The project version is stored in `.cz.toml`. Local builds append `-SNAPSHOT`;
-CI builds publish the plain version, for example `2.0.1`.
+CI builds publish the plain version.
 
 Publishing uses the same JReleaser/Maven Central flow as `blue-language-java`:
 
@@ -451,6 +422,7 @@ src/main/resources/blue/repo
   manifest.json
   definitions/
   BlueRepository.blue
+  BlueRepository.provider.json
 
 tools/
   generate-repository-sources.js
@@ -464,16 +436,13 @@ You need `repo.typeAliasBlue()` or direct BlueId references:
 
 ```java
 Node document = raw.blue(repo.typeAliasBlue());
-Node preprocessed = blue.preprocess(document);
+Node preprocessed = runtime.language().preprocessing().preprocess(document);
 ```
 
 Generated classes are not processors.
 
-If you want to execute Coordination workflows, add `blue-contract-java` and call:
-
-```java
-BlueDocumentProcessors.registerWith(blue);
-```
+If you want to execute Coordination workflows, compose the repository artifact
+with the matching `blue-coordination-java` release and its processors.
 
 ## Links
 

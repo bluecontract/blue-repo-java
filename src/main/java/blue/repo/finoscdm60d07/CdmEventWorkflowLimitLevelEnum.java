@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("EZdU7ZfikeT9jXmxHjC3ABGRtnYsqhzhoL58Cfo3ojj1")
+@TypeBlueId("8fPa1iYkGnYHoDjTLuifMbshggJh9khUNhLy4N8UYPSe")
 public class CdmEventWorkflowLimitLevelEnum {
     public static String blueId() {
-        return "EZdU7ZfikeT9jXmxHjC3ABGRtnYsqhzhoL58Cfo3ojj1";
+        return "8fPa1iYkGnYHoDjTLuifMbshggJh9khUNhLy4N8UYPSe";
     }
 
     public static String packageName() {

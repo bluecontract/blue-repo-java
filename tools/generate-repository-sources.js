@@ -30,6 +30,10 @@ function option(name, defaultValue) {
   return match ? match.slice(prefix.length) : defaultValue;
 }
 
+function hasOption(name) {
+  return process.argv.includes(`--${name}`);
+}
+
 function versionPackageSegment(version) {
   return `v${`${version}`.replace(/[^A-Za-z0-9]+/g, '_').replace(/^_+|_+$/g, '')}`;
 }
@@ -49,10 +53,28 @@ const explicitSourceBundle = option(
   'repository',
   option('source', process.env.BLUE_REPOSITORY_BLUE || process.env.BLUE_REPOSITORY_SOURCE || null)
 );
+const explicitProviderBundle = option(
+  'provider-bundle',
+  process.env.BLUE_REPOSITORY_PROVIDER_BUNDLE || null
+);
+const languageRegistryInput = option(
+  'language-registry',
+  option('language-registry-manifest', process.env.BLUE_LANGUAGE_REGISTRY || null)
+);
+const contractsRegistryInput = option(
+  'contracts-registry',
+  option('contracts-registry-manifest', process.env.BLUE_CONTRACTS_REGISTRY || null)
+);
 const sourceBundle = path.resolve(
   explicitSourceBundle
     || (fs.existsSync(canonicalRepositoryBundle) ? canonicalRepositoryBundle : defaultSourceBundle)
 );
+const defaultProviderBundle = path.join(repoRoot, 'src', 'main', 'resources', resourceBase, 'BlueRepository.provider.json');
+const canonicalProviderBundle = path.join(sourceRepositoryRoot, 'BlueRepository.provider.json');
+const providerBundlePath = explicitProviderBundle
+  ? path.resolve(explicitProviderBundle)
+  : (fs.existsSync(canonicalProviderBundle) ? canonicalProviderBundle : defaultProviderBundle);
+const allowAuthoredProviderContent = hasOption('allow-authored-provider-content');
 const javaOutputRoot = path.resolve(option('java-output-root', path.join(repoRoot, 'src', 'main', 'java')));
 const resourcesOutputRoot = path.resolve(option('resources-output-root', path.join(repoRoot, 'src', 'main', 'resources')));
 const resourcesRoot = path.join(resourcesOutputRoot, resourceBase);
@@ -87,13 +109,276 @@ const javaKeywords = new Set([
   'transient', 'try', 'void', 'volatile', 'while',
 ]);
 
+const languageRegistryRelease = {
+  label: 'Blue Language 1.0 core registry',
+  registry: 'blue-language-core',
+  registryKind: 'core-type',
+  specificationVersion: '1.0',
+  packageIdentity: 'sha256:b705171a6ca62c990792bcb78db9d921caf5b0ed06370648b9a81769d69dd71e',
+  requiredKeys: new Set(['Boolean', 'Dictionary', 'Double', 'Integer', 'List', 'Text']),
+};
+
+const contractsRegistryRelease = {
+  label: 'Blue Contracts 1.0 runtime registry',
+  registry: 'blue-contracts-runtime',
+  registryKind: 'runtime-type',
+  specificationVersion: '1.0',
+  languageVersion: '1.0',
+  packageIdentity: 'sha256:46a7744c1cbfa4b00e1d8a99f6ca3f0089ef697de968fee08547894ab02b0ca1',
+  requiredKeys: new Set([
+    'Channel', 'ChannelEventCheckpoint', 'CheckpointEntry', 'Contract',
+    'ContractExecutionResult', 'DocumentProcessingInitiated',
+    'DocumentProcessingTerminated', 'DocumentUpdate', 'DocumentUpdateChannel',
+    'EmbeddedEventDelivery', 'EmbeddedNodeChannel', 'ExternalChannel', 'FixtureEvent',
+    'Handler', 'JsonPatchEntry', 'LifecycleEventChannel', 'Marker', 'ProcessEmbedded',
+    'ProcessingInitializedMarker', 'ProcessingTerminatedMarker', 'RuntimeCounterEntry',
+    'RuntimeLedger', 'ScriptedExternalChannel', 'ScriptedHandler',
+    'TriggeredEventChannel', 'TypeGeneralizationPolicy', 'TypeGeneralizationRule',
+  ]),
+  fixtureOnlyKeys: new Set(['FixtureEvent', 'ScriptedExternalChannel', 'ScriptedHandler']),
+  resourceNameOverrides: new Map([
+    ['CheckpointEntry', 'Channel Checkpoint Entry'],
+    ['FixtureEvent', 'Contracts Fixture Event'],
+  ]),
+};
+
+function canonicalizeJson(value) {
+  if (Array.isArray(value)) {
+    return value.map(canonicalizeJson);
+  }
+  if (value !== null && typeof value === 'object') {
+    return Object.keys(value).sort().reduce((result, key) => {
+      result[key] = canonicalizeJson(value[key]);
+      return result;
+    }, {});
+  }
+  return value;
+}
+
+function allFiles(root, current = root) {
+  const result = [];
+  for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+    const fullPath = path.join(current, entry.name);
+    if (entry.isDirectory()) {
+      result.push(...allFiles(root, fullPath));
+    } else if (entry.isFile()) {
+      result.push(path.relative(root, fullPath).split(path.sep).join('/'));
+    } else {
+      throw new Error(`Registry input contains unsupported filesystem entry: ${fullPath}`);
+    }
+  }
+  return result.sort();
+}
+
+function sameSet(actual, expected) {
+  return actual.size === expected.size && Array.from(actual).every((value) => expected.has(value));
+}
+
+function normalizedRegistryKey(value) {
+  return `${value}`.replace(/[^A-Za-z0-9]+/g, '');
+}
+
+function loadRegistry(input, release) {
+  if (!input) {
+    throw new Error(`${release.label} input is required; pass its directory or manifest with the registry option.`);
+  }
+  const resolvedInput = path.resolve(input);
+  if (!fs.existsSync(resolvedInput)) {
+    throw new Error(`${release.label} input does not exist: ${resolvedInput}`);
+  }
+  const stat = fs.statSync(resolvedInput);
+  const manifestPath = stat.isDirectory() ? path.join(resolvedInput, 'manifest.yaml') : resolvedInput;
+  const registryRoot = stat.isDirectory() ? resolvedInput : path.dirname(resolvedInput);
+  if (!fs.existsSync(manifestPath) || !fs.statSync(manifestPath).isFile()) {
+    throw new Error(`${release.label} manifest not found: ${manifestPath}`);
+  }
+
+  const manifest = yaml.load(fs.readFileSync(manifestPath, 'utf8'));
+  if (manifest === null || typeof manifest !== 'object' || Array.isArray(manifest)) {
+    throw new Error(`${release.label} manifest must be an object.`);
+  }
+  if (manifest.registry !== release.registry
+      || manifest.registryKind !== release.registryKind
+      || manifest.specificationVersion !== release.specificationVersion
+      || (release.languageVersion && manifest.languageVersion !== release.languageVersion)) {
+    throw new Error(`${release.label} manifest identifies an unexpected registry release.`);
+  }
+  if (manifest.packageIdentity !== release.packageIdentity) {
+    throw new Error(`${release.label} package identity is ${manifest.packageIdentity}; expected ${release.packageIdentity}.`);
+  }
+  const normalized = { ...manifest, packageIdentity: null, fixturePackageIdentity: null };
+  const calculatedPackageIdentity = `sha256:${sha256(Buffer.from(JSON.stringify(canonicalizeJson(normalized)), 'utf8'))}`;
+  if (calculatedPackageIdentity !== manifest.packageIdentity) {
+    throw new Error(`${release.label} package identity mismatch: manifest=${manifest.packageIdentity}, calculated=${calculatedPackageIdentity}.`);
+  }
+  if (!Array.isArray(manifest.entries)) {
+    throw new Error(`${release.label} manifest must contain an entries list.`);
+  }
+
+  const entriesByKey = new Map();
+  const paths = new Set();
+  const blueIds = new Set();
+  for (const entry of manifest.entries) {
+    if (entry === null || typeof entry !== 'object' || Array.isArray(entry)) {
+      throw new Error(`${release.label} entry must be an object.`);
+    }
+    for (const field of ['key', 'path', 'blueId', 'sha256']) {
+      if (typeof entry[field] !== 'string' || entry[field].length === 0) {
+        throw new Error(`${release.label} entry field must be a non-empty string: ${field}.`);
+      }
+    }
+    if (entriesByKey.has(entry.key) || paths.has(entry.path) || blueIds.has(entry.blueId)) {
+      throw new Error(`${release.label} contains a duplicate key, path, or BlueId at ${entry.key}.`);
+    }
+    if (entry.semanticDescriptionIdentityBearing !== true) {
+      throw new Error(`${release.label} entry ${entry.key} must bind its semantic description to identity.`);
+    }
+    if (release.fixtureOnlyKeys) {
+      if (typeof entry.fixtureOnly !== 'boolean'
+          || entry.fixtureOnly !== release.fixtureOnlyKeys.has(entry.key)) {
+        throw new Error(`${release.label} entry ${entry.key} has an unexpected fixtureOnly classification.`);
+      }
+    }
+    const resourcePath = path.resolve(registryRoot, entry.path);
+    const relativeResource = path.relative(registryRoot, resourcePath);
+    if (relativeResource.startsWith('..') || path.isAbsolute(relativeResource)) {
+      throw new Error(`${release.label} entry escapes its registry root: ${entry.path}.`);
+    }
+    if (!fs.existsSync(resourcePath) || !fs.statSync(resourcePath).isFile()) {
+      throw new Error(`${release.label} resource not found: ${entry.path}.`);
+    }
+    const resourceBytes = fs.readFileSync(resourcePath);
+    const resourceDigest = sha256(resourceBytes);
+    if (resourceDigest !== entry.sha256) {
+      throw new Error(`${release.label} resource digest mismatch for ${entry.key}: manifest=${entry.sha256}, calculated=${resourceDigest}.`);
+    }
+    const resource = yaml.load(resourceBytes.toString('utf8'));
+    const expectedResourceName = release.resourceNameOverrides
+      && release.resourceNameOverrides.get(entry.key);
+    if (resource === null || typeof resource !== 'object' || Array.isArray(resource)
+        || (expectedResourceName
+          ? resource.name !== expectedResourceName
+          : normalizedRegistryKey(resource.name) !== entry.key)) {
+      throw new Error(`${release.label} resource ${entry.path} must declare name ${entry.key}.`);
+    }
+    entriesByKey.set(entry.key, Object.freeze({ ...entry }));
+    paths.add(entry.path);
+    blueIds.add(entry.blueId);
+  }
+  if (!sameSet(new Set(entriesByKey.keys()), release.requiredKeys)) {
+    throw new Error(`${release.label} does not contain its exact required key set.`);
+  }
+  const expectedFiles = new Set(['manifest.yaml', ...paths]);
+  if (!sameSet(new Set(allFiles(registryRoot)), expectedFiles)) {
+    throw new Error(`${release.label} directory contains missing or unlisted files.`);
+  }
+  return Object.freeze({
+    packageIdentity: manifest.packageIdentity,
+    entriesByKey,
+  });
+}
+
+function productionBlueId(registry, key) {
+  const entry = registry.entriesByKey.get(key);
+  if (!entry) {
+    throw new Error(`Registry entry is unavailable: ${key}.`);
+  }
+  if (entry.fixtureOnly === true) {
+    throw new Error(`Fixture-only registry entry cannot drive production source generation: ${key}.`);
+  }
+  return entry.blueId;
+}
+
+function loadProviderBundle(repositoryBlueId, definitions) {
+  if (allowAuthoredProviderContent && !explicitProviderBundle) {
+    return {
+      bytes: null,
+      identity: null,
+      contentByQualifiedName: new Map(
+        definitions.map((definition) => [definition.qualifiedName, definition.content])
+      ),
+    };
+  }
+  if (!fs.existsSync(providerBundlePath)) {
+    if (allowAuthoredProviderContent) {
+      return {
+        bytes: null,
+        identity: null,
+        contentByQualifiedName: new Map(
+          definitions.map((definition) => [definition.qualifiedName, definition.content])
+        ),
+      };
+    }
+    throw new Error(`Repository provider bundle is required: ${providerBundlePath}`);
+  }
+  const bytes = fs.readFileSync(providerBundlePath);
+  const bundle = JSON.parse(bytes.toString('utf8'));
+  if (bundle === null || typeof bundle !== 'object' || Array.isArray(bundle)
+      || bundle.formatVersion !== 1
+      || bundle.repositoryBlueId !== repositoryBlueId) {
+    throw new Error('Repository provider bundle identifies an unexpected repository release.');
+  }
+  if (bundle.registryPackageIdentities?.language !== languageRegistry.packageIdentity
+      || bundle.registryPackageIdentities?.contracts !== contractsRegistry.packageIdentity) {
+    throw new Error('Repository provider bundle registry package identities do not match generator inputs.');
+  }
+  if (typeof bundle.providerBundleIdentity !== 'string'
+      || !bundle.providerBundleIdentity.startsWith('sha256:')) {
+    throw new Error('Repository provider bundle identity is missing or invalid.');
+  }
+  const normalized = { ...bundle, providerBundleIdentity: null };
+  const calculatedIdentity = `sha256:${sha256(Buffer.from(JSON.stringify(canonicalizeJson(normalized)), 'utf8'))}`;
+  if (calculatedIdentity !== bundle.providerBundleIdentity) {
+    throw new Error(`Repository provider bundle identity mismatch: manifest=${bundle.providerBundleIdentity}, calculated=${calculatedIdentity}.`);
+  }
+  if (!Array.isArray(bundle.entries)) {
+    throw new Error('Repository provider bundle must contain an entries list.');
+  }
+
+  const definitionsByQualifiedName = new Map(
+    definitions.map((definition) => [definition.qualifiedName, definition])
+  );
+  const contentByQualifiedName = new Map();
+  const seenBlueIds = new Set();
+  for (const entry of bundle.entries) {
+    if (entry === null || typeof entry !== 'object' || Array.isArray(entry)
+        || typeof entry.qualifiedName !== 'string'
+        || typeof entry.blueId !== 'string'
+        || entry.content === null
+        || typeof entry.content !== 'object'
+        || Array.isArray(entry.content)) {
+      throw new Error('Repository provider bundle entry is malformed.');
+    }
+    const definition = definitionsByQualifiedName.get(entry.qualifiedName);
+    if (!definition || definition.blueId !== entry.blueId) {
+      throw new Error(`Repository provider bundle entry does not match aggregate metadata: ${entry.qualifiedName}.`);
+    }
+    if (contentByQualifiedName.has(entry.qualifiedName) || seenBlueIds.has(entry.blueId)) {
+      throw new Error(`Repository provider bundle contains a duplicate entry: ${entry.qualifiedName}.`);
+    }
+    contentByQualifiedName.set(entry.qualifiedName, entry.content);
+    seenBlueIds.add(entry.blueId);
+  }
+  if (!sameSet(new Set(contentByQualifiedName.keys()), new Set(definitionsByQualifiedName.keys()))) {
+    throw new Error('Repository provider bundle does not contain the exact aggregate definition set.');
+  }
+  return {
+    bytes,
+    identity: bundle.providerBundleIdentity,
+    contentByQualifiedName,
+  };
+}
+
+const languageRegistry = loadRegistry(languageRegistryInput, languageRegistryRelease);
+const contractsRegistry = loadRegistry(contractsRegistryInput, contractsRegistryRelease);
+
 const basicBlueIds = {
-  text: 'GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC',
-  double: '9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ',
-  integer: 'E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq',
-  boolean: 'AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2',
-  list: '8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF',
-  dictionary: 'Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG',
+  text: productionBlueId(languageRegistry, 'Text'),
+  double: productionBlueId(languageRegistry, 'Double'),
+  integer: productionBlueId(languageRegistry, 'Integer'),
+  boolean: productionBlueId(languageRegistry, 'Boolean'),
+  list: productionBlueId(languageRegistry, 'List'),
+  dictionary: productionBlueId(languageRegistry, 'Dictionary'),
 };
 
 const legacyBasicBlueIds = {
@@ -112,16 +397,16 @@ const basicBlueIdAliases = new Map(Object.keys(basicBlueIds)
   ]));
 
 const runtimeBlueIds = {
-  contract: '6WrVQoSpKHUUg5HPrwjkVV6pxe4sdkyGnakMs8ayEGeF',
-  handler: '7X46P3Q6FJrogqKrBXTALpqzkieyyiQeatnqLvWzAPXE',
-  channel: '4FAZ94JPExNM4pn2ZhtdHa4CVP7uASmLNVrBy7aCG1p5',
-  marker: '6zqbYGDGrMv5ReuEsjyzyyjjuqVnqDZxtY7RsPXdBTNy',
-  processEmbedded: '8FVc8MPz6DcTMgcY3RXU6EBpGa9arWPJ141K2H86yi8Q',
-  channelEventCheckpoint: '9GEC24YbFG9hj4banjYh2oEnDpAob1wAPmhjuykJp8T1',
-  documentUpdateChannel: 'Ac9LC5T7pHVa1TtkhMBjBRtxecShzvbe7ugUdXT1Mu2o',
-  triggeredEventChannel: '5HwxfbwRBCxG8xYpowWkCPC9akqUSKV7So2M4QHEmLsZ',
-  lifecycleEventChannel: '2DXGQUiQBQ6CT89jwAsTAXaEPhLgiSXhKCGh9Q7Hv3MQ',
-  embeddedNodeChannel: 'H6iUJp3GcLypsJDimMSVoxQQdxxuD8j6eqEUWWqCZ6i',
+  contract: productionBlueId(contractsRegistry, 'Contract'),
+  handler: productionBlueId(contractsRegistry, 'Handler'),
+  channel: productionBlueId(contractsRegistry, 'Channel'),
+  marker: productionBlueId(contractsRegistry, 'Marker'),
+  processEmbedded: productionBlueId(contractsRegistry, 'ProcessEmbedded'),
+  channelEventCheckpoint: productionBlueId(contractsRegistry, 'ChannelEventCheckpoint'),
+  documentUpdateChannel: productionBlueId(contractsRegistry, 'DocumentUpdateChannel'),
+  triggeredEventChannel: productionBlueId(contractsRegistry, 'TriggeredEventChannel'),
+  lifecycleEventChannel: productionBlueId(contractsRegistry, 'LifecycleEventChannel'),
+  embeddedNodeChannel: productionBlueId(contractsRegistry, 'EmbeddedNodeChannel'),
 };
 
 const externalBaseDescriptors = {
@@ -148,7 +433,7 @@ const externalBaseDescriptors = {
   },
   triggeredEventChannel: {
     extendsType: 'blue.language.processor.model.TriggeredEventChannel',
-    inheritedFields: new Set(['order', 'path', 'definition']),
+    inheritedFields: new Set(['order', 'path', 'definition', 'event']),
     preserveParentFields: true,
   },
   lifecycleEventChannel: {
@@ -158,16 +443,16 @@ const externalBaseDescriptors = {
   },
   embeddedNodeChannel: {
     extendsType: 'blue.language.processor.model.EmbeddedNodeChannel',
-    inheritedFields: new Set(['order', 'path', 'definition', 'childPath']),
+    inheritedFields: new Set(['order', 'path', 'definition', 'sourcePath', 'event']),
     preserveParentFields: true,
   },
   processEmbedded: {
     extendsType: 'blue.language.processor.model.ProcessEmbedded',
-    inheritedFields: new Set(['order', 'paths']),
+    inheritedFields: new Set(['order', 'paths', 'collectionPaths']),
   },
   channelEventCheckpoint: {
     extendsType: 'blue.language.processor.model.ChannelEventCheckpoint',
-    inheritedFields: new Set(['order', 'lastEvents', 'lastSignatures']),
+    inheritedFields: new Set(['order', 'entries']),
   },
 };
 
@@ -732,7 +1017,7 @@ function writeVersionRegistry(definitions) {
   const lines = [
     `package ${javaVersionPackage};`,
     '',
-    'import blue.language.utils.TypeClassResolver;',
+    'import blue.language.mapping.TypeClassResolver;',
     '',
     `public final class ${versionRegistryClassName} {`,
     `    public static final String VERSION = "${repositoryVersion}";`,
@@ -769,6 +1054,7 @@ function main() {
   const repositoryVersions = repository.repositoryVersions || [];
   const repositoryVersionBlueId = repositoryVersions[repositoryVersions.length - 1];
   const { definitions, definitionsByPackage, byBlueId } = discoverDefinitions(repository);
+  const providerBundle = loadProviderBundle(repositoryVersionBlueId, definitions);
 
   fs.rmSync(resourcesRoot, { recursive: true, force: true });
   fs.rmSync(constantsRoot, { recursive: true, force: true });
@@ -792,13 +1078,19 @@ function main() {
   if (sourceDigest !== targetDigest) {
     throw new Error(`Canonical repository copy failed: ${sourceDigest} != ${targetDigest}`);
   }
+  let providerBundleDigest = null;
+  if (providerBundle.bytes) {
+    const targetProviderBundle = path.join(resourcesRoot, 'BlueRepository.provider.json');
+    fs.writeFileSync(targetProviderBundle, providerBundle.bytes);
+    providerBundleDigest = sha256(providerBundle.bytes);
+  }
 
   for (const [packageName, packageDefinitions] of definitionsByPackage.entries()) {
     mkdirp(path.join(definitionsRoot, packageName));
     for (const definition of packageDefinitions) {
       fs.writeFileSync(
         path.join(resourcesOutputRoot, definition.resourcePath),
-        `${JSON.stringify(definition.content, null, 2)}\n`
+        `${JSON.stringify(providerBundle.contentByQualifiedName.get(definition.qualifiedName), null, 2)}\n`
       );
     }
     writeConstantsClass(packageName, packageDefinitions);
@@ -808,6 +1100,15 @@ function main() {
     repositoryName: repository.name,
     repositoryVersion,
     repositoryVersionBlueId,
+    registryPackageIdentities: {
+      language: languageRegistry.packageIdentity,
+      contracts: contractsRegistry.packageIdentity,
+    },
+    providerBundleIdentity: providerBundle.identity,
+    providerSourceResource: providerBundle.bytes
+      ? `${resourceBase}/BlueRepository.provider.json`
+      : null,
+    providerSourceSha256: providerBundleDigest,
     sourceResource: `${resourceBase}/BlueRepository.blue`,
     repositoryVersions: repositoryVersionEntries(repository),
     packageNames: Array.from(definitionsByPackage.keys()),

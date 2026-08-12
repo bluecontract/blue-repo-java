@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("BoLMyAuLAegX9RWR7trQbdmp7pB2tAfkPhDoTzbu8acd")
+@TypeBlueId("6jhJaMEanZrm8mpgb8YxWqCNs2c2UY9AoQigsG7hoNgw")
 public class CdmBaseMathNonNegativeQuantity {
     public static String blueId() {
-        return "BoLMyAuLAegX9RWR7trQbdmp7pB2tAfkPhDoTzbu8acd";
+        return "6jhJaMEanZrm8mpgb8YxWqCNs2c2UY9AoQigsG7hoNgw";
     }
 
     public static String packageName() {

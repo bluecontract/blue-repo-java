@@ -1,6 +1,6 @@
 package blue.repo;
 
-import blue.language.utils.TypeClassResolver;
+import blue.language.mapping.TypeClassResolver;
 
 public final class BlueRepositoryModels {
     public static final String VERSION = "1.3.0";

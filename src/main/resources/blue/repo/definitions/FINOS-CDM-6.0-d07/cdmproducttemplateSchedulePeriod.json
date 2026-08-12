@@ -4,7 +4,7 @@
   "calculationPeriod": {
     "description": "Period for which the payment is generated.",
     "type": {
-      "blueId": "ArGvahFJrYAsyvSVWtuLJVsoGkZsS1n9aTjxhikFUxJM"
+      "blueId": "d8TGYi33YeLUziE9B2VNLCjsoPfUQkCX35im7Ryuia9"
     },
     "schema": {
       "required": true
@@ -13,13 +13,13 @@
   "deliveryPeriod": {
     "description": "Period and time profile over which the delivery takes place.",
     "type": {
-      "blueId": "4VSDgMR93vRjmusHhPRNXjdGuVnxrN3FBojT35y2b6cd"
+      "blueId": "A8EG82JMUV186kwffGxGSuuDgYzs9S5KTaEba1UmhTe1"
     }
   },
   "fixingPeriod": {
     "description": "Period over which the underlying price is observed.",
     "type": {
-      "blueId": "ArGvahFJrYAsyvSVWtuLJVsoGkZsS1n9aTjxhikFUxJM"
+      "blueId": "d8TGYi33YeLUziE9B2VNLCjsoPfUQkCX35im7Ryuia9"
     },
     "schema": {
       "required": true

@@ -4,13 +4,13 @@
   "assetClass": {
     "description": "The Asset Class of the Index.",
     "type": {
-      "blueId": "7TQnexn6ZGhptp1EP3RxiJM3434J7VHgDn7cvqXRvfvh"
+      "blueId": "9yX6LE16R3vAK1CLiZg1CNCKs1R2z61AM6mkBEyi4wHf"
     }
   },
   "exchange": {
     "description": "If the Asset is listed, defines the public exchange of the listing.",
     "type": {
-      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
+      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
     }
   },
   "identifier": {
@@ -19,7 +19,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "B4oXDUH9jELDatvZSw3oWXtJefJ4ixYawEjxBMqSerth"
+      "blueId": "4oFH9vehkWBHWWKWKPEPwytqoRKUA6mcVgrG7P1XtKRy"
     },
     "schema": {
       "minItems": 1
@@ -28,13 +28,13 @@
   "indexTenor": {
     "description": "The ISDA Designated Maturity, i.e. the floating rate tenor.",
     "type": {
-      "blueId": "G5BwzTWEaA14NoPKn8iSwCnmwnWuQegPHZwrpgagS6kY"
+      "blueId": "2eRPMxKZ8upfUGCDqNY6xXko7GTGvozudp1i9wznQmXL"
     }
   },
   "inflationRateIndex": {
     "description": "The reference index that is used to specify the inflation interest rate.",
     "type": {
-      "blueId": "6C5cWr4to9ATnkFbP7DRXtMUZfGVzou2g22vC7vYgdLG"
+      "blueId": "61xQu3uRJ2Kq3tAXAVBoPoYJBAhKJGfMcRQEbAYqegp4"
     },
     "schema": {
       "required": true
@@ -49,7 +49,7 @@
   "provider": {
     "description": "The organisation that creates or maintains the Index.",
     "type": {
-      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
+      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
     }
   },
   "relatedExchange": {
@@ -58,7 +58,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "6LRw3aCeJHKD7qGzs2HvJDoQiMs8QddUf5wSr4oagtuS"
+      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
     },
     "schema": {
       "minItems": 0
@@ -70,7 +70,7 @@
       "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
     },
     "itemType": {
-      "blueId": "9MYk7MRYjbMWPHe7v3WexZqePowTL8eRrW8TmNNEtzQJ"
+      "blueId": "GXDxn2HwbWwWg9AFSHwfSi4zZ32a3uVojNQmBN96DUvU"
     },
     "schema": {
       "minItems": 0

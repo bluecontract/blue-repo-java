@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("BeUkW9h7yKH5DBgzTjF52u4PwYu9J9EmLZ5WaYZWnZuB")
+@TypeBlueId("CtsH9hhbLAYcQYv5jYnNhaviKxkEdrwAg8b4KoxEU5Lw")
 public class PrincipalActor extends blue.repo.coordination.PrincipalActor {
     public static String blueId() {
-        return "BeUkW9h7yKH5DBgzTjF52u4PwYu9J9EmLZ5WaYZWnZuB";
+        return "CtsH9hhbLAYcQYv5jYnNhaviKxkEdrwAg8b4KoxEU5Lw";
     }
 
     public static String packageName() {
