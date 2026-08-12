@@ -3,8 +3,8 @@ package blue.repo;
 import blue.language.BlueRuntime;
 import blue.language.dictionary.TypeDictionary;
 import blue.language.mapping.BlueMapper;
-import blue.language.model.Node;
 import blue.language.mapping.TypeClassResolver;
+import blue.language.model.Node;
 import blue.repo.provider.RepositoryNodeProvider;
 
 import java.util.LinkedHashMap;
@@ -14,10 +14,7 @@ import java.util.Set;
 
 public final class BlueRepository {
     public static final String DICTIONARY_NAME = "Blue Repository";
-    public static final String V1_3_0 = "1.3.0";
-    public static final String LATEST = V1_3_0;
     public static final String MANIFEST = "blue/repo/manifest.json";
-    public static final String V1_3_0_MANIFEST = MANIFEST;
 
     private final RepositoryManifest manifest;
     private final RepositoryNodeProvider nodeProvider;
@@ -27,40 +24,36 @@ public final class BlueRepository {
         this.nodeProvider = nodeProvider;
     }
 
-    public static BlueRepository v1_3_0() {
-        return v1_3_0(classLoader());
+    public static BlueRepository current() {
+        return current(classLoader());
     }
 
-    public static BlueRepository v1_3_0(ClassLoader classLoader) {
+    public static BlueRepository current(ClassLoader classLoader) {
         RepositoryManifest manifest = RepositoryManifest.load(classLoader, MANIFEST);
         return new BlueRepository(manifest, new RepositoryNodeProvider(manifest, classLoader));
     }
 
-    public static BlueRepository latest() {
-        return v1_3_0();
+    public static Optional<BlueRepository> load(String repositoryBlueId) {
+        return load(repositoryBlueId, classLoader());
     }
 
-    public static BlueRepository latest(ClassLoader classLoader) {
-        return v1_3_0(classLoader);
-    }
-
-    public static Optional<BlueRepository> byRepositoryBlueId(String repositoryBlueId) {
-        return byRepositoryBlueId(repositoryBlueId, classLoader());
-    }
-
-    public static Optional<BlueRepository> byRepositoryBlueId(String repositoryBlueId, ClassLoader classLoader) {
-        BlueRepository repository = v1_3_0(classLoader);
-        if (repository.manifest().repositoryVersionByBlueId(repositoryBlueId).isPresent()) {
+    public static Optional<BlueRepository> load(String repositoryBlueId, ClassLoader classLoader) {
+        BlueRepository repository = current(classLoader);
+        if (repository.repositoryBlueId().equals(repositoryBlueId)) {
             return Optional.of(repository);
         }
         return Optional.empty();
     }
 
-    public String repositoryVersion() {
-        return manifest.repositoryVersion();
+    public static Optional<BlueRepository> byRepositoryBlueId(String repositoryBlueId) {
+        return load(repositoryBlueId);
     }
 
-    public String repositoryVersionBlueId() {
+    public static Optional<BlueRepository> byRepositoryBlueId(String repositoryBlueId, ClassLoader classLoader) {
+        return load(repositoryBlueId, classLoader);
+    }
+
+    public String repositoryBlueId() {
         return manifest.repositoryVersionBlueId();
     }
 
@@ -81,19 +74,20 @@ public final class BlueRepository {
     }
 
     public BlueMapper mapper() {
-        return BlueMapper.builder()
-                .registerMappings(typeClassResolver())
-                .build();
+        return BlueRepositoryModels.mapper();
     }
 
-    public BlueRuntime.Builder runtimeBuilder() {
-        return BlueRuntime.builder()
+    public BlueRuntime.Builder configure(BlueRuntime.Builder builder) {
+        if (builder == null) {
+            throw new IllegalArgumentException("builder must not be null");
+        }
+        return builder
                 .nodeProvider(nodeProvider)
                 .mapping(mapper());
     }
 
-    public BlueRuntime runtime() {
-        return runtimeBuilder().build();
+    public BlueRuntime.Builder runtimeBuilder() {
+        return configure(BlueRuntime.builder());
     }
 
     public TypeDictionary typeDictionary() {
@@ -162,13 +156,12 @@ public final class BlueRepository {
         return aliases;
     }
 
-    public Node typeAliasBlue() {
+    public Node importsDirective() {
         Map<String, Node> imports = new LinkedHashMap<>();
         for (Map.Entry<String, String> entry : preprocessingAliases().entrySet()) {
             imports.put(entry.getKey(), new Node().blueId(entry.getValue()));
         }
-        return new Node().properties(
-                "imports", new Node().properties(imports));
+        return new Node().properties("imports", new Node().properties(imports));
     }
 
     private static ClassLoader classLoader() {

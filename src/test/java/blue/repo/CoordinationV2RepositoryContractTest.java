@@ -58,7 +58,7 @@ class CoordinationV2RepositoryContractTest {
     private static final String LIST_TYPE_BLUE_ID = BlueCoreTypeRegistry.INSTANCE.blueId("List");
     private static final String TEXT_TYPE_BLUE_ID = BlueCoreTypeRegistry.INSTANCE.blueId("Text");
 
-    private final BlueRepository repository = BlueRepository.latest();
+    private final BlueRepository repository = BlueRepository.current();
 
     @Test
     void documentLinkContainersKeepDictionarySchemasAndLoadAsPassiveMarkers() throws Exception {
@@ -84,7 +84,7 @@ class CoordinationV2RepositoryContractTest {
         assertOptional(anchor, "template");
         assertFalse(anchor.path("template").has("type"));
 
-        BlueRuntime runtime = repository.runtime();
+        BlueRuntime runtime = repository.runtimeBuilder().build();
         Node authoredLinks = new Node()
                 .type(CoordinationTypes.DOCUMENT_LINKS.reference())
                 .properties("orders", new Node()
@@ -133,7 +133,7 @@ class CoordinationV2RepositoryContractTest {
 
     @Test
     void timelineEntryWithoutSequenceRoundTripsAndPreservesExtensionMetadata() {
-        BlueRuntime runtime = repository.runtime();
+        BlueRuntime runtime = repository.runtimeBuilder().build();
         BigInteger timestamp = new BigInteger("9223372036854775808123456789");
         TimelineEntry entry = new TimelineEntry()
                 .timeline(new Timeline().timelineId("sequence-free"))

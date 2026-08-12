@@ -30,7 +30,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class BootstrapRepositoryContractTest {
-    private final BlueRepository repository = BlueRepository.latest();
+    private final BlueRepository repository = BlueRepository.current();
 
     @Test
     void generatedModelsExposeProviderNeutralBootstrapResponses() throws Exception {

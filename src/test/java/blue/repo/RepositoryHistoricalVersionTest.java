@@ -277,7 +277,6 @@ class RepositoryHistoricalVersionTest {
                 "tools/generate-repository-sources.js",
                 "--source", source.toString(),
                 "--repository-version", "1.3.0",
-                "--java-package-segment", "vtest",
                 "--resource-base", "blue/repo/vtest",
                 "--java-package", "blue.repo.vtest",
                 "--java-output-root", temp.resolve("java").toString(),
