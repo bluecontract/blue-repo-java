@@ -34,19 +34,10 @@ function hasOption(name) {
   return process.argv.includes(`--${name}`);
 }
 
-function versionPackageSegment(version) {
-  return `v${`${version}`.replace(/[^A-Za-z0-9]+/g, '_').replace(/^_+|_+$/g, '')}`;
-}
-
-function registryClassName(versionSegment) {
-  return `BlueRepository${versionSegment.charAt(0).toUpperCase()}${versionSegment.slice(1)}`;
-}
-
 const repositoryVersion = option('repository-version', '1.3.0');
-const javaVersionSegment = option('java-package-segment', versionPackageSegment(repositoryVersion));
 const resourceBase = option('resource-base', 'blue/repo');
 const javaVersionPackage = option('java-package', 'blue.repo');
-const versionRegistryClassName = option('registry-class', 'BlueRepositoryModels');
+const modelsRegistryClassName = option('registry-class', 'BlueRepositoryModels');
 const defaultSourceBundle = path.join(repoRoot, 'src', 'main', 'resources', resourceBase, 'BlueRepository.blue');
 const canonicalRepositoryBundle = path.join(sourceRepositoryRoot, 'BlueRepository.blue');
 const explicitSourceBundle = option(
@@ -1013,24 +1004,41 @@ function writeModelClass(definition, byBlueId) {
   fs.writeFileSync(path.join(dir, `${definition.className}.java`), lines.join('\n'));
 }
 
-function writeVersionRegistry(definitions) {
+function writeModelsRegistry(definitions) {
   const lines = [
     `package ${javaVersionPackage};`,
     '',
+    'import blue.language.mapping.BlueMapper;',
     'import blue.language.mapping.TypeClassResolver;',
     '',
-    `public final class ${versionRegistryClassName} {`,
-    `    public static final String VERSION = "${repositoryVersion}";`,
-    '',
+    `public final class ${modelsRegistryClassName} {`,
     '    public static TypeClassResolver typeClassResolver() {',
     '        return registerAll(new TypeClassResolver());',
     '    }',
     '',
+    '    public static BlueMapper mapper() {',
+    '        return registerAll(BlueMapper.builder()).build();',
+    '    }',
+    '',
+    '    public static BlueMapper.Builder registerAll(BlueMapper.Builder builder) {',
+    '        if (builder == null) {',
+    '            throw new IllegalArgumentException("builder must not be null");',
+    '        }',
+  ];
+
+  for (const definition of definitions) {
+    lines.push(`        builder.register(${modelFqcn(definition)}.class);`);
+  }
+
+  lines.push('        return builder;');
+  lines.push('    }');
+  lines.push('');
+  lines.push(
     '    public static TypeClassResolver registerAll(TypeClassResolver resolver) {',
     '        if (resolver == null) {',
     '            throw new IllegalArgumentException("resolver must not be null");',
     '        }',
-  ];
+  );
 
   for (const definition of definitions) {
     lines.push(`        resolver.registerAnnotatedClass(${modelFqcn(definition)}.class);`);
@@ -1039,12 +1047,12 @@ function writeVersionRegistry(definitions) {
   lines.push('        return resolver;');
   lines.push('    }');
   lines.push('');
-  lines.push(`    private ${versionRegistryClassName}() {`);
+  lines.push(`    private ${modelsRegistryClassName}() {`);
   lines.push('    }');
   lines.push('}');
   lines.push('');
 
-  fs.writeFileSync(path.join(modelsRoot, `${versionRegistryClassName}.java`), lines.join('\n'));
+  fs.writeFileSync(path.join(modelsRoot, `${modelsRegistryClassName}.java`), lines.join('\n'));
 }
 
 function main() {
@@ -1058,7 +1066,7 @@ function main() {
 
   fs.rmSync(resourcesRoot, { recursive: true, force: true });
   fs.rmSync(constantsRoot, { recursive: true, force: true });
-  fs.rmSync(path.join(modelsRoot, `${versionRegistryClassName}.java`), { force: true });
+  fs.rmSync(path.join(modelsRoot, `${modelsRegistryClassName}.java`), { force: true });
   for (const entry of fs.existsSync(modelsRoot) ? fs.readdirSync(modelsRoot, { withFileTypes: true }) : []) {
     if (!entry.isDirectory()) {
       continue;
@@ -1132,7 +1140,7 @@ function main() {
   for (const definition of definitions) {
     writeModelClass(definition, byBlueId);
   }
-  writeVersionRegistry(definitions);
+  writeModelsRegistry(definitions);
 }
 
 main();

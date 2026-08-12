@@ -34,7 +34,10 @@ Use this project when you need Java access to real repo.blue types:
 ## What You Get
 
 This artifact is versioned independently from the bundled Blue repository
-dictionary. It currently includes repository version `1.3.0`.
+dictionary. Java packages remain stable across repository updates, while the
+bundled dictionary is identified by its content-addressed repository BlueId.
+The public facade always opens the current bundled dictionary; the manifest
+retains historical identity metadata for dictionary negotiation and export.
 
 It provides:
 
@@ -46,7 +49,8 @@ It provides:
 - `TypeDictionary` utilities for repository-version lookup;
 - generated Java classes under `blue.repo`;
 - generated type constants under `blue.repo.types`;
-- a `TypeClassResolver` configured with all generated `@TypeBlueId` classes;
+- a `BlueMapper` and compatibility `TypeClassResolver` configured with all
+  generated `@TypeBlueId` classes;
 - type alias preprocessing so YAML can use names like
   `Coordination/Operation` instead of raw BlueIds.
 
@@ -110,9 +114,9 @@ coordinate from Maven repositories. It does not substitute a sibling
 ```java
 import blue.repo.BlueRepository;
 
-BlueRepository repo = BlueRepository.latest();
+BlueRepository repo = BlueRepository.current();
 
-System.out.println(repo.repositoryVersion());
+System.out.println(repo.repositoryBlueId());
 System.out.println(repo.blueId("Coordination/Operation"));
 System.out.println(repo.packageNames());
 ```
@@ -123,7 +127,7 @@ System.out.println(repo.packageNames());
 import blue.language.model.Node;
 import blue.repo.BlueRepository;
 
-BlueRepository repo = BlueRepository.latest();
+BlueRepository repo = BlueRepository.current();
 
 Node operationType = repo.nodeByName("Coordination/Operation")
         .orElseThrow(IllegalStateException::new);
@@ -140,8 +144,8 @@ import blue.language.model.Node;
 import blue.repo.BlueRepository;
 import blue.repo.types.CoordinationTypes;
 
-BlueRepository repo = BlueRepository.latest();
-try (BlueRuntime runtime = repo.runtime()) {
+BlueRepository repo = BlueRepository.current();
+try (BlueRuntime runtime = repo.runtimeBuilder().build()) {
     Node message = new Node()
             .type(CoordinationTypes.CHAT_MESSAGE.reference())
             .properties("message", new Node().value("hello"));
@@ -171,7 +175,7 @@ contracts:
       type: Integer
 ```
 
-Attach `repo.typeAliasBlue()` before preprocessing. It creates the portable
+Attach `repo.importsDirective()` before preprocessing. It creates the portable
 `blue.imports` object whose values are exact pure references:
 
 ```java
@@ -180,11 +184,11 @@ import blue.language.codec.jackson.UncheckedObjectMapper;
 import blue.language.model.Node;
 import blue.repo.BlueRepository;
 
-BlueRepository repo = BlueRepository.latest();
-try (BlueRuntime runtime = repo.runtime()) {
+BlueRepository repo = BlueRepository.current();
+try (BlueRuntime runtime = repo.runtimeBuilder().build()) {
     Node document = UncheckedObjectMapper.YAML_MAPPER
             .readValue(yaml, Node.class)
-            .blue(repo.typeAliasBlue());
+            .blue(repo.importsDirective());
 
     Node preprocessed = runtime.language().preprocessing()
             .preprocess(document);
@@ -203,28 +207,28 @@ repository manifest identify which repo.blue dictionary version is packaged,
 while Java imports remain stable across compatible repository updates:
 
 ```java
-import blue.language.BlueRuntime;
+import blue.language.mapping.BlueMapper;
 import blue.language.model.Node;
 import blue.repo.BlueRepository;
 import blue.repo.coordination.ChatMessage;
 import blue.repo.coordination.Operation;
 import blue.repo.coordination.SequentialWorkflowOperation;
 
-BlueRepository repo = BlueRepository.latest();
-try (BlueRuntime runtime = repo.runtime()) {
-    ChatMessage message = new ChatMessage()
-            .message("hello");
+BlueRepository repo = BlueRepository.current();
+BlueMapper mapper = repo.mapper();
 
-    Node messageNode = runtime.mapping().toNode(message);
+ChatMessage message = new ChatMessage()
+        .message("hello");
 
-    Operation operation = new Operation()
-            .request(new Node().type("Integer"));
-    operation.channel("ownerChannel");
+Node messageNode = mapper.toNode(message);
 
-    SequentialWorkflowOperation implementation =
-            new SequentialWorkflowOperation();
-    implementation.channel("ownerChannel");
-}
+Operation operation = new Operation()
+        .request(new Node().type("Integer"));
+operation.channel("ownerChannel");
+
+SequentialWorkflowOperation implementation =
+        new SequentialWorkflowOperation();
+implementation.channel("ownerChannel");
 ```
 
 Every generated class has:
@@ -256,7 +260,7 @@ import blue.language.provider.NodeProvider;
 import blue.repo.BlueRepository;
 import blue.repo.provider.CompositeNodeProvider;
 
-BlueRepository repo = BlueRepository.latest();
+BlueRepository repo = BlueRepository.current();
 
 NodeProvider appProvider = blueId -> null; // your storage/provider
 NodeProvider provider = CompositeNodeProvider.of(
@@ -293,20 +297,26 @@ catalog data; the contract package is executable behavior.
 
 Current generated package groups include:
 
+- `blue.repo.bootstrap`
 - `blue.repo.common`
 - `blue.repo.coordination`
 - `blue.repo.finoscdm60d07`
+- `blue.repo.mandate`
 - `blue.repo.myos`
 - `blue.repo.paynote`
+- `blue.repo.sessioninteraction`
 - `blue.repo.workflows`
 
 Convenience constants:
 
+- `blue.repo.types.BootstrapTypes`
 - `blue.repo.types.CommonTypes`
 - `blue.repo.types.CoordinationTypes`
 - `blue.repo.types.FINOSCDM60d07Types`
+- `blue.repo.types.MandateTypes`
 - `blue.repo.types.MyOSTypes`
 - `blue.repo.types.PayNoteTypes`
+- `blue.repo.types.SessionInteractionTypes`
 - `blue.repo.types.WorkflowsTypes`
 
 ## Regenerating Sources
@@ -432,11 +442,13 @@ tools/
 
 `type: Coordination/Operation` does not resolve by itself.
 
-You need `repo.typeAliasBlue()` or direct BlueId references:
+Use `repo.importsDirective()` or direct BlueId references:
 
 ```java
-Node document = raw.blue(repo.typeAliasBlue());
-Node preprocessed = runtime.language().preprocessing().preprocess(document);
+Node document = raw.blue(repo.importsDirective());
+try (BlueRuntime runtime = repo.runtimeBuilder().build()) {
+    Node preprocessed = runtime.language().preprocessing().preprocess(document);
+}
 ```
 
 Generated classes are not processors.

@@ -57,7 +57,7 @@ class BlueRepositoryTest {
 
     @Test
     void knownCoordinationTypesResolveByQualifiedNameAndBlueId() {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
 
         String operationBlueId = repo.blueId("Coordination/Operation");
         assertEquals(CoordinationTypes.OPERATION.blueId(), operationBlueId);
@@ -80,11 +80,11 @@ class BlueRepositoryTest {
     @Test
     void providerLoadsManifestAndDefinitionsFromClasspathResources() {
         TrackingClassLoader classLoader = new TrackingClassLoader(BlueRepository.class.getClassLoader());
-        BlueRepository repo = BlueRepository.v1_3_0(classLoader);
+        BlueRepository repo = BlueRepository.current(classLoader);
 
         assertEquals("Operation", repo.nodeByName("Coordination/Operation").orElseThrow(AssertionError::new).getName());
 
-        assertTrue(classLoader.resources.contains(BlueRepository.V1_3_0_MANIFEST));
+        assertTrue(classLoader.resources.contains(BlueRepository.MANIFEST));
         assertTrue(classLoader.resources.contains(CoordinationTypes.OPERATION.resourcePath()));
         for (String resource : classLoader.resources) {
             assertTrue(resource.startsWith("blue/repo/"), "unexpected non-repository classpath resource: " + resource);
@@ -93,8 +93,8 @@ class BlueRepositoryTest {
 
     @Test
     void blueCanResolveRepositoryTypeReferencesWithRepositoryProvider() {
-        BlueRepository repo = BlueRepository.v1_3_0();
-        BlueRuntime runtime = repo.runtime();
+        BlueRepository repo = BlueRepository.current();
+        BlueRuntime runtime = repo.runtimeBuilder().build();
 
         Node document = new Node()
                 .name("operation")
@@ -110,9 +110,29 @@ class BlueRepositoryTest {
     }
 
     @Test
+    void configureAddsRepositoryProviderAndMapperToTheSuppliedRuntimeBuilder() {
+        BlueRepository repo = BlueRepository.current();
+        BlueRuntime.Builder builder = BlueRuntime.builder();
+
+        assertSame(builder, repo.configure(builder));
+        assertThrows(IllegalArgumentException.class, () -> repo.configure(null));
+
+        try (BlueRuntime runtime = builder.build()) {
+            Node resolved = runtime.language().resolution().resolve(new Node()
+                    .type(CoordinationTypes.OPERATION.reference())
+                    .properties("channel", new Node().value("timeline")));
+            assertEquals("Operation", resolved.getType().getName());
+
+            ChatMessage message = new ChatMessage().message("configured");
+            assertEquals(CoordinationTypes.CHAT_MESSAGE.blueId(),
+                    runtime.mapping().toNode(message).getType().getBlueId());
+        }
+    }
+
+    @Test
     void generatedModelClassesExposeRepositoryTypesForJavaMapping() {
-        BlueRepository repo = BlueRepository.v1_3_0();
-        BlueRuntime runtime = repo.runtime();
+        BlueRepository repo = BlueRepository.current();
+        BlueRuntime runtime = repo.runtimeBuilder().build();
 
         ChatMessage message = new ChatMessage().message("hello");
         Node messageNode = runtime.mapping().toNode(message);
@@ -148,8 +168,8 @@ class BlueRepositoryTest {
     }
 
     @Test
-    void generatedVersionRegistryRegistersAllManifestTypes() {
-        BlueRepository repo = BlueRepository.v1_3_0();
+    void generatedModelRegistryRegistersAllManifestTypes() {
+        BlueRepository repo = BlueRepository.current();
 
         assertEquals(ChatMessage.class, repo.typeClassResolver().resolveClass(CoordinationTypes.CHAT_MESSAGE.blueId()));
         assertEquals(Operation.class, BlueRepositoryModels.typeClassResolver()
@@ -159,7 +179,7 @@ class BlueRepositoryTest {
 
     @Test
     void everyManifestDefinitionJavaAccessorBlueIdMatchesManifest() throws Exception {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
         TypeClassResolver resolver = repo.typeClassResolver();
 
         for (RepositoryDefinition definition : repo.manifest().definitions()) {
@@ -173,7 +193,7 @@ class BlueRepositoryTest {
 
     @Test
     void everyManifestBlueIdResolvesThroughRepositoryNodeProvider() {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
 
         for (RepositoryDefinition definition : repo.manifest().definitions()) {
             Node node = repo.nodeProvider().fetchFirstByBlueId(definition.blueId());
@@ -184,7 +204,7 @@ class BlueRepositoryTest {
 
     @Test
     void everyManifestBlueIdPassesExactProviderVerification() {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
         NodeProvider verifiedProvider = new VerifyingNodeProvider(
                 repo.nodeProvider());
         List<String> failures = new ArrayList<>();
@@ -207,7 +227,7 @@ class BlueRepositoryTest {
 
     @Test
     void manifestPinsRegistryAndProviderBundleProvenance() throws Exception {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
         RepositoryManifest manifest = repo.manifest();
 
         assertEquals(BlueCoreTypeRegistry.INSTANCE.packageIdentity(),
@@ -238,7 +258,7 @@ class BlueRepositoryTest {
 
     @Test
     void everyManifestBlueIdComesFromCanonicalRepositoryBundle() throws Exception {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
         Map<String, String> canonicalBlueIds = canonicalCurrentBlueIdsByQualifiedName(repo.sourceResource());
 
         for (RepositoryDefinition definition : repo.manifest().definitions()) {
@@ -252,7 +272,7 @@ class BlueRepositoryTest {
 
     @Test
     void everyFragmentedDefinitionResolvesWithoutUnresolvedThisReferences() throws Exception {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
         Map<String, Set<Integer>> indexesByBaseBlueId = fragmentIndexesByBaseBlueId(repo.manifest().definitions());
 
         for (RepositoryDefinition definition : repo.manifest().definitions()) {
@@ -279,7 +299,7 @@ class BlueRepositoryTest {
 
     @Test
     void everyGeneratedTypeBlueIdResolvesThroughTypeClassResolver() {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
         TypeClassResolver resolver = repo.typeClassResolver();
 
         for (RepositoryDefinition definition : repo.manifest().definitions()) {
@@ -314,8 +334,8 @@ class BlueRepositoryTest {
 
     @Test
     void generatedIntegerFieldsRoundTripAsBigInteger() throws Exception {
-        BlueRepository repo = BlueRepository.v1_3_0();
-        BlueRuntime runtime = repo.runtime();
+        BlueRepository repo = BlueRepository.current();
+        BlueRuntime runtime = repo.runtimeBuilder().build();
         BigInteger largeAmount = new BigInteger("9223372036854775808123456789");
 
         Field amount = CaptureFundsRequested.class.getDeclaredField("amount");
@@ -337,13 +357,16 @@ class BlueRepositoryTest {
 
     @Test
     void repositoryProvidesQualifiedTypeAliasesForPreprocessing() throws Exception {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
         assertEquals(CoordinationTypes.TIMELINE_CHANNEL.blueId(),
                 repo.typeAliases().get("Coordination/Timeline Channel"));
+        assertEquals(CoordinationTypes.TIMELINE_CHANNEL.blueId(),
+                repo.importsDirective().getProperties().get("imports")
+                        .getProperties().get("Coordination/Timeline Channel").getBlueId());
 
         Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterDocumentWithTimelineYaml(), Node.class)
-                .blue(repo.typeAliasBlue());
-        Node preprocessed = repo.runtime().language().preprocessing().preprocess(document);
+                .blue(repo.importsDirective());
+        Node preprocessed = repo.runtimeBuilder().build().language().preprocessing().preprocess(document);
         Map<String, Node> contracts = preprocessed.getContracts().getProperties();
 
         assertEquals(CoordinationTypes.TIMELINE_CHANNEL.blueId(),
@@ -354,11 +377,11 @@ class BlueRepositoryTest {
 
     @Test
     void counterDocumentMapsNestedRepositoryContractsToGeneratedTypes() throws Exception {
-        BlueRepository repo = BlueRepository.v1_3_0();
-        BlueRuntime runtime = repo.runtime();
+        BlueRepository repo = BlueRepository.current();
+        BlueRuntime runtime = repo.runtimeBuilder().build();
 
         Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterWorkflowDocumentYaml(), Node.class)
-                .blue(repo.typeAliasBlue());
+                .blue(repo.importsDirective());
         Node resolved = runtime.language().resolution().resolve(
                 runtime.language().preprocessing().preprocess(document));
         Node incrementImpl = resolved.getContracts()
@@ -383,7 +406,7 @@ class BlueRepositoryTest {
 
     @Test
     void compositeProviderCanLayerRepositoryWithUserProvider() {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
         String userBlueId = "UserDocumentType";
         NodeProvider userProvider = blueId -> userBlueId.equals(blueId)
                 ? Collections.singletonList(new Node().name("User Document Type"))
@@ -397,7 +420,7 @@ class BlueRepositoryTest {
 
     @Test
     void generatedConstantsMatchManifestMetadata() throws IllegalAccessException {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
         List<Class<?>> typeClasses = Arrays.asList(
                 CommonTypes.class,
                 CoordinationTypes.class,
@@ -424,11 +447,11 @@ class BlueRepositoryTest {
 
     @Test
     void manifestIncludesPackageQualifiedBlueIdAndResourceMetadata() {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
         RepositoryDefinition operation = repo.definition("Coordination/Operation").orElseThrow(AssertionError::new);
 
-        assertEquals("1.3.0", repo.repositoryVersion());
-        assertFalse(repo.repositoryVersionBlueId().isEmpty());
+        assertEquals("1.3.0", repo.manifest().repositoryVersion());
+        assertFalse(repo.repositoryBlueId().isEmpty());
         assertTrue(repo.packageNames().containsAll(Arrays.asList(
                 "Common",
                 "Coordination",
@@ -447,7 +470,7 @@ class BlueRepositoryTest {
 
     @Test
     void providerResolvesFragmentedRepositoryBlueIds() {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
 
         Node allCriteria = repo.nodeByBlueId(FINOSCDM60d07Types.CDM_PRODUCT_COLLATERAL_ALLCRITERIA.blueId())
                 .orElseThrow(AssertionError::new);
@@ -461,25 +484,21 @@ class BlueRepositoryTest {
     }
 
     @Test
-    void latestAndRepositoryBlueIdLookupReturnCurrentVersion() {
-        BlueRepository latest = BlueRepository.latest();
-        String oldestRepositoryBlueId = latest.manifest().repositoryVersions().get(0).repositoryBlueId();
+    void repositoryBlueIdLookupLoadsOnlyTheBundledCurrentRepository() {
+        BlueRepository current = BlueRepository.current();
+        String oldestRepositoryBlueId = current.manifest().repositoryVersions().get(0).repositoryBlueId();
 
-        assertEquals(BlueRepository.V1_3_0, latest.repositoryVersion());
-        assertEquals(latest.repositoryVersionBlueId(),
-                BlueRepository.byRepositoryBlueId(latest.repositoryVersionBlueId())
+        assertEquals(current.repositoryBlueId(),
+                BlueRepository.load(current.repositoryBlueId())
                         .orElseThrow(AssertionError::new)
-                        .repositoryVersionBlueId());
-        assertEquals(latest.repositoryVersionBlueId(),
-                BlueRepository.byRepositoryBlueId(oldestRepositoryBlueId)
-                        .orElseThrow(AssertionError::new)
-                        .repositoryVersionBlueId());
+                        .repositoryBlueId());
+        assertFalse(BlueRepository.load(oldestRepositoryBlueId).isPresent());
         assertFalse(BlueRepository.byRepositoryBlueId("unknown-repository-version").isPresent());
     }
 
     @Test
     void commonPackageIncludesCurrentRepositoryTypes() {
-        BlueRepository repo = BlueRepository.v1_3_0();
+        BlueRepository repo = BlueRepository.current();
 
         assertEquals(14, repo.manifest().definitions().stream()
                 .filter(definition -> "Common".equals(definition.packageName()))

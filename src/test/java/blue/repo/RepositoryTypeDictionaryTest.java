@@ -10,11 +10,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class RepositoryTypeDictionaryTest {
     @Test
     void dictionaryBlueIdsContainsRepositoryVersionBlueId() {
-        BlueRepository repository = BlueRepository.v1_3_0();
+        BlueRepository repository = BlueRepository.current();
         TypeDictionary dictionary = repository.typeDictionary();
 
         assertEquals(BlueRepository.DICTIONARY_NAME, dictionary.name());
-        assertTrue(dictionary.dictionaryBlueIds().contains(repository.repositoryVersionBlueId()));
+        assertTrue(dictionary.dictionaryBlueIds().contains(repository.repositoryBlueId()));
         assertEquals(repository.manifest().repositoryVersions().size(), dictionary.dictionaryBlueIds().size());
         repository.manifest().repositoryVersions()
                 .forEach(version -> assertTrue(dictionary.dictionaryBlueIds().contains(version.repositoryBlueId())));
@@ -22,7 +22,7 @@ class RepositoryTypeDictionaryTest {
 
     @Test
     void currentBlueIdReturnsCurrentIdForKnownType() {
-        BlueRepository repository = BlueRepository.v1_3_0();
+        BlueRepository repository = BlueRepository.current();
         TypeDictionary dictionary = repository.typeDictionary();
         String operationBlueId = CoordinationTypes.OPERATION.blueId();
 
@@ -31,12 +31,12 @@ class RepositoryTypeDictionaryTest {
 
     @Test
     void typeBlueIdForDoesNotRemapChangedHistoricalIdentity() {
-        BlueRepository repository = BlueRepository.v1_3_0();
+        BlueRepository repository = BlueRepository.current();
         TypeDictionary dictionary = repository.typeDictionary();
         String operationBlueId = CoordinationTypes.OPERATION.blueId();
 
         assertEquals(operationBlueId,
-                dictionary.typeBlueIdFor(operationBlueId, repository.repositoryVersionBlueId()).orElse(null));
+                dictionary.typeBlueIdFor(operationBlueId, repository.repositoryBlueId()).orElse(null));
         assertFalse(dictionary.typeBlueIdFor(
                 operationBlueId,
                 repository.manifest().repositoryVersions().get(0).repositoryBlueId()).isPresent());
@@ -44,7 +44,7 @@ class RepositoryTypeDictionaryTest {
 
     @Test
     void definitionReturnsFullFreshNodeForKnownType() {
-        BlueRepository repository = BlueRepository.v1_3_0();
+        BlueRepository repository = BlueRepository.current();
         TypeDictionary dictionary = repository.typeDictionary();
         String operationBlueId = CoordinationTypes.OPERATION.blueId();
 
@@ -59,7 +59,7 @@ class RepositoryTypeDictionaryTest {
 
     @Test
     void unknownTypeAndDictionaryVersionReturnEmpty() {
-        BlueRepository repository = BlueRepository.v1_3_0();
+        BlueRepository repository = BlueRepository.current();
         TypeDictionary dictionary = repository.typeDictionary();
 
         assertFalse(dictionary.currentBlueId("unknown-type-blue-id").isPresent());
