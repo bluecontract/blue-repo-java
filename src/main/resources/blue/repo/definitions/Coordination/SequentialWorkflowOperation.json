@@ -7,7 +7,7 @@
   "steps": {
     "description": "Append-only ordered workflow steps to run when this operation is invoked. The steps have the same semantics as steps\nin a Sequential Workflow: Compute steps compute data, Update Document steps request processor-managed patches, and\nTrigger Event steps emit Blue events. The processor remains responsible for validation, patch application, event\nrouting, deterministic ordering, gas, and post-patch type soundness.\n\nThe append-only merge policy preserves inherited workflow prefixes. Subtypes and concrete documents may append\nadditional steps, but must not replace, reorder, or positionally overlay inherited steps.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "9oGn8V6FSVcJYhRfuHRShfWjiHBUqzxVi9StGtHZNfev"

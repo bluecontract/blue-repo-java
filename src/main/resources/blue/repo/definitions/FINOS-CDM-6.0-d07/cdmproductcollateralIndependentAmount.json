@@ -16,10 +16,10 @@
   "paymentDetail": {
     "description": "An attribute that specifies a payment as the combination of a payment amount, a payment date and an associated payment calculation rule.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "71KycHWxsPTM5KKe67Bja1yPxhGo1n6v5vLCiyhTcJLV"
+      "blueId": "A5nXh34t59z1ZQZ18nxMo9DcUJYS3NipFP4qbq7pyKVd"
     },
     "schema": {
       "minItems": 1

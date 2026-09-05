@@ -4,7 +4,7 @@
   "deliveryDate": {
     "description": "Specifies the specific contract date for the contract that should be referenced for a price.",
     "type": {
-      "blueId": "J1kGTdAb67L1bPgvuKZ86jTR9UZJomnkgA6hcnVfnwfD"
+      "blueId": "397tsASyRDDk2UNpFxXBdpXar7RwXd5MEejzPtRzcxB2"
     }
   },
   "deliveryDateExpirationConvention": {

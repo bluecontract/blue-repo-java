@@ -4,7 +4,7 @@
   "transfer": {
     "description": "Represents the Transfer that has been effected by a business or life-cycle event.",
     "type": {
-      "blueId": "D5TDQT9MAD6sFuVDC3EEoupfJghS4ZKw8J27kLnBJM3e"
+      "blueId": "4ogWUY8fNgMAtUBe5JRjDLenkYFKnv52vpyUuneiwEvW"
     },
     "schema": {
       "required": true

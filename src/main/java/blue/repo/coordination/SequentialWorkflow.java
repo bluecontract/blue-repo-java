@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX")
+@TypeBlueId("4twSW1MCdf7UMzfwcu99gcBDZiiND1tSC2YZoFMVNHPf")
 public class SequentialWorkflow extends blue.language.processor.model.HandlerContract {
     public static String blueId() {
-        return "HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX";
+        return "4twSW1MCdf7UMzfwcu99gcBDZiiND1tSC2YZoFMVNHPf";
     }
 
     public static String packageName() {

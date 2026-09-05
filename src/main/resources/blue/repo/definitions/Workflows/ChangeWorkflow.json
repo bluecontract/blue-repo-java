@@ -2,12 +2,12 @@
   "name": "Change Workflow",
   "description": "Applies a requested changeset immediately to the document.",
   "type": {
-    "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+    "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
   },
   "request": {
     "description": "Expected request payload for this workflow.",
     "type": {
-      "blueId": "AVuAYKsZEMLjY3XwmKMe1LPrVAEo6R6FepDjPqgndF7J"
+      "blueId": "7BDhanFWv8mBYw69xtmmvs28X4rF6846AuKuhaas1dqF"
     }
   },
   "steps": {
@@ -15,7 +15,7 @@
       {
         "name": "Prepare",
         "type": {
-          "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+          "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
         },
         "entry": {
           "type": {
@@ -841,7 +841,7 @@
                         },
                         {
                           "type": {
-                            "blueId": "CJwAFnduHpubiXYhhgnrS272rM8qELbcfutiaAAWmRsa"
+                            "blueId": "49FkvoroMFDXeLaW1nogxoMwEkPPXwYb7CMjYdmzGpz4"
                           },
                           "relatedContracts": {
                             "$choose": {

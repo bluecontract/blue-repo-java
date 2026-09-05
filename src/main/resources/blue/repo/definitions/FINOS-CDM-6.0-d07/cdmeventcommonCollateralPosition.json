@@ -4,7 +4,7 @@
   "cashBalance": {
     "description": "The aggregate cost of proceeds",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "collateralPositionStatus": {
@@ -16,10 +16,10 @@
   "priceQuantity": {
     "description": "Position with many price quantities.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "4XEYGgCSfXx2tFwmQjMsXhuwaCjsNZ42jtKAcr8itiqe"
+      "blueId": "CCGvuYPt9fqEowAAnKsnMG5h7xxZFx89FoEtThU4V2gL"
     },
     "schema": {
       "minItems": 1
@@ -28,7 +28,7 @@
   "product": {
     "description": "The product underlying the position.",
     "type": {
-      "blueId": "52zbUBnH8375AE19gNSXRU7GgGs5tcoUhR84LVdMrBWi#0"
+      "blueId": "5dWnsFbYwSdUQ3PVJWpq2NxYRknhmaGNc7BQQi14kcE9#0"
     }
   },
   "tradeReference": {
@@ -40,7 +40,7 @@
   "treatment": {
     "description": "Specifies if there is any treatment to be applied to collateral, such as percentage discount which will impact collateral value.\n",
     "type": {
-      "blueId": "DZVNm4GP1a1Vs3D9hXgk2tvtUToKxrwkmGmrJcM2kNK"
+      "blueId": "G6DWdJviafXQRN7aE6qAJj3B5ub5CmRFxWgffE3VxZqi"
     }
   }
 }

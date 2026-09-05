@@ -4,19 +4,19 @@
   "correlationReturnTerms": {
     "description": "Return terms based upon the observed correlation between the components of the underlying basket.",
     "type": {
-      "blueId": "BMNQDcRPQNEEWkrvZpkzRanWfemGtKAjs6LMhRrJfFTv"
+      "blueId": "J8VosTHgB9nNV1HaUiofdGCUhTdu8eGwqdgnE6WHb2vr"
     }
   },
   "dividendReturnTerms": {
     "description": "Return terms based upon dividend payments associated to the underlier.",
     "type": {
-      "blueId": "m8Bj1PPr1ayweQMJ1XTSJLFPwYpd3HcwBL9Qixvds1T"
+      "blueId": "JB6FME4ou5tqJBz6fpirZoaFDpGtK3FWbgzkQD2LwCSW"
     }
   },
   "finalValuationPrice": {
     "description": "2018 ISDA CDM Equity Confirmation for Security Equity Swap: Final Price | Specifies the final valuation price of the underlier. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "2Uog2mdWokkHVaMVWG2ZhXCKPdQtauRk7oxemYRLn9hy"
@@ -28,7 +28,7 @@
   "initialValuationPrice": {
     "description": "Specifies the initial valuation price(s) of the underlier. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "2Uog2mdWokkHVaMVWG2ZhXCKPdQtauRk7oxemYRLn9hy"
@@ -40,7 +40,7 @@
   "interimValuationPrice": {
     "description": "Specifies the initial valuation price(s) of the underlier. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "2Uog2mdWokkHVaMVWG2ZhXCKPdQtauRk7oxemYRLn9hy"
@@ -82,13 +82,13 @@
   "varianceReturnTerms": {
     "description": "Return terms based upon the observed variance of the underlier's price.",
     "type": {
-      "blueId": "2ueL7HMXMciBNmYPVL1oTvUu988fWWURLxwhzzyDCvUG"
+      "blueId": "6bXtjxqiTJcpAe6RF1CCCUhiGGEk39UCetE8wk6NGiFU"
     }
   },
   "volatilityReturnTerms": {
     "description": "Return terms based upon the observed volatility of the underlier's price.",
     "type": {
-      "blueId": "GZ44neabTiXqC9Y2cR2Z5qRSeXvWtVZTVMTzc8gFcNkM"
+      "blueId": "BHzCDozKz7beFtstmzF7FdB8qjKKvTYKgKkCuXJAT8rc"
     }
   }
 }

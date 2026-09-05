@@ -4,13 +4,13 @@
   "barrierCap": {
     "description": "A trigger level approached from beneath.",
     "type": {
-      "blueId": "2Aq53zeNMUtF5mQZiVzTDwoK4oiRWSX755VA3RHg5Gkt"
+      "blueId": "8Qec6yKvXKDP9ot3iEGEVGvRsXsE4c3Td231Ga46Qj8Z"
     }
   },
   "barrierFloor": {
     "description": "A trigger level approached from above.",
     "type": {
-      "blueId": "2Aq53zeNMUtF5mQZiVzTDwoK4oiRWSX755VA3RHg5Gkt"
+      "blueId": "8Qec6yKvXKDP9ot3iEGEVGvRsXsE4c3Td231Ga46Qj8Z"
     }
   }
 }

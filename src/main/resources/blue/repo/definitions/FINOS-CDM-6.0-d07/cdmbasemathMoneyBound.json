@@ -13,7 +13,7 @@
   "money": {
     "description": "The money amount to be used as the bound, e.g. 1,000 USD.",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     },
     "schema": {
       "required": true

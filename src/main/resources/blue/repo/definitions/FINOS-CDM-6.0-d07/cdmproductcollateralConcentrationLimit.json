@@ -4,7 +4,7 @@
   "concentrationLimitCriteria": {
     "description": "Specifies a set of criteria to describe the assets that the concentration limits apply to.",
     "type": {
-      "blueId": "39Lcut1tfx7H123gK9RhKe6u8q4N86cmBQMRivmHTo5y"
+      "blueId": "4mG6dzLy2CtnoqNdsKmNdkjWtkxruNqubH4WNe7EhSmm"
     }
   },
   "percentageLimit": {
@@ -16,7 +16,7 @@
   "valueLimit": {
     "description": "Specifies the value of collateral limit represented as a range.",
     "type": {
-      "blueId": "6WetAg7Ko4txMKh764i61AvQ2oLaKaE6jziPc41xnwk"
+      "blueId": "2QS6LnAqBFUNBC8VEoGB6TUdSHDPc9Wa1SrFLT7aqY5w"
     }
   }
 }

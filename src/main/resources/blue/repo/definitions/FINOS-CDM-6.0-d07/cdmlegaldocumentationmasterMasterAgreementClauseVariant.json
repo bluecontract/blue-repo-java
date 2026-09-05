@@ -4,7 +4,7 @@
   "counterparty": {
     "description": "Optional counterparty role. This can be used where a clause needs to assign a different variant to the different parties on the agreement based upon their role i.e. Party A or Party B.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "7qRfgFBAefYQ37ztmK2dW9i4twZzBjKcQiHPeHrcRtYw"
@@ -26,7 +26,7 @@
   "otherParty": {
     "description": "Optional party. This can be used where a clause needs to assign different variants to different parties who may or may not be on the agreement.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "GaVQx77bWVG9DoP6sEfKJFggBPtqn5A3tsZSpn3avRUv"
@@ -38,10 +38,10 @@
   "variableSet": {
     "description": "For some variants of some clauses additional details are required to work out what has been elected. This array can be used to define the name and value of these variables. Please refer to the agreement documentation for more details of the variables that are available for any clause.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "6Fnwwf9PJokoeYXxkAzwU7oLnG6xfF9FHrzmoQVkBtQu#0"
+      "blueId": "BrQtMK2J2C5fLhkC9rfjDjnzvAGaNoS48x83MX6oCn57#0"
     },
     "schema": {
       "minItems": 0

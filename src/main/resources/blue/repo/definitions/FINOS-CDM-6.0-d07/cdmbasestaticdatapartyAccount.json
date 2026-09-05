@@ -10,13 +10,13 @@
   "accountName": {
     "description": "The name by which the account is known.",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     }
   },
   "accountNumber": {
     "description": "The account number.",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     },
     "schema": {
       "required": true
@@ -25,7 +25,7 @@
   "accountType": {
     "description": "The type of account, e.g. client, house.",
     "type": {
-      "blueId": "4y8bsqThvmVPYmjEC7ZEas42LGtsKtTBQvYdVYsdGGMB"
+      "blueId": "5paBWjWmZSPjaJ7AsiTaChcQpMmJxvrkSHfpbqBHYruj"
     }
   },
   "partyReference": {

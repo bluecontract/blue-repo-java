@@ -7,7 +7,7 @@
   "changeset": {
     "description": "Ordered list of patch entries to apply through the Blue Contracts processor. Each entry must be valid under the\nprocessor patch rules. The order is significant: each patch is applied, type-checked/generalized, and cascaded before\nthe next patch is considered.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "5UihWoxkyiUbv9TZk7HcHsa82sz2R3ex1WifQQpKtHpP"

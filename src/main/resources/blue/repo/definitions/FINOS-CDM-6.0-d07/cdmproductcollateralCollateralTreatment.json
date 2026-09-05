@@ -4,10 +4,10 @@
   "concentrationLimit": {
     "description": "Specification of concentration limits applicable to the collateral criteria.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "G115DdfxDj4CHzMSeZHcm923Rr9JELfKiG6pVf9ceVu6"
+      "blueId": "4izGt4cQy9fz5RKD7XeT5gkGoCF4TynFbTpunXV9npMj"
     },
     "schema": {
       "minItems": 0

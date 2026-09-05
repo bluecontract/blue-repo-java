@@ -4,19 +4,19 @@
   "cashCollateralValuationMethod": {
     "description": "Specifies the parameters representing several mid-market valuation and replacement value methods.",
     "type": {
-      "blueId": "3xBEop5VqRojRSFKs2N78XJ9XJ3y9EwonNDNeW7bcGer"
+      "blueId": "Caf4xQzfezD44TWFNVJEUXc3TF4UzsLqTKcJkywMigTe"
     }
   },
   "minimumQuotationAmount": {
     "description": "In the determination of a cash settlement amount, if weighted average quotations are to be obtained, the minimum quotation amount specifies a minimum intended threshold amount of outstanding principal balance of the reference obligation for which the quote should be obtained. If not specified, the ISDA definitions provide for a fallback amount of the lower of either USD 1,000,000 (or its equivalent in the relevant obligation currency) or the quotation amount. ISDA 2003 Term: Minimum Quotation Amount.\n",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "quotationAmount": {
     "description": "In the determination of a cash settlement amount, if weighted average quotations are to be obtained, the quotation amount specifies an upper limit to the outstanding principal balance of the reference obligation for which the quote should be obtained. If not specified, the ISDA definitions provide for a fallback amount equal to the floating rate payer calculation amount. ISDA 2003 Term: Quotation Amount.\n",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "quotationMethod": {
@@ -34,7 +34,7 @@
   "valuationSource": {
     "description": "The source for obtaining a valuation. This may come from some information source (e.g. Reuters), from a rate option fixing (e.g. FX fixing for cross-currency settlement), or from a set of reference banks. This is a mandatory attribute as the valuation method relies on one of those sources to be specified.\n",
     "type": {
-      "blueId": "23s8wDhp337PGVYErGxLLyL68vnBqB4CLLhH7pwd7bVf"
+      "blueId": "3Tgpwtu9Q8eM1pAy62kUP2zCBBjoGEvaAUywpgubmMrB"
     },
     "schema": {
       "required": true

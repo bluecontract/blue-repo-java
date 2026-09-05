@@ -4,7 +4,7 @@
   "ancillaryParty": {
     "description": "Specifies an ancillary party to be added onto the new transaction, e.g. the original executing party in an allocation.\n",
     "type": {
-      "blueId": "4iPHY4aygMFyDNb5teEsJeb7EyeK3CitfuP7DqfgnT1w"
+      "blueId": "DxW6v9Eqes2GNByfJjPwiexQ3383NQkjaGcH3EsU9YPW"
     }
   },
   "counterparty": {
@@ -25,10 +25,10 @@
   "tradeId": {
     "description": "The identifier to be assigned to the new trade post change of party.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "FGujWvfXdExA7nDNwp6iHf3hWYRL3g9JS9EZfYhS7N2y"
+      "blueId": "Qw49apmrbX1XioCMqzw7NWw4osDXDVHUeXZjSCR9MV7"
     },
     "schema": {
       "minItems": 1

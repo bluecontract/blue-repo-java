@@ -8,10 +8,10 @@ import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
 
-@TypeBlueId("4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ")
+@TypeBlueId("HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab")
 public class Compute extends SequentialWorkflowStep {
     public static String blueId() {
-        return "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ";
+        return "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab";
     }
 
     public static String packageName() {

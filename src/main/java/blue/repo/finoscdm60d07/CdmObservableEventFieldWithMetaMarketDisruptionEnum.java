@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("2mUG6yVN1o4wufU3eqD46MgJ7jFsjjB6XVZAGeFU8AAM")
+@TypeBlueId("7jEQmQjURBY8YZJcwtxtFS6kRnKJKeAASyas3DkcudBW")
 public class CdmObservableEventFieldWithMetaMarketDisruptionEnum {
     public static String blueId() {
-        return "2mUG6yVN1o4wufU3eqD46MgJ7jFsjjB6XVZAGeFU8AAM";
+        return "7jEQmQjURBY8YZJcwtxtFS6kRnKJKeAASyas3DkcudBW";
     }
 
     public static String packageName() {

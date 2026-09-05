@@ -4,7 +4,7 @@
   "extensionFrequency": {
     "description": "The frequency with which the evergreen contract will be extended if notice is not given.",
     "type": {
-      "blueId": "A5fbgqJ72K7pbNNCrmP9z1uJjRfJjx4z6Bav92ZY3iMs"
+      "blueId": "4YBEDDwHCYVauaDXtkLW695keQDWRijm1vdpkKCPaXkj"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "finalPeriodFeeAdjustment": {
     "description": "An optional adjustment to the rate for the last period of the evergreen i.e. the period from when notice is given to stop rolling the contract through to the termination date.\n",
     "type": {
-      "blueId": "D6pT9tDvB6nnaNaPVHodxcm2djqTNykgt6VJoD2uDq4M"
+      "blueId": "Eq9qZQHxqGHrhdWMG4ATnQxDGtQB2E3EkW56WnwBvYkg"
     }
   },
   "noticeDeadlineDateTime": {
@@ -25,13 +25,13 @@
   "noticeDeadlinePeriod": {
     "description": "Defines the minimum period before an evergreen is scheduled to terminate that notice can be given that it will terminate beyond the scheduled termination date.\n",
     "type": {
-      "blueId": "9fGwsBbeyL5rQuLRmwyBtyjMjAcmhWfHf4bmyqAXmWtD"
+      "blueId": "2wQPopE8rNJu4jigpcsKNP5ifSGS1mCEULs5TFyadHG9"
     }
   },
   "noticePeriod": {
     "description": "The length of each evergreen extension period relative to the effective date of the preceding contract.",
     "type": {
-      "blueId": "9fGwsBbeyL5rQuLRmwyBtyjMjAcmhWfHf4bmyqAXmWtD"
+      "blueId": "2wQPopE8rNJu4jigpcsKNP5ifSGS1mCEULs5TFyadHG9"
     },
     "schema": {
       "required": true

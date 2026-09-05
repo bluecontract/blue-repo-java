@@ -19,7 +19,7 @@
   "participantMappings": {
     "description": "Optional participant resolution input for target channels whose actors are not already defined by the target document.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "2bpoRUwLybnKnNhCfmE28HEfh4JMTPBdCRr93G31goFW"
@@ -28,7 +28,7 @@
   "initialMessages": {
     "description": "Optional Messages supplied as bootstrap input for the target document.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "768MxgQEHnLSkedHWHtjj43mAjH361Zf6pKZgVxi5po3"

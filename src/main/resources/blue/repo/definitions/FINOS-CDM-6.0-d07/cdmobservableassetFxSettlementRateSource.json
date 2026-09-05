@@ -4,13 +4,13 @@
   "nonstandardSettlementRate": {
     "description": "Indicates that a non-standard rate source will be used for the fixing.",
     "type": {
-      "blueId": "jS1Jdx4pXkwfPR4TmTt8UXGnbjdPbKw7KTpVK34od1f"
+      "blueId": "7WEdbJKdS5uNnmiT6Xgnx6mMuY1WLotdBGfZ7crubh9i"
     }
   },
   "settlementRateOption": {
     "description": "Indicates that an officially defined rate settlement rate option will be the used for the fixing.",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     }
   }
 }

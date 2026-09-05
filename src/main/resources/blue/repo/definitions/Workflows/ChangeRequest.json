@@ -10,7 +10,7 @@
   "changeset": {
     "description": "RFC 6902 patch entries outside /contracts (blocked by policy if it touches /contracts).",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "5UihWoxkyiUbv9TZk7HcHsa82sz2R3ex1WifQQpKtHpP"
@@ -19,7 +19,7 @@
   "sectionChanges": {
     "description": "Section-based /contracts mutations (required when Contracts Change Policy is enabled).",
     "type": {
-      "blueId": "9MfTNhMnFbd6VkhaLLLEyv1SxwBzj9iJjfUNQV2toU9S"
+      "blueId": "BKAQTaqKJ3srGv96X9m76CZqJArdkiaLdFcvZ5uvzfUD"
     }
   }
 }

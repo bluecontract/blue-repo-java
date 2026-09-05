@@ -4,10 +4,10 @@
   "partyElection": {
     "description": "The parties' contact information election.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "EdgTekD4DSaAbY5B22rL1ks9aiMeJD37ywSxekUgteNf"
+      "blueId": "AfeqyCu8gVhywbrADTPPLpJ3s194JfthsYy68g3akFTP"
     },
     "schema": {
       "minItems": 2,

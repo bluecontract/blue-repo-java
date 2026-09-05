@@ -4,10 +4,10 @@
   "inventoryRecord": {
     "description": "An array holding the list of inventory being described. Each element in the inventoryRecord array represents an individual piece of inventory i.e. a security.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "swvmAAFAvn3njjvFA8CkPez3L5hTXnQVBoeLsYiHbae"
+      "blueId": "AsY1pQjBHD42TgiqP5ER13puuqkfi1jVmXuGY271fg68"
     },
     "schema": {
       "minItems": 0

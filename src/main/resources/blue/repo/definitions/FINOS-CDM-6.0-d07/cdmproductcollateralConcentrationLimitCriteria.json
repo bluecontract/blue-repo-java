@@ -4,7 +4,7 @@
   "appliesTo": {
     "description": "Specifies which of the two counterparties the criteria applies to (either one or both counterparties). This attribute is optional, in case the applicable party is already specified elsewhere within a party election.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "7qRfgFBAefYQ37ztmK2dW9i4twZzBjKcQiHPeHrcRtYw"
@@ -23,7 +23,7 @@
   "collateralCriteria": {
     "description": "The specific criteria that applies. It can be created using AND, OR and NOT logic, and both asset and issuer characteristics.\n",
     "type": {
-      "blueId": "5WkYngyEgPaS9dUTxxGMq3Lc9q4xBSngbTULcPneCHJX#0"
+      "blueId": "4PomKHd5RQDs3gKG4uKXCAUX2cCJjzWQYPfeyFT6zyKv#3"
     }
   },
   "concentrationLimitType": {

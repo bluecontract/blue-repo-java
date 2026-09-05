@@ -4,7 +4,7 @@
   "equityCashSettlementDates": {
     "description": "The parameters used to generate the payment date schedule, relative to the equityCalculationPeriod. Per Part 1 Section 12, 'Definitions', of the 2018 ISDA CDM Equity Confirmation. Para 73\n",
     "type": {
-      "blueId": "53mGNaWEbqDyzs1WnqizJcci5WSeG5YDV6e97svgRLve"
+      "blueId": "7zPK1vPjFn24zeEbHdA7GsAu86EAQUA1ydzstxubuJ1Z"
     },
     "schema": {
       "required": true
@@ -31,7 +31,7 @@
   "settlementTerms": {
     "description": "Per Part 1 Section 8, 'Settlement', of the 2018 ISDA CDM Equity Confirmation for Security Equity Swap",
     "type": {
-      "blueId": "BRJ2J4zKmK8CLQta8gGcSboyer9Sby49nV8HopjaFM7g"
+      "blueId": "HcWZydDKaZi3AKGuCL7XfsxA2EhP9kxwSwnPfpbj2cpi"
     },
     "schema": {
       "required": true
@@ -49,7 +49,7 @@
   "valuationDates": {
     "description": "The parameters used to generate the 'Equity Valuation Dates' schedule, including the Effective Date and Termination Date for the Swap.\n",
     "type": {
-      "blueId": "52VT1GJKNMa3wBqNqgE8GhUTMvm8KG1p7teYbHA7oz8D"
+      "blueId": "Ga8pkxYt9GB81rNXDT7GBVzQYc8CUdC1JBgWoriCnAU3"
     },
     "schema": {
       "required": true

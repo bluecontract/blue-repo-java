@@ -4,19 +4,19 @@
   "AllCriteria": {
     "description": "Enables two or more Collateral Criteria to be combined using AND logic.",
     "type": {
-      "blueId": "this#2"
+      "blueId": "4PomKHd5RQDs3gKG4uKXCAUX2cCJjzWQYPfeyFT6zyKv#0"
     }
   },
   "AnyCriteria": {
     "description": "Enables two or more Collateral Criteria to be combined using OR logic.",
     "type": {
-      "blueId": "this#1"
+      "blueId": "4PomKHd5RQDs3gKG4uKXCAUX2cCJjzWQYPfeyFT6zyKv#2"
     }
   },
   "AssetAgencyRating": {
     "description": "Criteria is the agency rating(s) of the collateral asset.",
     "type": {
-      "blueId": "E5PkDX7rWwMWZKVxDTd5mdo47J6SSfqABkRghDUpxQq"
+      "blueId": "ESqWgVaG6gzLRf4j9fbBhS53QmechCyTSybk6xNLibQG"
     }
   },
   "AssetCountryOfOrigin": {
@@ -34,7 +34,7 @@
   "AssetType": {
     "description": "Criteria is the asset type of the collateral.",
     "type": {
-      "blueId": "GYosLnxXxsEormFDHeohsEEMxPt7FWvEs89hCYk6UHXA"
+      "blueId": "78dqZx7T2YUbYetbevkgvVioPcdmqJLx3xK22LQJLjXc"
     }
   },
   "CollateralIssuerType": {
@@ -46,7 +46,7 @@
   "CollateralTaxonomy": {
     "description": "Criteria is the taxonomy characteristics of an collateral.",
     "type": {
-      "blueId": "FvdbebgpWA3amq8WXUvqvKk1C95zhGYeBgcoZJGkkzEf"
+      "blueId": "w2z5vrdebD57MssdnVBS4tCECGETH7Svoa3B4WC431y"
     }
   },
   "CounterpartyOwnIssuePermitted": {
@@ -70,13 +70,13 @@
   "Index": {
     "description": "Criteria is that the collateral is a constituent of a specific index.",
     "type": {
-      "blueId": "HPKV3jzahCUNNYc5hsHbEPeFhACtdGyBCmSNpJM4ioGi"
+      "blueId": "6JvEvpuyGjBLrNkpcEtrzjX9ebQMRzurwkzua5Cizpu5"
     }
   },
   "IssuerAgencyRating": {
     "description": "Criteria is the agency rating(s) of the issuer.",
     "type": {
-      "blueId": "F1uCnYCMDJC2Y8zz5exhHuQPRzZM1FpKguQdBMo3vii4"
+      "blueId": "C67CPxmbYkvCDJTAQ3Wq5fXjo1JeHZWx1WJ4CfPCJPTY"
     }
   },
   "IssuerCountryOfOrigin": {
@@ -88,37 +88,37 @@
   "IssuerName": {
     "description": "Criteria is a specific named issuer entity.",
     "type": {
-      "blueId": "GZhoGgrsFXSSpVpDCbuWSQryXHsbc4xTdtgf1dTWPUPH"
+      "blueId": "9jC3KJhuctgW4SgmH2YS2UJtF27L59NFiWjza7R55Ho4"
     }
   },
   "ListingExchange": {
     "description": "Criteria is that the collateral is listed on a specific exchange.",
     "type": {
-      "blueId": "DhsgKp8L941omVnqTCh7TghSnGVehvPECHyu7RJV3WZV"
+      "blueId": "GuePBwWCdiGPjeqEuhFTCuK9gmCypcjx2yXWbbxAZaKj"
     }
   },
   "ListingSector": {
     "description": "Criteria is the industry sector of the collateral asset.",
     "type": {
-      "blueId": "BeufGYcvdnG92TzbfkVByXuyaFrFsMh9oRPpcJSJDMXN"
+      "blueId": "7Sxr9ApkcJbKksCDtrmcoqUWpAFgVLZeuhp5CTosvRWh"
     }
   },
   "NegativeCriteria": {
     "description": "Enables a single Collateral Criteria to be excluded using NOT logic.",
     "type": {
-      "blueId": "this#3"
+      "blueId": "4PomKHd5RQDs3gKG4uKXCAUX2cCJjzWQYPfeyFT6zyKv#1"
     }
   },
   "SovereignAgencyRating": {
     "description": "Criteria is the agency rating(s) of the country of the issuer.",
     "type": {
-      "blueId": "D7ewX9CVaqUAWhkR1EfPjAijh9p6UQe5xFiQDnKBFura"
+      "blueId": "6RXX1yZf8wcLWMzgDKdw1JTi3p1bNcLkBm4CSFkPsFo9"
     }
   },
   "SpecificAsset": {
     "description": "Criteria is a specifically identified asset",
     "type": {
-      "blueId": "F39PbNpNQft3cYMpPHzn1u61UZ8VXryx2qsRbrCCYnWt"
+      "blueId": "2AxgqmJErtvQs4JRAzX36FaC3Whn5dTkUzfCXp6ZxCgJ"
     }
   }
 }

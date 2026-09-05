@@ -4,7 +4,7 @@
   "agreementName": {
     "description": "The legal agreement name, e.g. Credit Support Annex for Variation Margin.",
     "type": {
-      "blueId": "GtNBAyAynbg5ak9tonuCZjYhuWCYH91kN9bCBbHYAsop"
+      "blueId": "9PZyiye6eJbUnFGyVoXAJRGiknp4AGGfdLVRoQs7MVKN"
     },
     "schema": {
       "required": true

@@ -4,10 +4,10 @@
   "account": {
     "description": "Optional account information that could be associated to the event.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "Ci7ty5zffGzjgsQdhnezMazESuasmjVRABXcDJanwgLf"
+      "blueId": "9hqCtmV9eSLVgLeVxbZjUznnnr5Y6TCMqprBSYfosYe4"
     },
     "schema": {
       "minItems": 0
@@ -22,7 +22,7 @@
   "approval": {
     "description": "Optional party approvals for the current workflow step. A workflow step can have any number of parties associated to it, thus this object is represented as a list. All parties that are expected to provide approval should have an item in this list that references them.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "9AHt7RbQJpPN29t7Dit6xemqAkC14HePBm5ayDJbHnqS"
@@ -34,27 +34,27 @@
   "businessEvent": {
     "description": "Life cycle event for the step. The businessEvent is optional when a proposedEvent or rejection are present.",
     "type": {
-      "blueId": "2mPyPCMLGUH8LTsXeCx7sE8MoUkyjXsN5wHNZkzNvgXC"
+      "blueId": "GV2XfesJywwHEqbbCbgzMGBau7qYzEGJphTo2po7cQt2"
     }
   },
   "counterpartyPositionBusinessEvent": {
     "description": "Documents the life cycle event for a position.",
     "type": {
-      "blueId": "6crPYSSUWEcDZ3RkdT8acaFQUW3W3Ly2kdiaX8dpynAw"
+      "blueId": "CoydKeTFHdamvSYZBXM8bLKYsZaCHkRnFvqTHSGCze9V"
     }
   },
   "creditLimitInformation": {
     "type": {
-      "blueId": "9Lq4JKDRKKVSQeCRSYR1PvVRZ5HB3Cbqa1U5FKk7nBiV"
+      "blueId": "DHJTMHoXJuu9gbXdFFQDEagAGNquAZXw1dNkJJo7LLTd"
     }
   },
   "eventIdentifier": {
     "description": "The identifier(s) that uniquely identify a lifecycle event. The unbounded cardinality is meant to provide the ability to associate identifiers that are issued by distinct parties. As an example, each of the parties to the event may choose to associate their own identifiers to the event.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "2uYMDSb9jahYcE91VXzzWYsnUVct3k5thb1czx4jPYF7"
+      "blueId": "DsoHoM8aVPzAWigjVwEnfcVhA5cKyYixMbZuMGC1NLJZ"
     },
     "schema": {
       "minItems": 1
@@ -63,28 +63,28 @@
   "lineage": {
     "description": "The lineage attribute provides a linkage among lifecycle events through the globalKey hash value. One example is when a given lifecycle event is being corrected or cancelled. In such case, each subsequent event will have lineage into the prior version of that event. The second broad use case is when an event has a dependency upon either another event (e.g. the regular payment associated with a fix/float swap will have a lineage into the reset event, which will in turn have a lineage into the observation event for the floating rate and the contract) or a contract (e.g. the exercise of an option has a lineage into that option).\n",
     "type": {
-      "blueId": "8F2a2dkMM98d7KGUagPkBdhXVErYpJBwveTH1UGZo57N"
+      "blueId": "96F8GUo5Cqrg5upa446vgi9AtHveBqB5YsW6n44VBB4H"
     }
   },
   "messageInformation": {
     "description": "Contains all information pertaining the FpML messaging header",
     "type": {
-      "blueId": "22GjU2seJ6LjqoYyFFC6Wzrh5DA1XxUKBbuqNn2vnR3d"
+      "blueId": "2uB9zZRGrg5HtqPLteCYymmwxq8Di6PmV1frNKak19vN"
     }
   },
   "nextEvent": {
     "description": "The intended next event can be specified, even if the instructions are not known yet.",
     "type": {
-      "blueId": "3Xoecxdbp2YNAeFqQmdNizAeci6amtY3kLG78kaWSD3a"
+      "blueId": "AUyLmBdte6s5FxpG8EynPQBjac3CohhvFWTNdGVR33K2"
     }
   },
   "party": {
     "description": "The specification of the event parties. This attribute is optional, as not applicable to certain events (e.g. most of the observations).\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
+      "blueId": "552tQMPt3GF4sBRCYRmWLgaHG183EE1aMKbEinn1oGvJ"
     },
     "schema": {
       "minItems": 0
@@ -99,7 +99,7 @@
   "proposedEvent": {
     "description": "The proposed event for a workflow step. The proposedEvent is optional when the businessEvent or rejection are present\n",
     "type": {
-      "blueId": "3Xoecxdbp2YNAeFqQmdNizAeci6amtY3kLG78kaWSD3a"
+      "blueId": "AUyLmBdte6s5FxpG8EynPQBjac3CohhvFWTNdGVR33K2"
     }
   },
   "rejected": {
@@ -111,7 +111,7 @@
   "timestamp": {
     "description": "The set of timestamp(s) associated with the event as a collection of [dateTime, qualifier].",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "93YHikoSQrMTBaKFsmqukjaePGjWoHkVZMZVW1k86M7d"
@@ -123,7 +123,7 @@
   "workflowState": {
     "description": "The event workflow information, i.e. the workflow status, the associated comment and the partyCustomisedWorkflow which purpose is to provide the ability to associate custom workflow information to the CDM.\n",
     "type": {
-      "blueId": "6FS5LVjRjPqcC9Jv5LTu4r3Wm7MAKikZPY2uJiM4t5eA"
+      "blueId": "cUnTvV2vW2jqPpZPQomLtrCz8VFcaDqruyyBkuLyPrS"
     }
   }
 }

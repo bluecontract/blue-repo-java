@@ -10,7 +10,7 @@
   "pricingTime": {
     "description": "The regional exchange close time for the underlying contract,including time zone, at which the trades should be priced. This provides an indication for which regional snapshot should be used for pricing primarily for Global markets where there are multiple regional close times.\n",
     "type": {
-      "blueId": "3jiEy2e5MqwFVX3zkALqRNFaBpD4DawUCg1iYwfFzeca"
+      "blueId": "4S8rv6TtcS3Xv2uxWB136mrQZVM76NTdkyKBGTgn5Z7N"
     },
     "schema": {
       "required": true
@@ -19,7 +19,7 @@
   "trade": {
     "description": "Represents the cosensus based pricing parameters on a trade basis.",
     "type": {
-      "blueId": "Gm86NetLQn7WB75RP28UxDg7WZvhyUm1usBgfAPjFkdM"
+      "blueId": "ABtBnXVxAdtQaWJcxMGz6YJb2tjdXhuV2xZETFPYRVVi"
     },
     "schema": {
       "required": true

@@ -4,10 +4,10 @@
   "quantity": {
     "description": "Specifies the quantity of shares and cash to be returned in a partial return event.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "AdJnZG9c8KBZpbUXw47UmJ1yNJN4AK3q9P9aMJjaKanN"
+      "blueId": "6H6ai9i2XAXM89wp9H6hTxLjhKaoFgBxrauHYKfRY3pL"
     },
     "schema": {
       "minItems": 1

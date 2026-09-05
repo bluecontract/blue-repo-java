@@ -1,0 +1,8 @@
+{
+  "schema": "blue-repository-development-input/1",
+  "releaseReadinessClaimed": false,
+  "sourceCommit": "9d600c440cb6d08ac7fa73f8303833b2cce998ba",
+  "sourceTree": "0889b095fdfe4faa0e165de49880e8bb0d01ef71",
+  "version": "3.1.0-dev.9d600c440cb6d08ac7fa73f8303833b2cce998ba",
+  "manifestSha256": "sha256:be0d440e86e4d25a44c77b01eab844e8ccf5cb61facc1c5072b029de78620ff2"
+}

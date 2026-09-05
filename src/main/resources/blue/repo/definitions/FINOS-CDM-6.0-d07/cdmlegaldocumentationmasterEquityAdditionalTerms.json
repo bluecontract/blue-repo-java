@@ -3,7 +3,7 @@
   "description": "Transaction AdditionalTerms that apply to Equity asset class.",
   "determinationTerms": {
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "2CBRVBHp8NK926NLXhHSWTgFBfRXppF92DVzGUsaWnb5"
@@ -14,12 +14,12 @@
   },
   "extraordinaryEvents": {
     "type": {
-      "blueId": "8WNdwP7MjecdHrT3shTAYGh22xXfqp5tjwBVkVnp6Cef"
+      "blueId": "4XUTjiqFSi4fNEQ5tZLdXgz4DM3WPHS1evKaJyqWZ7q3"
     }
   },
   "substitutionProvision": {
     "type": {
-      "blueId": "7paSbRZjaHBJWw41SkMcrKGfqK7m3wPAdtZmg3wJXwrh"
+      "blueId": "EVQsDGrfbs5josX2sGdCLuNX1uJTeFgBvJUZZgHp7Ct8"
     }
   }
 }

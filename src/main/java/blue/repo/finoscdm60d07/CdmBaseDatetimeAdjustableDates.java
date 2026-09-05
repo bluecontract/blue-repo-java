@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("ATwFe4A6KM2pwcq5ezVugmeREzNVytoPxpU4UgV8Nhdt")
+@TypeBlueId("DBgmp4p5L6ZxrQazC6KgfDGE25HKvjK8hxseWsyivyzW")
 public class CdmBaseDatetimeAdjustableDates {
     public static String blueId() {
-        return "ATwFe4A6KM2pwcq5ezVugmeREzNVytoPxpU4UgV8Nhdt";
+        return "DBgmp4p5L6ZxrQazC6KgfDGE25HKvjK8hxseWsyivyzW";
     }
 
     public static String packageName() {

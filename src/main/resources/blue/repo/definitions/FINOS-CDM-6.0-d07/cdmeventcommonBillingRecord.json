@@ -4,7 +4,7 @@
   "minimumFee": {
     "description": "Indicates the minimum fee amount applied to the billing record, if any.",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "recordEndDate": {
@@ -28,7 +28,7 @@
   "recordTransfer": {
     "description": "The settlement terms for the billing record",
     "type": {
-      "blueId": "D5TDQT9MAD6sFuVDC3EEoupfJghS4ZKw8J27kLnBJM3e"
+      "blueId": "4ogWUY8fNgMAtUBe5JRjDLenkYFKnv52vpyUuneiwEvW"
     },
     "schema": {
       "required": true

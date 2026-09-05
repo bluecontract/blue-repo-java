@@ -4,10 +4,10 @@
   "interestParameters": {
     "description": "Represents the interest parameters for the various currencies, margin types, posting parties.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "GsFBjGKav7ci1HtW2ZbeCbtEmLmLbsoz9dFgitf5kTHJ"
+      "blueId": "EywGfAbgU3eRnV8v2fvbVyysAP9K5CoRecNjRnMTd6xM"
     },
     "schema": {
       "minItems": 0

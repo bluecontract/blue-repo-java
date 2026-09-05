@@ -4,13 +4,13 @@
   "corporateAction": {
     "description": "Specifies the necessary information to create a corporate action.",
     "type": {
-      "blueId": "8rrtQ7ufVFwqvtNre8bZWFUCfVmJgwVYWwZNj5N1aetV"
+      "blueId": "7i3eJzuqbzHBdmux59hCxPEUhkTh1w6JoiL35k3F8wqF"
     }
   },
   "creditEvent": {
     "description": "Specifies the necessary information to create a credit event.",
     "type": {
-      "blueId": "FQXirnKbUqf5LGWer2bQPVsYT4EWyAvu51iBJLTDfVi4"
+      "blueId": "EQbMdmckvBWpzUSTW2RqwtdhHdRG2jG5aKmRv7qA8qf2"
     }
   }
 }

@@ -4,37 +4,37 @@
   "agreementMinimumTransferAmount": {
     "description": "Specifies the collateral legal agreement minimum transfer amount in base currency.",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "agreementRounding": {
     "description": "Specifies the collateral legal agreement rounding in base currency.",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "agreementThreshold": {
     "description": "Specifies the collateral legal agreement threshold amount in base currency.",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "baseCurrencyExposure": {
     "description": "Represents the current mark to market value or IM calculation value of the trade portfolio as recorded by the principle (in base currency), to be referenced in a margin call.\n",
     "type": {
-      "blueId": "8F5tzDJeHVMjn1AsyLLfL6a8zuQzwzNmqCwPSk6ympdk#0"
+      "blueId": "6EEsLbZJVFFADgNYZbzLAETyrak4YRSxKX8m7ECPhWoH#0"
     }
   },
   "callAgreementType": {
     "description": "Specifies the legal agreement type the margin call is generated from and governed by.",
     "type": {
-      "blueId": "GtNBAyAynbg5ak9tonuCZjYhuWCYH91kN9bCBbHYAsop"
+      "blueId": "9PZyiye6eJbUnFGyVoXAJRGiknp4AGGfdLVRoQs7MVKN"
     }
   },
   "callAmountInBaseCurrency": {
     "description": "Specifies the amount of margin being called for which accounts for margin calculation inclusive of exposure, independent amount,threshold,collateral balance, MTA, rounding increments (in base currency detailed in supporting collateral agreement).\n",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     },
     "schema": {
       "required": true
@@ -43,13 +43,13 @@
   "callIdentifier": {
     "description": "Represents a unique Identifier for a margin call message, that can be referenced throughout all points of the process.\n",
     "type": {
-      "blueId": "2uYMDSb9jahYcE91VXzzWYsnUVct3k5thb1czx4jPYF7"
+      "blueId": "DsoHoM8aVPzAWigjVwEnfcVhA5cKyYixMbZuMGC1NLJZ"
     }
   },
   "clearingBroker": {
     "description": "Indicates the name of the Clearing Broker FCM/DCM.",
     "type": {
-      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
+      "blueId": "552tQMPt3GF4sBRCYRmWLgaHG183EE1aMKbEinn1oGvJ"
     }
   },
   "collateralPortfolio": {
@@ -61,7 +61,7 @@
   "independentAmountBalance": {
     "description": "Represents additional credit support amount over and above mark to market value.",
     "type": {
-      "blueId": "EieQtheGsK5EDQsjN2wqUyWn5LaLYdtjXBotd8LVH7ZT"
+      "blueId": "Bdw5ZFQLzcYErT593NyrKAWPNpAvseKThrUjjmEi6fS8"
     }
   },
   "instructionType": {
@@ -73,10 +73,10 @@
   "party": {
     "description": "Represents the parties to the margin call. The cardinality is optional to address the case where both parties of the event are specified and a third party if applicable.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
+      "blueId": "552tQMPt3GF4sBRCYRmWLgaHG183EE1aMKbEinn1oGvJ"
     },
     "schema": {
       "minItems": 0
@@ -85,7 +85,7 @@
   "partyRole": {
     "description": "Represents the role each specified party takes in the margin call. further to the principal roles, payer and receiver.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "6DrJREpu1Ms3M4U1q7jqGjM46V1o8vxq4K1i3X4dwMvz"
@@ -97,10 +97,10 @@
   "recallNonCashCollateralDescription": {
     "description": "Specifies the details to describe or identify non-cash collateral eligible assets for recall purposes.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "Dd4QK5kmBzsGcmhcqxkLLPiH2fBmE3acTHCBGWUW5Buq"
+      "blueId": "5ppzC68mJTGHyXB31ofhtnmLaiL6HYMQsbM3VU7tZXDk"
     },
     "schema": {
       "minItems": 0

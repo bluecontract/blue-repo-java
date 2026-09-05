@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import blue.repo.coordination.Event;
 import java.util.List;
 
-@TypeBlueId("J9a8qD8javfYK6nRDq9YZRA8LDuzZzq7QS7DB73Pm4Lv")
+@TypeBlueId("4w29fVLE2At1ZyqYCiRBhHagkmU1g7EbCobJkVLD6YfT")
 public class TargetDocumentSessionStarted extends Event {
     public static String blueId() {
-        return "J9a8qD8javfYK6nRDq9YZRA8LDuzZzq7QS7DB73Pm4Lv";
+        return "4w29fVLE2At1ZyqYCiRBhHagkmU1g7EbCobJkVLD6YfT";
     }
 
     public static String packageName() {

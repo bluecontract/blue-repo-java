@@ -7,10 +7,10 @@ import blue.repo.coordination.Event;
 import java.math.BigInteger;
 import java.util.List;
 
-@TypeBlueId("45LGaTEkpqKVCXfgjbdq4kEeQ64qV5TsgYVCiQev9J9n")
+@TypeBlueId("5HsMGJvZGBfTJmpmp5hRYdZ4Mmzk2HCTEbXqE9rapW7u")
 public class CardTransactionMonitoringStopped extends Event {
     public static String blueId() {
-        return "45LGaTEkpqKVCXfgjbdq4kEeQ64qV5TsgYVCiQev9J9n";
+        return "5HsMGJvZGBfTJmpmp5hRYdZ4Mmzk2HCTEbXqE9rapW7u";
     }
 
     public static String packageName() {

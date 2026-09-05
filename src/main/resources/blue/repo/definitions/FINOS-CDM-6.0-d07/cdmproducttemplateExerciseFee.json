@@ -10,7 +10,7 @@
   "feePaymentDate": {
     "description": "The date on which exercise fee(s) will be paid. It is specified as a relative date.",
     "type": {
-      "blueId": "9fGwsBbeyL5rQuLRmwyBtyjMjAcmhWfHf4bmyqAXmWtD"
+      "blueId": "2wQPopE8rNJu4jigpcsKNP5ifSGS1mCEULs5TFyadHG9"
     },
     "schema": {
       "required": true

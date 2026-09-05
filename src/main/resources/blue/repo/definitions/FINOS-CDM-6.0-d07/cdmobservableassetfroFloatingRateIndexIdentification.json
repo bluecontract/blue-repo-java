@@ -9,7 +9,7 @@
   "floatingRateIndex": {
     "description": "The reference index that is used to specify the floating interest rate. The FpML standard maintains the list of such indices, which are positioned as enumeration values as part of the CDM.\n",
     "type": {
-      "blueId": "9MWTLbKLsUSiaShABSSuHxaeJZ2aErzYPTqc28XefGr3"
+      "blueId": "6vbWQMGkaQnQqgy6zrkN57Jw7pBQT18XoES6FBk7ANt3"
     }
   },
   "froType": {

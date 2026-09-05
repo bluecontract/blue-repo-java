@@ -4,13 +4,13 @@
   "featurePayment": {
     "description": "The feature payment, i.e. the payment made following trigger occurrence.",
     "type": {
-      "blueId": "CyNbsBbVvQtTXmUtC5VgfJRMfcxjpqRgWZb9o3728hUE"
+      "blueId": "7WzjXjfhi9ELhpBsbrxSAY2A3E8ZnRzAtHP8Yd8yGpvS"
     }
   },
   "schedule": {
     "description": "A derivative schedule.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "hjVS7GrE9QqNFk61XTvTkP6ktQxzv96UUaGK74mg9YK"
@@ -22,7 +22,7 @@
   "trigger": {
     "description": "The trigger level",
     "type": {
-      "blueId": "DPiz2W1ctMPUXHZwDNk33csZRvEzLLK98EDtC4S1MYYv"
+      "blueId": "4X21CAJrmVYpupYBjufyvBFiaUs2Joe7FwYsaFMkcEB2"
     },
     "schema": {
       "required": true
@@ -31,7 +31,7 @@
   "triggerDates": {
     "description": "The trigger Dates.",
     "type": {
-      "blueId": "7dJA2x6vQbptJj6JY19SNAepGDTYYauAobPJ5nGTi5GV"
+      "blueId": "31nxJ7wFGoWjPQ8Rni2sBcqTG4NRBHKa7kiFdXURomWF"
     }
   }
 }

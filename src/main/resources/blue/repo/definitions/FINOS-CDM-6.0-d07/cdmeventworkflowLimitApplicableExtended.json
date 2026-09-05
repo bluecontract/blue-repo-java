@@ -22,7 +22,7 @@
   "currency": {
     "description": "The currency in which the applicable limit is denominated. The list of valid currencies is not presently positioned as an enumeration as part of the CDM because that scope is limited to the values specified by ISDA and FpML. As a result, implementers have to make reference to the relevant standard, such as the ISO 4217 standard for currency codes.\n",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     }
   },
   "limitAmount": {
@@ -40,13 +40,13 @@
   "limitLevel": {
     "description": "The level at which the limit is set: customer business, proprietary business or account level. This attribute is specified as a string as part of the CME clearing confirmation specification.\n",
     "type": {
-      "blueId": "AkJ9qaZBcVWNmGPuKKTL3virXJgtGLj6pmWht6fJu7uJ"
+      "blueId": "GE1GzbtBLg87kcsD1YrSthj3iTHwD59VFxHu56vdUM5y"
     }
   },
   "limitType": {
     "description": "Standard code to indicate which type of credit line is being referred to - i.e. IM, DV01, PV01, CS01, Notional, Clip Size, Notional, maximumOrderQuantity.\n",
     "type": {
-      "blueId": "XVxdSEMV4oFDKCQukLBfXD3FmtXm51L51G1CCF1mDiE"
+      "blueId": "4h32nqaLDh8UQbXvPspsf17ZC4Zuia1obdC7v5Gf4i3d"
     }
   },
   "utilization": {

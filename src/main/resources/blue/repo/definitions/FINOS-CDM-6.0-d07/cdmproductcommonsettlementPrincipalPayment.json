@@ -16,19 +16,19 @@
   "presentValuePrincipalAmount": {
     "description": "The amount representing the present value of the principal payment.",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "principalAmount": {
     "description": "When known at the time the transaction is made, the cash amount to be paid.",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "principalPaymentDate": {
     "description": "The date where the PrincipalPayment shall be settled.",
     "type": {
-      "blueId": "J1kGTdAb67L1bPgvuKZ86jTR9UZJomnkgA6hcnVfnwfD"
+      "blueId": "397tsASyRDDk2UNpFxXBdpXar7RwXd5MEejzPtRzcxB2"
     }
   }
 }

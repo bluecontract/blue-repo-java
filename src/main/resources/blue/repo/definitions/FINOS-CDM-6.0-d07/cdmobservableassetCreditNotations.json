@@ -4,13 +4,13 @@
   "creditNotation": {
     "description": "Specifies only one credit notation is determined.",
     "type": {
-      "blueId": "6DvMxWSu8NPPjxcsnCkgPnNoAfxF9WCaA14A1Gd6fLG6"
+      "blueId": "E45BJdNT1jxZETrD85178MqXWf1XQrqV8MdwiV87AxLb"
     }
   },
   "creditNotations": {
     "description": "Specifies if several credit notations exist, alongside an 'any' or 'all' or all condition.",
     "type": {
-      "blueId": "92vLAqvfJgzjgsR54hnKrJVs7B3dGCXpuaqMhaL3J5vD"
+      "blueId": "5MNELsgknaMsnBVcwHk8xXCKU1X2gFsZB48yecszSpBp"
     }
   }
 }

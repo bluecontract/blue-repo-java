@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("AdSenJuaemBCdgGKetnHtpKmpgrP6eZWt97RDfjjcp6a")
+@TypeBlueId("FkovZeSFaCLX44hYYWHyjLKcfGRjAytcyFFELLnARtnB")
 public class CdmProductAssetFloatingRateDefinition {
     public static String blueId() {
-        return "AdSenJuaemBCdgGKetnHtpKmpgrP6eZWt97RDfjjcp6a";
+        return "FkovZeSFaCLX44hYYWHyjLKcfGRjAytcyFFELLnARtnB";
     }
 
     public static String packageName() {

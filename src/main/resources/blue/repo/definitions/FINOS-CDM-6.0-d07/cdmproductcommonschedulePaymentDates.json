@@ -16,13 +16,13 @@
   "paymentDatesAdjustments": {
     "description": "The definition of the business day convention and financial business centers used for adjusting the payment date if it would otherwise fall on a day that is not a business day in the specified business center.\n",
     "type": {
-      "blueId": "AKAczd79wtoD2Vt7VjdFdnWeacw86mQTVeLcyS9SWFZz"
+      "blueId": "HZJDnv878jZDzx4XhQtskoT3SAT9j2YgYkiuAfxKPXsS"
     }
   },
   "paymentDateSchedule": {
     "description": "The payment dates when specified as relative to a set of dates specified somewhere else in the instance document/transaction, e.g. the valuation dates as typically the case for equity swaps, or when specified as a calculation period schedule.\n",
     "type": {
-      "blueId": "5ainWhfaXWmH8cuLAXt9iVt1xiJokPwZ2FBc2SYNGRMF"
+      "blueId": "H2x8AcpWBE1vPg4EgJ99gzTwGrWbNkrkhsgom7gvbRLB"
     }
   },
   "paymentDaysOffset": {

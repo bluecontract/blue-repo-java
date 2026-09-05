@@ -4,7 +4,7 @@
   "finalValuationDate": {
     "description": "Specifies the final valuation dates of the underlyer.",
     "type": {
-      "blueId": "BSEHE4W4SiFBFxz2pZFUYLZkWbx5TpsRfxn2aVJSizYd"
+      "blueId": "5WoMK4iUuUkMMVxDia7H9mGNH3L31mLj8RveukWvKKGi"
     },
     "schema": {
       "required": true
@@ -13,13 +13,13 @@
   "initialValuationDate": {
     "description": "Specifies the initial valuation dates of the underlyer.",
     "type": {
-      "blueId": "BSEHE4W4SiFBFxz2pZFUYLZkWbx5TpsRfxn2aVJSizYd"
+      "blueId": "5WoMK4iUuUkMMVxDia7H9mGNH3L31mLj8RveukWvKKGi"
     }
   },
   "interimValuationDate": {
     "description": "Specifies the interim valuation dates of the underlyer.",
     "type": {
-      "blueId": "BSEHE4W4SiFBFxz2pZFUYLZkWbx5TpsRfxn2aVJSizYd"
+      "blueId": "5WoMK4iUuUkMMVxDia7H9mGNH3L31mLj8RveukWvKKGi"
     }
   }
 }

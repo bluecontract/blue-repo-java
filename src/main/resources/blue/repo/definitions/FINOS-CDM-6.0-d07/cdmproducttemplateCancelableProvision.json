@@ -16,25 +16,25 @@
   "cancelableProvisionAdjustedDates": {
     "description": "The adjusted dates associated with a cancelable provision. These dates have been adjusted for any applicable business day convention.\n",
     "type": {
-      "blueId": "71bRWBYtvfdtP8AxwkZMtMfJ2yr1QSyPJtEEsQYoyuit"
+      "blueId": "C8LuTs2p5b2raRR8GmQiyCERTmgxCpkYHVEEYrM46AKi"
     }
   },
   "earliestCancellationTime": {
     "description": "The earliest time in a business day that notice of cancelation can be given.",
     "type": {
-      "blueId": "4muK6BKTZZzEij2eR3Dg7sQxj224LzRoyzr5n7UcAR3X"
+      "blueId": "3yKMxPwXL9U6Q5LQFXgBdYUx3Dw1TtCgpJjn8WKiL3Mf"
     }
   },
   "earliestDate": {
     "description": "The first day when cancelation is permitted to take effect. A party may give notice prior to this date and taken together with the effective period would be necessary to cancel on this date.\n",
     "type": {
-      "blueId": "GW4fUG5i4g68v2eQEznuefGCSUPiwaHXpoVmU4ASwx29"
+      "blueId": "9bWLoL1zcJYR9saaAKGg2PbRC5k5kMqn4CktUzBBfgeY"
     }
   },
   "effectiveDate": {
     "description": "The effective date if cancelation is invoked otherwise the cancellation period defines the cancellation date.",
     "type": {
-      "blueId": "9V8dVXLUmzyBUtMoSeANJ5YvW4XpFBRyrLAUa8aaKbtu"
+      "blueId": "ArrT2XwHL1Z28tMpDXShkV49tagh2q14F57yYopgkAzT"
     }
   },
   "effectivePeriod": {
@@ -46,13 +46,13 @@
   "exerciseNotice": {
     "description": "Definition of the party to whom notice of exercise should be given.",
     "type": {
-      "blueId": "87nUue1ru1iHhXaB5EjL62TAsMV9t3vSvVB3X7XvwPH6"
+      "blueId": "36vAW2F3tTUYtnmsGz4x9zE5szvfv3zH6WntzKYH3apy"
     }
   },
   "exerciseTerms": {
     "description": "The exercise terms associated with the cancelable provision, including details such as exercise style, exercise fees, and any other relevant conditions or terms governing the cancellation of the swap transaction.\n",
     "type": {
-      "blueId": "5gJQwLbmDRFr1hrMPaZEsHFgWih7ce9ciXS2YMUGt55A"
+      "blueId": "ESGnUP7M4anNa6P2BZufvx9nkJP5B7QhLwtyVwCFok6N"
     },
     "schema": {
       "required": true
@@ -61,13 +61,13 @@
   "expirationDate": {
     "description": "The last day within the term of the contract that cancelation is allowed.",
     "type": {
-      "blueId": "GW4fUG5i4g68v2eQEznuefGCSUPiwaHXpoVmU4ASwx29"
+      "blueId": "9bWLoL1zcJYR9saaAKGg2PbRC5k5kMqn4CktUzBBfgeY"
     }
   },
   "finalCalculationPeriodDateAdjustment": {
     "description": "Business date convention adjustment to final payment period per leg (swapStream) upon exercise event. The adjustments can be made in-line with leg level BDC's or they can be specified separately.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "7Kho8N3YbG3eYyAjjUVNmpPq1xASqj3bfY7hNtffTMiQ"
@@ -88,13 +88,13 @@
   "initialFee": {
     "description": "An initial fee for the cancelable option.",
     "type": {
-      "blueId": "D5TDQT9MAD6sFuVDC3EEoupfJghS4ZKw8J27kLnBJM3e"
+      "blueId": "4ogWUY8fNgMAtUBe5JRjDLenkYFKnv52vpyUuneiwEvW"
     }
   },
   "latestCancelationTime": {
     "description": "The latest time at which notice of cancelation can be given.",
     "type": {
-      "blueId": "4muK6BKTZZzEij2eR3Dg7sQxj224LzRoyzr5n7UcAR3X"
+      "blueId": "3yKMxPwXL9U6Q5LQFXgBdYUx3Dw1TtCgpJjn8WKiL3Mf"
     }
   },
   "seller": {

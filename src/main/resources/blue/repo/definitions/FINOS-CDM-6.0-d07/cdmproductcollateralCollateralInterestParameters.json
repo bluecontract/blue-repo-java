@@ -10,19 +10,19 @@
   "interestCalculationFrequency": {
     "description": "Represents how often and when interest is calculated.",
     "type": {
-      "blueId": "4F94gXYj4FFU12dFg6mKFxiAkiH6xjK8Fidg91K3kXaS"
+      "blueId": "AF3fjcjTsvmEZDctQVbqoanQyboAZh3qdgKPyTo6TsR3"
     }
   },
   "interestCalculationParameters": {
     "description": "Represents the basic interest calculation parameters.",
     "type": {
-      "blueId": "47uMoNppS2Hcq6BdaKkWyCoHHwjZx6ZeqqbRY2cgCi4r"
+      "blueId": "6tnvzEAQg1Tqkc1572JPVJu34evEHtavK8LcqJT1z8xF"
     }
   },
   "interestHandlingParameters": {
     "description": "Represents the parameters describing how and when interest transfer occurs.",
     "type": {
-      "blueId": "Bjr7Yos67MUWjEZWrkWS2tEvEBnExqpWmM5cjKov61uA"
+      "blueId": "82b7KjjxWyBsXBYRNBKNusW4XGxV86658ZY7C1sihySc"
     }
   },
   "marginType": {

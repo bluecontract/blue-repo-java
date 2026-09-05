@@ -4,7 +4,7 @@
   "economicTerms": {
     "description": "The price forming features, including payouts and provisions.",
     "type": {
-      "blueId": "this#9"
+      "blueId": "5dWnsFbYwSdUQ3PVJWpq2NxYRknhmaGNc7BQQi14kcE9#8"
     },
     "schema": {
       "required": true
@@ -13,10 +13,10 @@
   "identifier": {
     "description": "Comprises a identifier and a source to uniquely identify the nonTransferableProduct.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "FnPPihH443SKbNrwapeK3w4TS3YG23ns1dkQMnVkD5fp"
+      "blueId": "P8cw2r4mvZ6SFYkHgqLYRFAT1jdHZV3W2Wvo4BibyQx"
     },
     "schema": {
       "minItems": 0
@@ -25,10 +25,10 @@
   "taxonomy": {
     "description": "Specifies the product taxonomy, which is composed of a taxonomy value and a taxonomy source.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "zhu6Vg1U6muAYReiYsG2Xh1wrN4VDaeeREHBY7A8wtc"
+      "blueId": "3dFYme6KQsnxxjBDFw1ztcTMEzw9LrDpZiJy9bEWAi3a"
     },
     "schema": {
       "minItems": 0

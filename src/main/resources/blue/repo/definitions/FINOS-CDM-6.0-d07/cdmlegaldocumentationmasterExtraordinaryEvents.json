@@ -4,10 +4,10 @@
   "additionalBespokeTerms": {
     "description": "Where parties may optionnaly describe any extra bespoke agreements, in regards of the standardized Extraordinary Events.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "GuFp1BJy74SUjnjVg7r3RwuRPXYUDKSUyEecdtsJ7QMX#0"
+      "blueId": "2yTaapLW5u3tErCszoyXXDFrsziv3SWvabfzKQAmjwmR#0"
     },
     "schema": {
       "minItems": 0
@@ -16,7 +16,7 @@
   "additionalDisruptionEvents": {
     "description": "Per the 2002 ISDA Equity Derivatives Definitions | 2018 ISDA CDM Equity Confirmation for Security Equity Swaps",
     "type": {
-      "blueId": "BM4rGBdGf3cf5jwjqFsDtmczUu4GP1JoMjZyDxQkyssX"
+      "blueId": "4AezzCzVETadQJs8sf3cNLwz6TgP29AfC8CRYxXznkdu"
     }
   },
   "compositionOfCombinedConsideration": {

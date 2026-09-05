@@ -4,25 +4,25 @@
   "calculationAgent": {
     "description": "The ISDA calculation agent responsible for performing duties as defined in the applicable product definitions.",
     "type": {
-      "blueId": "BmkE3R86Mi5VSgGXWARzCmJ1FbnwnZDnHtccZ6MSGnRQ"
+      "blueId": "2p5h5L3rfyQFoJioAjrRzJXVz8kyab6xJBLXjPHTS145"
     }
   },
   "collateral": {
     "description": "Represents the collateral obligations of a party.",
     "type": {
-      "blueId": "CMbZdR1wHnpwviTkU9fmf4tki9sWinxrSZWks1aEdhJu"
+      "blueId": "3gL7B3WGx4ys7L5QL1L3MjL36uE11pvNwEUfHnReh171"
     }
   },
   "dateAdjustments": {
     "description": "The business day adjustment convention when it applies across all the payout components. This specification of the business day convention and financial business centers is used for adjusting any calculation period date if it would otherwise fall on a day that is not a business day in the specified business center.\n",
     "type": {
-      "blueId": "AKAczd79wtoD2Vt7VjdFdnWeacw86mQTVeLcyS9SWFZz"
+      "blueId": "HZJDnv878jZDzx4XhQtskoT3SAT9j2YgYkiuAfxKPXsS"
     }
   },
   "effectiveDate": {
     "description": "The first day of the terms of the trade. This day may be subject to adjustment in accordance with a business day convention.\n",
     "type": {
-      "blueId": "GW4fUG5i4g68v2eQEznuefGCSUPiwaHXpoVmU4ASwx29"
+      "blueId": "9bWLoL1zcJYR9saaAKGg2PbRC5k5kMqn4CktUzBBfgeY"
     }
   },
   "nonStandardisedTerms": {
@@ -34,10 +34,10 @@
   "payout": {
     "description": "The payout specifies the future cashflow computation methodology which characterizes a financial product.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "this#8"
+      "blueId": "5dWnsFbYwSdUQ3PVJWpq2NxYRknhmaGNc7BQQi14kcE9#9"
     },
     "schema": {
       "minItems": 1
@@ -46,13 +46,13 @@
   "terminationDate": {
     "description": "The last day of the terms of the trade. This date may be subject to adjustments in accordance with the business day convention. It can also be specified in relation to another scheduled date (e.g. the last payment date).\n",
     "type": {
-      "blueId": "GW4fUG5i4g68v2eQEznuefGCSUPiwaHXpoVmU4ASwx29"
+      "blueId": "9bWLoL1zcJYR9saaAKGg2PbRC5k5kMqn4CktUzBBfgeY"
     }
   },
   "terminationProvision": {
     "description": "Contains optional provisions pertaining to the termination characteristics of a contract.",
     "type": {
-      "blueId": "3doqr3EiMTivS3UTJcEVyjxNAVfAULrMtrVVvpoMSQW6"
+      "blueId": "CJZbaNVuDaDxP57QuBnu8HaBsfWNoeLCbC6QEVmzd5vW"
     }
   }
 }

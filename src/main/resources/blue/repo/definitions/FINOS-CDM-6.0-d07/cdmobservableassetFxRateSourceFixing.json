@@ -4,7 +4,7 @@
   "fixingDate": {
     "description": "The date on which the fixing is scheduled to occur.",
     "type": {
-      "blueId": "J1kGTdAb67L1bPgvuKZ86jTR9UZJomnkgA6hcnVfnwfD"
+      "blueId": "397tsASyRDDk2UNpFxXBdpXar7RwXd5MEejzPtRzcxB2"
     },
     "schema": {
       "required": true
@@ -12,7 +12,7 @@
   },
   "settlementRateSource": {
     "type": {
-      "blueId": "AFE5zRAhERAL2eMayj5EaEugVUL8M72A5RqLeabreFGf"
+      "blueId": "6q6Y3edb9x3pThsktoHzeBD1jG52qxxVaxQhyj94WCT1"
     },
     "schema": {
       "required": true

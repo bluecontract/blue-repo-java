@@ -2,12 +2,12 @@
   "name": "cdm/observable/asset/Curve",
   "commodityCurve": {
     "type": {
-      "blueId": "GBnSE6e4cosEwU1Ko3TBcC2DdUkKYg8v6tVXq7awBE9B"
+      "blueId": "BAE5Tsh4BpHxxJepwtpuiXr2btSewbsL6AvCGLyrA9QY"
     }
   },
   "interestRateCurve": {
     "type": {
-      "blueId": "9c83wu9yiUU79cbjGDDz3BxTgzdRV87nww14WN4bz5Rr"
+      "blueId": "CxvP8k6afudLax2RtG9BYVVKQHi5h9u7sPpqbQH8qu4K"
     }
   }
 }

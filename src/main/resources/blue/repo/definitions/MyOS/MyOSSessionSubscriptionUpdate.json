@@ -25,7 +25,7 @@
   "events": {
     "description": "Matching emitted events for the delivered source epoch; may be empty.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "schema": {
       "required": true

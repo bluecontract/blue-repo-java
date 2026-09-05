@@ -10,13 +10,13 @@
   "FloatingRateSpecification": {
     "description": "The floating interest rate specification, which includes the definition of the floating rate index. the tenor, the initial value, and, when applicable, the spread, the rounding convention, the averaging method and the negative interest rate treatment.\n",
     "type": {
-      "blueId": "ANmCF3xmaUGNncVaDabTkkZxZmT5nvtE48NwyhYMN9Ev"
+      "blueId": "xhrgNQAyrThxvJitqdcJJZS4QiykETckXBKSXjHnvHG"
     }
   },
   "InflationRateSpecification": {
     "description": "An inflation rate calculation definition.",
     "type": {
-      "blueId": "HgvUazWUT3cYBnJe67N6uNczREHE3zyrajGM4ouhEa1L"
+      "blueId": "BLVvgCNBQXUivTXgSNhsPvTkNrihbnNFteYn2u1gPKUo"
     }
   }
 }

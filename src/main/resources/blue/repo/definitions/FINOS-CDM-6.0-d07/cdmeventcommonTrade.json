@@ -4,10 +4,10 @@
   "account": {
     "description": "Represents a party's granular account information, which may be used in subsequent internal processing.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "Ci7ty5zffGzjgsQdhnezMazESuasmjVRABXcDJanwgLf"
+      "blueId": "9hqCtmV9eSLVgLeVxbZjUznnnr5Y6TCMqprBSYfosYe4"
     },
     "schema": {
       "minItems": 0
@@ -22,10 +22,10 @@
   "ancillaryParty": {
     "description": "Specifies the parties with ancillary roles in the transaction. The product is agnostic to the actual parties involved in the transaction, with the party references abstracted away from the product definition and replaced by the AncillaryRoleEnum. The AncillaryRoleEnum can then be positioned in the product and this AncillaryParty type, which is positioned outside of the product definition, allows the AncillaryRoleEnum to be associated with an actual party reference.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "4iPHY4aygMFyDNb5teEsJeb7EyeK3CitfuP7DqfgnT1w"
+      "blueId": "DxW6v9Eqes2GNByfJjPwiexQ3383NQkjaGcH3EsU9YPW"
     },
     "schema": {
       "minItems": 0
@@ -40,19 +40,19 @@
   "collateral": {
     "description": "Represents the collateral obligations of a party.",
     "type": {
-      "blueId": "CMbZdR1wHnpwviTkU9fmf4tki9sWinxrSZWks1aEdhJu"
+      "blueId": "3gL7B3WGx4ys7L5QL1L3MjL36uE11pvNwEUfHnReh171"
     }
   },
   "contractDetails": {
     "description": "Represents information specific to trades involving contractual products.",
     "type": {
-      "blueId": "BXgG7tSKyVPTPd3ka1B5M5ZoyxvrmzK9sqFZJ5MXrvUk"
+      "blueId": "3s9khEs7kBGcupWsH7xrTambL5HfjxFCA2jZuPqehB1R"
     }
   },
   "counterparty": {
     "description": "Specifies the parties which are the two counterparties to the transaction.  The product is agnostic to the actual parties to the transaction, with the party references abstracted away from the product definition and replaced by the counterparty enum (e.g. CounterpartyEnum values Party1 or Party2). The counterparty enum can then be positioned in the product (e.g. to specify which counterparty is the payer, receiver etc) and this counterparties attribute, which is positioned outside of the product definition, allows the counterparty enum to be associated with an actual party reference.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "57Lwnif22McYRjgDzSyRZTsqY1Ac9LMSJcJ9KRXKiE6w"
@@ -65,16 +65,16 @@
   "executionDetails": {
     "description": "Represents information specific to trades that arose from executions.",
     "type": {
-      "blueId": "GXAR1SUGjpvZsUZvh3feCdkEXnfGS76pgRRAwtrV4BAA"
+      "blueId": "23JEXi7gmUesHrWzpMDrhSKZ62Nsj2Y5XfX6abPnzuty"
     }
   },
   "party": {
     "description": "Represents the parties to the trade. The cardinality is optional to address the case where the trade is defined within a BusinessEvent data type, in which case the party is specified in BusinessEvent.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
+      "blueId": "552tQMPt3GF4sBRCYRmWLgaHG183EE1aMKbEinn1oGvJ"
     },
     "schema": {
       "minItems": 0
@@ -83,7 +83,7 @@
   "partyRole": {
     "description": "Represents the role each specified party takes in the trade. further to the principal roles, payer and receiver.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "6DrJREpu1Ms3M4U1q7jqGjM46V1o8vxq4K1i3X4dwMvz"
@@ -95,13 +95,13 @@
   "product": {
     "description": "The underlying product to be included in a contract or execution.",
     "type": {
-      "blueId": "52zbUBnH8375AE19gNSXRU7GgGs5tcoUhR84LVdMrBWi#5"
+      "blueId": "5dWnsFbYwSdUQ3PVJWpq2NxYRknhmaGNc7BQQi14kcE9#1"
     }
   },
   "tradeDate": {
     "description": "Specifies the date which the trade was agreed.",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     },
     "schema": {
       "required": true
@@ -110,10 +110,10 @@
   "tradeIdentifier": {
     "description": "Represents the identifier(s) that uniquely identify a trade for an identity issuer. A trade can include multiple identifiers, for example a trade that is reportable to both the CFTC and ESMA, and then has an associated USI (Unique Swap Identifier) UTI (Unique Trade Identifier).\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "FGujWvfXdExA7nDNwp6iHf3hWYRL3g9JS9EZfYhS7N2y"
+      "blueId": "Qw49apmrbX1XioCMqzw7NWw4osDXDVHUeXZjSCR9MV7"
     },
     "schema": {
       "minItems": 1
@@ -122,10 +122,10 @@
   "tradeLot": {
     "description": "Specifies the price, quantity and effective date of each trade lot, when the same product may be traded multiple times in different lots with the same counterparty. In a trade increase, a new trade lot is added to the list, with the corresponding effective date. In a trade decrease, the existing trade lot(s) are decreased of the corresponding quantity (and an unwind fee may have to be settled). The multiple cardinality and the ability to increase existing trades is used for Equity Swaps in particular.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "HwkEbgYkrYCDgT4YrxJHmaJVigftQBmkyttz9NLVtre6"
+      "blueId": "CPMsVrqtD1zbqHV172bqdwxK1y882FHv4zW79qK6LXVN"
     },
     "schema": {
       "minItems": 1
@@ -134,7 +134,7 @@
   "tradeTime": {
     "description": "Denotes the trade time and timezone as agreed by the parties to the trade.",
     "type": {
-      "blueId": "6XsZzNy8iHgmk7eDnmTPs7QFCthawsNg96517G4uThjP"
+      "blueId": "J1NXfxwaKkqKjt2e83ioDkDDNC1sax5QU317rFFNgUcL"
     }
   }
 }

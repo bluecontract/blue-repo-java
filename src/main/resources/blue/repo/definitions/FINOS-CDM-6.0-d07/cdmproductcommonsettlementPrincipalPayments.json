@@ -31,13 +31,13 @@
   "principalPaymentSchedule": {
     "description": "Describe dates schedules for Principal Exchanges and related role of the parties when known.",
     "type": {
-      "blueId": "FTa2hjVcBewhuq9sdHydggSm1Sx6qSDWQcnLebVc6txc"
+      "blueId": "3yoRRRcE9ugcSNqWe1MHNu8Y9McAmX8mug3jAHDWzdtM"
     }
   },
   "varyingLegNotionalCurrency": {
     "description": "Indicate the Payout legs which nominal amount may vary in regards of FX Fixing dates as determined in the product terms.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"

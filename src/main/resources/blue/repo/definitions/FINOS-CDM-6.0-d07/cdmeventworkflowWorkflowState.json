@@ -10,10 +10,10 @@
   "partyCustomisedWorkflow": {
     "description": "Workflow data that is specific to certain market participants and is expressed as part of the CDM in a very generic manner, which can be party-specific. The initial use cases have been derived from the CME clearing and the DTCC TIW submissions.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "CwZCsRkBByBtLTC63kaBcjcNDQKK1hV2Mnh42XUhafmm"
+      "blueId": "AaRNemQemLsZDhkAmbPKWqPC3Y1mfU3dj7KPDqU6c8Si"
     },
     "schema": {
       "minItems": 0

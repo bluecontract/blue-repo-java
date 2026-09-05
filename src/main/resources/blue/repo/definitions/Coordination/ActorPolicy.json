@@ -7,96 +7,13 @@
   "operations": {
     "description": "Per-operation constraints keyed by operation name. Each operation value may specify actor/source requirements.\nMissing fields mean this policy marker does not constrain that dimension for the operation.\n",
     "type": {
-      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+      "blueId": "5WQ4tVb4gUUdZa7EfaiUa2XKQwgAurvfYY3ALPauxcAF"
     },
     "keyType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     },
     "valueType": {
-      "requiresActor": {
-        "description": "Required actor category for the operation. `principal` means the actor must be a Principal Actor or compatible\nsubtype. `agent` means the actor must be an Agent Actor or compatible subtype. `any` means the operation does\nnot restrict the actor category at this policy level, though the operation runtime may still apply stricter\nrules.\n",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        },
-        "schema": {
-          "enum": [
-            {
-              "type": {
-                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-              },
-              "value": "principal"
-            },
-            {
-              "type": {
-                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-              },
-              "value": "agent"
-            },
-            {
-              "type": {
-                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-              },
-              "value": "any"
-            }
-          ]
-        }
-      },
-      "requiresSource": {
-        "description": "Required source category for the operation. `browserSession` requires an interactive UI/source session,\n`apiCall` requires a programmatic API source, and `documentRequest` requires a request originating from another\nBlue document or document session. Omit this field when the policy does not require a particular source.\n",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        },
-        "schema": {
-          "enum": [
-            {
-              "type": {
-                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-              },
-              "value": "browserSession"
-            },
-            {
-              "type": {
-                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-              },
-              "value": "apiCall"
-            },
-            {
-              "type": {
-                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-              },
-              "value": "documentRequest"
-            }
-          ]
-        }
-      },
-      "excludeSource": {
-        "description": "Disallowed source category for the operation. This can prohibit a category even when the actor is otherwise\nacceptable. For example, an operation may allow any actor but exclude `apiCall` to require a non-API source.\n",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        },
-        "schema": {
-          "enum": [
-            {
-              "type": {
-                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-              },
-              "value": "browserSession"
-            },
-            {
-              "type": {
-                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-              },
-              "value": "apiCall"
-            },
-            {
-              "type": {
-                "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-              },
-              "value": "documentRequest"
-            }
-          ]
-        }
-      }
+      "blueId": "HBHKKgWkhUgfR8MLyhr7biRwE7sgdWdCegYuNi4jzuSh"
     }
   }
 }

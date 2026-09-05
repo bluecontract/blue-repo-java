@@ -39,7 +39,7 @@
   "spreadSchedule": {
     "description": "The ISDA Spread or a Spread schedule expressed as explicit spreads and dates. In the case of a schedule, the step dates may be subject to adjustment in accordance with any adjustments specified in calculationPeriodDatesAdjustments. The spread is a per annum rate, expressed as a decimal. For purposes of determining a calculation period amount, if positive the spread will be added to the floating rate and if negative the spread will be subtracted from the floating rate. A positive 10 basis point (0.1%) spread would be represented as 0.001.\n",
     "type": {
-      "blueId": "JBHbnTb3KK4imqfxRHkV1Hdv7p6d8fMSvkBKH5J4cQpv"
+      "blueId": "C3bVdtiaZxFCnE2nW87KFYsAGL6vZ2kLCAK11s2zdpb1"
     }
   }
 }

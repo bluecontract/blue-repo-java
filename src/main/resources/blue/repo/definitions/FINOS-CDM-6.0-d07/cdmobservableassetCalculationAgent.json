@@ -4,7 +4,7 @@
   "calculationAgentBusinessCenter": {
     "description": "The city in which the office through which ISDA Calculation Agent is acting for purposes of the transaction is located The short-form confirm for a trade that is executed under a Sovereign or Asia Pacific Master Confirmation Agreement ( MCA ), does not need to specify the Calculation Agent. However, the confirm does need to specify the Calculation Agent City. This is due to the fact that the MCA sets the value for Calculation Agent but does not set the value for Calculation Agent City.\n",
     "type": {
-      "blueId": "5kncd2YXvmwkRzZPfFr5Ji5fZfkk9WoNmLNAkjcvS9cD"
+      "blueId": "HbVQYbimseNYevNCf9xvr7fQQu92mHCfS5yuPQrQRPWt"
     }
   },
   "calculationAgentParty": {

@@ -4,7 +4,7 @@
   "eligibilityQuery": {
     "description": "a copy of the input query that was checked against the eligible collateral specification",
     "type": {
-      "blueId": "9RU1DVTrXXNj5z35ccGRApiUJ1pdKay2RnssWqbsa5qP"
+      "blueId": "a6uh8pHCE5APcyiqbXax9sjcQFvMvKqEviv9TtVBEfF"
     },
     "schema": {
       "required": true
@@ -22,10 +22,10 @@
   "matchingEligibleCriteria": {
     "description": "if there was a match, this will be the one or more criteria that were supplied in the EligbilityCollateralSpecification which matched with the query input\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "Dd4QK5kmBzsGcmhcqxkLLPiH2fBmE3acTHCBGWUW5Buq"
+      "blueId": "5ppzC68mJTGHyXB31ofhtnmLaiL6HYMQsbM3VU7tZXDk"
     },
     "schema": {
       "minItems": 0
@@ -34,7 +34,7 @@
   "specification": {
     "description": "a copy of the input EligbilityCollateralSpecification that was checked against the query",
     "type": {
-      "blueId": "9fzErabMt8BTfWNrPwtuqQc2qNEWrLTRkNcRRhaQKdfL"
+      "blueId": "9JSRqa91SCRBESPEKm5sVTB2RXHfBpTgVruqt7j6ndXr"
     },
     "schema": {
       "required": true

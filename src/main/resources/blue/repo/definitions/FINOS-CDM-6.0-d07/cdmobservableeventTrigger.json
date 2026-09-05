@@ -3,7 +3,7 @@
   "description": "Trigger point at which feature is effective.",
   "creditEvents": {
     "type": {
-      "blueId": "BDbfoDhUgVvDXugqQogNj86MztLv2FPdJAEfSdztLvXw"
+      "blueId": "6y18kuPDiKmX4JRtSzZkLvHZxoaorg8h1XW23sjAYU94"
     }
   },
   "creditEventsReference": {
@@ -14,10 +14,10 @@
   "level": {
     "description": "The trigger level.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "6TobEa5CPYK6vNs347sZcHg2ridoBfgzVkpUNrZrYmCt"
+      "blueId": "4gfVkSgpCYuNdrXp1YsrG4x4GTfghiosCzmp6qGgaBE4"
     },
     "schema": {
       "minItems": 0,

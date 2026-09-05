@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("39Lcut1tfx7H123gK9RhKe6u8q4N86cmBQMRivmHTo5y")
+@TypeBlueId("4mG6dzLy2CtnoqNdsKmNdkjWtkxruNqubH4WNe7EhSmm")
 public class CdmProductCollateralConcentrationLimitCriteria {
     public static String blueId() {
-        return "39Lcut1tfx7H123gK9RhKe6u8q4N86cmBQMRivmHTo5y";
+        return "4mG6dzLy2CtnoqNdsKmNdkjWtkxruNqubH4WNe7EhSmm";
     }
 
     public static String packageName() {

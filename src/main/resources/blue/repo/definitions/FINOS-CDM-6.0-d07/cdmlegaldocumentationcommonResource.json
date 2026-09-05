@@ -10,7 +10,7 @@
   "language": {
     "description": "Indicates the language of the resource, described using the ISO 639-2/T Code.",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     }
   },
   "length": {
@@ -22,13 +22,13 @@
   "mimeType": {
     "description": "Indicates the type of media used to store the content. mimeType is used to determine the software product(s) that can read the content. MIME Types are described in RFC 2046.\n",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     }
   },
   "resourceId": {
     "description": "The unique identifier of the resource within the event. FpML specifies this element of type resourceIdScheme but with no specified value.\n",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     },
     "schema": {
       "required": true
@@ -37,7 +37,7 @@
   "resourceType": {
     "description": "A description of the type of the resource, e.g. a confirmation.",
     "type": {
-      "blueId": "2csbatPyULPRBcWxMJBAqZeKStFUW9jtSY6H3Dew3EGE"
+      "blueId": "563YSwGNEcaUCPoPiT3d87vu4n87zvsCmFobbH1HbBar"
     }
   },
   "sizeInBytes": {

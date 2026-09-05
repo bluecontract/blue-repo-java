@@ -4,10 +4,10 @@
   "transferState": {
     "description": "Specifies the terms and state of a transfers.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "5DE1nk33eUe1qZRRMM5fGCsyGFrVj8JswsEvwtwzL2K9"
+      "blueId": "EmWHXmUDB1BGwvvrzJUmPpikmwAQWouiNksqysnqRwqM"
     },
     "schema": {
       "minItems": 0

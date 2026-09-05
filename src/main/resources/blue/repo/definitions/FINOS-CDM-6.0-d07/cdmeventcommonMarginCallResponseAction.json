@@ -4,10 +4,10 @@
   "collateralPositionComponent": {
     "description": "Specifies the collateral to be moved and its direction.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "GtabA8b7typ1gjwtAYshA1eaECFCwLWHkBauTVQ8PMpV"
+      "blueId": "7jmTEWuX3W8r7wX1ECZMCyDRGmjgn38kpePu8yisedk7"
     },
     "schema": {
       "minItems": 1

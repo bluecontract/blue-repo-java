@@ -32,7 +32,7 @@
     "mandateTerminationChannel": {
       "description": "Composite channel through which either the guarantor or authority holder\nmay invoke terminateMandate. When one entry is eligible through both\nmembers, the composite produces one logical delivery.\n",
       "type": {
-        "blueId": "3Q53ttkVniDP3jYGstwhmX7Yu12qMqNaG1bfCYzcmg2Q"
+        "blueId": "6G3SnGh7y6o8xAkphxzQAqA9btdQ2NzvKmeZzPz3JJNo"
       },
       "channels": {
         "items": [
@@ -72,7 +72,7 @@
     "mandateLifecycleDefinition": {
       "description": "Canonical reusable BEX implementation of mandate lifecycle transitions.\nIt contains deterministic functions used by initializeMandate,\nconfirmMandateAuthority, applyMandateActivation, and\napplyMandateTermination. Subtypes do not replace these functions.\n",
       "type": {
-        "blueId": "H4tutBkZAgxJsEDyjDohkZk7dcGxXQqwHMEzVkyh3U9n"
+        "blueId": "3ihLKENZHtZsbkA2Aa1pLxBHxibJ5jTFEhYLGFuEtpjr"
       },
       "constants": {
         "statusPendingType": {
@@ -524,7 +524,8 @@
                             "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                           },
                           "value": "hasDeclaredValidationEntry"
-                        }
+                        },
+                        "args": {}
                       }
                     },
                     "initializationError": {
@@ -736,7 +737,8 @@
                             "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                           },
                           "value": "processingEventTimestamp"
-                        }
+                        },
+                        "args": {}
                       }
                     },
                     "requestMessage": {
@@ -746,7 +748,8 @@
                             "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                           },
                           "value": "sourceMessage"
-                        }
+                        },
+                        "args": {}
                       }
                     },
                     "confirmationMessage": {
@@ -792,7 +795,8 @@
                                 "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                               },
                               "value": "isStatusPending"
-                            }
+                            },
+                            "args": {}
                           }
                         },
                         {
@@ -973,7 +977,8 @@
                             "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                           },
                           "value": "processingEventTimestamp"
-                        }
+                        },
+                        "args": {}
                       }
                     }
                   }
@@ -991,7 +996,8 @@
                                 "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                               },
                               "value": "isStatusAuthorityConfirmed"
-                            }
+                            },
+                            "args": {}
                           }
                         },
                         {
@@ -1124,7 +1130,8 @@
                             "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                           },
                           "value": "sourceMessage"
-                        }
+                        },
+                        "args": {}
                       }
                     },
                     "terminationRequest": {
@@ -1148,7 +1155,8 @@
                                   "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                                 },
                                 "value": "isStatusPending"
-                              }
+                              },
+                              "args": {}
                             }
                           },
                           {
@@ -1158,7 +1166,8 @@
                                   "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                                 },
                                 "value": "isStatusAuthorityConfirmed"
-                              }
+                              },
+                              "args": {}
                             }
                           },
                           {
@@ -1168,7 +1177,8 @@
                                   "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                                 },
                                 "value": "isStatusActive"
-                              }
+                              },
+                              "args": {}
                             }
                           },
                           {
@@ -1178,7 +1188,8 @@
                                   "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                                 },
                                 "value": "isStatusFailed"
-                              }
+                              },
+                              "args": {}
                             }
                           }
                         ]
@@ -1297,7 +1308,8 @@
                             "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                           },
                           "value": "sourceMessage"
-                        }
+                        },
+                        "args": {}
                       }
                     },
                     "terminationReason": {
@@ -1318,7 +1330,8 @@
                             "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                           },
                           "value": "processingEventTimestamp"
-                        }
+                        },
+                        "args": {}
                       }
                     },
                     "terminable": {
@@ -1331,7 +1344,8 @@
                                   "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                                 },
                                 "value": "isStatusPending"
-                              }
+                              },
+                              "args": {}
                             }
                           },
                           {
@@ -1341,7 +1355,8 @@
                                   "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                                 },
                                 "value": "isStatusAuthorityConfirmed"
-                              }
+                              },
+                              "args": {}
                             }
                           },
                           {
@@ -1351,7 +1366,8 @@
                                   "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                                 },
                                 "value": "isStatusActive"
-                              }
+                              },
+                              "args": {}
                             }
                           }
                         ]
@@ -1483,7 +1499,7 @@
     "initializeMandate": {
       "description": "Inherited initialization implementation.\n\nNormal Blue type resolution and bootstrap validate required role-channel\nbindings and lifecycle configuration. When validation.function.entry is\npresent, this workflow verifies that validation.function.functions\ndeclares the selected local function.\n\nOn success it materializes activateOnAuthorityConfirmation as true when\nabsent and sets status to Coordination/Status Pending.\n\nOn failure it sets status to Coordination/Status Failed, stores the\nfirst deterministic failure in initializationError.\n\nInitialization does not write, clear, or normalize lifecycle timestamps.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype.\n",
       "type": {
-        "blueId": "HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX"
+        "blueId": "4twSW1MCdf7UMzfwcu99gcBDZiiND1tSC2YZoFMVNHPf"
       },
       "channel": {
         "type": {
@@ -1501,7 +1517,7 @@
           {
             "name": "Initialize Mandate Lifecycle",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "definition": {
               "type": {
@@ -1522,7 +1538,7 @@
     "confirmMandateAuthority": {
       "description": "Inherited operation through which the guarantor confirms that the\ndeclared authority relationship is legitimate.\n\nOn Coordination/Status Pending it changes status to\nMandate/Status Authority Confirmed, records authorityConfirmedAt\nfrom the root causal Timeline Entry, emits Mandate/Mandate Authority\nConfirmed, and, when activateOnAuthorityConfirmation is not false, emits\nMandate/Mandate Activated for the inherited activation workflow.\n\nOn Mandate/Status Authority Confirmed, Mandate/Status Active,\nMandate/Status Terminated, or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace authorityConfirmedAt.\n\nA guarantor may choose to use Operation Request.document and\nrequireExactDocumentVersion to pin the reviewed mandate state. This base\noperation does not require or enforce that choice.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype.\n",
       "type": {
-        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+        "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
       },
       "channel": {
         "type": {
@@ -1535,7 +1551,7 @@
           {
             "name": "Confirm Mandate Authority",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "definition": {
               "type": {
@@ -1556,7 +1572,7 @@
     "applyMandateActivation": {
       "description": "Sole authoritative mandate-activation implementation.\n\nIt accepts Mandate/Mandate Activated emitted by an operation. On\nMandate/Status Authority Confirmed it changes status to Mandate/Status\nActive and records activatedAt from the root causal Timeline Entry. The\nMessage itself does not supply the timestamp and is not emitted again.\n\nOn Coordination/Status Pending, Mandate/Status Active,\nMandate/Status Terminated, or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace activatedAt.\n\nA Message without a root causal Timeline Entry cannot establish an\nactivation timestamp and must not activate the mandate.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype.\n",
       "type": {
-        "blueId": "HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX"
+        "blueId": "4twSW1MCdf7UMzfwcu99gcBDZiiND1tSC2YZoFMVNHPf"
       },
       "channel": {
         "type": {
@@ -1574,7 +1590,7 @@
           {
             "name": "Apply Mandate Activation",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "definition": {
               "type": {
@@ -1595,7 +1611,7 @@
     "terminateMandate": {
       "description": "Standard termination operation available to the guarantor and authority\nholder.\n\nUnless the mandate is already Mandate/Status Terminated, it emits\nMandate/Mandate Terminated with the required request reason and\ncorrelation to the invoking Message. This includes a failed mandate,\nallowing the guarantor or authority holder to stop its processing. The\noperation does not write lifecycle state directly;\napplyMandateTermination remains the sole authoritative termination\nimplementation.\n\nOn Mandate/Status Terminated it emits no lifecycle Message. Specialized\nmandate types may add other operations that emit Mandate/Mandate\nTerminated.\n\nConcrete workflow steps are defined in this base type.\n",
       "type": {
-        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+        "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
       },
       "channel": {
         "type": {
@@ -1619,7 +1635,7 @@
           {
             "name": "Emit Mandate Terminated",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "definition": {
               "type": {
@@ -1640,7 +1656,7 @@
     "applyMandateTermination": {
       "description": "Sole authoritative mandate-termination implementation.\n\nIt accepts Mandate/Mandate Terminated emitted by an operation. On\nCoordination/Status Pending, Mandate/Status Authority Confirmed, or\nMandate/Status Active it changes status to Mandate/Status Terminated and\nrecords terminatedAt from the root causal Timeline Entry. The Message\nitself carries the required reason and correlation, does not supply the\ntimestamp, and is not emitted again. Its reason is propagated unchanged\nto the graceful processor termination request.\n\nThe Compute result requests graceful termination after its state changes\nand emitted events have been buffered. Coordination validates the complete\nresult before applying effects, then applies changes, emits events, and\nrequests graceful termination in that order.\n\nOn Mandate/Status Terminated or Coordination/Status Failed it performs no\nlifecycle mutation and does not replace terminatedAt. Receipt of the\ntermination Message still requests graceful processing termination, so a\nfailed mandate can be stopped without replacing its failure state.\n\nConcrete workflow steps and BEX implementation are defined in this base\ntype. No dedicated termination workflow-step type is required.\n",
       "type": {
-        "blueId": "HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX"
+        "blueId": "4twSW1MCdf7UMzfwcu99gcBDZiiND1tSC2YZoFMVNHPf"
       },
       "channel": {
         "type": {
@@ -1658,7 +1674,7 @@
           {
             "name": "Apply Mandate Termination",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "definition": {
               "type": {

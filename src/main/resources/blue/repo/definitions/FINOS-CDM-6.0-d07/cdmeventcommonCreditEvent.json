@@ -28,16 +28,16 @@
   "finalPrice": {
     "description": "The final price resulting from the auction.",
     "type": {
-      "blueId": "D6pT9tDvB6nnaNaPVHodxcm2djqTNykgt6VJoD2uDq4M"
+      "blueId": "Eq9qZQHxqGHrhdWMG4ATnQxDGtQB2E3EkW56WnwBvYkg"
     }
   },
   "publiclyAvailableInformation": {
     "description": "A public information source, e.g. a particular newspaper or electronic news service, that may publish relevant information used in the determination of whether or not a credit event has occurred.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "HmhKdAbT2MRZUsE7sCtNxWo8eestifsJAK5KCzFN5bn2"
+      "blueId": "98Ffju3RikM7nUQRstepD9W6cX1hWiWsRTgN4mmRLd8c"
     },
     "schema": {
       "minItems": 0
@@ -52,7 +52,7 @@
   "referenceInformation": {
     "description": "The reference entity, part of a credit basket, impacted by the credit event.",
     "type": {
-      "blueId": "Aogoj2sCUGRvYLZhVJNntPd3rKjX5XU82C9NYKGNG6EH"
+      "blueId": "3sGWifvaVnWsXgx9BJqFxDLWF429BAUKuSDz5q5jagHF"
     },
     "schema": {
       "required": true

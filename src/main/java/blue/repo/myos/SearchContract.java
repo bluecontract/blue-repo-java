@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import java.util.List;
 import java.util.Map;
 
-@TypeBlueId("DcMLEejNRRoP2vSHW66fdCnCRgnpt2y1f35rFfYk5koj")
+@TypeBlueId("2gpbpX2mC3rTsuVA9afWtSNPd8FPdoDZEG8mmZrzDDCm")
 public class SearchContract extends blue.language.processor.model.MarkerContract {
     public static String blueId() {
-        return "DcMLEejNRRoP2vSHW66fdCnCRgnpt2y1f35rFfYk5koj";
+        return "2gpbpX2mC3rTsuVA9afWtSNPd8FPdoDZEG8mmZrzDDCm";
     }
 
     public static String packageName() {

@@ -4,10 +4,10 @@
   "legalAgreement": {
     "description": "Optional legal agreements associated to the contract being formed, for instance a master agreement.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "A6CipKeMXZr9PY1uT1iihJg8sjvn1z3pHUPLe9c2aP7a#0"
+      "blueId": "6CbvNDFuyte8aeziYSEhGNZ67FtoQfBVBjdYC8yiLVG6#0"
     },
     "schema": {
       "minItems": 0

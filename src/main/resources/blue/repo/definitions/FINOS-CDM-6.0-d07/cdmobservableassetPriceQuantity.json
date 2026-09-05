@@ -4,22 +4,22 @@
   "effectiveDate": {
     "description": "Specifies the date at which the price and quantity become effective. This day may be subject to adjustment in accordance with a business day convention, or could be specified as relative to a trade date, for instance. Optional cardinality, as the effective date is usually specified in the product definition, so it may only need to be specified as part of the PriceQuantity in an increase/decrease scenario for an existing trade.\n",
     "type": {
-      "blueId": "GW4fUG5i4g68v2eQEznuefGCSUPiwaHXpoVmU4ASwx29"
+      "blueId": "9bWLoL1zcJYR9saaAKGg2PbRC5k5kMqn4CktUzBBfgeY"
     }
   },
   "observable": {
     "description": "Specifies the object to be observed for a price, it could be an asset or an index. The cardinality is optional as some quantity / price cases have no observable (e.g. a fixed rate in a given currency).\n",
     "type": {
-      "blueId": "F7sFzXWUzuCitCY1sux6JewiNm7FurU1UY6DDXgYdozC"
+      "blueId": "B8RR6iGhgTkfuVeB3AZ7QYdJPYNVcjiCQM2WCjZg6VNA"
     }
   },
   "price": {
     "description": "Specifies a price to be used for trade amounts and other purposes.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "D56TQGXSu2P9sUf1weZUW49yhP5PW6GhYpB3gZeABsUn"
+      "blueId": "5mHWTg8BUjckPLnY8D7mJC6mKKkWoF2yTnzgbVckPK3Q"
     },
     "schema": {
       "minItems": 0
@@ -28,10 +28,10 @@
   "quantity": {
     "description": "Specifies a quantity to be associated with an event, for example a trade amount.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "FCaGFiACv9gh7BbLiPZYLCDttHSuo2J6u9uyRkQbxeSw"
+      "blueId": "iuAqkuPj22m3P2JHqLw9ucyaGm6nsZyyzcvBQg12mrB"
     },
     "schema": {
       "minItems": 0

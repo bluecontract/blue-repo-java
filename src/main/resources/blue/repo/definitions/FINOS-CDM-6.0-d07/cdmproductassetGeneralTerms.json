@@ -4,10 +4,10 @@
   "additionalTerm": {
     "description": "This attribute is used for representing information contained in the Additional Terms field of the 2003 Master Credit Derivatives confirm.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     },
     "schema": {
       "minItems": 0
@@ -16,13 +16,13 @@
   "basketReferenceInformation": {
     "description": "This attribute contains all the terms relevant to defining the Credit Default Swap Basket.",
     "type": {
-      "blueId": "FwJbaG1Nf59WekW7F1zPr4niKBtDp8hYgwiM6JE7zaDr"
+      "blueId": "A6Vj2kJdJH1ZFhMGRYfNGdNV16kkagpx1iitC2r9BeY1"
     }
   },
   "indexReferenceInformation": {
     "description": "This attribute contains all the terms relevant to the underlying Index.",
     "type": {
-      "blueId": "B9M4cKALDcyfwfopEL2hETJTezx4P3PypYFiJT7oP8PX"
+      "blueId": "6ydaRacSzYMSL7cUE57Kp6GxJdVNHcMkkjqcgnfBwXtz"
     }
   },
   "modifiedEquityDelivery": {
@@ -34,7 +34,7 @@
   "referenceInformation": {
     "description": "This attribute contains all the terms relevant to defining the reference entity and reference obligation(s).",
     "type": {
-      "blueId": "Aogoj2sCUGRvYLZhVJNntPd3rKjX5XU82C9NYKGNG6EH"
+      "blueId": "3sGWifvaVnWsXgx9BJqFxDLWF429BAUKuSDz5q5jagHF"
     }
   },
   "substitution": {

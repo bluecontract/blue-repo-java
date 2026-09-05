@@ -10,7 +10,7 @@
   "cashPrice": {
     "description": "Type of cashflow corresponding to a non-scheduled event, where a price must be agreed between the parties.",
     "type": {
-      "blueId": "CaWpmLo2CzXteNgpMQ2nPagGfg3K7ETP5wMbxbxnhBx3"
+      "blueId": "DnoHokCFXf3K8TweViAG1QvmGdqdaRtkhaRmm5uF9yfQ"
     }
   },
   "priceExpression": {

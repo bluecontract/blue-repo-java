@@ -13,7 +13,7 @@
   "observationTerms": {
     "description": "Class containing terms that are associated with observing a price/benchmark/index across either single or multple observations.\n",
     "type": {
-      "blueId": "5hoFwtCWywpjW2iVxqcevJ5qtXxE46qvSVAb8NxpJke"
+      "blueId": "5zwP7N87ftxfi6oMKdPHu1XkV7CbeqYKgjqvxAAiJmWN"
     },
     "schema": {
       "required": true

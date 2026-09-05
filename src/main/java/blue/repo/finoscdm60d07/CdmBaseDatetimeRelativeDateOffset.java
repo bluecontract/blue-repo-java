@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.math.BigInteger;
 
-@TypeBlueId("9fGwsBbeyL5rQuLRmwyBtyjMjAcmhWfHf4bmyqAXmWtD")
+@TypeBlueId("2wQPopE8rNJu4jigpcsKNP5ifSGS1mCEULs5TFyadHG9")
 public class CdmBaseDatetimeRelativeDateOffset {
     public static String blueId() {
-        return "9fGwsBbeyL5rQuLRmwyBtyjMjAcmhWfHf4bmyqAXmWtD";
+        return "2wQPopE8rNJu4jigpcsKNP5ifSGS1mCEULs5TFyadHG9";
     }
 
     public static String packageName() {

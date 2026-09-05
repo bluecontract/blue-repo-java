@@ -10,13 +10,13 @@
   "endDate": {
     "description": "The end date of the calculation period. FpML specifies that for interest rate swaps this date must only be specified if it is not equal to the termination date. It is always specified in the case of equity swaps with periodic payments. This date may be subject to adjustment in accordance with a business day convention.\n",
     "type": {
-      "blueId": "GW4fUG5i4g68v2eQEznuefGCSUPiwaHXpoVmU4ASwx29"
+      "blueId": "9bWLoL1zcJYR9saaAKGg2PbRC5k5kMqn4CktUzBBfgeY"
     }
   },
   "periodDatesAdjustments": {
     "description": "The specification of the business day convention and financial business centers used for adjusting any calculation period date if it would otherwise fall on a day that is not a business day in the specified business center.\n",
     "type": {
-      "blueId": "AKAczd79wtoD2Vt7VjdFdnWeacw86mQTVeLcyS9SWFZz"
+      "blueId": "HZJDnv878jZDzx4XhQtskoT3SAT9j2YgYkiuAfxKPXsS"
     }
   },
   "periodFrequency": {
@@ -28,7 +28,7 @@
   "startDate": {
     "description": "The start date of the calculation period. FpML specifies that for interest rate swaps this date must only be specified if it is not equal to the effective date. It is always specified in the case of equity swaps and credit default swaps with periodic payments. This date may be subject to adjustment in accordance with a business day convention.\n",
     "type": {
-      "blueId": "GW4fUG5i4g68v2eQEznuefGCSUPiwaHXpoVmU4ASwx29"
+      "blueId": "9bWLoL1zcJYR9saaAKGg2PbRC5k5kMqn4CktUzBBfgeY"
     }
   }
 }

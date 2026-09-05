@@ -9,7 +9,7 @@
   },
   "businessCenters": {
     "type": {
-      "blueId": "Ds5a9bChKossVgHEM7Z2TQTCxDXdB2SZhtM9v9Y3mYmM"
+      "blueId": "72qMy7BtF4Y8QyRSVpb2tUTEiBqBzXuZXCR2CCtNCnNM"
     }
   },
   "businessCentersReference": {
@@ -51,7 +51,7 @@
   "relativeDateAdjustments": {
     "description": "The business day convention and financial business centers used for adjusting the relative date if it would otherwise fall on a day that is not a business date in the specified business centers.\n",
     "type": {
-      "blueId": "AKAczd79wtoD2Vt7VjdFdnWeacw86mQTVeLcyS9SWFZz"
+      "blueId": "HZJDnv878jZDzx4XhQtskoT3SAT9j2YgYkiuAfxKPXsS"
     }
   }
 }

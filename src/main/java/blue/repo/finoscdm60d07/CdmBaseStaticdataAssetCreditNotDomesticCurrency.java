@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("CfJhnmWCGJsuGKjrniD86MnqeEFDzMSQVu1kFMkHEggE")
+@TypeBlueId("DxuzgSMqCZwcHs1n8o3NoUssc6amrJbXvMtG2w6SJHFd")
 public class CdmBaseStaticdataAssetCreditNotDomesticCurrency {
     public static String blueId() {
-        return "CfJhnmWCGJsuGKjrniD86MnqeEFDzMSQVu1kFMkHEggE";
+        return "DxuzgSMqCZwcHs1n8o3NoUssc6amrJbXvMtG2w6SJHFd";
     }
 
     public static String packageName() {

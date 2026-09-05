@@ -6,10 +6,10 @@ import blue.repo.RepositoryType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
-@TypeBlueId("AzDkNPadueibCcw5Phd6BZ2rj8Zv78FyDnc4cAipUtUD#1")
+@TypeBlueId("2cYT8tD8PndDW8whheE2SsN27ZbzHHcHC8fqsZaZXBS6#0")
 public class CdmObservableAssetBasketConstituent {
     public static String blueId() {
-        return "AzDkNPadueibCcw5Phd6BZ2rj8Zv78FyDnc4cAipUtUD#1";
+        return "2cYT8tD8PndDW8whheE2SsN27ZbzHHcHC8fqsZaZXBS6#0";
     }
 
     public static String packageName() {

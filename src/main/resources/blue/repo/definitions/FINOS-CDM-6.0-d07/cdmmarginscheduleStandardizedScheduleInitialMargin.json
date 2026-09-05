@@ -2,7 +2,7 @@
   "name": "cdm/margin/schedule/StandardizedScheduleInitialMargin",
   "netInitialMargin": {
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     },
     "schema": {
       "required": true
@@ -10,10 +10,10 @@
   },
   "tradeInfo": {
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "23Qea3vj3Zh6n2825AYnEs1wHodd3QnXQYwShRghACMN"
+      "blueId": "9CZBZg4sCTfmTtpihqBJLYSVi8BnSQZMXHqJmp185LuT"
     },
     "schema": {
       "minItems": 0

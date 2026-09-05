@@ -4,10 +4,10 @@
   "adjustedDate": {
     "description": "The date(s) once the adjustment has been performed. (Note that this date may change if the business center holidays change).\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     },
     "schema": {
       "minItems": 0
@@ -16,13 +16,13 @@
   "dateAdjustments": {
     "description": "The business day convention and financial business centers used for adjusting the date if it would otherwise fall on a day that is not a business date in the specified business centers.\n",
     "type": {
-      "blueId": "AKAczd79wtoD2Vt7VjdFdnWeacw86mQTVeLcyS9SWFZz"
+      "blueId": "HZJDnv878jZDzx4XhQtskoT3SAT9j2YgYkiuAfxKPXsS"
     }
   },
   "unadjustedDate": {
     "description": "A date subject to adjustment.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"

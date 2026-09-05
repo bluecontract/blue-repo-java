@@ -32,7 +32,7 @@
     },
     "initialize": {
       "type": {
-        "blueId": "HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX"
+        "blueId": "4twSW1MCdf7UMzfwcu99gcBDZiiND1tSC2YZoFMVNHPf"
       },
       "channel": {
         "type": {
@@ -45,7 +45,7 @@
           {
             "name": "Initialize mandate runtime state",
             "type": {
-              "blueId": "8FyswTq5moAS2hexCNqdEVSfPbuwesexqrck7Up5gtxp"
+              "blueId": "eo9QAHKNLzmtfNURnYkB5eEwisF62zQArU8LFTFm8pZ"
             },
             "changeset": {
               "items": [
@@ -61,7 +61,8 @@
                       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
                     },
                     "value": "/chargeAttempts"
-                  }
+                  },
+                  "val": {}
                 }
               ]
             }
@@ -88,7 +89,7 @@
     },
     "authorizeSpendImpl": {
       "type": {
-        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+        "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
       },
       "operation": {
         "type": {
@@ -101,7 +102,7 @@
           {
             "name": "DecideSpendAuthorization",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "functions": {
               "isLanguageKey": {
@@ -1991,7 +1992,7 @@
     },
     "settleSpendImpl": {
       "type": {
-        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+        "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
       },
       "operation": {
         "type": {
@@ -2004,7 +2005,7 @@
           {
             "name": "ValidateAndApplySettlement",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "functions": {
               "isLanguageKey": {
@@ -4188,166 +4189,31 @@
   "allowedPayNotes": {
     "description": "Optional linked PayNote allowlist. Used only when allowLinkedPayNote is true. Missing list means wildcard (any linked PayNote is allowed). Each entry must set exactly one selector: typeBlueId or documentBlueId.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "typeBlueId": {
-        "description": "Optional blue-id of an allowed PayNote type. Mutually exclusive with documentBlueId.\n",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "documentBlueId": {
-        "description": "Optional blue-id of an allowed concrete PayNote document. Mutually exclusive with typeBlueId.\n",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      }
+      "blueId": "EjUvun4Sqy7AYnnbqN8YButmXF91a8FpxnYKgJNHNppQ"
     }
   },
   "allowedPaymentCounterparties": {
     "description": "Optional payment counterparty allowlist. Missing list means wildcard (any counterparty is allowed).\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "counterpartyType": {
-        "description": "Allowed payment counterparty identifier type:\n- merchantId\n- customerId\n- accountNumber\n",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "counterpartyId": {
-        "description": "Counterparty identifier interpreted according to counterpartyType.",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      }
+      "blueId": "8GHjpbTbrASf3HoikTMAYFU6LAbk1qGsiALSmnUFFNA1"
     }
   },
   "chargeAttempts": {
     "description": "Stateful map of authorizationId -> authorization state (authorization + settlement).",
     "type": {
-      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+      "blueId": "5WQ4tVb4gUUdZa7EfaiUa2XKQwgAurvfYY3ALPauxcAF"
     },
     "keyType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
     },
     "valueType": {
-      "amountMinor": {
-        "description": "Requested amount in minor currency units.",
-        "type": {
-          "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
-        }
-      },
-      "currency": {
-        "description": "Requested currency.",
-        "type": {
-          "blueId": "rdiMJ9tNu3geCKLDwXxCCjVQzKvCyaFXHiZTFAkRsCJ"
-        }
-      },
-      "counterpartyType": {
-        "description": "Counterparty identifier type (\"merchantId\" | \"customerId\" | \"accountNumber\").",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "counterpartyId": {
-        "description": "Counterparty identifier interpreted according to counterpartyType.",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "chargeMode": {
-        "description": "Requested charge mode (\"authorize_only\" | \"authorize_and_capture\").",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "authorizationStatus": {
-        "description": "Authorization decision status (\"approved\" | \"rejected\").",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "authorizationReason": {
-        "description": "Optional authorization rejection reason.",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "authorizationRespondedAt": {
-        "description": "Timestamp of authorization decision response.",
-        "type": {
-          "blueId": "47EN5A1B1ZXXdXMEoURVJquMSjdDuKFNDjMrkvVxoVJk"
-        }
-      },
-      "authorizedAmountMinor": {
-        "description": "Authorized amount reserved against mandate capacity for this attempt.",
-        "type": {
-          "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
-        }
-      },
-      "settled": {
-        "description": "Whether mandate accepted settlement for this attempt.",
-        "type": {
-          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
-        }
-      },
-      "lastSettlementRequestStatus": {
-        "description": "Last settlement request status received from bank (\"succeeded\" | \"failed\").",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "lastSettlementProcessingStatus": {
-        "description": "Mandate processing status for last settlement (\"accepted\" | \"rejected\").",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "settlementReason": {
-        "description": "Optional settlement rejection/info reason.",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "settlementRespondedAt": {
-        "description": "Timestamp of last settlement processing response.",
-        "type": {
-          "blueId": "47EN5A1B1ZXXdXMEoURVJquMSjdDuKFNDjMrkvVxoVJk"
-        }
-      },
-      "reservedDeltaMinor": {
-        "description": "Reserved delta applied for accepted settlement.",
-        "type": {
-          "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
-        }
-      },
-      "capturedDeltaMinor": {
-        "description": "Captured delta applied for accepted settlement.",
-        "type": {
-          "blueId": "E2LM6qgzWG9ttagq2xTmiZkgYEAgkYedFCmU9v7NnVEq"
-        }
-      },
-      "holdId": {
-        "description": "Optional hold id associated with settlement.",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "transactionId": {
-        "description": "Optional transaction id associated with settlement.",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "lastSettlementId": {
-        "description": "Optional last applied settlement id for idempotency tracking.",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      }
+      "blueId": "4ARd9ws8fE1nUkbF6VKxNojH1vPni6aFkZUogcoG5QKQ"
     }
   }
 }

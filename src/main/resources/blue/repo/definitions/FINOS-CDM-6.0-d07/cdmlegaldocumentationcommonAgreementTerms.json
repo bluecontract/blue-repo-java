@@ -4,7 +4,7 @@
   "agreement": {
     "description": "Specification of the standard set of terms that define a legal agreement.",
     "type": {
-      "blueId": "DTCMrR8qY9BpbXqsCRwfEYiDY2fo4LEFLGBGTPQSA38A"
+      "blueId": "BLT9vkBiAnSzJzangVPcyUvqgiMAAZG9EXHArjwv2xBS"
     },
     "schema": {
       "required": true
@@ -19,7 +19,7 @@
   "counterparty": {
     "description": "Specification of the roles of the counterparties to the agreement.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "57Lwnif22McYRjgDzSyRZTsqY1Ac9LMSJcJ9KRXKiE6w"

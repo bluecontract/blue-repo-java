@@ -22,7 +22,7 @@
   "compoundedGrowth": {
     "description": "The compounding curve, showing how the initial value grew during the calculation period.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
@@ -34,7 +34,7 @@
   "growthFactor": {
     "description": "The daily growth factors, showing the weighted rates divided by the day count basis plus one, giving how much the value grows for each step in the calculation.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"
@@ -46,13 +46,13 @@
   "observations": {
     "description": "The observation dates and weights for each observation date.",
     "type": {
-      "blueId": "7Kqgo4RtJQZGhk5UdaMbXdKzqsfxFftZELqoLU9FoXyE"
+      "blueId": "BULdF3qa1jiTwLCMeM9D1SbL69DwJUpkcfb7mzzzBaKi"
     }
   },
   "weightedRates": {
     "description": "The weighted value of each observation.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "9eWaHYz2vKrFofdHTHAizNNu8xP6QE3WQ5y7DGrGZvyJ"

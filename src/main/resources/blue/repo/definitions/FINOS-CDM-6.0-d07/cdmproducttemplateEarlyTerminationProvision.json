@@ -4,7 +4,7 @@
   "mandatoryEarlyTermination": {
     "description": "A mandatory early termination provision to terminate the swap at fair value.",
     "type": {
-      "blueId": "BV6rxiJFw1LMjpogdxDcwRjeUuJHDcR1ngiTtfUrN68U"
+      "blueId": "Gq5k4F4WZ5dfPJR7cPB4sutkoMboyZDzrwmnR8DWgSCv"
     }
   },
   "mandatoryEarlyTerminationDateTenor": {
@@ -16,7 +16,7 @@
   "optionalEarlyTermination": {
     "description": "An option for either or both parties to terminate the swap at fair value.",
     "type": {
-      "blueId": "6C7tBK3FPYoExviSwCvn8xbhCtRb4ZzoCViwrkrmXHDm"
+      "blueId": "Eym7pZbERFRxUrF2Hm93jTT6zAoHCTLfWYNmhXvXTvXn"
     }
   },
   "optionalEarlyTerminationParameters": {

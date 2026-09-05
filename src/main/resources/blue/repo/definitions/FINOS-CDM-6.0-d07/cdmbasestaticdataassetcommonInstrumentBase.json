@@ -4,16 +4,16 @@
   "exchange": {
     "description": "If the Asset is listed, defines the public exchange of the listing.",
     "type": {
-      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
+      "blueId": "4SXnBbvoNdScDw8GbD6krw7TurxZYhnX71YPkgbRvhjE"
     }
   },
   "identifier": {
     "description": "Asset Identifiers are used to uniquely identify an Asset, using a specified Asset Identifier Type.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "4oFH9vehkWBHWWKWKPEPwytqoRKUA6mcVgrG7P1XtKRy"
+      "blueId": "BCkHQ5uaVYXD8eL9NYiPRrhiir525o2KMps6Rz6vUZh"
     },
     "schema": {
       "minItems": 1
@@ -37,10 +37,10 @@
   "relatedExchange": {
     "description": "Provides the related Exchanges, if applicable.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
+      "blueId": "4SXnBbvoNdScDw8GbD6krw7TurxZYhnX71YPkgbRvhjE"
     },
     "schema": {
       "minItems": 0
@@ -49,10 +49,10 @@
   "taxonomy": {
     "description": "Defines the taxonomy of an object by combining a taxonomy source (i.e. the rules to classify the object) and a value (i.e. the output of those rules on the object.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "GXDxn2HwbWwWg9AFSHwfSi4zZ32a3uVojNQmBN96DUvU"
+      "blueId": "DpoHmYGiAN5pS3U8wKxY1SwVnkRBdmAKVeDxsBt9k2L5"
     },
     "schema": {
       "minItems": 0

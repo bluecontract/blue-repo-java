@@ -10,7 +10,7 @@
   "do": {
     "description": "Ordered BEX statement body. Statements execute sequentially, may define variables, branch, iterate bounded\ncollections, append changes/events to result accumulators, call functions, return early, or fail deterministically.\nThey do not directly mutate the selected document.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     }
   },
   "definition": {
@@ -25,13 +25,13 @@
   "constants": {
     "description": "Literal constants available through `$const`. Unknown constants fail at compile time. Constant names are user-defined\nidentifiers and must not collide with Blue reserved keys or invalid names.\n",
     "type": {
-      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+      "blueId": "5WQ4tVb4gUUdZa7EfaiUa2XKQwgAurvfYY3ALPauxcAF"
     }
   },
   "functions": {
     "description": "Local BEX function definitions keyed by function name. Functions may declare required arguments using static Blue\npatterns and may contain `expr` or `do` bodies. Unknown functions, missing arguments, and extra arguments fail\ndeterministically.\n",
     "type": {
-      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+      "blueId": "5WQ4tVb4gUUdZa7EfaiUa2XKQwgAurvfYY3ALPauxcAF"
     }
   },
   "emitEvents": {

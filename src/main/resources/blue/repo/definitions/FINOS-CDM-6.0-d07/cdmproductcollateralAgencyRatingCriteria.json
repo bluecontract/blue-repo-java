@@ -10,7 +10,7 @@
   "creditNotation": {
     "description": "Indicates the agency rating criteria specified for the asset or issuer.",
     "type": {
-      "blueId": "6DvMxWSu8NPPjxcsnCkgPnNoAfxF9WCaA14A1Gd6fLG6"
+      "blueId": "E45BJdNT1jxZETrD85178MqXWf1XQrqV8MdwiV87AxLb"
     },
     "schema": {
       "required": true

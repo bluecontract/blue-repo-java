@@ -4,7 +4,7 @@
   "agreedDiscountRate": {
     "description": "This may be used to indicate the discount rate to be used for cash collateral for cash settlement purposes.",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     }
   },
   "applicableCsa": {
@@ -22,7 +22,7 @@
   "cashCollateralInterestRate": {
     "description": "This may be used to indicate the interest rate to be used for cash collateral for cash settlement purposes.",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     }
   },
   "prescribedDocumentationAdjustment": {
@@ -34,7 +34,7 @@
   "protectedParty": {
     "description": "This may be used to specify which party is protected (e.g. under Replacement Value cash settlement methods).",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "EvKQ9LCRpPx5iXbQcQZv7T7vLFUBLS7RB9geFcYuGEw6"

@@ -13,19 +13,19 @@
   "priceQuantity": {
     "description": "Each payout leg must implement the quantity concept as a 'resolvable' type, which allows for different payout legs to be linked to each other (e.g. in the case of cross-curreny products).\n",
     "type": {
-      "blueId": "9H3s5nDTov6DTnnVBM5XaiAV2vZvPEep33DWccdc6mXq"
+      "blueId": "4zGndk3xTxnpQsDPD9H9xCSaBqZUcGYZuePtcYsyRmUQ"
     }
   },
   "principalPayment": {
     "description": "The specification of the principal exchange. Optional as only applicable in the case of cross-currency or zero-coupon swaps with a final payment.\n",
     "type": {
-      "blueId": "6ZdgPDgDd1WfACEQNiQTurhX1xdBtsoPkMNjRhDD9Myo"
+      "blueId": "6wUoFP5UmEKR9at5G6ibsV1Dnj5S45cXof8KegCFk7Yv"
     }
   },
   "settlementTerms": {
     "description": "Each payout leg must specifies its settlement terms, including the delivery type (i.e. cash vs physical, and their respective terms), the transfer type (DvP etc.) and settlement date, if any.\n",
     "type": {
-      "blueId": "BRJ2J4zKmK8CLQta8gGcSboyer9Sby49nV8HopjaFM7g"
+      "blueId": "HcWZydDKaZi3AKGuCL7XfsxA2EhP9kxwSwnPfpbj2cpi"
     }
   }
 }

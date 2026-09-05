@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.Map;
 
-@TypeBlueId("DN9VhzcZvGNtMz2K3qVBQrVeYssBUqbewt2Cxi6CXS3R")
+@TypeBlueId("EoEeoueRjvX7GyF6wLFRyh4XYG49GUyeLk1wz2WZcxC1")
 public class DocumentSectionChangeEntry {
     public static String blueId() {
-        return "DN9VhzcZvGNtMz2K3qVBQrVeYssBUqbewt2Cxi6CXS3R";
+        return "EoEeoueRjvX7GyF6wLFRyh4XYG49GUyeLk1wz2WZcxC1";
     }
 
     public static String packageName() {

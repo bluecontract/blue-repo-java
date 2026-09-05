@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("Ejzy8x4kUUXVeFecVHZeysJJ1Ee9MSw5S7sEmoUEycjd")
+@TypeBlueId("4F7qyygeicz98eEDWZKfWZGevPDVZ6hc8SFfwdpLvEG7")
 public class CdmObservableAssetPriceSourceDisruption {
     public static String blueId() {
-        return "Ejzy8x4kUUXVeFecVHZeysJJ1Ee9MSw5S7sEmoUEycjd";
+        return "4F7qyygeicz98eEDWZKfWZGevPDVZ6hc8SFfwdpLvEG7";
     }
 
     public static String packageName() {

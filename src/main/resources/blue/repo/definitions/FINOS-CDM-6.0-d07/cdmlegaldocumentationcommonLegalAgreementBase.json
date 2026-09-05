@@ -10,10 +10,10 @@
   "attachment": {
     "description": "A human readable document, for example a confirmation.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "HmhKdAbT2MRZUsE7sCtNxWo8eestifsJAK5KCzFN5bn2"
+      "blueId": "98Ffju3RikM7nUQRstepD9W6cX1hWiWsRTgN4mmRLd8c"
     },
     "schema": {
       "minItems": 0
@@ -22,7 +22,7 @@
   "contractualParty": {
     "description": "The two contractual parties to the legal agreement, which reference information is positioned as part of the partyInformation attribute.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "Doqu2fdYiHUWbSaMDHL5YoyEeuzbTrSjqbT1ZLqmB1Cr"
@@ -41,10 +41,10 @@
   "identifier": {
     "description": "The legal agreement identifier. Several identifiers can be specified.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "2uYMDSb9jahYcE91VXzzWYsnUVct3k5thb1czx4jPYF7"
+      "blueId": "DsoHoM8aVPzAWigjVwEnfcVhA5cKyYixMbZuMGC1NLJZ"
     },
     "schema": {
       "minItems": 0
@@ -53,7 +53,7 @@
   "legalAgreementIdentification": {
     "description": "The type of legal agreement, identified via a set of composable attributes: agreementName, publisher, governing law and version, e.g. ISDA 2013 Standard Credit Support Annex English Law.\n",
     "type": {
-      "blueId": "HKkvs9CCvwZwQxeN8m2GUQG1TrC5hsgoLjuSf1ztDGxF"
+      "blueId": "HNhvnR1vWdvjVcoL8zztF79TNzvMSSmYtdpz6Q4u6U2D"
     },
     "schema": {
       "required": true
@@ -62,7 +62,7 @@
   "otherParty": {
     "description": "The role(s) that other party(ies) may have in relation to the legal agreement, further to the contractual parties.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "6DrJREpu1Ms3M4U1q7jqGjM46V1o8vxq4K1i3X4dwMvz"

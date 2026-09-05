@@ -10,7 +10,7 @@
   "cashPrice": {
     "description": "(Optionally when the price type is cash) Additional attributes that further define a cash price, e.g. what type of fee it is.\n",
     "type": {
-      "blueId": "CaWpmLo2CzXteNgpMQ2nPagGfg3K7ETP5wMbxbxnhBx3"
+      "blueId": "DnoHokCFXf3K8TweViAG1QvmGdqdaRtkhaRmm5uF9yfQ"
     }
   },
   "composite": {
@@ -22,7 +22,7 @@
   "datedValue": {
     "description": "A schedule of step date and value pairs. On each step date the associated step value becomes effective. The step dates are used to order the steps by ascending order. This attribute is optional so the data type may be used to define a schedule with a single value.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "9QEEP3vJftxGgridJuAvcaKfZusGZVsywkfLzikwpM28"
@@ -34,7 +34,7 @@
   "perUnitOf": {
     "description": "Provides an attribute to define the unit of the thing being priced. For example, {amount, unitOfAmount, PerUnitOfAmount} = [10, EUR, Shares] = (10.00 EUR/SHARE) * (300,000 SHARES) = EUR 3,000,000.00 (Shares cancel out in the calculation).\n",
     "type": {
-      "blueId": "7qE4tr7jZifDuYrWwGZeTpRV1CFde8FZtHmFepTZ1t8F"
+      "blueId": "Hz5aMBFNxB5PLiEHEaHFw5mujNdGuxvUUf3bukYxchBF"
     }
   },
   "priceExpression": {
@@ -52,7 +52,7 @@
   "unit": {
     "description": "Qualifies the unit by which the amount is measured. Optional because a measure may be unit-less (e.g. when representing a ratio between amounts in the same unit).\n",
     "type": {
-      "blueId": "7qE4tr7jZifDuYrWwGZeTpRV1CFde8FZtHmFepTZ1t8F"
+      "blueId": "Hz5aMBFNxB5PLiEHEaHFw5mujNdGuxvUUf3bukYxchBF"
     }
   },
   "val": {

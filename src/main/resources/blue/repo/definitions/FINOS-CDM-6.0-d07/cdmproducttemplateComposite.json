@@ -10,19 +10,19 @@
   "fixingTime": {
     "description": "The time at which the spot currency exchange rate will be observed. It is specified as a time in a business day calendar location, e.g. 11:00am London time.\n",
     "type": {
-      "blueId": "4muK6BKTZZzEij2eR3Dg7sQxj224LzRoyzr5n7UcAR3X"
+      "blueId": "3yKMxPwXL9U6Q5LQFXgBdYUx3Dw1TtCgpJjn8WKiL3Mf"
     }
   },
   "fxSpotRateSource": {
     "description": "Specifies the methodology (reference source and, optionally, fixing time) to be used for determining a currency conversion rate.\n",
     "type": {
-      "blueId": "4Jbze8eVmcTD1NE4zxdWWA7NuWrvuqjSc5a68zCAQD7h"
+      "blueId": "AWkxvrZMYaefqWJK4zNf1WvTinxp4ZQCfbj3rVsYe4ak"
     }
   },
   "relativeDate": {
     "description": "A date specified as some offset to another date (the anchor date).",
     "type": {
-      "blueId": "9fGwsBbeyL5rQuLRmwyBtyjMjAcmhWfHf4bmyqAXmWtD"
+      "blueId": "2wQPopE8rNJu4jigpcsKNP5ifSGS1mCEULs5TFyadHG9"
     }
   }
 }

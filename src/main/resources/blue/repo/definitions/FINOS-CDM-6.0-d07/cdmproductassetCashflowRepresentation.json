@@ -13,10 +13,10 @@
   "paymentCalculationPeriod": {
     "description": "The adjusted payment date and associated calculation period parameters required to calculate the actual or projected payment amount. A list of payment calculation period elements may be ordered in the document by ascending adjusted payment date. An FpML document containing an unordered list of payment calculation periods is still regarded as a conformant document.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "AmMckQK6D6qnYkcaZ6whw5wA5uRbeevDC2UYCXTM2aN2"
+      "blueId": "32Bq9X3rBgymaeWQt2xPTiPosXQSknLh5UmKzp3R7W4D"
     },
     "schema": {
       "minItems": 0

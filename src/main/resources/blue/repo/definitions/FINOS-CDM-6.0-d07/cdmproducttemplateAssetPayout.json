@@ -4,10 +4,10 @@
   "assetLeg": {
     "description": "Defines each asset movement as a buy/sell at different dates, typically 1 near leg and 1 far leg in a securities financing transaction.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "FEmGevRHj9rp16wVgHUNFerrfjRqr2ApZ9pjc5Z2V257"
+      "blueId": "6czdS8oZAuUEpP21ENtNhS41Qz3o1T4D4Rp1ujKCH5JY"
     },
     "schema": {
       "minItems": 1
@@ -16,13 +16,13 @@
   "dividendTerms": {
     "description": "Specifies the terms under which dividends received by the borrower are passed through to the lender.",
     "type": {
-      "blueId": "2usZ27jDqNX8tocgcBm2aUtxwXsoxeBkCJ2eBKpUwPsz"
+      "blueId": "GN7bQLTQRpUAHry4avjsYGsGeL8qzKLEe2BNu2CBXdaH"
     }
   },
   "minimumFee": {
     "description": "A contractual minimum amount which the borrower will pay, regardless of the duration of the loan. A mechanism for making sure that a trade generates enough income.\n",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "payerReceiver": {
@@ -34,19 +34,19 @@
   "priceQuantity": {
     "description": "Each payout leg must implement the quantity concept as a 'resolvable' type, which allows for different payout legs to be linked to each other (e.g. in the case of cross-curreny products).\n",
     "type": {
-      "blueId": "9H3s5nDTov6DTnnVBM5XaiAV2vZvPEep33DWccdc6mXq"
+      "blueId": "4zGndk3xTxnpQsDPD9H9xCSaBqZUcGYZuePtcYsyRmUQ"
     }
   },
   "principalPayment": {
     "description": "The specification of the principal exchange. Optional as only applicable in the case of cross-currency or zero-coupon swaps with a final payment.\n",
     "type": {
-      "blueId": "6ZdgPDgDd1WfACEQNiQTurhX1xdBtsoPkMNjRhDD9Myo"
+      "blueId": "6wUoFP5UmEKR9at5G6ibsV1Dnj5S45cXof8KegCFk7Yv"
     }
   },
   "settlementTerms": {
     "description": "Each payout leg must specifies its settlement terms, including the delivery type (i.e. cash vs physical, and their respective terms), the transfer type (DvP etc.) and settlement date, if any.\n",
     "type": {
-      "blueId": "BRJ2J4zKmK8CLQta8gGcSboyer9Sby49nV8HopjaFM7g"
+      "blueId": "HcWZydDKaZi3AKGuCL7XfsxA2EhP9kxwSwnPfpbj2cpi"
     }
   },
   "tradeType": {
@@ -58,7 +58,7 @@
   "underlier": {
     "description": "Specifies the Purchased Asset, usually a Security.",
     "type": {
-      "blueId": "8CTGmD55ifZ1AAAr4uYZHw9mUCiZ7foMLqYSEUbPVz3Q"
+      "blueId": "A2fiN1YZzrtu1gFZVwQ3ADGobbhmkfL67NfGQzGWKJh3"
     },
     "schema": {
       "required": true

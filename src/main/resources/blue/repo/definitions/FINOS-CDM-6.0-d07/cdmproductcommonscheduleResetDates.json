@@ -10,19 +10,19 @@
   "finalFixingDate": {
     "description": "This attribute is not part of the FpML ResetDate, and has been added as part of the CDM to support the credit derivatives final fixing date.\n",
     "type": {
-      "blueId": "J1kGTdAb67L1bPgvuKZ86jTR9UZJomnkgA6hcnVfnwfD"
+      "blueId": "397tsASyRDDk2UNpFxXBdpXar7RwXd5MEejzPtRzcxB2"
     }
   },
   "fixingDates": {
     "description": "The fixing dates are the dates on which the index values are observed. The fixing dates are specified by reference to the reset date through business days offset and an associated set of financial business centers. Normally these offset calculation rules will be those specified in the ISDA definition for the relevant floating rate index (ISDA's Floating Rate Option). However, non-standard offset calculation rules may apply for a trade if mutually agreed by the principal parties to the transaction.\n",
     "type": {
-      "blueId": "9fGwsBbeyL5rQuLRmwyBtyjMjAcmhWfHf4bmyqAXmWtD"
+      "blueId": "2wQPopE8rNJu4jigpcsKNP5ifSGS1mCEULs5TFyadHG9"
     }
   },
   "initialFixingDate": {
     "description": "The initial fixing date.",
     "type": {
-      "blueId": "7nNj43B1u5wkoCzUNC1xJyS3yxbc4tAcr2rmBszM9rgw"
+      "blueId": "FPAtrQmLwvdTAhhNkbMnaP7hvmLYgHJKT7qPEwcHqDH"
     }
   },
   "rateCutOffDaysOffset": {
@@ -34,7 +34,7 @@
   "resetDatesAdjustments": {
     "description": "The definition of the business day convention and financial business centers used for adjusting the reset date if it would otherwise fall on a day that is not a business day in the specified business center.\n",
     "type": {
-      "blueId": "AKAczd79wtoD2Vt7VjdFdnWeacw86mQTVeLcyS9SWFZz"
+      "blueId": "HZJDnv878jZDzx4XhQtskoT3SAT9j2YgYkiuAfxKPXsS"
     }
   },
   "resetFrequency": {

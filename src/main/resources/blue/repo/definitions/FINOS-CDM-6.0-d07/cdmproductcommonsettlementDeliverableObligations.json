@@ -88,7 +88,7 @@
   "notDomesticCurrency": {
     "description": "An obligation and deliverable obligation characteristic. Any obligation that is payable in any currency other than the domestic currency. Domestic currency is either the currency so specified or, if no currency is specified, the currency of (a) the reference entity, if the reference entity is a sovereign, or (b) the jurisdiction in which the relevant reference entity is organised, if the reference entity is not a sovereign. ISDA 2003 Term: Not Domestic Currency.\n",
     "type": {
-      "blueId": "CfJhnmWCGJsuGKjrniD86MnqeEFDzMSQVu1kFMkHEggE"
+      "blueId": "DxuzgSMqCZwcHs1n8o3NoUssc6amrJbXvMtG2w6SJHFd"
     }
   },
   "notDomesticIssuance": {
@@ -130,7 +130,7 @@
   "specifiedCurrency": {
     "description": "An obligation and deliverable obligation characteristic. The currency or currencies in which an obligation or deliverable obligation must be payable. ISDA 2003 Term: Specified Currency.\n",
     "type": {
-      "blueId": "Hm8WzZ2vt1scZRpgZ9XjxKEcvsf2oXa8icw3PC9JPL2C"
+      "blueId": "ESLMKEUDY99hSqeEjURGa9SSBGEuYEkqEgVGWADbRrnL"
     }
   },
   "transferable": {

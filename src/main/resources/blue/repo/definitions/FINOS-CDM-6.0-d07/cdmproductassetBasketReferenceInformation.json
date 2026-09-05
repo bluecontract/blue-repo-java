@@ -4,10 +4,10 @@
   "basketId": {
     "description": "A CDS basket identifier.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     },
     "schema": {
       "minItems": 0
@@ -16,7 +16,7 @@
   "basketName": {
     "description": "The name of the basket expressed as a free format string. FpML does not define usage rules for this element.",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     }
   },
   "mthToDefault": {
@@ -34,7 +34,7 @@
   "referencePool": {
     "description": "This element contains all the reference pool items to define the reference entity and reference obligation(s) in the basket.\n",
     "type": {
-      "blueId": "3ovMWZG1vkBZmE3FHeEHCtXaBPGJ8RUhfdw6Jryv8j4H"
+      "blueId": "GSeNQtTPdrFwvjDZHVTL4xmS2NiJJHXHzmAirjEkptxa"
     },
     "schema": {
       "required": true
