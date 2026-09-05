@@ -33,7 +33,9 @@ tasks.register('assembleImmutableStagedRepository') {
             throw new GradleException('Immutable catalog export requires a Java 17 Gradle launcher')
         String version = project.version.toString()
         def match = version =~ /[0-9]+\.[0-9]+\.[0-9]+-dev\.([0-9a-f]{40})/
-        if (!match.matches()) throw new GradleException('Catalog version must include its exact source commit')
+        boolean localRc = project.ext.blueLocalRcMode
+        if (localRc ? !(version ==~ /3\.0\.0-rc\.[1-9][0-9]*/) : !match.matches())
+            throw new GradleException('Catalog version must select the exact development source or the local RC line')
         def git = { String... arguments ->
             def process = new ProcessBuilder((['/usr/bin/git', '-C', project.projectDir.absolutePath] + arguments.toList()) as List<String>).start()
             String output = process.inputStream.getText('UTF-8')
@@ -43,7 +45,7 @@ tasks.register('assembleImmutableStagedRepository') {
         }
         String commit = git('rev-parse', 'HEAD').trim()
         String tree = git('rev-parse', 'HEAD^{tree}').trim()
-        if (match.group(1) != commit || !(tree ==~ /[0-9a-f]{40}/) || git('status', '--porcelain', '-z') != '')
+        if (!(commit ==~ /[0-9a-f]{40}/) || (!localRc && match.group(1) != commit) || !(tree ==~ /[0-9a-f]{40}/) || git('status', '--porcelain', '-z') != '')
             throw new GradleException('Immutable catalog export requires a clean checkout matching the version commit')
         String output = providers.gradleProperty('stagedDependencyRepository').orNull
         if (!output || !new File(output).isAbsolute())
@@ -91,8 +93,8 @@ tasks.register('assembleImmutableStagedRepository') {
             if (!pom.contains('<version>' + language.pin.version + '</version>') || pom.contains('SNAPSHOT'))
                 throw new GradleException('Catalog POM does not retain the exact development Language dependency')
             def manifest = new TreeMap([
-                schema: 'blue-repository-development-repository/1.0', groupId: 'blue.repo', version: version,
-                stagePurpose: 'DEVELOPMENT', releaseReadinessClaimed: false, sourceDirty: false,
+                schema: localRc ? 'blue-repository-local-rc-repository/1.0' : 'blue-repository-development-repository/1.0', groupId: 'blue.repo', version: version,
+                stagePurpose: localRc ? 'LOCAL_RC' : 'DEVELOPMENT', releaseReadinessClaimed: false, sourceDirty: false,
                 sourceCommit: commit, sourceTree: tree, builtWithJava: 17,
                 languageVersion: language.pin.version, languageSourceCommit: language.pin.sourceCommit,
                 languageSourceTree: language.pin.sourceTree, languageRepositoryManifestIdentity: language.pin.manifestSha256,

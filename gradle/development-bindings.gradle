@@ -9,12 +9,13 @@ def regular = { File f ->
     if (!Files.isRegularFile(f.toPath(), LinkOption.NOFOLLOW_LINKS) || Files.isSymbolicLink(f.toPath()))
         fail("Expected regular development artifact: ${f}")
 }
-File bindingFile = file('gradle/development-language.json')
+File bindingFile = file(providers.gradleProperty('blueLanguageBinding').getOrElse('gradle/development-language.json'))
+boolean localRc = project.ext.blueLocalRcMode
 regular(bindingFile)
 def pin = new JsonSlurper().parse(bindingFile)
-if (pin.schema != 'blue-repository-development-input/1' || pin.releaseReadinessClaimed != false ||
+if (pin.schema != (localRc ? 'blue-repository-local-rc-input/1' : 'blue-repository-development-input/1') || pin.releaseReadinessClaimed != false ||
         !(pin.sourceCommit ==~ /[0-9a-f]{40}/) || !(pin.sourceTree ==~ /[0-9a-f]{40}/) ||
-        pin.version != '3.1.0-dev.' + pin.sourceCommit || !(pin.manifestSha256 ==~ /sha256:[0-9a-f]{64}/))
+        !(localRc ? pin.version ==~ /3\.1\.0-rc\.[1-9][0-9]*/ : pin.version == '3.1.0-dev.' + pin.sourceCommit) || !(pin.manifestSha256 ==~ /sha256:[0-9a-f]{64}/))
     fail('Invalid exact Language development binding')
 String location = providers.gradleProperty('blueLanguageRepository').orNull
 if (!location || !new File(location).isAbsolute())
@@ -30,13 +31,15 @@ if (digest(manifestFile) != pin.manifestSha256 ||
         manifestChecksum.getText('UTF-8') != pin.manifestSha256.substring(7) + '  artifact-manifest.json\n')
     fail('Language manifest differs from reviewed binding')
 def manifest = new JsonSlurper().parse(manifestFile)
-if (manifest.schema != 'blue-development-maven-repository/1.0' || manifest.stagePurpose != 'DEVELOPMENT' ||
+if (manifest.schema != (localRc ? 'blue-local-rc-maven-repository/1.0' : 'blue-development-maven-repository/1.0') ||
+        manifest.stagePurpose != (localRc ? 'LOCAL_RC' : 'DEVELOPMENT') ||
         manifest.releaseReadinessClaimed != false || manifest.sourceDirty != false || manifest.groupId != 'blue.language' ||
-        manifest.sourceCommit != pin.sourceCommit || manifest.sourceTree != pin.sourceTree || manifest.version != pin.version)
+        manifest.builtWithJava != 17 || manifest.sourceCommit != pin.sourceCommit || manifest.sourceTree != pin.sourceTree || manifest.version != pin.version)
     fail('Language manifest is not the selected clean development source')
 Set<String> expectedFiles = ['artifact-manifest.json','artifact-manifest.json.sha256'] as Set
 def runtimeHashes = [:]
 def kinds = [:]
+def publicationKinds = localRc ? [runtime: '.jar', pom: '.pom', sources: '-sources.jar', javadoc: '-javadoc.jar'] : [runtime: '.jar', pom: '.pom']
 manifest.artifacts.each { artifact ->
     String path = artifact.path
     if (!path || path.startsWith('/') || path.contains('\\') || path.split('/').any {it in ['', '.', '..']} ||
@@ -44,9 +47,9 @@ manifest.artifacts.each { artifact ->
         fail('Unsafe or duplicate Language artifact path')
     String[] coordinate = artifact.coordinate.split(':')
     if (coordinate.length != 3 || coordinate[0] != 'blue.language' || coordinate[2] != pin.version ||
-            !(artifact.kind in ['runtime','pom'])) fail('Invalid Language artifact coordinate')
-    String extension = artifact.kind == 'runtime' ? 'jar' : 'pom'
-    if (path != 'blue/language/' + coordinate[1] + '/' + pin.version + '/' + coordinate[1] + '-' + pin.version + '.' + extension)
+            !publicationKinds.containsKey(artifact.kind)) fail('Invalid Language artifact coordinate')
+    String extension = publicationKinds[artifact.kind]
+    if (path != 'blue/language/' + coordinate[1] + '/' + pin.version + '/' + coordinate[1] + '-' + pin.version + extension)
         fail('Language coordinate/path mismatch')
     File payload = new File(repository, path)
     File checksum = new File(repository, artifact.checksumPath)
@@ -60,7 +63,8 @@ manifest.artifacts.each { artifact ->
     if (artifact.kind == 'runtime') runtimeHashes[artifact.coordinate] = artifact.sha256
 }
 Set<String> required = ['blue-language-java','blue-language-model','blue-language-core','blue-language-mapping','blue-language-ipfs','blue-contracts-core'] as Set
-if (kinds.keySet() != required || kinds.values().any {it != (['runtime','pom'] as Set)})
+if (localRc) required.add('blue-conformance')
+if (kinds.keySet() != required || kinds.values().any {it != publicationKinds.keySet()})
     fail('Language artifact coordinate closure differs')
 Set<String> actualFiles = [] as Set
 Files.walk(repository.toPath()).withCloseable { paths -> paths.forEach { path ->
