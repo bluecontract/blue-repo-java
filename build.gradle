@@ -14,7 +14,7 @@ plugins {
 group = 'blue.repo'
 version = findProperty('releaseVersion') ?: determineProjectVersion()
 
-ext.blueLanguageVersion = '3.1.0-rc.20'
+ext.blueLanguageVersion = '3.1.0-rc.24'
 ext.blueLocalRcMode = providers.gradleProperty('blueDependencyMode').orNull == 'immutable-local-rc-artifacts'
 ext.blueDevelopmentMode = blueLocalRcMode || providers.gradleProperty('blueDependencyMode').orNull == 'immutable-development-artifacts'
 if (blueDevelopmentMode) apply from: 'gradle/development-bindings.gradle'

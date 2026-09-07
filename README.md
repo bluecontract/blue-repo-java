@@ -74,7 +74,7 @@ dependencies {
 directly, use the published language artifact:
 
 ```groovy
-implementation "blue.language:blue-language-java:3.1.0-rc.20"
+implementation "blue.language:blue-language-java:3.1.0-rc.24"
 ```
 
 ### Maven
