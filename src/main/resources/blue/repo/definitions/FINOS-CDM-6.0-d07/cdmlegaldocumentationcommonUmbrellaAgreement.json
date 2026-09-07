@@ -19,10 +19,10 @@
   "parties": {
     "description": "Underlying principals to the umbrella agreement.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "5ESTwQnVdcqtNiRWFUqxCTGYZMgBH6ebZjLM2Rsqy2PA"
+      "blueId": "GHxHxwco6V1AQ82c7MaB2j5b4ZGVeXzasNCqezqjVRbj"
     },
     "schema": {
       "minItems": 0

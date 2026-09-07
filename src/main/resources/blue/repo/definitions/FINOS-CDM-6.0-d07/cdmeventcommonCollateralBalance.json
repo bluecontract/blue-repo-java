@@ -4,7 +4,7 @@
   "amountBaseCurrency": {
     "description": "Specifies the collateral balance amount in base currency determined within a collateral legal agreement, or defined for reporting purposes.\n",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     },
     "schema": {
       "required": true

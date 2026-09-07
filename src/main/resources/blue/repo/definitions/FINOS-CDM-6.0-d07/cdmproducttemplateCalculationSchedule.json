@@ -4,10 +4,10 @@
   "schedulePeriod": {
     "description": "Defines a period of a calculation schedule structure.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "AKyQiSHvk3iKKhjrFNKn6eeQw1fNpNDUhvvdXjwEQgBa"
+      "blueId": "8naG32GbjTryx3MFqNt76L3LNKwbQX5k3LQkRAYbBcYS"
     },
     "schema": {
       "minItems": 1

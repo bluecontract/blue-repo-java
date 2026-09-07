@@ -4,7 +4,7 @@
   "matrixSource": {
     "description": "Relevant settled entity matrix source.",
     "type": {
-      "blueId": "HRm7JHUnU7f1WAdnj8igCiQMRxoyt5gyMtWJpJiRj1LE"
+      "blueId": "EqYWsnkX8wXiARYerEENXc7Eh6fBmbhYwnE4PWojM5Gr"
     },
     "schema": {
       "required": true

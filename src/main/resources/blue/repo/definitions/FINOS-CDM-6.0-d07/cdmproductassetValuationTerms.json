@@ -9,7 +9,7 @@
   "dividendValuationDates": {
     "description": "Specifies the dividend valuation dates of the swap.",
     "type": {
-      "blueId": "A5fbgqJ72K7pbNNCrmP9z1uJjRfJjx4z6Bav92ZY3iMs"
+      "blueId": "4YBEDDwHCYVauaDXtkLW695keQDWRijm1vdpkKCPaXkj"
     }
   },
   "fPVFinalPriceElectionFallback": {

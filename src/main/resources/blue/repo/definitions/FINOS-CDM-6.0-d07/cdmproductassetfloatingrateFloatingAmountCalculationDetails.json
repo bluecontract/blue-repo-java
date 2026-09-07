@@ -31,7 +31,7 @@
   "calculationPeriodNotionalAmount": {
     "description": "The notional in effect during the calculation period.",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     },
     "schema": {
       "required": true
@@ -40,13 +40,13 @@
   "floatingRate": {
     "description": "The details of the floating rate setting.  (If it is a calculated rate, details of that calculation will be inside that.\n",
     "type": {
-      "blueId": "EJonoYUoi7VKe4AowYFBKKL6ZCn4FmgqpsuFaGQDoGux"
+      "blueId": "4bfXxYEc7UXexu5vgDgicFQwAjp9dYNK7DVeor8uxd6X"
     }
   },
   "processingDetails": {
     "description": "Details fo the floating rate treatment after the rate is observed or calculated.  This will include details of things like multipliers, spreads, caps and floors, and the raw and treated rates.\n",
     "type": {
-      "blueId": "F43xUs35uiAv2MqzAfnxeuEJZqrrCnvJVmnRhFJnqtRh"
+      "blueId": "DP9ZgDE2EXZxeFTYhpcy35bj6LzhumJuxhZS5yMH5Vkn"
     }
   },
   "spreadExclusiveCalculatedAMount": {

@@ -4,25 +4,25 @@
   "add": {
     "description": "New sections to create with their Document Section and contracts.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "DN9VhzcZvGNtMz2K3qVBQrVeYssBUqbewt2Cxi6CXS3R"
+      "blueId": "EoEeoueRjvX7GyF6wLFRyh4XYG49GUyeLk1wz2WZcxC1"
     }
   },
   "modify": {
     "description": "Existing sections to update with a full contracts map.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "DN9VhzcZvGNtMz2K3qVBQrVeYssBUqbewt2Cxi6CXS3R"
+      "blueId": "EoEeoueRjvX7GyF6wLFRyh4XYG49GUyeLk1wz2WZcxC1"
     }
   },
   "remove": {
     "description": "Section keys to remove (also removes the section's related contracts).",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"

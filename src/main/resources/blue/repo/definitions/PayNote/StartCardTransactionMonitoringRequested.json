@@ -12,7 +12,7 @@
   "events": {
     "description": "Requested card event categories.\nFor now:\n- transaction\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"

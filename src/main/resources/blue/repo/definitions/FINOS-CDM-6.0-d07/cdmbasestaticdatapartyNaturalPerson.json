@@ -4,7 +4,7 @@
   "contactInformation": {
     "description": "The contact information for such person, when different from the contact information associated with the party.\n",
     "type": {
-      "blueId": "AWye6DehLS3vyWXet8adWpUZ8kLZYQCWMkCgEK9CoRSR"
+      "blueId": "DjtxBVUBQdKZ1d4eGJxVEZ2fuvb3fJuHETLmXQ8tbY7H"
     }
   },
   "dateOfBirth": {
@@ -28,7 +28,7 @@
   "initial": {
     "description": "The natural person's middle initial(s). If a middle initial is provided then a name should be absent.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
@@ -40,7 +40,7 @@
   "middleName": {
     "description": "The natural person's middle name(s). If a middle name is provided then an initial should be absent.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
@@ -52,10 +52,10 @@
   "personId": {
     "description": "The identifier associated with a person, e.g. the internal identification code.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "AG9Tj8KSzAxFp8kXUogfAmWG8bandq6BE1o5iVxrvc3o"
+      "blueId": "68KraWwT23EEA6nEkm6pD6WYim88JTP3PpM6auLGZCKA"
     },
     "schema": {
       "minItems": 0

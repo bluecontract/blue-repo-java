@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("3uTDiwVssb1uKdurixoF5csTPYjeU3mp49GD4wEFQudb")
+@TypeBlueId("GsERLYn2me6XHVT4xTVPxzLZQdR8UVBSfjz4o4nPcM7N")
 public class CdmObservableAssetCalculatedrateFloatingRateCalculationParameters {
     public static String blueId() {
-        return "3uTDiwVssb1uKdurixoF5csTPYjeU3mp49GD4wEFQudb";
+        return "GsERLYn2me6XHVT4xTVPxzLZQdR8UVBSfjz4o4nPcM7N";
     }
 
     public static String packageName() {

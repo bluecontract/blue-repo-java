@@ -13,10 +13,10 @@
   "role": {
     "description": "FpML specifies a person role that is distinct from the party role.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "HcZAF2MZ9WCaRxSvbnwNrsUbjiQfnvheFFUVuxRyVqQG"
+      "blueId": "6Z3wcB2iqabSgCj3CbZt7bM8XuvrQqqmfEeUNt4X94hG"
     },
     "schema": {
       "minItems": 0

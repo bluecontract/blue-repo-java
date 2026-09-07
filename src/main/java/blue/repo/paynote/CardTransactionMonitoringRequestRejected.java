@@ -7,10 +7,10 @@ import blue.repo.coordination.Response;
 import java.math.BigInteger;
 import java.util.List;
 
-@TypeBlueId("7jwuPsyHbqN5oQpxQoqsoUqXv7E9KYQnbv5ksQjysvnV")
+@TypeBlueId("HgZpfCdGW3Bm3mt4r43oHdnxcKdj4sHwpg4sjXb3gucC")
 public class CardTransactionMonitoringRequestRejected extends Response {
     public static String blueId() {
-        return "7jwuPsyHbqN5oQpxQoqsoUqXv7E9KYQnbv5ksQjysvnV";
+        return "HgZpfCdGW3Bm3mt4r43oHdnxcKdj4sHwpg4sjXb3gucC";
     }
 
     public static String packageName() {

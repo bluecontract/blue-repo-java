@@ -4,7 +4,7 @@
   "counterparty": {
     "description": "Specification of the roles of the counterparties to the specification.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "57Lwnif22McYRjgDzSyRZTsqY1Ac9LMSJcJ9KRXKiE6w"
@@ -17,10 +17,10 @@
   "criteria": {
     "description": "Represents a set of criteria used to specify eligible collateral.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "Dd4QK5kmBzsGcmhcqxkLLPiH2fBmE3acTHCBGWUW5Buq"
+      "blueId": "5ppzC68mJTGHyXB31ofhtnmLaiL6HYMQsbM3VU7tZXDk"
     },
     "schema": {
       "minItems": 1
@@ -29,10 +29,10 @@
   "identifier": {
     "description": "Specifies the identifier(s) to uniquely identify eligible collateral or a set of eligible collateral, such as a schedule or equivalant for an identity issuer.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "2uYMDSb9jahYcE91VXzzWYsnUVct3k5thb1czx4jPYF7"
+      "blueId": "DsoHoM8aVPzAWigjVwEnfcVhA5cKyYixMbZuMGC1NLJZ"
     },
     "schema": {
       "minItems": 0
@@ -41,10 +41,10 @@
   "party": {
     "description": "The parties associated with the specification.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
+      "blueId": "552tQMPt3GF4sBRCYRmWLgaHG183EE1aMKbEinn1oGvJ"
     },
     "schema": {
       "minItems": 0,
@@ -54,7 +54,7 @@
   "partyRole": {
     "description": "Specifies the role(s) that each of the party(s) is playing in the context of the specification, eg Payor or Receiver.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "6DrJREpu1Ms3M4U1q7jqGjM46V1o8vxq4K1i3X4dwMvz"

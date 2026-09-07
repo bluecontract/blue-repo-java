@@ -4,7 +4,7 @@
   "aggregationParameters": {
     "description": "Describes the portfolio by describing how to aggregate all its relevant Events.",
     "type": {
-      "blueId": "GJ4f9vYo1hSycBk9xvyg7fAsMA8mZQxW3u1uebj73PSw"
+      "blueId": "CHcjRrjPZ4PEPkHp3giBbAfvzoFGpqoJVK4vwseFwRdK"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "portfolioState": {
     "description": "Describes the state of the Portfolio as a list of Positions resulting from the aggregation.",
     "type": {
-      "blueId": "HSQM32z7yP1fJEoHr1oCYrfR8RKsj68Qhp88YpeyYE1t"
+      "blueId": "Dnjvy4RZ6ysjp7UHGofvXzvC3RiDzNywugmoHc87LDeD"
     },
     "schema": {
       "required": true

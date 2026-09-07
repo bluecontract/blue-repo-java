@@ -4,7 +4,7 @@
   "dayOfWeek": {
     "description": "The days of the week of the delivery.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "DmhfCUUAaa5kZ8Qsom8VwEsMN3qmGWaJX1pGtUCfbqRQ"
@@ -17,7 +17,7 @@
   "deliveryCapacity": {
     "description": "The number of units included in the transaction for each delivery interval",
     "type": {
-      "blueId": "AdJnZG9c8KBZpbUXw47UmJ1yNJN4AK3q9P9aMJjaKanN"
+      "blueId": "6H6ai9i2XAXM89wp9H6hTxLjhKaoFgBxrauHYKfRY3pL"
     }
   },
   "endTime": {
@@ -29,7 +29,7 @@
   "priceTimeIntervalQuantity": {
     "description": "Price per quantity per delivery time interval.",
     "type": {
-      "blueId": "D6pT9tDvB6nnaNaPVHodxcm2djqTNykgt6VJoD2uDq4M"
+      "blueId": "Eq9qZQHxqGHrhdWMG4ATnQxDGtQB2E3EkW56WnwBvYkg"
     }
   },
   "startTime": {

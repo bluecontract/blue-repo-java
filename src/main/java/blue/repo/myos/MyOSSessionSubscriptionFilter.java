@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("6fj4VDzQZwkBBPsYP4DGeSPbnHCQmX11PG3Vtk9pLRMF")
+@TypeBlueId("57tPQL14qKM4z5BUqrxD4SoHRXu5UG5LzGVw44cqpR2L")
 public class MyOSSessionSubscriptionFilter {
     public static String blueId() {
-        return "6fj4VDzQZwkBBPsYP4DGeSPbnHCQmX11PG3Vtk9pLRMF";
+        return "57tPQL14qKM4z5BUqrxD4SoHRXu5UG5LzGVw44cqpR2L";
     }
 
     public static String packageName() {

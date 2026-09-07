@@ -13,13 +13,13 @@
   "executionVenue": {
     "description": "Represents the venue on which a trade was executed.",
     "type": {
-      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
+      "blueId": "4SXnBbvoNdScDw8GbD6krw7TurxZYhnX71YPkgbRvhjE"
     }
   },
   "packageReference": {
     "description": "A reference to the package linking the trade with other trades, in case the trade was executed as part of a package (hence this attribute is optional).\n",
     "type": {
-      "blueId": "9KV48b6Fb2r3WJ1DyeqrYTjD1WUuExEj2cDwLdCGQHmu"
+      "blueId": "CJjhbcDuHW3aLUUQR7z2j9gJ5z3a9fU7bVHGS4ceGnik"
     }
   }
 }

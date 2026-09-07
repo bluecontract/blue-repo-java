@@ -10,10 +10,10 @@
   "calculationPeriod": {
     "description": "The parameters used in the calculation of a fixed or floating rate calculation period amount. A list of calculation period elements may be ordered in the document by ascending start date. An FpML document which contains an unordered list of calculation periods is still regarded as a conformant document.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "5iALuSYExmWtctSi7Hq5NapM77ZtzZ5nmkxPC22Cz4ZM"
+      "blueId": "EqMznhkmn9rbbKh3wYsMfjcQAgwVVq8rQnyzXeZ41W4Y"
     },
     "schema": {
       "minItems": 1
@@ -28,19 +28,19 @@
   "fixedPaymentAmount": {
     "description": "A known fixed payment amount.",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "forecastPaymentAmount": {
     "description": "A monetary amount representing the forecast of the future value of the payment.",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "presentValueAmount": {
     "description": "A monetary amount representing the present value of the forecast payment.",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "unadjustedPaymentDate": {

@@ -1,0 +1,90 @@
+import groovy.json.JsonSlurper
+import java.nio.file.Files
+import java.nio.file.LinkOption
+import java.security.MessageDigest
+
+def fail = { String message -> throw new GradleException(message) }
+def digest = { File f -> 'sha256:' + MessageDigest.getInstance('SHA-256').digest(f.bytes).encodeHex() }
+def regular = { File f ->
+    if (!Files.isRegularFile(f.toPath(), LinkOption.NOFOLLOW_LINKS) || Files.isSymbolicLink(f.toPath()))
+        fail("Expected regular development artifact: ${f}")
+}
+File bindingFile = file(providers.gradleProperty('blueLanguageBinding').getOrElse('gradle/development-language.json'))
+boolean localRc = project.ext.blueLocalRcMode
+regular(bindingFile)
+def pin = new JsonSlurper().parse(bindingFile)
+if (pin.schema != (localRc ? 'blue-repository-local-rc-input/1' : 'blue-repository-development-input/1') || pin.releaseReadinessClaimed != false ||
+        !(pin.sourceCommit ==~ /[0-9a-f]{40}/) || !(pin.sourceTree ==~ /[0-9a-f]{40}/) ||
+        !(localRc ? pin.version ==~ /3\.1\.0-rc\.[1-9][0-9]*/ : pin.version == '3.1.0-dev.' + pin.sourceCommit) || !(pin.manifestSha256 ==~ /sha256:[0-9a-f]{64}/))
+    fail('Invalid exact Language development binding')
+String location = providers.gradleProperty('blueLanguageRepository').orNull
+if (!location || !new File(location).isAbsolute())
+    fail('Development mode requires -PblueLanguageRepository=/absolute/path')
+File repository = new File(location).canonicalFile
+if (!repository.isDirectory() || Files.isSymbolicLink(new File(location).toPath()))
+    fail('Invalid Language development repository')
+File manifestFile = new File(repository, 'artifact-manifest.json')
+File manifestChecksum = new File(repository, 'artifact-manifest.json.sha256')
+regular(manifestFile)
+regular(manifestChecksum)
+if (digest(manifestFile) != pin.manifestSha256 ||
+        manifestChecksum.getText('UTF-8') != pin.manifestSha256.substring(7) + '  artifact-manifest.json\n')
+    fail('Language manifest differs from reviewed binding')
+def manifest = new JsonSlurper().parse(manifestFile)
+if (manifest.schema != (localRc ? 'blue-local-rc-maven-repository/1.0' : 'blue-development-maven-repository/1.0') ||
+        manifest.stagePurpose != (localRc ? 'LOCAL_RC' : 'DEVELOPMENT') ||
+        manifest.releaseReadinessClaimed != false || manifest.sourceDirty != false || manifest.groupId != 'blue.language' ||
+        manifest.builtWithJava != 17 || manifest.sourceCommit != pin.sourceCommit || manifest.sourceTree != pin.sourceTree || manifest.version != pin.version)
+    fail('Language manifest is not the selected clean development source')
+Set<String> expectedFiles = ['artifact-manifest.json','artifact-manifest.json.sha256'] as Set
+def runtimeHashes = [:]
+def kinds = [:]
+def publicationKinds = localRc ? [runtime: '.jar', pom: '.pom', sources: '-sources.jar', javadoc: '-javadoc.jar'] : [runtime: '.jar', pom: '.pom']
+manifest.artifacts.each { artifact ->
+    String path = artifact.path
+    if (!path || path.startsWith('/') || path.contains('\\') || path.split('/').any {it in ['', '.', '..']} ||
+            artifact.checksumPath != path + '.sha256' || !expectedFiles.add(path) || !expectedFiles.add(artifact.checksumPath))
+        fail('Unsafe or duplicate Language artifact path')
+    String[] coordinate = artifact.coordinate.split(':')
+    if (coordinate.length != 3 || coordinate[0] != 'blue.language' || coordinate[2] != pin.version ||
+            !publicationKinds.containsKey(artifact.kind)) fail('Invalid Language artifact coordinate')
+    String extension = publicationKinds[artifact.kind]
+    if (path != 'blue/language/' + coordinate[1] + '/' + pin.version + '/' + coordinate[1] + '-' + pin.version + extension)
+        fail('Language coordinate/path mismatch')
+    File payload = new File(repository, path)
+    File checksum = new File(repository, artifact.checksumPath)
+    regular(payload)
+    regular(checksum)
+    if (payload.length() != artifact.bytes || digest(payload) != artifact.sha256 ||
+            checksum.getText('UTF-8') != artifact.sha256.substring(7) + '  ' + payload.name + '\n')
+        fail("Language artifact bytes differ: ${path}")
+    def entryKinds = kinds.computeIfAbsent(coordinate[1]) { [] as Set }
+    if (!entryKinds.add(artifact.kind)) fail('Duplicate Language artifact kind')
+    if (artifact.kind == 'runtime') runtimeHashes[artifact.coordinate] = artifact.sha256
+}
+Set<String> required = ['blue-language-java','blue-language-model','blue-language-core','blue-language-mapping','blue-language-ipfs','blue-contracts-core'] as Set
+if (localRc) required.add('blue-conformance')
+if (kinds.keySet() != required || kinds.values().any {it != publicationKinds.keySet()})
+    fail('Language artifact coordinate closure differs')
+Set<String> actualFiles = [] as Set
+Files.walk(repository.toPath()).withCloseable { paths -> paths.forEach { path ->
+    if (Files.isSymbolicLink(path)) fail("Symbolic link in Language repository: ${path}")
+    if (Files.isRegularFile(path, LinkOption.NOFOLLOW_LINKS)) actualFiles.add(repository.toPath().relativize(path).toString())
+} }
+if (actualFiles != expectedFiles) fail('Language development repository file closure differs')
+ext.blueLanguageVersion = pin.version
+ext.blueLanguageDevelopmentBinding = [pin:pin, manifest:manifest, repository:repository, runtimeHashes:runtimeHashes]
+configurations.configureEach { configuration ->
+    resolutionStrategy.eachDependency { details ->
+        if (details.requested.group == 'blue.language' && details.requested.version != pin.version)
+            fail("Unexpected Language dependency: ${details.requested}")
+    }
+    incoming.afterResolve {
+        configuration.resolvedConfiguration.resolvedArtifacts.each { artifact ->
+            if (artifact.moduleVersion.id.group == 'blue.language') {
+                String coordinate = artifact.moduleVersion.id.toString()
+                if (runtimeHashes[coordinate] != digest(artifact.file)) fail("Resolved Language artifact differs: ${coordinate}")
+            }
+        }
+    }
+}

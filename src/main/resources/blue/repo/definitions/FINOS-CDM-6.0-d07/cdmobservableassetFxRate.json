@@ -4,7 +4,7 @@
   "quotedCurrencyPair": {
     "description": "Defines the two currencies for an FX trade and the quotation relationship between the two currencies.",
     "type": {
-      "blueId": "GwrNf8idhCx9xLjesA5nE33grEpWocsCaZCwMSDYrZNB"
+      "blueId": "2oe1cUMpzftBYrJsFJVwFosKMH6vYgm3PaW7EA9HimWx"
     },
     "schema": {
       "required": true

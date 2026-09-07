@@ -4,7 +4,7 @@
   "businessCenters": {
     "description": "The enumerated values to specify the business centers.",
     "type": {
-      "blueId": "Ds5a9bChKossVgHEM7Z2TQTCxDXdB2SZhtM9v9Y3mYmM"
+      "blueId": "72qMy7BtF4Y8QyRSVpb2tUTEiBqBzXuZXCR2CCtNCnNM"
     },
     "schema": {
       "required": true
@@ -25,7 +25,7 @@
   "dayOfWeek": {
     "description": "Indicates the days of the week on which the price will be determined.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "DmhfCUUAaa5kZ8Qsom8VwEsMN3qmGWaJX1pGtUCfbqRQ"

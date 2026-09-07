@@ -10,10 +10,10 @@
   "block": {
     "description": "Defines a delivery profile block, including start and end time, days of the week, duration, delivery capacity and price time interval quantity.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "DBB9Ve9VNPocXHDjCnG1nYEfLfnhNFSLu4n7sfCxpNoj"
+      "blueId": "52F2E3fLXygP9to31trT5qMUMKA3riUioTjVxLWykMUJ"
     },
     "schema": {
       "minItems": 0

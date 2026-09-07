@@ -12,14 +12,25 @@ plugins {
 }
 
 group = 'blue.repo'
-version = determineProjectVersion()
+version = findProperty('releaseVersion') ?: determineProjectVersion()
+
+ext.blueLanguageVersion = '3.1.0-rc.24'
+ext.blueLocalRcMode = providers.gradleProperty('blueDependencyMode').orNull == 'immutable-local-rc-artifacts'
+ext.blueDevelopmentMode = blueLocalRcMode || providers.gradleProperty('blueDependencyMode').orNull == 'immutable-development-artifacts'
+if (blueDevelopmentMode) apply from: 'gradle/development-bindings.gradle'
 
 base {
     archivesName = 'blue-repo-java'
 }
 
 repositories {
-    if (!System.getenv('CI')) {
+    if (blueDevelopmentMode) {
+        exclusiveContent {
+            forRepository { maven { url = uri(blueLanguageDevelopmentBinding.repository) } }
+            filter { includeGroup('blue.language') }
+        }
+    }
+    if (!blueDevelopmentMode && !System.getenv('CI')) {
         mavenLocal()
     }
     mavenCentral()
@@ -56,11 +67,12 @@ tasks.withType(AbstractArchiveTask).configureEach {
 }
 
 dependencies {
-    api 'blue.language:blue-language-java:3.1.0-rc.20'
+    api "blue.language:blue-language-java:${blueLanguageVersion}"
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    implementation 'io.github.erdtman:java-json-canonicalization:1.1'
 
-    blueLanguageRegistry 'blue.language:blue-language-core:3.1.0-rc.20'
-    blueContractsRegistry 'blue.language:blue-contracts-core:3.1.0-rc.20'
+    blueLanguageRegistry "blue.language:blue-language-core:${blueLanguageVersion}"
+    blueContractsRegistry "blue.language:blue-contracts-core:${blueLanguageVersion}"
 
     testImplementation platform('org.junit:junit-bom:5.10.2')
     testImplementation 'org.junit.jupiter:junit-jupiter'
@@ -78,7 +90,7 @@ test {
     }
     useJUnitPlatform()
     reports {
-        junitXml.required = false
+        junitXml.required = true
         html.required = true
     }
     testLogging {
@@ -95,7 +107,6 @@ task generateBuildProperties {
     doLast {
         buildPropertiesFile.text = """\
                 |blue-repo-java.build.version=$project.version
-                |blue-repo-java.build.timestamp=${new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")}
         """.stripMargin().trim()
     }
 }
@@ -327,3 +338,5 @@ def determineProjectVersion() {
         throw new GradleException(".cz.toml file not found")
     }
 }
+
+apply from: 'gradle/development-export.gradle'

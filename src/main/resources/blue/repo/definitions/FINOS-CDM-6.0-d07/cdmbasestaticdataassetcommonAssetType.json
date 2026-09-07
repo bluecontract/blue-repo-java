@@ -13,7 +13,7 @@
   "debtType": {
     "description": "Represents a filter based on the type of bond.",
     "type": {
-      "blueId": "6unwaZ5oN6Bu5iNr9srEotBvRczagJYM6Dob6AfjsYhP"
+      "blueId": "DodS4RN9rrEFMQ5DJsT5AEPCRreAtzJgFW4n4LNiX3mL"
     }
   },
   "equityType": {
@@ -31,7 +31,7 @@
   "otherAssetType": {
     "description": "Specifies the eligible asset type when not enumerated.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"

@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("GYCi7D1mWinJfPvkAbuJK6RQVnMLU6jrdg2PwdjZVcJv")
+@TypeBlueId("FxPatAMr49j2YAbmKJt2s7toTaDbEq5jLHZAdEi8MjiA")
 public class CdmProductTemplateAveragingStrikeFeature {
     public static String blueId() {
-        return "GYCi7D1mWinJfPvkAbuJK6RQVnMLU6jrdg2PwdjZVcJv";
+        return "FxPatAMr49j2YAbmKJt2s7toTaDbEq5jLHZAdEi8MjiA";
     }
 
     public static String packageName() {

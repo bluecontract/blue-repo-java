@@ -4,7 +4,7 @@
   "observationEvent": {
     "description": "Contains all information related to an observation.",
     "type": {
-      "blueId": "3WyHtwLZQPjVJB4zC26ena33X6r2fxTfkWVEiZi6eH1Q"
+      "blueId": "3h7nYDTuZJ7PfSedY5KZwBkDfhPv5u6pYQC84cr5SsgE"
     },
     "schema": {
       "required": true

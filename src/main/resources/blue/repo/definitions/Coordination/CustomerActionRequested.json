@@ -19,42 +19,10 @@
   "actions": {
     "description": "Allowed action labels or structured options. Their order is the display/order preference.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "label": {
-        "description": "User-facing action label shown in the pending action card.",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "variant": {
-        "description": "Optional button style variant. Supported values: primary | secondary | reject.",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "inputSchema": {
-        "description": "Optional input schema. If present, the selected action may collect user input."
-      },
-      "inputRequired": {
-        "description": "Optional flag indicating whether input is required for this action.",
-        "type": {
-          "blueId": "AwvXD961fmnmqcSQhjMA7r15HpVh39cefb6ZTyUz2Fm2"
-        }
-      },
-      "inputTitle": {
-        "description": "Optional title displayed above the action input control.",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      },
-      "inputPlaceholder": {
-        "description": "Optional placeholder/help text shown in the action input control.",
-        "type": {
-          "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
-        }
-      }
+      "blueId": "4wEwmGzXtFaV1CZkPn65hTrdURxUUwWVczWGwDWroEjS"
     }
   }
 }

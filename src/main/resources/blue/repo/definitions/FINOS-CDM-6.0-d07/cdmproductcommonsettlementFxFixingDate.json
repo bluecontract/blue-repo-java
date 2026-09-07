@@ -3,7 +3,7 @@
   "description": "Extends the Offset structure to specify an FX fixing date as an offset to dates specified somewhere else in the document.\n",
   "businessCenters": {
     "type": {
-      "blueId": "Ds5a9bChKossVgHEM7Z2TQTCxDXdB2SZhtM9v9Y3mYmM"
+      "blueId": "72qMy7BtF4Y8QyRSVpb2tUTEiBqBzXuZXCR2CCtNCnNM"
     }
   },
   "businessCentersReference": {
@@ -21,19 +21,19 @@
   "dateRelativeToCalculationPeriodDates": {
     "description": "The calculation period references on which settlements in non-deliverable currency are due and will then have to be converted according to the terms specified through the other parts of the nonDeliverableSettlement structure. Implemented for Brazilian-CDI swaps where it will refer to the termination date of the appropriate leg.\n",
     "type": {
-      "blueId": "ytstqNPphmXWb5ZTFeFxrGKxyp3SXuEhDFAEsbb8iLA"
+      "blueId": "FtHywVU7T4D3wPQXniZTBiQjiaGueSC4zGZ3dDTFiFvi"
     }
   },
   "dateRelativeToPaymentDates": {
     "description": "The payment date references on which settlements in non-deliverable currency are due and will then have to be converted according to the terms specified through the other parts of the nonDeliverableSettlement structure.\n",
     "type": {
-      "blueId": "DW32pDb5aR7QPQPk2s5ybQJuzPvqzb6S2WMHyY7WLBP7"
+      "blueId": "8C7FCoEfdU3Jo3x2BDWAsEC5HJuQzp3nEXLrWWaRTBeW"
     }
   },
   "dateRelativeToValuationDates": {
     "description": "The calculation period references on which settlements in non-deliverable currency are due and will then have to be converted according to the terms specified through the other parts of the nonDeliverableSettlement structure. Implemented for Brazilian-CDI swaps where it will refer to the termination date of the appropriate leg.\n",
     "type": {
-      "blueId": "HjRBL4m9mTkjZ84WwVn8hiQbhY7uJxxQbkJKf1V7Fqtj"
+      "blueId": "ExnqNnTQbcHce5xGNfJLFmeozh264n45BTGrqTU1N7GE"
     }
   },
   "dayType": {
@@ -45,7 +45,7 @@
   "fxFixingDate": {
     "description": "Describes the specific date when a non-deliverable forward or cash-settled option will 'fix' against a particular rate, which will be used to compute the ultimate cash settlement. This element should be omitted where a single, discrete fixing date cannot be identified e.g. on an american option, where fixing may occur at any date on a continuous range.  This attribute was formerly part of 'fxSettlementTerms', which is now being harmonised into a common 'CashSettlementTerms' that includes a 'ValuationDate'.\n",
     "type": {
-      "blueId": "GW4fUG5i4g68v2eQEznuefGCSUPiwaHXpoVmU4ASwx29"
+      "blueId": "9bWLoL1zcJYR9saaAKGg2PbRC5k5kMqn4CktUzBBfgeY"
     }
   },
   "period": {

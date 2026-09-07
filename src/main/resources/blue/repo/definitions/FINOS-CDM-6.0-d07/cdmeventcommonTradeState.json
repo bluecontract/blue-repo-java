@@ -4,10 +4,10 @@
   "observationHistory": {
     "description": "Represents the observed events related to a particular product or process, such as credit events or corporate actions.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "3WyHtwLZQPjVJB4zC26ena33X6r2fxTfkWVEiZi6eH1Q"
+      "blueId": "3h7nYDTuZJ7PfSedY5KZwBkDfhPv5u6pYQC84cr5SsgE"
     },
     "schema": {
       "minItems": 0
@@ -16,10 +16,10 @@
   "resetHistory": {
     "description": "Represents the updated Trade attributes which can change as the result of a reset event. Only the changed values are captured, leaving the remaining data attributes empty. See Create_Reset function for further details on how TradeState is used in the Reset event. The TradeState data type is used to maintain backwards compatibility with the current Reset mechanism.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "7vPrkkWh58nfDDkqkzYizHoGeQi5BC57ZpmFndxmft9R"
+      "blueId": "3MxYBd2rJgiQKyj7CHEWMnHB85PVSUFcLzcXDdwJBUoD"
     },
     "schema": {
       "minItems": 0
@@ -34,7 +34,7 @@
   "trade": {
     "description": "Represents the Trade that has been effected by a business or life-cycle event.",
     "type": {
-      "blueId": "Gm86NetLQn7WB75RP28UxDg7WZvhyUm1usBgfAPjFkdM"
+      "blueId": "ABtBnXVxAdtQaWJcxMGz6YJb2tjdXhuV2xZETFPYRVVi"
     },
     "schema": {
       "required": true
@@ -43,10 +43,10 @@
   "transferHistory": {
     "description": "Represents the updated Trade attributes which can change as the result of a transfer event.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "5DE1nk33eUe1qZRRMM5fGCsyGFrVj8JswsEvwtwzL2K9"
+      "blueId": "EmWHXmUDB1BGwvvrzJUmPpikmwAQWouiNksqysnqRwqM"
     },
     "schema": {
       "minItems": 0
@@ -54,10 +54,10 @@
   },
   "valuationHistory": {
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "7fUqjcMznRtsQXbh382nhVNPoG8pPi1kH6C6QRJ1NXii"
+      "blueId": "GVzVCm4effowcvvDohPLsXMdCXJEAaFscsqkzMd7bCLj"
     },
     "schema": {
       "minItems": 0

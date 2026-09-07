@@ -4,13 +4,13 @@
   "fxFixingDate": {
     "description": "The date on which the currency rate will be determined for the purpose of specifying the amount in deliverable currency. This attribute was formerly part of 'NonDeliverableSettlement', which is now being harmonised into a common 'CashSettlementTerms' that includes a 'ValuationDate'.\n",
     "type": {
-      "blueId": "AYe9vJYb7zmVir5VZjyWNcw2oZjtbMSkbPB8y47sai6T"
+      "blueId": "83o4WnYePBNMBkayzQxyShLpXgTgc9JEh6XLyDb8sAmF"
     }
   },
   "fxFixingSchedule": {
     "description": "The date, when expressed as a schedule of date(s), on which the currency rate will be determined for the purpose of specifying the amount in deliverable currency. This attribute was formerly part of 'NonDeliverableSettlement', which is now being harmonised into a common 'CashSettlementTerms' that includes a 'ValuationDate'.\n",
     "type": {
-      "blueId": "ATwFe4A6KM2pwcq5ezVugmeREzNVytoPxpU4UgV8Nhdt"
+      "blueId": "DBgmp4p5L6ZxrQazC6KgfDGE25HKvjK8hxseWsyivyzW"
     }
   },
   "multipleValuationDates": {
@@ -28,7 +28,7 @@
   "valuationDate": {
     "description": "The date on which the cash settlement amount will be determined according to the cash settlement method if the parties have not otherwise been able to agree the cash settlement amount. This attribute was formerly part of 'OptionCashSettlement', which is now being harmonised into a common 'CashSettlementTerms' that includes a 'ValuationDate'.\n",
     "type": {
-      "blueId": "9fGwsBbeyL5rQuLRmwyBtyjMjAcmhWfHf4bmyqAXmWtD"
+      "blueId": "2wQPopE8rNJu4jigpcsKNP5ifSGS1mCEULs5TFyadHG9"
     }
   }
 }

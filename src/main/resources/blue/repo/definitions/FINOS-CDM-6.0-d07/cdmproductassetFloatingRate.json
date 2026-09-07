@@ -3,7 +3,7 @@
   "calculationParameters": {
     "description": "Support for modular calculated rates, such such as lockout compound calculations.",
     "type": {
-      "blueId": "3uTDiwVssb1uKdurixoF5csTPYjeU3mp49GD4wEFQudb"
+      "blueId": "GsERLYn2me6XHVT4xTVPxzLZQdR8UVBSfjz4o4nPcM7N"
     }
   },
   "capRateSchedule": {
@@ -15,7 +15,7 @@
   "fallbackRate": {
     "description": "Definition of any fallback rate that may be applicable.",
     "type": {
-      "blueId": "AfsZ9qKh4Qtrp72TzbuRFu1ZJNgDu14DGPa2Pyu7Twrn"
+      "blueId": "3sqs6JVYeMNrZqd2emrSoPHRq3xBcEBiWKG9xy5UnYUV"
     }
   },
   "floatingRateMultiplierSchedule": {
@@ -44,7 +44,7 @@
   "spreadSchedule": {
     "description": "The ISDA Spread or a Spread schedule expressed as explicit spreads and dates. In the case of a schedule, the step dates may be subject to adjustment in accordance with any adjustments specified in calculationPeriodDatesAdjustments. The spread is a per annum rate, expressed as a decimal. For purposes of determining a calculation period amount, if positive the spread will be added to the floating rate and if negative the spread will be subtracted from the floating rate. A positive 10 basis point (0.1%) spread would be represented as 0.001.\n",
     "type": {
-      "blueId": "JBHbnTb3KK4imqfxRHkV1Hdv7p6d8fMSvkBKH5J4cQpv"
+      "blueId": "C3bVdtiaZxFCnE2nW87KFYsAGL6vZ2kLCAK11s2zdpb1"
     }
   }
 }

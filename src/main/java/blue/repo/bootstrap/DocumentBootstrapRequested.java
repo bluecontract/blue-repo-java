@@ -7,10 +7,10 @@ import blue.repo.coordination.Message;
 import blue.repo.coordination.Request;
 import java.util.List;
 
-@TypeBlueId("GT7kXB7fBv9bKxn8ZM99E4XUaHecnGpMGZ5NMsB4ekDq")
+@TypeBlueId("8nx3EwhHdidxDHznKPvGvxzafUug7UbBKBgELkv4hek7")
 public class DocumentBootstrapRequested extends Request {
     public static String blueId() {
-        return "GT7kXB7fBv9bKxn8ZM99E4XUaHecnGpMGZ5NMsB4ekDq";
+        return "8nx3EwhHdidxDHznKPvGvxzafUug7UbBKBgELkv4hek7";
     }
 
     public static String packageName() {

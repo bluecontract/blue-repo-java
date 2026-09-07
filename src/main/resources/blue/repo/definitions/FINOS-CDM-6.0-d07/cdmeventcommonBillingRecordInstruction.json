@@ -4,10 +4,10 @@
   "observation": {
     "description": "The observations used to calculate the billing amount.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "8EUcPQTHo5mLovdtyBiABzvGTLiRKYmJopadhbWnbjyX"
+      "blueId": "47MLd62QHpJXAp5Xkj5aKpk7mC6J5Pvnf7nKHboKdKod"
     },
     "schema": {
       "minItems": 1

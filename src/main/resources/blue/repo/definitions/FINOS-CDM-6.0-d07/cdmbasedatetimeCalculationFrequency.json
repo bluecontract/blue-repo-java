@@ -4,7 +4,7 @@
   "businessCenter": {
     "description": "Specifies the business center for adjustment of calculation period.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "Gpw3zDUDENr9thYruxb1S1firzfQSgHYJs5W3zaBbAzN"
@@ -16,7 +16,7 @@
   "dateLocation": {
     "description": "Specifies where is the time measured.",
     "type": {
-      "blueId": "4muK6BKTZZzEij2eR3Dg7sQxj224LzRoyzr5n7UcAR3X"
+      "blueId": "3yKMxPwXL9U6Q5LQFXgBdYUx3Dw1TtCgpJjn8WKiL3Mf"
     },
     "schema": {
       "required": true

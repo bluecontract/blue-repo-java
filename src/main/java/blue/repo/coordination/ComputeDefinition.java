@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.Map;
 
-@TypeBlueId("H4tutBkZAgxJsEDyjDohkZk7dcGxXQqwHMEzVkyh3U9n")
+@TypeBlueId("3ihLKENZHtZsbkA2Aa1pLxBHxibJ5jTFEhYLGFuEtpjr")
 public class ComputeDefinition extends blue.language.processor.model.MarkerContract {
     public static String blueId() {
-        return "H4tutBkZAgxJsEDyjDohkZk7dcGxXQqwHMEzVkyh3U9n";
+        return "3ihLKENZHtZsbkA2Aa1pLxBHxibJ5jTFEhYLGFuEtpjr";
     }
 
     public static String packageName() {

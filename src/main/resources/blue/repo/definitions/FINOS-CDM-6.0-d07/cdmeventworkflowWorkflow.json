@@ -3,10 +3,10 @@
   "description": "A collection of workflow steps which together makeup an entire workflow sequence.",
   "steps": {
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "Fhdc1fd8vMNRHxuQnBweJDNbCrJvLLEZV11VoTwDNDwy"
+      "blueId": "E332PYZasAfPF7mGkQAH28M63P53SAx7n6CqG9qzkN77"
     },
     "schema": {
       "minItems": 1

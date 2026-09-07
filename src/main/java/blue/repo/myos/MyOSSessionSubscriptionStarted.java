@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("21S91PEGg8mtBot7cAgpaoihdgwDavqSeF4Lc7xsFumq")
+@TypeBlueId("H1vwnjQnE2FbMR9pVmpSYcYX3bUYDQj8nCUmW9XnoYDb")
 public class MyOSSessionSubscriptionStarted extends MyOSSessionSubscriptionUpdate {
     public static String blueId() {
-        return "21S91PEGg8mtBot7cAgpaoihdgwDavqSeF4Lc7xsFumq";
+        return "H1vwnjQnE2FbMR9pVmpSYcYX3bUYDQj8nCUmW9XnoYDb";
     }
 
     public static String packageName() {

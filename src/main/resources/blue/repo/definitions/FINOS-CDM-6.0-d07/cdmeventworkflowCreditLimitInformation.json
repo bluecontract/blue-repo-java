@@ -3,10 +3,10 @@
   "description": "A class to represent the credit limit utilisation information.",
   "limitApplicable": {
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "Ah52pXGkoiKkANbJgXPxNGGcacWdo2AdPvybKoK3aMRx"
+      "blueId": "EB6siVmpRLwHrgS32q58adC7BVufPUGojAzqwLwwqC6P"
     },
     "schema": {
       "minItems": 1

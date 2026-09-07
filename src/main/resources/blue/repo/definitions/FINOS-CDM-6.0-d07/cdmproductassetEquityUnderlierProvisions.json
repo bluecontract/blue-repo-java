@@ -9,7 +9,7 @@
   "localJurisdiction": {
     "description": "The ISO 3166 standard code for the country within which the postal address is located.",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     }
   },
   "multipleExchangeIndexAnnexFallback": {
@@ -21,7 +21,7 @@
   "relevantJurisdiction": {
     "description": "The ISO 3166 standard code for the country within which the postal address is located.",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     }
   }
 }

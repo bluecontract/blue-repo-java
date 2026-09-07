@@ -13,7 +13,7 @@
     },
     "declineBootstrap": {
       "type": {
-        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+        "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
       },
       "channel": {
         "type": {
@@ -31,7 +31,7 @@
           {
             "name": "Record Bootstrap Declined",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "do": {
               "items": [
@@ -136,7 +136,7 @@
     },
     "startBootstrap": {
       "type": {
-        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+        "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
       },
       "channel": {
         "type": {
@@ -154,7 +154,7 @@
           {
             "name": "Record Bootstrap In Progress",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "do": {
               "items": [
@@ -217,7 +217,7 @@
     },
     "completeBootstrap": {
       "type": {
-        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+        "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
       },
       "channel": {
         "type": {
@@ -235,7 +235,7 @@
           {
             "name": "Record Bootstrap Completed",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "do": {
               "items": [
@@ -322,7 +322,7 @@
     },
     "failBootstrap": {
       "type": {
-        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+        "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
       },
       "channel": {
         "type": {
@@ -340,7 +340,7 @@
           {
             "name": "Record Bootstrap Failed",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "do": {
               "items": [

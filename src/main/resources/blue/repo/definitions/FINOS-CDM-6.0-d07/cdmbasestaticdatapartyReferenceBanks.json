@@ -4,10 +4,10 @@
   "referenceBank": {
     "description": "An institution (party) identified by means of a coding scheme and an optional name.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "HCxtaayTkzuVfS1fw2tUcTEYqdzrqTdQWWMc9HnnNmjF"
+      "blueId": "AQMwqVb8siEZwBcuJsbc6jaLvBHjU1ppg5HK7vhET1nz"
     },
     "schema": {
       "minItems": 1

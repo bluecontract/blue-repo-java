@@ -13,10 +13,10 @@
   "eligibleCollateral": {
     "description": "The eligible collateral as specified in relation to the transaction.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "Dd4QK5kmBzsGcmhcqxkLLPiH2fBmE3acTHCBGWUW5Buq"
+      "blueId": "5ppzC68mJTGHyXB31ofhtnmLaiL6HYMQsbM3VU7tZXDk"
     },
     "schema": {
       "minItems": 0

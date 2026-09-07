@@ -7,13 +7,13 @@
   "constants": {
     "description": "Literal named constants available to functions or referencing Compute steps through `$const`. Constant names are\nstatic identifiers and must not use reserved Blue language keys.\n",
     "type": {
-      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+      "blueId": "5WQ4tVb4gUUdZa7EfaiUa2XKQwgAurvfYY3ALPauxcAF"
     }
   },
   "functions": {
     "description": "Named BEX functions. Each function may declare argument patterns and either an `expr` or `do` body. Functions are\ndeterministic and have no ambient side effects.\n",
     "type": {
-      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+      "blueId": "5WQ4tVb4gUUdZa7EfaiUa2XKQwgAurvfYY3ALPauxcAF"
     }
   }
 }

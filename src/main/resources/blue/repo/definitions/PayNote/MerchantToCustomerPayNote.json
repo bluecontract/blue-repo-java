@@ -2,6 +2,6 @@
   "name": "Merchant To Customer PayNote",
   "description": "Base PayNote where payer is merchant and payee is customer. Bank sets/validates payer channel bindings.",
   "type": {
-    "blueId": "DivLdwvVivwHNakzhjFjoG8bpwZLcyxFMinziyEkpWc8"
+    "blueId": "55X22NGwhbLqnj5aYjKvYzZe2ZcH3H3tNFz99vRVUnzr"
   }
 }

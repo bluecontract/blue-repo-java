@@ -4,7 +4,7 @@
   "alphaContract": {
     "description": "The contract that will be submitted to the clearing house for clearing. The contract should indicate that it should be cleared by assigning a clearing organisation as a party role.\n",
     "type": {
-      "blueId": "7FB6ca7DYRSDuwzXQm4kVBg9cea9CR3KuhT8hiffquh9"
+      "blueId": "EoSx3rbaYgSkhc8hUQZMKv8YUyEbwhURwSeaTqWqdMUj"
     },
     "schema": {
       "required": true
@@ -13,19 +13,19 @@
   "clearerParty1": {
     "description": "Optional party facing the CCP, acting as clearing member for party1.",
     "type": {
-      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
+      "blueId": "552tQMPt3GF4sBRCYRmWLgaHG183EE1aMKbEinn1oGvJ"
     }
   },
   "clearerParty2": {
     "description": "Optional party facing the CCP, acting as clearing member for party2.",
     "type": {
-      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
+      "blueId": "552tQMPt3GF4sBRCYRmWLgaHG183EE1aMKbEinn1oGvJ"
     }
   },
   "clearingParty": {
     "description": "The Central Counter party (CCP) that the contract will be submitted to for clearing.",
     "type": {
-      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
+      "blueId": "552tQMPt3GF4sBRCYRmWLgaHG183EE1aMKbEinn1oGvJ"
     },
     "schema": {
       "required": true
@@ -40,7 +40,7 @@
   "party1": {
     "description": "First party facing the CCP if it is clearing for its own account.",
     "type": {
-      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
+      "blueId": "552tQMPt3GF4sBRCYRmWLgaHG183EE1aMKbEinn1oGvJ"
     },
     "schema": {
       "required": true
@@ -49,7 +49,7 @@
   "party2": {
     "description": "Second party facing the CCP if it is clearing for its own account.",
     "type": {
-      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
+      "blueId": "552tQMPt3GF4sBRCYRmWLgaHG183EE1aMKbEinn1oGvJ"
     },
     "schema": {
       "required": true

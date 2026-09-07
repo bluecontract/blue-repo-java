@@ -10,7 +10,7 @@
   "observations": {
     "description": "Represents an audit of the observations used to produce the reset value. If multiple observations were necessary to produce the reset value, the aggregation method should be defined on the payout.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "A2eu6mCquL2q8sKhpvBAfkp3b6uAG8GdE22hHTvvQEMi"
@@ -37,7 +37,7 @@
   "resetValue": {
     "description": "Specifies the reset or fixing value. The fixing value could be a cash price, interest rate, or other value.",
     "type": {
-      "blueId": "D6pT9tDvB6nnaNaPVHodxcm2djqTNykgt6VJoD2uDq4M"
+      "blueId": "Eq9qZQHxqGHrhdWMG4ATnQxDGtQB2E3EkW56WnwBvYkg"
     },
     "schema": {
       "required": true

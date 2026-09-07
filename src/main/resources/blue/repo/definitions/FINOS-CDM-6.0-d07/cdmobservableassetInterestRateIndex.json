@@ -4,13 +4,13 @@
   "FloatingRateIndex": {
     "description": "An interest rate index which can change over time, e.g. the SONIA (Sterling Overnight Index Average) in the UK.\n",
     "type": {
-      "blueId": "FEciYgwDPBCoe3t5CbhmZgzFsYGjaDrE4MC6fMssK8kS"
+      "blueId": "6kH7f8RoLuuP4MXAPC3NaeGpQVLUgQrXCTpx1QZpNYqf"
     }
   },
   "InflationIndex": {
     "description": "An index that measures inflation in a specific market, e.g. the US Consumer Price Index.",
     "type": {
-      "blueId": "ALcifh12oA5VR8MK7Yvmj7vNGwxB51YSHriX5fLRoB7d"
+      "blueId": "vsv57yBArFZjHCerd1ibJnQiireaFSnTaECgDQsXjcC"
     }
   }
 }

@@ -3,6 +3,7 @@ package blue.repo;
 import blue.language.BlueRuntime;
 import blue.language.codec.jackson.UncheckedObjectMapper;
 import blue.language.mapping.TypeClassResolver;
+import blue.language.merge.ResolvedSnapshot;
 import blue.language.model.TypeBlueId;
 import blue.language.model.Node;
 import blue.language.processor.model.ChannelContract;
@@ -140,7 +141,8 @@ class BlueRepositoryTest {
         assertEquals(CoordinationTypes.CHAT_MESSAGE.blueId(), messageNode.getType().getBlueId());
         assertEquals("hello", messageNode.getProperties().get("message").getValue());
 
-        Object converted = runtime.mapping().fromNode(messageNode, Object.class);
+        Object converted = runtime.mapping().fromNode(
+                runtime.language().preprocessing().preprocess(messageNode), Object.class);
         assertTrue(converted instanceof ChatMessage);
         assertEquals("hello", ((ChatMessage) converted).getMessage());
     }
@@ -351,7 +353,8 @@ class BlueRepositoryTest {
         assertEquals(largeAmount, ((CaptureFundsRequested) converted).getAmount());
 
         Node roundTripped = runtime.mapping().toNode(converted);
-        Object convertedAgain = runtime.mapping().fromNode(roundTripped, Object.class);
+        Object convertedAgain = runtime.mapping().fromNode(
+                runtime.language().preprocessing().preprocess(roundTripped), Object.class);
         assertEquals(largeAmount, ((CaptureFundsRequested) convertedAgain).getAmount());
     }
 
@@ -382,13 +385,10 @@ class BlueRepositoryTest {
 
         Node document = UncheckedObjectMapper.YAML_MAPPER.readValue(counterWorkflowDocumentYaml(), Node.class)
                 .blue(repo.importsDirective());
-        Node resolved = runtime.language().resolution().resolve(
+        ResolvedSnapshot snapshot = runtime.language().snapshots().resolve(
                 runtime.language().preprocessing().preprocess(document));
-        Node incrementImpl = resolved.getContracts()
-                .getProperties()
-                .get("incrementImpl");
-
-        Object mapped = runtime.mapping().fromNode(incrementImpl, Object.class);
+        Object mapped = runtime.mapping().fromSnapshot(
+                snapshot, "/contracts/incrementImpl", Object.class);
 
         assertTrue(mapped instanceof SequentialWorkflowOperation);
         SequentialWorkflowOperation operation = (SequentialWorkflowOperation) mapped;
@@ -402,6 +402,59 @@ class BlueRepositoryTest {
         Node patch = updateDocument.getChangeset().get(0);
         assertEquals("replace", patch.getProperties().get("op").getValue());
         assertEquals("/count", patch.getProperties().get("path").getValue());
+    }
+
+    @Test
+    void generatedWorkflowRetainsRequiredRequestDeclarationUntilInvocation() throws Exception {
+        BlueRepository repo = BlueRepository.current();
+        try (BlueRuntime runtime = repo.runtimeBuilder().build()) {
+            Node declaration = runtime.language().preprocessing().preprocess(
+                    UncheckedObjectMapper.YAML_MAPPER.readValue(
+                            "contracts:\n"
+                            + "  operation:\n"
+                            + "    type: Coordination/Sequential Workflow Operation\n"
+                            + "    channel: timeline\n"
+                            + "    steps: []\n"
+                            + "    request:\n"
+                            + "      type: Dictionary\n"
+                            + "      schema: {required: true}\n"
+                            + "      text:\n"
+                            + "        type: Text\n"
+                            + "        schema: {required: true, minLength: 2}\n", Node.class)
+                            .blue(repo.importsDirective()));
+            Node prepared = runtime.language().resolution().resolveDefinition(declaration);
+            Node preparedRequest = prepared.getContracts().getProperties().get("operation")
+                    .getProperties().get("request");
+            assertTrue(preparedRequest.getSchema().getRequiredValue());
+            assertTrue(preparedRequest.getProperties().get("text").getSchema().getRequiredValue());
+            assertNull(preparedRequest.getProperties().get("text").getValue());
+
+            // Source has exact referenced header types. Detached expanded Nodes require
+            // snapshot-issued type evidence, so mapping uses this preprocessed Source.
+            Object header = runtime.mapping().fromNode(
+                    declaration.getContracts().getProperties().get("operation"), Object.class);
+            assertTrue(header instanceof SequentialWorkflowOperation);
+            Node mappedRequest = ((SequentialWorkflowOperation) header).getRequest();
+            assertTrue(mappedRequest.getSchema().getRequiredValue());
+            assertNull(mappedRequest.getProperties().get("text").getValue());
+
+            Node invocation = UncheckedObjectMapper.YAML_MAPPER.readValue(
+                    "contracts: {operation: {request: {text: ok}}}", Node.class)
+                    .type(declaration);
+            Node completed = runtime.language().resolution().resolve(invocation);
+            assertEquals("ok", completed.getContracts().getProperties().get("operation")
+                    .getProperties().get("request").getProperties().get("text").getValue());
+            for (String payload : Arrays.asList(
+                    "{}", "contracts: {operation: {request: {}}}",
+                    "contracts: {operation: {request: {text: {name: metadata}}}}",
+                    "contracts: {operation: {request: {text: x}}}",
+                    "contracts: {operation: {request: {text: 12}}}")) {
+                Node invalid = UncheckedObjectMapper.YAML_MAPPER.readValue(payload, Node.class)
+                        .type(declaration);
+                assertThrows(IllegalArgumentException.class,
+                        () -> runtime.language().resolution().resolve(invalid), payload);
+            }
+        }
     }
 
     @Test

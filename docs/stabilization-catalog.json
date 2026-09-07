@@ -1,0 +1,25 @@
+{
+  "schema": "blue-catalog-stabilization-checkpoint/1",
+  "developmentReadinessClaimed": false,
+  "languageBinding": {
+    "schema": "blue-repository-development-input/1",
+    "releaseReadinessClaimed": false,
+    "sourceCommit": "9d600c440cb6d08ac7fa73f8303833b2cce998ba",
+    "sourceTree": "0889b095fdfe4faa0e165de49880e8bb0d01ef71",
+    "version": "3.1.0-dev.9d600c440cb6d08ac7fa73f8303833b2cce998ba",
+    "manifestSha256": "sha256:be0d440e86e4d25a44c77b01eab844e8ccf5cb61facc1c5072b029de78620ff2"
+  },
+  "authoredInputCommit": "3e8f7f7117a7860294e658b15aea45e8c4a44f29",
+  "packages": 9,
+  "definitions": 1108,
+  "repositoryBlueId": "FvABA6GYzprFcB8MHydnvrcaL5yFLvTH1vC9y9JWpt6w",
+  "catalogManifestSha256": "sha256:7e2007521712ecb47204b435993c88569b7c53d67323c291c1149fa4dfd31c00",
+  "providerBundleIdentity": "sha256:3cf38ccf40d430e38d64f7f0595c6cc4a69db07cfe5e06d4c66d964d937a4e33",
+  "verification": {
+    "tests": 66,
+    "failed": 0,
+    "javaRegeneration": "strict no diff",
+    "packedTypeScriptRegeneration": "strict no diff"
+  },
+  "history": "Historical identities retained in metadata; provider serves current identities only, never current content under changed historical IDs."
+}

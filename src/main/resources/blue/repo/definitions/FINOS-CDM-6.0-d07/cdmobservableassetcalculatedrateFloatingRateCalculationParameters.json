@@ -4,7 +4,7 @@
   "applicableBusinessDays": {
     "description": "the business days that are applicable for the calculation.",
     "type": {
-      "blueId": "Ds5a9bChKossVgHEM7Z2TQTCxDXdB2SZhtM9v9Y3mYmM"
+      "blueId": "72qMy7BtF4Y8QyRSVpb2tUTEiBqBzXuZXCR2CCtNCnNM"
     }
   },
   "calculationMethod": {
@@ -37,7 +37,7 @@
   "observationShiftCalculation": {
     "description": "any obervation shift parameters if applicable.",
     "type": {
-      "blueId": "3Bf8GdUj3MKXvh7oTmRmwbssYTyx1Pm6fSQtDQa5uffh"
+      "blueId": "Gq36noga1TfjgUksZ9f6kfUNvjkFPimnx99aeuFLhokU"
     }
   }
 }

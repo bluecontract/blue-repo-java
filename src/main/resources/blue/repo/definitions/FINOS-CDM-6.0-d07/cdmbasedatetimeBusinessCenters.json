@@ -4,10 +4,10 @@
   "businessCenter": {
     "description": "A code identifying one or several business day calendar location(s). The set of business day calendar locations are specified by the business day calendar location enumeration which is maintained by the FpML standard.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "5kncd2YXvmwkRzZPfFr5Ji5fZfkk9WoNmLNAkjcvS9cD"
+      "blueId": "HbVQYbimseNYevNCf9xvr7fQQu92mHCfS5yuPQrQRPWt"
     },
     "schema": {
       "minItems": 0
@@ -21,10 +21,10 @@
   },
   "commodityBusinessCalendar": {
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "HLumy3ihw3YkMVGzNShUKY7ZWZCb7A9yMvGDoaLMqboa"
+      "blueId": "Tki5TqGooy7wkQZVVomFQMGNsVoD9NMXE8CJWi5pdzq"
     },
     "schema": {
       "minItems": 0

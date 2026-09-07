@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("HXL6x5GboEmQeMmrmtmEQQdYkr271G2tDVBXpJxUZxmz")
+@TypeBlueId("Cqp65GHMD1hPUr3dpvbtVtQ28y8PP12ZxWkQa89yoMuE")
 public class CdmProductCommonScheduleAveragingPeriod {
     public static String blueId() {
-        return "HXL6x5GboEmQeMmrmtmEQQdYkr271G2tDVBXpJxUZxmz";
+        return "Cqp65GHMD1hPUr3dpvbtVtQ28y8PP12ZxWkQa89yoMuE";
     }
 
     public static String packageName() {

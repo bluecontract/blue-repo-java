@@ -19,13 +19,13 @@
   "debt": {
     "description": "Specifies the credit rating debt type (e.g. long term, high yield, deposits, ...) associated with the credit rating notation and scale.\n",
     "type": {
-      "blueId": "FXnC4V44iMPEEzRCuT7HaZPV6oQyrxYFSjNtrrkjZNFw"
+      "blueId": "Gtdg8wkMEgnMGXXrLHYM35Tdm9DTEFqRmcBbuUswMmo1"
     }
   },
   "notation": {
     "description": "Specifies The credit rating notation. As it varies among credit rating agencies, FpML doesn't specify a default scheme.\n",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     },
     "schema": {
       "required": true
@@ -40,7 +40,7 @@
   "scale": {
     "description": "Specifies the credit rating scale, with a typical distinction between short term, long term. FpML doesn't specify a default scheme, which is hence not specified as an enumeration as part of the CDM.\n",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     }
   }
 }

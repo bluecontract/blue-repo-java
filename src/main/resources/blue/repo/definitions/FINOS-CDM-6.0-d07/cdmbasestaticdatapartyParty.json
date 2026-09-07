@@ -4,16 +4,16 @@
   "account": {
     "description": "The account that might be associated with the party. At most one account can be specified, as it is expected that this information is used in the context of a contract or legal document where only one account per party can be associated with such object.\n",
     "type": {
-      "blueId": "Ci7ty5zffGzjgsQdhnezMazESuasmjVRABXcDJanwgLf"
+      "blueId": "9hqCtmV9eSLVgLeVxbZjUznnnr5Y6TCMqprBSYfosYe4"
     }
   },
   "businessUnit": {
     "description": "Optional organization unit information used to describe the organization units (e.g. trading desks) involved in a transaction or business process, incl. the contact information (when relevant).\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "EMjJhiDkKtnd6Xy5ATKZRxxn7miYV6i9qRKmbwi8PePK"
+      "blueId": "8gL3tSR1tfof7a1cUVmvTpTdERb5dbwVytQ7PNX63zyf"
     },
     "schema": {
       "minItems": 0
@@ -22,16 +22,16 @@
   "contactInformation": {
     "description": "The postal/street address, telephone number, email address and/or web page. If the contact information is specific to the associated business unit(s) or person (s), it should be associated with those.\n",
     "type": {
-      "blueId": "AWye6DehLS3vyWXet8adWpUZ8kLZYQCWMkCgEK9CoRSR"
+      "blueId": "DjtxBVUBQdKZ1d4eGJxVEZ2fuvb3fJuHETLmXQ8tbY7H"
     }
   },
   "partyId": {
     "description": "The identifier associated with a party, e.g. the 20 digits LEI code.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "AGa4xDzohuMeonuvvfPSohH7tmSdN59ng4Gm6V1AQJmm"
+      "blueId": "7GUFEj7AB7zLWe6ojPQkMX3hscJ2HehSAmPmS5AvHWJL"
     },
     "schema": {
       "minItems": 1
@@ -40,10 +40,10 @@
   "person": {
     "description": "The person(s) who might be associated with the party as part of the execution, contract or legal document.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "C3NyCURgLaHrTtjTpfDUYJnBfR1HhhpQmNSowonp7YHH"
+      "blueId": "gQAsEojbjzPKEcWRcx1CNMj9p5bg4e72bbkod94ysMi"
     },
     "schema": {
       "minItems": 0
@@ -52,10 +52,10 @@
   "personRole": {
     "description": "The role of the person(s)",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "GZevPGzamzSxh8yoRnX4ADVPupYmtwh9tYQvwURzxjmZ"
+      "blueId": "2vARgQZsfQnZaxG7rWqhgcWyYgz1ZSnisVc3rrwdwEct"
     },
     "schema": {
       "minItems": 0

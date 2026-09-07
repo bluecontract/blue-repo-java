@@ -7,7 +7,7 @@
   "steps": {
     "description": "Ordered list of workflow steps. The list order is execution order. A step may expose a named result for later steps,\nbut actual document mutation and event routing still occur through processor-defined effect application.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "9oGn8V6FSVcJYhRfuHRShfWjiHBUqzxVi9StGtHZNfev"

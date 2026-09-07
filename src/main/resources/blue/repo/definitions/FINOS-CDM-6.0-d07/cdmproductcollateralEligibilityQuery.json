@@ -4,7 +4,7 @@
   "agencyRating": {
     "description": "The agency rating based on default risk and creditors claim in event of default associated with specific instrument.\n",
     "type": {
-      "blueId": "HecpRL1z9mNunKs8iVwbjdGKMKf8o5t6v16ewNozwrff"
+      "blueId": "GhCJd961Z3Aa8XemTBHpfGYa56QMuC3EQo9FMDJrrk6P"
     },
     "schema": {
       "required": true
@@ -22,7 +22,7 @@
   "collateralAssetType": {
     "description": "The asset product type.",
     "type": {
-      "blueId": "GYosLnxXxsEormFDHeohsEEMxPt7FWvEs89hCYk6UHXA"
+      "blueId": "78dqZx7T2YUbYetbevkgvVioPcdmqJLx3xK22LQJLjXc"
     },
     "schema": {
       "required": true
@@ -40,7 +40,7 @@
   "issuerName": {
     "description": "Specifies the issuing entity name or LEI.",
     "type": {
-      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
+      "blueId": "4SXnBbvoNdScDw8GbD6krw7TurxZYhnX71YPkgbRvhjE"
     },
     "schema": {
       "required": true

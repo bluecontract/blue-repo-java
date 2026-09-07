@@ -16,7 +16,7 @@
   "equityUnderlierProvisions": {
     "description": "Contains Equity Underlyer provisions regarding jurisdiction and fallbacks.",
     "type": {
-      "blueId": "hBX9rQeKFtms3vxhq7NqDejchRZkpoUMqyHH7qF88rQ"
+      "blueId": "AqQnWhXGgWKYLQSQvaSsLq31Pj4XvG8hRwiqfxhf8q3j"
     }
   },
   "expectedN": {
@@ -61,7 +61,7 @@
   "valuationTerms": {
     "description": "Contains all non-date valuation information.",
     "type": {
-      "blueId": "3RV4JPXGMLbdEEtEMdNSG3rPva1V96fHc2XFGnK9o2r5"
+      "blueId": "J2BbcCY13NDXduegFXusGBgsMLgEEt9JdokbcxQgjpdf"
     },
     "schema": {
       "required": true

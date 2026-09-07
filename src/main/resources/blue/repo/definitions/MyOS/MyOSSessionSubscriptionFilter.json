@@ -4,7 +4,7 @@
   "events": {
     "description": "Optional emitted-event filter. When omitted, all emitted events are included. An empty list includes no emitted events. A non-empty list includes only events matching at least one listed type or pattern.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     }
   },
   "snapshots": {

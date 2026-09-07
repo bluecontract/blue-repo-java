@@ -10,19 +10,19 @@
   "settlementCurrency": {
     "description": "The settlement currency is to be specified when the Settlement Amount cannot be known in advance. The list of valid currencies is not presently positioned as an enumeration as part of the CDM because that scope is limited to the values specified by ISDA and FpML. As a result, implementers have to make reference to the relevant standard, such as the ISO 4217 standard for currency codes.\n",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     }
   },
   "settlementDate": {
     "description": "The date on which the settlement amount will be paid, subject to adjustment in accordance with any applicable business day convention. This component would not be present for a mandatory early termination provision where the cash settlement payment date is the mandatory early termination date.\n",
     "type": {
-      "blueId": "3UpG3PQhfhG9bmZnQgsoceUaLRc1gSZXPo86uTkWL5xo"
+      "blueId": "AR45qW5fRMfdizm8jWmHuJ4VtwUfxFmyq5o92qyqGw28"
     }
   },
   "settlementProvision": {
     "description": "Optionally defines the parameters that regulate a settlement.",
     "type": {
-      "blueId": "9DLtb1CTwAuNnZMocFezNkQ1BC4LYa3VariRYDN18Jtc"
+      "blueId": "3uQTFGH8rTGoWsHyCcxPGmYFfwohg3z3PhQmQdTutw4s"
     }
   },
   "settlementType": {

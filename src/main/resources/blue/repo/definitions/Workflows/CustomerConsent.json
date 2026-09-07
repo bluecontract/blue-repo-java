@@ -32,7 +32,7 @@
     },
     "initialize": {
       "type": {
-        "blueId": "HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX"
+        "blueId": "4twSW1MCdf7UMzfwcu99gcBDZiiND1tSC2YZoFMVNHPf"
       },
       "channel": {
         "type": {
@@ -45,7 +45,7 @@
           {
             "name": "Initialize",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "do": {
               "items": [
@@ -123,7 +123,7 @@
     },
     "revokeConsentImpl": {
       "type": {
-        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+        "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
       },
       "operation": {
         "type": {
@@ -136,7 +136,7 @@
           {
             "name": "Capture",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "do": {
               "items": [
@@ -387,7 +387,7 @@
   "consentDetails": {
     "description": "Generic scope details (merchant id, event categories, requesting contract refs, etc.).",
     "type": {
-      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+      "blueId": "5WQ4tVb4gUUdZa7EfaiUa2XKQwgAurvfYY3ALPauxcAF"
     },
     "keyType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"

@@ -13,10 +13,10 @@
   "creditNotation": {
     "description": "At least two credit notations much be specified.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "vj6R4UJLxafVvD4Kb6AZG34BntgoTm9445T8cscNBEE"
+      "blueId": "6wYTqssjKWVYGNNFV9C61sTiaLLxE2DyfMvQyDGEdc6U"
     },
     "schema": {
       "minItems": 2

@@ -10,16 +10,16 @@
   "exchange": {
     "description": "If the Asset is listed, defines the public exchange of the listing.",
     "type": {
-      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
+      "blueId": "4SXnBbvoNdScDw8GbD6krw7TurxZYhnX71YPkgbRvhjE"
     }
   },
   "excludedReferenceEntity": {
     "description": "Excluded reference entity.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "Aogoj2sCUGRvYLZhVJNntPd3rKjX5XU82C9NYKGNG6EH"
+      "blueId": "3sGWifvaVnWsXgx9BJqFxDLWF429BAUKuSDz5q5jagHF"
     },
     "schema": {
       "minItems": 0
@@ -28,10 +28,10 @@
   "identifier": {
     "description": "Asset Identifiers are used to uniquely identify an Asset, using a specified Asset Identifier Type.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "4oFH9vehkWBHWWKWKPEPwytqoRKUA6mcVgrG7P1XtKRy"
+      "blueId": "BCkHQ5uaVYXD8eL9NYiPRrhiir525o2KMps6Rz6vUZh"
     },
     "schema": {
       "minItems": 1
@@ -46,7 +46,7 @@
   "indexAnnexSource": {
     "description": "A CDS index series annex source.",
     "type": {
-      "blueId": "5m3SsxkRsmH9rTCbqfUv6Zd2wqx6w5yi6EUA3MtvMuAF"
+      "blueId": "97zu6zSwKe6qBq2wG65xCXbFvPPFrxJX6v6mtC6WwoSr"
     }
   },
   "indexAnnexVersion": {
@@ -76,16 +76,16 @@
   "provider": {
     "description": "The organisation that creates or maintains the Index.",
     "type": {
-      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
+      "blueId": "4SXnBbvoNdScDw8GbD6krw7TurxZYhnX71YPkgbRvhjE"
     }
   },
   "relatedExchange": {
     "description": "Provides the related Exchanges, if applicable.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
+      "blueId": "4SXnBbvoNdScDw8GbD6krw7TurxZYhnX71YPkgbRvhjE"
     },
     "schema": {
       "minItems": 0
@@ -100,16 +100,16 @@
   "settledEntityMatrix": {
     "description": "Used to specify the Relevant Settled Entity Matrix when there are settled entities at the time of the trade.",
     "type": {
-      "blueId": "Btov1TSH13XcQmYFbUEQ1y8Fjxf5J824rRWZnp4ykQPE"
+      "blueId": "71Mp7HAq6Zs5V5edjmUACQsuQ8U7gm2yrvwB7sMA8oAF"
     }
   },
   "taxonomy": {
     "description": "Defines the taxonomy of an object by combining a taxonomy source (i.e. the rules to classify the object) and a value (i.e. the output of those rules on the object.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "GXDxn2HwbWwWg9AFSHwfSi4zZ32a3uVojNQmBN96DUvU"
+      "blueId": "DpoHmYGiAN5pS3U8wKxY1SwVnkRBdmAKVeDxsBt9k2L5"
     },
     "schema": {
       "minItems": 0

@@ -12,13 +12,13 @@
   "averagingPeriodIn": {
     "description": "The averaging in period.",
     "type": {
-      "blueId": "HXL6x5GboEmQeMmrmtmEQQdYkr271G2tDVBXpJxUZxmz"
+      "blueId": "Cqp65GHMD1hPUr3dpvbtVtQ28y8PP12ZxWkQa89yoMuE"
     }
   },
   "averagingPeriodOut": {
     "description": "The averaging out period.",
     "type": {
-      "blueId": "HXL6x5GboEmQeMmrmtmEQQdYkr271G2tDVBXpJxUZxmz"
+      "blueId": "Cqp65GHMD1hPUr3dpvbtVtQ28y8PP12ZxWkQa89yoMuE"
     }
   },
   "strikeFactor": {

@@ -7,7 +7,7 @@
   "channels": {
     "description": "Same-scope contract-map keys of Timeline Channel contracts included in this composite. The list order is not a\ncross-timeline ordering rule; event ordering must be established by the feeder/provider layer and deterministic\nprocessor sorting.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"

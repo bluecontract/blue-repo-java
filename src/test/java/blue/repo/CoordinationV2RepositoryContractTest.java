@@ -143,7 +143,8 @@ class CoordinationV2RepositoryContractTest {
 
         Node authored = runtime.mapping().toNode(entry)
                 .properties("providerSequence", new Node().value(BigInteger.valueOf(17)));
-        Object roundTripped = runtime.mapping().fromNode(authored, Object.class);
+        Object roundTripped = runtime.mapping().fromNode(
+                runtime.language().preprocessing().preprocess(authored), Object.class);
 
         assertTrue(roundTripped instanceof TimelineEntry);
         assertEquals(timestamp, ((TimelineEntry) roundTripped).getTimestamp());

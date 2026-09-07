@@ -4,7 +4,7 @@
   "businessCenter": {
     "description": "Specifies the location where the exercise must be reported, e.g. where the exercise notice receiver is based.",
     "type": {
-      "blueId": "5kncd2YXvmwkRzZPfFr5Ji5fZfkk9WoNmLNAkjcvS9cD"
+      "blueId": "HbVQYbimseNYevNCf9xvr7fQQu92mHCfS5yuPQrQRPWt"
     },
     "schema": {
       "required": true

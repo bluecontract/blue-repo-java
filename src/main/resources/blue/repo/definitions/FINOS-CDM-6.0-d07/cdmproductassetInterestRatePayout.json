@@ -4,19 +4,19 @@
   "bondReference": {
     "description": "Reference to a bond underlier to represent an asset swap or Condition Precedent Bond.",
     "type": {
-      "blueId": "DPtpu2G5jh663WcgntprZ7GpNDZUNv1hP1Ne6QaSnGMq"
+      "blueId": "3XUwpeG8Rb6vKyvfK4s1gtS24iWf9BADoec8gGHY75UE"
     }
   },
   "calculationPeriodDates": {
     "description": "The parameters used to generate the calculation period dates schedule, including the specification of any initial or final stub calculation periods.\n",
     "type": {
-      "blueId": "DfcGaXUQetcXghmMMauh7ikEza42JbwqRdRdyWcm1C6N"
+      "blueId": "AgxWN3CGeZg5jb1YxgiqKMfub6mRzgWsL1L8JiUfo6ap"
     }
   },
   "cashflowRepresentation": {
     "description": "The cashflow representation of the swap stream.",
     "type": {
-      "blueId": "B4oG9gALDizVew21gcWwiHX4E6D4h96s4kuxLgxD7GB8"
+      "blueId": "FYxG1hEVvUkRtSUsFbh7h5u7A1aGYHKYDHz7JbVozTL3"
     }
   },
   "compoundingMethod": {
@@ -28,13 +28,13 @@
   "dayCountFraction": {
     "description": "The day count fraction. The cardinality has been relaxed when compared with the FpML interest rate swap for the purpose of accommodating standardized credit default swaps which DCF is not explicitly stated as part of the economic terms. The data rule InterestRatePayout_dayCountFraction requires that the DCF be stated for interest rate products.\n",
     "type": {
-      "blueId": "HQvDRU2HRkECU2uHD3Ej7VhhyWVYzBxPs79CZfFYccWc"
+      "blueId": "AvTBCPxiz4BxVwNzoba3DARri3sSLCRJJatgP9qbA6ha"
     }
   },
   "discountingMethod": {
     "description": "The parameters specifying any discounting conventions that may apply. This element must only be included if discounting applies.\n",
     "type": {
-      "blueId": "nQ83jRgkpNbMPVNZtMvKxVNog4Z5LhzJe47ocRpDCPb"
+      "blueId": "7KfVXbt71DBCK8osgNFNvwpeKA3eGShy8ZyevQhUPURQ"
     }
   },
   "fixedAmount": {
@@ -58,13 +58,13 @@
   "paymentDate": {
     "description": "The payment date, where only one date is specified, as for the FRA product.",
     "type": {
-      "blueId": "J1kGTdAb67L1bPgvuKZ86jTR9UZJomnkgA6hcnVfnwfD"
+      "blueId": "397tsASyRDDk2UNpFxXBdpXar7RwXd5MEejzPtRzcxB2"
     }
   },
   "paymentDates": {
     "description": "The payment date schedule, as defined by the parameters that are needed to specify it, either in a parametric way or by reference to another schedule of dates (e.g. the reset dates).\n",
     "type": {
-      "blueId": "53mGNaWEbqDyzs1WnqizJcci5WSeG5YDV6e97svgRLve"
+      "blueId": "7zPK1vPjFn24zeEbHdA7GsAu86EAQUA1ydzstxubuJ1Z"
     }
   },
   "paymentDelay": {
@@ -76,31 +76,31 @@
   "priceQuantity": {
     "description": "Each payout leg must implement the quantity concept as a 'resolvable' type, which allows for different payout legs to be linked to each other (e.g. in the case of cross-curreny products).\n",
     "type": {
-      "blueId": "9H3s5nDTov6DTnnVBM5XaiAV2vZvPEep33DWccdc6mXq"
+      "blueId": "4zGndk3xTxnpQsDPD9H9xCSaBqZUcGYZuePtcYsyRmUQ"
     }
   },
   "principalPayment": {
     "description": "The specification of the principal exchange. Optional as only applicable in the case of cross-currency or zero-coupon swaps with a final payment.\n",
     "type": {
-      "blueId": "6ZdgPDgDd1WfACEQNiQTurhX1xdBtsoPkMNjRhDD9Myo"
+      "blueId": "6wUoFP5UmEKR9at5G6ibsV1Dnj5S45cXof8KegCFk7Yv"
     }
   },
   "rateSpecification": {
     "description": "The specification of the rate value(s) applicable to the contract using either a floating rate calculation, a single fixed rate, a fixed rate schedule, or an inflation rate calculation.\n",
     "type": {
-      "blueId": "HBrMg5FXzJ1xe7cZfdnvk3h8VUcubS4i5XJvxpREkAsM"
+      "blueId": "8Ppds8D8ZozkCAvcoW7stLKn6Udb4mDKgiV7diVDUMEk"
     }
   },
   "resetDates": {
     "description": "The reset dates schedule, i.e. the dates on which the new observed index value is applied for each period and the interest rate hence begins to accrue.\n",
     "type": {
-      "blueId": "77tQujWvEohG7Fop3JyiQCJJA8KASrwjH1vVCtkmJwTj"
+      "blueId": "BVjQetKfgcmPKdhJVyFe8PcLAdrw86SaXK1E9t1QqEk3"
     }
   },
   "settlementTerms": {
     "description": "Each payout leg must specifies its settlement terms, including the delivery type (i.e. cash vs physical, and their respective terms), the transfer type (DvP etc.) and settlement date, if any.\n",
     "type": {
-      "blueId": "BRJ2J4zKmK8CLQta8gGcSboyer9Sby49nV8HopjaFM7g"
+      "blueId": "HcWZydDKaZi3AKGuCL7XfsxA2EhP9kxwSwnPfpbj2cpi"
     }
   },
   "spreadCalculationMethod": {
@@ -112,7 +112,7 @@
   "stubPeriod": {
     "description": "The stub calculation period amount parameters. This element must only be included if there is an initial or final stub calculation period. Even then, it must only be included if either the stub references a different floating rate tenor to the regular calculation periods, or if the stub is calculated as a linear interpolation of two different floating rate tenors, or if a specific stub rate or stub amount has been negotiated.\n",
     "type": {
-      "blueId": "AFvjEnZ9xRKbS4LQzB8u8RvMwHeDXZJzX9LfN8boZZaP"
+      "blueId": "9KkiMdbvugTXu2zaDrbt3hGcEzav15A8HT3ytrepE7Cp"
     }
   }
 }

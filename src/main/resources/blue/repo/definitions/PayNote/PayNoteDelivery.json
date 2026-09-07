@@ -26,7 +26,7 @@
     },
     "initialize": {
       "type": {
-        "blueId": "HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX"
+        "blueId": "4twSW1MCdf7UMzfwcu99gcBDZiiND1tSC2YZoFMVNHPf"
       },
       "channel": {
         "type": {
@@ -39,7 +39,7 @@
           {
             "name": "Initialize Delivery State",
             "type": {
-              "blueId": "8FyswTq5moAS2hexCNqdEVSfPbuwesexqrck7Up5gtxp"
+              "blueId": "eo9QAHKNLzmtfNURnYkB5eEwisF62zQArU8LFTFm8pZ"
             },
             "changeset": {
               "items": [
@@ -147,7 +147,7 @@
     },
     "updateTransactionIdentificationStatusImpl": {
       "type": {
-        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+        "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
       },
       "operation": {
         "type": {
@@ -160,7 +160,7 @@
           {
             "name": "ClassifyIdentificationResult",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "do": {
               "items": [
@@ -626,7 +626,7 @@
     },
     "acceptPayNoteImpl": {
       "type": {
-        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+        "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
       },
       "operation": {
         "type": {
@@ -639,7 +639,7 @@
           {
             "name": "CaptureAcceptanceTimestamp",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "entry": {
               "type": {
@@ -1405,7 +1405,7 @@
     },
     "rejectPayNoteImpl": {
       "type": {
-        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+        "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
       },
       "operation": {
         "type": {
@@ -1418,7 +1418,7 @@
           {
             "name": "CaptureRejectionReason",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "entry": {
               "type": {
@@ -2246,7 +2246,7 @@
     },
     "reportDeliveryErrorImpl": {
       "type": {
-        "blueId": "6rnGvP1BUsBpbtvuvJ1vy6hS7psoUJVBEXXsFeRma82V"
+        "blueId": "3zJs3fKBPAi8hRZdBrWwzdyNaAs2ZggcVfR35JWnA3ah"
       },
       "operation": {
         "type": {
@@ -2259,7 +2259,7 @@
           {
             "name": "CaptureDeliveryFailureReason",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "do": {
               "items": [
@@ -2400,22 +2400,22 @@
   "payNoteBootstrapRequest": {
     "description": "PayNote bootstrap request details.",
     "type": {
-      "blueId": "GT7kXB7fBv9bKxn8ZM99E4XUaHecnGpMGZ5NMsB4ekDq"
+      "blueId": "8nx3EwhHdidxDHznKPvGvxzafUug7UbBKBgELkv4hek7"
     },
     "document": {
       "type": {
-        "blueId": "DivLdwvVivwHNakzhjFjoG8bpwZLcyxFMinziyEkpWc8"
+        "blueId": "55X22NGwhbLqnj5aYjKvYzZe2ZcH3H3tNFz99vRVUnzr"
       }
     }
   },
   "paymentMandateBootstrapRequest": {
     "description": "Optional Payment Mandate bootstrap request details for Delivery flows that require mandate attachment before proposal exposure.",
     "type": {
-      "blueId": "GT7kXB7fBv9bKxn8ZM99E4XUaHecnGpMGZ5NMsB4ekDq"
+      "blueId": "8nx3EwhHdidxDHznKPvGvxzafUug7UbBKBgELkv4hek7"
     },
     "document": {
       "type": {
-        "blueId": "25WNYVoRMxNwVV1gBiMnBNgT1nQBpkC8wbqCTeR8SfLm"
+        "blueId": "BoZJ1PFmM5y87ZrcayXT6LyfFSR8HFepoxFY1qHqjdoQ"
       }
     }
   },

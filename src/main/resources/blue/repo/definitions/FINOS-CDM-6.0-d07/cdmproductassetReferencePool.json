@@ -4,10 +4,10 @@
   "referencePoolItem": {
     "description": "This type contains all the constituent weight and reference information.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "AqGS2SguERoZQ12B22inuBpRxBEr8pgymQHLHSoWbCWo"
+      "blueId": "H2c7HVhNxEK58Xbwu6nD1WiipD31jNvGh9rKzurS9Fwv"
     },
     "schema": {
       "minItems": 1

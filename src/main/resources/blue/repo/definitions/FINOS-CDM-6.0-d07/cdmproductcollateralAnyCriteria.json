@@ -3,10 +3,10 @@
   "description": "Used to combine two or more Collateral Criteria using OR logic.",
   "anyCriteria": {
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "this#0"
+      "blueId": "4PomKHd5RQDs3gKG4uKXCAUX2cCJjzWQYPfeyFT6zyKv#3"
     },
     "schema": {
       "minItems": 2

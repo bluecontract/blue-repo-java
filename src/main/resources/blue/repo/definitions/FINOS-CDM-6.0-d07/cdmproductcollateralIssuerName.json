@@ -3,7 +3,7 @@
   "issuerName": {
     "description": "Specifies the issuing entity name or LEI.",
     "type": {
-      "blueId": "J5hsqA8x6vAprJRs7gFhvm5bsp5TZNBgEdhytAapat8y"
+      "blueId": "4SXnBbvoNdScDw8GbD6krw7TurxZYhnX71YPkgbRvhjE"
     },
     "schema": {
       "required": true

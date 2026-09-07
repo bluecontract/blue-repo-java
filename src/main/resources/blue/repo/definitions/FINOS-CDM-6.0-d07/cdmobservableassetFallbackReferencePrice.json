@@ -4,16 +4,16 @@
   "calculationAgentDetermination": {
     "description": "The calculation agent will decide the rate.",
     "type": {
-      "blueId": "BmkE3R86Mi5VSgGXWARzCmJ1FbnwnZDnHtccZ6MSGnRQ"
+      "blueId": "2p5h5L3rfyQFoJioAjrRzJXVz8kyab6xJBLXjPHTS145"
     }
   },
   "fallBackSettlementRateOption": {
     "description": "This settlement rate option will be used in its place.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "5zMhYAXcxtwbFXQeEYr3vWu78daHfMbFUrFgair7M7sf"
+      "blueId": "6bfVqkD5BTULGi7nvQqLuTAN8L1ej4h9No8eVcj1E1yp"
     },
     "schema": {
       "minItems": 0

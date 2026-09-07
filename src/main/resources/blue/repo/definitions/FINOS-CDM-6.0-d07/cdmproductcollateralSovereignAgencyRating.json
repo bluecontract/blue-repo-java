@@ -3,7 +3,7 @@
   "sovereignAgencyRating": {
     "description": "Represents an agency rating based on default risk of the country of the issuer.",
     "type": {
-      "blueId": "HecpRL1z9mNunKs8iVwbjdGKMKf8o5t6v16ewNozwrff"
+      "blueId": "GhCJd961Z3Aa8XemTBHpfGYa56QMuC3EQo9FMDJrrk6P"
     },
     "schema": {
       "required": true

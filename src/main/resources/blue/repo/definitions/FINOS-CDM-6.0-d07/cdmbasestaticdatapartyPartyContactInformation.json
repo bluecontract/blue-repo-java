@@ -10,10 +10,10 @@
   "businessUnit": {
     "description": "Optional organization unit information used to describe the organization units (e.g. trading desks) involved in a transaction or business process, incl. the contact information (when relevant).\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "EMjJhiDkKtnd6Xy5ATKZRxxn7miYV6i9qRKmbwi8PePK"
+      "blueId": "8gL3tSR1tfof7a1cUVmvTpTdERb5dbwVytQ7PNX63zyf"
     },
     "schema": {
       "minItems": 0
@@ -22,7 +22,7 @@
   "contactInformation": {
     "description": "The postal/street address, telephone number, email address and/or web page. If the contact information is specific to the associated business unit(s), it should be associated with those.\n",
     "type": {
-      "blueId": "AWye6DehLS3vyWXet8adWpUZ8kLZYQCWMkCgEK9CoRSR"
+      "blueId": "DjtxBVUBQdKZ1d4eGJxVEZ2fuvb3fJuHETLmXQ8tbY7H"
     }
   },
   "partyReference": {
@@ -34,10 +34,10 @@
   "person": {
     "description": "Optional information about people involved in a transaction or business process. (These are employees of the party.)\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "C3NyCURgLaHrTtjTpfDUYJnBfR1HhhpQmNSowonp7YHH"
+      "blueId": "gQAsEojbjzPKEcWRcx1CNMj9p5bg4e72bbkod94ysMi"
     },
     "schema": {
       "minItems": 0

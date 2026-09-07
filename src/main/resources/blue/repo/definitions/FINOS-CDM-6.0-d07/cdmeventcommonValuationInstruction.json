@@ -13,10 +13,10 @@
   "valuation": {
     "description": "Contains all information related to a valuation.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "7fUqjcMznRtsQXbh382nhVNPoG8pPi1kH6C6QRJ1NXii"
+      "blueId": "GVzVCm4effowcvvDohPLsXMdCXJEAaFscsqkzMd7bCLj"
     },
     "schema": {
       "minItems": 1

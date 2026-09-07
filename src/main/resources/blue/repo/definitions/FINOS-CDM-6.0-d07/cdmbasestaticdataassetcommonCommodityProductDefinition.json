@@ -10,7 +10,7 @@
   "exchangeId": {
     "description": "Identifies the exchange from which the reference price should be sourced, using the scheme at the following url: http://www.fpml.org/coding-scheme/external/exchange-id-MIC-1-0\n",
     "type": {
-      "blueId": "HvrBWWRL9WzJPU9bs48T3Uf9CcUgCfqtEszZPN3tYS3n"
+      "blueId": "5iPMGnUQ47qWAEhhWUSY4KQsWoRW9zs5xJk2fx3yMLxL"
     },
     "schema": {
       "required": true
@@ -19,13 +19,13 @@
   "priceSource": {
     "description": "Specifies a publication that provides the commodity price, including, where applicable the details of where in the publication the price is published.  Applicable when the commodity reference price is not a futures contract\n",
     "type": {
-      "blueId": "6ndw1qraVosKGtrHUyCSNZ4yHpydKg4aKVNdbEEZfoMd"
+      "blueId": "CLMPVZXhcocMBQS9HFSqaXEdzEqHqiMaLp2oL1TMNVAy"
     }
   },
   "referenceFramework": {
     "description": "Specifies the type of commodity.",
     "type": {
-      "blueId": "AFMZa2hViXkmuEYd3tzHVx5sJAXHE2RH9Drcb1MV7xxa"
+      "blueId": "HDT1YvxXgi3cM2yks6rSRWPGwk9zAhbCjYs4AV4jbGo1"
     },
     "schema": {
       "required": true

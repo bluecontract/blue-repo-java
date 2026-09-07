@@ -4,7 +4,7 @@
   "exchangedCurrency1": {
     "description": "This is the first of the two currency flows that define a single leg of a standard foreign exchange transaction.\n",
     "type": {
-      "blueId": "4avwUzMQg7QgQ85Cxki1idkaeph4h4ov71aawwtQYSUJ"
+      "blueId": "5N5fmAj1fYPij9YyBY5NptjR3QyMaifTJ3TYBeM4shh5"
     },
     "schema": {
       "required": true
@@ -13,7 +13,7 @@
   "exchangedCurrency2": {
     "description": "This is the second of the two currency flows that define a single leg of a standard foreign exchange transaction.\n",
     "type": {
-      "blueId": "4avwUzMQg7QgQ85Cxki1idkaeph4h4ov71aawwtQYSUJ"
+      "blueId": "5N5fmAj1fYPij9YyBY5NptjR3QyMaifTJ3TYBeM4shh5"
     },
     "schema": {
       "required": true

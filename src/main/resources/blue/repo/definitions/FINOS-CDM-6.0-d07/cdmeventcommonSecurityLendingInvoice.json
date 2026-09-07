@@ -13,10 +13,10 @@
   "billingRecord": {
     "description": "The billing records contained within the invoice",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "HC7vpNX6HuCaSUFftb4rqporkfy3yH1WszW793XKYCmB"
+      "blueId": "7uCUezyWQbNKTyF1uma87YPqVsXXn94hDkPhK6tQvLZj"
     },
     "schema": {
       "minItems": 1
@@ -34,10 +34,10 @@
   "billingSummary": {
     "description": "The billing summaries contained within the invoice",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "5JQz9gQGhNz24NGJKaxuHWqf2RvutiRvHzTTKMJC1Apq"
+      "blueId": "DHbPYfGD5mEptTiqsctQXVwoTY94tB8wuqyvSUcnsBef"
     },
     "schema": {
       "minItems": 1
@@ -46,7 +46,7 @@
   "receivingParty": {
     "description": "The party receiving the invoice",
     "type": {
-      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
+      "blueId": "552tQMPt3GF4sBRCYRmWLgaHG183EE1aMKbEinn1oGvJ"
     },
     "schema": {
       "required": true
@@ -55,7 +55,7 @@
   "sendingParty": {
     "description": "The party issuing the invoice",
     "type": {
-      "blueId": "DqdehuAibH9Q4aC2zYPJp37ysFFDSYwuUYRNYQCeevFd"
+      "blueId": "552tQMPt3GF4sBRCYRmWLgaHG183EE1aMKbEinn1oGvJ"
     },
     "schema": {
       "required": true

@@ -1,0 +1,131 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+import java.nio.file.Files
+import java.nio.file.LinkOption
+import java.nio.file.StandardCopyOption
+import java.security.MessageDigest
+import java.util.zip.ZipFile
+
+// Local immutable development staging follows the BEX export task pattern.
+// It uses the existing reviewed Language binding and never invokes publication.
+def exportDigest = { byte[] bytes -> MessageDigest.getInstance('SHA-256').digest(bytes).encodeHex().toString() }
+def stageDirectory = layout.buildDirectory.dir('development-publications')
+def developmentStage = tasks.register('stageDevelopmentArtifacts', Sync) {
+    group = 'build'
+    into(stageDirectory)
+    ['jar', 'sourcesJar', 'javadocJar'].each { name ->
+        from(tasks.named(name, Jar).flatMap { it.archiveFile })
+    }
+    dependsOn(tasks.named('generatePomFileForMavenPublication'))
+    from(layout.buildDirectory.file('publications/maven/pom-default.xml')) {
+        rename { "blue-repo-java-${project.version}.pom" }
+    }
+}
+
+tasks.register('assembleImmutableStagedRepository') {
+    group = 'build'
+    description = 'Assembles commit-bound local catalog artifacts without publication or a release-readiness claim.'
+    dependsOn(developmentStage)
+    doLast {
+        if (!project.ext.blueDevelopmentMode || !project.ext.has('blueLanguageDevelopmentBinding'))
+            throw new GradleException('Immutable catalog export requires the verified development Language binding')
+        if (JavaVersion.current() != JavaVersion.VERSION_17)
+            throw new GradleException('Immutable catalog export requires a Java 17 Gradle launcher')
+        String version = project.version.toString()
+        def match = version =~ /[0-9]+\.[0-9]+\.[0-9]+-dev\.([0-9a-f]{40})/
+        boolean localRc = project.ext.blueLocalRcMode
+        if (localRc ? !(version ==~ /3\.0\.0-rc\.[1-9][0-9]*/) : !match.matches())
+            throw new GradleException('Catalog version must select the exact development source or the local RC line')
+        def git = { String... arguments ->
+            def process = new ProcessBuilder((['/usr/bin/git', '-C', project.projectDir.absolutePath] + arguments.toList()) as List<String>).start()
+            String output = process.inputStream.getText('UTF-8')
+            String error = process.errorStream.getText('UTF-8')
+            if (process.waitFor() != 0) throw new GradleException("Cannot read catalog source state: ${error}")
+            output
+        }
+        String commit = git('rev-parse', 'HEAD').trim()
+        String tree = git('rev-parse', 'HEAD^{tree}').trim()
+        if (!(commit ==~ /[0-9a-f]{40}/) || (!localRc && match.group(1) != commit) || !(tree ==~ /[0-9a-f]{40}/) || git('status', '--porcelain', '-z') != '')
+            throw new GradleException('Immutable catalog export requires a clean checkout matching the version commit')
+        String output = providers.gradleProperty('stagedDependencyRepository').orNull
+        if (!output || !new File(output).isAbsolute())
+            throw new GradleException('Provide -PstagedDependencyRepository=/absolute/new/repository')
+        def target = new File(output).toPath().toAbsolutePath().normalize()
+        def staging = stageDirectory.get().asFile.toPath().toAbsolutePath().normalize()
+        if (target.startsWith(staging) || staging.startsWith(target))
+            throw new GradleException('Mutable and immutable catalog repositories must be disjoint')
+        def parent = target.parent
+        Files.createDirectories(parent)
+        def temporary = Files.createTempDirectory(parent, target.fileName.toString() + '.assembling-')
+        try {
+            def kinds = [runtime: '.jar', pom: '.pom', sources: '-sources.jar', javadoc: '-javadoc.jar']
+            Set<String> required = kinds.values().collect { "blue-repo-java-${version}${it}".toString() } as Set
+            Set<String> actual = [] as Set
+            Files.walk(staging).withCloseable { paths -> paths.forEach { path ->
+                if (Files.isSymbolicLink(path)) throw new GradleException('Symbolic link in catalog staging')
+                if (Files.isRegularFile(path, LinkOption.NOFOLLOW_LINKS)) actual.add(staging.relativize(path).toString())
+            } }
+            if (required != actual) throw new GradleException('Catalog staging artifact closure differs')
+            def artifacts = []
+            kinds.sort().each { kind, extension ->
+                String name = "blue-repo-java-${version}${extension}"
+                String relative = "blue/repo/blue-repo-java/${version}/${name}"
+                def destination = temporary.resolve(relative)
+                Files.createDirectories(destination.parent)
+                Files.copy(staging.resolve(name), destination)
+                byte[] bytes = Files.readAllBytes(destination)
+                String hash = exportDigest(bytes)
+                Files.writeString(temporary.resolve(relative + '.sha256'), hash + '  ' + name + '\n')
+                artifacts.add([coordinate: "blue.repo:blue-repo-java:${version}", kind: kind,
+                    path: relative, checksumPath: relative + '.sha256', bytes: bytes.length, sha256: 'sha256:' + hash])
+            }
+            File catalogFile = file('src/main/resources/blue/repo/manifest.json')
+            def catalog = new JsonSlurper().parse(catalogFile)
+            String catalogDigest = exportDigest(catalogFile.bytes)
+            File runtime = staging.resolve("blue-repo-java-${version}.jar").toFile()
+            new ZipFile(runtime).withCloseable { jar ->
+                def entry = jar.getEntry('blue/repo/manifest.json')
+                if (entry == null || exportDigest(jar.getInputStream(entry).bytes) != catalogDigest)
+                    throw new GradleException('Packaged catalog manifest differs from source')
+            }
+            def language = project.ext.blueLanguageDevelopmentBinding
+            String pom = staging.resolve("blue-repo-java-${version}.pom").toFile().getText('UTF-8')
+            if (!pom.contains('<version>' + language.pin.version + '</version>') || pom.contains('SNAPSHOT'))
+                throw new GradleException('Catalog POM does not retain the exact development Language dependency')
+            def manifest = new TreeMap([
+                schema: localRc ? 'blue-repository-local-rc-repository/1.0' : 'blue-repository-development-repository/1.0', groupId: 'blue.repo', version: version,
+                stagePurpose: localRc ? 'LOCAL_RC' : 'DEVELOPMENT', releaseReadinessClaimed: false, sourceDirty: false,
+                sourceCommit: commit, sourceTree: tree, builtWithJava: 17,
+                languageVersion: language.pin.version, languageSourceCommit: language.pin.sourceCommit,
+                languageSourceTree: language.pin.sourceTree, languageRepositoryManifestIdentity: language.pin.manifestSha256,
+                catalogManifestIdentity: 'sha256:' + catalogDigest,
+                repositoryVersionBlueId: catalog.repositoryVersionBlueId,
+                registryPackageIdentities: catalog.registryPackageIdentities,
+                providerBundleIdentity: catalog.providerBundleIdentity,
+                providerSourceSha256: catalog.providerSourceSha256,
+                artifacts: artifacts
+            ])
+            byte[] json = (JsonOutput.prettyPrint(JsonOutput.toJson(manifest)) + '\n').getBytes('UTF-8')
+            Files.write(temporary.resolve('artifact-manifest.json'), json)
+            Files.writeString(temporary.resolve('artifact-manifest.json.sha256'), exportDigest(json) + '  artifact-manifest.json\n')
+            def fileTree = { directory ->
+                Map<String, String> entries = new TreeMap<>()
+                Files.walk(directory).withCloseable { paths -> paths.forEach { path ->
+                    if (Files.isSymbolicLink(path)) throw new GradleException('Symbolic link in immutable catalog repository')
+                    if (Files.isRegularFile(path, LinkOption.NOFOLLOW_LINKS))
+                        entries[directory.relativize(path).toString()] = exportDigest(Files.readAllBytes(path))
+                } }
+                entries
+            }
+            if (Files.exists(target, LinkOption.NOFOLLOW_LINKS)) {
+                if (!Files.isDirectory(target, LinkOption.NOFOLLOW_LINKS) || fileTree(target) != fileTree(temporary))
+                    throw new GradleException("Immutable catalog destination already has different bytes: ${target}")
+            } else {
+                Files.move(temporary, target, StandardCopyOption.ATOMIC_MOVE)
+            }
+            logger.lifecycle("Immutable catalog repository: ${target}")
+        } finally {
+            if (Files.exists(temporary)) project.delete(temporary.toFile())
+        }
+    }
+}

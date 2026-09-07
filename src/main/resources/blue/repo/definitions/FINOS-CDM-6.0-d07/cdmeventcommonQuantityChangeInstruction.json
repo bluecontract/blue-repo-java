@@ -4,10 +4,10 @@
   "change": {
     "description": "Quantity by which the trade is being increased, decreased or replaced, and the price at which such quantity change is agreed. The quantity change should always be specified as a positive number, with the direction (increase/decrease/replacement) being specified by the direction enumeration. A fee can also be associated to the quantity change by specifying a Price component of type CashPrice, including the corresponding settlement date and direction.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "4XEYGgCSfXx2tFwmQjMsXhuwaCjsNZ42jtKAcr8itiqe"
+      "blueId": "CCGvuYPt9fqEowAAnKsnMG5h7xxZFx89FoEtThU4V2gL"
     },
     "schema": {
       "minItems": 1
@@ -25,10 +25,10 @@
   "lotIdentifier": {
     "description": "Identifier for the new lot (in case of increase) or for the existing lot to be changed(in case of decrease or replacement). This optional attribute is mandatory in case of a decrease or replacement if the initial trade state contains multiple trade lots.\n",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "2uYMDSb9jahYcE91VXzzWYsnUVct3k5thb1czx4jPYF7"
+      "blueId": "DsoHoM8aVPzAWigjVwEnfcVhA5cKyYixMbZuMGC1NLJZ"
     },
     "schema": {
       "minItems": 0

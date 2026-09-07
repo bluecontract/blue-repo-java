@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.mandate.DocumentResponderMandate;
 
-@TypeBlueId("2cPeR9aSap7oU5jRtc8EGFnZJNGd1yyzPaEvZqgvBweJ")
+@TypeBlueId("251Co4qm4qk7XDPRDvqKMGEbAjrdnrE2V1U6UHriXssB")
 public class MyOSDocumentBootstrapMandate extends DocumentResponderMandate {
     public static String blueId() {
-        return "2cPeR9aSap7oU5jRtc8EGFnZJNGd1yyzPaEvZqgvBweJ";
+        return "251Co4qm4qk7XDPRDvqKMGEbAjrdnrE2V1U6UHriXssB";
     }
 
     public static String packageName() {

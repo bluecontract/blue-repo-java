@@ -4,13 +4,13 @@
   "feeAmountSchedule": {
     "description": "The exercise fee amount schedule. The fees are expressed as currency amounts. The currency of the fee is assumed to be that of the notional schedule referenced.\n",
     "type": {
-      "blueId": "5n3DU8PA11nxzet1RS4oAJMsF4SCnmNLz42y6Yi4LqYe"
+      "blueId": "7ssH9enyao5CduUDkKpruEiB748sheBsfqM9C36Uf8Lx"
     }
   },
   "feePaymentDate": {
     "description": "The date on which exercise fee(s) will be paid. It is specified as a relative date.",
     "type": {
-      "blueId": "9fGwsBbeyL5rQuLRmwyBtyjMjAcmhWfHf4bmyqAXmWtD"
+      "blueId": "2wQPopE8rNJu4jigpcsKNP5ifSGS1mCEULs5TFyadHG9"
     },
     "schema": {
       "required": true
@@ -19,7 +19,7 @@
   "feeRateSchedule": {
     "description": "The exercise free rate schedule. The fees are expressed as percentage rates of the notional being exercised. The currency of the fee is assumed to be that of the notional schedule referenced.\n",
     "type": {
-      "blueId": "8swA6F2F6KHLgYRCBDKkg2HyrhQ2D7iumy7C99QJfKLy"
+      "blueId": "ExSquLM3rJ1DP8X3WfFUKZQp8f8FTxZqx6zoAMz2Efp"
     }
   },
   "notionalReference": {

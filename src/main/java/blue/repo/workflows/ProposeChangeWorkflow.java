@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import blue.repo.coordination.SequentialWorkflowOperation;
 
-@TypeBlueId("7QnVMqUQguxM3MxNqRYX4sVX9DWJPY3TE1SEagW6z371")
+@TypeBlueId("53VxS4ab5Jtdpynb4mw5BRJx2KWbQAP3p5KUDzxfDkbx")
 public class ProposeChangeWorkflow extends SequentialWorkflowOperation {
     public static String blueId() {
-        return "7QnVMqUQguxM3MxNqRYX4sVX9DWJPY3TE1SEagW6z371";
+        return "53VxS4ab5Jtdpynb4mw5BRJx2KWbQAP3p5KUDzxfDkbx";
     }
 
     public static String packageName() {

@@ -4,16 +4,16 @@
   "deliveryCapacity": {
     "description": "The number of units included in the transaction for each delivery interval",
     "type": {
-      "blueId": "AdJnZG9c8KBZpbUXw47UmJ1yNJN4AK3q9P9aMJjaKanN"
+      "blueId": "6H6ai9i2XAXM89wp9H6hTxLjhKaoFgBxrauHYKfRY3pL"
     }
   },
   "location": {
     "description": "Defines the location of the delivery of the commodity.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "3ozegEWX22qBx9Ne96bvMirXcEA9bBRnr9EK6ibv7Jrf"
+      "blueId": "GeoQzF2knogBLg2we7ywbGP63PKwK1DKRFcSaTTRDi7T"
     },
     "schema": {
       "minItems": 0
@@ -22,7 +22,7 @@
   "periods": {
     "description": "Defines the periods of delivery, including the delivery profile.",
     "type": {
-      "blueId": "8x7QowfQAo9kcHdkjBakncAZtYoFpqZrpPVh9c8dqbrf"
+      "blueId": "3qcvM8JotSd5h8K772DGoKf92AK3xoqHD82wj485Sh5m"
     }
   }
 }

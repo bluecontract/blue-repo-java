@@ -4,10 +4,10 @@ import blue.language.model.Node;
 import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 
-@TypeBlueId("ErxQstFSsMK3XKhLkUhVeRYxqEXmnjDnLu9oW144qji1")
+@TypeBlueId("BQxe6qiBvX1MQsVnVz5FK7F8kCuGqXBUvbudS6nQ1Vam")
 public class CdmLegaldocumentationCommonFieldWithMetaGoverningLawEnum {
     public static String blueId() {
-        return "ErxQstFSsMK3XKhLkUhVeRYxqEXmnjDnLu9oW144qji1";
+        return "BQxe6qiBvX1MQsVnVz5FK7F8kCuGqXBUvbudS6nQ1Vam";
     }
 
     public static String packageName() {

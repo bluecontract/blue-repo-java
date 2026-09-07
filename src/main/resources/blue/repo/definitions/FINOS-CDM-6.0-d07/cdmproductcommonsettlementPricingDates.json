@@ -4,16 +4,16 @@
   "parametricDates": {
     "description": "Defines rules for the dates on which the price will be determined.",
     "type": {
-      "blueId": "BZaLBY48LVb4VwEue2bkVqqdLay2ixteJueEiGUx4bWC"
+      "blueId": "GsDpGUF8d5wtmc2pb5h5v1yvYZtLVKtyVjL6Pi4QdVum"
     }
   },
   "specifiedDates": {
     "description": "Defines specified dates on which the price will be determined.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "ATwFe4A6KM2pwcq5ezVugmeREzNVytoPxpU4UgV8Nhdt"
+      "blueId": "DBgmp4p5L6ZxrQazC6KgfDGE25HKvjK8hxseWsyivyzW"
     },
     "schema": {
       "minItems": 0

@@ -3,7 +3,7 @@
   "description": "Used to apply a NOT logic condition to a single Collateral Criteria.",
   "negativeCriteria": {
     "type": {
-      "blueId": "this#0"
+      "blueId": "4PomKHd5RQDs3gKG4uKXCAUX2cCJjzWQYPfeyFT6zyKv#3"
     },
     "schema": {
       "required": true

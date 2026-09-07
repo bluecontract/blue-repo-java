@@ -9,7 +9,7 @@
   "fro": {
     "description": "The underlying FRO name and designated maturity.",
     "type": {
-      "blueId": "FyRHJZ4TAfL97VshvgV9YRobv2Tgbh9PCwiToNdxXrk2"
+      "blueId": "7XUUBTFJeF5z5QHLvWDTVVaSrpTF9UG9HAXXcFE8DHGK"
     },
     "schema": {
       "required": true

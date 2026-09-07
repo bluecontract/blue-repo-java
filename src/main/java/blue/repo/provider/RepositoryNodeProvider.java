@@ -1,6 +1,12 @@
 package blue.repo.provider;
 
 import blue.language.model.Node;
+import blue.language.identity.DirectBlueIdCalculator;
+import org.erdtman.jcs.JsonCanonicalizer;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import java.io.ByteArrayOutputStream;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import blue.language.codec.jackson.UncheckedObjectMapper;
 import blue.language.provider.CyclicAwareNodeProvider;
 import blue.language.provider.CyclicSetProof;
@@ -48,6 +54,69 @@ public final class RepositoryNodeProvider extends PreloadedNodeProvider implemen
             indexByBaseBlueId(definition);
             definitionsByQualifiedName.put(definition.qualifiedName(), definition);
             addToNameMap(definition.qualifiedName(), definition.blueId());
+        }
+        loadInlineDefinitions();
+    }
+
+    private void loadInlineDefinitions() {
+        if (!manifest.providerSourceResource().isPresent()) return;
+        String resource = manifest.providerSourceResource().get();
+        try (InputStream input = classLoader.getResourceAsStream(resource)) {
+            if (input == null) throw new IllegalStateException("Repository provider resource missing: " + resource);
+            ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+            byte[] chunk = new byte[8192];
+            int count;
+            while ((count = input.read(chunk)) != -1) buffer.write(chunk, 0, count);
+            byte[] bytes = buffer.toByteArray();
+            if (!sha256(bytes).equals(manifest.providerSourceSha256().get()))
+                throw new IllegalStateException("Repository provider resource digest mismatch: " + resource);
+            JsonNode bundle = UncheckedObjectMapper.JSON_MAPPER.readTree(bytes);
+            if (!bundle.isObject() || bundle.path("formatVersion").asInt() != 1 ||
+                    !manifest.repositoryVersionBlueId().equals(bundle.path("repositoryBlueId").asText()) ||
+                    !manifest.providerBundleIdentity().get().equals(bundle.path("providerBundleIdentity").asText()))
+                throw new IllegalStateException("Repository provider provenance mismatch");
+            for (Map.Entry<String, String> registry : manifest.registryPackageIdentities().entrySet()) {
+                if (!registry.getValue().equals(bundle.path("registryPackageIdentities").path(registry.getKey()).asText()))
+                    throw new IllegalStateException("Repository provider registry mismatch: " + registry.getKey());
+            }
+            ObjectNode unsigned = ((ObjectNode) bundle).deepCopy();
+            unsigned.putNull("providerBundleIdentity");
+            String identity = "sha256:" + sha256(new JsonCanonicalizer(unsigned.toString()).getEncodedUTF8());
+            if (!identity.equals(manifest.providerBundleIdentity().get()))
+                throw new IllegalStateException("Repository provider identity mismatch");
+            JsonNode entries = bundle.get("inlineTypeDefinitions");
+            if (entries == null) return;
+            if (!entries.isArray()) throw new IllegalStateException("Inline type definitions must be an array");
+            for (JsonNode entry : entries) {
+                JsonNode content = entry.get("content");
+                String id = entry.path("blueId").asText();
+                if (!entry.isObject() || !id.matches("[1-9A-HJ-NP-Za-km-z]{32,44}") || content == null || !content.isObject())
+                    throw new IllegalStateException("Malformed inline type definition");
+                Node node = UncheckedObjectMapper.JSON_MAPPER.convertValue(content, Node.class);
+                if (node.isReferenceOnly())
+                    throw new IllegalStateException("Inline type must provide materialized content: " + id);
+                if (!id.equals(DirectBlueIdCalculator.calculateBlueId(node)))
+                    throw new IllegalStateException("Inline type content identity mismatch: " + id);
+                JsonNode existing = contentByBlueId.get(id);
+                RepositoryDefinition named = definitionsByBlueId.get(id);
+                if ((existing != null && !existing.equals(content)) ||
+                        (named != null && !readDefinition(named).equals(content)))
+                    throw new IllegalStateException("Conflicting inline type definition: " + id);
+                contentByBlueId.put(id, content.deepCopy());
+            }
+        } catch (IOException error) {
+            throw new IllegalStateException("Cannot verify repository provider resource: " + resource, error);
+        }
+    }
+
+    private static String sha256(byte[] bytes) {
+        try {
+            StringBuilder result = new StringBuilder();
+            for (byte value : MessageDigest.getInstance("SHA-256").digest(bytes))
+                result.append(String.format("%02x", value & 0xff));
+            return result.toString();
+        } catch (NoSuchAlgorithmException error) {
+            throw new IllegalStateException(error);
         }
     }
 
@@ -124,7 +193,8 @@ public final class RepositoryNodeProvider extends PreloadedNodeProvider implemen
         }
 
         try {
-            JsonNode content = readFragmentedDefinitions(baseBlueId, fragments);
+            JsonNode content = readFragmentedDefinitions(baseBlueId, fragments).deepCopy();
+            restoreDeclaredInternalReferences(content, baseBlueId);
             List<Node> declaredPlaceholderSet = IntStream.range(0, content.size())
                     .mapToObj(index -> UncheckedObjectMapper.JSON_MAPPER.convertValue(content.get(index), Node.class))
                     .collect(Collectors.toList());
@@ -167,6 +237,16 @@ public final class RepositoryNodeProvider extends PreloadedNodeProvider implemen
         }
 
         return null;
+    }
+
+    private static void restoreDeclaredInternalReferences(JsonNode value, String masterBlueId) {
+        if (value.isObject()) {
+            JsonNode reference = value.get("blueId");
+            if (reference != null && reference.isTextual() && reference.textValue().startsWith(masterBlueId + "#")) {
+                ((ObjectNode) value).put("blueId", "this#" + reference.textValue().substring(masterBlueId.length() + 1));
+            }
+        }
+        if (value.isContainerNode()) value.forEach(child -> restoreDeclaredInternalReferences(child, masterBlueId));
     }
 
     private void indexByBaseBlueId(RepositoryDefinition definition) {

@@ -4,7 +4,7 @@
   "makeWholeAmount": {
     "description": "Amount to be paid by the buyer of the option if the option is exercised prior to the Early Call Date. (The market practice in the convertible bond option space being that the buyer should be penalised if he/she exercises the option early on.)\n",
     "type": {
-      "blueId": "6N1AurVNznLiPSNtTZrotPgf8jAaq1J95ySoT4Zutx4a"
+      "blueId": "3b5FkTFcqEPUMZ4Db5BDaxLncJ9SefPCVVGPdecsD4iB"
     }
   },
   "swapUnwindValue": {

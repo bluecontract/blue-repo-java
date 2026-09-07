@@ -4,10 +4,10 @@
   "after": {
     "description": "Specifies the after trade state(s) created.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "7FB6ca7DYRSDuwzXQm4kVBg9cea9CR3KuhT8hiffquh9"
+      "blueId": "EoSx3rbaYgSkhc8hUQZMKv8YUyEbwhURwSeaTqWqdMUj"
     },
     "schema": {
       "minItems": 0
@@ -39,10 +39,10 @@
   "instruction": {
     "description": "Specifies the instructions to create the Business Event.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "2urM8YidHJgh8XiXzndxTChPWv9jF8cYEEK55a4K8jMH"
+      "blueId": "6G92kHT1y3kM4WVrRCyNbautPGmWLQTEYb8titgzdvnr"
     },
     "schema": {
       "minItems": 0
@@ -57,7 +57,7 @@
   "packageInformation": {
     "description": "Specifies the package information in case the business event represents several trades executed as a package (hence this attribute is optional). The package information is only instantiated once at the business event level to preserve referential integrity, whereas individual trades make reference to it to identify that they are part of a package.\n",
     "type": {
-      "blueId": "9KV48b6Fb2r3WJ1DyeqrYTjD1WUuExEj2cDwLdCGQHmu"
+      "blueId": "CJjhbcDuHW3aLUUQR7z2j9gJ5z3a9fU7bVHGS4ceGnik"
     }
   }
 }

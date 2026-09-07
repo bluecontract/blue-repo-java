@@ -4,55 +4,55 @@
   "contractFormation": {
     "description": "Specifies instructions describing an contract formation primitive event.",
     "type": {
-      "blueId": "546aMZAyxXdgjEPuMu3YUsj7XmDoKWbTDSEY5u5p61ro"
+      "blueId": "7N9Ko1rmV2RM982PDD2As9eNajR5V1rKjPTYYYSTS5tV"
     }
   },
   "execution": {
     "description": "Specifies instructions describing an execution primitive event.",
     "type": {
-      "blueId": "iKWVhz4swWfyuK3k2MWZpyFFUMr2WXkRPbaa4LviTYT"
+      "blueId": "Ew7CZkK7y7uGfuMmv2RLaJNbMpadFHm969Hjepxcnion"
     }
   },
   "exercise": {
     "description": "Specifies instructions describing an exercise primitive event.",
     "type": {
-      "blueId": "this#0"
+      "blueId": "8mSjnRHr78AivwxBB2cQJDm7okhUDSWhBw4Cc8daTEc4#2"
     }
   },
   "indexTransition": {
     "description": "Specifies inputs needed to process a Index Transition business event.",
     "type": {
-      "blueId": "4MJ3haV2vNrNghMTk6wPRL49xz75XJHepZqBRHzVHRZx"
+      "blueId": "AuaErz8GqJFF8MzhDoYUijEc27pabZJvUQperD1dMq6p"
     }
   },
   "observation": {
     "description": "Specifies inputs needed to process an observation.",
     "type": {
-      "blueId": "HAMRC4Nw3vdn47fsYmK7wavP6zQu6bq6YztAoBuuNL7z"
+      "blueId": "G1YMivYkHDWUs2QgxTLiANcYAVEzi15FWjoxP45A1Li7"
     }
   },
   "partyChange": {
     "description": "Specifies instructions describing a party change primitive event.",
     "type": {
-      "blueId": "6rLC4Kg1B1NAVXYhtwyRkStugkMFAt3qt3WaxaoxMy2U"
+      "blueId": "8HJkkjN8svD1QeR3jCxXGpkZ5j3MUoLhpG7RnqzY7Gn7"
     }
   },
   "quantityChange": {
     "description": "Specifies instructions describing an quantity change primitive event.",
     "type": {
-      "blueId": "3TKRurdUV8Lf9MnJ7qZjMUiZVa82DcRUr4EJmTzuenv2"
+      "blueId": "E4RptBkvGNYYGLD9cDkBCnirvZvkfszTJWdWGPWy8H5M"
     }
   },
   "reset": {
     "description": "Specifies instructions describing a reset event.",
     "type": {
-      "blueId": "3vdqYkcvrCgXLt39NjEJw6qi6PFvbPZ4Z866PwYkm9Rj"
+      "blueId": "HEu435ofkk2ojmaYovNstwTzWEZRqa3G8tu2GfGshViR"
     }
   },
   "split": {
     "description": "Specifies instructions to split a trade into multiple branches.",
     "type": {
-      "blueId": "this#1"
+      "blueId": "8mSjnRHr78AivwxBB2cQJDm7okhUDSWhBw4Cc8daTEc4#1"
     }
   },
   "stockSplit": {
@@ -64,19 +64,19 @@
   "termsChange": {
     "description": "Specifies instructions describing a terms change primitive event.",
     "type": {
-      "blueId": "C8Sjni3j8bLknVwpMay25HnSbgy2TRcMj1Ahs4y7obpE"
+      "blueId": "Bve8ioVk749bT1ViAnCqbpx2sz6uJ9SW6rnAjvGbp7gB"
     }
   },
   "transfer": {
     "description": "Specifies instructions describing a transfer primitive event.",
     "type": {
-      "blueId": "RDiRTVRojrnSyuHJ5j24eYYcyow8d9ujnENuJHacNVv"
+      "blueId": "Bm73qUv1wpWttxraB8qz5UaxUwvE58EpKqwoqaCj6w4h"
     }
   },
   "valuation": {
     "description": "Specifies inputs needed to process an update of a valuation.",
     "type": {
-      "blueId": "9r2SKBfR4oNaDaVTYrF4RsZHSG7Vq1LwHjBLEAQNfewc"
+      "blueId": "8iKgBxBh7SUitbQtzgtrPEjHCma3G9oePfhg2gmrrSXr"
     }
   }
 }

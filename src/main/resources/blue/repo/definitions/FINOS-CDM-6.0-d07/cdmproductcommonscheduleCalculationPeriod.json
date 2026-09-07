@@ -34,13 +34,13 @@
   "floatingRateDefinition": {
     "description": "The floating rate reset information for the calculation period.",
     "type": {
-      "blueId": "AdSenJuaemBCdgGKetnHtpKmpgrP6eZWt97RDfjjcp6a"
+      "blueId": "FkovZeSFaCLX44hYYWHyjLKcfGRjAytcyFFELLnARtnB"
     }
   },
   "forecastAmount": {
     "description": "The amount representing the forecast of the accrued value of the calculation period. An intermediate value used to generate the forecastPaymentAmount in the PaymentCalculationPeriod.\n",
     "type": {
-      "blueId": "A6JZXX4Rug3aj7cJh48V6FeziSECwFQzyrJ1xUwd9kii"
+      "blueId": "8eHxH2MmvpRLFkatvGU4hggBkuvX59UqJSYpXnjwG5hL"
     }
   },
   "forecastRate": {

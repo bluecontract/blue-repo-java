@@ -5,10 +5,10 @@ import blue.language.model.TypeBlueId;
 import blue.repo.RepositoryType;
 import java.util.List;
 
-@TypeBlueId("CJwAFnduHpubiXYhhgnrS272rM8qELbcfutiaAAWmRsa")
+@TypeBlueId("49FkvoroMFDXeLaW1nogxoMwEkPPXwYb7CMjYdmzGpz4")
 public class DocumentSection extends blue.language.processor.model.MarkerContract {
     public static String blueId() {
-        return "CJwAFnduHpubiXYhhgnrS272rM8qELbcfutiaAAWmRsa";
+        return "49FkvoroMFDXeLaW1nogxoMwEkPPXwYb7CMjYdmzGpz4";
     }
 
     public static String packageName() {

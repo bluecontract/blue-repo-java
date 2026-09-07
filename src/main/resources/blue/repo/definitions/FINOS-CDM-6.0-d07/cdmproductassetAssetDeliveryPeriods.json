@@ -10,10 +10,10 @@
   "profile": {
     "description": "Defines the delivery profile of the asset, including the load type and the delivery intervals.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "huDyD12ZoREuxfsApppfcWfJ4LddBpaDDswYuKpWtH5"
+      "blueId": "CziwioStc4JkT2EMWv1dsJhLvM43tCqNtj9MQgsyNoVg"
     },
     "schema": {
       "minItems": 0

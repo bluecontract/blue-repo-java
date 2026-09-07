@@ -105,7 +105,7 @@ const languageRegistryRelease = {
   registry: 'blue-language-core',
   registryKind: 'core-type',
   specificationVersion: '1.0',
-  packageIdentity: 'sha256:b705171a6ca62c990792bcb78db9d921caf5b0ed06370648b9a81769d69dd71e',
+  packageIdentity: 'sha256:5c7a48fd3437182a2b6c43255c96e58c81e9872b4a3c150906b831812925a321',
   requiredKeys: new Set(['Boolean', 'Dictionary', 'Double', 'Integer', 'List', 'Text']),
 };
 
@@ -115,12 +115,12 @@ const contractsRegistryRelease = {
   registryKind: 'runtime-type',
   specificationVersion: '1.0',
   languageVersion: '1.0',
-  packageIdentity: 'sha256:46a7744c1cbfa4b00e1d8a99f6ca3f0089ef697de968fee08547894ab02b0ca1',
+  packageIdentity: 'sha256:1442c90ed0b2601b7293cd3c21938a86907d217336b69e4674adabbf3253e9a4',
   requiredKeys: new Set([
     'Channel', 'ChannelEventCheckpoint', 'CheckpointEntry', 'Contract',
     'ContractExecutionResult', 'DocumentProcessingInitiated',
     'DocumentProcessingTerminated', 'DocumentUpdate', 'DocumentUpdateChannel',
-    'EmbeddedEventDelivery', 'EmbeddedNodeChannel', 'ExternalChannel', 'FixtureEvent',
+    'EmbeddedCollectionEventChannel', 'EmbeddedEventDelivery', 'EmbeddedNodeChannel', 'ExternalChannel', 'FixtureEvent',
     'Handler', 'JsonPatchEntry', 'LifecycleEventChannel', 'Marker', 'ProcessEmbedded',
     'ProcessingInitializedMarker', 'ProcessingTerminatedMarker', 'RuntimeCounterEntry',
     'RuntimeLedger', 'ScriptedExternalChannel', 'ScriptedHandler',
@@ -353,6 +353,23 @@ function loadProviderBundle(repositoryBlueId, definitions) {
   if (!sameSet(new Set(contentByQualifiedName.keys()), new Set(definitionsByQualifiedName.keys()))) {
     throw new Error('Repository provider bundle does not contain the exact aggregate definition set.');
   }
+  const inlineDefinitions = bundle.inlineTypeDefinitions ?? [];
+  if (!Array.isArray(inlineDefinitions)) throw new Error('Inline type definitions must be an array.');
+  const inlineContents = new Map();
+  for (const entry of inlineDefinitions) {
+    if (!entry || typeof entry !== 'object' || Array.isArray(entry) ||
+        typeof entry.blueId !== 'string' || !/^[1-9A-HJ-NP-Za-km-z]{32,44}$/.test(entry.blueId) ||
+        !entry.content || typeof entry.content !== 'object' || Array.isArray(entry.content)) {
+      throw new Error('Malformed inline type definition.');
+    }
+    const exact = JSON.stringify(canonicalizeJson(entry.content));
+    if (inlineContents.has(entry.blueId) && inlineContents.get(entry.blueId) !== exact)
+      throw new Error(`Conflicting inline type definition ${entry.blueId}.`);
+    const named = bundle.entries.find(namedEntry => namedEntry.blueId === entry.blueId);
+    if (named && JSON.stringify(canonicalizeJson(named.content)) !== exact)
+      throw new Error(`Inline type conflicts with a named definition ${entry.blueId}.`);
+    inlineContents.set(entry.blueId, exact);
+  }
   return {
     bytes,
     identity: bundle.providerBundleIdentity,
@@ -398,6 +415,7 @@ const runtimeBlueIds = {
   triggeredEventChannel: productionBlueId(contractsRegistry, 'TriggeredEventChannel'),
   lifecycleEventChannel: productionBlueId(contractsRegistry, 'LifecycleEventChannel'),
   embeddedNodeChannel: productionBlueId(contractsRegistry, 'EmbeddedNodeChannel'),
+  embeddedCollectionEventChannel: productionBlueId(contractsRegistry, 'EmbeddedCollectionEventChannel'),
 };
 
 const externalBaseDescriptors = {
@@ -437,6 +455,11 @@ const externalBaseDescriptors = {
     inheritedFields: new Set(['order', 'path', 'definition', 'sourcePath', 'event']),
     preserveParentFields: true,
   },
+  embeddedCollectionEventChannel: {
+    extendsType: 'blue.language.processor.model.EmbeddedCollectionEventChannel',
+    inheritedFields: new Set(['order', 'path', 'definition', 'collectionPath', 'includeDescendants', 'event']),
+    preserveParentFields: true,
+  },
   processEmbedded: {
     extendsType: 'blue.language.processor.model.ProcessEmbedded',
     inheritedFields: new Set(['order', 'paths', 'collectionPaths']),
@@ -460,6 +483,7 @@ const externalBaseTypes = new Map([
   ['Core/Triggered Event Channel', externalBaseDescriptors.triggeredEventChannel],
   ['Core/Lifecycle Event Channel', externalBaseDescriptors.lifecycleEventChannel],
   ['Core/Embedded Node Channel', externalBaseDescriptors.embeddedNodeChannel],
+  ['Core/Embedded Collection Event Channel', externalBaseDescriptors.embeddedCollectionEventChannel],
   ['Core/Process Embedded', externalBaseDescriptors.processEmbedded],
   ['Core/Channel Event Checkpoint', externalBaseDescriptors.channelEventCheckpoint],
 ]);

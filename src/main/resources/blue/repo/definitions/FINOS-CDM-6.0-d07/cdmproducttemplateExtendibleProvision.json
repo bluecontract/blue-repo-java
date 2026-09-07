@@ -15,13 +15,13 @@
   "exerciseNotice": {
     "description": "Definition of the party to whom notice of exercise should be given.",
     "type": {
-      "blueId": "87nUue1ru1iHhXaB5EjL62TAsMV9t3vSvVB3X7XvwPH6"
+      "blueId": "36vAW2F3tTUYtnmsGz4x9zE5szvfv3zH6WntzKYH3apy"
     }
   },
   "exerciseTerms": {
     "description": "The exercise terms associated with the extendible provision, including details such as exercise style, exercise fees, and any other relevant conditions or terms governing the extension of the swap transaction.\n",
     "type": {
-      "blueId": "5gJQwLbmDRFr1hrMPaZEsHFgWih7ce9ciXS2YMUGt55A"
+      "blueId": "ESGnUP7M4anNa6P2BZufvx9nkJP5B7QhLwtyVwCFok6N"
     },
     "schema": {
       "required": true
@@ -30,19 +30,19 @@
   "extendibleProvisionAdjustedDates": {
     "description": "The adjusted dates associated with an extendible provision. These dates have been adjusted for any applicable business day convention.\n",
     "type": {
-      "blueId": "87JCfLTHiaGc1oeMQ6XxXkgfa3BhFmbR6Qa6z1Pq12Ng"
+      "blueId": "ATnNtt99ojAgCCCxsnuJfQPV5pygPDaG9G7ibmuF2zoT"
     }
   },
   "extensionPeriod": {
     "description": "The period within which notice can be given that the contract will be extended.",
     "type": {
-      "blueId": "A5fbgqJ72K7pbNNCrmP9z1uJjRfJjx4z6Bav92ZY3iMs"
+      "blueId": "4YBEDDwHCYVauaDXtkLW695keQDWRijm1vdpkKCPaXkj"
     }
   },
   "extensionTerm": {
     "description": "The length of each extension period relative to the effective date of the preceding contract.",
     "type": {
-      "blueId": "9fGwsBbeyL5rQuLRmwyBtyjMjAcmhWfHf4bmyqAXmWtD"
+      "blueId": "2wQPopE8rNJu4jigpcsKNP5ifSGS1mCEULs5TFyadHG9"
     }
   },
   "followUpConfirmation": {
@@ -60,7 +60,7 @@
   "noticeDeadlinePeriod": {
     "description": "Defines the minimum period before a contract is scheduled to terminate that notice can be given that it will terminate beyond the scheduled termination date.\n",
     "type": {
-      "blueId": "9fGwsBbeyL5rQuLRmwyBtyjMjAcmhWfHf4bmyqAXmWtD"
+      "blueId": "2wQPopE8rNJu4jigpcsKNP5ifSGS1mCEULs5TFyadHG9"
     }
   },
   "seller": {

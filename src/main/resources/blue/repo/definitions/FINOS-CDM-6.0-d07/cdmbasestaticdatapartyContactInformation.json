@@ -4,10 +4,10 @@
   "address": {
     "description": "The street/postal address.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "8QX9Mbix2tC4kxbpLrBPKAiRT3VePTJKerY8aff9tAD7"
+      "blueId": "CuhhqR5t5iK1Efsj5eVmAUVFodPMFk4w1ERd991Wwncs"
     },
     "schema": {
       "minItems": 0
@@ -16,7 +16,7 @@
   "email": {
     "description": "The email address.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
@@ -28,7 +28,7 @@
   "telephone": {
     "description": "The telephone number.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "CeKrYKeSQpN1Zz5XRY4kufruqx7W43H5TYXFKMsoKdig"
@@ -40,7 +40,7 @@
   "webPage": {
     "description": "The web page. This attribute is not specified as part of the FpML ContactInformation complex type.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"

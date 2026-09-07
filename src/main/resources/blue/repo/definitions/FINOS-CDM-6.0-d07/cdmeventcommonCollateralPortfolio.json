@@ -4,10 +4,10 @@
   "collateralBalance": {
     "description": "Represents the populated or calculated collateral aggregate balance amount for the collateral portfolio.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "EieQtheGsK5EDQsjN2wqUyWn5LaLYdtjXBotd8LVH7ZT"
+      "blueId": "Bdw5ZFQLzcYErT593NyrKAWPNpAvseKThrUjjmEi6fS8"
     },
     "schema": {
       "minItems": 0
@@ -16,10 +16,10 @@
   "collateralPosition": {
     "description": "Specifies the individual components of the collateral positions in the collateral portfolio.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "GtabA8b7typ1gjwtAYshA1eaECFCwLWHkBauTVQ8PMpV"
+      "blueId": "7jmTEWuX3W8r7wX1ECZMCyDRGmjgn38kpePu8yisedk7"
     },
     "schema": {
       "minItems": 0
@@ -34,7 +34,7 @@
   "portfolioIdentifier": {
     "description": "Specifies a unique identifier for a set of collateral positions in a portfolio.",
     "type": {
-      "blueId": "2uYMDSb9jahYcE91VXzzWYsnUVct3k5thb1czx4jPYF7"
+      "blueId": "DsoHoM8aVPzAWigjVwEnfcVhA5cKyYixMbZuMGC1NLJZ"
     }
   }
 }

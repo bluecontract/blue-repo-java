@@ -4,22 +4,22 @@
   "calculationAgent": {
     "description": "The ISDA Calculation Agent responsible for performing duties associated with an optional early termination.",
     "type": {
-      "blueId": "BmkE3R86Mi5VSgGXWARzCmJ1FbnwnZDnHtccZ6MSGnRQ"
+      "blueId": "2p5h5L3rfyQFoJioAjrRzJXVz8kyab6xJBLXjPHTS145"
     }
   },
   "cashSettlement": {
     "description": "If specified, this means that cash settlement is applicable to the transaction and defines the parameters associated with the cash settlement procedure. If not specified, then physical settlement is applicable.\n",
     "type": {
-      "blueId": "BRJ2J4zKmK8CLQta8gGcSboyer9Sby49nV8HopjaFM7g"
+      "blueId": "HcWZydDKaZi3AKGuCL7XfsxA2EhP9kxwSwnPfpbj2cpi"
     }
   },
   "exerciseNotice": {
     "description": "Definition of the party to whom notice of exercise should be given.",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
-      "blueId": "87nUue1ru1iHhXaB5EjL62TAsMV9t3vSvVB3X7XvwPH6"
+      "blueId": "36vAW2F3tTUYtnmsGz4x9zE5szvfv3zH6WntzKYH3apy"
     },
     "schema": {
       "minItems": 0
@@ -28,7 +28,7 @@
   "exerciseTerms": {
     "description": "The exercise terms associated with the optional early termination, including details such as exercise style, exercise fees, and any other relevant conditions or terms.\n",
     "type": {
-      "blueId": "5gJQwLbmDRFr1hrMPaZEsHFgWih7ce9ciXS2YMUGt55A"
+      "blueId": "ESGnUP7M4anNa6P2BZufvx9nkJP5B7QhLwtyVwCFok6N"
     },
     "schema": {
       "required": true
@@ -49,7 +49,7 @@
   "optionalEarlyTerminationAdjustedDates": {
     "description": "An early termination provision to terminate the trade at fair value where one or both parties have the right to decide on termination.\n",
     "type": {
-      "blueId": "E9tgtxzW2aKM5cXBuZ4HZEsYRbKqjQQpVyxRWYXeF6UU"
+      "blueId": "HHKVKQu1SEapAEhAzwmzCptWPb4H5zj7JoB6uoTtiSGy"
     }
   },
   "singlePartyOption": {

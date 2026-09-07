@@ -2,7 +2,7 @@
   "name": "Document Session Bootstrap",
   "description": "MyOS-specific document for bootstrapping document sessions and tracking bootstrap progress",
   "type": {
-    "blueId": "EhoCY9nyytXDfs6gqMXjGmRSczXQVUPdotxm2uE8us1M"
+    "blueId": "2a5GLwMsD67Lb9iAApKHXivmKGKRfkPSvcsBX7Fv1Hxk"
   },
   "contracts": {
     "triggeredEventsChannel": {
@@ -22,7 +22,7 @@
     },
     "initHandler": {
       "type": {
-        "blueId": "HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX"
+        "blueId": "4twSW1MCdf7UMzfwcu99gcBDZiiND1tSC2YZoFMVNHPf"
       },
       "channel": {
         "type": {
@@ -35,7 +35,7 @@
           {
             "name": "Initialize Bootstrap Status",
             "type": {
-              "blueId": "8FyswTq5moAS2hexCNqdEVSfPbuwesexqrck7Up5gtxp"
+              "blueId": "eo9QAHKNLzmtfNURnYkB5eEwisF62zQArU8LFTFm8pZ"
             },
             "changeset": {
               "items": [
@@ -66,7 +66,7 @@
     },
     "handleParticipantResolved": {
       "type": {
-        "blueId": "HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX"
+        "blueId": "4twSW1MCdf7UMzfwcu99gcBDZiiND1tSC2YZoFMVNHPf"
       },
       "channel": {
         "type": {
@@ -84,7 +84,7 @@
           {
             "name": "Update Participant State",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "do": {
               "items": [
@@ -234,7 +234,7 @@
     },
     "handleTargetDocumentSessionStarted": {
       "type": {
-        "blueId": "HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX"
+        "blueId": "4twSW1MCdf7UMzfwcu99gcBDZiiND1tSC2YZoFMVNHPf"
       },
       "channel": {
         "type": {
@@ -244,7 +244,7 @@
       },
       "event": {
         "type": {
-          "blueId": "J9a8qD8javfYK6nRDq9YZRA8LDuzZzq7QS7DB73Pm4Lv"
+          "blueId": "4w29fVLE2At1ZyqYCiRBhHagkmU1g7EbCobJkVLD6YfT"
         }
       },
       "steps": {
@@ -252,7 +252,7 @@
           {
             "name": "Update Initiator Session And Emit Completion",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "do": {
               "items": [
@@ -356,7 +356,7 @@
     },
     "handleBootstrapFailed": {
       "type": {
-        "blueId": "HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX"
+        "blueId": "4twSW1MCdf7UMzfwcu99gcBDZiiND1tSC2YZoFMVNHPf"
       },
       "channel": {
         "type": {
@@ -374,7 +374,7 @@
           {
             "name": "Update Error And Emit Failure",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "do": {
               "items": [
@@ -478,7 +478,7 @@
     },
     "handleStatusChange": {
       "type": {
-        "blueId": "HGVWruAeRNXH8kjHbo7cW24PeJuD8hNZa8ZZBDqdVYaX"
+        "blueId": "4twSW1MCdf7UMzfwcu99gcBDZiiND1tSC2YZoFMVNHPf"
       },
       "channel": {
         "type": {
@@ -496,7 +496,7 @@
           {
             "name": "Update Bootstrap Status",
             "type": {
-              "blueId": "4qGDz5yJxXc9dr8bsBE1B2Tg4AWuR4qHPU9H6T29m3KZ"
+              "blueId": "HLwXH1Zsw9LBcFeueCCo776WxauAU8SWsHGcaarNdTab"
             },
             "do": {
               "items": [
@@ -555,7 +555,7 @@
   "channelBindings": {
     "description": "Maps channel names to participant identifiers",
     "type": {
-      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+      "blueId": "5WQ4tVb4gUUdZa7EfaiUa2XKQwgAurvfYY3ALPauxcAF"
     },
     "keyType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
@@ -575,7 +575,7 @@
     "perChannel": {
       "description": "Per-channel custom invitation messages",
       "type": {
-        "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+        "blueId": "5WQ4tVb4gUUdZa7EfaiUa2XKQwgAurvfYY3ALPauxcAF"
       },
       "keyType": {
         "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
@@ -588,7 +588,7 @@
   "capabilities": {
     "description": "Optional MyOS Admin capability contracts to attach (participantsOrchestration, sessionInteraction)",
     "type": {
-      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+      "blueId": "5WQ4tVb4gUUdZa7EfaiUa2XKQwgAurvfYY3ALPauxcAF"
     },
     "keyType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
@@ -612,7 +612,7 @@
   "initiatorSessionIds": {
     "description": "Session IDs created for the bootstrap initiator (caller)",
     "type": {
-      "blueId": "8DSFoWG9MqRSUhStqoPLrwVQiYByRh18NWbDEarN8MKF"
+      "blueId": "85ip88snCGrgUNdi1rUFqqAxcxwVGKV2g4LjsKoyKmXK"
     },
     "itemType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
@@ -621,7 +621,7 @@
   "participantsState": {
     "description": "Maps channel names to participant activation tracking",
     "type": {
-      "blueId": "Efkz9D1ARMM7rU43w3rDNVqat1naS6qXKCqP4eHin3yG"
+      "blueId": "5WQ4tVb4gUUdZa7EfaiUa2XKQwgAurvfYY3ALPauxcAF"
     },
     "keyType": {
       "blueId": "GX7CFUmSDrE2MzptunLCCdZwnuwwrenRQqEnHL4x3uoC"
