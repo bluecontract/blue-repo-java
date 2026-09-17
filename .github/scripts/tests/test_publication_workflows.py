@@ -18,9 +18,11 @@ class PublicationWorkflowsTest(unittest.TestCase):
                 self.assertLess(wait, release)
                 self.assertIn("-PblueMavenCentralSkipPublicationCheck=true", workflow[deploy:wait])
                 self.assertIn(
-                    "rm -f build/jreleaser/output.properties build/jreleaser/maven-central-publication.json",
+                    "rm -f build/jreleaser/output.properties build/jreleaser/maven-central-submitted.properties build/jreleaser/maven-central-publication.json",
                     workflow[:deploy],
                 )
+                self.assertIn("cp build/jreleaser/output.properties build/jreleaser/maven-central-submitted.properties", workflow[deploy:wait])
+                self.assertIn("wait-maven-central.py build/jreleaser/maven-central-submitted.properties", workflow)
                 self.assertNotIn("continue-on-error", workflow)
                 self.assertEqual(1, workflow.count("./gradlew jreleaserFullRelease"))
                 if filename == "release-rc.yml":
