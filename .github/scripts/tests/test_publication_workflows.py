@@ -13,7 +13,7 @@ class PublicationWorkflowsTest(unittest.TestCase):
                 workflow = (ROOT / ".github/workflows" / filename).read_text()
                 deploy = workflow.index("./gradlew jreleaserDeploy")
                 wait = workflow.index("python3 .github/scripts/wait-maven-central.py")
-                release = workflow.index("./gradlew jreleaserFullRelease --exclude-deployer=mavenCentral")
+                release = workflow.index("./gradlew jreleaserFullRelease --exclude-deployer-name=sonatype")
                 self.assertLess(deploy, wait)
                 self.assertLess(wait, release)
                 self.assertIn("-PblueMavenCentralSkipPublicationCheck=true", workflow[deploy:wait])
