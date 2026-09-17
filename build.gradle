@@ -50,6 +50,9 @@ configurations {
 }
 
 java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
     withJavadocJar()
     withSourcesJar()
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -86,7 +89,7 @@ compileTestJava {
 
 test {
     javaLauncher = javaToolchains.launcherFor {
-        languageVersion = JavaLanguageVersion.of(8)
+        languageVersion = JavaLanguageVersion.of(17)
     }
     useJUnitPlatform()
     reports {

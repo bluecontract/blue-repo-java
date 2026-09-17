@@ -362,7 +362,7 @@ Run `npm ci` once to install the generator's pinned `js-yaml` dependency.
 
 ## Build And Test
 
-Gradle runs on JDK 25 and uses a Java 8 toolchain for tests. If Java 8 is not
+Gradle builds and runs tests on JDK 17. If Java 17 is not
 installed locally, Gradle can provision it through the configured Foojay
 toolchain resolver.
 
@@ -382,8 +382,8 @@ Publish to local Maven:
 ./gradlew publishToMavenLocal
 ```
 
-The project targets Java 8-compatible bytecode, builds with JDK 25, and runs
-tests on Java 8.
+The project targets Java 8-compatible bytecode, builds with JDK 17, and runs
+tests on Java 17.
 
 ## Release Setup
 

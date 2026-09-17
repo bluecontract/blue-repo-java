@@ -34,16 +34,10 @@ jobs:
       - name: Fetch main and tags
         run: git fetch origin main:refs/remotes/origin/main --tags
 
-      - name: Set up Java 8 test runtime
+      - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
-          java-version: '8'
-          distribution: 'corretto'
-
-      - name: Set up JDK 25
-        uses: actions/setup-java@v3
-        with:
-          java-version: '25'
+          java-version: '17'
           distribution: 'corretto'
 
       - name: Set up Node
