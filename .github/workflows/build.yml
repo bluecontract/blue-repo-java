@@ -1,6 +1,8 @@
 name: Build and validate
 
 on:
+  pull_request:
+    branches: [next]
   push:
     branches:
       - main
@@ -40,6 +42,11 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
+
+      - name: Verify Maven Central publication boundary
+        run: |
+          python3 -B -m unittest discover -s .github/scripts/tests -p 'test_*.py'
+          python3 -B -m unittest discover -s .github/scripts -p 'test_wait_maven_central.py'
 
       - name: Execute Gradle build
         run: ./gradlew clean build
